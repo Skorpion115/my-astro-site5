@@ -1,0 +1,37 @@
+{
+    "name": "Musikstudio Ziebart",
+    "short_name": "Rudi Ziebart",
+    "description": "Musikunterricht in Nürnberg",
+    "lang": "de",
+    "start_url": "/",
+    "display": "fullscreen",
+    "orientation": "portrait",
+    "theme_color": "#191919",
+    "background_color": "#191919",
+    "icons": [
+      {
+        "src": "manifest-icon-192.maskable.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "manifest-icon-192.maskable.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "maskable"
+      },
+      {
+        "src": "manifest-icon-512.maskable.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "manifest-icon-512.maskable.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "maskable"
+      }   
+    ]
+  }

@@ -1,35 +1,94 @@
 ---
-export interface Props {
-	title: string;
-}
-
-const { title } = Astro.props;
+// Laden und injizieren Sie './global.css' auf der Seite
+import "../styles/global.css";
+import AppleTouchIcons from "../components/AppleTouchIcons.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+// import Click from "../components/Click.astro";
+// import GoogleTagManager from "../components/GoogleTagManager.astro";
+import LocalScripts from "../components/LocalScripts.astro";
+const { title, description, keywords } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="canonical" href="https://www.musicstudio-ziebart.de" />
+
+    <!-- de = deutschsprachig -->
+    <meta name="Language" content="de" />
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <meta
+      name="author"
+      content="Rudi Ziebart, postmaster@musicstudio-ziebart.de"
+    />
+    <meta
+      name="DC.Publisher"
+      content="Rudi Ziebart, postmaster@musicstudio-ziebart.de"
+    />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="DC.date" content="Collection" />
+    <meta name="DC.rights" content="Alle Rechte liegen beim Author" />
+    <meta name="robots" content="selektion" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="robots" content="max-snippet:-1" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#191919" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GCXBFDX52C7"
+    ></script>
+
+    <title>{title}</title>
+    <AppleTouchIcons />
+  </head>
+
+  <body class="">
+    <Header />
+
+    <LocalScripts />
+
+    <main>
+      <slot />
+    </main>
+
+    <Footer />
+
+    <script is:inline>
+      document.addEventListener("DOMContentLoaded", () => {
+        if (localStorage.getItem("theme") == "invert") {
+          document.querySelector("body").classList.add("invert");
+        }
+
+        if ("serviceWorker" in navigator) {
+          navigator.serviceWorker
+            .register("/serviceWorker.js", { scope: "/" })
+            .then(() => console.log("serviceWorker registered"))
+            .catch((error) => console.warn(error));
+        }
+      });
+    </script>
+    <script>
+      console.log("Welcome, browser console!");
+    </script>
+    <!--
+    <script>
+      // Don't register the service worker
+      // until the page has fully loaded
+      window.addEventListener('load', () => {
+        // Is service worker available?
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('/serviceWorker.js').then(() => {
+            console.log('Service worker registered!');
+          }).catch((error) => {
+            console.warn('Error registering service worker:');
+            console.warn(error);
+          });
+        }
+      });
+    </script>
+  -->
+  </body>
 </html>
-<style is:global>
-	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
-</style>

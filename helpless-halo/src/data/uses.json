@@ -1,0 +1,21 @@
+[
+    {
+        "title": "YouTube",
+        "elements": [
+            {
+                "title": "Mein Kanal",
+                "link": "https://www.youtube.com/channel/UCwRRdmLAvaERcd0K_WPMZMw/videos"
+            }
+        ]
+    },
+    {
+        "title": "Instrumentenkauf",
+        "elements": [
+            {
+                "title": "Musik Klier",
+                "comment": "Info",
+                "link": "https://www.musik-klier.de"
+            }
+        ]
+    }
+]

@@ -1,0 +1,138 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="contact_4" description="Probeunterricht" keywords="Contact">
+  <div class="container4">
+    <form
+      name="contact_4"
+      method="POST"
+      action="/thankyou/"
+      data-netlify-recaptcha="true"
+      data-netlify="true"
+    >
+      <input type="hidden" name="form-name" value="contact_4" />
+      <div class="formfields"></div>
+      <div>
+        <label for="name">Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Namen eintragen"
+          class="form-control form-control-lg"
+        />
+      </div>
+      <div>
+        <label for="message">Nachricht</label>
+        <textarea
+          id="message"
+          name="message"
+          cols="23"
+          rows="10"
+          placeholder="Was kann ich für Sie tun?"></textarea>
+      </div>
+      <div>
+        <label for="phone">Telefonnummer</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          class="form-control form-control-lg"
+        />
+      </div>
+      <div>
+        <label for="email">E-Mail</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          class="form-control form-control-lg"
+        />
+      </div>
+      <br />
+      <div data-netlify-recaptcha="true"></div>
+      <div>
+        <button type="submit" class="btn btn-lg btn-primary">Absenden</button>
+      </div>
+      <br />
+      <a href="../index.html" class="link-blue">zurück</a>
+    </form>   
+  </div>
+</Layout>
+
+<style>
+  .container4 {
+    margin: 0 auto;
+    padding: 5%;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: var(--font);
+    color: var(--color-white);
+    background-color: var(--color-black);
+    text-align: center;
+  }
+  label {
+    display: block;
+    font-size: 1.125rem;
+    padding: 0.625rem;
+  }
+
+  /* Der Rand um die Felder */
+  .form-control {
+    border-radius: 0px;
+    border: 1px solid #333;
+  }
+
+  /* Die Breite der Felder */
+  .form-control.form-control-lg {
+    height: calc(3.5rem + 2px);
+    padding: 1rem 0.75rem;
+    font-size: 1.125rem;
+  }
+
+  form {
+    max-width: 31.25rem;
+    margin: 0 auto;
+    text-align: left;
+    padding: 1.25rem 0;
+    font-size: 1.125rem;
+  }
+
+  /* Schriftgröße im Ausfüllbereich */
+  input,
+  textarea {
+    /*background-color: #1b1c1e; */
+    color: var(--color-white);
+    background-color: var(--color-black);
+    font-family: "Poppins", sans-serif;
+    font-size: 1.125rem;
+    /*color: #fff; */
+    font-size: 1.125rem;
+    padding: 0.625rem;
+  }
+
+  /* Button css */
+  .btn {
+    border-radius: 0;
+    border: 0;
+    color: white;
+  }
+
+  .btn.btn-primary {
+    background-color: #545557;
+    padding: 0.94rem 7rem;
+    font-size: 1.125rem;
+    margin-top: 1.875rem;
+    cursor: pointer;
+    transition: all 0.3 ease;
+    text-align: center;
+  }
+
+  .btn.btn-primary:hover {
+    background-color: #fff;
+    color: black;
+  }
+</style>

@@ -1,81 +1,427 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
+import usesData from "../data/uses.json";
+import CookiesBanner from "../components/CookiesBanner.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
+<Layout
+  title="Musicstudio Ziebart"
+  description="stadt nürnberg: musicstudio ziebart, online-musikunterricht, telefon 0911/6320890, ich gebe musikunterricht aller altersklassen."
+  keywords="musikschule, musikunterricht, jetzt anmelden, musikunterricht in eibach, musikschule nürnberg eibach, musikschule nürnberg kinder, musiklehrer privatunterricht, musikschule eibach, musiklehrer privat, musiklehrer nürnberg, musikschule nürnberg, music lessons, online musikunterricht"
+>
+  <picture>
+    <source
+      srcset="/images/music-note_640-wide.webp"
+      media="(min-width: 600px)"
+    />
+    <img
+      src="/images/music-note_397-narrow.webp"
+      width="640"
+      height="427"
+      alt="music-note"
+    />
+  </picture>
+  <br />
+  <br />
+  <!-- Animation -->
+  <div class="animation">
+    <h3 data-text="MUSICSTUDIO_ZIEBART">
+      MUSICSTUDIO_ZIEBART
+    </h3>
+  </div>
+  <br />
+  <h1>MUSIKUNTERRICHT</h1>
+  <article class="conteneur">
+    <section class="marchandise marchandise-1">
+      <h2>Music Lessons</h2>
+      <p>HERZLICH WILLKOMMEN</p>
+      <br />
+      <p>Ich biete zusätzlich zu dem bisherigen Präsenzunterricht einen</p>
+      <h2>Online-Musikunterricht</h2>
+      <p>
+        an. Dieser wird über das Streaming Programm Skype oder Zoom gemacht. Die
+        Preise sind dieselben als beim Präsenzunterricht. Die Konditionen sind
+        beim Online-Musikunterricht etwas anders. Sie können monatlich kündigen.
+        Falls die Chemie zwischen Lehrer und Schüler nicht stimmt. Sie brauchen
+        sich also nicht auf lange Vertragsbindungen einlassen. Die Ferien im
+        Monat August brauchen Sie nicht bezahlen.
+      </p>
+      <p>
+        Ich möchte an dieser Stelle ausdrücklich darauf hinweisen das der
+        Online-Musikunterricht einige Vorteile hat. Falls Sie nicht in Nürnberg
+        wohnen sondern weiter weg wäre es unmöglich einen Musikunterricht zu
+        machen. Es wäre zu zeitaufwending und zu kostspielig. Aber durch diesen
+        Online-Musikunterricht können Sie überall in ganz Deutschland wohnen und wir
+        könnten uns trotzdem einmal in der Woche virtuell treffen. Dies erspart
+        auch die Anfahrtskosten und die Zeit die man dazu braucht. Also ich habe
+        einen Schüler aus Thüringen und das klappt bis jetzt wunderbar. Ich
+        freue mich jedesmal auf diesen Online-Musikunterricht und er auch ohne
+        diesen weiten Weg in Kauf zu nehmen um zu mir zu kommen.
+      </p>
+      <p>
+        <small>
+          Hinweis: Für alle Handy Benutzer. Ganz oben rechts befindet sich ein
+          Button mit dem Namen "Invert". Dies ist der Darkmode falls die
+          Sonneneinstrahlung zu stark ist.
+        </small>
+      </p>
+      <p>
+        Das Musikstudio wurde 1984 gegründet. Ich gebe Musikunterricht aller
+        Musikstilrichtungen von Klassik bis Pop und auch Jazz! Das
+        Unterrichtshonorar ist bei allen Instrument dasselbe. Oft werde ich
+        gefragt mit wieviel Jahren soll man denn anfangen zum musizieren? Also
+        frühestens ab der 2. Klasse ist es ein ganz gutes Alter meine ich. Bei
+        Blockflöte kann man vielleicht noch ein bißchen früher anfangen.
+      </p>
+      <p>
+        Musik spielen ist ein interressantes Hobby für jung und alt und
+        vielleicht macht es ja der eine oder die andere einmal zum Beruf?
+        Außerdem führt das Musizieren oder Singen weg von der Konsumierung und
+        führt zu eigenen Kreativitäten! Ich freue mich auf Ihren Besuch oder
+        Anruf!
+      </p>
+      <hr />
+      <br />
+      <h2>INSTRUMENTAL UNTERRICHT</h2>
+      <p>Ich gebe für folgende Instrumente Unterricht:</p>
+      <h2>Naturinstrumente</h2>
+      <ul>
+        <li>
+          <a href="/klavierunterricht/" class="link-blue">Klavier</a>
+        </li>
+        <li>
+          <a href="/akkordeon-unterricht/" class="link-blue">Akkordeon</a>
+        </li>
+        <li>
+          <a href="/gitarrenunterricht/" class="link-blue">Konzertgitarre</a>
+        </li>
+        <li>
+          <a href="/saxophonunterricht/" class="link-blue">Saxophon</a>
+        </li>
+        <li>
+          <a href="/klarinettenunterricht/" class="link-blue">Klarinette</a>
+        </li>
+        <li>
+          <a href="/leistungen/" class="link-blue">Querflöte</a>
+        </li>
+        <li>Blockflöte</li>
+        <li>
+          <a href="/banjounterricht/" class="link-blue">5-string Banjo</a>
+        </li>
+        <li>Bongos</li>
+      </ul>
+      <h2>Elektromechanische Instrumente</h2>
+      <ul>
+        <li>
+          <a href="/keyboardunterricht/" class="link-blue">Keyboard</a>
+        </li>
+        <li>
+          <a href="/e-gitarrenunterricht/" class="link-blue">E-Gitarre</a>
+        </li>
+        <li>Jazz Guitar</li>
+        <li>Jazzharmonielehre</li>
+        <li>
+          <a href="/e-bassunterricht/" class="link-blue">Bass</a>
+        </li>
+      </ul>
+      <br class="clear" />
+      <br />
+    </section>
+    <section class="marchandise marchandise-2">
+      <h2>Kostenlose Probestunde</h2>
+      <p>
+        Aus hygienischen Gründen können bei Blasinstrumente keine Instrumente zur Verfügung gestellt werden.
+      </p>
+      <p>
+        Anmeldung zu einem kostenlosen Probeunterricht. Klicken Sie auf den
+        Link:
+        <a href="/contact/" class="link-blue"><b>Probetermin!</b></a>
+      </p>
+      <hr />
+      {
+        usesData.map((uses) => (
+          <>
+            <h2>{uses.title}</h2>
+            <ul>
+              {uses.elements.map((element) => (
+                <li>
+                  <a href={element.link} target="_blank" class="link-blue">
+                    {element.title}
+                  </a>
+                  <span class="text-white">{element.comment}</span>
+                </li>
+              ))}
+            </ul>
+          </>
+        ))
+      }
+      <p>
+        Auf meinem YouTube Kanal ist f&uuml;r alle Hammond Fans was dabei! Auch
+        E-Gitarristen und Akustische Gitarre kommen auf ihre Kosten. Übrigens
+        das klassische Klavier ist bei den Menschen immer noch hoch im Kurs!
+      </p>
+      <hr />
+      <h2>Kontakt</h2>
+      <p>
+        Musikstudio Ziebart <br />Gunzenhausener Str. 20 <br />90451 Nürnberg
+      </p>
+      <p>Staatl. anerkannter Musiklehrer</p>
+      <p>
+        <a href="/contact_4/" class="link-blue"><b>Ich rufe Sie zurück!</b></a>
+      </p>
+      <p>
+        Telefon:
+        <a href="tel:+499116320890" class="link-blue">+49 (0)911 6320890</a> 0911/6320890
+      </p>
+      <p>
+        eMail:&nbsp;
+        <a
+          href="mailto:postmaster@musicstudio-ziebart.de"
+          class="link-blue"
+          onfocus="this.blur()"
+          >postmaster@musicstudio-ziebart.de
+        </a>
+      </p>
+      <p>
+        Facebook:&nbsp;
+        <a
+          href="https://www.facebook.com/Musicstudio.Ziebart"
+          class="link-blue"
+          target="_blank"
+          >Musicstudio.Ziebart
+        </a>
+      </p>
+      <p>
+        <a
+          href="https://maps.google.de/maps?ie=UTF8&cid=10230175189141752103&q=Musikschule+Ziebart&iwloc=A&gl=DE&hl=de"
+          target="top"
+          class="link-blue"
+          >Standortansicht im Stadtplan!
+        </a>
+      </p>
+      <hr />
+      <p>ÖFFNUNGSZEITEN:</p>
+      <p>Montag - Freitag 14.00 - 19.00 Uhr</p>
+      <hr />
+      <br />
+
+      <picture>
+        <source srcset="/images/rudi-wide.webp" media="(min-width: 600px)" />
+        <img
+          src="/images/rudi-narrow.webp"
+          width="320"
+          height="240"
+          alt="Rudi"
+        />
+      </picture>
+      <hr />
+
+      <ul>
+        <li><a href="/faq/" class="link-blue">FAQ</a></li>
+        <li><a href="/download/" class="link-blue">Download</a></li>
+        <li><a href="/harmonielehre/" class="link-blue">Harmonielehre</a></li>
+        <li><a href="/impressum/" class="link-blue">Impressum</a></li>
+      </ul>
+      <p>
+        Powered by <a href="https://astro.build" class="link-blue"
+          >{Astro.generator}</a
+        >
+      </p>
+    </section>
+  </article>
+
+  <div id="footer-cookie">
+    <span id="description">
+      Wir nutzen Cookies, um unsere Dienste zu erbringen und zu verbessern. Mit
+      Nutzung dieser Seite akzeptieren Sie Cookies. <a
+        href="https://dakitec.de/blog/cookie-banner-selbst-erstellen"
+        >Mehr erfahren</a
+      >
+    </span>
+    <span id="accept"
+      ><a href="javascript:void(0)" title="Akzeptieren">Akzeptieren</a>
+    </span>
+  </div>
 </Layout>
 
+<CookiesBanner />
+
 <style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
+  /* music-note wird in global css geregelt*/
+
+  /* ANCHOR Animation */
+  .animation {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .animation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3%;
+    width: 80%;
+    margin-left: 5%;
+    /* Höhe der Border-Box, legt die Mindesthöhe eines Elements fest*/
+    /* Relativ zu 1 % der Breite des Ansichtsfensters */
+    min-height: 10vw;
+    background: #252839;
+  }
+
+  h3 {
+    position: relative;
+    /* Schriftgröße dahinter vw ist responsiv*/
+    font-size: 4vw;
+    color: #252839;
+    /* gibt die Breite und die Farbe von Strichen an Schrift dahinter*/
+    -webkit-text-stroke: 0.1vw #383d52;
+    /* Es wird alles groß geschrieben */
+    text-transform: uppercase;
+  }
+
+  h3::before {
+    content: attr(data-text);
+    position: absolute;
+    /* Schriftweite davor die läuft vw ist responsiv gegenüber px */
+    font-size: 4vw;
+    /* Text bleibt bei 1 am Ende stehen, bei 0 ist es leer */
+    width: 1;
+    /* Höhe des Cursors */
+    height: 110%;
+    color: #01f387;
+    /* Breite und Farbe des laufenden Textes Schrift davor*/
+    -webkit-text-stroke-width: 0.1vw #383d52;
+    /* Die Stärke des Strichs */
+    border-right: 2px solid #01fe87;
+    overflow: hidden;
+    animation: animate 6s 3 linear;
+  }
+
+  @keyframes animate {
+    0%,
+    10%,
+    100% {
+      width: 0;
+    }
+    70%,
+    90% {
+      width: 100%;
+    }
+  }
+
+  /* ANCHOR Hauptseite */
+  .conteneur {
+    color: var(--color-white);
+    background-color: var(--color-black);
+    border: 0px solid black;
+    align-content: space-between;
+    width: 94vw;
+    font-style: normal;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    align-content: flex-start;
+  }
+
+  /* Container Inhalt */
+  .marchandise {
+    padding: 10px 20px;
+  }
+
+  /* Kind Elemente */
+  .marchandise-1 {
+    flex: 2;
+  }
+
+  .marchandise-2 {
+    flex: 1;
+  }
+
+  .conteneur ul li {
+    color: var(--color-white);
+    background-color: var(--color-black);
+    height: 3rem;
+    box-shadow: 2px 2px 5px #666;
+    margin-top: 15px;
+    padding: 0.3rem 1.875rem;
+    font-size: large;
+    list-style-type: none;
+  }
+
+  .conteneur img {
+    width: 90%;
+    height: auto;
+    max-width: 100%;
+    margin-left: 0%;
+    box-shadow: 2px 2px 5px #666;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  /* ANCHOR Style für Cookie Banner */
+  #footer-cookie,
+  #footer-cookie * {
+    box-sizing: border-box;
+  }
+
+  #footer-cookie {
+    display: none;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 150px;
+    padding-left: 30px;
+    padding-right: 30px;
+    line-height: 150px;
+    background: #303030;
+    color: #fff;
+    font-size: medium;
+  }
+
+  #footer-cookie a {
+    color: #fff;
+  }
+
+  #footer-cookie #description {
+    float: left;
+  }
+
+  #footer-cookie #accept {
+    float: right;
+  }
+
+  #footer-cookie #accept a {
+    border: 1px solid #fff;
+    padding: 5px 10px;
+    text-decoration: none;
+  }
+
+  @media (max-width: 1200px) {
+    #footer-cookie {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      line-height: inherit;
+      height: auto;
+    }
+
+    #footer-cookie #description {
+      width: 100%;
+    }
+
+    #footer-cookie #accept {
+      width: 100%;
+      margin-top: 15px;
+    }
+
+    #footer-cookie #accept a {
+      width: 100%;
+      display: block;
+      text-align: center;
+    }
+  }
 </style>

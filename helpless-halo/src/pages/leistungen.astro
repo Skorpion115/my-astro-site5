@@ -1,0 +1,151 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="Leistungen"
+  description="Ich gebe Querflötenunterricht in Nürnberg"
+  keywords="leistungen, querflötenunterricht in eibach, querflöte, querflötenunterricht nürnberg, querflötenunterricht in der nähe, querflöte spielen lernen, querflötenkurs, querflötenunterricht für kinder, querflöten lehrer, querflöteunterricht"
+>
+  <h1>Leistungen</h1>
+  <section id="leistungen">
+    <h2>Wählen Sie ihr Wunschinstrument aus!</h2>
+    <article>
+      <div class="dropdown">
+        <button class="dropbtn">Instrument</button>
+        <div class="dropdown-content">
+          <a href="/klavierunterricht/">Klavierunterricht</a>
+          <a href="/keyboardunterricht/">Keyboardunterricht</a>
+          <a href="/gitarrenunterricht/">Gitarrenunterricht</a>
+          <a href="/e-bassunterricht/">E-Bassunterricht</a>
+          <a href="/e-gitarrenunterricht/">E-Gitarrenunterricht</a>
+          <a href="/banjounterricht/">Banjounterricht</a>
+          <a href="/akkordeon-unterricht/">Akkordeon Unterricht</a>
+          <a href="/saxophonunterricht/">Saxophon Unterricht</a>
+          <a href="/klarinettenunterricht/">Klarinettenunterricht</a>
+        </div>
+      </div>
+      <p>
+        Mehr Information über die einzelnen Instrumente bekommen Sie oben aus
+        der Dropdown Liste!
+      </p>
+      <p>
+        Bei weiteren Fragen klicken Sie oben den Button <a href="/instrumentenkauf/">Instrumentenkauf</a> an!
+      </p>
+
+      <h2>Querflötenunterricht</h2>
+      <picture>
+        <source
+          srcset="/images/querfloete-wide.webp"
+          media="(min-width: 600px)"
+        />
+        <img
+          src="/images/querfloete-narrow.webp"
+          width="320"
+          height="420"
+          alt="Schule_für_Querflote"
+        />
+      </picture>
+      <p>
+        Die Querflöte ist das Instrument der Götter sagt man. Ich nehme die
+        Querflötenschule von Elisabeth Weinzierl und Edmund Wächter. Der Titel
+        ist "Lern Querflöte spielen". Eine CD ist ebenfalls dabei und es gibt 2
+        Bänder von diesem Werk.
+      </p>
+      <ul>
+        <li><a href="/faq/" class="link-blue">FAQ</a></li>
+        <li><a href="/download/" class="link-blue">Download</a></li>
+        <li><a href="/harmonielehre/" class="link-blue">Harmonielehre</a></li>
+        <li><a href="/impressum/" class="link-blue">Impressum</a></li>
+      </ul>
+    </article>
+  </section>
+</Layout>
+
+<style>
+  #leistungen {
+    display: block;
+    width: 96%;
+    max-width: 100%;
+    padding: 1.5em;
+    margin: 0;
+    font-style: normal;
+    color: var(--color-white);
+    background-color: var(--color-black);
+  }
+
+  #leistungen article {
+    display: inline-block;
+    margin: 2rem auto;
+    text-align: left;
+    width: 100%;
+    vertical-align: top;
+    padding: 1.25rem;
+  }
+
+  #leistungen ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  /* ANCHOR Dropdown für Instrumente und Hamonielehre */
+  .dropbtn {
+    background-color: #000;
+    padding: 0.9rem;
+    margin: 2rem auto;
+    font-size: 1.125rem;
+    border: none;
+    color: #fff;
+    border-radius: 5%;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    font-size: 1.125rem;
+    padding-inline-start: 1rem;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #d3d3d3;
+    z-index: 1;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  }
+
+  .dropdown-content a {
+    color: #000;
+    padding: 1.125rem 1.125rem;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #00a4bd;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown:hover .dropbtn {
+    background-color: gray;
+  }
+
+  #leistungen picture img {
+    max-width: 20%;
+    height: auto;
+    box-shadow: 0px 0px 10px 5px #4c4948;
+    border-radius: 5px;
+    float: right;
+    margin-top: 1.25rem;
+    margin-left: 1rem;
+    margin-right: 3rem;
+  }
+</style>

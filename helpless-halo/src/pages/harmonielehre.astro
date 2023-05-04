@@ -1,0 +1,154 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="Harmonielehre"
+  description="Harmonielehre, Noten lesen"
+  keywords="Harmonielehre, Noten lesen, Intervalle, Dreiklänge, Funktiontsheorie"
+>
+  <h1>Harmonielehre</h1>
+  <section id="harmonielehre">
+    <h2>Lernvideos</h2>
+    <article>
+      <div>
+        <hr />
+        <p>
+          Ich möchte den Schülern, Musikinteressierte oder Hobbymusiker auf
+          diese Weise das Noten lesen und die Harmonielehre ein bisschen näher
+          bringen! Die Videos sind so aufgebaut das man zuerst die Noten lesen
+          kann, dann kommen die Intervalle, dann die Dreiklänge und zuletzt die
+          Funktiontheorie. Also bitte nach dieser Reihenfolge lernen.
+          <br /> Ich werde im ersten Video das "Noten lesen" erklären.
+        </p>
+        <p>
+          Hier könnt ihr euch ein <a
+            href="/images/Notenblatt.pdf"
+            target="_blank"
+            class="link-blue">leeres Notenblatt</a
+          > downloaden! Es dient für den Aufgabenanhang für das Video Notenschrift.
+          Downloaden, ausdrucken und dann am besten mit Bleistift die Noten und drunter
+          die Buchstaben schreiben!
+        </p>
+        <div class="video-container-wrapper">
+          <div class="video-container">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/Hu4ef1IkuG0"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+        <p>
+          <br /> Im zweiten Video geht es darum die Intervallen zu verstehen und
+          zu bestimmen.
+        </p>
+        <div class="video-container-wrapper">
+          <div class="video-container">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/804rrOOFzAQ"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <p>
+          Im dritten Video erkläre ich die Dreiklänge. Wie man Dur und Moll
+          Akkorde bestimmen kann usw.
+        </p>
+        <div class="video-container-wrapper">
+          <div class="video-container">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/fgzboODvlQ4"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+        <p>
+          Und im vierten Video geht es um eine Funktionstheorie. Das sollte
+          eigentlich das Grundwissen eines jeden Musikers sein.
+        </p>
+        <div class="video-container-wrapper">
+          <div class="video-container">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/tCkpok099xw"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      <br />
+      <ul>
+        <li><a href="/faq/" class="link-blue">FAQ</a></li>
+        <li><a href="/download/" class="link-blue">Download</a></li>
+        <li><a href="/harmonielehre/" class="link-blue">Harmonielehre</a></li>
+        <li><a href="/impressum/" class="link-blue">Impressum</a></li>
+      </ul>
+    </article>
+  </section>
+</Layout>
+
+<style>
+  #harmonielehre {
+    width: 96%;
+    max-width: 100%;
+    margin: 2rem auto;
+  }
+
+  #harmonielehre article {
+    display: inline-block;
+    margin: 2rem auto;
+    width: 100%;
+    vertical-align: top;
+  }
+
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 0;
+    height: 0;
+    overflow: hidden;
+  }
+
+  .video-container iframe,
+  .video-container object,
+  .video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .video-container-wrapper {
+    max-width: 100%;
+    width: 560px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  #harmonielehre ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+</style>
