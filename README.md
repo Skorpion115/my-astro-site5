@@ -1,6 +1,6 @@
 # Neues Astro Projekt mit serviceWorker und manifest PWA
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/403e29b0-85d9-4e56-af9e-dff0b0004ba0/deploy-status)](https://app.netlify.com/sites/glittery-sprinkles-dadbac/deploys)?branch=dev/deploy-status?branch=dev
+[![Netlify Status](https://api.netlify.com/api/v1/badges/403e29b0-85d9-4e56-af9e-dff0b0004ba0/deploy-status)](https://app.netlify.com/sites/glittery-sprinkles-dadbac/deploys)
 
  Ein neues Astro Projekt. Es ist aufgebaut von einem Videotutorial von Mario Laurich über das Framework Astro. Das Projekt beinhaltet auch ein  Anmeldeformular mit recaptcha Version 2, das mit Netlify erstellt wurde. Diese Internetseite ist frei verfügbar. Ich erhebe keinerlei Lizensen.
 
