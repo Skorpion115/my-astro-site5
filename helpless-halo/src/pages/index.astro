@@ -9,19 +9,9 @@ import CookiesBanner from "../components/CookiesBanner.astro";
   description="stadt nürnberg: musicstudio ziebart, online-musikunterricht, telefon 0911/6320890, ich gebe musikunterricht aller altersklassen."
   keywords="musikschule, musikunterricht, jetzt anmelden, musikunterricht in eibach, musikschule nürnberg eibach, musikschule nürnberg kinder, musiklehrer privatunterricht, musikschule eibach, musiklehrer privat, musiklehrer nürnberg, musikschule nürnberg, music lessons, online musikunterricht"
 >
-  <picture>
-    <source
-      srcset="/images/music-note_640-wide.webp"
-      media="(min-width: 600px)"
-    />
-    <img
-      src="/images/music-note_397-narrow.webp"
-      width="640"
-      height="427"
-      alt="music-note"
-    />
-  </picture>
-  <br />
+  <p>
+    <img src="/images/music-note_640-wide.webp" alt="Bild für Violinschlüssel" width="640" height="427">
+  </p>
   <br />
   <!-- Animation -->
   <div class="animation">
@@ -203,25 +193,19 @@ import CookiesBanner from "../components/CookiesBanner.astro";
       <p>ÖFFNUNGSZEITEN:</p>
       <p>Montag - Freitag 14.00 - 19.00 Uhr</p>
       <hr />
-      <br />
-
-      <picture>
-        <source srcset="/images/rudi-wide.webp" media="(min-width: 600px)" />
-        <img
-          src="/images/rudi-narrow.webp"
-          width="320"
-          height="240"
-          alt="Rudi"
-        />
-      </picture>
+      <p>
+        <img src="images/rudi-wide.webp" alt="rudi" width="320" height="240">
+      </p>
       <hr />
-
+      <br />
       <ul>
         <li><a href="/faq/" class="link-blue">FAQ</a></li>
         <li><a href="/download/" class="link-blue">Download</a></li>
         <li><a href="/harmonielehre/" class="link-blue">Harmonielehre</a></li>
         <li><a href="/impressum/" class="link-blue">Impressum</a></li>
       </ul>
+      <br />
+      <hr />
       <p>
         Powered by <a href="https://astro.build" class="link-blue"
           >{Astro.generator}</a
@@ -247,7 +231,6 @@ import CookiesBanner from "../components/CookiesBanner.astro";
 <CookiesBanner />
 
 <style>
-  /* music-note wird in global css geregelt*/
 
   /* ANCHOR Animation */
   .animation {
@@ -260,9 +243,9 @@ import CookiesBanner from "../components/CookiesBanner.astro";
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 3%;
-    width: 80%;
-    margin-left: 5%;
+    border-radius: 50%;
+    width: 95%;
+    margin: 0 auto;
     /* Höhe der Border-Box, legt die Mindesthöhe eines Elements fest*/
     /* Relativ zu 1 % der Breite des Ansichtsfensters */
     min-height: 10vw;
@@ -350,13 +333,25 @@ import CookiesBanner from "../components/CookiesBanner.astro";
     list-style-type: none;
   }
 
+  /* Rudi.jpg */
   .conteneur img {
-    width: 90%;
+    width: 100%;
     height: auto;
     max-width: 100%;
     margin-left: 0%;
     box-shadow: 2px 2px 5px #666;
   }
+
+/* music-note.webp */
+/* alle Bilder werden mit 20% von links positioniert die nicht im conteneur enthalten sind */
+img {
+  width: 100%;
+  height: auto;
+  margin-left: 0%;
+  max-width: 100%;
+  box-shadow: 2px 2px 5px #666;
+  border-radius: 3%;
+}
 
   a {
     text-decoration: none;
