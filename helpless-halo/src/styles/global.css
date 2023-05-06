@@ -311,6 +311,7 @@ a {
 } */
 /* Mobile Style Mediaqueries */
 /* ANCHOR 800px */
+/*
 @media screen and (max-width: 800px) {
   body {
     width: 100%;
@@ -320,4 +321,4 @@ a {
     max-width: 300px;
     height: auto;
   }
-}
+} */

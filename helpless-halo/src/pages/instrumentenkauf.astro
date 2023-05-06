@@ -30,18 +30,14 @@ import Layout from "../layouts/Layout.astro";
         </table>
       </section>
       <h2>Akustische Gitarre</h2>
-      <picture>
-        <source
-          srcset="/images/konzertgitarre-wide.webp"
-          media="(min-width: 600px)"
-        />
+      <p>
         <img
-          src="/images/konzertgitarre-narrow.webp"
-          width="394"
-          height="600"
+          src="/images/konzertgitarre-wide.webp"
           alt="Konzertgitarre"
+          width="392"
+          height="600"
         />
-      </picture>
+      </p>
       <h3>Konzertgitarre</h3>
       <p>
         Bei akustischer Gitarre ist es wichtig, da&#223; Sie sich eine
@@ -52,18 +48,14 @@ import Layout from "../layouts/Layout.astro";
         Westerngitarre.
       </p>
       <h2>Westerngitarre</h2>
-      <picture>
-        <source
-          srcset="/images/westerngitarre-wide.webp"
-          media="(min-width: 600px)"
-        />
+      <p>
         <img
-          src="/images/westerngitarre-narrow.webp"
+          src="/images/westerngitarre-wide.webp"
+          alt="Westerngitarre"
           width="277"
           height="600"
-          alt="Westerngitarre"
         />
-      </picture>
+      </p>
       <p>
         Bei der Konzertgitarre kann man dann auch mit der linken Hand sauberer
         greifen und mit der rechten Hand besser zupfen. Eine Westerngitarre wird
@@ -78,18 +70,14 @@ import Layout from "../layouts/Layout.astro";
         Bei der E-Gitarre gibt so Einsteigersets, also Gitarre und
         Verst&#228;rker f&#252;r ca. 350,- EURO.
       </p>
-      <picture>
-        <source
-          srcset="/images/klarinetten-wide.webp"
-          media="(min-width: 600px)"
-        />
+      <p>
         <img
-          src="/images/klarinetten-narrow.webp"
-          width="230"
-          height="480"
+          src="/images/klarinetten-wide.webp"
           alt="Klarinetten"
+          width="230"
+          height="804"
         />
-      </picture>
+      </p>
       <h2 id="Klarinette">Klarinette</h2>
       <p>Sie geh&#246;rt zu der Familie der Holzblasinstrumente.</p>
     </section>
@@ -139,7 +127,7 @@ import Layout from "../layouts/Layout.astro";
         src="/images/offline-narrow.webp"
         width="450"
         height="180"
-        alt="offline"
+        alt="Querlöte"
       />
     </section>
     <section class="artikel artikel-3">
@@ -208,12 +196,14 @@ import Layout from "../layouts/Layout.astro";
         auf die H&auml;mmerchen haben, ist es ein Unterd&auml;mpfer. <br /> Das folgende
         Abbildung zeigt einen Oberd&auml;mpfer:
       </p>
-      <img
-        src="/images/oberdaempfer-narrow.webp"
-        width="450"
-        height="180"
-        alt="Oberdaempfer"
-      />
+      <p>
+        <img
+          src="/images/oberdaempfer-narrow.webp"
+          width="450"
+          height="180"
+          alt="Oberdaempfer"
+        />
+      </p>
       <p>
         Diese Art der D&auml;mpfung ist zum einen weniger effektiv als bei einem
         Unterd&auml;mpfer-Klavier, da sie die Schwingungen nur im Randbereich
@@ -224,15 +214,9 @@ import Layout from "../layouts/Layout.astro";
         Regulation der Mechanik erschwert sein.
       </p>
       <hr />
-      <picture>
-        <source srcset="/images/DB-32B-wide.webp" media="(min-width: 600px)" />
-        <img
-          src="/images/DB-32B-narrow.webp"
-          width="800"
-          height="582"
-          alt="DB-32B"
-        />
-      </picture>
+      <p>
+        <img src="/images/DB-32B.webp" alt="DB-32B" width="800" height="582" />
+      </p>
       <p>Thomann DB-32 B Digitalpiano</p>
       <p>
         Alternative zu einem richtigen Klavier gibt es heutzutage Digitalpianos.
@@ -247,15 +231,14 @@ import Layout from "../layouts/Layout.astro";
         x 10 Watt. Man braucht dann noch eine Klavierbank dazu.
       </p>
       <hr />
-      <picture>
-        <source srcset="/images/SP-320-wide.webp" media="(min-width: 600px)" />
+      <p>
         <img
-          src="/images/SP-320-narrow.webp"
+          src="/images/SP-320-wide.webp"
+          alt="SP-320"
           width="800"
           height="582"
-          alt="SP-320"
         />
-      </picture>
+      </p>
       <p>Thomann SP-320 Digitalpiano</p>
       <p>
         F&uuml;r einen schmalen Geldbeutel hier (oben der Link) gibt es noch das
@@ -333,17 +316,10 @@ import Layout from "../layouts/Layout.astro";
   }
 
   /* pictures from instrumentenkauf.html */
-  .artikel picture img {
-    width: 50%;
-    height: auto;
-    margin-left: 5%;
-    box-shadow: 0px 0px 10px 5px #4c4948;
-    border-radius: 5px;
-  }
-
   .artikel img {
     width: 50%;
     height: auto;
+    margin-left: 5%;
     box-shadow: 0px 0px 10px 5px #4c4948;
     border-radius: 5px;
   }
