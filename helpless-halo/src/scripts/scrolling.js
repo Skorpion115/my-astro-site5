@@ -1,6 +1,5 @@
 // JavaScript-Code für automatischen Bildlauf
-const imageScroll1 = document.getElementById('imageScroll1');
-//const imageScroll2 = document.getElementById('imageScroll2');
+const imageScroll1 = document.getElementById("imageScroll1");
 
 // Funktion zum automatischen Wechseln der Bilder
 function autoScroll(element) {
@@ -10,7 +9,7 @@ function autoScroll(element) {
   const slideTimer = setInterval(function () {
     element.scrollTo({
       left: scrollAmount,
-      behavior: 'smooth'
+      behavior: "smooth"
     });
 
     scrollAmount += element.clientWidth;
@@ -22,7 +21,6 @@ function autoScroll(element) {
 }
 
 // Automatischer Bildlauf beim Laden der Seite
-window.addEventListener('load', function () {
+window.addEventListener("load", function () {
   autoScroll(imageScroll1);
-  //autoScroll(imageScroll2);
 });

@@ -14,18 +14,6 @@
 // End Google Tage Manager
 
 // Global site tag (gtag.js) - Google Analytics
-/*
-  window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-  gtag("js", new Date());
-  gtag("config", "G-66Z7DSTCPC");
-  gtag("config", "AW-93825274"); */
-
-//<!-- Google tag (gtag.js) -->
-//<script async src="https://www.googletagmanager.com/gtag/js?id=G-V1YNY55442"></script>
 
 window.dataLayer = window.dataLayer || [];
 function gtag() {
