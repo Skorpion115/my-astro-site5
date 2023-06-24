@@ -12,10 +12,7 @@ Astro.response.headers.set("Set-Cookie", "a=b; Path=/;");
   <!-- Navigationsleiste -->
   <nav>
     <ul>
-      <li><a href="/gaestebuch/" class="link-blue">Gästebuch</a></li>
-      <li>
-        <a href="/instrumentenkauf/" class="link-blue">Instrumentenkauf</a>
-      </li>
+      <li><a href="/instrumentenkauf/" class="link-blue">Instrumentenkauf</a></li>
       <li><a href="/honorar/" class="link-blue">Honorar</a></li>
       <li><a href="/leistungen/" class="link-blue">Leistungen</a></li>
       <li><span id="invertButton" class="link-purple">Invert</span></li>
@@ -38,13 +35,13 @@ Astro.response.headers.set("Set-Cookie", "a=b; Path=/;");
 </style>
 
 <script is:inline>
-  document.querySelector("#invertButton").addEventListener("click", () => {
-    document.querySelector("body").classList.toggle("invert");
+document.querySelector("#invertButton").addEventListener("click", () => {
+  document.querySelector("body").classList.toggle("invert");
 
-    if (localStorage.getItem("theme") == "invert") {
-      localStorage.setItem("theme", "");
-    } else {
-      localStorage.setItem("theme", "invert");
-    }
-  });
+  if (localStorage.getItem("theme") == "invert") {
+    localStorage.setItem("theme", "");
+  } else {
+    localStorage.setItem("theme", "invert");
+  }
+});
 </script>
