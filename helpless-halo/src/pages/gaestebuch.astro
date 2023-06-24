@@ -27,14 +27,18 @@ import Layout from "../layouts/Layout.astro";
     <textarea id="nachricht" rows="4" cols="30" required></textarea><br />
 
     <div data-netlify-recaptcha="true"></div>
-
+    <!--
     <input
         type="submit"
         value="Eintragen"
-        onclick="eintragHinzufuegen(event)">
+        onclick="eintragHinzufuegen(event)"> -->
     <br />
-    <br />
+    <div>
+        <button type="submit" value="Eintragen" onclick="eintragHinzufuegen(event)">Eintragen</button>
+    </div>
+    <p>
     <a href="../index.html" class="link-blue">zurück</a>
+    </p>
 </form>
 </Layout>
 
@@ -97,3 +101,7 @@ import Layout from "../layouts/Layout.astro";
         margin: 5px 0;
     }
 </style>
+
+
+
+
