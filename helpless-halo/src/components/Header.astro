@@ -47,6 +47,17 @@ Astro.response.headers.set("Set-Cookie", "a=b; Path=/;");
 </header>
 
 <style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    height: 100%;
+  }
+
+  body {
+    height: 100%;
+  }
 /* 
   #page-logo {
     font-style: italic;
@@ -119,7 +130,7 @@ nav ul li .active {
   }
 
   /* Wenn unter 750px dann gelten folgende Regeln */
-  @media(max-width:960px) {
+  @media(max-width:750px) {
     .list-container {
         display: none;
         width: 100%;
