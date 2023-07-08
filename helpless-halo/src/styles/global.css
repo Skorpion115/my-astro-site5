@@ -77,7 +77,7 @@ footer {
 p {
   font-weight: normal;
   text-align: start;
-
+  padding: 1.25rem;
 }
 
 /* ANCHOR root Element html-Element */
