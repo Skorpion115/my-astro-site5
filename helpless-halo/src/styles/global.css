@@ -262,7 +262,7 @@ a {
   margin-left: 1rem;
   margin-right: 3rem;
 }
-
+/*
 #instruments_lesson ul {
   list-style: none;
   padding: 0;
@@ -270,7 +270,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-}
+} */
 
 .video-container {
   position: relative;
