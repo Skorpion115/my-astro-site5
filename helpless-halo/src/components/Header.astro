@@ -8,7 +8,6 @@ Astro.response.headers.set("Set-Cookie", "a=b; Path=/;");
       >Author Musicstudio Ziebart<span class="text-white"></span>
     </a>
   </div>
-  <br />
 
   <!-- Navigationsleiste -->
   <!--
@@ -27,27 +26,27 @@ Astro.response.headers.set("Set-Cookie", "a=b; Path=/;");
     <!--
     <div class="nav_logo"><img src="images/logo_192x192.png" width="192" height="192" alt="firmenlogo"></div> -->
     <a href="#" class="toggle-button">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
     </a>
     <div class="list-container">
-        <ul>
-            <li><a href="/instrumentenkauf/">Instrumentenkauf</a></li>
-            <li><a href="/honorar/">Honorar</a></li>
-            <li><a href="/leistungen/">Leistungen</a></li>
-            <li><a href="/faq/">FAQ</a></li>
-            <li><a href="/download/">Download</a></li>
-            <li><a href="/harmonielehre/">Harmonielehre</a></li>
-            <li><a href="/impressum/">Impressum</a></li>
-            <li><span id="invertButton" class="link-purple">Invert</span></li>
-        </ul>
-
+      <ul>
+        <li><a href="/instrumentenkauf/">Instrumentenkauf</a></li>
+        <li><a href="/honorar/">Honorar</a></li>
+        <li><a href="/leistungen/">Leistungen</a></li>
+        <li><a href="/faq/">FAQ</a></li>
+        <li><a href="/download/">Download</a></li>
+        <li><a href="/harmonielehre/">Harmonielehre</a></li>
+        <li><a href="/impressum/">Impressum</a></li>
+        <li><span id="invertButton" class="link-purple">Invert</span></li>
+      </ul>
     </div>
-</nav>
+  </nav>
 </header>
 
 <style>
+  
   * {
     margin: 0;
     padding: 0;
@@ -59,11 +58,12 @@ Astro.response.headers.set("Set-Cookie", "a=b; Path=/;");
   body {
     height: 100%;
   }
-/* 
+
   #page-logo {
     font-style: italic;
-  } */
-/*
+    margin: 1.25rem;
+  }
+  /*
   nav > ul {
     list-style: none;
     padding: 0;
@@ -73,91 +73,100 @@ Astro.response.headers.set("Set-Cookie", "a=b; Path=/;");
   } */
 
   nav {
-    min-height: 80px;
+    min-height: 5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(42,42,42);
+    background-color: rgb(42, 42, 42);
+  }
+  /*
+  .nav_logo {
+    margin: 1.25rem;
+    font-size: 1.875;
+    color: var(--color-black);
+    background-color: var(--color-white);
+  } */
+
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
   }
 
-nav ul {
-    display: flex;
-}
-
-nav ul li {
+  nav ul li {
     height: 100%;
-    padding: 10px;
+    padding: 0.625rem;
     list-style-type: none;
-    border-bottom: 4px solid rgb(42,42,42);
-}
+    border-bottom: 0.25rem solid rgb(42, 42, 42);
+  }
 
-/* Farbe der Menuleiste wenn man darauf klickt */
-nav ul li:hover {
-    border-bottom: 4px solid rgb(111,0,255);
-}
+  /* Farbe der Menuleiste wenn man darauf klickt */
+  nav ul li:hover {
+    border-bottom: 0.25rem solid rgb(111, 0, 255);
+  }
 
-/* Schriftgröße der Menubar */
-nav ul li a {
+  /* Schriftgröße der Menubar */
+  nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 22px;
+    font-size: 1.375rem;
     font-family: sans-serif;
-}
+  }
 
-/* Hover Effekt wenn aktiv */
-nav ul li .active {
+  /* Hover Effekt wenn aktiv */
+  nav ul li .active {
     color: cornflowerblue;
-}
+  }
 
   .toggle-button {
     position: absolute;
-    top: 25px;
-    right: 25px;
+    top: 1.563rem;
+    right: 1.563rem;
     display: none;
     flex-direction: column;
     justify-content: space-between;
-    width: 30px;
-    height: 23px;
+    width: 1.875rem;
+    height: 1.438rem;
   }
 
   /* Dreistrich Menu */
   .toggle-button .bar {
-    height: 4px;
+    height: 0.25rem;
     width: 100%;
     background-color: white;
-    border-radius: 100px;
+    border-radius: 6.25rem;
     color: var(--color-black);
     background-color: var(--color-white);
   }
 
   /* Wenn unter 750px dann gelten folgende Regeln */
-  @media(max-width:750px) {
+  @media (max-width: 750px) {
     .list-container {
-        display: none;
-        width: 100%;
+      display: none;
+      width: 100%;
     }
     /* Toggle Button wird eingeschaltet */
     .toggle-button {
-        display: flex;
+      display: flex;
     }
     /* Flex direction ist in Spalten */
     nav {
-        flex-direction: column;
-        align-items: flex-start;
+      flex-direction: column;
+      align-items: flex-start;
     }
     .list-container ul {
-        flex-direction: column;
-        width: 100%;
+      flex-direction: column;
+      width: 100%;
     }
     /* Text wird zentriert */
     .list-container li {
-        text-align: center;
+      text-align: center;
     }
     .list-container.active {
-        display: flex;
+      display: flex;
+      flex-direction: column;
     }
-
-}
+  }
 </style>
 
 <script is:inline>
@@ -169,5 +178,5 @@ document.querySelector("#invertButton").addEventListener("click", () => {
   } else {
     localStorage.setItem("theme", "invert");
   }
-  });
+});
 </script>
