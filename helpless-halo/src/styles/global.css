@@ -71,7 +71,7 @@ footer {
   width: 100%;
   max-width: 1260px;
   margin: 0 auto;
-  padding: 24px;
+  padding: 1.5rem;
 }
 
 p {
@@ -262,15 +262,6 @@ a {
   margin-left: 1rem;
   margin-right: 3rem;
 }
-/*
-#instruments_lesson ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-} */
 
 .video-container {
   position: relative;

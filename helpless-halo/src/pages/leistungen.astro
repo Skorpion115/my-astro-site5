@@ -85,7 +85,7 @@ import Layout from "../layouts/Layout.astro";
     font-size: 1.125rem;
     border: none;
     color: #fff;
-    border-radius: 5%;
+    border-radius: 0.313rem;
   }
 
   .dropdown {
@@ -104,11 +104,12 @@ import Layout from "../layouts/Layout.astro";
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   }
 
+
   .dropdown-content a {
     color: #000;
     padding: 1.125rem 1.125rem;
     text-decoration: none;
-    display: block;
+    text-align: center;
   }
 
   .dropdown-content a:hover {
@@ -116,7 +117,8 @@ import Layout from "../layouts/Layout.astro";
   }
 
   .dropdown:hover .dropdown-content {
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
 
   .dropdown:hover .dropbtn {
