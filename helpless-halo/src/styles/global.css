@@ -31,7 +31,7 @@ body {
   --color-yellow: #c1de04;
   --color-blue: #03bfee;
   --color-blau: #336699;
-  --color-brown: #ffe8de;
+  --color-brown: #b33c09;
   --font: "IBM", sans-serif;
   --line: 3ch;
   --font-scale: 0.4vw;
@@ -47,7 +47,7 @@ body.invert {
   --color-yellow: #e37e02;
   --color-blue: #0856af;
   --color-blau: #41dce1;
-  --color-brown: #5e311f;
+  --color-brown: #db7d58;
 }
 
 /* ANCHOR General Style */

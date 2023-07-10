@@ -97,12 +97,12 @@ Astro.response.headers.set("Set-Cookie", "a=b; Path=/;");
     height: 100%;
     padding: 0.625rem;
     list-style-type: none;
-    border-bottom: 0.25rem solid rgb(42, 42, 42);
+    border-bottom: 0.25rem solid var(--color-brown);
   }
 
   /* Farbe der Menuleiste wenn man darauf klickt */
   nav ul li:hover {
-    border-bottom: 0.25rem solid rgb(111, 0, 255);
+    border-bottom: 0.25rem solid red;
   }
 
   /* Schriftgröße der Menubar */
@@ -112,6 +112,9 @@ Astro.response.headers.set("Set-Cookie", "a=b; Path=/;");
     font-size: 1.375rem;
     font-family: sans-serif;
   }
+  nav ul li a:hover {
+    background-color: rgb(250, 179, 179);
+  }
 
   /* Hover Effekt wenn aktiv */
   /*
@@ -120,7 +123,7 @@ Astro.response.headers.set("Set-Cookie", "a=b; Path=/;");
   } */
 
   .list-container {
-    background-color: rgba(116, 85, 141, 0.534);
+    background-color: var(--color-brown);
   }
 
   .toggle-button {
