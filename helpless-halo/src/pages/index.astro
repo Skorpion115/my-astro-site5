@@ -213,8 +213,7 @@ import Scrolling from "../components/Scrolling.astro";
             href="mailto:postmaster@musicstudio-ziebart.de"
             class="link-blue"
             onfocus="this.blur()"
-            >postmaster@musicstu dio-ziebar
-t .de
+            >postmaster@musicstudio-ziebart.de
           </a>
         </p>
         <p>
@@ -275,7 +274,7 @@ t .de
   <Scrolling />
 
   <style>
-    /* ANCHOR Scrolling */
+    /* ANCHOR Bilder Scrolling mit JavaScript */
     .container {
       display: inline-block;
       height: auto;
@@ -386,8 +385,6 @@ t .de
 
     /* ANCHOR Hauptseite */
     .conteneur {
-      color: var(--color-white);
-      background-color: var(--color-black);
       border: 0px solid black;
       align-content: space-between;
       width: 94vw;
@@ -414,16 +411,16 @@ t .de
     }
 
     .conteneur ul li {
-      color: var(--color-white);
-      background-color: var(--color-black);
       height: 3rem;
       box-shadow: 2px 2px 5px #666;
       margin-top: 15px;
+      /* oben und unten 0.3rem, rechts und links 1.875rem */
       padding: 0.3rem 1.875rem;
       font-size: large;
+      /* Keine Punkte vor den Ul's */
       list-style-type: none;
     }
-
+    
     /* Rudi.jpg */
     
     .conteneur img {
@@ -445,10 +442,6 @@ t .de
       box-shadow: 2px 2px 5px #666;
       border-radius: 3%;
     } */
-
-    a {
-      text-decoration: none;
-    }
 
     /* ANCHOR Style für Cookie Banner */
     #footer-cookie,

@@ -23,6 +23,7 @@
 /* ANCHOR Custom Properties */
 body {
   --color-black: #191919;
+  --color-schwarz: rgb(42, 42, 42);
   --color-white: #ffffff;
   --color-grey: #a3a3a3;
   --color-green: #13f270;
@@ -30,7 +31,7 @@ body {
   --color-purple: #ee0dfe;
   --color-yellow: #c1de04;
   --color-blue: #03bfee;
-  --color-blau: #336699;
+  --color-blau: #aefcff;
   --color-brown: #b33c09;
   --font: "IBM", sans-serif;
   --line: 3ch;
@@ -39,6 +40,7 @@ body {
 
 body.invert {
   --color-black: #ffffff;
+  --color-schwarz: #fff;
   --color-white: #000000;
   --color-grey: #6e6e6e;
   --color-green: #007932;
@@ -46,7 +48,7 @@ body.invert {
   --color-purple: #800257;
   --color-yellow: #e37e02;
   --color-blue: #0856af;
-  --color-blau: #41dce1;
+  --color-blau: #336699;
   --color-brown: #db7d58;
 }
 
@@ -63,7 +65,7 @@ body {
   line-height: var(--line);
   font-weight: 400;
   color: var(--color-white);
-  background-color: var(--color-black);
+  background-color: var(--color-schwarz);
 }
 
 header,
@@ -173,7 +175,8 @@ a {
 }
 
 .link-blau {
-  color: var(--color-blau);
+  color: var(--color-white);
+  background-color: var(--color-blau);
 }
 
 .link-blau:hover {
@@ -225,10 +228,6 @@ a {
 /* ANCHOR Instruments_lesson */
 
 #instruments_lesson {
-  font-size: calc(1rem + var(--font-scale));
-  line-height: var(--line);
-  color: var(--color-white);
-  background-color: var(--color-black);
   width: 96%;
   max-width: 100%;
   margin: 2rem auto;
