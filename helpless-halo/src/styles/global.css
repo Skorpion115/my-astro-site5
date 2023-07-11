@@ -22,7 +22,7 @@
 }
 /* ANCHOR Custom Properties */
 body {
-  --color-black: #191919;
+  --color-black: #ffffff;
   --color-schwarz: rgb(42, 42, 42);
   --color-white: #ffffff;
   --color-grey: #a3a3a3;
@@ -39,8 +39,8 @@ body {
 }
 
 body.invert {
-  --color-black: #ffffff;
-  --color-schwarz: #fff;
+  --color-black: #000000;
+  --color-schwarz: #ffffff;
   --color-white: #000000;
   --color-grey: #6e6e6e;
   --color-green: #007932;
@@ -64,7 +64,7 @@ body {
   font-size: calc(1rem + var(--font-scale));
   line-height: var(--line);
   font-weight: 400;
-  color: var(--color-white);
+  color: var(--color-black);
   background-color: var(--color-schwarz);
 }
 
@@ -187,6 +187,10 @@ a {
 /* ANCHOR Text Colors */
 .text-black {
   color: var(--color-black);
+}
+
+.text-schwarz {
+  color: var(--color-schwarz)
 }
 
 .text-white {
