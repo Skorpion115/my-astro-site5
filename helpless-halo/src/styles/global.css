@@ -25,6 +25,7 @@ body {
   --color-black: #ffffff;
   --color-schwarz: rgb(42, 42, 42);
   --color-white: #ffffff;
+  --color-weiss: #000000;
   --color-grey: #a3a3a3;
   --color-green: #13f270;
   --color-red: #fc1a52;
@@ -42,6 +43,7 @@ body.invert {
   --color-black: #000000;
   --color-schwarz: #ffffff;
   --color-white: #000000;
+  --color-weiss: #ffffff;
   --color-grey: #6e6e6e;
   --color-green: #007932;
   --color-red: #c70636;
