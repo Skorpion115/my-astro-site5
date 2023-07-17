@@ -18,7 +18,7 @@ Astro.response.headers.set("Set-Cookie", "a=b; Path=/;");
     </a>
     <div class="list-container">
       <ul>
-        <li><a href="/">Musikunterricht</a></li>
+        <li><a class="active" href="/">Musikunterricht</a></li>
         <li><a href="/instrumentenkauf/">Instrumentenkauf</a></li>
         <li><a href="/honorar/">Honorar</a></li>
         <li><a href="/leistungen/">Leistungen</a></li>
@@ -49,17 +49,9 @@ Astro.response.headers.set("Set-Cookie", "a=b; Path=/;");
     font-style: italic;
     margin: 1.25rem;
   }
-  /*
-  nav > ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-  } */
 
   .list-container {
-    background-color: var(--color-brown);
+    background-color: #c0392b;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.3);
   }
 
@@ -83,29 +75,47 @@ Astro.response.headers.set("Set-Cookie", "a=b; Path=/;");
     gap: 0.5rem;
   }
 
+  .list-container ul li a.active,
+  .list-container ul li:hover a {
+    background: #fff;
+    color: #c0392b;
+  }
+
   nav ul li {
     height: 100%;
     padding: 0.625rem;
-    list-style-type: none;
-    border-bottom: 0.25rem solid var(--color-brown);
+    list-style: none;
   }
 
   /* Schriftgröße, Farbe und Fontfamilie der Menubar */
+  
   nav ul li a {
-    color: var(--color-white);
+    color: #fff;
+    font-weight: 700; 
     text-decoration: none;
-    font-size: 1.375rem;
+    font-size: var(--font-size);
+    text-transform: uppercase;
+    height: 2.5rem;
+    line-height: 2.5rem;
     font-family: sans-serif;
-  }
-
-  /* Farbe der Menuleiste wenn man darauf klickt */
-  nav ul li:hover {
-    border-bottom: 0.25rem solid red;
-    background-color: rgb(250, 179, 179);
+    transition: 0.5s;
+    padding: 0.625rem;
   }
 
   #invertButton {
     cursor: pointer;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.375;
+    text-transform: uppercase;
+    height: 2.5rem;
+    line-height: 2.5rem;
+  }
+
+  #invertButton:hover {
+    background: #fff;
+    color: #c0392b;
+    transition: 0.5s;
   }
 
   /* Hover Effekt wenn aktiv */
@@ -134,8 +144,9 @@ Astro.response.headers.set("Set-Cookie", "a=b; Path=/;");
   }
 
   /* Wenn unter 750px dann gelten folgende Regeln */
-  @media (max-width: 750px) {
+  @media (max-width: 768px) {
     .list-container {
+      top: 5rem;
       display: none;
       width: 100%;
     }
