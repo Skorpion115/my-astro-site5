@@ -18,7 +18,7 @@ Astro.response.headers.set("Set-Cookie", "a=b; Path=/;");
     </a>
     <div class="list-container">
       <ul>
-        <li><a class="active" href="/">Musikunterricht</a></li>
+        <li><a href="/">Musikunterricht</a></li>
         <li><a href="/instrumentenkauf/">Instrumentenkauf</a></li>
         <li><a href="/honorar/">Honorar</a></li>
         <li><a href="/leistungen/">Leistungen</a></li>
@@ -75,7 +75,7 @@ Astro.response.headers.set("Set-Cookie", "a=b; Path=/;");
     gap: 0.5rem;
   }
 
-  .list-container ul li a.active,
+  .list-container ul li.active,
   .list-container ul li:hover a {
     background: #fff;
     color: #c0392b;
@@ -162,14 +162,23 @@ Astro.response.headers.set("Set-Cookie", "a=b; Path=/;");
     .list-container ul {
       flex-direction: column;
       width: 100%;
-    }
-    /* Text wird zentriert */
-    .list-container li {
       text-align: center;
     }
+    /* Text wird zentriert */
+    /*
+    .list-container li {
+      text-align: center;
+    } */
+
+    .list-container ul li a {
+      height: 3.125rem;
+      line-height: 3.125rem;
+    }
+
     .list-container.active {
       display: flex;
       flex-direction: column;
+      max-height: 600px;
     }
   }
 </style>
