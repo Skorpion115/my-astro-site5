@@ -49,10 +49,15 @@ Astro.response.headers.set("Set-Cookie", "a=b; Path=/;");
     font-style: italic;
     margin: 1.25rem;
   }
-
+  
   .list-container {
     background-color: #c0392b;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.3);
+  }
+  
+  .list-container ul li:hover a {
+    background: #fff;
+    color: #c0392b;
   }
 
   nav {
@@ -74,13 +79,7 @@ Astro.response.headers.set("Set-Cookie", "a=b; Path=/;");
     flex-wrap: wrap;
     gap: 0.5rem;
   }
-
-  .list-container ul li.active,
-  .list-container ul li:hover a {
-    background: #fff;
-    color: #c0392b;
-  }
-
+ 
   nav ul li {
     height: 100%;
     padding: 0.625rem;
@@ -115,14 +114,8 @@ Astro.response.headers.set("Set-Cookie", "a=b; Path=/;");
   #invertButton:hover {
     background: #fff;
     color: #c0392b;
-    transition: 0.5s;
+    transition: 0.5s ease;
   }
-
-  /* Hover Effekt wenn aktiv */
-  /*
-  nav ul li .active {
-    color: cornflowerblue;
-  } */
 
   .toggle-button {
     position: absolute;
@@ -131,8 +124,8 @@ Astro.response.headers.set("Set-Cookie", "a=b; Path=/;");
     display: none;
     flex-direction: column;
     justify-content: space-between;
-    width: 1.875rem;
-    height: 1.438rem;
+    width: 27px;
+    height: 20px;
   }
 
   /* Dreistrich Menu */
@@ -178,7 +171,6 @@ Astro.response.headers.set("Set-Cookie", "a=b; Path=/;");
     .list-container.active {
       display: flex;
       flex-direction: column;
-      max-height: 600px;
     }
   }
 </style>
