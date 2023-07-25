@@ -232,7 +232,7 @@ function todoApp() {
   };
 
   this.getAllTodos = function () {
-    this.apiHandler("http://localhost:8888/api/todos", "GET").then((json) => {
+    this.apiHandler("https://www.musicstudio-ziebart.de/api-frontend/api/todos", "GET").then((json) => {
       for (let i = 0; i < json.data.length; i++) {
         this.printTodo(json.data[i]);
       }
