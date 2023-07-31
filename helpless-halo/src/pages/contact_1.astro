@@ -16,7 +16,7 @@ import Layout from "../layouts/Layout.astro";
       data-netlify-recaptcha="true"
       data-netlify="true"
     >
-      <input type="hidden" name="subject" value="Neue Ueberschrift von %{formName} (%{submissionID})" />
+      <input type="hidden" name="subject" value="Neue Anfrage von glittery-sprinkles-dadbac.netlify.app" />
       <fieldset>
         <legend>Daten</legend>
         <div class="formfields"></div>
@@ -180,6 +180,11 @@ import Layout from "../layouts/Layout.astro";
             class="form-control form-control-lg"
           />
         </div>
+        <br />
+        <div>
+          <input name="email" Reply-to>
+        </div>
+        <br />
       </fieldset>
       <br />
       <div data-netlify-recaptcha="true"></div>
