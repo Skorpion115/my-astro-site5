@@ -15,7 +15,7 @@ import Layout from "../layouts/Layout.astro";
       data-netlify-recaptcha="true"
       data-netlify="true"
     >
-    <input type="hidden" name="form-name" value="contact" />
+      <input type="hidden" name="form-name" value="contact" />
       <fieldset>
         <legend>Daten</legend>
         <div class="formfields"></div>
@@ -40,6 +40,7 @@ import Layout from "../layouts/Layout.astro";
             required
           />
         </div>
+        <!--
         <div>
           <label for="subject">Betreff</label>
           <input
@@ -49,7 +50,7 @@ import Layout from "../layouts/Layout.astro";
             maxlength="30"
             class="form-control form-control-lg"
           />
-        </div>
+        </div> -->
         <br />
         <div class="form-element">
           <label for="phone">Telefon</label>
@@ -94,7 +95,8 @@ import Layout from "../layouts/Layout.astro";
             cols="23"
             rows="10"
             class="form-control"
-            placeholder="Wenn Sie wollen schreiben Sie hier eine Nachricht..."></textarea>
+            placeholder="Wenn Sie wollen schreiben Sie hier eine Nachricht..."
+          ></textarea>
         </div>
       </fieldset>
       <fieldset>
@@ -271,12 +273,11 @@ import Layout from "../layouts/Layout.astro";
   }
 
   /* ganze Formular */
-  
+
   .form-element {
     color: var(--color-white);
     background-color: var(--color-schwarz);
   }
-  
 
   /* Beschreibung der Felder unten */
   /*
