@@ -11,11 +11,12 @@ import Layout from "../layouts/Layout.astro";
     <h2>Contact Me</h2>
     <form
       name="contact_1"
+      method="POST"
       action="/thankyou/"
       data-netlify-recaptcha="true"
       data-netlify="true"
     >
-      <input type="hidden" name="form-name" value="contact_1" />
+      <input type="hidden" name="subject" value="Sales inquiry from glittery-sprinkles-dadbac.netlify.app" />
       <fieldset>
         <legend>Daten</legend>
         <div class="formfields"></div>
