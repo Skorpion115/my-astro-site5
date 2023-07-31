@@ -3,19 +3,19 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout
-  title="Contact"
+  title="contact_1"
   description="Kostenloser Probeunterricht"
   keywords="Kontakt"
 >
-  <div class="container">
+  <div class="container1">
     <h2>Contact Me</h2>
     <form
-      name="contact"
+      name="contact_1"
       action="/thankyou/"
       data-netlify-recaptcha="true"
       data-netlify="true"
     >
-      <input type="hidden" name="form-name" value="contact" />
+      <input type="hidden" name="form-name" value="contact_1" />
       <fieldset>
         <legend>Daten</legend>
         <div class="formfields"></div>
@@ -83,8 +83,6 @@ import Layout from "../layouts/Layout.astro";
             required
           />
         </div>
-        <br />
-        <br />
         <div>
           <br />
           <label for="message">Nachricht</label>
@@ -96,16 +94,6 @@ import Layout from "../layouts/Layout.astro";
             class="form-control"
             placeholder="Wenn Sie wollen schreiben Sie hier eine Nachricht..."
           ></textarea>
-        </div>
-        <div>
-          <label for="fname">Vorname</label>
-          <input
-            type="text"
-            name="fname"
-            id="fname"
-            class="form-control form-control-lg"
-            required
-          />
         </div>
       </fieldset>
       <fieldset>
@@ -230,7 +218,7 @@ import Layout from "../layouts/Layout.astro";
 </Layout>
 
 <style>
-  .container {
+  .container1 {
     margin: 0 auto;
     padding: 5%;
     box-sizing: border-box;
@@ -326,10 +314,10 @@ import Layout from "../layouts/Layout.astro";
     text-align: center;
     font-size: 1.125rem;
   }
-
+  /*
   .form-control::placeholder {
     font-size: 1.125rem;
-  }
+  } */
 
   /* Schriftgröße im Ausfüllbereich */
   input,
