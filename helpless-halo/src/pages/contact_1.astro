@@ -16,10 +16,22 @@ import Layout from "../layouts/Layout.astro";
       data-netlify-recaptcha="true"
       data-netlify="true"
     >
-      <input type="hidden" name="subject" value="Sales inquiry from glittery-sprinkles-dadbac.netlify.app" />
+      <input type="hidden" name="subject" value="Anfrage von glittery-sprinkles-dadbac.netlify.app" />
       <fieldset>
         <legend>Daten</legend>
         <div class="formfields"></div>
+        <br />
+        <div>
+          <label for="subject">Betreff:</label>
+          <input
+            name="subject"
+            type="text"
+            id="subject"
+            maxlength="30"
+            placeholder="Probeunterricht"
+            class="form-control form-control-lg"
+          />
+        </div>
         <br />
         <div class="form-element">
           <label for="born">Geburtsdatum</label>
