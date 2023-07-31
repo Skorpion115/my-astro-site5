@@ -19,7 +19,19 @@ import Layout from "../layouts/Layout.astro";
           id="name"
           name="name"
           placeholder="Namen eintragen"
-          class="form-control form-control-lg" required
+          class="form-control form-control-lg"
+          required
+        />
+      </div>
+      <div>
+        <label for="subject">Betreff:</label>
+        <input
+          name="subject"
+          type="text"
+          id="subject"
+          maxlength="30"
+          placeholder="Rückruf"
+          class="form-control form-control-lg"
         />
       </div>
       <div>
@@ -37,7 +49,8 @@ import Layout from "../layouts/Layout.astro";
           type="tel"
           id="phone"
           name="phone"
-          class="form-control form-control-lg" required
+          class="form-control form-control-lg"
+          required
         />
       </div>
       <div>
@@ -45,7 +58,8 @@ import Layout from "../layouts/Layout.astro";
         <input
           type="email"
           id="email"
-          name="email" Reply-to
+          name="email"
+          Reply-to
           class="form-control form-control-lg"
         />
       </div>
@@ -56,7 +70,7 @@ import Layout from "../layouts/Layout.astro";
       </div>
       <br />
       <a href="../index.html" class="link-blue">zurück</a>
-    </form>   
+    </form>
   </div>
 </Layout>
 
