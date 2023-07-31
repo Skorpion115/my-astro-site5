@@ -21,6 +21,7 @@ import Layout from "../layouts/Layout.astro";
         <div class="formfields"></div>
         <br />
         <div class="form-element">
+          <label for="born">Geburtsdatum</label>
           <input
             type="date"
             name="born"
@@ -30,25 +31,38 @@ import Layout from "../layouts/Layout.astro";
         </div>
         <br />
         <div class="form-element">
+          <label for="desired_date">Wunschtermin</label>
           <input
             type="datetime-local"
             name="desired_date"
             id="desired_date"
             class="form-control form-control-lg"
+            required
+          />
+        </div>
+        <div>
+          <label for="subject">Betreff</label>
+          <input
+            name="subject"
+            type="text"
+            id="subject"
+            maxlength="30"
+            class="form-control form-control-lg"
           />
         </div>
         <br />
         <div class="form-element">
+          <label for="phone">Telefon</label>
           <input
             type="tel"
             name="phone"
             id="phone"
-            placeholder="Telefonnummer *"
             class="form-control form-control-lg"
           />
         </div>
         <br />
         <div>
+          <label for="instrument">Instrument</label>
           <input
             type="text"
             name="instrument"
@@ -58,6 +72,7 @@ import Layout from "../layouts/Layout.astro";
         </div>
         <br />
         <div>
+          <label for="email">Email</label>
           <input
             type="email"
             name="email"
@@ -69,38 +84,40 @@ import Layout from "../layouts/Layout.astro";
         <br />
         <div>
           <br />
+          <label for="comments">Nachricht</label>
           <textarea
             name="comments"
             id="comments"
             cols="23"
             rows="10"
             class="form-control"
-            placeholder="Wie kann ich Ihnen helfen? *"></textarea>
+            placeholder="Wenn Sie wollen schreiben Sie hier eine Nachricht..."></textarea>
         </div>
       </fieldset>
       <fieldset>
         <legend>Adresse</legend>
         <div>
+          <label for="fname">Vorname</label>
           <input
             type="text"
             name="fname"
             id="fname"
-            placeholder="Vorname *"
             class="form-control form-control-lg"
           />
         </div>
         <br />
         <div>
+          <label for="lname">Nachname</label>
           <input
             type="text"
             name="lname"
             id="lname"
-            placeholder="Nachname *"
             class="form-control form-control-lg"
           />
         </div>
         <br />
         <div>
+          <label for="street">Strasse</label>
           <input
             type="text"
             name="street"
@@ -111,6 +128,7 @@ import Layout from "../layouts/Layout.astro";
         </div>
         <br />
         <div>
+          <label for="place">Ort</label>
           <input
             type="text"
             name="place"
@@ -121,11 +139,11 @@ import Layout from "../layouts/Layout.astro";
         </div>
         <br />
         <div>
+          <label for="number">Postleitzahl</label>
           <input
             type="number"
             name="postal_code"
             id="postal_code"
-            placeholder="Postleitzahl *"
             class="form-control form-control-lg"
           />
         </div>
@@ -133,6 +151,7 @@ import Layout from "../layouts/Layout.astro";
       <br />
       <fieldset>
         <div>
+          <label for="parents">Eltern</label>
           <input
             type="text"
             name="parents"
@@ -227,6 +246,12 @@ import Layout from "../layouts/Layout.astro";
     font-size: 1rem;
   }
 
+  label {
+    display: block;
+    font-size: 1.125rem;
+    padding: 0.625rem;
+  }
+
   fieldset legend {
     color: #828282;
     font-size: 1.5rem;
@@ -244,12 +269,12 @@ import Layout from "../layouts/Layout.astro";
   }
 
   /* Beschreibung der Felder unten */
+  /*
   .invalid-feedback {
-    /*background-color: #1b1c1e; */
     color: #828282;
     font-size: 1.125rem;
     padding: 0.625rem;
-  }
+  } */
 
   /* Der Rand um die Felder */
   .form-control {
@@ -295,6 +320,8 @@ import Layout from "../layouts/Layout.astro";
     /*color: #fff; */
     font-size: 1.125rem;
     padding: 0.625rem;
+    color: var(--color-white);
+    background-color: var(--color-schwarz);
   }
 
   .btn {
