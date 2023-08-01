@@ -23,3 +23,6 @@ pnpm-debug.log*
 # Dateien ausschließen
 *mp4
 .vscode
+
+# Datei ausschließen
+contact_5.astro
