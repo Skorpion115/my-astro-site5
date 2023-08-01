@@ -8,6 +8,7 @@ import Layout from "../layouts/Layout.astro";
     <form
       name="contact_4"
       action="/thankyou/"
+      method="POST"
       data-netlify-recaptcha="true"
       data-netlify="true"
     >
@@ -34,14 +35,14 @@ import Layout from "../layouts/Layout.astro";
           placeholder="Rückruf"
           class="form-control form-control-lg"
         />
-      </div>
+      </div>     
       <div>
-        <label for="comments">Kommentar:</label>
-        <textarea 
-          name="comments" 
-          id="comments" 
-          cols="23" 
-          rows="10" 
+        <label for="message">Nachricht:</label>
+        <textarea
+          id="message"
+          name="message"
+          cols="23"
+          rows="10"
           placeholder="Bitte um Rückruf"
           >
         </textarea>
