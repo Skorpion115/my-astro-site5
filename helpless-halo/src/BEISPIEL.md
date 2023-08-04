@@ -33,8 +33,8 @@ src/pages/saxophonunterricht.astro          -> musicstudio-ziebart/saxophonunter
 src/pages/saxophonunterricht/index.html     -> musicstudio-ziebart/saxophonunterricht/
 src/pages/klarinettenunterricht.astro       -> musicstudio-ziebart/klarinettenunterricht/
 src/pages/klarinettenunterricht/index.html  -> musicstudio-ziebart/klarinettenunterricht/
-src/pages/contact.astro                     -> musicstudio-ziebart/contact/
-src/pages/contact/index.astro               -> musicstudio-ziebart/contact/
+src/pages/contact_2.astro                     -> musicstudio-ziebart/contact_2/
+src/pages/contact_2/index.astro               -> musicstudio-ziebart/contact_2/
 src/pages/thankyou.astro                    -> musicstudio-ziebart/thankyou/
 src/pages/thankyou/index.html               -> musicstudio-ziebart/thankyou/
 src/pages/contact_4.astro                   -> musicstudio-ziebart/contact_4/
