@@ -4,13 +4,13 @@ import sitemap from '@astrojs/sitemap';
 // https://astro.build/config
 export default defineConfig({
     // Resolves to the "./foo" directory in your current working directory
-    root: 'foo',
+    root: "foo",
     // Resolves to the "./foo/public" directory in your current working directory
-    publicDir: 'public',
+    publicDir: "public",
     // static oder server SSR serverseitiges rändern
-    output: 'static',
+    output: "static",
     // Die endgültige Seite bei deinem Hostanbieter
-    site: 'https://www.musicstudio-ziebart.de/',
+    site: "https://www.musicstudio-ziebart.de/",
     // Sitemap intergrieren, Eine Seite aufnehmen die nicht mit Astro erstellt wurde stillgelegt!!!
     /*
     integrations: [sitemap({
@@ -23,22 +23,24 @@ export default defineConfig({
         // Beispiel: Argumente an eine Integration übergeben
         sitemap({
             entryLimit: 10000,
-            lastmod: new Date('2023-01-06'),
+            lastmod: new Date("2023-01-06"),
         })
     ],
     // Beispiel: Erfordere abschließende Schrägstriche
     // in Seiten-URLs während der Entwicklung
-    trailingSlash: 'always',
+    trailingSlash: "always",
     build: {
     // Beispiel: Erzeuge `page.html` statt `page/index.html`
     // während des Build-Prozesses.
-        format: 'directory'
+        format: "directory"
     },
-    vite: {
-        ssr: {
-          // Beispiel: Erzwinge das Überspringen eines defekten Pakets
-          // bei der SSR-Verarbeitung, falls erforderlich
-          external: ['defektes-npm-paket'],
-        }
+    //server: { port: 3000, host: true },
+    markdown: {
+        // Beispiel: Alle Entwürfe in den endgültigen Build einbeziehen
+        drafts: true,
+    },
+    markdown: {
+        // Beispiel: Verarbeite Markdown-Dateien ohne MDX
+        mode: "md",
     },
 });
