@@ -34,15 +34,6 @@ export default defineConfig({
     // während des Build-Prozesses.
         format: 'directory'
     },
-    server: { port: 3000, host: true },
-    markdown: {
-        // Beispiel: Alle Entwürfe in den endgültigen Build einbeziehen
-        drafts: true,
-    },
-    markdown: {
-        // Beispiel: Verarbeite Markdown-Dateien ohne MDX
-        mode: 'md',
-    },
     vite: {
         ssr: {
           // Beispiel: Erzwinge das Überspringen eines defekten Pakets
