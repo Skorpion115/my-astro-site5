@@ -17,6 +17,7 @@ const { title, description, keywords } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
     <link rel="manifest" href="/manifest.json" />
     <link rel="canonical" href="https://www.musicstudio-ziebart.de" />
     <link rel="sitemap" href="/sitemap-index.xml" />
@@ -44,7 +45,6 @@ const { title, description, keywords } = Astro.props;
     <script async src="https://www.googletagmanager.com/gtag/js?id=GCXBFDX52C7"
     ></script>
 
-    <title>{title}</title>
     <AppleTouchIcons />
   </head>
 
