@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import usesData from "../data/uses.json";
 import CookiesBanner from "../components/CookiesBanner.astro";
 import Scrolling from "../components/Scrolling.astro";
+import Card from "../components/Card.astro";
 ---
 
 <Layout
@@ -163,13 +164,14 @@ import Scrolling from "../components/Scrolling.astro";
           Aus hygienischen Gründen können bei Blasinstrumente keine Instrumente
           zur Verfügung gestellt werden.
         </p>
-
-        <p>
-          Anmeldung zu einem kostenlosen Probeunterricht. Klicken Sie auf den
-          Link:
-          <a href="/contact_2/" class="link-blue"><b>Probetermin!</b></a>
-        </p>
-        <hr />
+        <ul role="list" class="link-card-grid">
+          <Card
+          href="/contact_2/"
+          title="Probeunterricht"
+          body="Anmeldung zu einem kostenlosen Probeunterricht!"
+        />
+        </ul>
+        
         {
           usesData.map((uses) => (
             <>
@@ -199,11 +201,13 @@ import Scrolling from "../components/Scrolling.astro";
           Musikstudio Ziebart <br />Gunzenhausener Str. 20 <br />90451 Nürnberg
         </p>
         <p>Staatl. anerkannter Musiklehrer</p>
-
-        <p>
-          <a href="/contact_4/" class="link-blue"><b>Ich rufe Sie zurück!</b></a
-          >
-        </p>
+        <ul role="list" class="link-card-grid">
+          <Card
+          href="/contact_4/"
+          title="Nachricht"
+          body="Kurze Mitteilung an mich!"
+        />
+        </ul>
         <!--
         <p>
           <a href="/api-frontend/" class="link-blue"><b>Gästebuch</b></a

@@ -39,7 +39,6 @@ body {
   --line: 3ch;
   --font-scale: 0.4vw;
 }
-
 /* wenn invert */
 body.invert {
   --color-black: #000000;
