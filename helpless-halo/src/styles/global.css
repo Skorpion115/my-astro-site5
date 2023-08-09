@@ -82,7 +82,7 @@ footer {
 p {
   font-weight: normal;
   text-align: start;
-  padding: 0.5rem;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 }
 
 /* ANCHOR root Element html-Element */
