@@ -1,13 +1,14 @@
 ---
-//import Layout from "../layouts/Layout.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pageTitle = 'Instrumentenkauf';
 ---
-<!--
-<Layout
-  title="Instrumentenkauf"
+
+<BaseLayout
+  pageTitle={pageTitle}
   description="Gute Tips zum Instrumetenkauf! Auf was muss ich beim Kauf eines Instruments achten?"
   keywords="Instrumentenkauf"
 >
-  <h1>Tips zum Instrumentenkauf</h1>
+  <h2>Tips zum Instrumentenkauf</h2>
   <article class="container2">
     <section class="artikel artikel-1">
       <h2>Was muss ich beim Instrumentenkauf beachten?</h2>
@@ -258,7 +259,7 @@
       </p>
     </section>
   </article>
-</Layout> -->
+</BaseLayout>
 
 <style>
   .container2 {
@@ -277,6 +278,27 @@
     flex-wrap: wrap;
     /* Für mehrere Element */
     align-content: flex-start;
+  }
+
+  /* ANCHOR Links einstellen */
+ table tr td a {
+    background-color: #545557;
+    color: white;
+  }
+
+  table tr td a:hover {
+    background-color: rgb(129, 226, 129);
+    color: black;
+  }
+
+  a {
+    background-color: #545557;
+    color: white;
+  }
+
+  a:hover {
+    background-color: rgb(129, 226, 129);
+    color: black;
   }
 
   /* Tabelle für Sprungmarken */

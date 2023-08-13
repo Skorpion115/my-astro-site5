@@ -1,16 +1,18 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import usesData from "../data/uses.json";
-import CookiesBanner from "../components/CookiesBanner.astro";
-import Scrolling from "../components/Scrolling.astro";
+import BaseLayout from'../layouts/BaseLayout.astro';
+import Greeting from '../components/Greeting.jsx';
+import CookiesBanner from '../components/CookiesBanner.astro';
 import Card from "../components/Card.astro";
+const pageTitle = 'Musikunterricht';
 ---
 
-<Layout
-  title="Musicstudio Ziebart"
+<BaseLayout 
+  pageTitle={pageTitle}
   description="stadt nürnberg: musicstudio ziebart, online-musikunterricht, telefon 0911/6320890, ich gebe musikunterricht aller altersklassen."
   keywords="musikunterricht, instrumental unterricht, music lessons, musikschule, jetzt anmelden, musikunterricht in eibach, musikschule nürnberg eibach, musikschule nürnberg kinder, musiklehrer privatunterricht, musikschule eibach, musiklehrer privat, musiklehrer nürnberg, musikschule nürnberg, music lessons, online musikunterricht"
->
+  >
+  <Greeting client:load messages={["Hallo", "Hi", "Bonjor", "Habari"]} />
+  
   <!-- Bildlauf oder scrolling -->
   <div class="container">
     <div class="section">
@@ -60,7 +62,6 @@ import Card from "../components/Card.astro";
       <h3 data-text="MUSICSTUDIO_ZIEBART">MUSICSTUDIO_ZIEBART</h3>
     </div>
     <br />
-    <h1>MUSIKUNTERRICHT</h1>
     <article class="conteneur">
       <section class="marchandise marchandise-1">
         <h2>Music Lessons</h2>
@@ -91,8 +92,9 @@ import Card from "../components/Card.astro";
         </p>
         <p>
           <small>
-            Hinweis: Für alle Handy Benutzer. In der Navigierungsleiste befindet sich ein
-            Button mit dem Namen "Invert". Dies ist der Darkmode falls die
+            Hinweis: Für alle Handy Benutzer. Oben links ist so ein Kreis für das Sonnenzeichen.
+            Darauf klicken dann wird es zu einem Mond. 
+            Dies ist der Darkmode falls die
             Sonneneinstrahlung zu stark ist.
           </small>
         </p>
@@ -118,7 +120,7 @@ import Card from "../components/Card.astro";
         <h2>Naturinstrumente</h2>
         <ul>
           <li>
-            <a href="/klavierunterricht/" class="link-blue">Klavier</a>
+            <a href="/klavierunterricht/">Klavier</a>
           </li>
           <li>
             <a href="/akkordeon-unterricht/" class="link-blue">Akkordeon</a>
@@ -164,6 +166,7 @@ import Card from "../components/Card.astro";
           Aus hygienischen Gründen können bei Blasinstrumente keine Instrumente
           zur Verfügung gestellt werden.
         </p>
+        
         <ul role="list" class="link-card-grid">
           <Card
           href="/contact_2/"
@@ -172,23 +175,7 @@ import Card from "../components/Card.astro";
         />
         </ul>
         
-        {
-          usesData.map((uses) => (
-            <>
-              <h2>{uses.title}</h2>
-              <ul>
-                {uses.elements.map((element) => (
-                  <li>
-                    <a href={element.link} target="_blank" class="link-blue">
-                      {element.title}
-                    </a>
-                    <span class="text-white">{element.comment}</span>
-                  </li>
-                ))}
-              </ul>
-            </>
-          ))
-        }
+        
         <p>
           Auf meinem YouTube Kanal ist f&uuml;r alle Hammond Fans was dabei!
           Auch E-Gitarristen und Akustische Gitarre kommen auf ihre Kosten.
@@ -201,6 +188,7 @@ import Card from "../components/Card.astro";
           Musikstudio Ziebart <br />Gunzenhausener Str. 20 <br />90451 Nürnberg
         </p>
         <p>Staatl. anerkannter Musiklehrer</p>
+        
         <ul role="list" class="link-card-grid">
           <Card
           href="/contact_4/"
@@ -208,10 +196,7 @@ import Card from "../components/Card.astro";
           body="Kurze Mitteilung an mich!"
         />
         </ul>
-        <!--
-        <p>
-          <a href="/api-frontend/" class="link-blue"><b>Gästebuch</b></a
-          > -->
+        
 
         <p>
           Telefon:
@@ -278,11 +263,14 @@ import Card from "../components/Card.astro";
       ><a href="javascript:void(0)" title="Akzeptieren">Akzeptieren</a>
     </span>
   </div>
-</Layout>
+
+  <script>
+    import "../scripts/scrolling.js" //Bildlauf
+  </script>
+
+</BaseLayout>
 
 <CookiesBanner />
-
-<Scrolling />
 
 <style>
   /* ANCHOR Bilder Scrolling mit JavaScript */
@@ -303,6 +291,20 @@ import Card from "../components/Card.astro";
     font-weight: bold;
     margin-bottom: 0.625rem;
   }
+
+  /*ANCHOR Links auf linker Seite*/
+
+  .conteneur .marchandise ul li a {
+    background-color: #545557;
+    color: white;
+  }
+
+  .conteneur .marchandise ul li a:hover {
+    background-color: rgb(129, 226, 129);
+    color: black;
+  }
+
+  
 
   .image-scroll {
     display: flex;
@@ -437,6 +439,18 @@ import Card from "../components/Card.astro";
     list-style-type: none;
   }
 
+  /* ANCHOR marchendise Links rechts */
+
+  .marchandise a {
+    background-color: #545557;
+    color: white;
+  }
+
+  .marchandise a:hover {
+    background-color: rgb(129, 226, 129);
+    color: black;
+  }
+
   /* Rudi.jpg */
 
   .conteneur img {
@@ -522,3 +536,6 @@ import Card from "../components/Card.astro";
     }
   }
 </style>
+
+
+  
