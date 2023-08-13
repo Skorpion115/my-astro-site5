@@ -1,12 +1,6 @@
 // Globe Variablen
 const assets = [
   "/",
-  "/honorar/",
-  "/leistungen/",
-  "/faq/",
-  "/download/",
-  "/harmonielehre/",
-  "/impressum/",
   "/contact_2/",
   "/thankyou/",
   "/contact_4/",
