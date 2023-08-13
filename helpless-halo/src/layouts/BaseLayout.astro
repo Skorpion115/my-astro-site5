@@ -1,0 +1,47 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+const { pageTitle, description, keywords } = Astro.props;
+---
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- 
+    <meta name="viewport" content="width=device-width" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+    <meta name="Language" content="de" />
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <meta
+      name="author"
+      content="Musicstudio Ziebart, postmaster@musicstudio-ziebart.de"
+    />
+    <meta
+      name="DC.Publisher"
+      content="Musicstudio Ziebart, postmaster@musicstudio-ziebart.de"
+    />
+    <meta name="DC.date" content="Collection" />
+    <meta name="DC.rights" content="Alle Rechte liegen beim Author" />
+    <meta name="robots" content="selektion" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="robots" content="max-snippet:-1" />
+    <meta name="robots" content="index, follow" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GCXBFDX52C7"></script>
+  </head>
+  <body>
+    <Header />
+    <h1>{pageTitle}</h1>
+    <slot />
+    <Footer />
+    <script>
+      import "../scripts/menu.js";
+    </script>
+    <script>
+      import "../scripts/google.js"
+    </script>
+  </body>
+</html>

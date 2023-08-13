@@ -20,79 +20,39 @@
   font-style: bold;
   font-display: swap;
 }
+/* ANCHOR Grundlegende Einstellungen */
+html {
+  background-color: #f1f5f9;
+  font-size: 100%;
+}
+
 /* ANCHOR Custom Properties */
-/* wenn nicht invert */
 body {
-  --color-black: #ffffff;
-  --color-schwarz: rgb(42, 42, 42);
-  --color-white: #ffffff;
-  --color-weiss: #000000;
-  --color-grey: #a3a3a3;
-  --color-green: #13f270;
-  --color-red: #fc1a52;
-  --color-purple: #ee0dfe;
-  --color-yellow: #c1de04;
-  --color-blue: #03bfee;
-  --color-blau: #aefcff;
-  --color-brown: #b33c09;
   --font: "IBM", sans-serif;
   --line: 3ch;
   --font-scale: 0.4vw;
 }
-/* wenn invert */
-body.invert {
-  --color-black: #000000;
-  --color-schwarz: #ffffff;
-  --color-white: #000000;
-  --color-weiss: #ffffff;
-  --color-grey: #6e6e6e;
-  --color-green: #007932;
-  --color-red: #c70636;
-  --color-purple: #800257;
-  --color-yellow: #e37e02;
-  --color-blue: #0856af;
-  --color-blau: #336699;
-  --color-brown: #db7d58;
-}
 
 /* ANCHOR General Style */
-* {
-  box-sizing: border-box;
-}
 
 body {
-  margin: 0;
+  margin: 0 auto;
+  width: 100%;
   font-family: var(--font);
   font-style: normal;
   font-size: calc(1rem + var(--font-scale));
   line-height: var(--line);
   font-weight: 400;
-  color: var(--color-black);
-  background-color: var(--color-schwarz);
+  padding: 1rem;
 }
 
-header,
-footer {
-  width: 100%;
-  max-width: 1260px;
-  margin: 0 auto;
-  padding: 1.5rem;
-}
-
-p {
-  font-weight: normal;
-  text-align: start;
-  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
-}
-
-/* ANCHOR root Element html-Element */
-html {
-  font-size: 100%;
+* {
+  box-sizing: border-box;
 }
 
 h1 {
+  margin: 1rem 0;
   font-size: 2rem;
-  padding-left: 0.5rem;
   color: rgb(218, 54, 54);
 }
 
@@ -101,224 +61,104 @@ h2 {
   font-weight: bold;
   padding-left: 0.5rem;
 }
-/*
-h3 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  padding-left: 1.2rem;
-} */
 
-a {
-  text-decoration: none;
+p {
+  font-weight: normal;
+  text-align: start;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 }
 
-/* ANCHOR Link Colors */
-.link-white,
-.link-blue,
-.link-green,
-.link-grey,
-.link-purple,
-.link-blau,
-.link-red {
+/* ANCHOR button Formatierung */
+
+button {
+  border-radius: 0;
+  border: 0;
+  color: white;
+}
+
+button {
+  background-color: #545557;
+  padding: 0.94rem 7rem;
+  font-size: 1.125rem;
+  margin-top: 1.875rem;
+  cursor: pointer;
+  transition: all 0.3 ease;
+  text-align: center;
+}
+
+button:hover {
+  background-color: rgb(129, 226, 129);
+  color: black;
+}
+
+/* ANCHOR Darkmode CSS */
+
+html.dark {
+  background-color: #0d0950;
+  color: #fff;
+}
+
+.dark .nav-links a {
+  color: #fff;
+}
+
+/* ANCHOR nav styles */
+
+.hamburger {
+  padding-right: 20px;
   cursor: pointer;
 }
 
-.link-white {
-  color: var(--color-white);
+.hamburger .line {
+  display: block;
+  width: 1.875rem;
+  height: 0.25rem;
+  margin-bottom: 0.313rem;
+  background-color: #ff9776;
 }
 
-.link-white:hover {
-  color: var(--color-black);
-  background-color: var(--color-white);
-}
-
-.link-red {
-  color: var(--color-red);
-}
-
-.link-red:hover {
-  color: var(--color-black);
-  background-color: var(--color-red);
-}
-
-.link-purple {
-  color: var(--color-purple);
-}
-
-.link-purple:hover {
-  color: var(--color-black);
-  background-color: var(--color-purple);
-}
-
-.link-grey {
-  color: var(--color-grey);
-}
-
-.link-grey:hover {
-  color: var(--color-black);
-  background-color: var(--color-grey);
-}
-
-.link-green {
-  color: var(--color-green);
-}
-
-.link-green:hover {
-  color: var(--color-black);
-  background-color: var(--color-green);
-}
-
-.link-blue {
-  color: var(--color-blue);
-}
-
-.link-blue:hover {
-  color: var(--color-black);
-  background-color: var(--color-blue);
-}
-
-.link-blau {
-  color: var(--color-white);
-  background-color: var(--color-blau);
-}
-
-.link-blau:hover {
-  color: var(--color-black);
-  background-color: var(--color-blau);
-}
-
-/* ANCHOR Text Colors */
-.text-black {
-  color: var(--color-black);
-}
-
-.text-schwarz {
-  color: var(--color-schwarz)
-}
-
-.text-white {
-  color: var(--color-white);
-}
-
-.text-weiss {
-  color: var(--color-weiss)
-}
-
-.text-grey {
-  color: var(--color-grey);
-}
-
-.text-green {
-  color: var(--color-green);
-}
-
-.text-red {
-  --color-red: #fc1a52;
-}
-
-.text-purple {
-  --color-purple: #cb06d9;
-}
-
-.text-yellow {
-  --color-yellow: #c1de04;
-}
-
-.text-blue {
-  --color-blue: #03bfee;
-}
-
-.text-blau {
-  --color-blau: #336699;
-}
-
-.text-brown {
-  --color-brown: #ffe8de;
-}
-
-/* ANCHOR Instruments_lesson */
-
-#instruments_lesson {
-  width: 96%;
-  max-width: 100%;
-  margin: 2rem auto;
-}
-
-#instruments_lesson article {
-  display: inline-block;
-  margin: 2rem auto;
+.nav-links {
   width: 100%;
-  vertical-align: top;
-}
-
-#instruments_lesson article picture img {
-  max-width: 20%;
-  height: auto;
-  box-shadow: 0px 0px 10px 5px #4c4948;
-  border-radius: 5px;
-  float: right;
-  margin-top: 1.25rem;
-  margin-left: 1rem;
-  margin-right: 3rem;
-}
-
-#instruments_lesson article img {
-  max-width: 30%;
-  height: auto;
-  box-shadow: 0px 0px 10px 5px #4c4948;
-  border-radius: 5px;
-  float: right;
-  margin-top: 1.25rem;
-  margin-left: 1rem;
-  margin-right: 3rem;
-}
-
-.video-container {
-  position: relative;
-  padding-bottom: 56.25%;
-  padding-top: 0;
-  height: 0;
-  overflow: hidden;
-}
-
-.video-container iframe,
-.video-container object,
-.video-container embed {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.video-container-wrapper {
-  max-width: 100%;
-  width: 560px;
-  left: 0;
-  right: 0;
-  margin: auto;
-}
-
-/* Footer */
-/* ANCHOR footer styles */
-/* footer > ul {
-  list-style: none;
-  padding: 0;
+  top: 5rem;
+  left: 48px;
+  background-color: #ff9776;
+  display: none;
   margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-} */
-/* Mobile Style Mediaqueries */
-/* ANCHOR 800px */
-/*
-@media screen and (max-width: 800px) {
-  body {
-    width: 100%;
+}
+
+.nav-links a {
+  display: block;
+  text-align: center;
+  padding: 10px 0;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.nav-links a:hover, a:focus {
+  background-color: #ff9776;
+}
+
+.expanded {
+  display: unset;
+}
+
+@media screen and (min-width: 636px) {
+  .nav-links {
+    margin-left: 5em;
     display: block;
+    position: static;
+    width: auto;
+    background: none;
   }
-  video.responsive-video {
-    max-width: 300px;
-    height: auto;
+
+  .nav-links a {
+    display: inline-block;
+    padding: 15px 20px;
   }
-} */
+
+  .hamburger {
+    display: none;
+  }
+}

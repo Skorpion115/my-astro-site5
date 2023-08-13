@@ -1,99 +1,294 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<Layout title="contact_4" description="Probeunterricht" keywords="Contact">
-  <h2>Kurze Mitteilung</h2>
-  <div class="container4">
+<BaseLayout
+  title="contact_2"
+  description="Kostenloser Probeunterricht"
+  keywords="Kontakt"
+>
+  <div class="container1">
+    <h2>Contact Me</h2>
     <form
-      name="contact_4"
-      action="/thankyou/"
+      name="contact_2"
       method="POST"
+      action="/thankyou/"
       data-netlify-recaptcha="true"
       data-netlify="true"
     >
-      <input type="hidden" name="form-name" value="contact_4" />
-      <div class="formfields"></div>
-      <div>
-        <label for="name">Name:</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          placeholder="Namen eintragen"
-          class="form-control form-control-lg"
-          required
-        />
-      </div>
-      <div>
-        <label for="subject">Betreff:</label>
-        <input
-          name="subject"
-          type="text"
-          id="subject"
-          maxlength="30"
-          placeholder="Rückruf"
-          class="form-control form-control-lg"
-        />
-      </div>     
-      <div>
-        <label for="message">Nachricht:</label>
-        <textarea
-          id="message"
-          name="message"
-          cols="23"
-          rows="10"
-          placeholder="Bitte um Rückruf"
-          >
-        </textarea>
-      </div>
-      <div>
-        <label for="phone">Telefonnummer:</label>
-        <input
-          type="tel"
-          id="phone"
-          name="phone"
-          class="form-control form-control-lg"
-          required
-        />
-      </div>
-      <div>
-        <label for="email">E-Mail:</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          Reply-to
-          class="form-control form-control-lg"
-        />
-      </div>
+      <input type="hidden" name="form-name" value="contact_2" />
+      <fieldset>
+        <legend>Data</legend>
+        <div class="formfields"></div>
+        <br />
+        <div>
+          <label for="subject">Betreff:</label>
+          <input
+            name="subject"
+            type="text"
+            id="subject"
+            maxlength="40"
+            placeholder="Hier den Betreff eintragen"
+            class="form-control form-control-lg"
+            required
+          />
+        </div>
+        <br />
+        <div class="form-element">
+          <label for="born">Geburtsdatum:</label>
+          <input
+            type="date"
+            name="born"
+            id="born"
+            class="form-control form-control-lg"
+          />
+        </div>
+        <br />
+        <div class="form-element">
+          <label for="desired_date">Wunschtermin:</label>
+          <input
+            type="datetime-local"
+            name="desired_date"
+            id="desired_date"
+            class="form-control form-control-lg"
+            required
+          />
+        </div>
+        <br />
+        <div class="form-element">
+          <label for="phone">Telefon:</label>
+          <input
+            type="tel"
+            name="phone"
+            id="phone"
+            class="form-control form-control-lg"
+            required
+          />
+        </div>
+        <br />
+        <div>
+          <label for="instrument">Instrument:</label>
+          <input
+            type="text"
+            name="instrument"
+            id="instrument"
+            class="form-control form-control-lg"
+            required
+          />
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            name="email" Reply-to
+            id="email"
+            class="form-control form-control-lg"
+            required
+          />
+        </div>
+        <div>
+          <br />
+          <label for="message">Nachricht:</label>
+          <textarea
+            name="message"
+            id="message"
+            cols="23"
+            rows="10"
+            class="form-control"
+            placeholder="Wenn Sie wollen schreiben Sie hier eine Nachricht..."
+          ></textarea>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Adresse</legend>
+        <div>
+          <label for="fname">Vorname:</label>
+          <input
+            type="text"
+            name="fname"
+            id="fname"
+            class="form-control form-control-lg"
+            required
+          />
+        </div>
+        <br />
+        <div>
+          <label for="lname">Nachname:</label>
+          <input
+            type="text"
+            name="lname"
+            id="lname"
+            class="form-control form-control-lg"
+            required
+          />
+        </div>
+        <br />
+        <div>
+          <label for="street">Strasse:</label>
+          <input
+            type="text"
+            name="street"
+            id="street"
+            maxlength="22"
+            class="form-control form-control-lg"
+            required
+          />
+        </div>
+        <br />
+        <div>
+          <label for="place">Ort:</label>
+          <input
+            type="text"
+            name="place"
+            id="place"
+            maxlength="20"
+            class="form-control form-control-lg"
+            required
+          />
+        </div>
+        <br />
+        <div>
+          <label for="number">Postleitzahl:</label>
+          <input
+            type="number"
+            name="postal_code"
+            id="postal_code"
+            class="form-control form-control-lg"
+            required
+          />
+        </div>
+      </fieldset>
+      <br />
+      <fieldset>
+        <div>
+          <label for="parents">Eltern:</label>
+          <input
+            type="text"
+            name="parents"
+            id="parents"
+            class="form-control form-control-lg"
+          />
+        </div>
+        <br />
+      </fieldset>
       <br />
       <div data-netlify-recaptcha="true"></div>
       <div>
-        <button type="submit" class="btn btn-lg btn-primary">Absenden</button>
+        <button type="submit" class="btn btn-lg btn-primary">Senden</button>
       </div>
-      <br />
-      <a href="../index.html" class="link-blue">zurück</a>
     </form>
   </div>
-</Layout>
+
+  <h2>Freie Termine</h2>
+
+  <div>
+    <!-- Tabelle für freie Termine-->
+    <table class="table2">
+      <thead>
+        <tr>
+          <th>Dienstag</th>
+          <th>Mittwoch</th>
+          <th>Donnerstag</th>
+          <th>Freitag</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>14:00</td>
+          <td>15:00</td>
+          <td>15:30</td>
+          <td>15:15</td>
+        </tr>
+        <tr>
+          <td>15:30</td>
+          <td>15:30</td>
+          <td>16:00</td>
+          <td>16:30</td>
+        </tr>
+        <tr>
+          <td>16.00</td>
+          <td>16:00</td>
+          <td>16:30</td>
+          <td>17:30</td>
+        </tr>
+      </tbody>
+    </table>
+    <br />
+    <p>
+      <a href="../index.html" class="link-blue">zurück</a>
+    </p>
+    <br />
+  </div>
+</BaseLayout>
+
+
 
 <style>
-  .container4 {
+  .container1 {
     margin: 0 auto;
     padding: 5%;
     box-sizing: border-box;
   }
 
+  /* ANCHOR Custom Properties */
   body {
     font-family: var(--font);
     text-align: center;
   }
+
+  h1 {
+    font-size: 3.68rem;
+    color: rgb(218, 54, 54);
+    font-weight: 600;
+    padding: 1.25rem;
+  }
+
+  h2 {
+    color: rgb(218, 54, 54);
+    font-size: 2.5rem;
+  }
+
+  p {
+    color: #fff;
+    text-align: center;
+    font-size: 1.25rem;
+  }
+
+  small {
+    color: white;
+    font-size: 1rem;
+  }
+
   label {
     display: block;
     font-size: 1.125rem;
     padding: 0.625rem;
   }
+
+  fieldset legend {
+    color: #828282;
+    font-size: 1.5rem;
+    padding: 0.625rem;
+  }
+
+  fieldset {
+    color: #828282;
+  }
+
+  /* ganze Formular */
+
+  .form-element {
+    color: var(--color-white);
+    background-color: var(--color-schwarz);
+  }
+
+  /* Beschreibung der Felder unten */
+  /*
+  .invalid-feedback {
+    color: #828282;
+    font-size: 1.125rem;
+    padding: 0.625rem;
+  } */
 
   /* Der Rand um die Felder */
   .form-control {
@@ -116,6 +311,20 @@ import Layout from "../layouts/Layout.astro";
     font-size: 1.125rem;
   }
 
+  select,
+  option {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    color: #828282;
+    text-align: center;
+    font-size: 1.125rem;
+  }
+  /* Größe der Platzhalter */
+  .form-control::placeholder {
+    font-size: 1.125rem;
+  }
+
   /* Schriftgröße im Ausfüllbereich */
   input,
   textarea {
@@ -129,7 +338,6 @@ import Layout from "../layouts/Layout.astro";
     background-color: var(--color-schwarz);
   }
 
-  /* Button css */
   .btn {
     border-radius: 0;
     border: 0;
@@ -147,7 +355,45 @@ import Layout from "../layouts/Layout.astro";
   }
 
   .btn.btn-primary:hover {
-    background-color: rgb(140, 236, 140);
+    background-color: rgb(129, 226, 129);
     color: black;
   }
+
+  .table2 {
+    width: 90%;
+    border-collapse: collapse;
+    text-align: center;
+    background: #424242;
+    box-shadow: 2px 2px 5px #666666;
+    margin: 0 auto;
+    color: #fff;
+  }
+
+  .table2 th {
+    font-size: 1.125rem;
+  }
+
+  .table2 td {
+    font-size: 1.125;
+    padding: 0.2rem 0.2rem;
+  }
+
+  /*
+  button[type="submit"] {
+    background-color: #545557;
+    padding: 0.94rem 7rem;
+    border: 0;
+    color: white;
+    font-size: 1.125rem;
+    border-bottom: none;
+    margin-top: 1.875rem;
+    cursor: pointer;
+    transition: all 0.3 ease;
+    text-align: center;
+  }
+
+  button[type="submit"]:hover {
+    background-color: #fff;
+    color: black;
+  } */
 </style>

@@ -1,25 +1,18 @@
 ---
-let currentTime = new Date();
-    let year = currentTime.getFullYear();
+import Social from './Social.astro';
 ---
-<!--footer-->
-
-<footer>
-    <div class="text-weiss">
-        &copy; {year} by Musicstudio Ziebart. All rights reserved.
-    </div>
-</footer>
-
 <style>
     footer {
-    color: var(--color-weiss);
-    background-color: var(--color-black);
-    font-size: calc(0.8rem + var(--font-scale));
-    margin-bottom: 2rem;
-    margin: 0 auto;
-    padding: 0.188rem 1.5rem;
-    width: 100%;
-    max-width: 1260px;
-    text-align: center;
-}
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
 </style>
+
+<footer>
+    <Social platform="facebook" username="Musicstudio.Ziebart" />
+    <Social platform="github" username="Skorpion115/my-astro-site6" />
+    <Social platform="youtube" username="channel/UCwRRdmLAvaERcd0K_WPMZMw?sub_confirmation=1" />
+</footer>
+
+            
