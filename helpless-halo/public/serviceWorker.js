@@ -1,7 +1,6 @@
 // Globe Variablen
 const assets = [
   "/",
-  "/instrumentenkauf/",
   "/honorar/",
   "/leistungen/",
   "/faq/",
