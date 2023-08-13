@@ -1,18 +1,10 @@
 // Globe Variablen
 const assets = [
   "/",
+  "/instrumentenkauf/",
   "/contact_2/",
   "/thankyou/",
-  "/contact_4/",
-  "/klavierunterricht/",
-  "/keyboardunterricht/",
-  "/gitarrenunterricht/",
-  "/e-bassunterricht/",
-  "/e-gitarrenunterricht/",
-  "/banjounterricht/",
-  "/akkordeon-unterricht/",
-  "/saxophonunterricht/",
-  "/klarinettenunterricht/"
+  "/contact_4/"
   
 ];
 const cacheTypes = ["main", "font", "image"];

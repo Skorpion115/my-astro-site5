@@ -1,8 +1,9 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pageTitle = 'ThankYou';
 ---
-<Layout
-  title="thankyou"
+<BaseLayout
+  pageTitle={pageTitle}
   description="Kostenloser Probeunterricht"
   keywords="Kontakt"
 >
@@ -14,4 +15,4 @@ import Layout from "../layouts/Layout.astro";
 <p>
     <a href="/" class="link-blue">go back!</a>
 </p>
-</Layout>
+</BaseLayout>
