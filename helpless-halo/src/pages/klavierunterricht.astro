@@ -1,13 +1,13 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pageTitle = 'Klavierunterricht';
 ---
 
-<Layout
-  title="Klavier Unterricht"
+<BaseLayout
+  pageTitle={pageTitle}
   description="Ich gebe Klavierunterricht in Eibach"
   keywords="klavierunterricht, klavierunterricht in Eibach, klavierstunden online, klavierlehrer nürnberg, klavier zum lernen, einsteiger klavier, klavierstück lernen, piano lernen, klavier lernen erwachsene, klavier anfänger, klavierunterricht nürnberg, klavier spielen lernen, klavier unterricht, piano für anfänger, klavier lernen, piano lessons"
 >
-  <h1>Klavierunterricht</h1>
   <section id="instruments_lesson">
     <article>
       <h2>Klavier oder Digitalpiano?</h2>
@@ -46,7 +46,7 @@ import Layout from "../layouts/Layout.astro";
         eine leichtere Schule für 5 jährige Schüler.
       </p>
       <p>
-        <a href="/instrumentenkauf/" class="link-blue"
+        <a href="/instrumentenkauf/" class="normal-links"
           >Mehr Info über das Klavier</a
         >
       </p>
@@ -66,8 +66,8 @@ import Layout from "../layouts/Layout.astro";
         </div>
       </div>
       <p>
-        <a href="/leistungen/" class="link-white">zurück</a>
+        <a href="/leistungen/" class="normal-links">zurück</a>
       </p>
     </article>
   </section>
-</Layout>
+</BaseLayout>

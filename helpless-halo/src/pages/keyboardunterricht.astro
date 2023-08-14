@@ -1,13 +1,13 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pageTitle = 'Keyboardunterricht';
 ---
 
-<Layout
-  title="Keyboardunterricht"
+<BaseLayout
+  pageTitle={pageTitle}
   description="Ich gebe Keyboardunterricht in nürnberg eibach"
   keywords="keyboardunterricht, keyboardunterricht in eibach, keyboard anfänger, keyboardnoten für anfänger, einsteiger keyboard, keyboard spielen lernen, keyboard unterricht, keyboard kurs, keyboard für anfänger, keyboardunterricht nürnberg, keyboard lernen, keyboard spielen, keyboard lessons"
 >
-  <h1>Keyboardunterricht</h1>
   <section id="instruments_lesson">
     <article>
       <h2>Der neue Weg zum Keyboardspiel</h2>
@@ -82,8 +82,8 @@ import Layout from "../layouts/Layout.astro";
         </div>
       </div>
       <p>
-        <a href="/leistungen/" class="link-white">zurück</a>
+        <a href="/leistungen/" class="normal-links">zurück</a>
       </p>
     </article>
   </section>
-</Layout>
+</BaseLayout>
