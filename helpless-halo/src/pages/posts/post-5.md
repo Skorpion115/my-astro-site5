@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: Gitarre stimmen!
+title: 'Gitarre stimmen!'
 author: Rudi Ziebart
 description: "Wie stimmt man eine Gitarre?"
 image:
