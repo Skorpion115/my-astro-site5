@@ -6,6 +6,6 @@ export async function get() {
     description: 'My journey learning Astro',
     site: 'https://www.musicstudio-ziebart.de',
     items: await pagesGlobToRssItems(import.meta.glob('./**/*.md')),
-    customData: `<language>en-us</language>`,
+    customData: `<language>de</language>`,
   });
 }
