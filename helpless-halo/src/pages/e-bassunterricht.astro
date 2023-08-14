@@ -1,12 +1,12 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pageTitle = 'Bassunterricht';
 ---
 
-<Layout
-  title="Ich gebe E-Bass Unterricht in Eibach"
+<BaseLayout
+  pageTitle={pageTitle}
   keywords="Bass Unterricht, bassunterricht, e-bassunterricht, e-bass unterricht, e-bassunterricht nürnberg, e-bassunterricht in eibach, unterricht bassgitarre, basslehrer, bassgitarre lernen, bassunterricht, e-bass lernen, e-bass anfänger, bassnoten für anfänger, e-bass lehrer, bass lessons"
 >
-  <h1>E-Bassunterricht</h1>
   <section id="instruments_lesson">
     <article>
       <h2>Rock Bass Jäcki Reznicek</h2>
@@ -32,8 +32,8 @@ import Layout from "../layouts/Layout.astro";
         "Funk" dabei.
       </p>
       <p>
-        <a href="/leistungen/" class="link-white">zurück</a>
+        <a href="/leistungen/" class="normal-links">zurück</a>
       </p>
     </article>
   </section>
-</Layout>
+</BaseLayout>
