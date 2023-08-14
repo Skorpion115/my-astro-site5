@@ -2,6 +2,9 @@
 const assets = [
   "/",
   "/instrumentenkauf/",
+  "/about/",
+  "/blog/",
+  "/tags/",
   "/contact_2/",
   "/thankyou/",
   "/contact_4/"
