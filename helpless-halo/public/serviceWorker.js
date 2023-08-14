@@ -13,7 +13,6 @@ const assets = [
   "/download/",
   "/harmonielehre/",
   "/impressum/"
-  
 ];
 const cacheTypes = ["main", "font", "image"];
 const cacheVersion = "_v3";
