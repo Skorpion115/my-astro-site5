@@ -7,7 +7,8 @@ const assets = [
   "/tags/",
   "/contact_2/",
   "/thankyou/",
-  "/contact_4/"
+  "/contact_4/",
+  "/honorar/"
   
 ];
 const cacheTypes = ["main", "font", "image"];
