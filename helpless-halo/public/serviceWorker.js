@@ -11,7 +11,8 @@ const assets = [
   "/honorar/",
   "/leistungen/",
   "/faq/",
-  "/download/"
+  "/download/",
+  "/harmonielehre/"
   
 ];
 const cacheTypes = ["main", "font", "image"];

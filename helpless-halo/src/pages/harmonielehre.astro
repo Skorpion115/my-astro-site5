@@ -1,13 +1,13 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pageTitle = 'Harmonieliehre';
 ---
 
-<Layout
-  title="Harmonielehre"
+<BaseLayout
+  pageTitle={pageTitle}
   description="Harmonielehre, Noten lesen"
   keywords="Harmonielehre, Noten lesen, Intervalle, Dreiklänge, Funktiontsheorie"
 >
-  <h1>Harmonielehre</h1>
   <section id="harmonielehre">
     <h2>Lernvideos</h2>
     <article>
@@ -94,7 +94,7 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </article>
   </section>
-</Layout>
+</BaseLayout>
 
 <style>
   #harmonielehre {
