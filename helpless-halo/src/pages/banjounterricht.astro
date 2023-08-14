@@ -1,13 +1,13 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pageTitle = 'Banjounterricht'
 ---
 
-<Layout
-  title="Banjonunterricht"
+<BaseLayout
+  pageTitle={pageTitle}
   description="Ich gebe banjounterricht in nürnberg eibach"
   keywords="5-string banjo, bluegrass banjo, banjounterricht, banjo lernen deutsch, banjo unterricht, banjo workshop, banjounterricht in eibach, banjolehrer nürnberg, banjo spielen ohne noten, banjo kurs, bluegrass banjo lernen, banjo unterricht, banjo spielen, banjounterricht für anfänger, banjo lernen, banjo für anfänger, banjolehrer, banjo workshop, 5-string banjo lernen, banjo anfänger, banjo picker, banjo lernen, bluegrass banjo, banjo lessons"
 >
-  <h1>Banjounterricht</h1>
   <section id="instruments_lesson">
     <article>
       <p>Rüdiger Helbig</p>
@@ -64,9 +64,10 @@ import Layout from "../layouts/Layout.astro";
         <a
           href="/bilder/04_seeger_picking.pdf"
           target="_blank"
-          class="link-blue">ansehen</a
+          class="normal-links">ansehen</a
         >
-        <a href="/Songs/Skip_To_My_Lou.mp3" target="_blank" class="link-blue"
+        und
+        <a href="/Songs/Skip_To_My_Lou.mp3" target="_blank" class="normal-links"
           >anhören</a
         >
       </p>
@@ -74,7 +75,7 @@ import Layout from "../layouts/Layout.astro";
         Das Buch können Sie bei Edition Dux <a
           href="https://www.dux-verlag.de/autoren/sebastian-schroeder/banjo-spielen.html"
           target="_blank"
-          class="link-blue">kaufen!</a
+          class="normal-links">kaufen!</a
         >
       </p>
       <hr />
@@ -124,11 +125,11 @@ import Layout from "../layouts/Layout.astro";
         </div>
       </div>
       <p>
-        <a href="/leistungen/" class="link-white">zurück</a>
+        <a href="/leistungen/" class="normal-links">zurück</a>
       </p>
     </article>
   </section>
-</Layout>
+</BaseLayout>
 
 <style>
   #instruments_lesson ol li {
