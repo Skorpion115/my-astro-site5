@@ -1,13 +1,13 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pageTitle = 'Leistungen';
 ---
 
-<Layout
-  title="Leistungen"
+<BaseLayout
+  pageTitle={pageTitle}
   description="Ich gebe Querflötenunterricht in Nürnberg"
   keywords="leistungen, querflötenunterricht in eibach, querflöte, querflötenunterricht nürnberg, querflötenunterricht in der nähe, querflöte spielen lernen, querflötenkurs, querflötenunterricht für kinder, querflöten lehrer, querflöteunterricht"
 >
-  <h1>Leistungen</h1>
   <section id="leistungen">
     <h2>Wählen Sie ihr Wunschinstrument aus!</h2>
     <article>
@@ -54,7 +54,7 @@ import Layout from "../layouts/Layout.astro";
       </p>
     </article>
   </section>
-</Layout>
+</BaseLayout>
 
 <style>
   #leistungen {

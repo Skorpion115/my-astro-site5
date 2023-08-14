@@ -1,16 +1,16 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pageTitle = 'FAQ';
 ---
 
-<Layout
-  title="Die meist gestelltesten Fragen"
+<BaseLayout
+  pageTitle={pageTitle}
   description="Die meistgestelltesten Fragen!"
   keywords="Häufig gestellte Fragen"
 >
-  <h2>H&auml;ufig gestellte Fragen</h2>
   <section id="faq">
     <div>
-      <h2>FAQ</h2>
+      <h2>Häufig gestellte Fragen</h2>
       <div
         style="
             float: left;
@@ -206,7 +206,7 @@ import Layout from "../layouts/Layout.astro";
       <p><a href="/" class="link-white">home</a></p>
     </div>
   </section>
-</Layout>
+</BaseLayout>
 
 <style>
   #faq {

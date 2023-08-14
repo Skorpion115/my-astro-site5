@@ -8,7 +8,10 @@ const assets = [
   "/contact_2/",
   "/thankyou/",
   "/contact_4/",
-  "/honorar/"
+  "/honorar/",
+  "/leistungen/",
+  "/faq/",
+  "/download/"
   
 ];
 const cacheTypes = ["main", "font", "image"];

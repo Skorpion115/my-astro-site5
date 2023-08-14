@@ -1,14 +1,15 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pageTitle = 'Download';
 ---
 
-<Layout
-  title="Download"
+<BaseLayout
+  pageTitle={pageTitle}
   description="Midi Files und Noten bekannter Werke komplett zu downloaden! Mondschein Sonate, Eine kleine Nachtmusik, Die Fledermaus, Schwannensee"
   keywords="Midi Files und Noten bekannter Werke zum downloaden"
 >
   <section id="download">
-    <h1>GM Midi Files mit Noten komplett zum downloaden!</h1>
+    <h2>GM Midi Files mit Noten komplett zum downloaden!</h2>
     <article>
       <p>
         Hier k&#246;nnen Sie sich die Titel einmal kurz anspielen lassen. Ich
@@ -266,7 +267,7 @@ import Layout from "../layouts/Layout.astro";
       </p>
     </article>
   </section>
-</Layout>
+</BaseLayout>
 
 <style>
   #download {
