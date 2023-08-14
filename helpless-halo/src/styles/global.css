@@ -54,6 +54,7 @@ h1 {
   margin: 1rem 0;
   font-size: 2rem;
   color: rgb(218, 54, 54);
+  text-align: center;
 }
 
 h2 {
@@ -67,6 +68,25 @@ p {
   text-align: start;
   padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 }
+/*
+
+a {
+  background-color: #545557;
+  color: white;
+}
+
+a:hover {
+  background-color: rgb(129, 226, 129);
+  color: black;
+} */
+/*
+a {
+    padding: 0.5rem 1rem;
+    color: white;
+    background-color: #4c1d95;
+    text-decoration: none;      
+} */
+
 
 /* ANCHOR button Formatierung */
 
@@ -100,6 +120,12 @@ html.dark {
 
 .dark .nav-links a {
   color: #fff;
+}
+
+/* ANCHOR Im Dark Modus sind die Links hellgrün geschrieben funktioniert*/
+
+.dark .normal-links {
+  color: #13f270;
 }
 
 /* ANCHOR nav styles */

@@ -120,41 +120,41 @@ const pageTitle = 'Musikunterricht';
         <h2>Naturinstrumente</h2>
         <ul>
           <li>
-            <a href="/klavierunterricht/">Klavier</a>
+            <a class="normal-links" href="/klavierunterricht/">Klavier</a>
           </li>
           <li>
-            <a href="/akkordeon-unterricht/" class="link-blue">Akkordeon</a>
+            <a class="normal-links" href="/akkordeon-unterricht/">Akkordeon</a>
           </li>
           <li>
-            <a href="/gitarrenunterricht/" class="link-blue">Konzertgitarre</a>
+            <a class="normal-links" href="/gitarrenunterricht/">Konzertgitarre</a>
           </li>
           <li>
-            <a href="/saxophonunterricht/" class="link-blue">Saxophon</a>
+            <a class="normal-links" href="/saxophonunterricht/">Saxophon</a>
           </li>
           <li>
-            <a href="/klarinettenunterricht/" class="link-blue">Klarinette</a>
+            <a class="normal-links" href="/klarinettenunterricht/">Klarinette</a>
           </li>
           <li>
-            <a href="/leistungen/" class="link-blue">Querflöte</a>
+            <a class="normal-links" href="/leistungen/">Querflöte</a>
           </li>
           <li>Blockflöte</li>
           <li>
-            <a href="/banjounterricht/" class="link-blue">5-string Banjo</a>
+            <a class="normal-links" href="/banjounterricht/">5-string Banjo</a>
           </li>
           <li>Bongos</li>
         </ul>
         <h2>Elektromechanische Instrumente</h2>
         <ul>
           <li>
-            <a href="/keyboardunterricht/" class="link-blue">Keyboard</a>
+            <a class="normal-links" href="/keyboardunterricht/">Keyboard</a>
           </li>
           <li>
-            <a href="/e-gitarrenunterricht/" class="link-blue">E-Gitarre</a>
+            <a class="normal-links" href="/e-gitarrenunterricht/">E-Gitarre</a>
           </li>
           <li>Jazz Guitar</li>
           <li>Jazzharmonielehre</li>
           <li>
-            <a href="/e-bassunterricht/" class="link-blue">Bass</a>
+            <a class="normal-links" href="/e-bassunterricht/">Bass</a>
           </li>
         </ul>
         <br class="clear" />
@@ -200,11 +200,12 @@ const pageTitle = 'Musikunterricht';
 
         <p>
           Telefon:
-          <a href="tel:+499116320890" class="link-blue">+49 (0)911 6320890</a> 0911/6320890
+          <a href="tel:+499116320890" class="normal-links">+49 (0)911 6320890</a> 0911/6320890
         </p>
         <p>
           eMail:&nbsp;
           <a
+            class="normal-links"
             href="mailto:postmaster@musicstudio-ziebart.de"
             class="link-blue"
             onfocus="this.blur()"
@@ -214,6 +215,7 @@ const pageTitle = 'Musikunterricht';
         <p>
           Facebook:&nbsp;
           <a
+            class="normal-links"
             href="https://www.facebook.com/Musicstudio.Ziebart"
             class="link-blue"
             target="_blank"
@@ -222,6 +224,7 @@ const pageTitle = 'Musikunterricht';
         </p>
         <p>
           <a
+            class="normal-links"
             href="https://maps.google.de/maps?ie=UTF8&cid=10230175189141752103&q=Musikschule+Ziebart&iwloc=A&gl=DE&hl=de"
             target="top"
             class="link-blue"
@@ -243,7 +246,7 @@ const pageTitle = 'Musikunterricht';
         <br />
         <hr />
         <p>
-          Powered by <a href="https://astro.build" class="link-blue"
+          Powered by <a href="https://astro.build" class="normal-links"
             >{Astro.generator}</a
           >
         </p>
@@ -291,20 +294,6 @@ const pageTitle = 'Musikunterricht';
     font-weight: bold;
     margin-bottom: 0.625rem;
   }
-
-  /*ANCHOR Links auf linker Seite*/
-
-  .conteneur .marchandise ul li a {
-    background-color: #545557;
-    color: white;
-  }
-
-  .conteneur .marchandise ul li a:hover {
-    background-color: rgb(129, 226, 129);
-    color: black;
-  }
-
-  
 
   .image-scroll {
     display: flex;
@@ -439,8 +428,8 @@ const pageTitle = 'Musikunterricht';
     list-style-type: none;
   }
 
-  /* ANCHOR marchendise Links rechts */
-
+  /* ANCHOR marchendise Links rechts nichts machen dann ist es blau*/
+  /*
   .marchandise a {
     background-color: #545557;
     color: white;
@@ -449,7 +438,7 @@ const pageTitle = 'Musikunterricht';
   .marchandise a:hover {
     background-color: rgb(129, 226, 129);
     color: black;
-  }
+  } */
 
   /* Rudi.jpg */
 

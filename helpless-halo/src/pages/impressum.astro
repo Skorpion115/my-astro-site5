@@ -1,10 +1,9 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pageTitle = 'Impressum';
 ---
 
-<Layout title="Impressum" description="Impressum" keywords="Impressum">
-  <h1>Impressum</h1>
-  <section id="impressum">
+<BaseLayout pageTitle={pageTitle} description="Impressum" keywords="Impressum">
     <h2>Adresse</h2>
     <div>
       <hr />
@@ -19,7 +18,7 @@ import Layout from "../layouts/Layout.astro";
         <br />
         <br /> Telefon:
         <br />
-        <a class="link-blue" href="tel:+499116320890">+49 (0)911 6320890</a>
+        <a class="normal-links" href="tel:+499116320890">+49 (0)911 6320890</a>
         <br />
         <br />
         <br /> Steuernummer: 218/292/70320 Finanzamt Fürth
@@ -30,31 +29,10 @@ import Layout from "../layouts/Layout.astro";
         <br />
         <br />
         <a
-          class="link-blue" href="https://maps.google.de/maps?ie=UTF8&cid=10230175189141752103&q=Musikschule+Ziebart&iwloc=A&gl=DE&hl=de"
+          class="normal-links" href="https://maps.google.de/maps?ie=UTF8&cid=10230175189141752103&q=Musikschule+Ziebart&iwloc=A&gl=DE&hl=de"
           target="top"
           >Standortansicht im Stadtplan!
         </a>
       </p>
     </div>
-  </section>
-</Layout>
-
-<style>
-  #impressum {
-    display: block;
-    width: 96%;
-    max-width: 100%;
-    padding: 0;
-    margin: 2rem auto;
-    font-style: normal;
-  }
-
-  #impressum {
-    display: inline-block;
-    margin: 2rem auto;
-    padding: 1.25rem;
-    text-align: left;
-    width: 100%;
-    vertical-align: top;
-  }
-</style>
+</BaseLayout>
