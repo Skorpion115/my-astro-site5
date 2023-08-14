@@ -1,13 +1,13 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pageTitle = 'Akkordeon Unterricht';
 ---
 
-<Layout
-  title="Akkordeonunterricht"
+<BaseLayout
+  pageTitle={pageTitle}
   description="Ich gebe Akkordeonunterricht in eibach"
   keywords="akkordeonunterricht, akkordeon unterricht, akkordeon privatunterricht, akkordeon lernen nürnberg, akkordeon lernen, akkordeon spielen lernen, akkordeon lernen anfänger, akkordeon, akkordeon kurs, akkordeon spielen, akkordeonunterricht für erwachsene, accordion lesson"
 >
-  <h1>Akkordeon Unterricht</h1>
   <section id="instruments_lesson">
     <article>
       <h2>Alfons Holzschuh</h2>
@@ -33,8 +33,8 @@ import Layout from "../layouts/Layout.astro";
       </p>
       <br />
       <p>
-        <a href="/leistungen/" class="link-white">zurück</a>
+        <a href="/leistungen/" class="normal-links">zurück</a>
       </p>
     </article>
   </section>
-</Layout>
+</BaseLayout>

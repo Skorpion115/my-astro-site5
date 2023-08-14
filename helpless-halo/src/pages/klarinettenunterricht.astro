@@ -1,13 +1,13 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pageTitle = 'Klarinettenunterricht';
 ---
 
-<Layout
-  title="Klarinettenunterricht"
+<BaseLayout
+  pageTitle={pageTitle}
   description="Ich gebe Klarinettenunterricht in Nürnberg"
   keywords="klarinettenunterricht, musikschule klarinette, klarinettenunterricht in nürnberg, klarinettenunterricht in eibach, klarinette, klarinettenunterricht, klarinette für anfänger, klarinettenkurs, musikschule für klarinette, klarinettenunterricht eibach, unterricht klarinette, musikunterricht klarinette, klarinettenlehrer, Klarinette lernen für anfänger, clarinet lessons"
 >
-  <h1>Klarinettenunterricht</h1>
   <section id="instruments_lesson">
     <article>
       <h2>Neue Schule für Klarinette, Ewald Koch</h2>
@@ -27,11 +27,11 @@ import Layout from "../layouts/Layout.astro";
         sagen.
       </p>      
       <p>
-        <a href="/instrumentenkauf/" class="link-blue">Mehr Info über die Klarinette</a>
+        <a href="/instrumentenkauf/" class="normal-links">Mehr Info über die Klarinette</a>
       </p>     
       <p>
-        <a href="/leistungen/" class="link-white">zurück</a>
+        <a href="/leistungen/" class="normal-links">zurück</a>
       </p>
     </article>
   </section>
-</Layout>
+</BaseLayout>
