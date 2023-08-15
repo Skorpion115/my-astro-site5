@@ -35,8 +35,26 @@ const { pageTitle, description, keywords } = Astro.props;
   <body>
     <Header />
     <h1>{pageTitle}</h1>
-    <slot />
+    <main>
+      <slot />
+    </main>
     <Footer />
+    <!-- Altes Script von Video angeschaut für ServiceWorker -->
+    <script is:inline>
+      // Don't register the service worker
+      // until the page has fully loaded
+      window.addEventListener('load', () => {
+        // Is service worker available?
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('/serviceWorker.js').then(() => {
+            console.log('Service worker registered!');
+          }).catch((error) => {
+            console.warn('Error registering service worker:');
+            console.warn(error);
+          });
+        }
+      });
+    </script>
     <script>
       import "../scripts/menu.js";
     </script>
