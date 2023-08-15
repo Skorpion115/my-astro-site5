@@ -7,7 +7,7 @@ image:
     url: "https://www.musicstudio-ziebart.de/images/tuner_230x181.webp"
     alt: "Tuner"
 pubDate: 2023-08-15
-tags: ["astro", "blogging", "gitarrenunterricht", "successes"]
+tags: ["astro", "blogging", "gitarrenunterricht", "erfolge"]
 ---
 ![Alt-Stimmgerät](/images/Tuner_230x181.webp "Tuner")
 
