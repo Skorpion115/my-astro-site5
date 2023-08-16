@@ -38,9 +38,7 @@ const { pageTitle, description, keywords } = Astro.props;
   <body>
     <Header />
     <h1>{pageTitle}</h1>
-    <main>
-      <slot />
-    </main>
+    <slot />
     <Footer />
     <!-- Altes Script von Video angeschaut für ServiceWorker -->
     <script is:inline>

@@ -14,7 +14,7 @@ const assets = [
   "/harmonielehre/",
   "/impressum/"
 ];
-const cacheTypes = ["main", "font", "image"];
+const cacheTypes = ["body", "font", "image"];
 const cacheVersion = "_v3";
 
 self.addEventListener("install", (event) => {
@@ -36,7 +36,7 @@ function putInCache(request, response) {
 
   let cacheKey = cacheTypes.includes(request.destination)
     ? request.destination
-    : "main";
+    : "body";
   caches.open(cacheKey + cacheVersion).then((caches) => {
     caches.match(request, response);
   });
