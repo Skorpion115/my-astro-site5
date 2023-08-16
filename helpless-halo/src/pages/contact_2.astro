@@ -1,10 +1,9 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-const pageTitle = 'contact_02';
 ---
 
 <BaseLayout
-  pageTitle={pageTitle}
+  title="contact_2"
   description="Kostenloser Probeunterricht"
   keywords="Kontakt"
 >
@@ -20,7 +19,7 @@ const pageTitle = 'contact_02';
       <input type="hidden" name="form-name" value="contact_2" />
       <fieldset>
         <legend>Data</legend>
-        <div class="formfields"></div>
+        <div class="form-element"></div>
         <br />
         <div>
           <label for="subject">Betreff:</label>
@@ -271,18 +270,18 @@ const pageTitle = 'contact_02';
     font-size: 1.5rem;
     padding: 0.625rem;
   }
-
+  
   fieldset {
     color: #828282;
-  }
+  } 
 
   /* ganze Formular */
-
+  
   .form-element {
-    color: var(--color-white);
-    background-color: var(--color-schwarz);
+    color: #828282;;
   }
 
+  
   /* Beschreibung der Felder unten */
   /*
   .invalid-feedback {
@@ -335,8 +334,6 @@ const pageTitle = 'contact_02';
     /*color: #fff; */
     font-size: 1.125rem;
     padding: 0.625rem;
-    color: var(--color-white);
-    background-color: var(--color-schwarz);
   }
 
   .btn {

@@ -1,15 +1,18 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-const pageTitle = "contact_4";
 ---
 
-<BaseLayout pageTittle={pageTitle} description="Probeunterricht" keywords="Contact">
-  <h2>Kurze Mitteilung</h2>
+<BaseLayout  
+  title="contact_4"
+  description="Kurze Mitteilung" 
+  keywords="Contact"
+>
   <div class="container4">
+    <h2>Kurze Mitteilung</h2>
     <form
       name="contact_4"
-      action="/thankyou/"
       method="POST"
+      action="/thankyou/"
       data-netlify-recaptcha="true"
       data-netlify="true"
     >
@@ -63,7 +66,7 @@ const pageTitle = "contact_4";
         <input
           type="email"
           id="email"
-          name="email"
+          name="email" Reply-to
           Reply-to
           class="form-control form-control-lg"
         />
@@ -126,8 +129,6 @@ const pageTitle = "contact_4";
     /*color: #fff; */
     font-size: 1.125rem;
     padding: 0.625rem;
-    color: var(--color-white);
-    background-color: var(--color-schwarz);
   }
 
   /* Button css */
