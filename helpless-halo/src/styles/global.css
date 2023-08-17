@@ -54,7 +54,7 @@ h1 {
   margin: 1rem 0;
   font-size: 2rem;
   color: rgb(218, 54, 54);
-  text-align: center;
+  padding-top: 1.25rem;
 }
 
 h2 {

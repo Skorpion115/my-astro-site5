@@ -1,6 +1,5 @@
 ---
 import BaseLayout from'../layouts/BaseLayout.astro';
-import Greeting from '../components/Greeting.jsx';
 import CookiesBanner from '../components/CookiesBanner.astro';
 import Card from "../components/Card.astro";
 const pageTitle = 'Musikunterricht';
@@ -10,9 +9,7 @@ const pageTitle = 'Musikunterricht';
   pageTitle={pageTitle}
   description="stadt nürnberg: musicstudio ziebart, online-musikunterricht, telefon 0911/6320890, ich gebe musikunterricht aller altersklassen."
   keywords="musikunterricht, instrumental unterricht, music lessons, musikschule, jetzt anmelden, musikunterricht in eibach, musikschule nürnberg eibach, musikschule nürnberg kinder, musiklehrer privatunterricht, musikschule eibach, musiklehrer privat, musiklehrer nürnberg, musikschule nürnberg, music lessons, online musikunterricht"
-  >
-  <Greeting client:load messages={["Hallo", "Hi", "Bonjor", "Habari"]} />
-  
+  > 
   <!-- Bildlauf oder scrolling -->
   <div class="container">
     <div class="section">
