@@ -1,7 +1,7 @@
 ---
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import '../styles/global.css';
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
 const { pageTitle, description, keywords } = Astro.props;
 ---
 
@@ -9,7 +9,7 @@ const { pageTitle, description, keywords } = Astro.props;
 <html lang="de">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <!-- 
     <meta name="viewport" content="width=device-width" /> -->
@@ -35,7 +35,8 @@ const { pageTitle, description, keywords } = Astro.props;
     <meta name="robots" content="max-snippet:-1" />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#191919" />
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GCXBFDX52C7"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GCXBFDX52C7"
+    ></script>
   </head>
   <body>
     <Header />
@@ -50,9 +51,22 @@ const { pageTitle, description, keywords } = Astro.props;
         // Is service worker available?
         if ("serviceWorker" in navigator) {
           navigator.serviceWorker
-            .register("/serviceWorker.js", { scope: "/" })
-            .then(() => console.log("serviceWorker registered"))
-            .catch((error) => console.warn(error));
+            .register("/serviceWorker.js")
+            .then(function (reg) {
+              console.log("Service worker successfully registered.", reg);
+              if (reg.installing) {
+                reg.installing.onstatechange = function (e) {
+                  if (e.target.state == "installed") {
+                    console.log("Service worker successfully installed.");
+                  } else if (e.target.state == "redundant") {
+                    console.log("Service worker failed to install.");
+                  }
+                };
+              }
+            })
+            .catch(function (err) {
+              console.error("Service worker failed to register.", err);
+            });
         }
       });
     </script>
@@ -60,7 +74,7 @@ const { pageTitle, description, keywords } = Astro.props;
       import "../scripts/menu.js";
     </script>
     <script>
-      import "../scripts/google.js"
+      import "../scripts/google.js";
     </script>
   </body>
 </html>
