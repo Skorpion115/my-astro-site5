@@ -1,6 +1,7 @@
 ---
 import BaseLayout from'../layouts/BaseLayout.astro';
 import CookiesBanner from '../components/CookiesBanner.astro';
+import Greeting from '../components/Greeting.jsx';
 import Card from "../components/Card.astro";
 const pageTitle = 'Musikunterricht';
 ---
@@ -59,6 +60,7 @@ const pageTitle = 'Musikunterricht';
       <h3 data-text="MUSICSTUDIO_ZIEBART">MUSICSTUDIO_ZIEBART</h3>
     </div>
     <br />
+    <Greeting client:load messages={["Hallo", "Hi", "Bonjor", "Habari"]} />
     <article class="conteneur">
       <section class="marchandise marchandise-1">
         <h2>Music Lessons</h2>
@@ -164,7 +166,7 @@ const pageTitle = 'Musikunterricht';
           zur Verfügung gestellt werden.
         </p>
         
-        <ul role="list" class="link-card-grid">
+        <ul class="link-card-grid">
           <Card
           href="/contact_2/"
           title="Probeunterricht"
@@ -186,7 +188,7 @@ const pageTitle = 'Musikunterricht';
         </p>
         <p>Staatl. anerkannter Musiklehrer</p>
         
-        <ul role="list" class="link-card-grid">
+        <ul class="link-card-grid">
           <Card
           href="/contact_4/"
           title="Nachricht"
