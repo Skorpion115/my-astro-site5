@@ -48,13 +48,24 @@ const { pageTitle, description, keywords } = Astro.props;
       // Don't register the service worker
       // until the page has fully loaded
       window.addEventListener("load", () => {
-        // Is service worker available?
         if ("serviceWorker" in navigator) {
-            navigator.serviceWorker
-              .register("/serviceWorker.js", { scope: "/" })
-              .then(() => console.log("serviceWorker registered"))
-              .catch((error) => console.warn(error));
-          }
+          navigator.serviceWorker
+            .register("/serviceWorker.js")
+            .then(function (reg) {
+              console.log("Service worker successfully registered.", reg);
+              if (reg.installing) {
+                reg.installing.onstatechange = function (e) {
+                  if (e.target.state == "installed") {
+                    console.log("Service worker successfully installed.");
+                  } else if (e.target.state == "redundant") {
+                    console.log("Service worker failed to install.");
+                  }
+                };
+              }
+            })
+            .catch(function (err) {
+              console.error("Service worker failed to register.", err);
+            });
         }
       });
     </script>
