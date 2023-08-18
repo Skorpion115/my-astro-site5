@@ -38,34 +38,23 @@ const { pageTitle, description, keywords } = Astro.props;
     <script async src="https://www.googletagmanager.com/gtag/js?id=GCXBFDX52C7"
     ></script>
   </head>
-  <body>
+  <body class="">
     <Header />
     <h1>{pageTitle}</h1>
     <slot />
     <Footer />
     <!-- Altes Script von Video angeschaut für ServiceWorker -->
     <script is:inline>
-      // Don't register the service worker
-      // until the page has fully loaded
-      window.addEventListener("load", () => {
+      document.addEventListener("DOMContentLoaded", () => {
+        if (localStorage.getItem("theme") == "light") {
+          document.querySelector("body").classList.add("light");
+        }
+
         if ("serviceWorker" in navigator) {
           navigator.serviceWorker
-            .register("/serviceWorker.js")
-            .then(function (reg) {
-              console.log("Service worker successfully registered.", reg);
-              if (reg.installing) {
-                reg.installing.onstatechange = function (e) {
-                  if (e.target.state == "installed") {
-                    console.log("Service worker successfully installed.");
-                  } else if (e.target.state == "redundant") {
-                    console.log("Service worker failed to install.");
-                  }
-                };
-              }
-            })
-            .catch(function (err) {
-              console.error("Service worker failed to register.", err);
-            });
+            .register("/serviceWorker.js", { scope: "/" })
+            .then(() => console.log("serviceWorker registered"))
+            .catch((error) => console.warn(error));
         }
       });
     </script>
