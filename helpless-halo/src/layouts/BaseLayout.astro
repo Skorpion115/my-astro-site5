@@ -20,6 +20,11 @@ const { pageTitle, description, keywords } = Astro.props;
     <meta name="Language" content="de" />
     <meta name="description" content={description} />
     <meta name="keywords" content={keywords} />
+    <meta 
+      http-equiv="Permissions-Policy" 
+      content="interest-cohort=()" 
+      />
+
     <meta
       name="author"
       content="Musicstudio Ziebart, postmaster@musicstudio-ziebart.de"
