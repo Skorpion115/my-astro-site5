@@ -12,7 +12,16 @@ const assets = [
   "/faq/",
   "/download/",
   "/harmonielehre/",
-  "/impressum/"
+  "/impressum/",
+  "/klavierunterricht/",
+  "/keyboardunterricht/",
+  "/gitarrenunterricht/",
+  "/e-bassunterricht/",
+  "/e-gitarrenunterricht/",
+  "/banjounterricht/",
+  "/akkordeon-unterricht/",
+  "/saxophonunterricht/",
+  "/klarinettenunterricht/"
 ];
 const cacheTypes = ["body", "font", "image"];
 const cacheVersion = "_v3";
