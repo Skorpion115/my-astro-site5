@@ -38,7 +38,7 @@ const { pageTitle, description, keywords } = Astro.props;
     <script async src="https://www.googletagmanager.com/gtag/js?id=GCXBFDX52C7"
     ></script>
   </head>
-  <body class="">
+  <body>
     <Header />
     <h1>{pageTitle}</h1>
     <slot />
@@ -46,10 +46,6 @@ const { pageTitle, description, keywords } = Astro.props;
     <!-- Altes Script von Video angeschaut für ServiceWorker -->
     <script is:inline>
       document.addEventListener("DOMContentLoaded", () => {
-        if (localStorage.getItem("theme") == "light") {
-          document.querySelector("body").classList.add("light");
-        }
-
         if ("serviceWorker" in navigator) {
           navigator.serviceWorker
             .register("/serviceWorker.js", { scope: "/" })
