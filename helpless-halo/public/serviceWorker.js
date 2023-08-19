@@ -4,7 +4,6 @@ const assets = [
   "/instrumentenkauf/",
   "/blog/",
   "/tags/",
-  "/posts/",
   "/contact_2/",
   "/thankyou/",
   "/contact_4/",
