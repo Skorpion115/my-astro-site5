@@ -50,7 +50,7 @@ const { pageTitle, description, keywords } = Astro.props;
     <Footer />
     <!-- Altes Script von Video angeschaut für ServiceWorker -->
     <script is:inline>
-      window.addEventListener('load', () => {
+      document.addEventListener("DOMContentLoaded", () => {
         if ("serviceWorker" in navigator) {
           navigator.serviceWorker
             .register("/serviceWorker.js", { scope: "/" })
