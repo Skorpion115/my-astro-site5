@@ -2,7 +2,7 @@
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
-const { pageTitle, description, keywords } = Astro.props;
+const { pageTitle, description, keywords, href } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -15,12 +15,14 @@ const { pageTitle, description, keywords } = Astro.props;
     <meta name="viewport" content="width=device-width" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="manifest" href="/manifest.json" />
-    <link rel="canonical" href="https://www.musicstudio-ziebart.de" />
+    <!-- 
+    <link rel="canonical" href="https://www.musicstudio-ziebart.de/" /> -->
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
     <meta name="Language" content="de" />
     <meta name="description" content={description} />
     <meta name="keywords" content={keywords} />
+    <link rel="canonical" href={href} />
     <meta 
       http-equiv="Permissions-Policy" 
       content="interest-cohort=()" 

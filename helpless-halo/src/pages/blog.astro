@@ -5,7 +5,12 @@ const allPosts = await Astro.glob("../pages/posts/*.md");
 const pageTitle = "Meine Blog Site";
 ---
 
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout 
+  pageTitle={pageTitle}
+  description="Hier veröffenliche ich meine Blogs"
+  keywords="blogging, gitarrenunterricht, banjounterricht"
+  href="https://www.musicstudio-ziebart.de/blog/"
+>
   <p>Ich möchte einige gute Ratschläge für Musiker und Musikerinen geben.</p>
   <ul>
     {allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
