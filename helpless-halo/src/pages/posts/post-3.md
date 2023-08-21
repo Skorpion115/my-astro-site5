@@ -12,9 +12,9 @@ tags: ["astro", "blogging", "erfolge"]
 <p>Willkommen zu meinem _neuem Blog_ über das Erlernen von Astro!</p> 
 
 
-## Eigene moderne Webseite kostenlos erstellen
+## Eigene responsive Webseite kostenlos erstellen
 
-<p>Ich beschäftige mich schon seit über 10 Jahren mit der Erstellung von Webseiten. Ich wollte zuletzt nicht alles mit meinen Händen schreiben müssen und suchte dann ein Framework das mir dabei hilft. Ich habe das Astro Framework gefunden. Es kann eine moderne responsive Webseite, also auch für Handies erstellen. In der jetztigen Zeit werden 90% aller Webseiten durch ein Smartphone oder IPhone aufgerufen. Zusätzlich benutze ich natürlich noch den besten HTML Editor der Welt den Visuel Studio Code Editor von Microsoft. Diesen kann man kostenlos downloaden und installieren. Hier der Link dazu:
+<p>Responsiv bedeutet das sich die Webseite bei Handies zusammen klappen. Außerdem wird die Schriftgröße bei immer kleineren Bildschirmen auch kleiner. Ich beschäftige mich schon seit über 10 Jahren mit der Erstellung von Webseiten. Ich wollte zuletzt nicht alles mit meinen Händen schreiben müssen und suchte dann ein Framework das mir dabei hilft. Ich habe das Astro Framework gefunden. Es kann eine moderne responsive Webseite, also auch für Handies erstellen. In der jetztigen Zeit werden 90% aller Webseiten durch ein Smartphone oder IPhone aufgerufen. Zusätzlich benutze ich natürlich noch den besten HTML Editor der Welt den Visuel Studio Code Editor von Microsoft. Diesen kann man kostenlos downloaden und installieren. Hier der Link dazu:
 
 <https://code.visualstudio.com/>
 </p>
