@@ -3,6 +3,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
 const { pageTitle, description, keywords, href } = Astro.props;
+const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
 ---
 
 <!DOCTYPE html>
@@ -43,6 +44,18 @@ const { pageTitle, description, keywords, href } = Astro.props;
     <meta name="robots" content="max-snippet:-1" />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#191919" />
+    {
+      // If PUBLIC_GOOGLE_SITE_VERIFICATION is set in the environment variable,
+      // include google-site-verification tag in the heading
+      // Learn more: https://support.google.com/webmasters/answer/9008080#meta_tag_verification&zippy=%2Chtml-tag
+      googleSiteVerification && (
+        <meta
+          name="google-site-verification: googlec3ea98571e202c93.html"
+          content={googleSiteVerification}
+        />
+      )
+    }
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=GCXBFDX52C7"
     ></script>
   </head>
