@@ -6,7 +6,8 @@ import preact from "@astrojs/preact";
 // https://astro.build/config
 export default defineConfig({
   // Resolves to the "./foo" directory in your current working directory
-  root: "foo",
+  /*
+  root: "foo",*/
   // Resolves to the "./foo/public" directory in your current working directory
   publicDir: "public",
   // static oder server SSR serverseitiges rändern
