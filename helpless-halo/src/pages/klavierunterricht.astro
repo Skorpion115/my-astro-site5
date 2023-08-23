@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-const pageTitle = 'Klavierunterricht';
+const pageTitle = "Klavierunterricht";
 ---
 
 <BaseLayout
@@ -52,20 +52,26 @@ const pageTitle = 'Klavierunterricht';
         >
       </p>
       <p>Wie man mit dem Klavier schelle Stücke spielen kann! YouTube Video:</p>
-      <div class="video-container-wrapper">
-        <div class="video-container">
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/vxX0WiQhSUE"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          >
-          </iframe>
+
+      <div class="container">
+        <div class="row">
+          <h2>Eingebettetes Video</h2>
+          <div class="iframe-container">
+            <iframe
+              src="https://www.youtube.com/embed/vxX0WiQhSUE?rel=0&cc_load_policy=1"
+              width="560"
+              height="315"
+              title="PRAELUDIUM BWV 927 - Johann Sebastian Bach"
+              frameborder="0"
+              allowfullscreen></iframe>
+          </div>
         </div>
       </div>
+      <br />
+      <script src="https://apis.google.com/js/platform.js"></script>
+
+      <div class="g-ytsubscribe" data-channelid="UCwRRdmLAvaERcd0K_WPMZMw" data-layout="default" data-count="default"></div>
+
       <p>
         <a href="/leistungen/" class="normal-links">zurück</a>
       </p>
