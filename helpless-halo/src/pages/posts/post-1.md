@@ -23,6 +23,13 @@ Zusätzlich kann man es auf 440 Hz einstellen. Transportfunktion für C, F, Bb u
 **Das wirklich wichtige ist, das das Stimmgerät eine große Skala hat damit man auch genau stimmen kann. Manche Stimmgeräte haben eine kleine Skala und das wird immer ungenau.**
 <p>Hier der Link dazu:</p> 
 
-<https://www.thomann.de/de/thomann_ctm700.htm>
+<a 
+    href="https://www.thomann.de/de/thomann_ctm700.htm"
+    class="normal-links"
+    target="_blank"
+    >CTM 700 Gitarrenstimmgerät
+</a>
 
-Meine E-Mail: <postmaster@musicstudio-ziebart.de>
+<p>Meine E-Mail:</p>
+
+<postmaster@musicstudio-ziebart.de>

@@ -23,15 +23,27 @@ Den einen D-Tuner benutzt man normalerweise auf der 3. Saite also die g Saite. S
 </p>
 <p>Beide D-Tuner B4 von Schaller kosten übrigens 90,- €. Link zum Shop:
 
-<https://www.martinsmusikkiste.eu/bau-ersatzteile/banjo/mechaniken/35341/b4-banjomechanik-gold-galalith?sPartner=35038></p>
+<a 
+    href="https://www.martinsmusikkiste.eu/bau-ersatzteile/banjo/mechaniken/35341/b4-banjomechanik-gold-galalith?sPartner=35038"
+    class="normal-links"
+    >Schaller D-Tuner B4
+</a>
 
 ---
 <p>Zur Information über den Schaller B4 D-Tuner für das 5-string Banjo ein Video:</p>
 
-<https://www.bing.com/videos/search?q=d-tuner+von+Schaller&docid=603484974327399060&mid=B955F2CCC6294F97F134B955F2CCC6294F97F134&view=detail&FORM=VIRE>
+<a
+    href="https://www.bing.com/videos/search?q=d-tuner+von+Schaller&docid=603484974327399060&mid=B955F2CCC6294F97F134B955F2CCC6294F97F134&view=detail&FORM=VIRE"
+    class="normal-links"
+    >Von der Firma Schaller ein Video dazu
+</a>
 
 <p>
 An der Stellen noch ein eigenes Video mit einem Songbeispiel von Earl Scruggs auf YouTube:
 </p>
 
-<https://www.youtube.com/embed/R75ZetEwmtw>
+<a
+    href="https://www.youtube.com/embed/R75ZetEwmtw"
+    class="normal-links"
+    >Flint Hill Special
+</a>
