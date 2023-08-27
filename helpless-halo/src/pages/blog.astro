@@ -11,7 +11,15 @@ const pageTitle = "Meine Blog Site";
   keywords="blogging, gitarrenunterricht, banjounterricht"
   href="https://www.musicstudio-ziebart.de/blog/"
 >
-  <p>Ich möchte einige gute Ratschläge für Musiker und Musikerinen geben.</p>
+  <p>Ich möchte einige gute Ratschläge für Musiker und Musikerinnen geben.</p>
+  <p>
+    Meine RSS-Feeds Adresse von Musicstudio Ziebart
+    <a
+      href="https://www.musicstudio-ziebart.de/rss.xml"
+      class="normal-links"
+      >https://www.musicstudio-ziebart.de/rss.xml
+    </a>
+  </p>
   <ul>
     {allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
   </ul>
