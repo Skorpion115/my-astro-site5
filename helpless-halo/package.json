@@ -14,7 +14,10 @@
     "@astrojs/preact": "^2.2.2",
     "@astrojs/rss": "^2.4.4",
     "@astrojs/sitemap": "^1.2.2",
+    "@netlify/plugin-csp-nonce": "^1.2.2",
+    "@netlify/sdk": "^0.8.1",
     "astro": "^2.3.2",
-    "preact": "^10.16.0"
+    "preact": "^10.16.0",
+    "typescript": "^5.2.2"
   }
 }
