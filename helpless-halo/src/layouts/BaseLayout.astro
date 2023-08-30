@@ -26,7 +26,14 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
     <link rel="canonical" href={href} />
     <!--
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'" /> -->
-    <meta name="google-site-verfication" content="Zitul6WICKD7zrzgptxGVrh2GEhozasdEM_d1tGi2aw" />
+    <meta
+      http-equiv="Content-Security-Polics"
+      content="default-src 'self'; font-src '@font-face'; object-src 'none'; style-src 'global.css'; worker-src 'serviceWorker.js'; manifest_src 'manifest.json'; img-src 'images'; frame-src 'iframe'"
+    />
+    <meta
+      name="google-site-verfication"
+      content="Zitul6WICKD7zrzgptxGVrh2GEhozasdEM_d1tGi2aw"
+    />
     <meta
       name="author"
       content="Musicstudio Ziebart, postmaster@musicstudio-ziebart.de"
@@ -37,7 +44,6 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
     />
     <meta name="DC.date" content="Collection" />
     <meta name="DC.rights" content="Alle Rechte liegen beim Author" />
-    <meta name="robots" content="selektion" />
     <meta name="revisit-after" content="7 days" />
     <meta name="robots" content="max-snippet:-1" />
     <meta name="robots" content="index, follow" />
