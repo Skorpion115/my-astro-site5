@@ -39,6 +39,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           <label for="born">Geburtsdatum:</label>
           <input
             type="date"
+            autocomplete="bday-day"
             name="born"
             id="born"
             class="form-control form-control-lg"
@@ -60,6 +61,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           <label for="phone">Telefon:</label>
           <input
             type="tel"
+            autocomplete="tel-national"
             name="phone"
             id="phone"
             class="form-control form-control-lg"
@@ -81,6 +83,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           <label for="email">Email:</label>
           <input
             type="email"
+            autocomplete="email"
             name="email" Reply-to
             id="email"
             class="form-control form-control-lg"
@@ -106,6 +109,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           <label for="fname">Vorname:</label>
           <input
             type="text"
+            autocomplete="given-name"
             name="fname"
             id="fname"
             class="form-control form-control-lg"
@@ -117,6 +121,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           <label for="lname">Nachname:</label>
           <input
             type="text"
+            autocomplete="family-name"
             name="lname"
             id="lname"
             class="form-control form-control-lg"
@@ -128,6 +133,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           <label for="street">Strasse:</label>
           <input
             type="text"
+            autocomplete="street-address"
             name="street"
             id="street"
             maxlength="22"
@@ -140,6 +146,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           <label for="place">Ort:</label>
           <input
             type="text"
+            autocomplete="address-level2"
             name="place"
             id="place"
             maxlength="20"
@@ -149,10 +156,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </div>
         <br />
         <div>
-          <label for="number">Postleitzahl:</label>
+          <label for="postal_code">Postleitzahl:</label>
           <input
             type="number"
             name="postal_code"
+            autocomplete="postal-code"
             id="postal_code"
             class="form-control form-control-lg"
             required
