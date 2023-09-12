@@ -2,7 +2,6 @@
   for = "/*"
   [headers.values]
     X-Frame-Options = "SAMEORIGIN"
-    X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
     Content-Security-Policy = "content=script-src-attr 'sha256-DnvBoy6PDks6zLuBv4fUC+N+mVENdo9HK4GQ3wlcKZw='; object-src 'self'; style-src-attr 'sha256-2yzasHDWWQWgTuKKQGP8FwLhZQuU+lgQ5r6yxyfesSI='; img-src * 'report-sample'; font-src 'self'; upgrade-insecure-requests; frame-src 'self' https://www.youtube.com https: data:; form-action 'self'"
 
