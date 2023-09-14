@@ -13,10 +13,3 @@
     [plugins.inputs.policies]
         defaultSrc = "'self'"
         styleSrc = "'self' 'unsafe-hashes'"
-    [[edge_functions]]
-      path = "/admin"
-      function = "auth"
-    [[edge_functions]]
-      path = "/*"
-      excludedPath = "/img/*"
-      function = "common"
