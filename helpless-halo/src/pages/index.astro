@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CookiesBanner from "../components/CookiesBanner.astro";
-//import Greeting from "../components/Greeting.jsx";
+import Greeting from "../components/Greeting.jsx";
 import Card from "../components/Card.astro";
 const pageTitle = "Musikunterricht";
 ---
@@ -61,8 +61,8 @@ const pageTitle = "Musikunterricht";
       <h3 data-text="MUSICSTUDIO_ZIEBART">MUSICSTUDIO_ZIEBART</h3>
     </div>
     <br />
-    <!--
-    <Greeting client:load messages={["Hallo", "Hi", "Bonjor", "Habari"]} /> -->
+    
+    <Greeting client:load messages={["Hallo", "Hi", "Bonjor", "Habari"]} />
     <article class="conteneur">
       <section class="marchandise marchandise-1">
         <h2>Music Lesson</h2>
