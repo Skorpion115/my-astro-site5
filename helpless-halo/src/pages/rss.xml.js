@@ -1,6 +1,6 @@
 import rss, { pagesGlobToRssItems } from '@astrojs/rss';
 
-export async function get() {
+export async function GET() {
   return rss({
     title: 'Musicstudio Ziebart | Blog',
     description: 'Meine Reise zum Erlernen von Astro.',
