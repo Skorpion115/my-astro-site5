@@ -3,7 +3,7 @@
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
-import GoogleTagManager from "../components/GoogleTagManager.astro";
+import ExternalScripts from "../components/ExternalScripts.astro";
 const { pageTitle, description, keywords, href } = Astro.props;
 const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
 ---
@@ -14,8 +14,6 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <!-- 
-    <meta name="viewport" content="width=device-width" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="manifest" href="/manifest.json" />
     <!-- 
@@ -70,9 +68,7 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
     <meta name="robots" content="max-snippet:-1" />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#191919" />
-    <!--
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GCXBFDX52C7"></script>-->
-    <GoogleTagManager />
+    <ExternalScripts />
   </head>
   <body>
     <Header />
