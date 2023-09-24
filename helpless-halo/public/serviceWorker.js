@@ -21,8 +21,7 @@ const assets = [
   "/banjounterricht/",
   "/akkordeon-unterricht/",
   "/saxophonunterricht/",
-  "/klarinettenunterricht/",
-  "/_headers/"
+  "/klarinettenunterricht/"
 ];
 const cacheTypes = ["body", "font", "image"];
 const cacheVersion = "_v3";
