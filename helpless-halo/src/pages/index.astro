@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-//import CookiesBanner from "../components/CookiesBanner.astro";
+import CookieBanner2 from "../components/CookieBanner2.astro";
 import Greeting from "../components/Greeting.jsx";
 import Card from "../components/Card.astro";
 const pageTitle = "Musikunterricht";
@@ -12,10 +12,19 @@ const pageTitle = "Musikunterricht";
   keywords="musikunterricht, musicstudio-ziebart, musik selber spielen, musikunterricht-online, musiklehrer nürnberg, instrumental unterricht, music lesson, naturinstrumente, klassik bis pop, musikschule, jetzt anmelden, musikschule nürnberg eibach, musikschule nürnberg kinder, musiklehrer privatunterricht, musikschule eibach, musiklehrer privat, musikschule nürnberg"
   href="https://www.musicstudio-ziebart.de/"
 >
+
+<cookie-banner>
+  <h2 slot="title">Music Lesson</h2>
+  <div slot="text">Wir nutzen Cookies, um unsere Dienste zu erbringen und zu verbessern. Mit
+    Nutzung dieser Seite akzeptieren Sie Cookies.
+  </div>
+</cookie-banner>
+
+
   <!-- Bildlauf oder scrolling -->
   <div class="container">
     <div class="section">
-      <h2 class="section-title">Instrumental Unterricht</h2>
+      <h2 class="section-title">Musicstudio Ziebart</h2>
       <div class="image-scroll" id="imageScroll1">
         <img
           src="images/piano-960x540.webp"
@@ -64,7 +73,7 @@ const pageTitle = "Musikunterricht";
     <Greeting client:load messages={["Hallo", "Hi", "Bonjor", "Habari"]} />
     <article class="conteneur">
       <section class="marchandise marchandise-1">
-        <h2>Music Lesson</h2>
+        <h2>Instrumental Unterricht</h2>
         <p>HERZLICH WILLKOMMEN</p>
         <br />
         <p>Ich biete zusätzlich zu dem bisherigen Präsenzunterricht einen</p>
@@ -265,6 +274,9 @@ const pageTitle = "Musikunterricht";
             >https://www.musicstudio-ziebart.de/rss.xml
           </a>
         </p>
+        <template>
+        <div class="foo">Das ist ein Template das siehst du nicht in HTML</div>  
+        </template>
       </section>
     </article>
   </div>
@@ -286,8 +298,9 @@ const pageTitle = "Musikunterricht";
 <script>
   import "../scripts/scrolling.js"; //Bildlauf
 </script>
-<!--
-<CookiesBanner /> -->
+ 
+<CookieBanner2 />
+
 
 <style>
   /* ANCHOR Bilder Scrolling mit JavaScript */
@@ -473,6 +486,7 @@ const pageTitle = "Musikunterricht";
     } */
 
   /* ANCHOR Style für Cookie Banner */
+  /*
   #footer-cookie,
   #footer-cookie * {
     box-sizing: border-box;
@@ -533,5 +547,6 @@ const pageTitle = "Musikunterricht";
       display: block;
       text-align: center;
     }
-  }
+  }*/
+  
 </style>
