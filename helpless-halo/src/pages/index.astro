@@ -1,6 +1,5 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import CookieBanner2 from "../components/CookieBanner2.astro";
 import Greeting from "../components/Greeting.jsx";
 import Card from "../components/Card.astro";
 const pageTitle = "Musikunterricht";
@@ -12,13 +11,14 @@ const pageTitle = "Musikunterricht";
   keywords="musikunterricht, musicstudio-ziebart, musik selber spielen, musikunterricht-online, musiklehrer nürnberg, instrumental unterricht, music lesson, naturinstrumente, klassik bis pop, musikschule, jetzt anmelden, musikschule nürnberg eibach, musikschule nürnberg kinder, musiklehrer privatunterricht, musikschule eibach, musiklehrer privat, musikschule nürnberg"
   href="https://www.musicstudio-ziebart.de/"
 >
-
+<!--
 <cookie-banner>
   <h2 slot="title">Music Lesson</h2>
   <div slot="text">Wir nutzen Cookies, um unsere Dienste zu erbringen und zu verbessern. Mit
     Nutzung dieser Seite akzeptieren Sie Cookies.
   </div>
 </cookie-banner>
+<script defer src="cookie-banner.js"></script> -->
 
 
   <!-- Bildlauf oder scrolling -->
@@ -294,12 +294,23 @@ const pageTitle = "Musikunterricht";
     ><a href="javascript:void(0)" title="Akzeptieren">Akzeptieren</a>
   </span>
 </div> -->
+<div>
+  <cookie-banner>
+    <h2 slot="title">Music Lesson</h2>
+    <div slot="text">Wir nutzen Cookies, um unsere Dienste zu erbringen und zu verbessern. Mit
+      Nutzung dieser Seite akzeptieren Sie Cookies.
+    </div>
+  </cookie-banner>
+</div>
+<script>
+  import "../scripts/cookie-banner.js";
+</script>
 
 <script>
   import "../scripts/scrolling.js"; //Bildlauf
 </script>
- 
-<CookieBanner2 />
+<!-- 
+<CookieBanner2 />-->
 
 
 <style>
