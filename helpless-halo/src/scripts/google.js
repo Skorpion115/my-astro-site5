@@ -7,3 +7,5 @@ gtag("js", new Date());
 gtag("config", "G-CXBFDX52C7");
 
 gtag("config", "AW-93825274");
+
+gtag("config", "AW-1000620606");
