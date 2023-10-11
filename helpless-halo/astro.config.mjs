@@ -1,7 +1,6 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
-
-import preact from "@astrojs/preact";
+import preact from '@astrojs/preact';
 
 // https://astro.build/config
 export default defineConfig({
@@ -9,11 +8,11 @@ export default defineConfig({
   /*
   root: "foo",*/
   // Resolves to the "./foo/public" directory in your current working directory
-  publicDir: "public",
+  publicDir: 'public',
   // static oder server SSR serverseitiges rändern
-  output: "static",
+  output: 'static',
   // Die endgültige Seite bei deinem Hostanbieter
-  site: "https://www.musicstudio-ziebart.de/",
+  site: 'https://www.musicstudio-ziebart.de/',
   // Sitemap intergrieren, Eine Seite aufnehmen die nicht mit Astro erstellt wurde stillgelegt!!!
   /*
   integrations: [sitemap({
@@ -30,7 +29,7 @@ export default defineConfig({
   }), preact()],
   // Beispiel: Erfordere abschließende Schrägstriche
   // in Seiten-URLs während der Entwicklung
-  trailingSlash: "always",
+  trailingSlash: 'always',
   build: {
     // Beispiel: Erzeuge `page.html` statt `page/index.html`
     // während des Build-Prozesses.
