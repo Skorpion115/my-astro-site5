@@ -30,6 +30,20 @@ Zusätzlich kann man es auf 440 Hz einstellen. Transportfunktion für C, F, Bb u
     >CTM 700 Gitarrenstimmgerät
 </a>
 
+---
+
+## Pro Guitar aus Play Store
+**Geeignet für Gitarre, Bass, 5-string Banjo, Geige, Bratsche, Cello und noch mehr.**
+
+<p>Pro Guitar ist ein kostenloses Stimmgerät oder auch Tuner genannt in Form von einer App. Man braucht also ein Smartphone oder ein IPhone dazu. Kostenloser Download von Play Store.</p>
+
+<a
+    href="https://play.google.com/store/apps/details?id=com.jrinnovation.proguitartuner&gl=DE"
+    class="normal-links"
+    target="_blank"
+    >Stimmgerät - Pro Guitar
+</a>
+
 <p>Meine E-Mail:</p>
 
 <postmaster@musicstudio-ziebart.de>
