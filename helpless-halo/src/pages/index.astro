@@ -3,7 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Greeting from "../components/Greeting.jsx";
 import Card from "../components/Card.astro";
 // import local images
-import myPhoto from "../../public/images/rudi-wide.webp"
+import myPhoto from "../../public/images/rudi-wide.webp";
 const pageTitle = "Musikunterricht";
 ---
 
@@ -196,15 +196,16 @@ const pageTitle = "Musikunterricht";
             target="_blank">Musik Klier</a
           >
         </p>
-        
+
         <p>
           Gitarrenbauer Max Strohmer in Nürnberg:
           <a
             href="https://sellwerk.de/firmenprofil/max-strohmer-geigen-und-gitarrenbau"
             class="normal-links"
-            target="_blank">Gitarrenbauer Max Strohmer</a>
+            target="_blank">Gitarrenbauer Max Strohmer</a
+          >
         </p>
-        
+
         <hr />
         <p>
           <a
@@ -246,9 +247,9 @@ const pageTitle = "Musikunterricht";
             href="mailto:postmaster@musicstudio-ziebart.de"
             class="normal-links"
             onfocus="this.blur()"
-            >postmaster@musicst
+            >postmaster@musicst 
             udio-ziebar
-t.de
+ t.de
           </a>
         </p>
         <p>
@@ -263,16 +264,21 @@ t.de
         <p>ÖFFNUNGSZEITEN:</p>
         <p>Montag - Freitag 14.00 - 19.00 Uhr</p>
         <hr />
-        
-          <!--
+
+        <!--
           <img
             src="images/public/rudi-wide.webp"
             alt="Ein Bild von mir"
             width="320"
             height="240"
           />-->
-        <p>  
-        <img src={myPhoto.src} width={myPhoto.width} height={myPhoto.height} alt="Bild von mir." />
+        <p>
+          <img
+            src={myPhoto.src}
+            width={myPhoto.width}
+            height={myPhoto.height}
+            alt="Bild von mir."
+          />
         </p>
         <hr />
         <p>
