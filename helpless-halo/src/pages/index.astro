@@ -2,6 +2,8 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Greeting from "../components/Greeting.jsx";
 import Card from "../components/Card.astro";
+// import local images
+import myDog from "../../public/images/rudi-wide.webp"
 const pageTitle = "Musikunterricht";
 ---
 
@@ -261,13 +263,16 @@ t.de
         <p>ÖFFNUNGSZEITEN:</p>
         <p>Montag - Freitag 14.00 - 19.00 Uhr</p>
         <hr />
-        <p>
+        
+          <!--
           <img
-            src="images/rudi-wide.webp"
-            alt="Rudi"
+            src="images/public/rudi-wide.webp"
+            alt="Ein Bild von mir"
             width="320"
             height="240"
-          />
+          />-->
+        <p>  
+        <img src={myDog.src} width={myDog.width} height={myDog.height} alt="Bild von mir." />
         </p>
         <hr />
         <p>
