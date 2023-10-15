@@ -4,6 +4,12 @@ import Greeting from "../components/Greeting.jsx";
 import Card from "../components/Card.astro";
 // import local images
 import myPhoto from "../../public/images/rudi-wide.webp";
+import Piano from "../../public/images/piano-960x540.webp";
+import Guitar from "../../public/images/guitar-960x756.webp";
+import Banjo from "../../public/images/banjo-960x640.webp";
+import Tenorsax from "../../public/images/saxophon-960x640.webp";
+import Klarinette from "../../public/images/klarinette-960x638.webp";
+import Notes from "../../public/images/music-960x738.webp";
 const pageTitle = "Musikunterricht";
 ---
 
@@ -28,40 +34,40 @@ const pageTitle = "Musikunterricht";
       <h2 class="section-title">Musicstudio Ziebart</h2>
       <div class="image-scroll" id="imageScroll1">
         <img
-          src="images/piano-960x540.webp"
-          width="960"
-          height="540"
-          alt="Piano"
+          src={Piano.src}
+          width={Piano.width}
+          height={Piano.height}
+          alt="Piano Tastatur"
         />
         <img
-          src="images/guitar-960x756.webp"
-          width="960"
-          height="756"
-          alt="Gitarre"
+          src={Guitar.src}
+          width={Guitar.width}
+          height={Guitar.height}
+          alt="Konzertgitarre"
         />
         <img
-          src="images/banjo-960x640.webp"
-          width="960"
-          height="640"
-          alt="Banjo"
+          src={Banjo.src}
+          width={Banjo.width}
+          height={Banjo.height}
+          alt="5-string Banjo"
         />
         <img
-          src="images/saxophon-960x640.webp"
-          width="960"
-          height="640"
-          alt="Saxophon"
+          src={Tenorsax.src}
+          width={Tenorsax.width}
+          height={Tenorsax.height}
+          alt="Tenorsaxophon"
         />
         <img
-          src="images/klarinette-960x638.webp"
-          width="960"
-          height="638"
+          src={Klarinette.src}
+          width={Klarinette.width}
+          height={Klarinette.height}
           alt="Klarinette"
         />
         <img
-          src="images/music-960x738.webp"
-          width="960"
-          height="738"
-          alt="Music"
+          src={Notes.src}
+          width={Notes.width}
+          height={Notes.height}
+          alt="Notenblatt"
         />
       </div>
     </div>
@@ -264,14 +270,6 @@ const pageTitle = "Musikunterricht";
         <p>ÖFFNUNGSZEITEN:</p>
         <p>Montag - Freitag 14.00 - 19.00 Uhr</p>
         <hr />
-
-        <!--
-          <img
-            src="images/public/rudi-wide.webp"
-            alt="Ein Bild von mir"
-            width="320"
-            height="240"
-          />-->
         <p>
           <img
             src={myPhoto.src}
