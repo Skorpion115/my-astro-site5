@@ -1,9 +1,13 @@
-import { defineConfig } from "astro/config";
+//import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import preact from "@astrojs/preact";
-
+import { defineConfig, squooshImageService } from "astro/config";
 // https://astro.build/config
 export default defineConfig({
+  // Squoosh zum transponieren der Bilder verwenden
+  image: {
+    service: squooshImageService(),
+  },
   // Resolves to the "./foo" directory in your current working directory
   /*
   root: "foo",*/
