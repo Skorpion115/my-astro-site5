@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Dapper from "../../public/images/dapper-wide.webp";
 const pageTitle = 'Saxophonunterricht';
 ---
 
@@ -12,16 +13,13 @@ const pageTitle = 'Saxophonunterricht';
   <section>
     <article>
       <h2>Das Saxophonbuch, Klaus Dapper</h2>
-      <picture>
-        <source srcset="/images/dapper-wide.webp" media="(min-width: 600px)" />
-        <img
-          src="/images/dapper-narrow.webp"
-          width="428"
-          height="600"
-          alt="Schule_für_Saxophon"
-        />
-      </picture>
       <p>
+        <img
+          src={Dapper.src}
+          width={Dapper.width}
+          height={Dapper.height}
+          alt="Das Saxophonbuch von Klaus Dapper"
+        />
         Für den Saxophon Unterricht nehme ich die Klaus Dapper Saxophonschule.
         Der Titel des Buches heißt "Das Saxophonbuch". Eine CD ist auch dabei
         und es gibt 2 Bänder. Man muß angeben ob es ein Bb-Tenor Saxophon ist

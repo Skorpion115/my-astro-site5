@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Holzschuh from "../../public/images/holzschuh-wide.webp";
 const pageTitle = 'Akkordeon Unterricht';
 ---
 
@@ -12,18 +13,14 @@ const pageTitle = 'Akkordeon Unterricht';
   <section>
     <article>
       <h2>Alfons Holzschuh</h2>
-      <picture>
-        <source
-          srcset="/images/holzschuh-wide.webp"
-          media="(min-width: 600px)"
-        />
+      <p>
         <img
-          src="/images/holzschuh-narrow.webp"
-          width="367"
-          height="480"
-          alt="Akkordeonschule"
+          src={Holzschuh.src}
+          width={Holzschuh.width}
+          height={Holzschuh.height}
+          alt="Akkordeonschule von Alfons Holzschuh"
         />
-      </picture>
+      </p>
       <p>
         Für den Akkordeonunterricht nehme ich am Anfang die Akkordeonschule von
         Alfons Holzschuh. Es gibt davon 2 Bänder. Das Akkordeon war früher das
