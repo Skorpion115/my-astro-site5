@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-const pageTitle = 'Bassunterricht';
+import Reznicek from "../../public/images/reznicek-wide.webp";
+const pageTitle = "Bassunterricht";
 ---
 
 <BaseLayout
@@ -11,6 +12,7 @@ const pageTitle = 'Bassunterricht';
   <section>
     <article>
       <h2>Rock Bass Jäcki Reznicek</h2>
+      <!--
       <picture>
         <source
           srcset="/images/reznicek-wide.webp"
@@ -22,7 +24,15 @@ const pageTitle = 'Bassunterricht';
           height="420"
           alt="Bassschule"
         />
-      </picture>
+      </picture>-->
+      <p>
+      <img
+          src={Reznicek.src}
+          width={Reznicek.width}
+          height={Reznicek.height}
+          alt="Bassschule von Jaecki Reznicek"
+        />
+      </p>
       <p>
         Für den E-Bassunterricht nehme ich gerne die E-Bass Schule von dem Jäcki
         Reznicek. "Rock Bass" heißt der Titel davon. Es ist eine CD zum

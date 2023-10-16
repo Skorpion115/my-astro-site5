@@ -1,5 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Teschner from "../../public/images/teschner-wide.webp";
+import Sor from "../../public/images/sor-wide.webp";
 const pageTitle = "Gitarrenunterricht";
 ---
 
@@ -14,10 +16,10 @@ const pageTitle = "Gitarrenunterricht";
       <h2>Fridolin</h2>
       <p>
         <img
-          src="/images/teschner-wide.webp"
-          alt="Gitarrenschule Fridolin"
-          width="382"
-          height="499"
+          src={Teschner.src}
+          width={Teschner.width}
+          height={Teschner.height}
+          alt="Teschner Gitarrenschule Fridolin"
         />
       </p>
       <p>
@@ -67,10 +69,10 @@ const pageTitle = "Gitarrenunterricht";
       <br />
       <p>
         <img
-          src="/images/sor-wide.webp"
+          src={Sor.src}
+          width={Sor.width}
+          height={Sor.height}
           alt="Ferdinand Sor Etüden"
-          width="606"
-          height="800"
         />
       </p>
       <h2>Fernando Sor Opus 35, Opus 31</h2>

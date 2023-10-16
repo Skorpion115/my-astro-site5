@@ -152,7 +152,7 @@ html.dark {
 }
 
 /*ANCHOR picture und img */
-
+/*
 article picture img {
   max-width: 20%;
   height: auto;
@@ -162,7 +162,7 @@ article picture img {
   margin-top: 1.25rem;
   margin-left: 1rem;
   margin-right: 3rem;
-}
+} */
 
 article img {
   max-width: 30%;

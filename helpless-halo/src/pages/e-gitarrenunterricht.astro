@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Scheinhuette from "../../public/images/scheinhuette-wide.webp";
 const pageTitle = "E-Gitarrenunterricht";
 ---
 
@@ -12,6 +13,7 @@ const pageTitle = "E-Gitarrenunterricht";
   <section>
     <article>
       <h2>Schule der Rockgitarre, Andreas Scheinhütte</h2>
+      <!--
       <picture>
         <source
           srcset="/images/scheinhuette-wide.webp"
@@ -23,7 +25,15 @@ const pageTitle = "E-Gitarrenunterricht";
           height="420"
           alt="E-Gitarrenschule"
         />
-      </picture>
+      </picture>-->
+      <p>
+        <img
+          src={Scheinhuette.src}
+          width={Scheinhuette.width}
+          height={Scheinhuette.height}
+          alt="E-Gitarrenschule von Andreas Scheinhuette"
+        />
+      </p>
       <p>
         Für die E-Gitarre gibt es eine tolle E-Gitarrenschule von Andreas
         Scheinhütte. Das Werk heißt "Schule der Rockgitarre". Es ist eine CD zum
