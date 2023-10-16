@@ -1,6 +1,13 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-const pageTitle = 'Instrumentenkauf';
+import NylonGuitar from "../../public/images/konzertgitarre-wide.webp";
+import SteelGuitar from "../../public/images/westerngitarre-wide.webp";
+import Clarinet from "../../public/images/klarinetten-wide.webp";
+import Flute from "../../public/images/offline-narrow.webp";
+import Oberdaempfer from "../../public/images/oberdaempfer-narrow.webp";
+import DigitalPiano from "../../public/images/DB-32B.webp";
+import SP320 from "../../public/images/SP-320-wide.webp";
+const pageTitle = "Instrumentenkauf";
 ---
 
 <BaseLayout
@@ -34,10 +41,10 @@ const pageTitle = 'Instrumentenkauf';
       <h2>Akustische Gitarre</h2>
       <p>
         <img
-          src="/images/konzertgitarre-wide.webp"
-          alt="Konzertgitarre"
-          width="392"
-          height="600"
+          src={NylonGuitar.src}
+          width={NylonGuitar.width}
+          height={NylonGuitar.height}
+          alt="NylonGuitar"
         />
       </p>
       <h3>Konzertgitarre</h3>
@@ -52,10 +59,10 @@ const pageTitle = 'Instrumentenkauf';
       <h2>Westerngitarre</h2>
       <p>
         <img
-          src="/images/westerngitarre-wide.webp"
-          alt="Westerngitarre"
-          width="277"
-          height="600"
+          src={SteelGuitar.src}
+          width={SteelGuitar.width}
+          height={SteelGuitar.height}
+          alt="SteelGuitar"
         />
       </p>
       <p>
@@ -74,10 +81,10 @@ const pageTitle = 'Instrumentenkauf';
       </p>
       <p>
         <img
-          src="/images/klarinetten-wide.webp"
-          alt="Klarinetten"
-          width="230"
-          height="804"
+          src={Clarinet.src}
+          width={Clarinet.width}
+          height={Clarinet.height}
+          alt="Klarinette"
         />
       </p>
       <h2 id="Klarinette">Klarinette</h2>
@@ -125,12 +132,14 @@ const pageTitle = 'Instrumentenkauf';
         die G-Klappen etwas vorgezogen damit sie die Finger besser erreichen
         k&#246;nnen.
       </p>
-      <img
-        src="/images/offline-narrow.webp"
-        width="450"
-        height="180"
-        alt="Querlöte"
-      />
+      <p>
+        <img
+          src={Flute.src}
+          width={Flute.width}
+          height={Flute.height}
+          alt="Querfloete"
+        />
+      </p>
     </section>
     <section class="artikel artikel-3">
       <p>
@@ -192,18 +201,19 @@ const pageTitle = 'Instrumentenkauf';
         lassen. Die alten Klaviere sind mit sehr viel Innovation gebaut worden
         und haben somit einen guten Ruf.
         <br /> Es ist auf jeden Fall darauf zu achten, dass man kein Klavier mit
-        Oberd&auml;mpfern kauft. Klaviere mit Oberd&auml;mpfern werden heute nicht
-        mehr gebaut. So erkennen Sie als Laie, ob es sich um ein Unterd&auml;mpfer
-        handelt: Machen Sie den Deckel auf und schauen hinein. Wenn Sie freie Sicht
-        auf die H&auml;mmerchen haben, ist es ein Unterd&auml;mpfer. <br /> Das folgende
-        Abbildung zeigt einen Oberd&auml;mpfer:
+        Oberd&auml;mpfern kauft. Klaviere mit Oberd&auml;mpfern werden heute
+        nicht mehr gebaut. So erkennen Sie als Laie, ob es sich um ein
+        Unterd&auml;mpfer handelt: Machen Sie den Deckel auf und schauen hinein.
+        Wenn Sie freie Sicht auf die H&auml;mmerchen haben, ist es ein
+        Unterd&auml;mpfer. <br /> Das folgende Abbildung zeigt einen
+        Oberd&auml;mpfer:
       </p>
       <p>
         <img
-          src="/images/oberdaempfer-narrow.webp"
-          width="450"
-          height="180"
-          alt="Oberdaempfer"
+          src={Oberdaempfer.src}
+          width={Oberdaempfer.width}
+          height={Oberdaempfer.height}
+          alt="Oberdaempfer Klavier"
         />
       </p>
       <p>
@@ -217,7 +227,12 @@ const pageTitle = 'Instrumentenkauf';
       </p>
       <hr />
       <p>
-        <img src="/images/DB-32B.webp" alt="DB-32B" width="800" height="582" />
+        <img
+          src={DigitalPiano.src}
+          width={DigitalPiano.width}
+          height={DigitalPiano.height}
+          alt="Digital Piano"
+        />
       </p>
       <p>Thomann DB-32 B Digitalpiano</p>
       <p>
@@ -235,10 +250,10 @@ const pageTitle = 'Instrumentenkauf';
       <hr />
       <p>
         <img
-          src="/images/SP-320-wide.webp"
-          alt="SP-320"
-          width="800"
-          height="582"
+          src={SP320.src}
+          width={SP320.width}
+          height={SP320.height}
+          alt="SP-320 Digital Piano"
         />
       </p>
       <p>Thomann SP-320 Digitalpiano</p>
