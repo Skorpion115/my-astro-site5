@@ -1,5 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import DP_32B from "../../public/images/DB-32B.webp";
+import Heumann from "../../public/images/heumann-wide.webp";
 const pageTitle = "Klavierunterricht";
 ---
 
@@ -13,7 +15,12 @@ const pageTitle = "Klavierunterricht";
     <article>
       <h2>Klavier oder Digitalpiano?</h2>
       <p>
-        <img src="/images/DB-32B.webp" alt="DB-32B" width="800" height="582" />
+        <img
+          src={DP_32B.src}
+          width={DP_32B.width}
+          height={DP_32B.height}
+          alt="Digital Piano DB-32B"
+        />
       </p>
       <p>
         Wie ich bereits schon beim Instrumentenkauf erwähnt habe nehmen viele
@@ -31,10 +38,10 @@ const pageTitle = "Klavierunterricht";
       </p>
       <p>
         <img
-          src="/images/heumann-wide.webp"
-          alt="Klavierschule"
-          width="381"
-          height="498"
+          src={Heumann.src}
+          width={Heumann.width}
+          height={Heumann.height}
+          alt="Heumann Klavierschule"
         />
       </p>
       <p>
