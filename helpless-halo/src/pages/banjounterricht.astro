@@ -1,5 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Helbig from "../../public/images/beginner-banjo-narrow.webp";
+import Schroeder from "../../public/images/schroeder_378-narrow.webp";
 const pageTitle = "Banjounterricht";
 ---
 
@@ -15,10 +17,10 @@ const pageTitle = "Banjounterricht";
       <h2>Beginner Banjo</h2>
       <p>
         <img
-          src="/images/beginner-banjo-narrow.webp"
-          alt="Banjoschule von Rüdiger Helbig"
-          width="378"
-          height="540"
+          src={Helbig.src}
+          width={Helbig.width}
+          height={Helbig.height}
+          alt="Beginners Banjo von Ruediger Helbig"
         />
       </p>
       <p>
@@ -39,10 +41,10 @@ const pageTitle = "Banjounterricht";
       <h2>Banjo spielen!</h2>
       <p>
         <img
-          src="/images/schroeder_378-narrow.webp"
-          alt="Schröder Banjoschule"
-          width="308"
-          height="440"
+          src={Schroeder.src}
+          width={Schroeder.width}
+          height={Schroeder.height}
+          alt="Das grosse Banjobuch von Sebastian Schroeder"
         />
       </p>
       <p>Die umfassende Schule für das 5-string Banjo</p>
