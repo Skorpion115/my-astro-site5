@@ -73,9 +73,6 @@ const pageTitle = "Musikunterricht";
       </div>
     </div>
     <br />
-    <div class="animation">
-      <h3 data-text="MUSICSTUDIO_ZIEBART">MUSICSTUDIO_ZIEBART</h3>
-    </div>
 
     <Greeting client:load messages={["Hallo", "Hi", "Bonjor", "Habari"]} />
     <article class="conteneur">
@@ -380,65 +377,7 @@ const pageTitle = "Musikunterricht";
   }
 
   /* ANCHOR Animation */
-  .animation {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  .animation {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 3%;
-    width: 100%;
-    margin: 0 auto;
-    /* Höhe der Border-Box, legt die Mindesthöhe eines Elements fest*/
-    /* Relativ zu 1 % der Breite des Ansichtsfensters */
-    min-height: 10vw;
-    background: #252839;
-  }
-
-  h3 {
-    position: relative;
-    /* Schriftgröße dahinter vw ist responsiv*/
-    font-size: 4vw;
-    color: #252839;
-    /* gibt die Breite und die Farbe von Strichen an Schrift dahinter*/
-    -webkit-text-stroke: 0.1vw #383d52;
-    /* Es wird alles groß geschrieben */
-    text-transform: uppercase;
-  }
-
-  h3::before {
-    content: attr(data-text);
-    position: absolute;
-    /* Schriftweite davor die läuft vw ist responsiv gegenüber px */
-    font-size: 4vw;
-    /* Text bleibt bei 1 am Ende stehen, bei 0 ist es leer */
-    width: 1;
-    /* Höhe des Cursors */
-    height: 110%;
-    color: #01f387;
-    /* Breite und Farbe des laufenden Textes Schrift davor*/
-    -webkit-text-stroke-width: 0.1vw #383d52;
-    /* Die Stärke des Strichs */
-    border-right: 2px solid #01fe87;
-    overflow: hidden;
-    animation: animate 6s 3 linear;
-  }
-
-  @keyframes animate {
-    0%,
-    10%,
-    100% {
-      width: 0;
-    }
-    70%,
-    90% {
-      width: 100%;
-    }
-  }
+  
 
   /* ANCHOR Hauptseite */
   .conteneur {
