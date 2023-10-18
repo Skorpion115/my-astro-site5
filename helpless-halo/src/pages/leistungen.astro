@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Weinzierl from "../../public/images/querfloete-wide.webp";
 const pageTitle = 'Leistungen';
 ---
 
@@ -35,18 +36,12 @@ const pageTitle = 'Leistungen';
       </p>
 
       <h2>Querflötenunterricht</h2>
-      <picture>
-        <source
-          srcset="/images/querfloete-wide.webp"
-          media="(min-width: 600px)"
-        />
-        <img
-          src="/images/querfloete-narrow.webp"
-          width="320"
-          height="420"
-          alt="Schule_für_Querfloete"
-        />
-      </picture>
+      <img
+        src={Weinzierl.src}
+        width={Weinzierl.width}
+        height={Weinzierl.height}
+        alt="Weinzierl Querfloetenschule"
+      />
       <p>
         Die Querflöte ist das Instrument der Götter sagt man. Ich nehme die
         Querflötenschule von Elisabeth Weinzierl und Edmund Wächter. Der Titel
