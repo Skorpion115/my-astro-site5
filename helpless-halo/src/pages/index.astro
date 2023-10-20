@@ -3,6 +3,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Greeting from "../components/Greeting.jsx";
 import Card from "../components/Card.astro";
 import { Image } from 'astro:assets';
+import ExternalScripts2 from "../components/ExternalScripts2.astro";
+import ExternalScripts3 from "../components/ExternalScripts3.astro";
+import Style from "../components/Style.astro";
 // import local images
 //import myPhoto from "../../public/images/rudi-wide.webp";
 import Piano from "../../public/images/piano-960x540.webp";
@@ -256,9 +259,7 @@ const pageTitle = "Musikunterricht";
             href="mailto:postmaster@musicstudio-ziebart.de"
             class="normal-links"
             onfocus="this.blur()"
-            >postmaster@musicst 
-            udio-ziebar
- t.de
+            >postmaster@musicstudio-ziebart.de
           </a>
         </p>
         <p>
@@ -306,6 +307,9 @@ const pageTitle = "Musikunterricht";
       </section>
     </article>
   </div>
+  <ExternalScripts2 />
+  <ExternalScripts3 />
+  <Style />
 </BaseLayout>
 <!--
 <div id="footer-cookie">
