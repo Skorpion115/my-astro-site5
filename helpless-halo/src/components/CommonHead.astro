@@ -1,0 +1,12 @@
+---
+import { ViewTransitions } from 'astro:transitions';
+const { pageTitle, description } = Astro.props;
+---
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<meta name="generator" content={Astro.generator} />
+
+<!-- Primary Meta Tags -->
+<title>{pageTitle}</title>
+<meta name="description" content={description} />
+
+<ViewTransitions />
