@@ -4,7 +4,7 @@ title: 'Banjo dämpfen!'
 author: Musicstudio Ziebart
 description: "Darf ich in meiner Wohnung ein Instrument wie z.B. Banjo oder Klavier spielen?"
 image:
-    url: "https://www.musicstudio-ziebrt.de/images/gold_tone_300x300.webp"
+    url: "https://www.musicstudio-ziebart.de/images/gold_tone_300x300.webp"
     alt: "Banjo dämpfer"
 pubDate: 2023-10-21
 tags: ["astro", "blogging", "banjounterricht", "erfolge"]
