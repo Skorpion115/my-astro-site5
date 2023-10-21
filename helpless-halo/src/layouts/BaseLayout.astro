@@ -82,7 +82,7 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
   </head>
   <body>
     <Header />
-    <h1>{pageTitle}</h1>
+    <h1 transition:animate="slide">{pageTitle}</h1>
     <slot />
     <Footer />
     <!-- Altes Script von Video angeschaut für ServiceWorker -->
