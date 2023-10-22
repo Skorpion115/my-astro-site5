@@ -4,6 +4,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
 import ExternalScripts from "../components/ExternalScripts.astro";
+import ExternalScripts2 from "../components/ExternalScripts2.astro";
 const { pageTitle, description, keywords, href } = Astro.props;
 const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
 ---
@@ -78,9 +79,13 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#191919" />
     
+    <ViewTransitions />
+    
     <ExternalScripts />
 
-    <ViewTransitions />
+    <ExternalScripts2 />
+
+    
   </head>
   <body>
     <Header />
