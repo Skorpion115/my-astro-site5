@@ -4,6 +4,8 @@ import preact from "@astrojs/preact";
 import { defineConfig, squooshImageService } from "astro/config";
 import node from "@astrojs/node";
 
+import partytown from "@astrojs/partytown";
+
 // https://astro.build/config
 export default defineConfig({
   // Squoosh zum transponieren der Bilder verwenden
@@ -33,7 +35,7 @@ export default defineConfig({
     changefreq: "weekly",
     entryLimit: 10000,
     lastmod: new Date("2023-01-06")
-  }), preact()],
+  }), preact(), partytown()],
   // Beispiel: Erfordere abschließende Schrägstriche
   // in Seiten-URLs während der Entwicklung
   trailingSlash: "always",
