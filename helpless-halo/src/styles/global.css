@@ -1,25 +1,27 @@
-/* ANCHOR Fonts */
+/* ANCHOR Registriere deine benutzerdefinierte Schriftart und teile dem Browser mit, wo sie zu finden ist. */
 @font-face {
   font-family: "IBM";
-  src: url(../fonts/OpenSans-Regular.woff2) format("woff2"), url(../fonts/OpenSans-Regular.woff) format("woff");
-  font-weight: 400;
+  src: url("/fonts/OpenSans-Regular.woff2") format("woff2");
+  font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "IBM";
-  src: url(../fonts/OpenSans-Italic.woff2) format("woff2"), url(../fonts/OpenSans-Italic.woff) format("woff");
-  font-weight: 400;
+  src: url("/fonts/OpenSans-Italic.woff2") format("woff2");
+  font-weight: normal;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: "IBM";
-  src: url(../fonts/OpenSans-Bold.woff2) format("woff2"), url(../fonts/OpenSans-Bold.woff) format("woff");
+  src: url("/fonts/OpenSans-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: bold;
   font-display: swap;
 }
+
+
 /* ANCHOR Grundlegende Einstellungen */
 html {
   background-color: #f1f5f9;
