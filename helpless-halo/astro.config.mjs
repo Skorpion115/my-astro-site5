@@ -39,7 +39,7 @@ export default defineConfig({
     partytown({
       // Example: Disable debug mode.
       config: { 
-        debug: true,
+        debug: false,
         forward: ["dataLayer.push"], 
       },
     }),
