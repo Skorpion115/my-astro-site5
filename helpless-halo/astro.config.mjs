@@ -3,14 +3,13 @@ import sitemap from "@astrojs/sitemap";
 import preact from "@astrojs/preact";
 import { defineConfig, squooshImageService } from "astro/config";
 import node from "@astrojs/node";
-
 import partytown from "@astrojs/partytown";
 
 // https://astro.build/config
 export default defineConfig({
   // Squoosh zum transponieren der Bilder verwenden
   image: {
-    service: squooshImageService()
+    service: squooshImageService(),
   },
   // Resolves to the "./foo" directory in your current working directory
   /*
@@ -18,7 +17,7 @@ export default defineConfig({
   // Resolves to the "./foo/public" directory in your current working directory
   publicDir: "public",
   // static oder server SSR serverseitiges rändern
-  output: "static",
+  output: "server",
   // Die endgültige Seite bei deinem Hostanbieter
   site: "https://www.musicstudio-ziebart.de/",
   // Sitemap intergrieren, Eine Seite aufnehmen die nicht mit Astro erstellt wurde stillgelegt!!!
@@ -30,30 +29,39 @@ export default defineConfig({
   })], */
   // Sitemap intergrieren
   integrations: [
-  // Beispiel: Argumente an eine Integration übergeben
-  sitemap({
-    changefreq: "weekly",
-    entryLimit: 10000,
-    lastmod: new Date("2023-01-06")
-  }), preact(), partytown()],
+    // Beispiel: Argumente an eine Integration übergeben
+    sitemap({
+      changefreq: "weekly",
+      entryLimit: 10000,
+      lastmod: new Date("2023-01-06"),
+    }),
+    preact(),
+    partytown({
+      // Example: Disable debug mode.
+      config: { 
+        debug: true,
+        forward: ["dataLayer.push"], 
+      },
+    }),
+  ],
   // Beispiel: Erfordere abschließende Schrägstriche
   // in Seiten-URLs während der Entwicklung
   trailingSlash: "always",
   build: {
     // Beispiel: Erzeuge `page.html` statt `page/index.html`
     // während des Build-Prozesses.
-    format: "directory"
+    format: "directory",
   },
   //server: { port: 3000, host: true },
   markdown: {
     // Beispiel: Alle Entwürfe in den endgültigen Build einbeziehen
-    drafts: true
+    drafts: true,
   },
   markdown: {
     // Beispiel: Verarbeite Markdown-Dateien ohne MDX
-    mode: "md"
+    mode: "md",
   },
   adapter: node({
-    mode: "standalone"
-  })
+    mode: "standalone",
+  }),
 });
