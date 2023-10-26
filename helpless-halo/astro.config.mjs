@@ -3,7 +3,7 @@ import sitemap from "@astrojs/sitemap";
 import preact from "@astrojs/preact";
 import { defineConfig, squooshImageService } from "astro/config";
 import node from "@astrojs/node";
-import partytown from "@astrojs/partytown";
+// import partytown from "@astrojs/partytown";
 
 // https://astro.build/config
 export default defineConfig({
@@ -36,13 +36,6 @@ export default defineConfig({
       lastmod: new Date("2023-01-06"),
     }),
     preact(),
-    partytown({
-      // Example: Disable debug mode.
-      config: { 
-        debug: false,
-        forward: ["dataLayer.push"], 
-      },
-    }),
   ],
   // Beispiel: Erfordere abschließende Schrägstriche
   // in Seiten-URLs während der Entwicklung
