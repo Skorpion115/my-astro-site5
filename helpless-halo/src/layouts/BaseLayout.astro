@@ -4,7 +4,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
 // import ExternalScripts from "../components/ExternalScripts.astro";
-// import GoogleAnalytics from "../components/GoogleAnalytics.astro";
+import GoogleAnalytics from "../components/GoogleAnalytics.astro";
 // import ExternalScripts2 from "../components/ExternalScripts2.astro";
 const { pageTitle, description, keywords, href } = Astro.props;
 const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
@@ -83,27 +83,10 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
     <!--
     <ExternalScripts2 />
     -->
-    <!--
+    
     <GoogleAnalytics />
-    -->
+    
 
-    <script type="text/partytown">
-    /* Inlined Partytown Snippet */
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-
-    gtag("config", "G-CXBFDX52C7", "no-cors");
-
-    gtag("config", "AW-93825274", "no-cors");
-
-    console.log("I wanna to shake your hand");
-    </script>
-    <script async
-      type="text/partytown"
-      src="https://www.googletagmanager.com/gtag/js?id=GCXBFDX52C7"></script>
   </head>
   <body>
     <Header />
