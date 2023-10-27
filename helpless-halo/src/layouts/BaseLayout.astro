@@ -3,8 +3,8 @@ import { ViewTransitions } from "astro:transitions";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
-import ExternalScripts from "../components/ExternalScripts.astro";
-//import GoogleAnalytics from "../components/GoogleAnalytics.astro";
+// import ExternalScripts from "../components/ExternalScripts.astro";
+import GoogleAnalytics from "../components/GoogleAnalytics.astro";
 // import ExternalScripts2 from "../components/ExternalScripts2.astro";
 const { pageTitle, description, keywords, href } = Astro.props;
 const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
@@ -78,14 +78,13 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
     <meta name="theme-color" content="#191919" />
 
     <ViewTransitions />
-    
-    <ExternalScripts />
+    <!--
+    <ExternalScripts /> -->
     <!--
     <ExternalScripts2 />
     -->
-    <!--
+    
     <GoogleAnalytics />
-    -->
 
   </head>
   <body>
@@ -107,9 +106,9 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
     <script>
       import "../scripts/menu.js";
     </script>
-    
+    <!-- 
     <script>
       import "../scripts/google.js";
-    </script>
+    </script> -->
   </body>
 </html>
