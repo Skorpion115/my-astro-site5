@@ -1,7 +1,7 @@
 /*
     Access-Control-Allow-Origin: https://musicstudio-ziebart.de
     Access-Control-Allow-Credentials: true
-    Access-Control-Request-Method: DELETE
+    Access-Control-Request-Method: GET, DELETE, HEAD, OPTIONS
     Access-Control-Allow-Methods: GET, DELETE, HEAD, OPTIONS
     Access-Control-Request-Headers: GET, DELETE, HEAD, OPTIONS
     X-Content-Type-Options: nosniff
