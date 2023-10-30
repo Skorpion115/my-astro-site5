@@ -35,8 +35,8 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
     <!--
     <meta http-equiv="Access-Control-Allow-Credentials: true"/>
     -->
+    
  
-
     <!--
     <meta http-equiv="X-Content-Type-Options: nosniff"/> -->
 
@@ -45,16 +45,19 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
     <meta
       http-equiv="Content-Security-Policy"
       content="default-src 'self'; script-src 'self' 'sha256-lu31XDMFHibt0Y8FEYRcmBJ/BhlQoWIj43MKyzrbKD0=' 'sha256-C+MFT9uMJPIBROzgRJWxmbJwinQwPQcN4v02Ao5gdvA=' 'sha256-OW35rfvu4BHhfwKhqwUyQIg6YEuYwO34+zBpuWwvmN4=' 'strict-dynamic' 'unsafe-inline'; script-src-elem 'self' 'sha256-lu31XDMFHibt0Y8FEYRcmBJ/BhlQoWIj43MKyzrbKD0=' 'sha256-C+MFT9uMJPIBROzgRJWxmbJwinQwPQcN4v02Ao5gdvA=' 'sha256-OW35rfvu4BHhfwKhqwUyQIg6YEuYwO34+zBpuWwvmN4=' 'sha256-hgGMJldl3sg4BDoXB7M8B/x7DiBgEAc84yNklUfPq1o=' 'sha256-hQ/y+1yovgLGoAzIh5U6M/zMTjs+hx26Fx8XFGMf4r4=' 'sha256-8xxtCtRzdfyxUFAvumPyKV6ESMqsgV0+pTGLhd8SJDk=' 'sha256-8WfqBSNs9h+H04LhWwanYkMFTQPAfGMxKqbikPB8IHM=' 'sha256-fAUXnD8e99cVJuHl1nO3ed5eOkY9um+niOUKtTv9iUQ=' 'sha256-8HelPvgZgctP3t4TqOIze7GOHdh8FAuaKDHMHk2JcE4=' 'sha256-YAcA0ELJK0w9Od3gOA1pIdGNyQ+qDqp5xIqL4n28CWo=' http://localhost:4321/ http://localhost:4321/src/pages/index.astro http://localhost:4321/src/layouts/BaseLayout.astro https://www.googletagmanager.com/gtag/js http://localhost:4321/src/scripts/menu.js https://googleads.g.doubleclick.net https://region1.analytics.com https://www.gstatic.com/recaptcha/releases/pxZcVU8Dk73FyvFvdCgp2MSG/recaptcha__de.js https://www.google.com/recaptcha/api.js http://localhost:3000/favicon.svg https://region1.analytics.google.com/g/collect http://localhost:4321/tags/gitarrenunterricht/ http://localhost:4321/tags/blogging/ http://localhost:4321/tags/erfolge/ http://localhost:4321/tags/banjounterricht/ http://localhost:4321/tags/astro/ https://td.doubleclick.net/ https://www.google.com/recaptcha/api2/anchor https://www.google.de/pagead/1p-user-list/93825274 https://googleads.g.doubleclick.net/pagead/viewthroughconversion/93825274 http://localhost:4321/~partytown/partytown-sandbox-sw.html http://localhost:4321/6f205d1f-8224-4bd8-a2bc-a3736399db48 https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1000620606/; connect-src 'self' https:; object-src 'self'; style-src 'self' 'strict-dynamic'; style-src-attr 'self' http://localhost:4321/src/pages/faq.astro 'unsafe-inline'; style-src-elem 'self' http://localhost:4321/src/styles/global.css 'unsafe-inline'; img-src * 'report-sample'; font-src 'self' http://localhost:4321/fonts/OpenSans-Regular.woff2 https://www.musicstudio-ziebart.de/_astro/OpenSans-Bold.e6f5bf60.woff2 https://www.musicstudio-ziebart.de/_astro/OpenSans-Italic.50ece748.woff2; upgrade-insecure-requests; frame-src 'self' https://www.youtube.com https: data:; form-action 'self' data:; manifest-src 'self' https://www.musicstudio-ziebart.de/manifest.json https://www.musicstudio-ziebart.de/manifest-icon-192.maskable.png; base-uri 'self'"
-    >
-    -->
+    > -->
+    
     
 
     <!-- dist build CSP -->
     <!--
     <meta
+      http-equiv="Access-Control-Allow-Origin: https://musicstudio-ziebart.de/"
+      http-equiv="Access-Control-Allow-Credentials: true"
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self' 'sha256-lu31XDMFHibt0Y8FEYRcmBJ/BhlQoWIj43MKyzrbKD0=' 'sha256-C+MFT9uMJPIBROzgRJWxmbJwinQwPQcN4v02Ao5gdvA=' 'sha256-OW35rfvu4BHhfwKhqwUyQIg6YEuYwO34+zBpuWwvmN4=' 'strict-dynamic' 'unsafe-inline'; script-src-elem 'self' 'sha256-lu31XDMFHibt0Y8FEYRcmBJ/BhlQoWIj43MKyzrbKD0=' 'sha256-C+MFT9uMJPIBROzgRJWxmbJwinQwPQcN4v02Ao5gdvA=' 'sha256-OW35rfvu4BHhfwKhqwUyQIg6YEuYwO34+zBpuWwvmN4=' 'sha256-hgGMJldl3sg4BDoXB7M8B/x7DiBgEAc84yNklUfPq1o=' 'sha256-hQ/y+1yovgLGoAzIh5U6M/zMTjs+hx26Fx8XFGMf4r4=' 'sha256-8xxtCtRzdfyxUFAvumPyKV6ESMqsgV0+pTGLhd8SJDk=' 'sha256-8WfqBSNs9h+H04LhWwanYkMFTQPAfGMxKqbikPB8IHM=' 'sha256-fAUXnD8e99cVJuHl1nO3ed5eOkY9um+niOUKtTv9iUQ=' 'sha256-8HelPvgZgctP3t4TqOIze7GOHdh8FAuaKDHMHk2JcE4=' 'sha256-PQTIk+4dNAzB+K4YRS3orb5+Wxrs9h5a5AuTCSYm7Qo=' http://localhost:4321/ https://www.googletagmanager.com/gtag/js http://localhost:4321/_astro/hoisted.a04c2248.js https://googleads.g.doubleclick.net https://region1.analytics.com https://www.gstatic.com/recaptcha/releases/pxZcVU8Dk73FyvFvdCgp2MSG/recaptcha__de.js https://www.google.com/recaptcha/api.js http://localhost:3000/favicon.svg https://region1.analytics.google.com/g/collect http://tags/gitarrenunterricht/ http://localhost:4321/tags/blogging/ http://localhost:4321/tags/erfolge/ http://localhost:4321/tags/banjounterricht/ http://localhost:4321/tags/astro/ https://td.doubleclick.net/ https://www.google.com/recaptcha/api2/anchor https://www.google.de/pagead/1p-user-list/93825274 https://kit.fontawesome.com/9062526e68.js https://googleads.g.doubleclick.net/pagead/viewthroughconversion/93825274 http://localhost:4321/~partytown/partytown-sandbox-sw.html http://localhost:4321/6f205d1f-8224-4bd8-a2bc-a3736399db48 https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1000620606/ http://localhost:4321/src/scripts/menu.js; connect-src 'self' https:; object-src 'self'; style-src 'self' 'strict-dynamic'; style-src-attr 'self' http://localhost:4321/src/pages/faq.astro 'unsafe-inline'; style-src-elem 'self' http://localhost:4321/src/styles/global.css 'unsafe-inline'; img-src * 'report-sample'; font-src 'self' http://localhost:4321/fonts/OpenSans-Regular.woff2 https://www.musicstudio-ziebart.de/_astro/OpenSans-Bold.e6f5bf60.woff2 https://www.musicstudio-ziebart.de/_astro/OpenSans-Italic.50ece748.woff2; upgrade-insecure-requests; frame-src 'self' https://www.youtube.com https: data:; form-action 'self' data:; manifest-src 'self' https://www.musicstudio-ziebart.de/manifest.json https://www.musicstudio-ziebart.de/manifest-icon-192.maskable.png; base-uri 'self'"
-    > -->
+      content="default-src 'self'; script-src 'self' 'sha256-lu31XDMFHibt0Y8FEYRcmBJ/BhlQoWIj43MKyzrbKD0=' 'sha256-C+MFT9uMJPIBROzgRJWxmbJwinQwPQcN4v02Ao5gdvA=' 'sha256-OW35rfvu4BHhfwKhqwUyQIg6YEuYwO34+zBpuWwvmN4=' 'strict-dynamic' 'unsafe-inline'; script-src-elem 'self' 'sha256-lu31XDMFHibt0Y8FEYRcmBJ/BhlQoWIj43MKyzrbKD0=' 'sha256-C+MFT9uMJPIBROzgRJWxmbJwinQwPQcN4v02Ao5gdvA=' 'sha256-OW35rfvu4BHhfwKhqwUyQIg6YEuYwO34+zBpuWwvmN4=' 'sha256-hgGMJldl3sg4BDoXB7M8B/x7DiBgEAc84yNklUfPq1o=' 'sha256-hQ/y+1yovgLGoAzIh5U6M/zMTjs+hx26Fx8XFGMf4r4=' 'sha256-8xxtCtRzdfyxUFAvumPyKV6ESMqsgV0+pTGLhd8SJDk=' 'sha256-8WfqBSNs9h+H04LhWwanYkMFTQPAfGMxKqbikPB8IHM=' 'sha256-fAUXnD8e99cVJuHl1nO3ed5eOkY9um+niOUKtTv9iUQ=' 'sha256-8HelPvgZgctP3t4TqOIze7GOHdh8FAuaKDHMHk2JcE4=' 'sha256-PQTIk+4dNAzB+K4YRS3orb5+Wxrs9h5a5AuTCSYm7Qo=' http://localhost:4321/ https://www.googletagmanager.com/gtag/js http://localhost:4321/_astro/hoisted.a04c2248.js https://googleads.g.doubleclick.net https://region1.analytics.com https://www.gstatic.com/recaptcha/releases/pxZcVU8Dk73FyvFvdCgp2MSG/recaptcha__de.js https://www.google.com/recaptcha/api.js http://localhost:3000/favicon.svg https://region1.analytics.google.com/g/collect http://tags/gitarrenunterricht/ http://localhost:4321/tags/blogging/ http://localhost:4321/tags/erfolge/ http://localhost:4321/tags/banjounterricht/ http://localhost:4321/tags/astro/ https://td.doubleclick.net/ https://www.google.com/recaptcha/api2/anchor https://www.google.de/pagead/1p-user-list/93825274 https://kit.fontawesome.com/9062526e68.js https://googleads.g.doubleclick.net/pagead/viewthroughconversion/93825274 http://localhost:4321/~partytown/partytown-sandbox-sw.html http://localhost:4321/6f205d1f-8224-4bd8-a2bc-a3736399db48 https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1000620606/ http://localhost:4321/src/scripts/menu.js http://localhost:4321/_astro/hoisted.7795f3dd.js http://localhost:4321/_astro/hoisted.48ad337d.js; connect-src 'self' https:; object-src 'self'; style-src 'self' 'strict-dynamic'; style-src-attr 'self' http://localhost:4321/src/pages/faq.astro 'unsafe-inline'; style-src-elem 'self' http://localhost:4321/src/styles/global.css 'unsafe-inline'; img-src * 'report-sample'; font-src 'self' http://localhost:4321/fonts/OpenSans-Regular.woff2 https://www.musicstudio-ziebart.de/_astro/OpenSans-Bold.e6f5bf60.woff2 https://www.musicstudio-ziebart.de/_astro/OpenSans-Italic.50ece748.woff2; upgrade-insecure-requests; frame-src 'self' https://www.youtube.com https: data:; form-action 'self' data:; manifest-src 'self' https://www.musicstudio-ziebart.de/manifest.json https://www.musicstudio-ziebart.de/manifest-icon-192.maskable.png; base-uri 'self'"
+    >
+    -->
 
 
     {
@@ -116,12 +119,10 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
     <script>
       import "../scripts/menu.js"
     </script>
-    <!--
+
     <script>
-      import "../scripts/hamburger.js"
-    </script>-->
-
-
+      import "../scripts/dynamisch-anhang.js"
+    </script>
     <!-- 
     <script>
       import "../scripts/google.js";
