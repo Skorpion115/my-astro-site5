@@ -2,9 +2,7 @@
 import sitemap from "@astrojs/sitemap";
 import preact from "@astrojs/preact";
 import { defineConfig, squooshImageService } from "astro/config";
-import node from "@astrojs/node";
-// import partytown from "@astrojs/partytown";
-
+import nodejs from "@astrojs/node";
 import partytown from "@astrojs/partytown";
 
 // https://astro.build/config
