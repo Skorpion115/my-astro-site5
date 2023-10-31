@@ -2,7 +2,6 @@
 import sitemap from "@astrojs/sitemap";
 import preact from "@astrojs/preact";
 import { defineConfig, squooshImageService } from "astro/config";
-// import nodejs from "@astrojs/node";
 import netlify from "@astrojs/netlify/functions";
 import partytown from "@astrojs/partytown";
 
@@ -18,8 +17,8 @@ export default defineConfig({
   // Resolves to the "./foo/public" directory in your current working directory
   publicDir: "public",
   // static oder server SSR serverseitiges rändern
-  output: "output",
-  adapter: netlify()({
+  output: "hybrid",
+  adapter: netlify({
     edgeMiddleware: true
   }),
   // Die endgültige Seite bei deinem Hostanbieter
@@ -61,8 +60,5 @@ export default defineConfig({
   markdown: {
     // Beispiel: Verarbeite Markdown-Dateien ohne MDX
     mode: "md"
-  },
-  adapter: node({
-    mode: "standalone"
-  })
+  }
 });
