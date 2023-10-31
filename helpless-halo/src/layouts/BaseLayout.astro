@@ -6,6 +6,7 @@ import "../styles/global.css";
 // import ExternalScripts from "../components/ExternalScripts.astro";
 import GoogleAnalytics from "../components/GoogleAnalytics.astro";
 // import ExternalScripts2 from "../components/ExternalScripts2.astro";
+export const prerender = true;
 const { pageTitle, description, keywords, href } = Astro.props;
 const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
 ---
