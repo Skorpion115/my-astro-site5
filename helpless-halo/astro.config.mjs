@@ -2,7 +2,8 @@
 import sitemap from "@astrojs/sitemap";
 import preact from "@astrojs/preact";
 import { defineConfig, squooshImageService } from "astro/config";
-import nodejs from "@astrojs/node";
+// import nodejs from "@astrojs/node";
+import netlify from "@astrojs/netlify/functions";
 import partytown from "@astrojs/partytown";
 
 // https://astro.build/config
@@ -17,7 +18,10 @@ export default defineConfig({
   // Resolves to the "./foo/public" directory in your current working directory
   publicDir: "public",
   // static oder server SSR serverseitiges rändern
-  output: "static",
+  output: "output",
+  adapter: netlify()({
+    edgeMiddleware: true
+  }),
   // Die endgültige Seite bei deinem Hostanbieter
   site: "https://www.musicstudio-ziebart.de/",
   // Sitemap intergrieren, Eine Seite aufnehmen die nicht mit Astro erstellt wurde stillgelegt!!!
