@@ -1,4 +1,3 @@
 [build]
   command = "npm run build"
   base = "helpless-halo/"
-  publish = "opt/build/repo/helpless-halo"
