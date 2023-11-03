@@ -1,14 +1,16 @@
-//import { defineConfig } from "astro/config";
+import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import preact from "@astrojs/preact";
-import { defineConfig, squooshImageService } from "astro/config";
+// import { defineConfig, squooshImageService } from "astro/config";
 import netlify from "@astrojs/netlify/functions";
 
 // https://astro.build/config
 export default defineConfig({
   // Squoosh zum transponieren der Bilder verwenden
   image: {
-    service: squooshImageService(),
+    service: {
+      entrypoint: 'astro/assets/services/noop'
+    }
   },
   // Resolves to the "./foo" directory in your current working directory
   /*

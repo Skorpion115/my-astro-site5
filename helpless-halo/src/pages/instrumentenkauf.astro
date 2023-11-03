@@ -1,12 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import NylonGuitar from "../../public/images/konzertgitarre-wide.webp";
-import SteelGuitar from "../../public/images/westerngitarre-wide.webp";
-import Clarinet from "../../public/images/klarinetten-wide.webp";
-import Flute from "../../public/images/offline-narrow.webp";
-import Oberdaempfer from "../../public/images/oberdaempfer-narrow.webp";
-import DigitalPiano from "../../public/images/DB-32B.webp";
-import SP320 from "../../public/images/SP-320-wide.webp";
+import { Image } from 'astro:assets';
 export const prerender = true;
 const pageTitle = "Instrumentenkauf";
 ---
@@ -41,13 +35,14 @@ const pageTitle = "Instrumentenkauf";
       </section>
       <h2>Akustische Gitarre</h2>
       <p>
-        <img
-          src={NylonGuitar.src}
-          width={NylonGuitar.width}
-          height={NylonGuitar.height}
-          alt="NylonGuitar"
+        <Image
+        src="/images/konzertgitarre-wide.webp"
+        width="394"
+        height="600"
+        loading="lazy"
+        decoding="async"
+        alt="Konzertgitarre"
         />
-      </p>
       <h3>Konzertgitarre</h3>
       <p>
         Bei akustischer Gitarre ist es wichtig, da&#223; Sie sich eine
@@ -59,11 +54,13 @@ const pageTitle = "Instrumentenkauf";
       </p>
       <h2>Westerngitarre</h2>
       <p>
-        <img
-          src={SteelGuitar.src}
-          width={SteelGuitar.width}
-          height={SteelGuitar.height}
-          alt="SteelGuitar"
+        <Image
+        src="/images/westerngitarre-wide.webp"
+        width="277"
+        height="600"
+        loading="lazy"
+        decoding="async"
+        alt="Westerngitarre"
         />
       </p>
       <p>
@@ -81,11 +78,13 @@ const pageTitle = "Instrumentenkauf";
         Verst&#228;rker f&#252;r ca. 350,- EURO.
       </p>
       <p>
-        <img
-          src={Clarinet.src}
-          width={Clarinet.width}
-          height={Clarinet.height}
-          alt="Klarinette"
+        <Image
+        src="/images/klarinetten-wide.webp"
+        width="230"
+        height="804"
+        loading="lazy"
+        decoding="async"
+        alt="Klarinetten"
         />
       </p>
       <h2 id="Klarinette">Klarinette</h2>
@@ -134,11 +133,13 @@ const pageTitle = "Instrumentenkauf";
         k&#246;nnen.
       </p>
       <p>
-        <img
-          src={Flute.src}
-          width={Flute.width}
-          height={Flute.height}
-          alt="Querfloete"
+        <Image
+        src="/images/offline-narrow.webp"
+        width="450"
+        height="180"
+        loading="lazy"
+        decoding="async"
+        alt="Querfloete"
         />
       </p>
     </section>
@@ -151,6 +152,16 @@ const pageTitle = "Instrumentenkauf";
         zu spielen.
       </p>
       <h2 id="Saxophon">Die Geschichte des Saxophons</h2>
+      <p>
+        <Image
+        src="/images/saxophon-960x640.webp"
+        width="960"
+        height="640"
+        loading="lazy"
+        decoding="async"
+        alt="Tenorsaxophon"
+        />
+      </p>
       <p>
         Der "Vater des Saxophons " ist der belgische Klarinettist, Fl&#246;tist
         und Sohn eines Instrumentenbauers, Adolphe Sax. In der Fabrik seines
@@ -210,11 +221,13 @@ const pageTitle = "Instrumentenkauf";
         Oberd&auml;mpfer:
       </p>
       <p>
-        <img
-          src={Oberdaempfer.src}
-          width={Oberdaempfer.width}
-          height={Oberdaempfer.height}
-          alt="Oberdaempfer Klavier"
+        <Image
+        src="/images/oberdaempfer-narrow.webp"
+        width="576"
+        height="432"
+        loading="lazy"
+        decoding="async"
+        alt="Klavier Oberdaempfer"
         />
       </p>
       <p>
@@ -228,11 +241,13 @@ const pageTitle = "Instrumentenkauf";
       </p>
       <hr />
       <p>
-        <img
-          src={DigitalPiano.src}
-          width={DigitalPiano.width}
-          height={DigitalPiano.height}
-          alt="Digital Piano"
+        <Image
+        src="/images/DB-32B.webp"
+        width="800"
+        height="582"
+        loading="lazy"
+        decoding="async"
+        alt="SP-320 Digitalpiano"
         />
       </p>
       <p>Thomann DB-32 B Digitalpiano</p>
@@ -250,11 +265,13 @@ const pageTitle = "Instrumentenkauf";
       </p>
       <hr />
       <p>
-        <img
-          src={SP320.src}
-          width={SP320.width}
-          height={SP320.height}
-          alt="SP-320 Digital Piano"
+        <Image
+        src="/images/SP-320-wide.webp"
+        width="800"
+        height="582"
+        loading="lazy"
+        decoding="async"
+        alt="SP-320 kleines Klavier"
         />
       </p>
       <p>Thomann SP-320 Digitalpiano</p>

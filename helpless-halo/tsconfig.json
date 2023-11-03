@@ -4,6 +4,7 @@
     "jsx": "react-jsx",
     "jsxImportSource": "preact",
     "strictNullChecks": true,
-    "allowJs": true
+    "allowJs": true,
+    "types": ["astro/client"]
   }
 }
