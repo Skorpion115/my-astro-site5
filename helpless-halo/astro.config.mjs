@@ -1,12 +1,11 @@
 import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import preact from "@astrojs/preact";
-// import { defineConfig, squooshImageService } from "astro/config";
 import netlify from "@astrojs/netlify/functions";
 
 // https://astro.build/config
 export default defineConfig({
-  // Squoosh zum transponieren der Bilder verwenden
+  // Sharp zum transponieren der Bilder verwenden
   image: {
     service: {
       entrypoint: 'astro/assets/services/noop'
