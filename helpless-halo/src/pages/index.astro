@@ -3,8 +3,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Greeting from "../components/Greeting.jsx";
 import Card from "../components/Card.astro";
 import { Image } from 'astro:assets';
-// import local images
-//import myPhoto from "../../public/images/rudi-wide.webp";
 export const prerender = true;
 const pageTitle = "Musikunterricht";
 ---
@@ -18,8 +16,7 @@ const pageTitle = "Musikunterricht";
   
   <cookie-banner>
     <h2 slot="title">Music Lesson</h2>
-    <div slot="text">Wir nutzen Cookies, um unsere Dienste zu erbringen und zu verbessern. Mit
-      Nutzung dieser Seite akzeptieren Sie Cookies.</div>
+    <div slot="text">Wir verwenden cookies weil das so ist</div>
   </cookie-banner>
 
   <template>
@@ -275,15 +272,6 @@ const pageTitle = "Musikunterricht";
         <p>ÖFFNUNGSZEITEN:</p>
         <p>Montag - Freitag 14.00 - 19.00 Uhr</p>
         <hr />
-        <!--
-        <p>
-          <img
-            src={myPhoto.src}
-            width={myPhoto.width}
-            height={myPhoto.height}
-            alt="Bild von mir."
-          />
-        </p> -->
         <Image
           src="/images/rudi-wide.webp"
           alt="Bild von mir"
@@ -318,9 +306,6 @@ const pageTitle = "Musikunterricht";
 <script>
   import "../scripts/scrolling.js"; //Bildlauf
 </script>
-
-<!-- 
-<CookieBanner2 />-->
 
 <style>
   /* ANCHOR Bilder Scrolling mit JavaScript */
@@ -433,8 +418,6 @@ const pageTitle = "Musikunterricht";
     }
   }
 
-  
-
   /* ANCHOR Hauptseite */
   .conteneur {
     border: 0px solid black;
@@ -485,8 +468,6 @@ const pageTitle = "Musikunterricht";
     list-style-type: none;
   }
 
-  /* Rudi.jpg */
-
   .conteneur img {
     width: 100%;
     height: auto;
@@ -494,80 +475,4 @@ const pageTitle = "Musikunterricht";
     padding: 2rem;
     box-shadow: 2px 2px 5px #666;
   }
-
-  /* music-note.webp */
-  /* alle Bilder werden mit 20% von links positioniert die nicht im conteneur enthalten sind */
-  /*
-    img {
-      width: 100%;
-      height: auto;
-      margin-left: 0%;
-      max-width: 100%;
-      box-shadow: 2px 2px 5px #666;
-      border-radius: 3%;
-    } */
-
-  /* ANCHOR Style für Cookie Banner */
-  /*
-  #footer-cookie,
-  #footer-cookie * {
-    box-sizing: border-box;
-  }
-
-  #footer-cookie {
-    display: none;
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
-    width: 100%;
-    height: 9.375rem;
-    padding-left: 1.875rem;
-    padding-right: 1.875rem;
-    line-height: 9.375rem;
-    background: #303030;
-    color: #fff;
-    font-size: medium;
-  }
-
-  #footer-cookie a {
-    color: #fff;
-  }
-
-  #footer-cookie #description {
-    float: left;
-  }
-
-  #footer-cookie #accept {
-    float: right;
-  }
-
-  #footer-cookie #accept a {
-    border: 0.063rem solid #fff;
-    padding: 0.313rem 0.625rem;
-    text-decoration: none;
-  }
-
-  @media (max-width: 1200px) {
-    #footer-cookie {
-      padding-top: 1.875rem;
-      padding-bottom: 1.875rem;
-      line-height: inherit;
-      height: auto;
-    }
-
-    #footer-cookie #description {
-      width: 100%;
-    }
-
-    #footer-cookie #accept {
-      width: 100%;
-      margin-top: 0.938rem;
-    }
-
-    #footer-cookie #accept a {
-      width: 100%;
-      display: block;
-      text-align: center;
-    }
-  }*/
 </style>
