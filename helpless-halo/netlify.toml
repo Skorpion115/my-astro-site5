@@ -1,6 +1,7 @@
 [build]
   command = "npm run build"
   base = "helpless-halo/"
+  publish = "dist"
 
 [context.deploy-preview]
   publish = "dist/"
