@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 test('should be titled', async ({ page, context }) => {
     await context.route('**.webp', route => route.abort());
-    await page.goto('http://localhost:4321/contact_2/');
+    await page.goto('https://www.musicstudio-ziebart.de/contact_2/');
   
   // Erwarte das die Seite einen Page Titel hat
   await expect(page).toHaveTitle(/Contact Me/);
@@ -37,4 +37,10 @@ test('should be titled', async ({ page, context }) => {
 
   // Suchen Sie das Element anhand seiner Rolle mit dem Namen "Senden"
   await page.getByRole('button', { name: /Senden/i }).click();
+  // link zurück
+  await page.getByRole('link', { name: 'zurück' }).click();
+  //link zu Facebook
+  await page.getByRole('link', { name: 'facebook' }).click();
+  await page.getByRole('link', { name: 'github' }).click();
+  await page.getByRole('link', { name: 'youtube' }).click();
 });
