@@ -8,6 +8,9 @@ test('get started link', async ({ page }) => {
   // Überschrift H2 finden
   await expect(page.getByRole('heading', { name: 'Klavier oder Digitalpiano?' })).toBeVisible();
   //Video finden
-  const locator = page.frameLocator('iframe[title="PRAELUDIUM BMV 927 - Johann Sebastian Bach"]').getByLabel('Play', { exact: true });
+  // const locator = page.frameLocator('iframe[title="PRAELUDIUM BMV 927 - Johann Sebastian Bach"]').getByLabel('Play', { exact: true });
+  // await locator.click();
+
+  const locator = page.frameLocator('iframe[title="PRAELUDIUM BMV 927 - Johann Sebastian Bach"]').locator('x-pw-pointer');
   await locator.click();
 });
