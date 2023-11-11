@@ -15,7 +15,6 @@
     Access-Control-Allow-Origin = "https://musicstudio-ziebart.de/"
     Vary = "Origin"
     Access-Control-Allow-Methods = "GET,POST,PUT,PATCH,DELETE"
-    Access-Control-Allow-Methods = "Content-Type,Authorization"
     Access-Control-Allow-Credentials = "true"
     Access-Control-Allow-Crossorigin = "true"
     X-Content-Type-Options = "nosniff"
