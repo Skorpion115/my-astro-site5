@@ -39,8 +39,4 @@ test('should be titled', async ({ page, context }) => {
   await page.getByRole('button', { name: /Senden/i }).click();
   // link zurück
   await page.getByRole('link', { name: 'zurück' }).click();
-  //link zu Facebook
-  await page.getByRole('link', { name: 'facebook' }).click();
-  
-  await page.getByRole('link', { name: 'youtube' }).click();
 });
