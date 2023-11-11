@@ -7,6 +7,8 @@ test('should be titled', async ({ page, context }) => {
   // Erwarte das die Seite einen Page Titel hat
   await expect(page).toHaveTitle(/Contact Me/);
 
+  // Theme Toggle
+  await page.locator('#themeToggle').click();
   // Locater über Label finden
   await page.getByLabel('Betreff').fill('Hier den Betreff eintragen');
 

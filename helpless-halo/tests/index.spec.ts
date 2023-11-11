@@ -1,10 +1,17 @@
 import { test, expect } from '@playwright/test';
 
 test('get started link', async ({ page }) => {
-  await page.goto('https://www.musicstudio-ziebart.de/');
+  await page.goto('http://localhost:4321/');
 
   // Erwarte eine PageTitle
   await expect(page).toHaveTitle(/Musikunterricht/);
+  // Theme Toggle
+  await page.locator('#themeToggle').click();
+  // Navigationsleiste
+  await page.getByRole('link', { name: 'Home' }).click();
+  
+
+  
 
   // Expects page to have a heading with the name of Music Lesson.
   await expect(page.getByRole('heading', { name: 'Music Lesson' })).toBeVisible();
@@ -20,4 +27,6 @@ test('get started link', async ({ page }) => {
 
   // Click the get started link.
   await page.getByRole('button', { name: 'Neue Begrüßung' }).click();
+  // Astro Card Formular
+  await page.getByRole('link', { name: 'Probeunterricht→ Anmeldung zu einem kostenlosen Probeunterricht!' }).click();
 });
