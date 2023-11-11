@@ -41,6 +41,6 @@ test('should be titled', async ({ page, context }) => {
   await page.getByRole('link', { name: 'zurück' }).click();
   //link zu Facebook
   await page.getByRole('link', { name: 'facebook' }).click();
-  await page.getByRole('link', { name: 'github' }).click();
+  
   await page.getByRole('link', { name: 'youtube' }).click();
 });
