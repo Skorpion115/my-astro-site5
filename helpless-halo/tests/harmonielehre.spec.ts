@@ -1,8 +1,10 @@
 import { test, expect } from '@playwright/test';
 
 test('get started link', async ({ page }) => {
-    await page.goto('http://localhost:4321/harmonielehre/');
+    await page.goto('https://www.musicstudio-ziebart.de/harmonielehre/');
 
+    // Link oben in der Nav Leiste
+    await page.getByRole('link', { name: 'Harmonielehre' }).click();
     // Erwarte einen PageTitle
     await expect(page).toHaveTitle(/Harmonielehre/);
     // Überschrift H2 finden
