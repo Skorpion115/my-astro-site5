@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test('get started link', async ({ page }) => {
-  await page.goto('httpS://www.musicstudio-ziebart.de/keyboardunterricht/');
+  await page.goto('http://localhost:4321/keyboardunterricht/');
   // Erwarte das die Seite einen Page Titel hat
   await expect(page).toHaveTitle(/Keyboardunterricht/);
   // Theme Toggle
