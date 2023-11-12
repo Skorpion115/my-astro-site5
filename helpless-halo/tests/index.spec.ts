@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test('get started link', async ({ page }) => {
-  await page.goto('http://localhost:4321/');
+  await page.goto('/');
 
   // Erwarte eine PageTitle
   await expect(page).toHaveTitle(/Musikunterricht/);
