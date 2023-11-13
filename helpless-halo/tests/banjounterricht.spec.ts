@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test('get started link', async ({ page }) => {
-    await page.goto('https://www.musicstudio-ziebart.de/banjounterricht/');
+    await page.goto('http://localhost:4321/banjounterricht/');
 
     // Erwarte einen PageTitle
     await expect(page).toHaveTitle(/Banjounterricht/);
