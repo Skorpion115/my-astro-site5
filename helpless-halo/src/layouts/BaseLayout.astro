@@ -24,6 +24,23 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
     <meta name="description" content={description} />
     <meta name="keywords" content={keywords} />
     <link rel="canonical" href={href} />
+
+    
+    <meta http-equiv="Strict-Transport-Security: max-age=63072000; includeSubDomains" />
+    <!--
+    <meta http-equiv="X-Frame-Options: SAMEORIGIN" />
+    <meta http-equiv="X-XSS-protection: 0" />
+    -->
+    <!--
+    <meta http-equiv="Access-Control-Allow-Credentials: true"/>
+    -->
+    <!--
+    <meta http-equiv="X-Content-Type-Options: nosniff"/> -->
+
+    <meta http-equiv="Access-Control-Allow-Methods: GET,POST,PUT,PATCH,DELETE"/>
+
+
+    
     
     <meta
       http-equiv="Content-Security-Policy"
