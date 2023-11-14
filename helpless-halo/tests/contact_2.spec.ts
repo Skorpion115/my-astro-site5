@@ -1,4 +1,15 @@
 import { test, expect } from '@playwright/test';
+import AxeBuilder from '@axe-core/playwright'; // 1
+
+test.describe('homepage', () => { // 2
+  test('sollten keine automatisch erkennbaren Probleme mit der Barrierefreiheit aufweisen', async ({ page }) => {
+    await page.goto('http://localhost:4321/contact_2/'); // 3
+
+    const accessibilityScanResults = await new AxeBuilder({ page }).analyze(); // 4
+
+    expect(accessibilityScanResults.violations).toEqual([]); // 5
+  });
+});
 
 test('should be titled', async ({ page, context }) => {
     await context.route('**.webp', route => route.abort());
