@@ -2,16 +2,15 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { Image } from 'astro:assets';
 export const prerender = true;
-const pageTitle = "Instrumentenkauf";
+const pageTitle = "Tips zum Instrumentenkauf";
 ---
 
 <BaseLayout
   pageTitle={pageTitle}
   description="Gute Tips zum Instrumetenkauf! Auf was muss ich beim Kauf eines Instruments achten?"
-  keywords="Instrumentenkauf"
+  keywords="tips zum instrumentenkauf"
   href="https://www.musicstudio-ziebart.de/instrumentenkauf/"
 >
-  <h2>Tips zum Instrumentenkauf</h2>
   <article class="container2">
     <section class="artikel artikel-1">
       <h2>Was muss ich beim Instrumentenkauf beachten?</h2>
@@ -42,6 +41,7 @@ const pageTitle = "Instrumentenkauf";
         loading="lazy"
         decoding="async"
         alt="Konzertgitarre"
+        aria-label="Konzertgitarre" 
         />
       <h3>Konzertgitarre</h3>
       <p>
@@ -61,6 +61,7 @@ const pageTitle = "Instrumentenkauf";
         loading="lazy"
         decoding="async"
         alt="Westerngitarre"
+        aria-label="Westerngitarre"
         />
       </p>
       <p>
@@ -85,6 +86,7 @@ const pageTitle = "Instrumentenkauf";
         loading="lazy"
         decoding="async"
         alt="Klarinetten"
+        aria-label="Klarinetten"
         />
       </p>
       <h2 id="Klarinette">Klarinette</h2>
@@ -140,6 +142,7 @@ const pageTitle = "Instrumentenkauf";
         loading="lazy"
         decoding="async"
         alt="Querfloete"
+        aria-label="Querflöte"
         />
       </p>
     </section>
@@ -160,6 +163,7 @@ const pageTitle = "Instrumentenkauf";
         loading="lazy"
         decoding="async"
         alt="Tenorsaxophon"
+        aria-label="Tenorsax"
         />
       </p>
       <p>
@@ -228,6 +232,7 @@ const pageTitle = "Instrumentenkauf";
         loading="lazy"
         decoding="async"
         alt="Klavier Oberdaempfer"
+        aria-label="Klavier Oberdämpfer"
         />
       </p>
       <p>
@@ -247,7 +252,8 @@ const pageTitle = "Instrumentenkauf";
         height="582"
         loading="lazy"
         decoding="async"
-        alt="SP-320 Digitalpiano"
+        alt="DB-32B Digitalpiano"
+        aria-label="DB-32B"
         />
       </p>
       <p>Thomann DB-32 B Digitalpiano</p>
@@ -272,6 +278,7 @@ const pageTitle = "Instrumentenkauf";
         loading="lazy"
         decoding="async"
         alt="SP-320 kleines Klavier"
+        aria-label="SP-320"
         />
       </p>
       <p>Thomann SP-320 Digitalpiano</p>
