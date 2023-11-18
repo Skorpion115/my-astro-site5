@@ -8,9 +8,15 @@ test('get started link', async ({ page }) => {
     // Überschrift H2 finden
     await expect(page.getByRole('heading', { name: 'Flint Hill Special - Earl Scruggs' })).toBeVisible();
     //Video Start button finden
-    await page.frameLocator('iframe[title="Flint Hill Special - Banjo Lesson"]').getByLabel('Play', { exact: true }).click();
+    // await page.frameLocator('iframe[title="Flint Hill Special - Banjo Lesson"]').getByLabel('Play', { exact: true }).click();
+    await page.getByTitle('Flint Hill Special - Banjo Lesson').click();
     
-    await page.frameLocator('iframe[title="Train 45 - Bluegrass Banjo"]').getByLabel('Play', { exact: true }).click();
+    await expect(page.getByRole('heading', { name: 'Train 45' })).toBeVisible();
+   
+    await page.getByTitle('Train 45 - Bluegrass Banjo').click();
 
-    await page.frameLocator('iframe[title="Banjo Beginner Lesson 2"]').getByLabel('Play', { exact: true }).click();
+    await expect(page.getByRole('heading', { name: 'Cripple Creek' })).toBeVisible();
+
+    await page.getByTitle('Banjo Beginner Lesson').click();
+    
 });
