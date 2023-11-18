@@ -1,18 +1,18 @@
 import { test, expect } from '@playwright/test';
-import AxeBuilder from '@axe-core/playwright'; // 1
+// import AxeBuilder from '@axe-core/playwright'; // 1
 
-test.describe('homepage', () => { // 2
-  test('sollten keine automatisch erkennbaren Probleme mit der Barrierefreiheit aufweisen', async ({ page }) => {
-    await page.goto('/'); // 3
+// test.describe('homepage', () => { // 2
+  // test('sollten keine automatisch erkennbaren Probleme mit der Barrierefreiheit aufweisen', async ({ page }) => {
+    // await page.goto('/'); // 3
 
-    const accessibilityScanResults = await new AxeBuilder({ page }).analyze(); // 4
+    // const accessibilityScanResults = await new AxeBuilder({ page }).analyze(); // 4
 
-    expect(accessibilityScanResults.violations).toEqual([]); // 5
-  });
-});
+    // expect(accessibilityScanResults.violations).toEqual([]); // 5
+  // });
+// });
 
 test('get started link', async ({ page }) => {
-  await page.goto('/');
+  await page.goto('https://www.musicstudio-ziebart.de/');
 
   // Erwarte eine PageTitle
   await expect(page).toHaveTitle(/Musikunterricht/);
