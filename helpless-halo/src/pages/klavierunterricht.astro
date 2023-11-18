@@ -28,19 +28,17 @@ const pageTitle = "Klavierunterricht";
             frameborder="0"
             allowfullscreen></iframe>
         </div>
-      </div> -->
+      </div> -->      
       <div class="video-container-wrapper">
         <div class="video-container">
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/vxX0WiQhSUE?si=RvI_8CetvARr-rV2"
-            title="PRAELUDIUM BMV 927 - Johann Sebastian Bach"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen></iframe>
+          <lite-youtube videoid="vxX0WiQhSUE" style="background-image: url('https://i.ytimg.com/vi/vxX0WiQhSUE/hqdefault.jpg');">
+            <a href="https://www.youtube.com/embed/vxX0WiQhSUE?si=vxX0WiQhSUE" class="lty-playbtn" title="PRAELUDIUM BMV 927 - Johann Sebastian Bach">
+              <span class="lyt-visually-hidden">Play Video: Keynote (Google I/O '18)</span>
+            </a>
+            </lite-youtube>  
         </div>
       </div>
+
       <p>
         <img
           src={DP_32B.src}
