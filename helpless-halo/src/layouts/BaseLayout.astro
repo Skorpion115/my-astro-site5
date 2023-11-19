@@ -3,9 +3,7 @@ import ExternalScripts from "../components/ExternalScripts.astro";
 import { ViewTransitions } from "astro:transitions";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import YouTube from "../components/YouTube.astro";
 import "../styles/global.css";
-import "../styles/lite-yt-embed.css";
 // import GoogleAnalytics from "../components/GoogleAnalytics.astro";
 const { pageTitle, description, keywords, href } = Astro.props;
 const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
@@ -89,8 +87,6 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
     <ExternalScripts />
     
     <ViewTransitions />
-
-    <YouTube />
     
   </head>
   <body>
@@ -117,14 +113,5 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
     <script>
       import "../scripts/google.js";
     </script>
-
-    <script>
-      import "../scripts/lite-yt-embed.js";
-    </script>
-
-   
-
-    <!--
-    <GoogleAnalytics /> -->
   </body>
 </html>

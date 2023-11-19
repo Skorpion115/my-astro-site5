@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Benthien from "../../public/images/benthien-wide.webp";
+import YouTube from "../components/YouTube.astro";
+import "../styles/lite-yt-embed.css";
 export const prerender = true;
 const pageTitle = "Keyboardunterricht";
 ---
@@ -19,14 +21,11 @@ const pageTitle = "Keyboardunterricht";
     <h2>Hammond Flip - Klaus Wunderlich</h2>
     <div class="video-container-wrapper">
       <div class="video-container">
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/244HlpB3JoA?si=C9fTXQxR3JQQ8gYa"
-          title="Hammond Organ - Hammond Flip - Klaus Wunderlich"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen></iframe>
+        <lite-youtube videoid="244HlpB3JoA" style="background-image: url('https://i.ytimg.com/vi/244HlpB3JoA/hqdefault.jpg');">
+          <a href="https://www.youtube.com/embed/vxX0WiQhSUE?si=244HlpB3JoA" class="lty-playbtn" title="Hammond Organ - Hammond Flip - Klaus Wunderlich">
+            <span class="lyt-visually-hidden">Play Video: Keynote (Google I/O '18)</span>
+          </a>
+          </lite-youtube>  
       </div>
     </div>
     <p>
@@ -38,15 +37,11 @@ const pageTitle = "Keyboardunterricht";
     <h2>H-schisch - Klaus Wunderlich</h2>
     <div class="video-container-wrapper">
       <div class="video-container">
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/y2KtSx3-W3w?si=HHhMuVPyELatFt0r"
-          title="Hammond Organ Komponist: Klaus Wunderlich Titel: H-schisch"
-          frameborder="0"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen></iframe>
+        <lite-youtube videoid="y2KtSx3-W3w" style="background-image: url('https://i.ytimg.com/vi/y2KtSx3-W3w/hqdefault.jpg');">
+          <a href="https://www.youtube.com/embed/vxX0WiQhSUE?si=y2KtSx3-W3w" class="lty-playbtn" title="Hammond Organ Komponist: Klaus Wunderlich Titel: H-schisch">
+            <span class="lyt-visually-hidden">Play Video: Keynote (Google I/O '18)</span>
+          </a>
+          </lite-youtube>  
       </div>
     </div>
     <p>
@@ -56,15 +51,11 @@ const pageTitle = "Keyboardunterricht";
     <h2>E-hering - Klaus Wunderlich</h2>
     <div class="video-container-wrapper">
       <div class="video-container">
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/t0tOQfL2qSE?si=K7oDXE7Iq0FtLRkV"
-          title="Hammond Organ Komponist: Klaus Wunderlich Titel: E-Hering"
-          frameborder="0"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen></iframe>
+        <lite-youtube videoid="t0tOQfL2qSE" style="background-image: url('https://i.ytimg.com/vi/t0tOQfL2qSE/hqdefault.jpg');">
+          <a href="https://www.youtube.com/embed/vxX0WiQhSUE?si=t0tOQfL2qSE" class="lty-playbtn" title="Hammond Organ Komponist: Klaus Wunderlich Titel: E-Hering">
+            <span class="lyt-visually-hidden">Play Video: Keynote (Google I/O '18)</span>
+          </a>
+          </lite-youtube>  
       </div>
     </div>
     <article>
@@ -75,6 +66,7 @@ const pageTitle = "Keyboardunterricht";
           width={Benthien.width}
           height={Benthien.height}
           alt="Axel Benthien Keyboardschule"
+          aria-label="Axel Benthien Keyboardschule"
         />
       </p>
       <p>
@@ -95,3 +87,5 @@ const pageTitle = "Keyboardunterricht";
     </article>
   </section>
 </BaseLayout>
+
+<YouTube />

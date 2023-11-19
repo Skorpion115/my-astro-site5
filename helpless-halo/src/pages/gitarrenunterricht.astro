@@ -2,6 +2,8 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Teschner from "../../public/images/teschner-wide.webp";
 import Sor from "../../public/images/sor-wide.webp";
+import YouTube from "../components/YouTube.astro";
+import "../styles/lite-yt-embed.css";
 export const prerender = true;
 const pageTitle = "Gitarrenunterricht";
 ---
@@ -20,13 +22,11 @@ const pageTitle = "Gitarrenunterricht";
     <h2>Yesterday - Beatles</h2>
     <div class="video-container-wrapper">
       <div class="video-container">
-        <iframe
-          src="https://www.youtube.com/embed/oqko5Mk_UBk?rel=0"
-          width="560"
-          height="315"
-          title="Beatles - Yesterday Gitarre Tutorial"
-          frameborder="0"
-          allowfullscreen></iframe>
+        <lite-youtube videoid="oqko5Mk_UBk" style="background-image: url('https://i.ytimg.com/vi/oqko5Mk_UBk/hqdefault.jpg');">
+          <a href="https://www.youtube.com/embed/vxX0WiQhSUE?si=oqko5Mk_UBk" class="lty-playbtn" title="Beatles - Yesterday Gitarre Tutorial">
+            <span class="lyt-visually-hidden">Play Video: Keynote (Google I/O '18)</span>
+          </a>
+          </lite-youtube>  
       </div>
     </div>
     <p>
@@ -37,13 +37,11 @@ const pageTitle = "Gitarrenunterricht";
     <h2>City Of NewOrleans - Arlo Guthrie</h2>
     <div class="video-container-wrapper">
       <div class="video-container">
-        <iframe
-          src="https://www.youtube.com/embed/yEF6e2ZSZ0k"
-          width="560"
-          height="315"
-          title="City Of NewOrleans - Arlo Guthrie"
-          frameborder="0"
-          allowfullscreen></iframe>
+        <lite-youtube videoid="yEF6e2ZSZ0k" style="background-image: url('https://i.ytimg.com/vi/yEF6e2ZSZ0k/hqdefault.jpg');">
+          <a href="https://www.youtube.com/embed/vxX0WiQhSUE?si=yEF6e2ZSZ0k" class="lty-playbtn" title="City Of NewOrleans - Arlo Guthrie">
+            <span class="lyt-visually-hidden">Play Video: Keynote (Google I/O '18)</span>
+          </a>
+          </lite-youtube>  
       </div>
     </div>
     <article>
@@ -54,6 +52,7 @@ const pageTitle = "Gitarrenunterricht";
           width={Teschner.width}
           height={Teschner.height}
           alt="Teschner Gitarrenschule Fridolin"
+          aria-label="Teschner Gitarrenschule Fridolin"
         />
       </p>
       <br />
@@ -72,6 +71,7 @@ const pageTitle = "Gitarrenunterricht";
           width={Sor.width}
           height={Sor.height}
           alt="Ferdinand Sor Etüden"
+          aria-label="Ferdinand Sor Etüden"
         />
       </p>
       <h2>Fernando Sor Opus 35, Opus 31</h2>
@@ -92,3 +92,5 @@ const pageTitle = "Gitarrenunterricht";
     </article>
   </section>
 </BaseLayout>
+
+<YouTube />

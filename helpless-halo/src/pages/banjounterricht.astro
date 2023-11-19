@@ -2,6 +2,8 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Helbig from "../../public/images/beginner-banjo-narrow.webp";
 import Schroeder from "../../public/images/schroeder_378-narrow.webp";
+import YouTube from "../components/YouTube.astro";
+import "../styles/lite-yt-embed.css";
 export const prerender = true;
 const pageTitle = "Banjounterricht";
 ---
@@ -151,12 +153,7 @@ const pageTitle = "Banjounterricht";
       </p>
     </article>
   </section>
+  
 </BaseLayout>
 
-<style>
-  #instruments_lesson ol li {
-    padding: 0;
-    margin: 2rem auto;
-    display: block;
-  }
-</style>
+<YouTube />

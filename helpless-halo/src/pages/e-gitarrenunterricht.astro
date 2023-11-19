@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Scheinhuette from "../../public/images/scheinhuette-narrow.webp";
+import YouTube from "../components/YouTube.astro";
+import "../styles/lite-yt-embed.css";
 export const prerender = true;
 const pageTitle = "E-Gitarrenunterricht";
 ---
@@ -15,13 +17,11 @@ const pageTitle = "E-Gitarrenunterricht";
     <p>Ten Words - Jo Satriani</p>
       <div class="video-container-wrapper">
         <div class="video-container">
-          <iframe
-            src="https://www.youtube.com/embed/8ucTzPOBzAo?rel=0"
-            width="560"
-            height="315"
-            title="Joe Satriani - Ten Words Guitar Lesson+Tab"
-            frameborder="0"
-            allowfullscreen></iframe>
+          <lite-youtube videoid="8ucTzPOBzAo" style="background-image: url('https://i.ytimg.com/vi/8ucTzPOBzAo/hqdefault.jpg');">
+            <a href="https://www.youtube.com/embed/vxX0WiQhSUE?si=8ucTzPOBzAo" class="lty-playbtn" title="Joe Satriani - Ten Words Guitar Lesson+Tab">
+              <span class="lyt-visually-hidden">Play Video: Keynote (Google I/O '18)</span>
+            </a>
+            </lite-youtube>  
         </div>
       </div>
     <article>
@@ -32,6 +32,7 @@ const pageTitle = "E-Gitarrenunterricht";
           width={Scheinhuette.width}
           height={Scheinhuette.height}
           alt="E-Gitarrenschule von Andreas Scheinhuette"
+          aria-label="E-Gitarrenschule von Andreas Scheinhütte"
         />
       </p>
       <br />
@@ -53,3 +54,5 @@ const pageTitle = "E-Gitarrenunterricht";
     </article>
   </section>
 </BaseLayout>
+
+<YouTube />

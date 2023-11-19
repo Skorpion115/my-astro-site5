@@ -2,6 +2,8 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import DP_32B from "../../public/images/DB-32B.webp";
 import Heumann from "../../public/images/heumann-narrow.webp";
+import YouTube from "../components/YouTube.astro";
+import "../styles/lite-yt-embed.css";
 export const prerender = true;
 const pageTitle = "Klavierunterricht";
 ---
@@ -89,3 +91,5 @@ const pageTitle = "Klavierunterricht";
     </article>
   </section>
 </BaseLayout>
+
+<YouTube />

@@ -1,5 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import YouTube from "../components/YouTube.astro";
+import "../styles/lite-yt-embed.css";
 export const prerender = true;
 const pageTitle = "Download";
 ---
@@ -7,21 +9,18 @@ const pageTitle = "Download";
 <BaseLayout
   pageTitle={pageTitle}
   description="Midi Files und Noten bekannter Werke komplett zu downloaden! Mondschein Sonate, Eine kleine Nachtmusik, Die Fledermaus, Schwannensee"
-  keywords="Midi Files und Noten bekannter Werke zum downloaden"
+  keywords="Download, Midi Files und Noten bekannter Werke zum downloaden"
   href="https://www.musicstudio-ziebart.de/download/"
 >
   <section id="download">
     <h2>GM Midi Files mit Noten zum downloaden!</h2>
       <div class="video-container-wrapper">
         <div class="video-container">
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/ytcQ-I1BTNk?si=lGDUJ0cpSufE8PSG"
-            title="Aus der neuen Welt - Antonin Dvorak"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen></iframe>
+          <lite-youtube videoid="ytcQ-I1BTNk" style="background-image: url('https://i.ytimg.com/vi/ytcQ-I1BTNk/hqdefault.jpg');">
+            <a href="https://www.youtube.com/embed/vxX0WiQhSUE?si=ytcQ-I1BTNk" class="lty-playbtn" title="Joe Satriani - Ten Words Guitar Lesson+Tab">
+              <span class="lyt-visually-hidden">Play Video: Keynote (Google I/O '18)</span>
+            </a>
+            </lite-youtube>  
         </div>
       </div>      
     <article>
@@ -292,6 +291,8 @@ const pageTitle = "Download";
     </article>
   </section>
 </BaseLayout>
+
+<YouTube />
 
 <style>
   #download {

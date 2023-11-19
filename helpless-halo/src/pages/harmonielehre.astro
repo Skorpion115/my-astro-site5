@@ -1,5 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import YouTube from "../components/YouTube.astro";
+import "../styles/lite-yt-embed.css";
 export const prerender = true;
 const pageTitle = "Harmonielehre";
 ---
@@ -28,75 +30,105 @@ const pageTitle = "Harmonielehre";
             href="/images/Notenblatt.pdf"
             target="_blank"
             class="normal-links">leeres Notenblatt</a
-          > downloaden! Es dient für den Aufgabenanhang für das Video Notenschrift.
-          Downloaden, ausdrucken und dann am besten mit Bleistift die Noten und drunter
-          die Buchstaben schreiben!
+          > downloaden! Es dient für den Aufgabenanhang für das Video
+          Notenschrift. Downloaden, ausdrucken und dann am besten mit Bleistift
+          die Noten und drunter die Buchstaben schreiben!
         </p>
         <h2>Notenschrift</h2>
         <div class="video-container-wrapper">
           <div class="video-container">
-            <iframe
-              src="https://www.youtube.com/embed/Hu4ef1IkuG0?rel=0"
-              width="560"
-              height="315"
-              title="Notenschrift"
-              frameborder="0"
-              allowfullscreen></iframe>
+            <lite-youtube
+              videoid="Hu4ef1IkuG0"
+              style="background-image: url('https://i.ytimg.com/vi/Hu4ef1IkuG0/hqdefault.jpg');"
+            >
+              <a
+                href="https://www.youtube.com/embed/vxX0WiQhSUE?si=Hu4ef1IkuG0"
+                class="lty-playbtn"
+                title="Notenschrift"
+              >
+                <span class="lyt-visually-hidden"
+                  >Play Video: Keynote (Google I/O '18)</span
+                >
+              </a>
+            </lite-youtube>
           </div>
         </div>
-        <p>
-          <br /> Im zweiten Video geht es darum die Intervallen zu verstehen und
-          zu bestimmen.
-        </p>
-        <h2>Intervalle</h2>
-        <div class="video-container-wrapper">
-          <div class="video-container">
-            <iframe
-              src="https://www.youtube.com/embed/804rrOOFzAQ?rel=0"
-              width="560"
-              height="315"
+      </div>
+      <p>
+        <br /> Im zweiten Video geht es darum die Intervallen zu verstehen und
+        zu bestimmen.
+      </p>
+      <h2>Intervalle</h2>
+      <div class="video-container-wrapper">
+        <div class="video-container">
+          <lite-youtube
+            videoid="804rrOOFzAQ"
+            style="background-image: url('https://i.ytimg.com/vi/804rrOOFzAQ/hqdefault.jpg');"
+          >
+            <a
+              href="https://www.youtube.com/embed/vxX0WiQhSUE?si=804rrOOFzAQ"
+              class="lty-playbtn"
               title="Intervalle"
-              frameborder="0"
-              allowfullscreen></iframe>
-          </div>
+            >
+              <span class="lyt-visually-hidden"
+                >Play Video: Keynote (Google I/O '18)</span
+              >
+            </a>
+          </lite-youtube>
         </div>
+      </div>
 
-        <p>
-          Im dritten Video erkläre ich die Dreiklänge. Wie man Dur und Moll
-          Akkorde bestimmen kann usw.
-        </p>
-        <h2>Dreiklänge</h2>
-        <div class="video-container-wrapper">
-          <div class="video-container">
-            <iframe
-              src="https://www.youtube.com/embed/fgzboODvlQ4?rel=0"
-              width="560"
-              height="315"
+      <p>
+        Im dritten Video erkläre ich die Dreiklänge. Wie man Dur und Moll
+        Akkorde bestimmen kann usw.
+      </p>
+      <h2>Dreiklänge</h2>
+      <div class="video-container-wrapper">
+        <div class="video-container">
+          <lite-youtube
+            videoid="fgzboODvlQ4"
+            style="background-image: url('https://i.ytimg.com/vi/fgzboODvlQ4/hqdefault.jpg');"
+          >
+            <a
+              href="https://www.youtube.com/embed/vxX0WiQhSUE?si=fgzboODvlQ4"
+              class="lty-playbtn"
               title="Dreiklänge"
-              frameborder="0"
-              allowfullscreen></iframe>
-          </div>
+            >
+              <span class="lyt-visually-hidden"
+                >Play Video: Keynote (Google I/O '18)</span
+              >
+            </a>
+          </lite-youtube>
         </div>
-        <p>
-          Und im vierten Video geht es um eine Funktionstheorie. Das sollte
-          eigentlich das Grundwissen eines jeden Musikers sein.
-        </p>
-        <h2>Funktionstheorie</h2>
-        <div class="video-container-wrapper">
-          <div class="video-container">
-            <iframe
-              src="https://www.youtube.com/embed/tCkpok099xw?rel=0"
-              width="560"
-              height="315"
+      </div>
+      <p>
+        Und im vierten Video geht es um eine Funktionstheorie. Das sollte
+        eigentlich das Grundwissen eines jeden Musikers sein.
+      </p>
+      <h2>Funktionstheorie</h2>
+      <div class="video-container-wrapper">
+        <div class="video-container">
+          <lite-youtube
+            videoid="tCkpok099xw"
+            style="background-image: url('https://i.ytimg.com/vi/tCkpok099xw/hqdefault.jpg');"
+          >
+            <a
+              href="https://www.youtube.com/embed/vxX0WiQhSUE?si=tCkpok099xw"
+              class="lty-playbtn"
               title="Funktionstheorie"
-              frameborder="0"
-              allowfullscreen></iframe>
-          </div>
+            >
+              <span class="lyt-visually-hidden"
+                >Play Video: Keynote (Google I/O '18)</span
+              >
+            </a>
+          </lite-youtube>
         </div>
       </div>
     </article>
   </section>
 </BaseLayout>
+
+<YouTube />
 
 <style>
   #harmonielehre {
