@@ -1,5 +1,5 @@
 ---
-// import ExternalScripts from "../components/ExternalScripts.astro";
+import ExternalScripts from "../components/ExternalScripts.astro";
 import Gtm from "../components/Gtm.astro";
 import { ViewTransitions } from "astro:transitions";
 import Header from "../components/Header.astro";
@@ -84,8 +84,8 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
     <meta name="robots" content="max-snippet:-1" />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#191919" />
-    <!--
-    <ExternalScripts /> -->
+    
+    <ExternalScripts />
 
     <Gtm />
     
@@ -116,9 +116,9 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
     <script>
       import "../scripts/menu.js"
     </script>
-    <!--
+    
     <script>
       import "../scripts/google.js";
-    </script> -->
+    </script>
   </body>
 </html>
