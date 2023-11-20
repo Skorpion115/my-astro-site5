@@ -1,5 +1,6 @@
 ---
-import ExternalScripts from "../components/ExternalScripts.astro";
+// import ExternalScripts from "../components/ExternalScripts.astro";
+import Gtm from "../components/Gtm.astro";
 import { ViewTransitions } from "astro:transitions";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
@@ -83,13 +84,19 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
     <meta name="robots" content="max-snippet:-1" />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#191919" />
+    <!--
+    <ExternalScripts /> -->
 
-    <ExternalScripts />
+    <Gtm />
     
     <ViewTransitions />
     
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PWK4LSL"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <Header />
     <h1 transition:animate="slide">{pageTitle}</h1>
     <slot />
@@ -109,9 +116,9 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
     <script>
       import "../scripts/menu.js"
     </script>
-    
+    <!--
     <script>
       import "../scripts/google.js";
-    </script>
+    </script> -->
   </body>
 </html>
