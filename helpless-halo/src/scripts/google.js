@@ -4,6 +4,4 @@ function gtag() {
 }
 gtag("js", new Date());
 
-gtag("config", "G-CXBFDX52C7", { 'debug_mode':true });
-
-gtag("config", "AW-1000620606");
+gtag("config", "GT-5TG3DK3");
