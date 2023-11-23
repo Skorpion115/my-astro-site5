@@ -12,7 +12,7 @@ import { test, expect } from '@playwright/test';
 // });
 
 test('get started link', async ({ page }) => {
-  await page.goto('https://www.musicstudio-ziebart.de/');
+  await page.goto('http://localhost:4321/');
 
   // Erwarte eine PageTitle
   await expect(page).toHaveTitle(/Musikunterricht/);
