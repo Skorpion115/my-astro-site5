@@ -6,6 +6,7 @@ const assets = [
   "/tags/",
   "/contact_2/",
   "/thankyou/",
+  "/danke-seite/",
   "/contact_4/",
   "/honorar/",
   "/leistungen/",

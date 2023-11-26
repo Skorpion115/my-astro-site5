@@ -1,0 +1,20 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+export const prerender = true;
+const pageTitle = 'Danke';
+---
+<BaseLayout
+  pageTitle={pageTitle}
+  description="Kurze Mitteilung"
+  keywords="Kurze Mitteilung"
+  href="https://www.musicstudio-ziebart.de/danke-seite/"
+>
+<h2>Danke für die kurze Mitteilung!</h2>
+<p>
+    Ihre kurze Mitteilung ist auf dem Weg! Ich werde mich sobald wie möglich bei Ihnen melden.
+</p>
+<br>
+<p>
+    <a href="/" class="link-blue">go back!</a>
+</p>
+</BaseLayout>
