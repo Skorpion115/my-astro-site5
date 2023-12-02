@@ -1,0 +1,226 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+export const prerender = true;
+const pageTitle = "Schülermaterial";
+---
+
+<BaseLayout
+  pageTitle={pageTitle}
+  description="pupils download"
+  keywords="Schülermaterial, Noten und mp3 bekannter Werke zum downloaden"
+  href="https://www.musicstudio-ziebart.de/pupils-download/"
+>
+  <section id="download">
+    <h2>Audio Files mit Noten zum downloaden!</h2>
+    <article>
+      <p>
+        Ein Klick auf anhören öffnet die mp3 Datei in einem neuen Fenster.
+        Rechts ist ein Dreistrich Menu. Dort darauf mit der linken Maustaste
+        klicken und des öffnet sich ein Feld herunterladen. Dann kommt die Datei
+        bei euch in eurem Download Ordner. Übrigens in der PDF Notendatei sind
+        alle Instrumente aufgeführt. Wenn man nur die Gitarre braucht dann nur
+        diese ausdrucken.
+      </p>
+      <br />
+      <br />
+      <table>
+        <thead>
+          <tr>
+            <th>Titel</th>
+            <th>Komponist</th>
+            <th>Instrument</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>If I Fell</td>
+            <td>Beatles</td>
+            <td>Gitarre</td>
+          </tr>
+          <tr>
+            <td>
+              <a
+                href="/Songs/If_I_Fell-Beatles.mp3"
+                target="_blank"
+                class="normal-links">anhören</a
+              >
+            </td>
+            <td>
+              <a
+                href="/bilder/If_I_Fell-Beatles.pdf"
+                target="_blank"
+                class="normal-links">ansehen</a
+              >
+            </td>
+            <td>
+              <a href="/zip_download/If I Fell.rtf" class="normal-links"
+                >Translation</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>Ain't No Sunshine</td>
+            <td>Bill Withers</td>
+            <td>Nylon Guitar</td>
+          </tr>
+          <tr>
+            <td>
+              <a
+                href="/Songs/Bill Withers - Ain't No Sunshine.mp3"
+                target="_blank"
+                class="normal-links">anhören</a
+              >
+            </td>
+            <td>
+              <a
+                href="/bilder/Ain't No Sunshine - Bill Withers.pdf"
+                target="_blank"
+                class="normal-links">ansehen</a
+              >
+            </td>
+            <td>
+              <a href="/zip_download/Ain't No Sunshine.doc" class="normal-links"
+                >Translation</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>Sixteen Tons</td>
+            <td>Merl Travis</td>
+            <td>Gitarre</td>
+          </tr>
+          <tr>
+            <td>
+              <a
+                href="/Songs/merl travis - Sixteen Tons.mp3"
+                target="_blank"
+                class="normal-links">anhören</a
+              >
+            </td>
+            <td>
+              <a
+                href="/bilder/Sixteen Tons - Merl Travis.pdf"
+                target="_blank"
+                class="normal-links">ansehen</a
+              >
+            </td>
+            <td>
+              <a href="/zip_download/Sixteen Tons.rtf" class="normal-links"
+                >Translation</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>And I Love Her</td>
+            <td>Beatles</td>
+            <td>Gitarre</td>
+          </tr>
+          <tr>
+            <td>
+              <a
+                href="/Songs/And I Love Her.mp3"
+                target="_blank"
+                class="normal-links">anhören</a
+              >
+            </td>
+            <td>
+              <a
+                href="/bilder/And I Love Her.pdf"
+                target="_blank"
+                class="normal-links">ansehen</a
+              >
+            </td>
+            <td> &#160;</td>
+          </tr>
+          <tr>
+            <td>Father And Son</td>
+            <td>Cat Stevens</td>
+            <td>Steel Guitar</td>
+          </tr>
+          <tr>
+            <td>
+              <a
+                href="/Songs/Cat Stevens - Father and Son.mp3"
+                target="_blank"
+                class="normal-links">anhören</a
+              >
+            </td>
+            <td>
+              <a
+                href="/bilder/Father And Son - Cat Stevens.pdf"
+                target="_blank"
+                class="normal-links">ansehen</a
+              >
+            </td>
+            <td>
+              <a
+                href="/zip_download/Father And Son Translation.docx"
+                class="normal-links">Translation</a
+              >
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br />
+      <p>Die Noten sind selbst produziert worden.</p>
+      <p>
+        <a href="/" class="normal-links">home</a>
+      </p>
+    </article>
+  </section>
+</BaseLayout>
+
+<style>
+  #download {
+    display: block;
+    width: 96%;
+    max-width: 100%;
+    margin: 7% auto;
+    padding: 1.25rem;
+    text-align: center;
+    font-style: normal;
+  }
+
+  #download article {
+    display: inline-block;
+    width: 96%;
+    vertical-align: top;
+  }
+
+  /* Midi Wiedergabe */
+  #download table {
+    width: auto;
+    text-align: center;
+    box-shadow: 1px 2px 5px #666666;
+  }
+
+  #download article table,
+  th,
+  td {
+    border: 0.063rem solid black;
+    border-collapse: collapse;
+    margin: 0 auto;
+  }
+
+  #download article table th {
+    font-size: 1rem;
+    font-weight: bold;
+    empty-cells: show;
+  }
+
+  #download article table td {
+    font-size: 1rem;
+    font-weight: normal;
+    padding: 0.5rem;
+  }
+
+  #download article p {
+    margin: 0em;
+    text-align: left;
+  }
+
+  #download article h3 {
+    margin-left: 3%;
+    font-size: 1.25rem;
+  }
+</style>
