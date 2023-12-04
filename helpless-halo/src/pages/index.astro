@@ -2,6 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Greeting from "../components/Greeting.jsx";
 import Card from "../components/Card.astro";
+import ExternalScripts2 from "../components/ExternalScripts2.astro";
 import { Image } from 'astro:assets';
 export const prerender = true;
 const pageTitle = "Musikunterricht bei Musicstudio Ziebart";
@@ -249,11 +250,16 @@ const pageTitle = "Musikunterricht bei Musicstudio Ziebart";
             body="Kurze Mitteilung an mich!"
           />
         </ul>
-        <p>
-          Telefon:
-          <a href="tel:+499116320890" class="normal-links">+49 (0)911 6320890</a
-          > 0911/6320890
-        </p>
+        
+        <i class="fa-solid fa-phone fa-2x" style="color: rgb(218, 54, 54)"></i>
+        <ul class="link-card-grid">
+          <Card
+            href="tel:+499116320890"
+            title="Telefon"
+            body="0911/6320890"
+          />
+        </ul>
+        <br> 
         <p>
           eMail:&nbsp;
           <a
@@ -300,8 +306,9 @@ const pageTitle = "Musikunterricht bei Musicstudio Ziebart";
       </section>
     </article>
   </div>
-  
 </BaseLayout>
+
+
 
 <script>
   import "../scripts/cookie-banner.js";
@@ -480,3 +487,5 @@ const pageTitle = "Musikunterricht bei Musicstudio Ziebart";
     box-shadow: 2px 2px 5px #666;
   }
 </style>
+
+<ExternalScripts2 />

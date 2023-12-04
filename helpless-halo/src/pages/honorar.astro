@@ -1,5 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import ExternalScripts2 from "../components/ExternalScripts2.astro";
+import { Image } from 'astro:assets';
 export const prerender = true;
 const pageTitle = 'Honorar';
 ---
@@ -30,6 +32,7 @@ const pageTitle = 'Honorar';
       </div>
       <div class="item item-3">
         <p>
+          <i class="fa-solid fa-sack-dollar fa-2x"></i>&#160;
           <b>Preise</b><br />
           <b>50,- EUR</b> Monatshonorar pro Person<br />
           <b>65,- EUR</b> Monatshonorar
@@ -121,3 +124,5 @@ const pageTitle = 'Honorar';
     margin-left: 15%;
   }
 </style>
+
+<ExternalScripts2 />
