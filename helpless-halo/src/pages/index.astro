@@ -2,8 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Greeting from "../components/Greeting.jsx";
 import Card from "../components/Card.astro";
-import ExternalScripts2 from "../components/ExternalScripts2.astro";
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 export const prerender = true;
 const pageTitle = "Musikunterricht bei Musicstudio Ziebart";
 ---
@@ -14,7 +13,6 @@ const pageTitle = "Musikunterricht bei Musicstudio Ziebart";
   keywords="musikunterricht bei musicstudio ziebart, musicstudio-ziebart, musik selber spielen, musikunterricht-online, musiklehrer nürnberg, instrumental unterricht, music lesson, naturinstrumente, klassik bis pop, musikschule, jetzt anmelden, musikschule nürnberg eibach, musikschule nürnberg kinder, musiklehrer privatunterricht, musikschule eibach, musiklehrer privat, musikschule nürnberg"
   href="https://www.musicstudio-ziebart.de/"
 >
-  
   <cookie-banner>
     <h2 slot="title">Music Lesson</h2>
     <div slot="text">Wir verwenden cookies weil das so ist</div>
@@ -23,7 +21,6 @@ const pageTitle = "Musikunterricht bei Musicstudio Ziebart";
   <template>
     <div class="foo">Das ist ein Template das siehst du nicht in HTML</div>
   </template>
-  
 
   <!-- Bildlauf oder scrolling -->
   <div class="container">
@@ -38,43 +35,43 @@ const pageTitle = "Musikunterricht bei Musicstudio Ziebart";
           aria-label="Piano Tastatur"
         />
         <Image
-        src="/images/guitar-960x756.webp"
-        width="960"
-        height="756"
-        alt="Nylon Guitar"
-        aria-label="Nylon Guitar"
+          src="/images/guitar-960x756.webp"
+          width="960"
+          height="756"
+          alt="Nylon Guitar"
+          aria-label="Nylon Guitar"
         />
         <Image
-        src="/images/banjo-960x640.webp"
-        width="960"
-        height="640"
-        loading="lazy"
-        alt="5-string Banjo"
-        aria-label="5-string Banjo"
+          src="/images/banjo-960x640.webp"
+          width="960"
+          height="640"
+          loading="lazy"
+          alt="5-string Banjo"
+          aria-label="5-string Banjo"
         />
         <Image
-        src="/images/saxophon-960x640.webp"
-        width="960"
-        height="640"
-        loading="lazy"
-        alt="Tenorsaxophon"
-        aria-label="Tenorsaxophon"
+          src="/images/saxophon-960x640.webp"
+          width="960"
+          height="640"
+          loading="lazy"
+          alt="Tenorsaxophon"
+          aria-label="Tenorsaxophon"
         />
         <Image
-        src="/images/klarinette-960x638.webp"
-        width="960"
-        height="638"
-        loading="lazy"
-        alt="Klarinette"
-        aria-label="Klarinette"
+          src="/images/klarinette-960x638.webp"
+          width="960"
+          height="638"
+          loading="lazy"
+          alt="Klarinette"
+          aria-label="Klarinette"
         />
         <Image
-        src="/images/music-960x738.webp"
-        width="960"
-        height="738"
-        loading="lazy"
-        alt="Notenblatt"
-        aria-label="Notenblatt"
+          src="/images/music-960x738.webp"
+          width="960"
+          height="738"
+          loading="lazy"
+          alt="Notenblatt"
+          aria-label="Notenblatt"
         />
       </div>
     </div>
@@ -191,7 +188,7 @@ const pageTitle = "Musikunterricht bei Musicstudio Ziebart";
           Aus hygienischen Gründen können bei Blasinstrumente keine Instrumente
           zur Verfügung gestellt werden.
         </p>
-        
+
         <ul class="link-card-grid">
           <Card
             href="/contact_2/"
@@ -242,7 +239,7 @@ const pageTitle = "Musikunterricht bei Musicstudio Ziebart";
           Musikstudio Ziebart <br />Gunzenhausener Str. 20 <br />90451 Nürnberg
         </p>
         <p>Staatl. anerkannter Musiklehrer</p>
-        
+
         <ul class="link-card-grid">
           <Card
             href="/contact_4/"
@@ -250,16 +247,10 @@ const pageTitle = "Musikunterricht bei Musicstudio Ziebart";
             body="Kurze Mitteilung an mich!"
           />
         </ul>
-        <!--
-        <i class="fa-solid fa-phone fa-2x" style="color: rgb(218, 54, 54)"></i> -->
         <ul class="link-card-grid">
-          <Card
-            href="tel:+499116320890"
-            title="Telefon"
-            body="0911/6320890"
-          />
+          <Card href="tel:+499116320890" title="Telefon" body="0911/6320890" />
         </ul>
-        <br> 
+        <br />
         <p>
           eMail:&nbsp;
           <a
@@ -307,8 +298,6 @@ const pageTitle = "Musikunterricht bei Musicstudio Ziebart";
     </article>
   </div>
 </BaseLayout>
-
-
 
 <script>
   import "../scripts/cookie-banner.js";
@@ -487,5 +476,3 @@ const pageTitle = "Musikunterricht bei Musicstudio Ziebart";
     box-shadow: 2px 2px 5px #666;
   }
 </style>
-
-<ExternalScripts2 />
