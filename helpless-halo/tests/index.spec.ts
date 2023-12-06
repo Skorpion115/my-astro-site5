@@ -40,4 +40,8 @@ test('get started link', async ({ page }) => {
   await page.getByRole('button', { name: 'Neue Begrüßung' }).click();
   // Astro Card Formular
   await page.getByRole('link', { name: 'Probeunterricht→ Anmeldung zu einem kostenlosen Probeunterricht!' }).click();
+  // Link Musik Klier
+  await page.getByRole('link', { name: 'Musik Klier' }).click();
+  // Link Click Mein You Tube Kanal
+  await page.getByRole('link', { name: 'Mein YouTube Kanal' }).click();
 });
