@@ -7,3 +7,5 @@ gtag('js', new Date());
 gtag('config', 'GT-5TG3DK3');
 
 gtag('config', 'GT-MR4MFC6');
+
+gtag("config", "AW-1000620606");
