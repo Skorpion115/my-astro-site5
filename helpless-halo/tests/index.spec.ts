@@ -12,7 +12,7 @@ import { test, expect } from '@playwright/test';
 // });
 
 test('get started link', async ({ page }) => {
-  await page.goto('https://www.musicstudio-ziebart.de/');
+  await page.goto('/');
 
   // Erwarte eine PageTitle
   await expect(page).toHaveTitle(/Musikunterricht/);
@@ -41,7 +41,17 @@ test('get started link', async ({ page }) => {
   // Astro Card Formular
   await page.getByRole('link', { name: 'Probeunterricht→ Anmeldung zu einem kostenlosen Probeunterricht!' }).click();
   // Link Musik Klier
-  await page.getByRole('link', { name: 'Musik Klier' }).click();
+  // await page.getByRole('link', { name: 'Musik Klier' }).click();
   // Link Click Mein You Tube Kanal
-  await page.getByRole('link', { name: 'Mein YouTube Kanal' }).click();
+  // await page.getByRole('link', { name: 'Mein YouTube Kanal' }).click();
+  // Kurze Mitteilung
+  // await page.getByRole('link', { name: 'Nachricht→ Kurze Mitteilung an mich!' }).click();
+  // Telefon Icon
+  await page.getByLabel('Telefonhörer').click();
+  // Telefon Anruf
+  // await page.getByRole('link', { name: '+49 (0)911 6320890' }).click();
+  //E-Mail
+  // await page.getByRole('link', { name: 'postmaster@musicstudio-ziebart.de' }).click();
+  // Stadtplan Ansicht
+  // await page.getByRole('link', { name: 'Standortansicht im Stadtplan!' }).click();
 });
