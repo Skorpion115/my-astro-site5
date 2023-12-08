@@ -11,6 +11,7 @@ const pageTitle = "Honorar";
   href="https://www.musicstudio-ziebart.de/honorar/"
 >
   <h2>Günstige Preise für Ihren Musikunterricht</h2>
+  
   <section id="honorar">
     <h2>Der Unterricht findet einmal in der Woche statt!</h2>
     <div class="container">
@@ -29,7 +30,20 @@ const pageTitle = "Honorar";
         </p>
       </div>
       <div class="item item-3">
-        <p>
+        <picture>
+          <source
+            srcset="/images/money-500x500.png"
+            media="(min-width: 600px)"
+          />
+          <img
+            src="/images/money-500x500.png"
+            width="500"
+            height="500"
+            alt="Geldsack"
+            aria-label="Geldsack"
+          />
+        </picture> 
+        <p>         
           <b>Preise</b><br />
           <b>50,- EUR</b> Monatshonorar pro Person<br />
           <b>65,- EUR</b> Monatshonorar
@@ -65,6 +79,7 @@ const pageTitle = "Honorar";
         width="236"
         height="236"
         alt="sozialamt"
+        aria-label="Sozialamt Bildung und Teilhabe"
       />
     </picture>
     <p>
