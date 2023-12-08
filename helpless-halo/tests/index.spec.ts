@@ -12,7 +12,7 @@ import { test, expect } from '@playwright/test';
 // });
 
 test('get started link', async ({ page }) => {
-  await page.goto('/');
+  await page.goto('https://www.musicstudio-ziebart.de/');
 
   // Erwarte eine PageTitle
   await expect(page).toHaveTitle(/Musikunterricht/);
@@ -47,9 +47,10 @@ test('get started link', async ({ page }) => {
   // Kurze Mitteilung
   // await page.getByRole('link', { name: 'Nachricht→ Kurze Mitteilung an mich!' }).click();
   // Telefon Icon
-  await page.getByLabel('Telefonhörer').click();
+  // await page.getByAltText('Telefonhörer').click();
+  // await page.getByLabel('Telefonhörer').click();
   // Telefon Anruf
-  // await page.getByRole('link', { name: '+49 (0)911 6320890' }).click();
+  // await page.getByRole('link', { name: '+49 (0)911 6320890' }).getByRole('link').click();
   //E-Mail
   // await page.getByRole('link', { name: 'postmaster@musicstudio-ziebart.de' }).click();
   // Stadtplan Ansicht
