@@ -50,9 +50,9 @@ test('get started link', async ({ page }) => {
   // Astro Card Formular
   // await page.getByRole('link', { name: 'Probeunterricht→ Anmeldung zu einem kostenlosen Probeunterricht!' }).click();
   // Link Musik Klier
-  // const page1Promise = page.waitForEvent('popup');
-  // await page.getByRole('link', { name: 'Musik Klier' }).click();
-  // const page1 = await page1Promise;
+  const page1Promise = page.waitForEvent('popup');
+  await page.getByRole('link', { name: 'Musik Klier' }).click();
+  const page1 = await page1Promise;
   // Max Strohmer
   // const page2Promise = page.waitForEvent('popup');
   // await page.getByRole('link', { name: 'Gitarrenbauer Max Strohmer' }).click();
