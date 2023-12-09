@@ -64,6 +64,7 @@ test('get started link', async ({ page }) => {
   // const page3 = await page3Promise;
   // await page.getByRole('link', { name: 'Mein YouTube Kanal' }).click();
   // Kurze Mitteilung
+  // await page.getByRole('link', { name: 'Nachricht→ Kurze Mitteilung an mich!' }).click();
   // Telefon Icon
   await page.getByLabel('Telefonhörer').click();
   // Telefon Anruf
