@@ -11,22 +11,22 @@ import { defineConfig, devices } from '@playwright/test';
  */
 export default defineConfig({
   testDir: './tests',
-  /* Run tests in files in parallel */
+  /* Paralleles Ausführen von Tests in Dateien */
   fullyParallel: true,
-  /* Fail the build on CI if you accidentally left test.only in the source code. */
+  /* Der Build auf CI schlägt fehl, wenn Sie test.only versehentlich im Quellcode verlassen haben. */
   forbidOnly: !!process.env.CI,
-  /* Retry on CI only */
+  /* Wiederholen Sie den Versuch nur auf CI */
   retries: process.env.CI ? 2 : 0,
-  /* Opt out of parallel tests on CI. */
+  /* Deaktivieren Sie parallele CI-Tests. */
   workers: process.env.CI ? 1 : undefined,
-  /* Reporter to use. See https://playwright.dev/docs/test-reporters */
+  /* Zu verwendender Reporter. Siehe https://playwright.dev/docs/test-reporters */
   reporter: 'html',
-  /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
+  /* Freigegebene Einstellungen für alle unten aufgeführten Projekte. Siehe https://playwright.dev/docs/api/class-testoptions. */
    use: {
-    /* Base URL to use in actions like `await page.goto('/')`. */
+    /* Basis-URL, die in Aktionen wie 'await page.goto('/')' verwendet werden soll. */
       baseURL: 'http://localhost:4321',
 
-    /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
+    /* Sammeln Sie eine Ablaufverfolgung, wenn Sie den fehlgeschlagenen Test wiederholen. Siehe https://playwright.dev/docs/trace-viewer */
      trace: 'on-first-retry',
    },
 
@@ -68,7 +68,7 @@ export default defineConfig({
     // },
   ],
 
-  /* Run your local dev server before starting the tests */
+  /* Führen Sie den lokalen Entwicklungsserver aus, bevor Sie mit den Tests beginnen. */
       webServer: {
       command: 'npm run start',
       url: 'http://localhost:4321',

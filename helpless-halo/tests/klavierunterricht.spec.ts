@@ -12,5 +12,6 @@ test('get started link', async ({ page }) => {
   // await locator.click();
   // await page.frameLocator('iframe[title="PRAELUDIUM BMV 927 - Johann Sebastian Bach"]').getByLabel('Play', { exact: true }).click();
   // await page.getByTitle('PRAELUDIUM BMV 927 - Johann Sebastian Bach').click();
-  await page.frameLocator('iframe[title="PRAELUDIUM BWV 927 - Johann Sebastian Bach"]').getByLabel('Play', { exact: true }).click();
+  // await page.frameLocator('iframe[title="PRAELUDIUM BWV 927 - Johann Sebastian Bach"]').getByLabel('Play', { exact: true }).click();
+  await page.frameLocator('iframe[title="PRAELUDIUM BWV 927 - Johann Sebastian Bach"]').getByLabel('Wiedergabe', { exact: true }).click();
 });
