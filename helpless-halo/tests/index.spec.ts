@@ -46,32 +46,33 @@ test('get started link', async ({ page }) => {
   // Überschrift
   await page.getByRole('heading', { name: 'Online-Musikunterricht' }).click();
   // Instrumenten Klick
-  await page.getByRole('link', { name: 'Klavier' }).click();
+  // await page.getByRole('link', { name: 'Klavier' }).click();
+  
   // Astro Card Formular
   // await page.getByRole('link', { name: 'Probeunterricht→ Anmeldung zu einem kostenlosen Probeunterricht!' }).click();
   // Link Musik Klier
-  // const page1Promise = page.waitForEvent('popup');
-  // await page.getByRole('link', { name: 'Musik Klier' }).click();
-  // const page1 = await page1Promise;
+  const page1Promise = page.waitForEvent('popup');
+  await page.getByRole('link', { name: 'Musik Klier' }).click();
+  const page1 = await page1Promise;
   // Max Strohmer
   // const page2Promise = page.waitForEvent('popup');
-  // await page.getByRole('link', { name: 'Gitarrenbauer Max Strohmer' }).click();
+  await page.getByRole('link', { name: 'Gitarrenbauer Max Strohmer' }).click();
   // const page2 = await page2Promise;
   // Link Click Mein You Tube Kanal
   // const page3Promise = page.waitForEvent('popup');
-  // await page.getByRole('link', { name: 'Mein YouTube Kanal' }).click();
+  await page.getByRole('link', { name: 'Mein YouTube Kanal' }).click();
   // const page3 = await page3Promise;
   // await page.getByRole('link', { name: 'Mein YouTube Kanal' }).click();
   // Kurze Mitteilung
   // Telefon Icon
-  // await page.getByLabel('Telefonhörer').click();
+  await page.getByLabel('Telefonhörer').click();
   // Telefon Anruf
-  // await page.getByRole('link', { name: '+49 (0)911 6320890' }).click();
+  await page.getByRole('link', { name: '+49 (0)911 6320890' }).click();
   // E-Mail
   await page.getByRole('link', { name: 'postmaster@musicstudio-ziebart.de' }).click();
   // Stadtplan Ansicht
   // const page4Promise = page.waitForEvent('popup');
-  // await page.getByRole('link', { name: 'Standortansicht im Stadtplan!' }).click();
+  await page.getByRole('link', { name: 'Standortansicht im Stadtplan!' }).click();
   // const page4 = await page4Promise;
   // Astro Klick
   // await page.getByRole('link', { name: 'Astro v3.4.2' }).click();
