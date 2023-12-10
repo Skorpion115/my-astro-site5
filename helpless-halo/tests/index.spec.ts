@@ -64,8 +64,8 @@ test('get started link', async ({ page }) => {
   // await page.goto('https://www.musicstudio-ziebart.de/');
 
   // Max Strohmer
-  // await page.getByRole('link', { name: 'Gitarrenbauer Max Strohmer' }).click();
-  // await page.goto('https://www.musicstudio-ziebart.de/');
+  await page.getByRole('link', { name: 'Gitarrenbauer Max Strohmer', exact: true }).click();
+  await page.goto('https://www.musicstudio-ziebart.de/');
 
   // Link Click Mein You Tube Kanal
   await page.getByRole('link', { name: 'Mein YouTube Kanal', exact: true }).click();
