@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test('get started link', async ({ page }) => {
-  await page.goto('http://localhost:4321/instrumentenkauf/');
+  await page.goto('https://www.musicstudio-ziebart.de/instrumentenkauf/');
 
   // Erwarte eine PageTitle
   await expect(page).toHaveTitle(/Tips zum Instrumentenkauf/);
@@ -21,11 +21,13 @@ test('get started link', async ({ page }) => {
   await page.getByRole('link', { name: 'Keyboard' }).click();
   await expect(page.getByRole('heading', { name: 'Akustische Gitarre' })).toBeVisible();
   // Bild Konzertgitarre
-  await page.getByRole('img', { name: 'Konzertgitarre' }).click();
+  // await page.getByRole('img', { name: 'Konzertgitarre' }).click();
+  await page.getByLabel('Konzertgitarre').click();
   await expect(page.getByRole('heading', { name: 'Konzertgitarre' })).toBeVisible();
   await expect(page.getByRole('heading', { name: 'Westerngitarre' })).toBeVisible();
   // Bild Westerngitarre
-  await page.getByRole('img', { name: 'Westerngitarre' }).click();
+  // await page.getByRole('img', { name: 'Westerngitarre' }).click();
+  await page.getByLabel('Westerngitarre').click();
   await expect(page.getByRole('heading', { name: 'E-Gitarre' })).toBeVisible();
   // Bild Klarinetten
   await page.getByRole('img', { name: 'Klarinetten' }).click();
@@ -47,5 +49,9 @@ test('get started link', async ({ page }) => {
   await expect(page.getByRole('heading', { name: 'Keyboard' })).toBeVisible();
   await page.getByRole('link', { name: 'nach oben!' }).click();
   // Footer
-  await page.getByRole('link', { name: 'facebook' }).click();
+  await page.getByRole('link', { name: 'facebook', exact: true }).click();
+  await page.goto('https://www.musicstudio-ziebart.de/instrumentenkauf/');
+  // YouTube Button
+  await page.getByRole('link', { name: 'youtube', exact: true }).click();
+  await page.goto('https://www.musicstudio-ziebart.de/instrumentenkauf/');
 });

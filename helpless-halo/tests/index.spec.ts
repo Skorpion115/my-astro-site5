@@ -49,7 +49,7 @@ test('get started link', async ({ page }) => {
 
   // Instrumenten Klick
   await page.getByRole('link', { name: 'Klavier' }).click();
-  await page.goto('https://www.musicstudio-ziebart.de/');
+  await page.goto('/');
   
   // Astro Card Formular
   await page.getByRole('link', { name: 'Probeunterricht→ Anmeldung zu einem kostenlosen Probeunterricht!' }).click();
@@ -58,6 +58,8 @@ test('get started link', async ({ page }) => {
   // Link Musik Klier
   // const page1Promise = page.waitForEvent('popup');
   // await page.getByRole('link', { name: 'Musik Klier' }).click();
+  await page.getByRole('link', { name: 'Musik Klier', exact: true }).click();
+  await page.goto('https://www.musicstudio-ziebart.de/');
   // const page1 = await page1Promise;
   // await page.goto('https://www.musicstudio-ziebart.de/');
 
@@ -66,7 +68,7 @@ test('get started link', async ({ page }) => {
   // await page.goto('https://www.musicstudio-ziebart.de/');
 
   // Link Click Mein You Tube Kanal
-  await page.getByRole('link', { name: 'Mein YouTube Kanal' }).click();
+  await page.getByRole('link', { name: 'Mein YouTube Kanal', exact: true }).click();
   await page.goto('https://www.musicstudio-ziebart.de/');
   
   // Kurze Mitteilung
@@ -93,8 +95,11 @@ test('get started link', async ({ page }) => {
 
   // Bild von mir
   await page.getByLabel('Bild von mir').click();
+  // Footer
+  await page.getByRole('link', { name: 'facebook', exact: true }).click();
+  await page.goto('https://www.musicstudio-ziebart.de/');
   // YouTube Button
   await page.getByRole('link', { name: 'youtube', exact: true }).click();
-  // await page.getByRole('button', { name: 'youtube', exact: true }).click();
+  await page.goto('https://www.musicstudio-ziebart.de/');
 });
 
