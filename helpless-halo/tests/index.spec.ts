@@ -81,6 +81,7 @@ test('get started link', async ({ page }) => {
 
   // E-Mail
   await page.getByRole('link', { name: 'postmaster@musicstudio-ziebart.de' }).click();
+  await page.goto('https://www.musicstudio-ziebart.de/');
 
   // Stadtplan Ansicht
   await page.getByRole('link', { name: 'Standortansicht im Stadtplan!' }).click();
