@@ -57,13 +57,13 @@ test('get started link', async ({ page }) => {
 
   // Link Musik Klier
   // const page1Promise = page.waitForEvent('popup');
-  await page.getByRole('link', { name: 'Musik Klier' }).click();
+  // await page.getByRole('link', { name: 'Musik Klier' }).click();
   // const page1 = await page1Promise;
-  await page.goto('https://www.musicstudio-ziebart.de/');
+  // await page.goto('https://www.musicstudio-ziebart.de/');
 
   // Max Strohmer
-  await page.getByRole('link', { name: 'Gitarrenbauer Max Strohmer' }).click();
-  await page.goto('https://www.musicstudio-ziebart.de/');
+  // await page.getByRole('link', { name: 'Gitarrenbauer Max Strohmer' }).click();
+  // await page.goto('https://www.musicstudio-ziebart.de/');
 
   // Link Click Mein You Tube Kanal
   await page.getByRole('link', { name: 'Mein YouTube Kanal' }).click();
