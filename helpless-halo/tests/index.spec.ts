@@ -49,7 +49,7 @@ test('get started link', async ({ page }) => {
 
   // Instrumenten Klick
   await page.getByRole('link', { name: 'Klavier' }).click();
-  await page.goto('/');
+  await page.goto('https://www.musicstudio-ziebart.de/');
   
   // Astro Card Formular
   await page.getByRole('link', { name: 'Probeunterricht→ Anmeldung zu einem kostenlosen Probeunterricht!' }).click();
