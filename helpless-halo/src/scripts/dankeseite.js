@@ -1,3 +1,3 @@
-gtag("event", "conversion_event_contact_2", {
+gtag('event', 'conversion_event_page_view', {
   // <event_parameters>
 });
