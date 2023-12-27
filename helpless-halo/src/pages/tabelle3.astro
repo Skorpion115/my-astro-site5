@@ -10,7 +10,7 @@ const pageTitle = "Tabelle3";
   href="https://www.musicstudio-ziebart.de/tabelle3/"
 >
 
-<table class="content">
+<table class="basis-table">
     <thead>
         <tr>
             <th>ID</th>
@@ -53,13 +53,13 @@ const pageTitle = "Tabelle3";
 </BaseLayout>
 
 <style>
-table.content {
+* {
     box-sizing: border-box;
-    font-size: 1rem;
+    font-size: calc(1rem + var(--font-scale));
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
 
-}   
-table.content {
+table.basis-table {
     border-collapse: collapse;
     margin: 32px 0;
     min-width: 400px;
@@ -69,25 +69,25 @@ table.content {
     text-align: left;
 }
 
-table.content thead tr {
+table.basis-table thead tr {
     background-color: rebeccapurple;
     color: white;
 }
 
-table.content th,
-table.content td {
+table.basis-table th,
+table.basis-table td {
     padding: 12px 16px;
 }
 
-table.content tbody tr {
+table.basis-table tbody tr {
     border-bottom: 1px solid #ccc;
 }
 
-table.content tbody tr:last-of-type {
+table.basis-table tbody tr:last-of-type {
     border-bottom: 2px solid rebeccapurple;
 }
 
-table.content tbody tr.active {
+table.basis-table tbody tr.active {
     font-weight: bold;
     color: rebeccapurple;
 }
