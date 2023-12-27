@@ -49,30 +49,7 @@ const pageTitle = "Tabelle";
     </tbody>
 </table>
 <!-- Variante A -->
-<div class="basis-card">
-    <div class="basis-header"> ID: 1</div>
-    <div><span>Vorname:</span> Max</div>
-    <div><span>Nachname:</span> Mustermann</div>
-    <div><span>E-Mail:</span> max@email.de</div>
-    <div><span>Beruf:</span> Entwickler</div>
-    <div><span>Alter:</span> 25 Jahre alt</div>
-</div>
-<div class="basis-card">
-    <div class="basis-header"> ID: 2</div>
-    <div><span>Vorname:</span> John</div>
-    <div><span>Nachname:</span> Doe</div>
-    <div><span>E-Mail:</span> john@email.de</div>
-    <div><span>Beruf:</span> Designer</div>
-    <div><span>Alter:</span> 26 Jahre alt</div>
-</div>
-<div class="basis-card">
-    <div class="basis-header"> ID: 3</div>
-    <div><span>Vorname:</span> Tim</div>
-    <div><span>Nachname:</span> Taylor</div>
-    <div><span>E-Mail:</span> tim@email.de</div>
-    <div><span>Beruf:</span> Koch</div>
-    <div><span>Alter:</span> 27 Jahre alt</div>
-</div>
+
 
 </BaseLayout>
 
@@ -116,42 +93,14 @@ table.content tbody tr.active {
     color: rebeccapurple;
 }
 
-/* ANCHOR Variante A */
-.basis-card {
-    display: none;
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-.basis-header {
-    background-color: rebeccapurple;
-    color: white;
-    border-radius: 5px 5px 0 0;
-    padding: 10px;
-    font-weight: bold;
-}
-
-.basis-card div {
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-}
-
-.basis-card div:last-of-type {
-    border-bottom: 2px solid rebeccapurple;
-}
-
-.basis-card div > span {
-    color: rebeccapurple;
-    font-weight: bold;
-}
-
+/* ANCHOR Variante B */
 @media screen and (max-width: 578px) {
-    table.basis-table {
-        display: none;
-    }
-
-    .basis-card {
-        display: block;
-    }
+   table.basis-table th:nth-child(5),
+   table.basis-table td:nth-child(5),
+   table.basis-table th:nth-child(6),
+   table.basis-table td:nth-child(6) {
+    display: none;
+   }
 }
+
 </style>
