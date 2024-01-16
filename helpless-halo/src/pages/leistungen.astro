@@ -1,14 +1,13 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Weinzierl from "../../public/images/querfloete-wide.webp";
 export const prerender = true;
-const pageTitle = 'Leistungen';
+const pageTitle = "Leistungen";
 ---
 
 <BaseLayout
   pageTitle={pageTitle}
-  description="Ich gebe Querflötenunterricht in Nürnberg"
-  keywords="leistungen, querflötenunterricht in eibach, querflöte, querflötenunterricht nürnberg, querflötenunterricht in der nähe, querflöte spielen lernen, querflötenkurs, querflötenunterricht für kinder, querflöten lehrer, querflöteunterricht"
+  description="Unter Leistungen habe ich alle Instrumente aufgelistet die unterrichtet werden. Das Dropdown Menu einfach aufklappen und auswählen."
+  keywords="leistungen, klavierunterricht, keyboardunterricht, gitarrenunterricht, e-bassunterricht, e-gitarrenunterricht, banjounterricht, akkordeon-unterricht, saxophonunterricht, klarinettenunterricht, querflötenunterricht"
   href="https://www.musicstudio-ziebart.de/leistungen/"
 >
   <section id="leistungen">
@@ -26,6 +25,7 @@ const pageTitle = 'Leistungen';
           <a href="/akkordeon-unterricht/">Akkordeon Unterricht</a>
           <a href="/saxophonunterricht/">Saxophon Unterricht</a>
           <a href="/klarinettenunterricht/">Klarinettenunterricht</a>
+          <a href="/querflöten-unterricht/">Querflötenunterricht</a>
         </div>
       </div>
       <p>
@@ -34,21 +34,6 @@ const pageTitle = 'Leistungen';
       </p>
       <p>
         Bei weiteren Fragen klicken Sie oben den Button Instrumentenkauf an!
-      </p>
-
-      <h2>Querflötenunterricht</h2>
-      <img
-        src={Weinzierl.src}
-        width={Weinzierl.width}
-        height={Weinzierl.height}
-        alt="Weinzierl Querfloetenschule"
-        aria-label="Weinzierl Querflöte"
-      />
-      <p>
-        Die Querflöte ist das Instrument der Götter sagt man. Ich nehme die
-        Querflötenschule von Elisabeth Weinzierl und Edmund Wächter. Der Titel
-        ist "Lern Querflöte spielen". Eine CD ist ebenfalls dabei und es gibt 2
-        Bänder von diesem Werk.
       </p>
     </article>
   </section>

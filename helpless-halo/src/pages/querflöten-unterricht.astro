@@ -1,0 +1,71 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Weinzierl from "../../public/images/querfloete-wide.webp";
+export const prerender = true;
+const pageTitle = "Querflötenunterricht";
+---
+
+<BaseLayout
+  pageTitle={pageTitle}
+  description="Ich gebe Querflötenunterricht in Nürnberg. Es gibt Querflöten mit offenen oder geschlossenen Klappen. Am Anfang nimmt man die geschlossenen Klappen."
+  keywords="querflötenunterricht, querflötenunterricht in eibach, querflöte, querflötenunterricht nürnberg, querflötenunterricht in der nähe, querflöte spielen lernen, querflötenkurs, querflötenunterricht für kinder, querflöten lehrer, querflöteunterricht"
+  href="https://www.musicstudio-ziebart.de/querflöten-unterricht/"
+>
+<section id="querfloete">
+    <article>
+        <h2>Querflötenunterricht</h2>
+      <img
+        src={Weinzierl.src}
+        width={Weinzierl.width}
+        height={Weinzierl.height}
+        alt="Weinzierl Querfloetenschule"
+        aria-label="Weinzierl Querflöte"
+      />
+      <p>
+        Die Querflöte ist das Instrument der Götter sagt man. Ich nehme die
+        Querflötenschule von Elisabeth Weinzierl und Edmund Wächter. Der Titel
+        ist "Lern Querflöte spielen". Eine CD ist ebenfalls dabei und es gibt 2
+        Bänder von diesem Werk.
+      </p>
+      <br />
+      <p>
+        <a href="/instrumentenkauf/" class="normal-links">Mehr Info über die Querflöte</a>
+      </p>
+      <p>
+        <a href="/leistungen/" class="normal-links">zurück</a>
+      </p>
+    </article>
+</section>
+
+</BaseLayout>
+
+<style>
+    #querfloete {
+    display: block;
+    width: 96%;
+    max-width: 100%;
+    padding: 1.5em;
+    margin: 0;
+    font-style: normal;
+  }
+
+  #querfloete article {
+    display: inline-block;
+    margin: 2rem auto;
+    text-align: left;
+    width: 100%;
+    vertical-align: top;
+    padding: 1.25rem;
+  }
+
+  #querfloete img {
+    max-width: 30%;
+    height: auto;
+    box-shadow: 0px 0px 10px 5px #4c4948;
+    border-radius: 5px;
+    float: right;
+    margin-top: 1.25rem;
+    margin-left: 1rem;
+    margin-right: 3rem;
+  }
+</style>
