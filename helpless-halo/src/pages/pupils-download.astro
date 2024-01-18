@@ -1,10 +1,10 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import BaseLayout2 from "../layouts/BaseLayout2.astro";
 export const prerender = true;
 const pageTitle = "Schülermaterial";
 ---
 
-<BaseLayout
+<BaseLayout2
   pageTitle={pageTitle}
   description="Gespielte Titel"
   keywords="schülermaterial"
@@ -59,7 +59,7 @@ const pageTitle = "Schülermaterial";
             <td>John Lennon</td>
             <td>Gitarre</td>
           </tr>
-          <!--
+          
           <tr>
             <td>
               <a
@@ -80,7 +80,7 @@ const pageTitle = "Schülermaterial";
                 >Translation</a
               >
             </td>
-          </tr> -->
+          </tr>
         </tbody>
       </table>
       <!-- Variante A -->
@@ -107,7 +107,7 @@ const pageTitle = "Schülermaterial";
         >
         </div>
       </div> -->
-      <!--
+      
       <div class="basis-card">
         <div class="basis-header"> ID: 2</div>
         <div><span>Titel:</span> Real Love</div>
@@ -129,14 +129,14 @@ const pageTitle = "Schülermaterial";
           > Translation</a
         >
         </div>
-      </div> -->
+      </div>
       <br />
       <p>
         <a href="/" class="normal-links">home</a>
       </p>
     </article>
   </section>
-</BaseLayout>
+</BaseLayout2>
 
 <style>
   #download {
@@ -155,34 +155,7 @@ const pageTitle = "Schülermaterial";
     vertical-align: top;
   }
 
-  /* Midi Wiedergabe */
-  /*
-  #download table {
-    width: auto;
-    text-align: center;
-    box-shadow: 1px 2px 5px #666666;
-  }
-
-  #download article table,
-  th,
-  td {
-    border: 0.063rem solid black;
-    border-collapse: collapse;
-    margin: 0 auto;
-  }
-
-  #download article table th {
-    font-size: 1rem;
-    font-weight: bold;
-    empty-cells: show;
-  }
-
-  #download article table td {
-    font-size: 1rem;
-    font-weight: normal;
-    padding: 0.5rem;
-  }
-  */
+  
   /* ANCHOR Neue basis-table CSS */
   {
     box-sizing: border-box;
