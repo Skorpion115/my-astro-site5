@@ -32,9 +32,11 @@ export default defineConfig({
   integrations: [
     // Beispiel: Argumente an eine Integration übergeben
     sitemap({
-      changefreq: "weekly",
-      entryLimit: 10000,
-      lastmod: new Date("2023-01-06"),
+      filter: (page) =>
+        page !== "https://www.musicstudio-ziebart.de/pupils-download/",
+        changefreq: "weekly",
+        entryLimit: 10000,
+        lastmod: new Date("2023-01-06"),
     }),
     preact(),
   ],
