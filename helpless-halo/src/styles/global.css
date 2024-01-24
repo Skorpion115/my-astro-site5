@@ -83,6 +83,13 @@ h5 {
   padding-left: 0.5rem;
 }
 
+h6 {
+  font-size: 1.0rem;
+  font-weight: bold;
+  padding-left: 0.5rem;
+  text-align: center;
+}
+
 p {
   font-weight: normal;
   text-align: start;
