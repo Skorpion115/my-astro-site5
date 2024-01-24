@@ -9,22 +9,22 @@ const assets = [
   "/danke-seite/",
   "/contact_4/",
   "/honorar/",
-  "/leistungen/",
+  "/musikunterricht/",
   "/faq/",
   "/download/",
   "/harmonielehre/",
   "/impressum/",
-  "/klavierunterricht/",
-  "/keyboardunterricht/",
-  "/gitarrenunterricht/",
-  "/e-bassunterricht/",
-  "/e-gitarrenunterricht/",
-  "/banjounterricht/",
-  "/akkordeon-unterricht/",
-  "/saxophonunterricht/",
+  "/klavier/",
+  "/keyboard/",
+  "/gitarre/",
+  "/e-bass/",
+  "/e-gitarre/",
+  "/banjo/",
+  "/akkordeon/",
+  "/saxophon/",
   "/pupils-download/",
-  "/querfloeten-unterricht/",
-  "/klarinettenunterricht/"
+  "/querfloete/",
+  "/klarinette/"
 ];
 const cacheTypes = ["body", "font", "image"];
 const cacheVersion = "_v3";
