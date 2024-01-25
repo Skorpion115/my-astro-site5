@@ -1,29 +1,50 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Greeting from "../components/Greeting.jsx";
 import Card from "../components/Card.astro";
-import { Image } from "astro:assets";
+import Rudi from "../../public/images/rudi-wide.webp";
+import Anruf from "../../public/images/anruf-192x192.png";
 export const prerender = true;
 const pageTitle = "Musikunterricht";
 ---
 
 <BaseLayout
   pageTitle={pageTitle}
-  description="Musicstudio Ziebart 🎹, Musikunterricht 🎼, günstige Preise, 65.- € Monatshonorar 🤑, jetzt anrufen! Tel.: 0911/6320890"
+  description="Musikunterricht 🎹, Musicstudio Ziebart 🎼, günstige Preise, 65.- € Monatshonorar 🤑, jetzt anrufen! Tel.: 0911/6320890"
   keywords="musikunterricht, musikunterricht grundschule, grundschule musikunterricht, musikschule, günstige Preise, jetzt anschauen, music lessons, musicstudio-ziebart, musikschule nürnberg kinder, musikschule eibach, musikschule nürnberg preise, musikschule in der nähe, musik lehrer, musiklehrer nürnberg"
   href="https://www.musicstudio-ziebart.de/"
 >
 <h6>bei Musicstudio Ziebart</h6>
   <cookie-banner>
-    <h2 slot="title">Music Lessons</h2>
+    <h2 slot="title">HERZLICH WILLKOMMEN</h2>
     <div slot="text">Wir verwenden cookies weil das so ist</div>
   </cookie-banner>
 
   <template>
     <div class="foo">Das ist ein Template das siehst du nicht in HTML</div>
   </template>
+  <br />
+  <section id="startseite">
+    <picture>
+      <source
+        srcset="/images/piano_960.webp"
+        width="960"
+        height="540"
+        media="(min-width: 600px)"
+        aria-label="Piano"
+      />
+      <img
+        src="/images/piano_480.webp"
+        width="236"
+        height="236"
+        alt="Piano"
+        aria-label="Piano"
+      />
+    </picture>
+  
+  </section>
 
   <!-- Bildlauf oder scrolling -->
+  <!--
   <div class="container">
     <div class="section">
       <h2 class="section-title">HERZLICH WILLKOMMEN</h2>
@@ -75,10 +96,8 @@ const pageTitle = "Musikunterricht";
           aria-label="Notenblatt"
         />
       </div>
-    </div>
+    </div> -->
     <br />
-
-    <Greeting client:load messages={["Hallo", "Hi", "Bonjor", "Habari"]} />
 
     <article class="conteneur">
       <section class="marchandise marchandise-1">
@@ -246,13 +265,13 @@ const pageTitle = "Musikunterricht";
           />
         </ul>
         <hr />
-        <Image
-          src="/images/anruf-192x192.png"
-          alt="Telefonhörer"
-          width="192"
-          height="192"
-          aria-label="Telefonhörer"
-        />
+        <img
+            src={Anruf.src}
+            width={Anruf.width}
+            height={Anruf.height}
+            alt="Telefonhörer"
+            aria-label="Telefonhörer"
+          />
         <p>
           Telefon:
           <a href="tel:+499116320890" class="normal-links">+49 (0)911 6320890</a
@@ -279,13 +298,13 @@ const pageTitle = "Musikunterricht";
         <hr />
         <p>ÖFFNUNGSZEITEN:</p>
         <p>Montag - Freitag 14.00 - 19.00 Uhr</p>
-        <Image
-          src="/images/rudi-wide.webp"
-          alt="Bild von mir"
-          width="320"
-          height="240"
-          aria-label="Bild von mir"
-        />
+          <img
+            src={Rudi.src}
+            width={Rudi.width}
+            height={Rudi.height}
+            alt="Bild von mir"
+            aria-label="Bild von mir"
+          />
         <p>
           Powered by <a href="https://astro.build" class="normal-links"
             >{Astro.generator}</a
@@ -308,10 +327,6 @@ const pageTitle = "Musikunterricht";
 
 <script>
   import "../scripts/cookie-banner.js";
-</script>
-
-<script>
-  import "../scripts/scrolling.js"; //Bildlauf
 </script>
 
 <style>
@@ -360,6 +375,15 @@ const pageTitle = "Musikunterricht";
   .image-scroll img {
     height: auto;
     max-width: 100%;
+    margin-right: 0px;
+    object-fit: cover;
+  }
+
+  #startseite picture img {
+    height: auto;
+    max-width: 100%;
+    box-shadow: 0px 0px 10px 5px #4c4948;
+    border-radius: 0.313rem;
     margin-right: 0px;
     object-fit: cover;
   }
