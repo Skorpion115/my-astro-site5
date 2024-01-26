@@ -6,7 +6,11 @@ import Klarinette from "../../public/images/klarinetten-wide.webp";
 import Banjo from "../../public/images/5-string-banjo960x640.webp";
 import Querfloete from "../../public/images/offline-narrow.webp";
 import Sax from "../../public/images/saxophone-546x1280.webp";
-import { Image } from 'astro:assets';
+import Oberdaempfer from "../../public/images/oberdaempfer-narrow.webp";
+import DB32 from "../../public/images/DB-32B.webp";
+import SP320 from "../../public/images/SP-320-wide.webp";
+import Keyboard from "../../public/images/keyboard.webp";
+import Akkordeon from "../../public/images/concerto_III.webp";
 export const prerender = true;
 const pageTitle = "Tips zum Instrumentenkauf";
 ---
@@ -212,15 +216,13 @@ const pageTitle = "Tips zum Instrumentenkauf";
         Oberdämpfer:
       </p>
       <p>
-        <Image
-        src="/images/oberdaempfer-narrow.webp"
-        width="576"
-        height="432"
-        loading="lazy"
-        decoding="async"
-        alt="Klavier Oberdaempfer"
-        aria-label="Klavier Oberdämpfer"
-        />
+        <img
+            src={Oberdaempfer.src}
+            width={Oberdaempfer.width}
+            height={Oberdaempfer.height}
+            alt="Oberdaempfer"
+            aria-label="Oberdaempfer"
+          />
       </p>
       <p>
         Diese Art der Dämpfung ist zum einen weniger effektiv als bei einem Unterdämpfer-Klavier, da sie die Schwingungen nur im 
@@ -230,14 +232,12 @@ const pageTitle = "Tips zum Instrumentenkauf";
       </p>
       <hr />
       <p>
-        <Image
-        src="/images/DB-32B.webp"
-        width="800"
-        height="582"
-        loading="lazy"
-        decoding="async"
-        alt="DB-32B Digitalpiano"
-        aria-label="DB-32B"
+        <img
+          src={DB32.src}
+          width={DB32.width}
+          height={DB32.height}
+          alt="DB-32B Digitalpiano"
+          aria-label="DB-32B"
         />
       </p>
       <p>Thomann DB-32 B Digitalpiano</p>
@@ -255,14 +255,12 @@ const pageTitle = "Tips zum Instrumentenkauf";
       </p>
       <hr />
       <p>
-        <Image
-        src="/images/SP-320-wide.webp"
-        width="800"
-        height="582"
-        loading="lazy"
-        decoding="async"
-        alt="SP-320 kleines Klavier"
-        aria-label="SP-320"
+        <img
+          src={SP320.src}
+          width={SP320.width}
+          height={SP320.height}
+          alt="SP-320 Digitalpiano"
+          aria-label="SP-320 Digitalpiano"
         />
       </p>
       <p>Thomann SP-320 Digitalpiano</p>
@@ -274,14 +272,12 @@ const pageTitle = "Tips zum Instrumentenkauf";
       </p>
       <hr>
       <p>
-        <Image
-        src="/images/keyboard.webp"
-        width="583"
-        height="196"
-        loading="lazy"
-        decoding="async"
-        alt="Yamaha Keyboard"
-        aria-label="Yamaha Keyboard"
+        <img
+          src={Keyboard.src}
+          width={Keyboard.width}
+          height={Keyboard.height}
+          alt="Yamaha Keyboard"
+          aria-label="Yamaha Keyboard"
         />
       </p>
       <h4 id="Keyboard">Keyboard</h4>
@@ -293,14 +289,12 @@ const pageTitle = "Tips zum Instrumentenkauf";
       </p>
       <hr>
       <p>
-        <Image
-        src="/images/concerto_III.webp"
-        width="500"
-        height="600"
-        loading="lazy"
-        decoding="async"
-        alt="Hohner Akkordeon Concerto III"
-        aria-label="Hohner Akkordeon Concerto III"
+        <img
+          src={Akkordeon.src}
+          width={Akkordeon.width}
+          height={Akkordeon.height}
+          alt="Hohner Akkordeon Concerto III"
+          aria-label="Hohner Akkordeon Concerto III"
         />
       </p>
       <h5 id="Akkordeon">Akkordeon</h5>

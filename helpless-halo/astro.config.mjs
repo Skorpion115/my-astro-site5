@@ -1,16 +1,11 @@
 import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import preact from "@astrojs/preact";
-import netlify from "@astrojs/netlify/functions";
+// import netlify from "@astrojs/netlify/functions";
+import netlify from "@astrojs/netlify";
 
 // https://astro.build/config
 export default defineConfig({
-  // Sharp zum transponieren der Bilder verwenden
-  image: {
-    service: {
-      entrypoint: 'astro/assets/services/noop'
-    }
-  },
   // Resolves to the "./foo" directory in your current working directory
   /*
   root: "foo",*/
