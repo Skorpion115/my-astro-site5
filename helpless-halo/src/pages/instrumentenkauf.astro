@@ -1,5 +1,11 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Konzertgitarre from "../../public/images/konzertgitarre-wide.webp";
+import Westerngitarre from "../../public/images/westerngitarre-wide.webp";
+import Klarinette from "../../public/images/klarinetten-wide.webp";
+import Banjo from "../../public/images/5-string-banjo960x640.webp";
+import Querfloete from "../../public/images/offline-narrow.webp";
+import Sax from "../../public/images/saxophone-546x1280.webp";
 import { Image } from 'astro:assets';
 export const prerender = true;
 const pageTitle = "Tips zum Instrumentenkauf";
@@ -34,15 +40,13 @@ const pageTitle = "Tips zum Instrumentenkauf";
         </table>
       <h2>Akustische Gitarre</h2>
       <p>
-        <Image
-        src="/images/konzertgitarre-wide.webp"
-        width="394"
-        height="600"
-        loading="lazy"
-        decoding="async"
-        alt="Konzertgitarre"
-        aria-label="Konzertgitarre" 
-        />
+        <img
+            src={Konzertgitarre.src}
+            width={Konzertgitarre.width}
+            height={Konzertgitarre.height}
+            alt="Konzertgitarre"
+            aria-label="Konzertgitarre"
+          />
       <h3>Konzertgitarre</h3>
       <p>
         Bei akustischer Gitarre ist es wichtig, daß Sie sich eine sogenannte Konzertgitarre oder auch Klassiche Gitarre besorgen. 
@@ -51,15 +55,13 @@ const pageTitle = "Tips zum Instrumentenkauf";
       </p>
       <h3>Westerngitarre</h3>
       <p>
-        <Image
-        src="/images/westerngitarre-wide.webp"
-        width="277"
-        height="600"
-        loading="lazy"
-        decoding="async"
-        alt="Westerngitarre"
-        aria-label="Westerngitarre"
-        />
+        <img
+            src={Westerngitarre.src}
+            width={Westerngitarre.width}
+            height={Westerngitarre.height}
+            alt="Westerngitarre"
+            aria-label="Westerngitarre"
+          />
       </p>
       <p>
         Bei der Konzertgitarre kann man dann auch mit der linken Hand sauberer
@@ -75,15 +77,13 @@ const pageTitle = "Tips zum Instrumentenkauf";
         Bei der E-Gitarre gibt so Einsteigersets, also Gitarre und Verstärker für ca. 350,- EURO.
       </p>
       <p>
-        <Image
-        src="/images/klarinetten-wide.webp"
-        width="230"
-        height="804"
-        loading="lazy"
-        decoding="async"
-        alt="Klarinetten"
-        aria-label="Klarinetten"
-        />
+        <img
+          src={Klarinette.src}
+          width={Klarinette.width}
+          height={Klarinette.height}
+          alt="Klarinette"
+          aria-label="Klarinette"
+        />       
       </p>
       <h3 id="Klarinette">Klarinette</h3>
       <p>Sie gehört zu der Familie der Holzblasinstrumente.</p>
@@ -108,14 +108,12 @@ const pageTitle = "Tips zum Instrumentenkauf";
         Menge Ärger.
       </p>
       <p>
-        <Image
-        src="/images/5-string-banjo960x640.webp"
-        width="960"
-        height="640"
-        loading="lazy"
-        decoding="async"
-        alt="5-string Banjo"
-        aria-label="5-string Banjo"
+        <img
+          src={Banjo.src}
+          width={Banjo.width}
+          height={Banjo.height}
+          alt="Banjo"
+          aria-label="Banjo"
         />
       </p>
       <h3 id="Querfloete">Querflöte</h3>
@@ -135,14 +133,12 @@ const pageTitle = "Tips zum Instrumentenkauf";
         Beim Offset Modell sind die G-Klappen etwas vorgezogen damit sie die Finger besser erreichen können.
       </p>
       <p>
-        <Image
-        src="/images/offline-narrow.webp"
-        width="450"
-        height="180"
-        loading="lazy"
-        decoding="async"
-        alt="Querfloete"
-        aria-label="Querflöte"
+        <img
+          src={Querfloete.src}
+          width={Querfloete.width}
+          height={Querfloete.height}
+          alt="Querfloete"
+          aria-label="Querfloete"
         />
       </p>
     </section>
@@ -156,14 +152,12 @@ const pageTitle = "Tips zum Instrumentenkauf";
       </p>
       <h3 id="Saxophon">Die Geschichte des Saxophons</h3>
       <p>
-        <Image
-        src="/images/saxophone-546x1280.webp"
-        width="546"
-        height="1280"
-        loading="lazy"
-        decoding="async"
-        alt="Eb Altsaxophon"
-        aria-label="Eb Altsax"
+        <img
+          src={Sax.src}
+          width={Sax.width}
+          height={Sax.height}
+          alt="Saxophon"
+          aria-label="Saxophon"
         />
       </p>
       <p>
