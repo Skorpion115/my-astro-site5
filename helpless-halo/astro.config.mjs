@@ -1,8 +1,8 @@
 import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import preact from "@astrojs/preact";
-import netlify from "@astrojs/netlify/functions";
-// import netlify from "@astrojs/netlify";
+// import netlify from "@astrojs/netlify/functions";
+import netlify from "@astrojs/netlify";
 
 // https://astro.build/config
 export default defineConfig({
@@ -35,7 +35,9 @@ export default defineConfig({
         entryLimit: 10000,
         lastmod: new Date("2023-01-06"),
     }),
-    preact(),
+    preact({
+      include: ["**/preact/*"]
+    }),
   ],
   // Beispiel: Erfordere abschließende Schrägstriche
   // in Seiten-URLs während der Entwicklung
