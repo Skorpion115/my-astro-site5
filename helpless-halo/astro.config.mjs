@@ -1,8 +1,8 @@
 import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import preact from "@astrojs/preact";
-// import netlify from "@astrojs/netlify/functions";
-import netlify from "@astrojs/netlify";
+import netlify from "@astrojs/netlify/functions";
+// import netlify from "@astrojs/netlify";
 
 // https://astro.build/config
 export default defineConfig({
@@ -13,7 +13,9 @@ export default defineConfig({
   publicDir: "public",
   // static oder server SSR serverseitiges rändern
   output: "server",
-  adapter: netlify(),
+  adapter: netlify({
+    functionPerRoute: true
+  }),
   // Die endgültige Seite bei deinem Hostanbieter
   site: "https://www.musicstudio-ziebart.de/",
   // Sitemap intergrieren, Eine Seite aufnehmen die nicht mit Astro erstellt wurde stillgelegt!!!
