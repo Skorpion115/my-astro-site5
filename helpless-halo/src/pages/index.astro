@@ -1,8 +1,8 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Card from "../components/Card.astro";
-import Rudi from "../../public/images/rudi-wide.webp";
-import Anruf from "../../public/images/anruf-192x192.png";
+// import Rudi from "../../public/images/rudi-wide.webp";
+// import Anruf from "../../public/images/anruf-192x192.png";
 export const prerender = true;
 const pageTitle = "Musikunterricht";
 ---
@@ -23,6 +23,7 @@ const pageTitle = "Musikunterricht";
     <div class="foo">Das ist ein Template das siehst du nicht in HTML</div>
   </template>
   <br />
+  <!--
   <div id="titelbild">
     <picture>
       <source
@@ -40,14 +41,14 @@ const pageTitle = "Musikunterricht";
         aria-label="Piano"
       />
     </picture>
-  </div>
+  </div> -->
   <br />
   <article class="conteneur">
     <section class="marchandise marchandise-1">
       <h2>INSTRUMENTAL UNTERRICHT</h2>
       <br />
       <p>Ich biete zusätzlich zu dem bisherigen Präsenzunterricht einen</p>
-      <b>Online-Musikunterricht</b>
+      <p>Online-Musikunterricht</p>
       <p>
         an. Dieser wird über das Streaming Programm Skype oder Zoom gemacht. Die
         Preise sind dieselben als beim dem Präsenzunterricht. Die Konditionen
@@ -203,13 +204,14 @@ const pageTitle = "Musikunterricht";
         />
       </ul>
       <hr />
+      <!--
       <img
         src={Anruf.src}
         width={Anruf.width}
         height={Anruf.height}
         alt="Telefonhörer"
         aria-label="Telefonhörer"
-      />
+      /> -->
       <p>
         Telefon:
         <a href="tel:+499116320890" class="normal-links">+49 (0)911 6320890</a> 0911/6320890
@@ -235,13 +237,14 @@ const pageTitle = "Musikunterricht";
       <hr />
       <p>ÖFFNUNGSZEITEN:</p>
       <p>Montag - Freitag 14.00 - 19.00 Uhr</p>
+      <!--
       <img
         src={Rudi.src}
         width={Rudi.width}
         height={Rudi.height}
         alt="Bild von mir"
         aria-label="Bild von mir"
-      />
+      /> -->
       <p>
         Powered by <a href="https://astro.build" class="normal-links"
           >{Astro.generator}</a
@@ -332,6 +335,7 @@ const pageTitle = "Musikunterricht";
   }
 
   /* ANCHOR Bilder von marchandise-2 */
+  /*
   .marchandise.marchandise-2 img {
     max-width: 30%;
     height: auto;
@@ -341,5 +345,5 @@ const pageTitle = "Musikunterricht";
     margin-top: 1.25rem;
     margin-left: 1rem;
     margin-right: 3rem;
-  }
+  } */
 </style>
