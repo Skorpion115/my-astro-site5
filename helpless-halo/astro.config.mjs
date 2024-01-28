@@ -12,7 +12,7 @@ export default defineConfig({
   // Resolves to the "./foo/public" directory in your current working directory
   publicDir: "public",
   // static oder server SSR serverseitiges rändern
-  output: "server",
+  output: "hybrid",
   adapter: netlify({
     functionPerRoute: true
   }),
