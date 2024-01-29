@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Geldsack from "../../public/images/money-125x125.png";
+import Coupon from "../../public/images/button-orange-100x100.png";
 export const prerender = true;
 const pageTitle = "Honorar";
 ---
@@ -51,7 +52,7 @@ const pageTitle = "Honorar";
         </p>
       </div>
     </div> -->
-    
+    <p>
     <img
         src={Geldsack.src}
         width={Geldsack.width}
@@ -59,7 +60,7 @@ const pageTitle = "Honorar";
         alt="Geldsack"
         aria-label="Geldsack"
       />
-    
+    </p>
     <p>
       Der Gruppenunterricht besteht in der Regel nur aus zwei Schülern! Man
       hat dann mehr Zeit für jeden einzelnen. Im
@@ -79,6 +80,7 @@ const pageTitle = "Honorar";
       wissen möchten ist hier der Link dazu:
       <br />
     </p>
+    <!--
     <picture>
       <source
         srcset="/images/button-orange-wide.webp"
@@ -91,7 +93,16 @@ const pageTitle = "Honorar";
         alt="Sozialamt"
         aria-label="Sozialamt Bildung und Teilhabe"
       />
-    </picture>
+    </picture> -->
+    <p>
+    <img
+        src={Coupon.src}
+        width={Coupon.width}
+        height={Coupon.height}
+        alt="Coupon"
+        aria-label="Coupon"
+      />
+    </p>
     <p>
       Gutschein Coupons erhalten bei    
       <a
@@ -146,11 +157,11 @@ const pageTitle = "Honorar";
     border-radius: 0.313rem;
     margin-left: 15%;
   } */
-
+  /*
   .container.item img {
     width: 100%;
     height: auto;
     box-shadow: 0px 0px 10px 5px #4c4948;
     border-radius: 0.313rem;
-  }
+  } */
 </style>

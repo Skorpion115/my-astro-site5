@@ -14,6 +14,7 @@
     X-XSS-Protection = "1; mode=block"
     Access-Control-Allow-Origin = "https://musicstudio-ziebart.de/"
     Vary = "Origin"
+    Timing-Allow-Origin = "*"
     Access-Control-Allow-Methods = "GET,POST,PUT,PATCH,DELETE"
     Access-Control-Allow-Credentials = "true"
     Access-Control-Allow-Crossorigin = "true"
