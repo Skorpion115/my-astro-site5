@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Geldsack from "../../public/images/money-125x125.png";
 export const prerender = true;
 const pageTitle = "Honorar";
 ---
@@ -12,8 +13,7 @@ const pageTitle = "Honorar";
 >
   <h2>Günstige Preise für Ihren Musikunterricht</h2>
   
-  <section id="honorar">
-    <h2>Der Unterricht findet einmal in der Woche statt!</h2>
+    <p>Der Unterricht findet einmal in der Woche statt!</p>
     <div class="container">
       <div class="item item-1">
         <p>
@@ -30,15 +30,16 @@ const pageTitle = "Honorar";
         </p>
       </div>
       <div class="item item-3">
+        <!--
         <picture>
           <source
-            srcset="/images/money-500x500.png"
+            srcset="/images/money-125x125.png"
             media="(min-width: 600px)"
           />
           <img
-            src="/images/money-500x500.png"
-            width="500"
-            height="500"
+            src="/images/money-125x125.png"
+            width="125"
+            height="125"
             alt="Geldsack"
             aria-label="Geldsack"
           />
@@ -49,7 +50,16 @@ const pageTitle = "Honorar";
           <b>65,- EUR</b> Monatshonorar
         </p>
       </div>
-    </div>
+    </div> -->
+    
+    <img
+        src={Geldsack.src}
+        width={Geldsack.width}
+        height={Geldsack.height}
+        alt="Geldsack"
+        aria-label="Geldsack"
+      />
+    
     <p>
       Der Gruppenunterricht besteht in der Regel nur aus zwei Schülern! Man
       hat dann mehr Zeit für jeden einzelnen. Im
@@ -75,24 +85,24 @@ const pageTitle = "Honorar";
         media="(min-width: 600px)"
       />
       <img
-        src="/images/button-orange-narrow.webp"
-        width="236"
-        height="236"
-        alt="sozialamt"
+        src="/images/button-orange-100x100.png"
+        width="100"
+        height="100"
+        alt="Sozialamt"
         aria-label="Sozialamt Bildung und Teilhabe"
       />
     </picture>
     <p>
+      Gutschein Coupons erhalten bei    
       <a
         class="normal-links"
         href="https://www.nuernberg.de/internet/sozialamt/bildung_und_teilhabe.html"
         rel="noopener noreferrer noopener noopener"
         target="_blank"
         class="link-blue"
-        >Leistungen für Bildung und Teilhabe Nürnberg
+        >Leistungen für Bildung und Teilhabe Nürnberg.
       </a>
     </p>
-  </section>
 </BaseLayout>
 
 <style>
@@ -119,7 +129,7 @@ const pageTitle = "Honorar";
   .item-3 {
     flex: 50%;
   }
-
+  /*
   #honorar {
     display: block;
     width: 100%;
@@ -128,12 +138,19 @@ const pageTitle = "Honorar";
     padding: 1.5rem;
     font-style: normal;
   }
-
-  #honorar picture img {
-    max-width: 25%;
+  
+  #honorar img {
+    width: 50%;
     height: auto;
     box-shadow: 0px 0px 10px 5px #4c4948;
     border-radius: 0.313rem;
     margin-left: 15%;
+  } */
+
+  .container.item img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 0px 10px 5px #4c4948;
+    border-radius: 0.313rem;
   }
 </style>
