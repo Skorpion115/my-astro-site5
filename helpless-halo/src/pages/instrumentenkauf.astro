@@ -39,7 +39,7 @@ const pageTitle = "Tips zum Instrumentenkauf";
           </tr>
           <tr>
             <td><a href="#Akkordeon" class="normal-links">Akkordeon</a></td>
-            <td><a href="#banjo" class="normal-links">Banjo</a></td>
+            <td><a href="#Banjo" class="normal-links">Banjo</a></td>
           </tr>
         </table>
       <h2>Akustische Gitarre</h2>
@@ -103,25 +103,6 @@ const pageTitle = "Tips zum Instrumentenkauf";
         Böhm-System. Der Preis für eine Klarinette aus richtigem Holz liegt etwa bei mindestens 790,- EURO. Beim Deutschen-System 
         muß man von insgesamt 33 Töne (also vom e - c3) sieben oder acht Töne unbedingt anders greifen als beim Böhm-System. Also so 
         viel ist das nicht. Man kann also verhältnismäßig leicht auf das andere System umsteigen finde ich.
-      </p>
-      <h3 id="banjo">5-string Banjo</h3>
-      <p>
-        Das 5-string Banjo wird in der Bluegrass Music eingesetzt. Das Banjo unten im Bild zeigt ein Good Times open back Banjo von Deering. 
-        Das heißt hinten ist kein Resonanzkörper mehr dran. Es kostet bei Musikhaus Thomann zur Zeit 575,- €. Es ist ein sehr gutes Instrument. 
-        Das Griffbrett ist breit genug um ordentlich darauf spielen zu können. Von den Billigbanjos so um 90,- € ist abzuraten. Der fünfte 
-        Mechanikwirbel hält die Saite nicht richtig. Oft ist das Griffbrett nicht groß genug und außerdem sind diese Banjos auf der 5. Saite 
-        bundunrein. Das heißt die Töne stimmen einfach nicht mehr wenn man sie spielt. Also lieber etwas mehr Geld ausgeben spart eine 
-        Menge Ärger.
-      </p>
-      <p>
-        <img
-          src={Banjo.src}
-          width={Banjo.width}
-          height={Banjo.height}
-          loading="lazy"
-          alt="Banjo"
-          aria-label="Banjo"
-        />
       </p>
       <h3 id="Querfloete">Querflöte</h3>
       <p>
@@ -202,6 +183,26 @@ const pageTitle = "Tips zum Instrumentenkauf";
       </p>
     </section>
     <section class="artikel artikel-4">
+      <h4 id="Banjo">5-string Banjo</h4>
+      <p>
+        Das 5-string Banjo wird in der Bluegrass Music eingesetzt. Das Banjo unten im Bild zeigt ein Good Times open back Banjo von Deering. 
+        Das heißt hinten ist kein Resonanzkörper mehr dran. Es kostet bei Musikhaus Thomann zur Zeit 575,- €. Es ist ein sehr gutes Instrument. 
+        Das Griffbrett ist breit genug um ordentlich darauf spielen zu können. Von den Billigbanjos so um 90,- € ist abzuraten. Der fünfte 
+        Mechanikwirbel hält die Saite nicht richtig. Oft ist das Griffbrett nicht groß genug und außerdem sind diese Banjos auf der 5. Saite 
+        bundunrein. Das heißt die Töne stimmen einfach nicht mehr wenn man sie spielt. Also lieber etwas mehr Geld ausgeben spart eine 
+        Menge Ärger.
+      </p>
+      <p>
+        <img
+          src={Banjo.src}
+          width={Banjo.width}
+          height={Banjo.height}
+          loading="lazy"
+          alt="Banjo"
+          aria-label="Banjo"
+        />
+      </p>
+      <hr>
       <h4 id="Klavier">Klavier</h4>
       <p>
         Ein neues Klavier gibt es schon ab 2500,- EUR zu kaufen. Es sind dann
@@ -402,7 +403,7 @@ const pageTitle = "Tips zum Instrumentenkauf";
     border-radius: 0.313rem;
   }
 
-  /* Bilder vom Klavier */
+  /* Bilder von Banjo, Klavier */
   .artikel.artikel.artikel-4 img {
     width: 50%;
     height: auto;
