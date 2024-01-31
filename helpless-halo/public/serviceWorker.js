@@ -9,7 +9,7 @@ const assets = [
   "/danke-seite/",
   "/contact_4/",
   "/honorar/",
-  "/musikunterricht/",
+  "/leistungen/",
   "/faq/",
   "/download/",
   "/harmonielehre/",

@@ -1,33 +1,61 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 export const prerender = true;
-const pageTitle = "Instrumenten Angebot";
+const pageTitle = "Leistungen";
 ---
 
 <BaseLayout
   pageTitle={pageTitle}
   description="Unter Musikunterricht habe ich alle Instrumente aufgelistet die unterrichtet werden. 🤓"
   keywords="instrumenten angebot, klavier, keyboard, gitarre, e-bass, e-gitarre, banjo, akkordeon, saxophon, klarinette, querfloete"
-  href="https://www.musicstudio-ziebart.de/musikunterricht/"
+  href="https://www.musicstudio-ziebart.de/leistungen/"
 >
-  <section id="musikunterricht">
-    <h2>Wählen Sie ihr Wunschinstrument aus!</h2>
+  <section id="leistungen">
+    <h2>Instrumenten Angebot</h2>
     <article>
-      <div class="dropdown">
-        <button class="dropbtn">Instrumenten Auswahl</button>
-        <div class="dropdown-content">
-          <a href="/klavier/">Klavier</a>
-          <a href="/keyboard/">Keyboard</a>
-          <a href="/gitarre/">Gitarre</a>
-          <a href="/e-bass/">E-Bass</a>
-          <a href="/e-gitarre/">E-Gitarre</a>
-          <a href="/banjo/">Banjo</a>
-          <a href="/akkordeon/">Akkordeon</a>
-          <a href="/saxophon/">Saxophon</a>
-          <a href="/klarinette/">Klarinette</a>
-          <a href="/querfloete/">Querflöte</a>
-        </div>
-      </div>
+      <h2>Naturinstrumente</h2>
+      <p>Ich gebe Musikunterricht für folgende Instrumente:</p>
+      <h3>Naturinstrumente</h3>
+      <ul>
+        <li>
+          <a href="/klavier/" class="normal-links"> Klavierunterricht</a>
+        </li>
+        <li>
+          <a href="/akkordeon/" class="normal-links">Akkordeon Unterricht</a>
+        </li>
+        <li>
+          <a href="/gitarre/" class="normal-links">Gitarrenunterricht</a>
+        <li>
+          <a href="/saxophon/" class="normal-links">Saxophonunterricht</a>
+        </li>
+        <li>
+          <a href="/klarinette/" class="normal-links">Klarinetteunterricht</a>
+        </li>
+        <li>
+          <a href="/querfloete/" class="normal-links">Querflöten Unterricht</a>
+        </li>
+        <li>
+          Blockflöten Unterricht
+        </li>
+        <li>
+          <a href="/banjo/" class="normal-links">Banjounterricht</a>
+        </li>
+        <li>Bongos Unterricht</li>
+      </ul>
+      <h4>Elektromechanische Instrumente</h4>
+      <ul>
+        <li>
+          <a href="/keyboard/" class="normal-links">Keyboardunterricht</a>
+        </li>
+        <li>
+          <a href="/e-gitarre/" class="normal-links">E-Gitarren Unterricht</a>
+        </li>
+        <li>Jazz Guitar Unterricht</li>
+        <li>Jazzharmonielehre</li>
+        <li>
+          <a href="/e-bass/" class="normal-links">Bassunterricht</a>
+        </li>
+      </ul>
       <p>
         Mehr Information über die einzelnen Instrumente bekommen Sie oben aus
         der Dropdown Liste!
@@ -40,7 +68,7 @@ const pageTitle = "Instrumenten Angebot";
 </BaseLayout>
 
 <style>
-  #musikunterricht {
+  #leistungen {
     display: block;
     width: 96%;
     max-width: 100%;
@@ -49,7 +77,7 @@ const pageTitle = "Instrumenten Angebot";
     font-style: normal;
   }
 
-  #musikunterricht article {
+  #leistungen article {
     display: inline-block;
     margin: 2rem auto;
     text-align: left;
@@ -105,5 +133,14 @@ const pageTitle = "Instrumenten Angebot";
 
   .dropdown:hover .dropbtn {
     background-color: green;
+  }
+
+  #leistungen ul li {
+    height: 3rem;
+    /* oben und unten 0.3rem, rechts und links 1.875rem */
+    padding: 0.3rem 0.1rem;
+    font-size: large;
+    /* Keine Punkte vor den Ul's */
+    list-style-type: none;
   }
 </style>
