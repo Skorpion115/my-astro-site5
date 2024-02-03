@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Teschner from "../../public/images/teschner-wide.webp";
-import Sor from "../../public/images/sor-wide.webp";
+import Teschner from "../../public/gitarrenunterricht/teschner-gitarrenschule.webp";
+import Sor from "../../public/gitarrenunterricht/sor-gitarrenschule.webp";
 import YouTube from "../components/YouTube.astro";
 import "../styles/lite-yt-embed.css";
 import Guitar from "../components/Guitar.astro";
@@ -17,18 +17,14 @@ const pageTitle = "Gitarrenunterricht";
 >
   <section>
     <p>
-      Hier ist mein neuesten Video für Akustikgitarre. Yesterday von den
+      Hier ist mein neuestes Gitarren Tutorial für Akustikgitarre. Yesterday von den
       Beatles!
     </p>
-    <h2>Yesterday - Beatles</h2>
-    <div class="video-container-wrapper">
-      <div class="video-container">
-        <lite-youtube videoid="oqko5Mk_UBk" style="background-image: url('https://i.ytimg.com/vi/oqko5Mk_UBk/hqdefault.jpg');">
-          <a href="https://www.youtube.com/embed/vxX0WiQhSUE?si=oqko5Mk_UBk" class="lty-playbtn" title="Beatles - Yesterday Gitarre Tutorial">
-            <span class="lyt-visually-hidden">Play Video: Keynote (Google I/O '18)</span>
-          </a>
-          </lite-youtube>  
-      </div>
+    <div itemscope itemtype="https://schema.org/Movie">
+      <h2 itemprop="name" >Yesterday</h2>
+      <span>Komponist: <span itemprop="director" >Beatles</span> Das Stück kann man gut alleine spielen! </span>
+      <span itemprop="genre" >Pop-Musik</span><a href="https://www.youtube.com/watch?v=oqko5Mk_UBk" itemprop="video" >
+        Video</a>
     </div>
     <p>
       Ein schönes Beispiel für ein Fingerpicking mit Gitarre und Gesang: Ich
@@ -52,8 +48,8 @@ const pageTitle = "Gitarrenunterricht";
           src={Teschner.src}
           width={Teschner.width}
           height={Teschner.height}
-          alt="Teschner Gitarrenschule Fridolin"
-          aria-label="Teschner Gitarrenschule Fridolin"
+          alt="Bild SEO Teschner Gitarrenschule Fridolin"
+          aria-label="Bild SEO Teschner Gitarrenschule Fridolin"
         />
       </p>
       <br />
@@ -74,8 +70,8 @@ const pageTitle = "Gitarrenunterricht";
           src={Sor.src}
           width={Sor.width}
           height={Sor.height}
-          alt="Ferdinand Sor Etüden"
-          aria-label="Ferdinand Sor Etüden"
+          alt="Bild SEO Ferdinand Sor Etüden"
+          aria-label="Bild SEO Ferdinand Sor Etüden"
         />
       </p>
       <h2>Fernando Sor Opus 35, Opus 31</h2>
