@@ -95,6 +95,11 @@ p {
   padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 }
 
+/* Headerabstand von links */
+header span {
+  font-size: 0.9rem;
+  font-style: italic;
+}
 /* ANCHOR button Formatierung */
 
 button {
