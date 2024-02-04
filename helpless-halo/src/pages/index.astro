@@ -2,8 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Card from "../components/Card.astro";
 import Musikunterricht from "../../public/musikunterricht/musikunterricht.webp";
-// import Rudi from "../../public/images/rudi-wide.webp";
-// import Anruf from "../../public/images/anruf-192x192.png";
+import Anruf from "../../public/images/anruf-192x192.png";
 export const prerender = true;
 const pageTitle = "Musikunterricht";
 ---
@@ -33,25 +32,6 @@ const pageTitle = "Musikunterricht";
     <div class="foo">Das ist ein Template das siehst du nicht in HTML</div>
   </template>
   <br />
-  <!--
-  <div id="titelbild">
-    <picture>
-      <source
-        srcset="/images/piano_960.webp"
-        width="960"
-        height="540"
-        media="(min-width: 600px)"
-        aria-label="Piano"
-      />
-      <img
-        src="/images/piano_480.webp"
-        width="480"
-        height="270"
-        alt="Piano"
-        aria-label="Piano"
-      />
-    </picture>
-  </div> -->
   <br />
   <article class="conteneur">
     <section class="marchandise marchandise-1">
@@ -216,15 +196,14 @@ const pageTitle = "Musikunterricht";
           body="Kurze Mitteilung an mich!"
         />
       </ul>
-      <hr />
-      <!--
+      <hr />     
       <img
         src={Anruf.src}
         width={Anruf.width}
         height={Anruf.height}
-        alt="Telefonhörer"
-        aria-label="Telefonhörer"
-      /> -->
+        alt="Bild Telefonhörer"
+        aria-label="Bild Telefonhörer"
+      />
       <p>
         Telefon:
         <a href="tel:+499116320890" class="normal-links">+49 (0)911 6320890</a> 0911/6320890
@@ -251,14 +230,6 @@ const pageTitle = "Musikunterricht";
       <hr />
       <p>ÖFFNUNGSZEITEN:</p>
       <p>Montag - Freitag 14.00 - 19.00 Uhr</p>
-      <!--
-      <img
-        src={Rudi.src}
-        width={Rudi.width}
-        height={Rudi.height}
-        alt="Bild von mir"
-        aria-label="Bild von mir"
-      /> -->
       <p>
         Powered by <a href="https://astro.build" class="normal-links"
           >{Astro.generator}</a
@@ -289,15 +260,15 @@ const pageTitle = "Musikunterricht";
     font-size: 1rem;
   }
 
-  /* ANCHOR Anfangsbild */
-  /*
-  #titelbild picture img {
-    max-width: 100%;
+  /* ANCHOR Responsives Titelbild bei Index */
+
+  img {
+    width: 100%;
     height: auto;
+    margin-left: 1%;
     box-shadow: 0px 0px 10px 5px #4c4948;
     border-radius: 0.313rem;
-    margin-left: 3%;
-  } */
+  }
 
   /* ANCHOR Hauptseite */
   .conteneur {
@@ -325,25 +296,14 @@ const pageTitle = "Musikunterricht";
   .marchandise-2 {
     flex: 1;
   }
-
-  /* ANCHOR Responsives Titelbild bei Index */
-
-  img {
-    width: 100%;
-    height: auto;
-    margin-left: 1%;
-    box-shadow: 0px 0px 10px 5px #4c4948;
-    border-radius: 0.313rem;
-  }
   
-
   /* Card Position*/
 
   .marchandise-2 .link-card-grid {
     padding: 0.5rem;
   }
 
-  /* Balken für Klavierunterricht usw.*/
+  /* Balken für Klavierunterricht Link usw.*/
 
   .marchandise-1 ul {
     padding-right: 3rem;
@@ -361,7 +321,7 @@ const pageTitle = "Musikunterricht";
   }
 
   /* ANCHOR Bilder von marchandise-2 */
-  /*
+  
   .marchandise.marchandise-2 img {
     max-width: 30%;
     height: auto;
@@ -371,5 +331,5 @@ const pageTitle = "Musikunterricht";
     margin-top: 1.25rem;
     margin-left: 1rem;
     margin-right: 3rem;
-  } */
+  }
 </style>
