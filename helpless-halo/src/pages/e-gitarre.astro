@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Scheinhuette from "../../public/images/scheinhuette-narrow.webp";
+import Scheinhuette from "../../public/e-gitarrenunterricht/scheinhuette-e-gitarrenschule.webp";
 import YouTube from "../components/YouTube.astro";
 import "../styles/lite-yt-embed.css";
 export const prerender = true;
@@ -14,16 +14,25 @@ const pageTitle = "E-Gitarrenunterricht";
   href="https://www.musicstudio-ziebart.de/e-gitarre/"
 >
   <section>
-    <p>Ten Words - Jo Satriani</p>
-      <div class="video-container-wrapper">
-        <div class="video-container">
-          <lite-youtube videoid="8ucTzPOBzAo" style="background-image: url('https://i.ytimg.com/vi/8ucTzPOBzAo/hqdefault.jpg');">
-            <a href="https://www.youtube.com/embed/vxX0WiQhSUE?si=8ucTzPOBzAo" class="lty-playbtn" title="Joe Satriani - Ten Words Guitar Lesson+Tab">
-              <span class="lyt-visually-hidden">Play Video: Keynote (Google I/O '18)</span>
-            </a>
-            </lite-youtube>  
-        </div>
+    <h2>Ten Words - Jo Satriani</h2>
+    <div class="video-container-wrapper">
+      <div class="video-container">
+        <lite-youtube
+          videoid="8ucTzPOBzAo"
+          style="background-image: url('https://i.ytimg.com/vi/8ucTzPOBzAo/hqdefault.jpg');"
+        >
+          <a
+            href="https://www.youtube.com/embed/vxX0WiQhSUE?si=8ucTzPOBzAo"
+            class="lty-playbtn"
+            title="Joe Satriani - Ten Words Guitar Lesson+Tab"
+          >
+            <span class="lyt-visually-hidden"
+              >Play Video: Keynote (Google I/O '18)</span
+            >
+          </a>
+        </lite-youtube>
       </div>
+    </div>
     <article>
       <h2>Schule der Rockgitarre, Andreas Scheinhütte</h2>
       <p>
@@ -31,8 +40,8 @@ const pageTitle = "E-Gitarrenunterricht";
           src={Scheinhuette.src}
           width={Scheinhuette.width}
           height={Scheinhuette.height}
-          alt="E-Gitarrenschule von Andreas Scheinhuette"
-          aria-label="E-Gitarrenschule von Andreas Scheinhütte"
+          alt="Bild SEO E-Gitarrenschule von Andreas Scheinhuette"
+          aria-label="Bild SEO E-Gitarrenschule von Andreas Scheinhütte"
         />
       </p>
       <p>
