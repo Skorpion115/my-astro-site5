@@ -1,11 +1,10 @@
 ---
 import ExternalScripts from "../components/ExternalScripts.astro";
 import Gtm from "../components/Gtm.astro";
-import { ViewTransitions } from "astro:transitions";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
-const { pageTitle, description, keywords, href, url } = Astro.props;
+const { pageTitle, description, keywords, href } = Astro.props;
 const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
 ---
 
@@ -24,7 +23,6 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
     <meta name="date" content="22.01.2024" />
     <meta name="description" content={description} />
     <meta name="keywords" content={keywords} />
-    <meta property="og:url" content={url} />
     <link rel="canonical" href={href} />
     {
       googleSiteVerification && (
@@ -57,8 +55,6 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
     <ExternalScripts />
     
     <Gtm />
-    
-    <ViewTransitions />
     
   </head>
   <body>
