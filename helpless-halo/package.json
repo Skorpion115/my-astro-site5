@@ -18,6 +18,7 @@
     "astro": "^4.2.3",
     "preact": "^10.16.0",
     "toml": "^3.0.0",
+    "typescript": "^5.3.3",
     "yaml": "^2.3.2"
   },
   "engines": {
@@ -25,7 +26,6 @@
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.8.1",
-    "@playwright/test": "^1.39.0",
     "@types/node": "^20.8.9"
   }
 }
