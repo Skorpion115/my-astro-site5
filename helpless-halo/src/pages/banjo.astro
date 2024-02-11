@@ -14,8 +14,8 @@ const pageTitle = "Banjounterricht für 5-string Banjo";
   keywords="banjounterricht, flint hill special - earl scruggs, train 45, cripple creek, beginner banjo, 5-string banjo, bluegrass banjo, ruediger helbig, banjo lernen deutsch, banjo unterricht, banjo workshop, banjounterricht in eibach, banjolehrer nürnberg, banjo spielen ohne noten, banjo kurs, bluegrass banjo lernen, banjounterricht für anfänger, banjo lernen, banjo für anfänger, banjolehrer, banjo workshop, 5-string banjo lernen, banjo anfänger, banjo picker, banjo lessons, banjo open back"
   href="https://www.musicstudio-ziebart.de/banjo/"
 >
-  <section>
-    <article>
+  <article>
+    <section>
       <p>Mein neuestes Video!</p>
       <h2>Flint Hill Special - Earl Scruggs</h2>
       <div class="video-container-wrapper">
@@ -78,8 +78,10 @@ const pageTitle = "Banjounterricht für 5-string Banjo";
       </div>
       <br />
       <hr />
+    </section>
+    <section>
       <p>Rüdiger Helbig</p>
-      <h2>Beginner Banjo</h2>
+      <h2>Banjounterricht mit Beginner Banjo</h2>
       <p>
         <img
           src={Helbig.src}
@@ -107,6 +109,8 @@ const pageTitle = "Banjounterricht für 5-string Banjo";
       <br />
       <br />
       <hr />
+    </section>
+    <section>
       <p>Sebastian Schröder</p>
       <h2>Banjo spielen!</h2>
       <p>
@@ -140,7 +144,7 @@ const pageTitle = "Banjounterricht für 5-string Banjo";
           target="_blank"
           class="normal-links">ansehen</a
         >
-         und
+        und
         <a href="/Songs/Skip_To_My_Lou.mp3" target="_blank" class="normal-links"
           >anhören</a
         >
@@ -155,15 +159,14 @@ const pageTitle = "Banjounterricht für 5-string Banjo";
       <p>
         <a href="/leistungen/" class="normal-links">zurück</a>
       </p>
-    </article>
-  </section>
-  
+    </section>
+  </article>
 </BaseLayout>
 
 <YouTube />
 
 <style>
-  section article img {
+  article section img {
     max-width: 30%;
     height: auto;
     box-shadow: 0px 0px 10px 5px #4c4948;
