@@ -30,7 +30,13 @@ export default defineConfig({
     // Beispiel: Argumente an eine Integration übergeben
     sitemap({
       filter: (page) =>
-        page !== "https://www.musicstudio-ziebart.de/pupils-download/",
+        page !== "https://www.musicstudio-ziebart.de/tags/" && 
+        page !== "https://www.musicstudio-ziebart.de/pupils-download/" &&
+        page !== "https://www.musicstudio-ziebart.de/instrumentenkauf/" &&
+        page !== "https://www.musicstudio-ziebart.de/faq/" &&
+        page !== "https://www.musicstudio-ziebart.de/download/" &&
+        page !== "https://www.musicstudio-ziebart.de/harmonielehre/" &&
+        page !== "https://www.musicstudio-ziebart.de/impressum/",
         changefreq: "weekly",
         entryLimit: 10000,
         lastmod: new Date("2023-01-06"),
