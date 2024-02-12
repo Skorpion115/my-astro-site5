@@ -94,9 +94,10 @@ p {
   text-align: start;
   padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 }
+/* ANCHOR Headerabstand von links */
 
-/* Headerabstand von links */
-header span {
+.author {
+  padding: 0.5rem 0.9rem;
   font-size: 0.9rem;
   font-style: italic;
 }
