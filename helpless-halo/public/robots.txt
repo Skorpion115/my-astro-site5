@@ -1,7 +1,7 @@
 User-agent: *
-Disallow:
+Allow: /
 
 User-agent: Googlebot
-Disallow:
+Allow: /
 
 Sitemap: https://www.musicstudio-ziebart.de/sitemap-index.xml
