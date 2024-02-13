@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Disallow: /images/oberdaempfer-narrow.webp
+
+Sitemap: https://www.musicstudio-ziebart.de/sitemap-index.xml
