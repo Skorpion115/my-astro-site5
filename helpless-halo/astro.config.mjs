@@ -36,7 +36,12 @@ export default defineConfig({
         page !== "https://www.musicstudio-ziebart.de/faq/" &&
         page !== "https://www.musicstudio-ziebart.de/download/" &&
         page !== "https://www.musicstudio-ziebart.de/harmonielehre/" &&
-        page !== "https://www.musicstudio-ziebart.de/impressum/",
+        page !== "https://www.musicstudio-ziebart.de/impressum/" &&
+        page !== "https://www.musicstudio-ziebart.de/tags/banjounterricht/" &&
+        page !== "https://www.musicstudio-ziebart.de/tags/blogging/" &&
+        page !== "https://www.musicstudio-ziebart.de/tags/erfolge/" &&
+        page !== "https://www.musicstudio-ziebart.de/tags/gitarrenunterricht/" &&
+        page !== "https://www.musicstudio-ziebart.de/tags/astro/",
         changefreq: "weekly",
         entryLimit: 10000,
         lastmod: new Date("2023-01-06"),
