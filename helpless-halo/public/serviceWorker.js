@@ -24,7 +24,7 @@ const assets = [
   "/saxophon/",
   "/pupils-download/",
   "/querfloete/",
-  "/klarinette/"
+  "/klarinettenunterricht/"
 ];
 const cacheTypes = ["body", "font", "image"];
 const cacheVersion = "_v3";
