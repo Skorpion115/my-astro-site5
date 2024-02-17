@@ -1,5 +1,9 @@
-Sitemap: https://www.musicstudio-ziebart.de/sitemap-index.xml
-
 User-agent: *
 
-disallow: /pupils-download/
+Allow: /
+
+User-agent: Googlebot
+
+Allow: /
+
+Sitemap: https://www.musicstudio-ziebart.de/sitemap-index.xml
