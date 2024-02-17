@@ -18,7 +18,7 @@ const assets = [
   "/keyboardunterricht/",
   "/gitarrenunterricht/",
   "/e-bassunterricht/",
-  "/e-gitarreunterricht/",
+  "/e-gitarrenunterricht/",
   "/banjounterricht/",
   "/akkordeonunterricht/",
   "/saxophonunterricht/",
