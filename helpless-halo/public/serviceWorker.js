@@ -23,7 +23,7 @@ const assets = [
   "/akkordeonunterricht/",
   "/saxophonunterricht/",
   "/pupils-download/",
-  "/querfloeteunterricht/",
+  "/querfloetenunterricht/",
   "/klarinettenunterricht/"
 ];
 const cacheTypes = ["body", "font", "image"];
