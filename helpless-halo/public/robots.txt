@@ -2,8 +2,12 @@ User-agent: *
 
 Allow: /
 
+Disallow: /pupils-download/
+
 User-agent: Googlebot
 
 Allow: /
+
+Disallow: /pupils-download/
 
 Sitemap: https://www.musicstudio-ziebart.de/sitemap-index.xml
