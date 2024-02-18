@@ -1,0 +1,133 @@
+---
+import Instrumente from "../components/Instrumente.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+export const prerender = true;
+const pageTitle = "Unterrichtsangebot bei Musicstudio Ziebart";
+---
+
+<BaseLayout
+  pageTitle={pageTitle}
+  description="Unter Musikunterricht habe ich alle Instrumente aufgelistet die unterrichtet werden. 🤓"
+  keywords="unterrichtsangebot bei Musicstudio Ziebart, klavier, keyboard, gitarre, e-bass, e-gitarre, banjo, akkordeon, saxophon, klarinette, querfloete"
+  href="https://www.musicstudio-ziebart.de/leistungen/"
+>
+  <article id="unterricht">
+    <h2>Musikunterricht  in Nürnberg der viel Freude bereitet!</h2>
+    <section>
+      <p>
+        Ich biete einen Einzelunterricht und einen Gruppenunterricht an. Der Gruppenunterricht beträgt 
+        nur 2 Personen. Falls mal Geschwister kommen dann ist der Anfahrtsweg nicht so groß.
+      </p>
+      <p>
+        Der Musikunterricht ist sowohl für Kinder, Jugendliche und Erwachsene. Man muss halt das 
+        Unterrichtsmaterial entsprechend dazu anpassen. Kinder lernen im allgemeinen leichter. Trozdem 
+        können natürlich auch Erwachsene von dem Unterricht profitieren. Die Erwachsenen müssen ja auch 
+        in ihrem Beruf sich oft weiter bilden. Bei mir ist es so das ich Kinder im Alter von ca. 8 Jahren bekomme. 
+        Manche bleiben dann so bis ca. 15 Jahre bei mir. Dann geht das Berufsleben für sie los und sie haben 
+        einfach nicht mehr die Zeit um sich um die Musik zu kümmern. Ja das ist leider mal so.
+      </p>
+      <p>
+        Deswegen ist es wichtig als Kind oder Jugendlicher mit dem Musik spielen anzufangen sonst ist die Zeit schnell vorbei 
+        und man muss sich um andere Dinge kümmern.
+      </p>
+      <h3>Wer möchte kann zu dem Gitarrenunterricht auch singen</h3>
+      <p>
+        Ich mache nur Instrumental Unterricht. Bei Gitarrenunterricht wird aber auch dazu gesungen, aber nur wer möchte. Also ich singe 
+        dann gerne auch dazu. Bei Popmusik wird halt dazu gesungen und das ist auch gut so. Wir singen dann oft zwei stimmig wenn es nötig ist. 
+        Die Schüler singen die erste Stimme und ich die zweite Stimme und spiele dann meistens nur mit einem Bass dazu. Das kommt immer gut an. 
+        Auf jeden Fall ist es dann Live Musik und muss nicht immer ständig mit diesen Backing Tracks spielen, das nicht so gut ankommt. Kann aber 
+        bei der E-Gitarre ganz nüztlich sein. Ein E-Gitarrensolo zu spielen ohne Begleitung klingt halt nicht gut. Da sind die Backing Tracks sehr 
+        nützlich.
+      </p>
+      <h3>Ob Anfänger oder Fortgeschrittene ist egal</h3>
+      <p>
+        Ob Anfänger oder Fortgeschrittene ist egal. Die meisten Schüler die ich bekomme sind Anfänger. Aber ich gebe auch sehr gerne für 
+        Fortgeschrittene Musiker und Musikerinen den Musikunterricht. Mir macht es dann sogar noch mehr Spaß da dann auch was raus kommt. Bei den 
+        Bei den Anfängern ist es so das sie mindestens ein Jahr brauchen um dann auch was spielen zu können das nach Musik klingt.
+      </p>
+      <p>
+        Alle Musik Interessierten sind herzlich willkommen!
+      </p>
+      <p>Ich gebe Musikunterricht für folgende Instrumente:</p>
+      <h3>Naturinstrumente</h3>
+      <ul>
+        <li>
+          Info <a href="/klavierunterricht/" class="normal-links"> Klavierunterricht</a>
+        </li>
+        <li>
+          Info <a href="/akkordeonunterricht/" class="normal-links">Akkordeon Unterricht</a>
+        </li>
+        <li>
+          Info <a href="/gitarrenunterricht/" class="normal-links">Gitarrenunterricht</a>
+        <li>
+          Info <a href="/saxophonunterricht/" class="normal-links">Saxophonunterricht</a>
+        </li>
+        <li>
+          Info <a href="/klarinettenunterricht/" class="normal-links">Klarinettenunterricht</a>
+        </li>
+        <li>
+          Info <a href="/querfloetenunterricht/" class="normal-links">Querflöten Unterricht</a>
+        </li>
+        <li>
+          Blockflöten Unterricht
+        </li>
+        <li>
+          Info <a href="/banjounterricht/" class="normal-links">Banjounterricht</a>
+        </li>
+        <li>Bongos Unterricht</li>
+      </ul>
+      <br />
+      <h4>Elektromechanische Instrumente</h4>
+      <ul>
+        <li>
+          Info <a href="/keyboardunterricht/" class="normal-links">Keyboardunterricht</a>
+        </li>
+        <li>
+          Info <a href="/e-gitarrenunterricht/" class="normal-links">E-Gitarren Unterricht</a>
+        </li>
+        <li>Jazz Guitar Unterricht</li>
+        <li>Jazzharmonielehre</li>
+        <li>
+          Info <a href="/e-bassunterricht/" class="normal-links">Bassunterricht</a>
+        </li>
+      </ul>
+      <p>
+        Bei weiteren Fragen die wichtig beim Erwerb eines Instruments sind klicken Sie oben den Button Instrumentenkauf an! 
+        Hier gibt es gute Tips auf was man achten sollte.
+      </p>
+    </section>
+  </article>
+</BaseLayout>
+
+<Instrumente />
+
+<style>
+  #unterricht {
+    display: block;
+    width: 96%;
+    max-width: 100%;
+    padding: 1.5em;
+  }
+
+  #unterricht article {
+    display: inline-block;
+    margin: 2rem auto;
+    text-align: left;
+    width: 100%;
+    vertical-align: top;
+  }
+
+  #unterricht ul {
+    width: auto;
+    margin: auto;
+  }
+
+  #unterricht ul li {
+    height: 5rem;
+    box-shadow: 2px 2px 5px #666;
+    margin-top: 15px;
+    padding: 12px 10px 50px;
+    /* Keine Punkte vor den Ul's */
+    list-style-type: none;
+  }
+</style>
