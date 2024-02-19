@@ -1,17 +1,18 @@
 ---
 import Instrumente from "../components/Instrumente.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Klavierunterricht from "../../public/images/klavierunterricht.png";
 export const prerender = true;
-const pageTitle = "Unterrichtsangebot bei Musicstudio Ziebart";
+const pageTitle = "Unterrichtsangebot von Musicstudio Ziebart";
 ---
 
 <BaseLayout
   pageTitle={pageTitle}
   description="Unter Musikunterricht habe ich alle Instrumente aufgelistet die unterrichtet werden. 🤓"
-  keywords="unterrichtsangebot bei Musicstudio Ziebart, klavier, keyboard, gitarre, e-bass, e-gitarre, banjo, akkordeon, saxophon, klarinette, querfloete"
+  keywords="unterrichtsangebot von Musicstudio Ziebart, klavier, keyboard, gitarre, e-bass, e-gitarre, banjo, akkordeon, saxophon, klarinette, querfloete"
   href="https://www.musicstudio-ziebart.de/leistungen/"
 >
-  <article id="unterricht">
+  <article>
     <h2>Musikunterricht  in Nürnberg der viel Freude bereitet!</h2>
     <section>
       <p>
@@ -50,6 +51,27 @@ const pageTitle = "Unterrichtsangebot bei Musicstudio Ziebart";
       </p>
       <p>Ich gebe Musikunterricht für folgende Instrumente:</p>
       <h3>Naturinstrumente</h3>
+      <p style="text-align: center;">
+        <img
+          src={Klavierunterricht.src}
+          width={Klavierunterricht.width}
+          height={Klavierunterricht.height}
+          alt="Bild SEO Unterrichtangebot von Musicstudio Ziebart-klavierunterricht"
+          aria-label="Bild SEO Unterrichtangebot von Musicstudio Ziebart-klavierunterricht"
+        />
+        Test und noch vieles mehr.
+      </p>
+      <p>
+        Info <a href="/klavierunterricht/" class="normal-links"> Klavierunterricht</a>
+      </p>
+
+      <p style="text-align: center;">
+        <span color="#ff0000">
+          Info <strong>Klavierunterricht</strong>
+        </span>
+      </p>
+      <br />
+      <br />
       <ul>
         <li>
           Info <a href="/klavierunterricht/" class="normal-links"> Klavierunterricht</a>
@@ -102,32 +124,29 @@ const pageTitle = "Unterrichtsangebot bei Musicstudio Ziebart";
 <Instrumente />
 
 <style>
-  #unterricht {
-    display: block;
-    width: 96%;
-    max-width: 100%;
-    padding: 1.5em;
-  }
-
-  #unterricht article {
-    display: inline-block;
-    margin: 2rem auto;
-    text-align: left;
-    width: 100%;
-    vertical-align: top;
-  }
-
-  #unterricht ul {
+  article ul {
     width: auto;
     margin: auto;
   }
 
-  #unterricht ul li {
+  article ul li {
     height: 5rem;
     box-shadow: 2px 2px 5px #666;
     margin-top: 15px;
     padding: 12px 10px 50px;
     /* Keine Punkte vor den Ul's */
     list-style-type: none;
+  }
+
+  /* Bilder für img */
+
+  article img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    float: left;
+    margin-top: 1.25rem;
+    margin-left: 1rem;
+    margin-right: 3rem;
   }
 </style>
