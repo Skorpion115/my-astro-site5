@@ -7,7 +7,7 @@ image:
     url: "https://www.musicstudio-ziebart.de/images/B4_300x141.webp"
     alt: "B4 D-Tuner von Schaller"
 pubDate: 2023-08-15
-tags: ["blogging", "banjounterricht"]
+tags: ["blogging", "banjo"]
 ---
 ## Kann ich die D-Tuner benutzen wenn ein Capotaster gesetzt ist?
 <p>

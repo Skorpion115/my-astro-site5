@@ -7,7 +7,7 @@ image:
     url: "https://www.musicstudio-ziebart.de/images/gold_tone_300x300.webp"
     alt: "Banjo dämpfer"
 pubDate: 2023-10-21
-tags: ["astro", "blogging", "banjounterricht", "erfolge"]
+tags: ["astro", "blogging", "banjo", "erfolge"]
 ---
 ## Gold Tone Dämpfer
 **Geeignet für Gitarre und Banjo**

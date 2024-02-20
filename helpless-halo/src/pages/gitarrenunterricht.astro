@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Gitarrenschule from "../../public/images/gitarrenschule.webp";
 import Teschner from "../../public/images/teschner-gitarrenschule.webp";
 import Sor from "../../public/images/sor-gitarrenschule.webp";
 import YouTube from "../components/YouTube.astro";
@@ -11,53 +12,20 @@ const pageTitle = "Gitarrenunterricht für akustische Gitarre";
 
 <BaseLayout
   pageTitle={pageTitle}
-  description="Ich gebe Gitarrenunterricht 🎸 in nürnberg eibach aller Altersklassen. Klassik, Begleitung und Fingerpicking."
+  description="Ich gebe Gitarrenunterricht 🎸 in N&uuml;rnberg eibach aller Altersklassen. Klassik, Begleitung und Fingerpicking."
   keywords="gitarrenunterricht f&uuml;r akustische gitarre, gitarrenunterricht, gitarre spielen lernen n&uuml;rnberg, fingerpicking, city of neworleans - arlo guthrie, fingerpicking, fridolin, fernando sor opus 35 opus 31, gitarrenunterricht eibach, westerngitarre für anfaenger und erwachsene, gitarre anfaengerkurs, gitarrenschule in n&uuml;rnberg, jetzt anmelden, gitarrenlehrer, gitarrenschule, guitar unterricht, gitarrenunterricht n&uuml;rnberg, gitarre online, gitarren unterricht, gitarre zum lernen, gitarre lernen in n&uuml;rnberg, gitarrenunterricht in der nähe, online gitarrenkurs, gitarre anfaenger, gitarre lernen, gitarre lernen akkorde, gitarrenlehrer n&uuml;rnberg, gitarren kurse, spanische gitarre lernen, klassische gitarre lernen, gitarre fingerpicking, gitarrenunterricht für anfaenger, gitarre spielen, gitarre spielen lernen, unterricht gitarre, musikunterricht gitarre, gitarre spielen lernen, gitarrenkurs, guitar lessons"
   href="https://www.musicstudio-ziebart.de/gitarrenunterricht/"
 >
   <article>
     <p>
-      Hier ist mein neuestes Gitarren Tutorial für Akustikgitarre. Yesterday von
-      den Beatles!
+      <img
+        src={Gitarrenschule.src}
+        width={Gitarrenschule.width}
+        height={Gitarrenschule.height}
+        alt="Bild SEO Gitarrenschule"
+        aria-label="Bild SEO Gitarrenschule"
+      />
     </p>
-    <div itemscope itemtype="https://schema.org/Movie">
-      <h2 itemprop="name">Yesterday</h2>
-      <span
-        >Komponist: <span itemprop="director">Beatles</span> Das Stück kann man gut
-        alleine spielen!
-      </span>
-      <span itemprop="genre">Pop-Musik</span><a
-        href="https://www.youtube.com/watch?v=oqko5Mk_UBk"
-        itemprop="video"
-      >
-        Video</a
-      >
-    </div>
-    <p>
-      Ein schönes Beispiel für ein Fingerpicking mit Gitarre und Gesang: Ich
-      habe mir damals den Song von Arlo Guthrie rausgesucht. Es heißt "City Of
-      NewOrleans". Er selbst spielt übrigens bei diesem Song ein Klavier.
-    </p>
-    <h2>City Of NewOrleans - Arlo Guthrie</h2>
-    <div class="video-container-wrapper">
-      <div class="video-container">
-        <lite-youtube
-          videoid="yEF6e2ZSZ0k"
-          style="background-image: url('https://i.ytimg.com/vi/yEF6e2ZSZ0k/hqdefault.jpg');"
-        >
-          <a
-            href="https://www.youtube.com/embed/vxX0WiQhSUE?si=yEF6e2ZSZ0k"
-            class="lty-playbtn"
-            title="City Of NewOrleans - Arlo Guthrie"
-          >
-            <span class="lyt-visually-hidden"
-              >Play Video: Keynote (Google I/O '18)</span
-            >
-          </a>
-        </lite-youtube>
-      </div>
-    </div>
-    <br />
     <section>
       <h2>Welches Unterrichtsmaterial nimmt man für den Gitarrenunterricht?</h2>
       <p>
@@ -125,6 +93,50 @@ const pageTitle = "Gitarrenunterricht für akustische Gitarre";
           >Mehr Info über die Gitarre</a
         >
       </p>
+    </section>
+    <section>
+      <h2>Videos zum Gitarrenunterricht</h2>
+      <p>
+        Hier ist mein neuestes Gitarren Tutorial für Akustikgitarre. Yesterday von
+        den Beatles!
+      </p>
+      <div itemscope itemtype="https://schema.org/Movie">
+        <h2 itemprop="name">Yesterday</h2>
+        <span
+          >Komponist: <span itemprop="director">Beatles</span> Das Stück kann man gut
+          alleine spielen!
+        </span>
+        <span itemprop="genre">Pop-Musik</span><a
+          href="https://www.youtube.com/watch?v=oqko5Mk_UBk"
+          itemprop="video"
+        >
+          Video</a
+        >
+      </div>
+      <p>
+        Ein schönes Beispiel für ein Fingerpicking mit Gitarre und Gesang: Ich
+        habe mir damals den Song von Arlo Guthrie rausgesucht. Es heißt "City Of
+        NewOrleans". Er selbst spielt übrigens bei diesem Song ein Klavier.
+      </p>
+      <h2>City Of NewOrleans - Arlo Guthrie</h2>
+      <div class="video-container-wrapper">
+        <div class="video-container">
+          <lite-youtube
+            videoid="yEF6e2ZSZ0k"
+            style="background-image: url('https://i.ytimg.com/vi/yEF6e2ZSZ0k/hqdefault.jpg');"
+          >
+            <a
+              href="https://www.youtube.com/embed/vxX0WiQhSUE?si=yEF6e2ZSZ0k"
+              class="lty-playbtn"
+              title="City Of NewOrleans - Arlo Guthrie"
+            >
+              <span class="lyt-visually-hidden"
+                >Play Video: Keynote (Google I/O '18)</span
+              >
+            </a>
+          </lite-youtube>
+        </div>
+      </div>
       <p>
         <a href="/unterricht/" class="normal-links">zurück</a>
       </p>
@@ -135,6 +147,15 @@ const pageTitle = "Gitarrenunterricht für akustische Gitarre";
 <YouTube />
 
 <style>
+  article img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 1.25rem;
+    margin-left: 1rem;
+    margin-right: 3rem;
+  }
+
   article section img {
     max-width: 30%;
     height: auto;
