@@ -2,12 +2,8 @@
 import Instrumente from "../components/Instrumente.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Klavierunterricht from "../../public/images/klavierunterricht.png";
-import Akkordeonunterricht from "../../public/images/akkordeonunterricht.png";
 import Gitarre from "../../public/images/gitarre.png";
 import Saxophonunterricht from "../../public/images/saxophonunterricht.png";
-import Klarinettenunterricht from "../../public/images/klarinettenunterricht.png";
-import Querfloetenunterricht from "../../public/images/querfloetenunterricht.png";
-import Banjounterricht from "../../public/images/banjounterricht.png";
 export const prerender = true;
 const pageTitle = "Unterrichtsangebot von Musicstudio Ziebart";
 ---
@@ -56,50 +52,6 @@ const pageTitle = "Unterrichtsangebot von Musicstudio Ziebart";
         Alle Musik Interessierten sind herzlich willkommen!
       </p>
       <p>Ich gebe Musikunterricht für folgende Instrumente:</p>
-      <h3>Naturinstrumente</h3>
-      <br />
-      <br />
-      <ul>
-        <li>
-          Info <a href="/klavierunterricht/" class="normal-links"> Klavierunterricht</a>
-        </li>
-        <li>
-          Info <a href="/akkordeonunterricht/" class="normal-links">Akkordeon Unterricht</a>
-        </li>
-        <li>
-          Info <a href="/gitarrenunterricht/" class="normal-links">Gitarrenunterricht</a>
-        <li>
-          Info <a href="/saxophonunterricht/" class="normal-links">Saxophonunterricht</a>
-        </li>
-        <li>
-          Info <a href="/klarinettenunterricht/" class="normal-links">Klarinettenunterricht</a>
-        </li>
-        <li>
-          Info <a href="/querfloetenunterricht/" class="normal-links">Querflöten Unterricht</a>
-        </li>
-        <li>
-          Blockflöten Unterricht
-        </li>
-        <li>
-          Info <a href="/banjounterricht/" class="normal-links">Banjounterricht</a>
-        </li>
-        <li>Bongos Unterricht</li>
-      </ul>
-      <br />
-      <h4>Elektromechanische Instrumente</h4>
-      <ul>
-        <li>
-          Info <a href="/keyboardunterricht/" class="normal-links">Keyboardunterricht</a>
-        </li>
-        <li>
-          Info <a href="/e-gitarrenunterricht/" class="normal-links">E-Gitarren Unterricht</a>
-        </li>
-        <li>Jazz Guitar Unterricht</li>
-        <li>Jazzharmonielehre</li>
-        <li>
-          Info <a href="/e-bassunterricht/" class="normal-links">Bassunterricht</a>
-        </li>
-      </ul>
       <p>
         Bei weiteren Fragen die wichtig beim Erwerb eines Instruments sind klicken Sie oben den Button Instrumentenkauf an! 
         Hier gibt es gute Tips auf was man achten sollte.
@@ -108,61 +60,7 @@ const pageTitle = "Unterrichtsangebot von Musicstudio Ziebart";
   </article>
   <article class="conteneur">
     <section class="marchandise marchandise-1">
-      <h2>Naturinstrument</h2>
-      <p>
-        <img
-          src={Klavierunterricht.src}
-          width={Klavierunterricht.width}
-          height={Klavierunterricht.height}
-          alt="Bild SEO Unterrichtangebot von Musicstudio Ziebart-klavierunterricht"
-          aria-label="Bild SEO Unterrichtangebot von Musicstudio Ziebart-klavierunterricht"
-        />
-      </p>
-      <p><a href="/klavierunterricht/" class="normal-links"> Klavierunterricht</a></p>
-      <h2>Klarinettenunterricht</h2>
-      <p>
-        <img
-          src={Klarinettenunterricht.src}
-          width={Klarinettenunterricht.width}
-          height={Klarinettenunterricht.height}
-          alt="Bild SEO Unterrichtangebot von Musicstudio Ziebart-klarinettenunterricht"
-          aria-label="Bild SEO Unterrichtangebot von Musicstudio Ziebart-klarinettenunterricht"
-        />
-      </p>
-      <p><a href="/klavierunterricht/" class="normal-links"> Klarinettenunterricht</a></p>
-      <!--
-      <p style="text-align: center;">
-        <span color="#ff0000">
-          Info <strong>Klavierunterricht2</strong>
-        </span>
-      </p> -->
-    </section>
-    <section class="marchandise marchandise-2">
-      <h2>Akkordeon</h2>
-      <p>
-        <img
-          src={Akkordeonunterricht.src}
-          width={Akkordeonunterricht.width}
-          height={Akkordeonunterricht.height}
-          alt="Bild SEO Unterrichtangebot von Musicstudio Ziebart-Akkordeonunterricht"
-          aria-label="Bild SEO Unterrichtangebot von Musicstudio Ziebart-Akkordeonunterricht"
-        />
-      </p>
-      <p><a href="/akkordeonunterricht/" class="normal-links">Akkordeonunterricht</a></p>
-      <h2>Querfloetenunterricht</h2>
-      <p>
-        <img
-          src={Querfloetenunterricht.src}
-          width={Querfloetenunterricht.width}
-          height={Querfloetenunterricht.height}
-          alt="Bild SEO Unterrichtangebot von Musicstudio Ziebart-Querfloetenunterricht"
-          aria-label="Bild SEO Unterrichtangebot von Musicstudio Ziebart-Querfloetenunterricht"
-        />
-      </p>
-      <p><a href="/querfloetenunterricht/" class="normal-links">Querfloetenunterricht</a></p>
-      </section>
-    <section class="marchandise marchandise-3">
-      <h2>Gitarre</h2>
+      <h2>Saiteninstrumente</h2>
       <p>
         <img
           src={Gitarre.src}
@@ -172,21 +70,53 @@ const pageTitle = "Unterrichtsangebot von Musicstudio Ziebart";
           aria-label="Bild SEO Unterrichtangebot von Musicstudio Ziebart-Gitarre"
         />
       </p>
-      <p><a href="/gitarrenunterricht/" class="normal-links">Gitarrenunterricht</a></p>
-      <h2>Banjounterricht</h2>
+      <div class="dropdown">
+        <button class="dropbtn">Saiteninstrument</button>
+        <div class="dropdown-content">
+          <a href="/gitarrenunterricht/">Gitarrenunterricht</a>
+          <a href="/e-gitarrenunterricht/">E-Gitarrenunterricht</a>
+          <a href="/e-bassunterricht/">E-Bassunterricht</a>
+          <a href="/banjounterricht/">Banjounterricht</a>
+        </div>
+      </div>
+      <p>Jazz Guitar Unterricht</p>
+      <p>Jazz Harmonielehre</p>
+      <p>Info <a href="/gitarrenunterricht/" class="normal-links">Gitarrenunterricht</a></p>
+      <p>Info <a href="/e-gitarrenunterricht/" class="normal-links">E-Gitarrenunterricht</a></a></p>
+      <p>Info <a href="/e-bassunterricht/" class="normal-links">E-Bassunterricht</a></p>
+      <p>Info <a href="/banjounterricht/" class="normal-links">Banjounterricht</p>
+      <!--
+      <p style="text-align: center;">
+        <span color="#ff0000">
+          Info <strong>Klavierunterricht2</strong>
+        </span>
+      </p> -->
+    </section>
+    <section class="marchandise marchandise-2">
+      <h2>Tasteninstrumente</h2>
       <p>
         <img
-          src={Banjounterricht.src}
-          width={Banjounterricht.width}
-          height={Banjounterricht.height}
-          alt="Bild SEO Unterrichtangebot von Musicstudio Ziebart-Banjonunterricht"
-          aria-label="Bild SEO Unterrichtangebot von Musicstudio Ziebart-Banjounterricht"
+          src={Klavierunterricht.src}
+          width={Klavierunterricht.width}
+          height={Klavierunterricht.height}
+          alt="Bild SEO Unterrichtangebot von Musicstudio Ziebart-klavierunterricht"
+          aria-label="Bild SEO Unterrichtangebot von Musicstudio Ziebart-klavierunterricht"
         />
       </p>
-      <p><a href="/banjounterricht/" class="normal-links">Banjounterricht</a></p>
+      <div class="dropdown">
+        <button class="dropbtn">Tasteninstrumente</button>
+        <div class="dropdown-content">
+          <a href="/klavierunterricht/">Klavierunterricht</a>
+          <a href="/keyboardunterricht/">keyboardunterricht</a>
+          <a href="/akkordeonunterricht/">Akkordeonunterricht</a>
+        </div>
+      </div>
+      <p>Info <a href="/klavierunterricht/" class="normal-links">Klavierunterricht</a></p>
+      <p>Info <a href="/keyboardunterricht/" class="normal-links">Keyboardunterricht</a></p>
+      <p>Info <a href="/akkordeonunterricht/" class="normal-links">Akkordeonunterricht</a></p>
     </section>
-    <section class="marchandise marchandise-4">
-      <h2>Saxophonunterricht</h2>
+    <section class="marchandise marchandise-3">
+      <h2>Blasinstrumente</h2>
       <p>
         <img
           src={Saxophonunterricht.src}
@@ -196,7 +126,24 @@ const pageTitle = "Unterrichtsangebot von Musicstudio Ziebart";
           aria-label="Bild SEO Unterrichtangebot von Musicstudio Ziebart-Saxophonunterricht"
         />
       </p>
-      <p><a href="/saxophonnunterricht/" class="normal-links">Saxophonunterricht</a></p>
+      <div class="dropdown">
+        <button class="dropbtn">Blasinstrumente</button>
+        <div class="dropdown-content">
+          <a href="/saxophonunterricht/">Saxophonunterricht</a>
+          <a href="/klarinettenunterricht/">Klarinettenunterricht</a>
+          <a href="/querfloetenunterricht/">Querfloetenunterricht</a>
+        </div>
+      </div>
+      <p>Blockflöte</p>
+      <p>Info <a href="/saxophonunterricht/" class="normal-links">Saxophonunterricht</a></p>
+      <p>Info <a href="/klarinettenunterricht/" class="normal-links">Klarinettenunterricht</a></p>
+      <p>Info <a href="/querfloetenunterricht/" class="normal-links">Querfloetenunterricht</a></p>
+    </section>
+    <section class="marchandise marchandise-4">
+      <h2>Percussion</h2>
+      <p>
+        Bongos
+      </p>
     </section>
   </article>
 </BaseLayout>
@@ -204,6 +151,57 @@ const pageTitle = "Unterrichtsangebot von Musicstudio Ziebart";
 <Instrumente />
 
 <style>
+  /* ANCHOR Dropdown für Instrumente und Hamonielehre */
+  .dropbtn {
+    background-color: red;
+    padding: 0.9rem;
+    margin: 2rem auto;
+    font-size: 1.125rem;
+    border: none;
+    color: #fff;
+    border-radius: 0.313rem;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    font-size: 1.125rem;
+    padding-inline-start: 1rem;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #d3d3d3;
+    z-index: 1;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  }
+
+
+  .dropdown-content a {
+    color: #000;
+    padding: 1.125rem 1.125rem;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #00a4bd;
+    border-bottom: 0.25rem solid rgb(111, 0, 255);
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dropdown:hover .dropbtn {
+    background-color: green;
+  }
+
+  /* ANCHOR Listen ul */
+
   article ul {
     width: auto;
     margin: auto;
