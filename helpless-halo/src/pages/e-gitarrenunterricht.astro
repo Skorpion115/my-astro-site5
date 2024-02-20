@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import ElektoGitarre from "../../public/images/e-gitarrenunterricht.webp";
 import Scheinhuette from "../../public/images/scheinhuette-e-gitarrenschule.webp";
 import YouTube from "../components/YouTube.astro";
 import "../styles/lite-yt-embed.css";
@@ -9,33 +10,45 @@ const pageTitle = "E-Gitarrenunterricht für Rockgitarre";
 
 <BaseLayout
   pageTitle={pageTitle}
-  description="Ich gebe E-Gitarrenunterricht 🎸in n&uuml;rnberg eibach. E-Gitarre für Anfänger. Gerne auch weiterf&uuml;hrende Techniken."
-  keywords="e-gitarrenunterricht f&uuml;r rockgitarre, ten words - jo satriani, schule der rockgitarre, e gitarrenunterricht n&uuml;rnberg, e gitarre für anfaenger, e gitarrenlehrer in n&uuml;rnberg"
+  description="Ich gebe E-Gitarrenunterricht 🎸in nürnberg eibach. E-Gitarre für Anfänger. Gerne auch weiterführende Techniken."
+  keywords="e-gitarrenunterricht für rockgitarre, ten words - jo satriani, schule der rockgitarre, e gitarrenunterricht nürnberg, e gitarre für anfaenger, e gitarrenlehrer in nürnberg"
   href="https://www.musicstudio-ziebart.de/e-gitarrenunterricht/"
 >
   <article>
+    <p>
+      <img
+        src={ElektoGitarre.src}
+        width={ElektoGitarre.width}
+        height={ElektoGitarre.height}
+        alt="Bild SEO E-Gitarrenunterricht für Rockgitarre-e-gitarrenunterricht"
+        aria-label="Bild SEO E-Gitarrenunterricht für Rockgitarre-e-gitarrenunterricht"
+      />
+    </p>
+    <br />
     <section>
-      <h2>Ten Words - Jo Satriani</h2>
-      <div class="video-container-wrapper">
-        <div class="video-container">
-          <lite-youtube
-            videoid="8ucTzPOBzAo"
-            style="background-image: url('https://i.ytimg.com/vi/8ucTzPOBzAo/hqdefault.jpg');"
-          >
-            <a
-              href="https://www.youtube.com/embed/vxX0WiQhSUE?si=8ucTzPOBzAo"
-              class="lty-playbtn"
-              title="Joe Satriani - Ten Words Guitar Lesson+Tab"
-            >
-              <span class="lyt-visually-hidden"
-                >Play Video: Keynote (Google I/O '18)</span
-              >
-            </a>
-          </lite-youtube>
-        </div>
-      </div>
-    </section>
-    <section>
+      <h2>Wie lernt man am besten E-Gitarre spielen?</h2>
+      <p>
+        Man lernt am besten E-Gitarre spielen wenn man vorher schon mal
+        Akustische Gitarre gespielt hat. Wenn man vorher noch kein Instrument
+        gespielt hat macht es auch nichts. Die unten aufgeführte
+        E-Gitarrenschule von Andreas Scheinhütte ist auch für Anfänger
+        aufgebaut.
+      </p>
+      <h3>Kann man sich Gitarre spielen selbst beibringen?</h3>
+      <p>
+        Ja, man kann die Schule auch alleine durch arbeiten aber es ist schon
+        besser einen Gitarrenlehrer bei seiner Seite zu haben der genauestens
+        zeigt wie das ganze funktioniert damit man auch Fortschritte erkennt.
+        Zumindest mal am Anfang!
+      </p>
+      <h3>Ist es einfach E-Gitarre zu lernen?</h3>
+      <p>
+        Im Vergleich zu anderen Instrumenten kann eher mit leicht antworten wenn
+        es sich um die Begleitung mit Powerchords handelt. Gitarrensolos sind
+        dagegen ziemlich schwierig weil sie oft sehr schnell gespielt werden.
+      </p>
+      <h3>Wie schnell kann man E-Gitarre lernen?</h3>
+      <p>2 Jahre würde ich mal mindestens sagen.</p>
       <h2>Schule der Rockgitarre, Andreas Scheinhütte</h2>
       <p>
         <img
@@ -79,14 +92,38 @@ const pageTitle = "E-Gitarrenunterricht für Rockgitarre";
         Auch für Heavy Metal Fans ist diese E-Gitarrenschule unerläßlich meine
         ich. Sie bietet halt den Grundstock für alles.
       </p>
-      <p>
-        Ein tolles Stück um eine E-Gitarre zu respräsentieren ist das Stück von
-        Jo Satriani "Ten Words". Ich habe es mal aufgenommen und auf YouTube
-        gestellt.
-      </p>
-      <p>
-        <a href="/unterricht/" class="normal-links">zurück</a>
-      </p>
+    </section>
+    <section>
+      <section>
+        <h2>Ten Words - Jo Satriani</h2>
+        <p>
+          Ein tolles Stück um eine E-Gitarre zu respräsentieren ist das Stück
+          von Jo Satriani "Ten Words". Ich habe es mal aufgenommen und auf
+          YouTube gestellt.
+        </p>
+
+        <div class="video-container-wrapper">
+          <div class="video-container">
+            <lite-youtube
+              videoid="8ucTzPOBzAo"
+              style="background-image: url('https://i.ytimg.com/vi/8ucTzPOBzAo/hqdefault.jpg');"
+            >
+              <a
+                href="https://www.youtube.com/embed/vxX0WiQhSUE?si=8ucTzPOBzAo"
+                class="lty-playbtn"
+                title="Joe Satriani - Ten Words Guitar Lesson+Tab"
+              >
+                <span class="lyt-visually-hidden"
+                  >Play Video: Keynote (Google I/O '18)</span
+                >
+              </a>
+            </lite-youtube>
+          </div>
+        </div>
+        <p>
+          <a href="/unterricht/" class="normal-links">zurück</a>
+        </p>
+      </section>
     </section>
   </article>
 </BaseLayout>
@@ -94,6 +131,13 @@ const pageTitle = "E-Gitarrenunterricht für Rockgitarre";
 <YouTube />
 
 <style>
+  article img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 1.25rem;
+  }
+
   article section img {
     max-width: 30%;
     height: auto;
