@@ -1,22 +1,32 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Klavier from "../../public/images/klavierunterricht.webp";
 import DP_32B from "../../public/images/DB-32B.webp";
 import Heumann from "../../public/images/heumann-narrow.webp";
 import YouTube from "../components/YouTube.astro";
 import "../styles/lite-yt-embed.css";
 import Piano from "../components/Piano.astro";
 export const prerender = true;
-const pageTitle = "Klavierunterricht Nürnberg | Musicstudio Ziebart";
+const pageTitle = "Klavierunterricht Nürnberg - Musicstudio Ziebart";
 ---
 
 <BaseLayout
   pageTitle={pageTitle}
   description="Ich gebe Klavierunterricht 🎹 in Eibach. Alle Stilrichtungen: Klassik, Unterhaltungsmusik, Ragtime, Film Musik und Popmusik."
-  keywords="klavierunterricht nürnberg, klavierunterricht, klavierunterricht nürnberg, klavier spielen lernen, klavier lernen nürnberg, klavierlehrer nürnberg, klavierschule nürnberg, klavierunterricht in der nähe, klavierstücke schnell spielen"
+  keywords="klavierunterricht n&uuml;rnberg - musicstudio ziebart, klavierunterricht, klavierunterricht n&uuml;rnberg, klavier spielen lernen, klavier lernen n&uuml;rnberg, klavierlehrer n&uuml;rnberg, klavierschule n&uuml;rnberg, klavierunterricht in der naehe, klavierst&uuml;cke schnell spielen"
   href="https://www.musicstudio-ziebart.de/klavierunterricht/"
 >
-  <br />
   <article>
+    <p>
+      <img
+        src={Klavier.src}
+        width={Klavier.width}
+        height={Klavier.height}
+        alt="Bild SEO Klavierunterricht Nürnberg - Musicstudio Ziebart-Klavierunterricht"
+        aria-label="Bild SEO Klavierunterricht Nürnberg - Musicstudio Ziebart-Klavierunterricht"
+      />
+    </p>
+    <br />
     <section>
       <h2>Wann fängt man mit dem Klavierunterricht an?</h2>
       <p>
@@ -161,6 +171,12 @@ const pageTitle = "Klavierunterricht Nürnberg | Musicstudio Ziebart";
 
 <style>
   article img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 1.25rem;
+  }
+  article section img {
     max-width: 30%;
     height: auto;
     box-shadow: 0px 0px 10px 5px #4c4948;
