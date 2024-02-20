@@ -2,6 +2,12 @@
 import Instrumente from "../components/Instrumente.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Klavierunterricht from "../../public/images/klavierunterricht.png";
+import Akkordeonunterricht from "../../public/images/akkordeonunterricht.png";
+import Gitarrenunterricht from "../../public/images/gitarrenunterricht.png";
+import Saxophonunterricht from "../../public/images/saxophonunterricht.png";
+import Klarinettenunterricht from "../../public/images/klarinettenunterricht.png";
+import Querfloetenunterricht from "../../public/images/querfloetenunterricht.png";
+import Banjounterricht from "../../public/images/banjounterricht.png";
 export const prerender = true;
 const pageTitle = "Unterrichtsangebot von Musicstudio Ziebart";
 ---
@@ -51,25 +57,6 @@ const pageTitle = "Unterrichtsangebot von Musicstudio Ziebart";
       </p>
       <p>Ich gebe Musikunterricht für folgende Instrumente:</p>
       <h3>Naturinstrumente</h3>
-      <p style="text-align: center;">
-        <img
-          src={Klavierunterricht.src}
-          width={Klavierunterricht.width}
-          height={Klavierunterricht.height}
-          alt="Bild SEO Unterrichtangebot von Musicstudio Ziebart-klavierunterricht"
-          aria-label="Bild SEO Unterrichtangebot von Musicstudio Ziebart-klavierunterricht"
-        />
-        Test und noch vieles mehr.
-      </p>
-      <p>
-        Info <a href="/klavierunterricht/" class="normal-links"> Klavierunterricht</a>
-      </p>
-
-      <p style="text-align: center;">
-        <span color="#ff0000">
-          Info <strong>Klavierunterricht</strong>
-        </span>
-      </p>
       <br />
       <br />
       <ul>
@@ -119,6 +106,99 @@ const pageTitle = "Unterrichtsangebot von Musicstudio Ziebart";
       </p>
     </section>
   </article>
+  <article class="conteneur">
+    <section class="marchandise marchandise-1">
+      <h2>Naturinstrument</h2>
+      <p>
+        <img
+          src={Klavierunterricht.src}
+          width={Klavierunterricht.width}
+          height={Klavierunterricht.height}
+          alt="Bild SEO Unterrichtangebot von Musicstudio Ziebart-klavierunterricht"
+          aria-label="Bild SEO Unterrichtangebot von Musicstudio Ziebart-klavierunterricht"
+        />
+      </p>
+      <p><a href="/klavierunterricht/" class="normal-links"> Klavierunterricht</a></p>
+      <h2>Klarinettenunterricht</h2>
+      <p>
+        <img
+          src={Klarinettenunterricht.src}
+          width={Klarinettenunterricht.width}
+          height={Klarinettenunterricht.height}
+          alt="Bild SEO Unterrichtangebot von Musicstudio Ziebart-klarinettenunterricht"
+          aria-label="Bild SEO Unterrichtangebot von Musicstudio Ziebart-klarinettenunterricht"
+        />
+      </p>
+      <p><a href="/klavierunterricht/" class="normal-links"> Klavierunterricht</a></p>
+      <!--
+      <p style="text-align: center;">
+        <span color="#ff0000">
+          Info <strong>Klavierunterricht2</strong>
+        </span>
+      </p> -->
+    </section>
+    <section class="marchandise marchandise-2">
+      <h2>Akkordeon</h2>
+      <p>
+        <img
+          src={Akkordeonunterricht.src}
+          width={Akkordeonunterricht.width}
+          height={Akkordeonunterricht.height}
+          alt="Bild SEO Unterrichtangebot von Musicstudio Ziebart-Akkordeonunterricht"
+          aria-label="Bild SEO Unterrichtangebot von Musicstudio Ziebart-Akkordeonunterricht"
+        />
+      </p>
+      <p><a href="/akkordeonunterricht/" class="normal-links">Akkordeonunterricht</a></p>
+      <h2>Querfloetenunterricht</h2>
+      <p>
+        <img
+          src={Querfloetenunterricht.src}
+          width={Querfloetenunterricht.width}
+          height={Querfloetenunterricht.height}
+          alt="Bild SEO Unterrichtangebot von Musicstudio Ziebart-Querfloetenunterricht"
+          aria-label="Bild SEO Unterrichtangebot von Musicstudio Ziebart-Querfloetenunterricht"
+        />
+      </p>
+      <p><a href="/querfloetenunterricht/" class="normal-links">Querfloetenunterricht</a></p>
+      </section>
+    <section class="marchandise marchandise-3">
+      <h2>Gitarrenunterricht</h2>
+      <p>
+        <img
+          src={Gitarrenunterricht.src}
+          width={Gitarrenunterricht.width}
+          height={Gitarrenunterricht.height}
+          alt="Bild SEO Unterrichtangebot von Musicstudio Ziebart-Gitarrennunterricht"
+          aria-label="Bild SEO Unterrichtangebot von Musicstudio Ziebart-Gitarrenunterricht"
+        />
+      </p>
+      <p><a href="/gitarrenunterricht/" class="normal-links">Akkordeonunterricht</a></p>
+      <h2>Banjounterricht</h2>
+      <p>
+        <img
+          src={Banjounterricht.src}
+          width={Banjounterricht.width}
+          height={Banjounterricht.height}
+          alt="Bild SEO Unterrichtangebot von Musicstudio Ziebart-Banjonunterricht"
+          aria-label="Bild SEO Unterrichtangebot von Musicstudio Ziebart-Banjounterricht"
+        />
+      </p>
+      <p><a href="/banjounterricht/" class="normal-links">Banjounterricht</a></p>
+    </section>
+    <section class="marchandise marchandise-4">
+      <h2>Saxophonunterricht</h2>
+      <p>
+        <img
+          src={Saxophonunterricht.src}
+          width={Saxophonunterricht.width}
+          height={Saxophonunterricht.height}
+          alt="Bild SEO Unterrichtangebot von Musicstudio Ziebart-Saxophonnunterricht"
+          aria-label="Bild SEO Unterrichtangebot von Musicstudio Ziebart-Saxophonunterricht"
+        />
+      </p>
+      <p><a href="/saxophonnunterricht/" class="normal-links">Akkordeonunterricht</a></p>
+    </section>
+  </article>
 </BaseLayout>
 
 <Instrumente />
@@ -138,9 +218,44 @@ const pageTitle = "Unterrichtsangebot von Musicstudio Ziebart";
     list-style-type: none;
   }
 
-  /* Bilder für img */
+  /* ANCHOR Instrumenten Angebot */
+  .conteneur {
+    border: 0px solid black;
+    align-content: space-between;
+    width: 94vw;
+    font-style: normal;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    align-content: flex-start;
+  }
 
-  article img {
+  /* Container Inhalt */
+  .marchandise {
+    padding: 0.625rem;
+  }
+
+  /* Kind Elemente */
+  .marchandise-1 {
+    flex: 25%;
+  }
+
+  .marchandise-2 {
+    flex: 25%;
+  }
+
+  .marchandise-3 {
+    flex: 25%;
+  }
+
+  .marchandise-4 {
+    flex: 25%;
+  }
+
+  /* ANCHOR Bilder von marchandise-1 */
+
+  .marchandise.marchandise img {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
