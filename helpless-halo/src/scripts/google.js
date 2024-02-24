@@ -7,3 +7,11 @@ gtag('js', new Date());
 gtag('config', 'GT-5TG3DK3');
 
 gtag('config', 'GT-MR4MFC6');
+
+gtag('consent', 'default', {
+  'ad_storage': 'denied'
+});
+
+dataLayer.push({
+  'event': 'default_consent'
+});
