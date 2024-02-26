@@ -1,4 +1,5 @@
 ---
+import AutoBlock from "../components/AutoBlock.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import FacebookTag from "../components/FacebookTag.astro";
 import Card from "../components/Card.astro";
@@ -253,15 +254,17 @@ const pageTitle = "Musiklehrer erteilt Musikunterricht | Musicstudio Ziebart";
     </article>
 </BaseLayout>
 
+  <AutoBlock />
+
   <FacebookTag />
 
   <script>
     import "../scripts/cookie-banner.js";
   </script>
-             
+   <!--         
   <script is:inline>
     import "../scripts/consent-manager.js";
-  </script>
+  </script> -->
 
       <style>
         /* ANCHOR Überschrift */
