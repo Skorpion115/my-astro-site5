@@ -18,6 +18,14 @@ const pageTitle = "Musiklehrer erteilt Musikunterricht | Musicstudio Ziebart";
     Musicstudio Ziebart<br />
     Staatl. Anerk. Musiklehrer
   </div>
+  <cookie-banner>
+    <h2 slot="title">Music Lesson</h2>
+    <div slot="text">Wir verwenden cookies weil das so ist</div>
+  </cookie-banner>
+
+  <template>
+    <div class="foo">Das ist ein Template das siehst du nicht in HTML</div>
+  </template>
   <p>
     <img
       src={Musikunterricht.src}
@@ -246,8 +254,12 @@ const pageTitle = "Musiklehrer erteilt Musikunterricht | Musicstudio Ziebart";
 </BaseLayout>
 
   <FacebookTag />
-              
+
   <script>
+    import "../scripts/cookie-banner.js";
+  </script>
+             
+  <script is:inline>
     import "../scripts/consent-manager.js";
   </script>
 
