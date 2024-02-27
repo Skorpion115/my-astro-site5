@@ -31,8 +31,8 @@ class CookieBanner extends HTMLElement {
         const template = document.createElement('template');
         template.innerHTML = `
         <div class="cookie-banner ${bannerState}">
-            <slot name="title"><h3>Cookie akzeptieren</h3></slot>
-            <slot name="text"><p>Wir verwenden cookies weil das so ist</p></slot>
+            <slot name="title"><h2>Music Lessons</h2></slot>
+            <slot name="text"><p>Wir verwenden Cookies weil das so ist</p></slot>
             <p class="cookie-sources">
                 <label><input type="checkbox" name="required" disabled checked> Notwendige</label>
                 <label><input type="checkbox" name="statistics">Statistiken</label>

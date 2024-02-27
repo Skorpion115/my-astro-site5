@@ -1,5 +1,5 @@
 ---
-import AutoBlock from "../components/AutoBlock.astro";
+// import AutoBlock from "../components/AutoBlock.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import FacebookTag from "../components/FacebookTag.astro";
 import Card from "../components/Card.astro";
@@ -20,8 +20,8 @@ const pageTitle = "Musiklehrer erteilt Musikunterricht | Musicstudio Ziebart";
     Staatl. Anerk. Musiklehrer
   </div>
   <cookie-banner>
-    <h2 slot="title">Music Lesson</h2>
-    <div slot="text">Wir verwenden cookies weil das so ist</div>
+    <h2 slot="title">Music Lessons</h2>
+    <div slot="text">Wir verwenden Cookies weil das so ist</div>
   </cookie-banner>
 
   <template>
@@ -253,18 +253,18 @@ const pageTitle = "Musiklehrer erteilt Musikunterricht | Musicstudio Ziebart";
       </section>
     </article>
 </BaseLayout>
-
-  <AutoBlock />
+  <!--
+  <AutoBlock />  -->
 
   <FacebookTag />
 
   <script>
     import "../scripts/cookie-banner.js";
   </script>
-   <!--         
+            
   <script is:inline>
     import "../scripts/consent-manager.js";
-  </script> -->
+  </script>
 
       <style>
         /* ANCHOR Überschrift */
