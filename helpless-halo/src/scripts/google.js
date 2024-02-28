@@ -16,6 +16,16 @@ gtag('set', 'allow_ad_personalization_signals', window.gatpadsallowed);
 
 gtag('config', 'GT-5TG3DK3');
 
+window.gatpadsallowed = false;
+ __cmp('getVendorConsents',null,function (x,y)
+       {
+        if("customVendorConsents" in x && "s1" in x.customVendorConsents && x.customVendorConsents["s26"])
+        {
+         window.gatpadsallowed = true;
+        }
+       });
+gtag('set', 'allow_ad_personalization_signals', window.gatpadsallowed);
+
 gtag('config', 'GT-MR4MFC6');
 
 gtag('consent', 'default', {
