@@ -78,16 +78,7 @@ class CookieBanner extends HTMLElement {
             date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
             expires = "; expires=" + date.toUTCString();
         }
-        document.cookie = name + "=_ga" + (value || "GA1.1.1199911903.1705942417") + expires + "; path=/";
-        document.cookie = name + "=_ga" + (value || "GA1.1.2067946100.1709197202") + expires + "; path=/";
-        document.cookie = name + "=_ga" + (value || "GS1.1.1709206879.2.0.1709206885.54.0.0") + expires + "; path=/";
-        document.cookie = name + "=_ga_4BXXKZJZTZ" + (value || "GS1.1.1708941621.188.0.1708941621.0.0.0") + expires + "; path=/";
-        document.cookie = name + "=_ga_B8SKQ9HHPZ" + (value || "GS1.1.1708938966.305.1.1708941621.0.0.0") + expires + "; path=/";
-        document.cookie = name + "=_ga_BDJCJ7JL22" + (value || "GS1.1.1708506758.1.1.1708506861.0.0.0") + expires + "; path=/";
-        document.cookie = name + "=_ga_CXBFDX52C7" + (value || "GS1.1.1709210100.1.0.1709210100.60.0.0") + expires + "; path=/";
-        document.cookie = name + "=_ga_GJH9RGDDP5" + (value || "GS1.3.1708938970.243.1.1708940478.0.0.0") + expires + "; path=/";
-        document.cookie = name + "=_ga_RQXSGJFQ59" + (value || "GS1.3.1708938970.243.1.1708940478.0.0.0") + expires + "; path=/";
-        document.cookie = name + "=_ga_XGLMX9VR0Y" + (value || "GS1.1.1708938966.305.1.1708941621.0.0.400645106") + expires + "; path=/";
+        document.cookie = name + "=" + (value || "") + expires + "; path=/";
     }
 
     getCookie(name) {
