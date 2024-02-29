@@ -78,7 +78,9 @@ class CookieBanner extends HTMLElement {
             date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
             expires = "; expires=" + date.toUTCString();
         }
-        document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        document.cookie = name + "=_ga" + (value || "GA1.1.1199911903.1705942417") + expires + "; path=/";
+        document.cookie = name + "=_ga" + (value || "GA1.1.2067946100.1709197202") + expires + "; path=/";
+        document.cookie = name + "=_ga" + (value || "GS1.1.1709206879.2.0.1709206885.54.0.0") + expires + "; path=/";
     }
 
     getCookie(name) {
