@@ -1,3 +1,5 @@
+import { unchangedTextChangeRange } from "typescript";
+
 class CookieBanner extends HTMLElement {
     shadowRoot;
 
@@ -7,7 +9,7 @@ class CookieBanner extends HTMLElement {
         const cookieAccepted = this.getCookie('cookie.banner.accepted');
         let bannerState = '';
 
-        if (cookieAccepted !== null) {
+        if (cookieAccepted !== undefined) {
             bannerState = 'hidden';
         }
 
