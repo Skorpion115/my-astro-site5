@@ -14,6 +14,7 @@ const assets = [
   "/download/",
   "/harmonielehre/",
   "/impressum/",
+  "/datenschutz/",
   "/klavierunterricht/",
   "/keyboardunterricht/",
   "/gitarrenunterricht/",

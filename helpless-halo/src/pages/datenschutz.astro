@@ -1,0 +1,46 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Erklaerung from "../components/Erklaerung.astro";
+export const prerender = true;
+const pageTitle = "Datenschutzerklärung";
+---
+
+<BaseLayout
+  pageTitle={pageTitle}
+  description="Datenschutz"
+  keywords="datenschutz"
+  href="https://www.musicstudio-ziebart.de/datenschutz/"
+>
+  <h2>Anbieter</h2>
+  <p>
+    Musicstudio Ziebart <br />
+    Gunzenhausener Str. 20 <br />
+    90451 Nürnberg
+  </p>
+  <address>
+    <p>
+      Telefon<br />
+      <a href="tel:+499116320890" class="normal-links">0911 6320890</a>
+    </p>
+  </address>
+  <p>
+    eMail:&nbsp;
+    <a
+      href="mailto:postmaster@musicstudio-ziebart.de"
+      class="normal-links"
+      onfocus="this.blur()"
+      >postmaster@musicstudio-ziebart.de
+    </a>
+    <br>
+    Steuernummer: 218/292/70320 Finanzamt Fürth
+  </p>
+  <h3>Anbieterliste</h3>
+  <br />
+  <div id="cmpvendorlist"></div>
+  <br />
+  <p>
+    <a href="/" class="link-blue">go back!</a>
+  </p>
+</BaseLayout>
+
+<Erklaerung />
