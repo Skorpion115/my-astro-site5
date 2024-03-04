@@ -19,7 +19,10 @@ gtag('config', 'GT-5TG3DK3');
 gtag('config', 'GT-MR4MFC6');
 
 gtag('consent', 'default', {
-  'ad_storage': 'denied'
+  'ad_storage': 'denied',
+  'ad_user_data': 'denied',
+  'ad_personalization': 'denied',
+  'analytics_storage': 'denied'
 });
 
 dataLayer.push({

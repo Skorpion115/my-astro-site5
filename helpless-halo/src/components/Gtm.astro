@@ -11,3 +11,15 @@
     f.parentNode.insertBefore(j, f);
   })(window, document, "script", "dataLayer", "GTM-PWK4LSL");
 </script>
+
+<!-- Create one update function for each consent parameter ist neu -->
+<script>
+  function consentGrantedAdStorage() {
+    gtag('consent', 'update', {
+      'ad_storage': 'granted',
+      'ad_user_data': 'granted',
+      'ad_personalization': 'granted',
+      'analytics_storage': 'granted'
+    });
+  }
+</script>
