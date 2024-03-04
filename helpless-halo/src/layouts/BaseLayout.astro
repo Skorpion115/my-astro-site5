@@ -5,6 +5,7 @@ import Gtm from "../components/Gtm.astro";
 import { ViewTransitions } from "astro:transitions";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import Footer2 from "../components/Footer2.astro";
 import "../styles/global.css";
 const { pageTitle, description, keywords, href } = Astro.props;
 const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
@@ -72,6 +73,7 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
     <h1 transition:animate="slide">{pageTitle}</h1>
     <slot />
     <Footer />
+    <Footer2 />
     <!-- Altes Script von Video angeschaut für ServiceWorker -->
     <script is:inline>
     document.addEventListener("DOMContentLoaded", () => {
