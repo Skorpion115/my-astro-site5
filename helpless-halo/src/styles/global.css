@@ -55,7 +55,7 @@ body {
 h1 {
   margin: 1rem 0;
   font-size: 1.5rem;
-  color: rgb(218, 54, 54);
+  color: #af8848;
   text-align: center;
 }
 
@@ -127,18 +127,18 @@ button:hover {
 /* ANCHOR Darkmode CSS */
 
 html.dark {
-  background-color: #191919;
-  color: #fff;
+  background-color: #222;
+  color: #e2dbdb;
 }
 
 .dark .nav-links a {
-  color: #fff;
+  color: #e2dbdb;
 }
 
 /* ANCHOR Im Dark Modus sind die Links hellgrün geschrieben funktioniert*/
 
 .dark .normal-links {
-  color: #13f270;
+  color: #af8848;
 }
 
 /* ANCHOR nav styles */
