@@ -19,11 +19,15 @@ gtag('config', 'GT-5TG3DK3');
 gtag('config', 'GT-MR4MFC6');
 
 gtag('consent', 'default', {
-  'ad_user_data': 'denied',
-  'ad_personalization': 'denied',
+  // eigene beliebige Consent Bedingung - GA Vorlage deaktiviert
+  //'mbsl.looger' : 'granted',
+  'google_analyrics': 'denied',
+  //'ad_user_data': 'denied',
+  //'ad_personalization': 'denied',
   'ad_storage': 'denied',
   'analytics_storage': 'denied',
   'wait_for_update': 500,
+  // Beispielhaft eigenes Format per Vorgabe aktiv
 });
 dataLayer.push({'gtm.start': new Date().getTime(), 'event': 'gtm.js'
 });
