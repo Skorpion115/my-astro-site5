@@ -3,7 +3,7 @@ function gtag() {
   dataLayer.push(arguments);
 }
 gtag('js', new Date());
-
+// Google Remarketing blockieren
 window.gatpadsallowed = false;
  __cmp('getVendorConsents',null,function (x,y)
        {
