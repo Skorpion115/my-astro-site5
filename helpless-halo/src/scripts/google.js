@@ -12,7 +12,7 @@ window.gatpadsallowed = false;
          window.gatpadsallowed = true;
         }
        });
-gtag('set', 'allow_ad_personalization_signals', window.gatpadsallowed);
+gtag('set', 'allow_ad_personalization_signals', false);
 
 gtag('config', 'GT-5TG3DK3');
 
