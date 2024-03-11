@@ -27,5 +27,7 @@ gtag('consent', 'default', {
   'analytics_storage': 'denied',
   'wait_for_update': 500,
 });
+
 dataLayer.push({'gtm.start': new Date().getTime(), 'event': 'gtm.js'
 });
+
