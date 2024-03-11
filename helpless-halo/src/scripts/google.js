@@ -28,6 +28,11 @@ gtag('consent', 'default', {
   'wait_for_update': 500,
 });
 
-dataLayer.push({'gtm.start': new Date().getTime(), 'event': 'gtm.js'
+dataLayer.push({
+  'event': 'default_consent'
 });
+
+/*
+dataLayer.push({'gtm.start': new Date().getTime(), 'event': 'gtm.js'
+}); */
 
