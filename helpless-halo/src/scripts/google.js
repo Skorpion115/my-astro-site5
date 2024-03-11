@@ -4,7 +4,7 @@ function gtag() {
 }
 gtag('js', new Date());
 // Google Remarketing blockieren
-/*
+
 window.gatpadsallowed = false;
  __cmp('getVendorConsents',null,function (x,y)
        {
@@ -13,13 +13,13 @@ window.gatpadsallowed = false;
          window.gatpadsallowed = true;
         }
        });
-gtag('set', 'allow_ad_personalization_signals', false); */
+gtag('set', 'allow_ad_personalization_signals', false);
 
 gtag('config', 'GT-5TG3DK3');
 
 gtag('config', 'GT-MR4MFC6');
 
-/*
+
 gtag('consent', 'default', {
   'ad_user_data': 'denied',
   'ad_personalization': 'denied',
@@ -28,4 +28,4 @@ gtag('consent', 'default', {
   'wait_for_update': 500,
 });
 dataLayer.push({'gtm.start': new Date().getTime(), 'event': 'gtm.js'
-}); */
+});

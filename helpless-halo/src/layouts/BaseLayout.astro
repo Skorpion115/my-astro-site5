@@ -1,8 +1,8 @@
 ---
-import Blockieren from "../components/Blockieren.astro";
+// import Blockieren from "../components/Blockieren.astro";
 import ExternalScripts from "../components/ExternalScripts.astro";
-// import Gtm from "../components/Gtm.astro";
-import Gtm2 from "../components/Gtm2.astro";
+import Gtm from "../components/Gtm.astro";
+// import Gtm2 from "../components/Gtm2.astro";
 import { ViewTransitions } from "astro:transitions";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
@@ -57,12 +57,12 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
     <meta name="theme-color" content="#191919" />
     
     <ExternalScripts />
-    
-    <Blockieren />
     <!--
-    <Gtm /> --> 
+    <Blockieren /> -->
     
-    <Gtm2 />
+    <Gtm /> 
+    <!--
+    <Gtm2 /> -->
 
     <ViewTransitions />
     
@@ -93,9 +93,7 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
       import "../scripts/menu.js"
     </script>
     
-    <script data-cmp-ab="1">
-      window.cmp_block_inline = false;      //true = blocking of inline scripts
-      window.cmp_block_ignoredomains = ["policies.google.com/privacy","www.consentmanager.net/privacy.php","delivery.consent.manager.net","cdn.consentmanager.net","*.doubleclick.net","doubleclick.net",".doubleclick.net","*.appspot.com","www.musicstudio-ziebart.de","googleads.g.doubleclick.net/pagead/viewthroughconversion/1000620606","www.google.com/recaptcha/api.js","www.gstatic.com/recaptcha/releases/u-xcq3POCWFlCr3x8_IPxgPu/recaptcha__de.js","www.gstatic.com/recaptcha/releases/-QbJqHfGOUB8nuVRLvzFLVed/recaptcha__en.js","google.de","google.com","region1.google-analytics.com","https://www.googletagmanager.com/gtag/","https://www.googletagmanager.com/gtm.js","https://www.googletagmanager.com/gtag/destination","https://www.googletagmanager.com/debug/ba","farfetch.com","*.youtube.com"]; // list of domains that should not be blocked
+    <script class="cmplazyload" data-cmp-vendor="s1,s26,s2612,s135,s1409,s30,s905">
       import "../scripts/google.js";
     </script>
   </body>
