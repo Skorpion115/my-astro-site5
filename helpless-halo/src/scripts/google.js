@@ -25,6 +25,7 @@ gtag('consent', 'default', {
   'ad_personalization': 'denied',
   'ad_storage': 'denied',
   'analytics_storage': 'denied',
+  'third_party_storage': 'denied',
   'wait_for_update': 500,
 });
 
