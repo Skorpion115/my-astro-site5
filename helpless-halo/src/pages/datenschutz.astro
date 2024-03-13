@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Erklaerung from "../components/Erklaerung.astro";
+import Erklaerung2 from "../components/Erklaerung2.astro";
 export const prerender = true;
 const pageTitle = "Datenschutzerklärung";
 ---
@@ -453,12 +454,15 @@ const pageTitle = "Datenschutzerklärung";
   <h4>Cookie Info Liste</h4>
   <div id="cmpcookieinfo"></div>
   <br />
+  <div id="cmpvendorlist"></div><script src="https://delivery.consentmanager.net/delivery/vendorlist.php?cdid=b018a967f10b6" type="text/javascript" async></script>
   <p>
     <a href="/" class="normal-links">go back!</a>
   </p>
 </BaseLayout>
 
   <Erklaerung />
+
+  <Erklaerung2 />
 
   <style>
     /* ANCHOR Schriftgröße vür privacy section */
