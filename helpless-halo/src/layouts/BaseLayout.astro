@@ -4,6 +4,7 @@ import ConsentManager from "../components/ConsentManager.astro";
 import ExternalScripts from "../components/ExternalScripts.astro";
 import ExternalScripts3 from "../components/ExternalScripts3.astro";
 import Gtm from "../components/Gtm.astro";
+import Google from "../components/Google.astro";
 // import Gtm2 from "../components/Gtm2.astro";
 import { ViewTransitions } from "astro:transitions";
 import Header from "../components/Header.astro";
@@ -63,6 +64,8 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
     <ExternalScripts />
 
     <ExternalScripts3 />
+
+    <Google />
     <!--
     <Blockieren /> -->
     
@@ -102,9 +105,9 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
     <script>
       import "../scripts/menu.js"
     </script>
-    
+    <!--
     <script type="text/plain" class="cmplazyload" data-cmp-vendor="s1,s23,s26,s135,s30,s905,s2612">
       import "../scripts/google.js";
-    </script>
+    </script> -->
   </body>
 </html>
