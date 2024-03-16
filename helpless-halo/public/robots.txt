@@ -1,5 +1,6 @@
 User-agent: *
 
+Allow: /
 Allow: /musicstudio-ziebart.de/
 Allow: /akkordeonunterricht/
 Allow: /banjounterricht/
@@ -39,6 +40,7 @@ Disallow: /pupils-download/
 
 User-agent: Googlebot
 
+Allow: /
 Allow: /musicstudio-ziebart.de/
 Allow: /akkordeonunterricht/
 Allow: /banjounterricht/
