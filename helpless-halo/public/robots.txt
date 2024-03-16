@@ -36,7 +36,8 @@ Allow: /tags/gitarre/
 Allow: /thankyou/
 Allow: /unterricht/
 
-Disallow: /pupils-download/
+Disallow: /
+Disaloow: /pupils-download/
 
 User-agent: Googlebot
 
@@ -77,6 +78,7 @@ Allow: /thankyou/
 Allow: /unterricht/
 
 
-Disallow: www.musicstudio-ziebart.de/pupils-download/
+Disallow: /
+Disallow: /pupils-download/
 
 Sitemap: https://www.musicstudio-ziebart.de/sitemap-index.xml
