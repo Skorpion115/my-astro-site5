@@ -37,7 +37,7 @@ Allow: /thankyou/
 Allow: /unterricht/
 
 Disallow: /
-Disaloow: /pupils-download/
+Disallow: /pupils-download/
 
 User-agent: Googlebot
 
