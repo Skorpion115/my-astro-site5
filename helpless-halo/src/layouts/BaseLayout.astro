@@ -1,10 +1,8 @@
 ---
-// import ConsentManager from "../components/ConsentManager.astro";
+import Gtm from "../components/Gtm.astro";
 import ExternalScripts from "../components/ExternalScripts.astro";
 import ExternalScripts3 from "../components/ExternalScripts3.astro";
 import Google from "../components/Google.astro";
-import Gtm from "../components/Gtm.astro";
-// import Gtm2 from "../components/Gtm2.astro";
 import { ViewTransitions } from "astro:transitions";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
@@ -57,8 +55,6 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
     <meta name="robots" content="max-snippet:-1" />
     <meta name="robots" content="INDEX, FOLLOW" />
     <meta name="theme-color" content="#191919" />
-    <!--
-    <ConsentManager /> -->
     
     <ExternalScripts />
     
@@ -67,8 +63,6 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
     <Google />
     
     <Gtm /> 
-    <!--
-    <Gtm2 /> -->
 
     <ViewTransitions />
     
