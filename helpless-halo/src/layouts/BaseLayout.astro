@@ -1,8 +1,7 @@
 ---
-import ManuellesBlockieren from "../components/ManuellesBlockieren.astro";
+import Google from "../components/Google.astro";
 import ExternalScripts from "../components/ExternalScripts.astro";
 import ExternalScripts3 from "../components/ExternalScripts3.astro";
-import Google from "../components/Google.astro";
 import Gtm from "../components/Gtm.astro";
 import { ViewTransitions } from "astro:transitions";
 import Header from "../components/Header.astro";
@@ -57,13 +56,11 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
     <meta name="robots" content="INDEX, FOLLOW" />
     <meta name="theme-color" content="#191919" />
     
-    <ManuellesBlockieren />
+    <Google />
     
     <ExternalScripts />
     
     <ExternalScripts3 />
-
-    <Google />
 
     <Gtm />
 
