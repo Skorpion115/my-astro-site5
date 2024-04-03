@@ -3,15 +3,16 @@
     "short_name": "Rudi Ziebart",
     "description": "Musikunterricht in Nürnberg",
     "lang": "de",
-    "start_url": "/?homescreen=1",
+    "start_url": "/?source=pwa",
     "display": "fullscreen",
     "orientation": "portrait-primary",
     "theme_color": "#191919",
     "background_color": "#191919",
+    "scope": "/",
     "icons": [
       {
-        "id": "/?homescreen=1",
-        "start_url": "/?homescreen=1"
+        "id": "/?source=pwa",
+        "start_url": "/?source=pwa"
       },
       {
         "src": "manifest-icon-192.maskable.png",
