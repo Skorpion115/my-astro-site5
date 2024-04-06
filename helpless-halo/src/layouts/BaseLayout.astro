@@ -68,6 +68,14 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
     
   </head>
   <body>
+    <cookie-banner>
+      <h2 slot="title">Music Lessons</h2>
+      <div slot="text">Wir verwenden Cookies weil das so ist</div>
+    </cookie-banner>
+  
+    <template>
+      <div class="foo">Das ist ein Template das siehst du nicht in HTML</div>
+    </template>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PWK4LSL"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -91,6 +99,10 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
       
     <script>
       import "../scripts/menu.js"
+    </script>
+
+    <script>
+      import "../scripts/cookie-banner.js";
     </script>
 
   </body>
