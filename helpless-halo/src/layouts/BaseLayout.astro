@@ -1,4 +1,5 @@
 ---
+import ManuellesBlockieren from "../components/ManuellesBlockieren.astro";
 import Google from "../components/Google.astro";
 import ExternalScripts from "../components/ExternalScripts.astro";
 import ExternalScripts3 from "../components/ExternalScripts3.astro";
@@ -56,6 +57,8 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
     <meta name="robots" content="INDEX, FOLLOW" />
     <meta name="theme-color" content="#191919" />
     
+    <ManuellesBlockieren />
+    
     <Google />
     
     <ExternalScripts />
@@ -68,9 +71,6 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
     
   </head>
   <body>
-    <script>
-      import "../scripts/halbauto.js";
-    </script>
     <cookie-banner>
       <h2 slot="title">Music Lessons</h2>
       <div slot="text">Wir verwenden Cookies weil das so ist</div>
