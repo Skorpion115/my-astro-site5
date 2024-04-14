@@ -1,33 +1,7 @@
 {
+  "short_name": "Musikschule", 
   "name": "Musicstudio Ziebart",
-  "short_name": "Rudi Ziebart",
-  "description": "Musikunterricht in Nürnberg",
-  "url": "/info?homescreen=1",
-  "screenshots": [
-    {
-      "src": "/images/screenshot1.jpg",
-      "type": "image/jpg",
-      "sizes": "720x1560",
-      "form_factor": "narrow"
-    },
-    {
-      "src": "/images/screenshot2.png",
-      "type": "image/png",
-      "sizes": "1560x720",
-      "form_factor": "wide"
-    }
-  ],
-  "lang": "de",
-  "start_url": "/?homescreen=1",
-  "display": "fullscreen",
-  "orientation": "portrait-primary",
-  "theme_color": "#191919",
-  "background_color": "#191919",
   "icons": [
-    {
-      "id": "/?homescreen=1",
-      "start_url": "/?homescreen=1"
-    },
     {
       "src": "manifest-icon-192.maskable.png",
       "sizes": "192x192",
@@ -52,5 +26,45 @@
       "type": "image/png",
       "purpose": "maskable"
     }   
-  ]
-}
+  ],
+  "id": "/?source=pwa",
+  "start_url": "/?source=pwa",
+  "background_color": "#191919",
+  "display": "fullscreen",
+  "scope": "/",
+  "theme_color": "#191919",
+  "shortcuts": [
+    {
+      "name": "Musikunterricht in Nürnberg",
+      "short_name": "Musikunterricht",
+      "description": "Schaue mehr info",
+      "url": "/info?source=pwa",
+      "icons": [{ "src": "manifest-icon-192.maskable.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Musikunterricht in Eibach",
+      "short_name": "Music Lessons",
+      "description": "Schaue mehr informationen",
+      "url": "/informationen?source=pwa",
+      "icons": [{ "src": "manifest-icon-192.maskable.png", "sizes": "192x192" }]
+    }
+  ],
+  "description": "Musikunterricht in Nürnberg",
+    "screenshots": [
+      {
+        "src": "/images/screenshot1.jpg",
+        "type": "image/jpg",
+        "sizes": "720x1560",
+        "form_factor": "narrow"
+      },
+      {
+        "src": "/images/screenshot2.png",
+        "type": "image/png",
+        "sizes": "1560x720",
+        "form_factor": "wide"
+      }
+    ],
+    
+    "lang": "de",
+    "orientation": "portrait-primary"
+  }
