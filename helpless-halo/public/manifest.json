@@ -30,7 +30,7 @@
   "id": "/?source=pwa",
   "start_url": "/?source=pwa",
   "background_color": "#191919",
-  "display": "fullscreen",
+  "display": "standalone",
   "scope": "/",
   "theme_color": "#191919",
   "shortcuts": [
@@ -66,5 +66,5 @@
     ],
     
     "lang": "de",
-    "orientation": "portrait-primary"
+    "orientation": "any"
   }
