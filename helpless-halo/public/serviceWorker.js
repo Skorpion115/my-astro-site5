@@ -11,7 +11,6 @@ const assets = [
   "/honorar/",
   "/unterricht/",
   "/faq/",
-  "/download/",
   "/harmonielehre/",
   "/impressum/",
   "/datenschutz/",
