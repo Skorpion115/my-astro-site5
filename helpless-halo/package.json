@@ -25,6 +25,7 @@
     "node": ">=18.17.1 <19.0.0"
   },
   "devDependencies": {
-    "@types/node": "^20.8.9"
+    "@types/node": "^20.8.9",
+    "netlify-cli": "^17.22.1"
   }
 }
