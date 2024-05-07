@@ -3,6 +3,7 @@ import sitemap from "@astrojs/sitemap";
 import preact from "@astrojs/preact";
 // import netlify from "@astrojs/netlify/functions";
 import netlify from "@astrojs/netlify";
+import yaml from "@rollup/plugin-yaml";
 
 // https://astro.build/config
 export default defineConfig({
@@ -55,5 +56,8 @@ export default defineConfig({
   markdown: {
     // Beispiel: Verarbeite Markdown-Dateien ohne MDX
     mode: "md",
+  },
+  vite: {
+    plugins: [yaml()]
   },
 });

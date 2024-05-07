@@ -12,19 +12,20 @@
   },
   "dependencies": {
     "@astrojs/netlify": "^4.1.1",
-    "@astrojs/preact": "^3.1.0",
-    "@astrojs/rss": "^4.0.3",
-    "@astrojs/sitemap": "^3.0.5",
-    "astro": "^4.6.2",
-    "preact": "^10.16.0",
+    "@astrojs/preact": "^3.2.0",
+    "@astrojs/rss": "^4.0.5",
+    "@astrojs/sitemap": "^3.1.4",
+    "astro": "^4.7.1",
+    "preact": "^10.21.0",
     "toml": "^3.0.0",
-    "typescript": "^5.3.3",
-    "yaml": "^2.3.2"
+    "typescript": "^5.4.5",
+    "yaml": "^2.4.2"
   },
   "engines": {
     "node": ">=18.17.1 <19.0.0"
   },
   "devDependencies": {
-    "@types/node": "^20.8.9"
+    "@rollup/plugin-yaml": "^4.1.2",
+    "@types/node": "^20.12.10"
   }
 }
