@@ -19,6 +19,11 @@ export default defineConfig({
       },
     },
   },
+  // Experimentelle Flags
+  i18n: {
+    defaultLocale: "en",
+    locales: ["en", "fr", "pt-br", "es"],
+  },
   // Resolves to the "./foo" directory in your current working directory
   /*
   root: "foo",*/
