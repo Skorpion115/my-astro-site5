@@ -7,23 +7,48 @@ import yaml from "@rollup/plugin-yaml";
 
 // https://astro.build/config
 export default defineConfig({
+  build: {
+    // Passe die Chunk-Größenwarnungsgrenze an
+    chunkSizeWarningLimit: 1000, // Setze hier deine bevorzugte Grenze ein
+  },
+
+  optimize: {
+    // Konfiguriere die Optimierung für Skripte
+    script: {
+      // Benutzerdefinierter Skript-Loader
+      async process(content, { attributes }) {
+        // Prüfe, ob das Skript ein Modul ist
+        if (attributes.type === 'module') {
+          // Verwende dynamischen Import für Module
+          return content.replace(
+            // Ersetze den Standardimport durch dynamischen Import
+            /import\s+(\w+)\s+from\s+['"](.*)['"]/g,
+            'const $1 = await import("$2")'
+          );
+        }
+        // Wenn das Skript kein Modul ist, gebe es einfach zurück
+        return { code: content };
+      },
+    },
+  },
   // Anpassen von Ausgabedateien
   vite: {
     build: {
       rollupOptions: {
         output: {
-          entryFileNames: 'entry.[hash].mjs',
-          chunkFileNames: 'chunks/chunk.[hash].mjs',
-          assetFileNames: 'assets/asset.[hash][extname]',
+          entryFileNames: "entry.[hash].mjs",
+          chunkFileNames: "chunks/chunk.[hash].mjs",
+          assetFileNames: "assets/asset.[hash][extname]",
         },
       },
     },
   },
   // Experimentelle Flags
+  /*
   i18n: {
     defaultLocale: "en",
     locales: ["en", "fr", "pt-br", "es"],
-  },
+  }, */
   // Resolves to the "./foo" directory in your current working directory
   /*
   root: "foo",*/
@@ -32,7 +57,7 @@ export default defineConfig({
   // static oder server SSR serverseitiges rändern
   output: "server",
   adapter: netlify({
-    functionPerRoute: true
+    functionPerRoute: true,
   }),
   // Die endgültige Seite bei deinem Hostanbieter
   site: "https://www.musicstudio-ziebart.de/",
@@ -49,12 +74,12 @@ export default defineConfig({
     sitemap({
       filter: (page) =>
         page !== "https://www.musicstudio-ziebart.de/pupils-download/",
-        changefreq: "weekly",
-        entryLimit: 10000,
-        lastmod: new Date("2024-02-21"),
+      changefreq: "weekly",
+      entryLimit: 10000,
+      lastmod: new Date("2024-02-21"),
     }),
     preact({
-      include: ["**/preact/*"]
+      include: ["**/preact/*"],
     }),
   ],
   // Beispiel: Erfordere abschließende Schrägstriche
@@ -75,6 +100,6 @@ export default defineConfig({
     mode: "md",
   },
   vite: {
-    plugins: [yaml()]
+    plugins: [yaml()],
   },
 });
