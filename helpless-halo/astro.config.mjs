@@ -31,6 +31,12 @@ export default defineConfig({
       },
     },
   },
+  build: {
+    rollupOptions: {
+      // Aktiviere die Erstellung von Quellzuordnungen
+      sourcemap: true,
+    },
+  },
   // Anpassen von Ausgabedateien
   vite: {
     build: {
