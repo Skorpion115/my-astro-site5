@@ -7,6 +7,9 @@ import yaml from "@rollup/plugin-yaml";
 
 // https://astro.build/config
 export default defineConfig({
+
+  server: { port: 4321, host: true},
+  
   build: {
     // Passe die Chunk-Größenwarnungsgrenze an
     chunkSizeWarningLimit: 1000, // Setze hier deine bevorzugte Grenze ein
