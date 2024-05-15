@@ -37,27 +37,8 @@ export default defineConfig({
       sourcemap: true,
     },
   },
-  // Anpassen von Ausgabedateien
-  vite: {
-    build: {
-      rollupOptions: {
-        output: {
-          entryFileNames: "entry.[hash].mjs",
-          chunkFileNames: "chunks/chunk.[hash].mjs",
-          assetFileNames: "assets/asset.[hash][extname]",
-        },
-      },
-    },
-  },
-  // Experimentelle Flags
-  /*
-  i18n: {
-    defaultLocale: "en",
-    locales: ["en", "fr", "pt-br", "es"],
-  }, */
   // Resolves to the "./foo" directory in your current working directory
-  /*
-  root: "foo",*/
+  root: "foo",
   // Resolves to the "./foo/public" directory in your current working directory
   publicDir: "public",
   // static oder server SSR serverseitiges rändern
