@@ -1,10 +1,10 @@
 [build]
   command = "npm run build"
   base = "helpless-halo/"
-  publish = "dist"
+  publish = "foo/dist"
 
 [context.deploy-preview]
-  publish = "dist/"
+  publish = "foo/dist/"
 
 [[headers]]
   for = "/*"
