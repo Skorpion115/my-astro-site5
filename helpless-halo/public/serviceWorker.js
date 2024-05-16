@@ -26,7 +26,7 @@ const cacheAssets = [
   "/saxophonunterricht/",
   "/pupils-download/",
   "/querfloetenunterricht/",
-  "/klarinettenunterricht/"
+  "/klarinettenunterricht/",
   // Füge hier die URLs für deine anderen Ressourcen hinzu...
 ];
 
@@ -41,12 +41,20 @@ self.addEventListener("install", (event) => {
 self.addEventListener("fetch", (event) => {
   event.respondWith(
     caches.match(event.request).then((cachedResponse) => {
-      return cachedResponse || fetch(event.request).then((response) => {
-        return caches.open(cacheVersion).then((cache) => {
-          cache.put(event.request, response.clone());
-          return response;
+      if (cachedResponse && event.request.method === "GET") {
+        return cachedResponse;
+      } else {
+        return fetch(event.request).then((response) => {
+          if (event.request.method === "GET") {
+            return caches.open(cacheVersion).then((cache) => {
+              cache.put(event.request, response.clone());
+              return response;
+            });
+          } else {
+            return response;
+          }
         });
-      });
+      }
     })
   );
 });
@@ -56,11 +64,13 @@ self.addEventListener("activate", (event) => {
   event.waitUntil(
     caches.keys().then((cacheNames) => {
       return Promise.all(
-        cacheNames.filter((cacheName) => {
-          return cacheName !== cacheVersion;
-        }).map((cacheName) => {
-          return caches.delete(cacheName);
-        })
+        cacheNames
+          .filter((cacheName) => {
+            return cacheName !== cacheVersion;
+          })
+          .map((cacheName) => {
+            return caches.delete(cacheName);
+          })
       );
     })
   );
