@@ -1,4 +1,4 @@
-const cacheVersion = '_v3';
+const cacheVersion = "_v3";
 
 const cacheAssets = [
   "/",
@@ -30,7 +30,7 @@ const cacheAssets = [
   // Füge hier die URLs für deine anderen Ressourcen hinzu...
 ];
 
-self.addEventListener('install', (event) => {
+self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(cacheVersion).then((cache) => {
       return cache.addAll(cacheAssets);
@@ -38,7 +38,7 @@ self.addEventListener('install', (event) => {
   );
 });
 
-self.addEventListener('fetch', (event) => {
+self.addEventListener("fetch", (event) => {
   event.respondWith(
     caches.match(event.request).then((cachedResponse) => {
       return cachedResponse || fetch(event.request).then((response) => {
@@ -51,7 +51,8 @@ self.addEventListener('fetch', (event) => {
   );
 });
 
-self.addEventListener('activate', (event) => {
+self.addEventListener("activate", (event) => {
+  console.log("service worker aktivated");
   event.waitUntil(
     caches.keys().then((cacheNames) => {
       return Promise.all(
