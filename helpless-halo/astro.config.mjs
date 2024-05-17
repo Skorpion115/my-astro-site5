@@ -33,12 +33,6 @@ export default defineConfig({
       },
     },
   },
-  build: {
-    rollupOptions: {
-      // Aktiviere die Erstellung von Quellzuordnungen
-      sourcemap: true,
-    },
-  },
   // Resolves to the "./foo" directory in your current working directory
   /*
   root: "foo", */
@@ -49,6 +43,11 @@ export default defineConfig({
   adapter: netlify({
     functionPerRoute: true,
   }),
+  vite: {
+    build: {
+      sourcemap: true,  // Füge diese Zeile hinzu, um Source Maps zu aktivieren
+    },
+  },
   // Die endgültige Seite bei deinem Hostanbieter
   site: "https://www.musicstudio-ziebart.de/",
   // Sitemap intergrieren, Eine Seite aufnehmen die nicht mit Astro erstellt wurde stillgelegt!!!
