@@ -57,6 +57,8 @@
       "UK",
       "AR",
       "BS",
+      "JA",
+      "CY",
     ];
     if ("cmp_customlanguages" in window) {
       for (var a = 0; a < window.cmp_customlanguages.length; a++) {
@@ -238,7 +240,7 @@
       if (typeof a == "string" && a != "") {
         var b = window.cmp_getsupportedLangs();
         return b.indexOf(a.toUpperCase()) != -1 ||
-          b.indexOf(a.substr(0, 2).toUpperCase()) != -1
+          b.indexOf(a.substring(0, 2).toUpperCase()) != -1
           ? a
           : "";
       } else {
@@ -247,38 +249,38 @@
     }
   };
   (function () {
-    var B = document;
-    var C = B.getElementsByTagName;
+    var C = document;
+    var D = C.getElementsByTagName;
     var o = window;
     var t = "";
     var h = "";
     var k = "";
-    var D = function (e) {
+    var E = function (e) {
       var i = "cmp_" + e;
       e = "cmp" + e + "=";
       var d = "";
       var l = e.length;
-      var G = location;
-      var H = G.hash;
-      var w = G.search;
-      var u = H.indexOf(e);
-      var F = w.indexOf(e);
+      var I = location;
+      var J = I.hash;
+      var w = I.search;
+      var u = J.indexOf(e);
+      var H = w.indexOf(e);
       if (u != -1) {
-        d = H.substring(u + l, 9999);
+        d = J.substring(u + l, 9999);
       } else {
-        if (F != -1) {
-          d = w.substring(F + l, 9999);
+        if (H != -1) {
+          d = w.substring(H + l, 9999);
         } else {
           return i in o && typeof o[i] !== "function" ? o[i] : "";
         }
       }
-      var E = d.indexOf("&");
-      if (E != -1) {
-        d = d.substring(0, E);
+      var G = d.indexOf("&");
+      if (G != -1) {
+        d = d.substring(0, G);
       }
       return d;
     };
-    var j = D("lang");
+    var j = E("lang");
     if (j != "") {
       t = j;
       k = t;
@@ -289,8 +291,8 @@
         k = o.cmp_getPageLangs().slice(0, 3).join("_");
         if ("cmp_customlanguages" in o) {
           var m = o.cmp_customlanguages;
-          for (var x = 0; x < m.length; x++) {
-            var a = m[x].l.toLowerCase();
+          for (var y = 0; y < m.length; y++) {
+            var a = m[y].l.toLowerCase();
             if (a == t) {
               t = "en";
             }
@@ -306,43 +308,62 @@
     if (n.length > 300) {
       n = n.substring(0, 300);
     }
-    var z = function (d) {
-      var I = B.createElement("script");
-      I.setAttribute("data-cmp-ab", "1");
-      I.type = "text/javascript";
-      I.async = true;
-      I.src = d;
-      var H = ["body", "div", "span", "script", "head"];
+    var A = function (d) {
+      var K = C.createElement("script");
+      K.setAttribute("data-cmp-ab", "1");
+      K.type = "text/javascript";
+      K.async = true;
+      K.src = d;
+      var J = ["body", "div", "span", "script", "head"];
       var w = "currentScript";
-      var F = "parentElement";
+      var H = "parentElement";
       var l = "appendChild";
-      var G = "body";
-      if (B[w] && B[w][F]) {
-        B[w][F][l](I);
+      var I = "body";
+      if (C[w] && C[w][H]) {
+        C[w][H][l](K);
       } else {
-        if (B[G]) {
-          B[G][l](I);
+        if (C[I]) {
+          C[I][l](K);
         } else {
-          for (var u = 0; u < H.length; u++) {
-            var E = C(H[u]);
-            if (E.length > 0) {
-              E[0][l](I);
+          for (var u = 0; u < J.length; u++) {
+            var G = D(J[u]);
+            if (G.length > 0) {
+              G[0][l](K);
               break;
             }
           }
         }
       }
     };
-    var b = D("design");
-    var c = D("regulationkey");
-    var y = D("gppkey");
-    var s = D("att");
+    var b = E("design");
+    var c = E("regulationkey");
+    var z = E("gppkey");
+    var s = E("att");
     var f = o.encodeURIComponent;
     var g = false;
     try {
-      g = B.cookie.length > 0;
-    } catch (A) {
+      g = C.cookie.length > 0;
+    } catch (B) {
       g = false;
+    }
+    var x = E("darkmode");
+    if (x == "0") {
+      x = 0;
+    } else {
+      if (x == "1") {
+        x = 1;
+      } else {
+        try {
+          if ("matchMedia" in window && window.matchMedia) {
+            var F = window.matchMedia("(prefers-color-scheme: dark)");
+            if ("matches" in F && F.matches) {
+              x = 1;
+            }
+          }
+        } catch (B) {
+          x = 0;
+        }
+      }
     }
     var p = q + "//" + o.cmp_host + "/delivery/cmp.php?";
     p +=
@@ -353,12 +374,13 @@
     p +=
       (b != "" ? "&cmpdesign=" + f(b) : "") +
       (c != "" ? "&cmpregulationkey=" + f(c) : "") +
-      (y != "" ? "&cmpgppkey=" + f(y) : "");
+      (z != "" ? "&cmpgppkey=" + f(z) : "");
     p +=
       (s != "" ? "&cmpatt=" + f(s) : "") +
       ("cmp_params" in o ? "&" + o.cmp_params : "") +
       (g ? "&__cmpfcc=1" : "");
-    z(
+    p += x > 0 ? "&cmpdarkmode=1" : "";
+    A(
       p +
         "&l=" +
         f(t) +
@@ -370,16 +392,16 @@
         new Date().getTime()
     );
     var r = "js";
-    var v = D("debugunminimized") != "" ? "" : ".min";
-    if (D("debugcoverage") == "1") {
+    var v = E("debugunminimized") != "" ? "" : ".min";
+    if (E("debugcoverage") == "1") {
       r = "instrumented";
       v = "";
     }
-    if (D("debugtest") == "1") {
+    if (E("debugtest") == "1") {
       r = "jstests";
       v = "";
     }
-    z(q + "//" + o.cmp_cdn + "/delivery/" + r + "/cmp_final" + v + ".js");
+    A(q + "//" + o.cmp_cdn + "/delivery/" + r + "/cmp_final" + v + ".js");
   })();
   window.cmp_rc = function (c, b) {
     var l = "";
@@ -393,14 +415,14 @@
     var g = false;
     while (l != "" && f < 100) {
       f++;
-      while (l.substr(0, 1) == " ") {
-        l = l.substr(1, l.length);
+      while (l.substring(0, 1) == " ") {
+        l = l.substring(1, l.length);
       }
       var k = l.substring(0, l.indexOf("="));
       if (l.indexOf(";") != -1) {
         var m = l.substring(l.indexOf("=") + 1, l.indexOf(";"));
       } else {
-        var m = l.substr(l.indexOf("=") + 1, l.length);
+        var m = l.substring(l.indexOf("=") + 1, l.length);
       }
       if (c == k) {
         j = m;
