@@ -9,6 +9,7 @@ image:
 pubDate: 2023-10-21
 tags: ["astro", "blogging", "banjo", "erfolge"]
 ---
+export const prerender = true;
 ## Gold Tone Dämpfer
 **Geeignet für Gitarre und Banjo**
 

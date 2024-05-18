@@ -1,7 +1,6 @@
 import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import preact from "@astrojs/preact";
-// import netlify from "@astrojs/netlify/functions";
 import netlify from "@astrojs/netlify";
 
 // https://astro.build/config
@@ -12,6 +11,8 @@ export default defineConfig({
   build: {
     // Passe die Chunk-Größenwarnungsgrenze an
     chunkSizeWarningLimit: 1000, // Setze hier deine bevorzugte Grenze ein
+    sourcemap: true,  // Aktiviert die Erstellung von Source Maps in Astro
+    format: "directory", // Erzeuge `page.html` statt `page/index.html`
   },
 
   optimize: {
@@ -40,14 +41,17 @@ export default defineConfig({
   publicDir: "public",
   // static oder server SSR serverseitiges rändern
   output: "server",
+
   adapter: netlify({
     functionPerRoute: true,
   }),
+
   vite: {
     build: {
-      sourcemap: true,  // Füge diese Zeile hinzu, um Source Maps zu aktivieren
+      sourcemap: true,  // Füge diese Zeile hinzu, um Source Maps in Vite zu aktivieren und debugging zu erleichtern
     },
   },
+
   // Die endgültige Seite bei deinem Hostanbieter
   site: "https://www.musicstudio-ziebart.de/",
   // Sitemap intergrieren, Eine Seite aufnehmen die nicht mit Astro erstellt wurde stillgelegt!!!
@@ -57,6 +61,7 @@ export default defineConfig({
       entryLimit: 10000,
       lastmod: new Date('2022-11-24'),
   })], */
+
   // Sitemap intergrieren
   integrations: [
     // Beispiel: Argumente an eine Integration übergeben
@@ -71,20 +76,14 @@ export default defineConfig({
       include: ["**/preact/*"],
     }),
   ],
+
   // Beispiel: Erfordere abschließende Schrägstriche
   // in Seiten-URLs während der Entwicklung
   trailingSlash: "always",
-  build: {
-    // Beispiel: Erzeuge `page.html` statt `page/index.html`
-    // während des Build-Prozesses.
-    format: "directory",
-  },
-  //server: { port: 3000, host: true },
+  
   markdown: {
     // Beispiel: Alle Entwürfe in den endgültigen Build einbeziehen
     drafts: true,
-  },
-  markdown: {
     // Beispiel: Verarbeite Markdown-Dateien ohne MDX
     mode: "md",
   },

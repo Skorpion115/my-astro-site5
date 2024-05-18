@@ -9,6 +9,8 @@ image:
 pubDate: 2023-08-15
 tags: ["astro", "blogging", "gitarre", "erfolge"]
 ---
+export const prerender = true;
+
 ![Alt-Stimmgerät](/images/Tuner_230x181.webp "Tuner")
 
 ## Thomann CTM Metronom/Stimmgerät

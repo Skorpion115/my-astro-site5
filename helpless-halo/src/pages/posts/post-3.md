@@ -9,6 +9,7 @@ image:
 pubDate: 2023-08-21
 tags: ["astro", "blogging", "erfolge"]
 ---
+export const prerender = true;
 <p>Willkommen zu meinem _neuem Blog_ über das Erlernen von Astro!</p> 
 
 

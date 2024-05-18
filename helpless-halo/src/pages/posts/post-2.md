@@ -9,6 +9,7 @@ image:
 pubDate: 2023-08-15
 tags: ["blogging", "banjo"]
 ---
+export const prerender = true;
 ## Kann ich die D-Tuner benutzen wenn ein Capotaster gesetzt ist?
 <p>
     Nein! Der Capo würde das aufdrehen durch einen D-Tuner sehr behindern da dieser die Saiten ja festdrückt. Die D-Tuner können nur ohne Capotaster verwendet werden. Die D-Tuner drehen ja die Saiten runter oder rauf und dies kann dann nicht mehr richtig gemacht werden, da der Capo ja die Saiten auf den eingestellten Bund fest hält. Also lieber nicht machen.</p>
