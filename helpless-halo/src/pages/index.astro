@@ -2,8 +2,6 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import FacebookTag from "../components/FacebookTag.astro";
 import Card from "../components/Card.astro";
-import Musikunterricht from "../../public/images/musikunterricht.webp";
-import Anruf from "../../public/images/anruf-192x192.png";
 export const prerender = true;
 const pageTitle = "Musiklehrer erteilt Musikunterricht | Musicstudio Ziebart";
 ---
@@ -18,15 +16,12 @@ const pageTitle = "Musiklehrer erteilt Musikunterricht | Musicstudio Ziebart";
     Musicstudio Ziebart<br />
     Staatl. Anerk. Musiklehrer
   </div>
-  
   <p>
-    <img
-      src={Musikunterricht.src}
-      width={Musikunterricht.width}
-      height={Musikunterricht.height}
-      alt="Bild SEO Musiklehrer erteilt Musikunterricht | Musicstudio Ziebart"
-      aria-label="Bild SEO Musiklehrer erteilt Musikunterricht | Musicstudio Ziebart"
-    />
+  <img
+      src="/images/musikunterricht.webp" 
+      alt="Bild SEO Musiklehrer erteilt Musikunterricht | Musicstudio-ziebart" 
+      aria-label="Bild SEO Musiklehrer erteilt Musikunterricht | Musicstudio-ziebart"
+  />
   </p>
     <br />
     <br />
@@ -173,10 +168,8 @@ const pageTitle = "Musiklehrer erteilt Musikunterricht | Musicstudio Ziebart";
         <hr />
         <br />
         <img
-          src={Anruf.src}
-          width={Anruf.width}
-          height={Anruf.height}
-          alt="Bild Telefonhoerer"
+          src="images/anruf-192x192.png" 
+          alt="Bild Telefonhoerer" 
           aria-label="Bild Telefonhoerer"
         />
         <h2>Telefon</h2>

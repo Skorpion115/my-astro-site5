@@ -1,16 +1,5 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Konzertgitarre from "../../public/images/konzertgitarre-wide.webp";
-import Westerngitarre from "../../public/images/westerngitarre-wide.webp";
-import Klarinette from "../../public/images/klarinetten-wide.webp";
-import Banjo from "../../public/images/5-string-banjo960x640.webp";
-import Querfloete from "../../public/images/offline-narrow.webp";
-import Sax from "../../public/images/saxophone-546x1280.webp";
-import Oberdaempfer from "../../public/images/oberdaempfer-narrow.webp";
-import DB32 from "../../public/images/DB-32B.webp";
-import SP320 from "../../public/images/SP-320-wide.webp";
-import Keyboard from "../../public/images/keyboard.webp";
-import Akkordeon from "../../public/images/concerto_III.webp";
 export const prerender = true;
 const pageTitle = "Tips für Ihren Instrumentenkauf";
 ---
@@ -44,13 +33,11 @@ const pageTitle = "Tips für Ihren Instrumentenkauf";
       </table>
       <h2>Akustische Gitarre</h2>
       <p>
-        <img
-          src={Konzertgitarre.src}
-          width={Konzertgitarre.width}
-          height={Konzertgitarre.height}
+        <img src="/images/konzertgitarre-wide.webp"
           alt="Konzertgitarre"
           aria-label="Konzertgitarre"
         />
+      </p>
         <h3>Konzertgitarre</h3>
         <p>
           Bei akustischer Gitarre ist es wichtig, daß Sie sich eine sogenannte
@@ -62,9 +49,7 @@ const pageTitle = "Tips für Ihren Instrumentenkauf";
         <h3>Westerngitarre</h3>
         <p>
           <img
-            src={Westerngitarre.src}
-            width={Westerngitarre.width}
-            height={Westerngitarre.height}
+            src="images/westerngitarre-wide.webp"
             loading="lazy"
             alt="Westerngitarre"
             aria-label="Westerngitarre"
@@ -86,9 +71,7 @@ const pageTitle = "Tips für Ihren Instrumentenkauf";
         </p>
         <p>
           <img
-            src={Klarinette.src}
-            width={Klarinette.width}
-            height={Klarinette.height}
+            src="images/klarinetten-wide.webp"
             loading="lazy"
             alt="Klarinette"
             aria-label="Klarinette"
@@ -137,12 +120,10 @@ const pageTitle = "Tips für Ihren Instrumentenkauf";
       </p>
       <p>
         <img
-          src={Querfloete.src}
-          width={Querfloete.width}
-          height={Querfloete.height}
+          src="/images/offline-narrow.webp"
           loading="lazy"
           alt="Querfloete"
-          aria-label="Querfloete"
+          arial-label="Querfloete"
         />
       </p>
     </section>
@@ -157,13 +138,12 @@ const pageTitle = "Tips für Ihren Instrumentenkauf";
       <h3 id="Saxophon">Die Geschichte des Saxophons</h3>
       <p>
         <img
-          src={Sax.src}
-          width={Sax.width}
-          height={Sax.height}
+          src="/images/saxophone-546x1280.webp"
           loading="lazy"
           alt="Saxophon"
           aria-label="Saxophon"
         />
+
       </p>
       <p>
         Der "Vater des Saxophons" ist der belgische Klarinettist, Flötist und
@@ -219,9 +199,7 @@ const pageTitle = "Tips für Ihren Instrumentenkauf";
       </p>
       <p>
         <img
-          src={Banjo.src}
-          width={Banjo.width}
-          height={Banjo.height}
+          src="/images/5-string-banjo960x640.webp"
           loading="lazy"
           alt="Banjo"
           aria-label="Banjo"
@@ -247,9 +225,7 @@ const pageTitle = "Tips für Ihren Instrumentenkauf";
       </p>
       <p>
         <img
-          src={Oberdaempfer.src}
-          width={Oberdaempfer.width}
-          height={Oberdaempfer.height}
+          src="images/oberdaempfer-narrow.webp"
           loading="lazy"
           alt="Oberdaempfer"
           aria-label="Oberdaempfer"
@@ -266,9 +242,7 @@ const pageTitle = "Tips für Ihren Instrumentenkauf";
       <hr />
       <p>
         <img
-          src={DB32.src}
-          width={DB32.width}
-          height={DB32.height}
+          src="images/DB-32B.webp"
           loading="lazy"
           alt="DB-32B Digitalpiano"
           aria-label="DB-32B"
@@ -290,9 +264,7 @@ const pageTitle = "Tips für Ihren Instrumentenkauf";
       <hr />
       <p>
         <img
-          src={SP320.src}
-          width={SP320.width}
-          height={SP320.height}
+          src="/images/SP-320-wide.webp"
           loading="lazy"
           alt="SP-320 Digitalpiano"
           aria-label="SP-320 Digitalpiano"
@@ -307,9 +279,7 @@ const pageTitle = "Tips für Ihren Instrumentenkauf";
       <hr />
       <p>
         <img
-          src={Keyboard.src}
-          width={Keyboard.width}
-          height={Keyboard.height}
+          src="/images/keyboard.webp"
           loading="lazy"
           alt="Yamaha Keyboard"
           aria-label="Yamaha Keyboard"
@@ -325,10 +295,7 @@ const pageTitle = "Tips für Ihren Instrumentenkauf";
       <hr />
       <p>
         <img
-          src={Akkordeon.src}
-          width={Akkordeon.width}
-          height={Akkordeon.height}
-          loading="lazy"
+          src="/images/concerto_III.webp"
           alt="Hohner Akkordeon Concerto III"
           aria-label="Hohner Akkordeon Concerto III"
         />

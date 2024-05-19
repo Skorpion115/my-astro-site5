@@ -1,7 +1,5 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Geldsack from "../../public/images/money-125x125.png";
-import Coupon from "../../public/images/button-orange-100x100.png";
 export const prerender = true;
 const pageTitle = "Honorar für Musikunterricht";
 ---
@@ -33,12 +31,7 @@ const pageTitle = "Honorar für Musikunterricht";
       <div class="item item-3">
         <p>
           <img
-            src={Geldsack.src}
-            width={Geldsack.width}
-            height={Geldsack.height}
-            alt="Geldsack"
-            aria-label="Geldsack"
-          />
+            src="/images/money-125x125.png"
         </p>
         <p>         
           <b>Preise</b><br />
@@ -67,11 +60,8 @@ const pageTitle = "Honorar für Musikunterricht";
       wissen möchten ist hier der Link dazu:
       <br />
     </p>
-    <p>
-    <img
-        src={Coupon.src}
-        width={Coupon.width}
-        height={Coupon.height}
+      <img
+        src="/images/button-orange-100x100.png"
         alt="Coupon"
         aria-label="Coupon"
       />
