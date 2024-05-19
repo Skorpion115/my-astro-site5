@@ -1,7 +1,5 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Helbig from "../../public/images/helbig-banjoschule.webp";
-import Schroeder from "../../public/images/schroeder-banjoschule.webp";
 import YouTube from "../components/YouTube.astro";
 import "../styles/lite-yt-embed.css";
 export const prerender = true;
@@ -84,9 +82,7 @@ const pageTitle = "Banjounterricht für 5-string Banjo";
       <h2>Banjounterricht mit Beginner Banjo</h2>
       <p>
         <img
-          src={Helbig.src}
-          width={Helbig.width}
-          height={Helbig.height}
+          src="helbig-banjoschule.webp"
           alt="Bild SEO Beginners Banjo von Ruediger Helbig"
           aria-label="Bild SEO Beginners Banjo von Ruediger Helbig"
         />
@@ -115,9 +111,7 @@ const pageTitle = "Banjounterricht für 5-string Banjo";
       <h2>Banjo spielen!</h2>
       <p>
         <img
-          src={Schroeder.src}
-          width={Schroeder.width}
-          height={Schroeder.height}
+          src="/images/schroeder-banjoschule.webp"
           alt="Bild SEO Banjo spielen von Sebastian Schroeder"
           aria-label="Bild SEO Banjo spielen von Sebastian Schroeder"
         />

@@ -1,7 +1,5 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import ElektoGitarre from "../../public/images/e-gitarrenunterricht.webp";
-import Scheinhuette from "../../public/images/scheinhuette-e-gitarrenschule.webp";
 import YouTube from "../components/YouTube.astro";
 import "../styles/lite-yt-embed.css";
 export const prerender = true;
@@ -17,9 +15,7 @@ const pageTitle = "E-Gitarrenunterricht für Rockgitarre";
   <article>
     <p>
       <img
-        src={ElektoGitarre.src}
-        width={ElektoGitarre.width}
-        height={ElektoGitarre.height}
+        src="/images/e-gitarrenunterricht.webp"
         alt="Bild SEO E-Gitarrenunterricht für Rockgitarre-e-gitarrenunterricht"
         aria-label="Bild SEO E-Gitarrenunterricht für Rockgitarre-e-gitarrenunterricht"
       />
@@ -52,9 +48,7 @@ const pageTitle = "E-Gitarrenunterricht für Rockgitarre";
       <h2>Schule der Rockgitarre, Andreas Scheinhütte</h2>
       <p>
         <img
-          src={Scheinhuette.src}
-          width={Scheinhuette.width}
-          height={Scheinhuette.height}
+          src="/images/scheinhuette-e-gitarrenschule.webp"
           alt="Bild SEO E-Gitarrenschule von Andreas Scheinhuette"
           aria-label="Bild SEO E-Gitarrenschule von Andreas Scheinhütte"
         />

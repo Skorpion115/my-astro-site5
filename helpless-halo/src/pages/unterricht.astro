@@ -1,12 +1,9 @@
 ---
 import Instrumente from "../components/Instrumente.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Klavierunterricht from "../../public/images/klavierunterricht.png";
-import Saxophonunterricht from "../../public/images/saxophonunterricht.png";
 export const prerender = true;
 const pageTitle = "Unterrichtsangebot von Musicstudio Ziebart";
 ---
-
 <BaseLayout
   pageTitle={pageTitle}
   description="Unter Musikunterricht habe ich alle Instrumente aufgelistet die unterrichtet werden. 🤓"
@@ -73,11 +70,9 @@ const pageTitle = "Unterrichtsangebot von Musicstudio Ziebart";
       <h4>Saiteninstrumente</h4>
       <p>
         <img
-          src={Gitarre.src}
-          width={Gitarre.width}
-          height={Gitarre.height}
-          alt="Bild SEO Unterrichtsangebot von Musicstudio Ziebart-Gitarre"
-          aria-label="Bild SEO Unterrichtsangebot von Musicstudio Ziebart-Gitarre"
+        src="/images/gitarre.png"
+        alt="Bild SEO Unterrichtsangebot von Musicstudio Ziebart-Gitarre"
+        aria-label="Bild SEO Unterrichtsangebot von Musicstudio Ziebart-Gitarre"
         />
       </p>
       <p>Jazz Guitar Unterricht</p>
@@ -106,9 +101,7 @@ const pageTitle = "Unterrichtsangebot von Musicstudio Ziebart";
       <h4>Tasteninstrumente</h4>
       <p>
         <img
-          src={Klavierunterricht.src}
-          width={Klavierunterricht.width}
-          height={Klavierunterricht.height}
+          src="/images/klavierunterricht.png"
           alt="Bild SEO Unterrichtangebot von Musicstudio Ziebart-klavierunterricht"
           aria-label="Bild SEO Unterrichtangebot von Musicstudio Ziebart-klavierunterricht"
         />
@@ -133,9 +126,7 @@ const pageTitle = "Unterrichtsangebot von Musicstudio Ziebart";
       <h4>Blasinstrumente</h4>
       <p>
         <img
-          src={Saxophonunterricht.src}
-          width={Saxophonunterricht.width}
-          height={Saxophonunterricht.height}
+          src="/images/saxophonunterricht.png"
           alt="Bild SEO Unterrichtangebot von Musicstudio Ziebart-Saxophonnunterricht"
           aria-label="Bild SEO Unterrichtangebot von Musicstudio Ziebart-Saxophonunterricht"
         />

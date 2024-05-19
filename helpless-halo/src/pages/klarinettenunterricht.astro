@@ -1,6 +1,5 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Koch from "../../public/images/koch-klarinettenschule.webp";
 export const prerender = true;
 const pageTitle = "Klarinettenunterricht für Böhm und Deutsches System";
 ---
@@ -15,13 +14,11 @@ const pageTitle = "Klarinettenunterricht für Böhm und Deutsches System";
     <section>
       <h2>Neue Schule für Klarinette, Ewald Koch</h2>
       <p>
-      <img
-        src={Koch.src}
-        width={Koch.width}
-        height={Koch.height}
-        alt="Bild SEO Neue Schule für Klarinette von Ewald Koch"
-        aria-label="Bild SEO Neue Schule für Klarinette von Ewald Koch"
-      />
+        <img
+          src="/images/koch-klarinettenschule.webp"
+          alt="Bild SEO Neue Schule für Klarinette von Ewald Koch"
+          aria-label="Bild SEO Neue Schule für Klarinette von Ewald Koch"
+        />
       </p>
       <p>
         Für den Klarinettenunterricht benutze ich gerne die Schule vom Professor

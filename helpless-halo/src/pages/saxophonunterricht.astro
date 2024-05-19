@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Dapper from "../../public/images/dapper-saxophonschule.webp";
+// import Dapper from "../../public/images/dapper-saxophonschule.webp";
 export const prerender = true;
 const pageTitle = "Saxophonunterricht für jung und alt";
 ---
@@ -36,12 +36,13 @@ const pageTitle = "Saxophonunterricht für jung und alt";
         Gemeinschaft und Freude: Musik zu machen kann eine großartige Möglichkeit sein, neue Freunde zu finden und gemeinsam Freude am Musizieren zu erleben.  
       </p>   
       <h2>Das Saxophonbuch, Klaus Dapper</h2>
-      <img
-          src={Dapper.src}
-          width={Dapper.width}
-          height={Dapper.height}
+      <p>
+        <img
+          src="/images/dapper-saxophonschule.webp"
           alt="Bild SEO Das Saxophonbuch von Klaus Dapper"
+          aria-label="Bild SEO Das Saxophonbuch von Klaus Dapper"
         />
+      </p>
       <p>
         Für den Saxophon Unterricht nehme ich die Klaus Dapper Saxophonschule.
         Der Titel des Buches heißt "Das Saxophonbuch". Eine CD ist auch dabei
