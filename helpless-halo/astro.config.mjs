@@ -9,18 +9,7 @@ export default defineConfig({
   server: { port: 4321, host: true },
   
   build: {
-    rollupOptions: {
-      output: {
-        manualChunks(id) {
-          if (id.includes("node_modules")) {
-            return "vendor";
-          }
-        },
-      },
-    },
-    chunkSizeWarningLimit: 1000, // Grenze für Chunk-Größe
-    sourcemap: true,  // Aktiviert die Erstellung von Source Maps
-    format: "directory", // Erzeugt `page.html` statt `page/index.html`
+    format: "directory", // Erzeugt `page/index.html` statt `page.html`
   },
 
   publicDir: "public",
@@ -34,11 +23,10 @@ export default defineConfig({
   vite: {
     build: {
       sourcemap: true,  // Aktiviert Source Maps in Vite
+      chunkSizeWarningLimit: 3420, // Setze hier deine bevorzugte Grenze ein
     },
   },
-
   site: "https://www.musicstudio-ziebart.de/",
-
   integrations: [
     sitemap({
       filter: (page) =>
@@ -51,9 +39,7 @@ export default defineConfig({
       include: ["**/preact/*"],
     }),
   ],
-
   trailingSlash: "always",
-
   markdown: {
     drafts: true,
     mode: "md",
