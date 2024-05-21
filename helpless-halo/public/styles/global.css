@@ -21,7 +21,6 @@
   font-display: swap;
 }
 
-
 /* ANCHOR Grundlegende Einstellungen */
 html {
   background-color: #f1f5f9;
@@ -305,13 +304,8 @@ img {
 /* ANCHOR Bilder von marchandise-2 */
 
 .marchandise.marchandise-2 img {
-  max-width: 30%;
+  max-width: 30% !important;
   height: auto;
-  border-radius: 5px;
-  float: right;
-  margin-top: 1.25rem;
-  margin-left: 1rem;
-  margin-right: 3rem;
 }
 
 /* ANCHOR instrumentkauf.astro */

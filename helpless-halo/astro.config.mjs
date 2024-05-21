@@ -7,13 +7,20 @@ import crypto from "crypto";
 
 function nonceMiddleware(req, res, next) {
   const nonce = crypto.randomBytes(16).toString("base64");
-  res.locals = { nonce };
+
+  // Ensure res.locals is an object
+  if (!res.locals) {
+    res.locals = {};
+  }
+
+  res.locals.nonce = nonce;
   res.setHeader(
     "Content-Security-Policy",
-    `default-src 'self'; script-src 'self' 'nonce-${nonce}' 'unsafe-inline'`
+    `default-src 'self'; script-src 'self' 'nonce-${nonce}'; style-src 'self' 'nonce-${nonce}'`
   );
   next();
 }
+
 // https://astro.build/config
 export default defineConfig({
   prefetch: true,

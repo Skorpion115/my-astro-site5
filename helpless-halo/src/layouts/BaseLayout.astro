@@ -92,7 +92,7 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
     <Footer />
     <Footer2 />
     <!-- Altes Script von Video angeschaut für ServiceWorker -->
-    <script is:inline>
+    <script nonce={nonce} is:inline>
     document.addEventListener("DOMContentLoaded", () => {
       if ("serviceWorker" in navigator) {
         navigator.serviceWorker
@@ -102,14 +102,14 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
       }
     });
     </script>
-      
-    <script>
-      import "../scripts/menu.js"
-    </script>
 
+    <script src="/scripts/menu.js" nonce={nonce}></script>
+
+    <script src="/scripts/cookie-banner.js" nonce={nonce}></script>
+    <!--
     <script>
       import "../scripts/cookie-banner.js";
-    </script>
+    </script> -->
 
     <script nonce={nonce}>
       // console.log("This script is allowed by the CSP");
