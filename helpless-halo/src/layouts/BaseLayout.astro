@@ -111,8 +111,9 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
       import "../scripts/cookie-banner.js";
     </script>
 
-    <script is:inline nonce={nonce}>
-      console.log('This script is allowed by the CSP');
+    <script nonce={nonce}>
+      // console.log("This script is allowed by the CSP");
+      console.log("Nonce value:", nonce);
     </script>
 
   </body>
