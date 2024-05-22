@@ -2,7 +2,6 @@ import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import preact from "@astrojs/preact";
 import netlify from "@astrojs/netlify";
-import vercel from "@astrojs/vercel/serverless";
 import crypto from "crypto";
 
 function nonceMiddleware(req, res, next) {
@@ -37,8 +36,6 @@ export default defineConfig({
   publicDir: "public",
 
   output: "server", // SSR serverseitiges Rendern
-  adapter: vercel(),
-
   adapter: netlify({
     functionPerRoute: true,
   }),

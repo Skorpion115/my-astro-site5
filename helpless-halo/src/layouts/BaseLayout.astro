@@ -66,20 +66,12 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
     <ExternalScripts3 nonce={nonce} />
     <Google nonce={nonce} />
     <Gtm nonce={nonce} />
-   
-    
-
-    <ManuellesBlockieren />
-    
-    <ExternalScripts />
-    
-    <ExternalScripts3 />
-
-    <Google />
-
-    <Gtm />
      
     <ViewTransitions />
+
+    <!-- Externes Script für nounce -->
+    <script nonce="${res.locals.nonce}" src="/scripts/cookie-banner.js"></script>
+    <script nonce="${res.locals.nonce}" src="/scripts/cookie-banner.js"></script>
     
   </head>
   <body>
@@ -111,14 +103,11 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
       }
     });
     </script>
-
-    <script src="/scripts/menu.js" nonce={nonce}></script>
-
-    <script src="/scripts/cookie-banner.js" nonce={nonce}></script>
-    <!--
-    <script>
-      import "../scripts/cookie-banner.js";
-    </script> -->
+    
+    <!-- Inline Script -->
+    <script nonce={nonce}>
+      console.log("Dieses Skript ist durch eine Nonce abgesichert.");
+    </script>
 
     <script nonce={nonce}>
       // console.log("This script is allowed by the CSP");

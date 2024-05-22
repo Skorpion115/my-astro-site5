@@ -6,6 +6,9 @@
 [context.deploy-preview]
   publish = "dist/"
 
+[functions]
+  directory = "netlify/functions"
+
 [[headers]]
   for = "/*"
 
@@ -18,4 +21,4 @@
     Permissions-Policy = "geolocation=(self)"
 
 # Remove or comment out CSP related headers if CSP is managed in astro.config.mjs
-#    Content-Security-Policy = "default-src 'self'; script-src 'self' 'nonce-XYZ'; style-src 'self' 'nonce-XYZ'"
+   Content-Security-Policy = "default-src 'self'; script-src 'self' 'nonce-gvsaDxhFfBoKoI01HTh7YA==' 'nonce-${nonce}' 'unsafe-inline'; style-src 'self' 'nonce-XYZ'"
