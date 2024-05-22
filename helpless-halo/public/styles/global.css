@@ -420,11 +420,6 @@ img {
   flex: 50%;
 }
 
-img {
-  max-width: 30% !important;
-  height: auto;
-}
-
 /* ANCHOR unterricht.astro */
 
 .conteneur {
