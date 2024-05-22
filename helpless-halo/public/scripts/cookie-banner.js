@@ -1,4 +1,4 @@
-
+import { unchangedTextChangeRange } from "typescript";
 
 class CookieBanner extends HTMLElement {
     shadowRoot;
