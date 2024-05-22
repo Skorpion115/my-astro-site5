@@ -1,3 +1,6 @@
+---
+const nonce = Astro.props.nonce;
+---
 <button id="themeToggle" title="Darkmode Schalter" aria-label="Darkmode Schalter">
   <svg width="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path
@@ -34,7 +37,7 @@
   }
 </style>
 
-<script is:inline>
+<script nonce={nonce} is:inline>
 document.addEventListener("astro:page-load", () => {
   const theme = (() => {
     if (
