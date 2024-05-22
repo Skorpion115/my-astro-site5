@@ -1,7 +1,4 @@
----
-const nonce = Astro.props.nonce;
----
-<script nonce={nonce} async>
+<script async>
   (function (w, d, s, l, i) {
     w[l] = w[l] || [];
     w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
@@ -14,7 +11,7 @@ const nonce = Astro.props.nonce;
   })(window, document, "script", "dataLayer", "GTM-PWK4LSL");
 </script>
 <!-- Create one update function for each consent parameter ist neu -->
-<script nonce={nonce} is:inline async>
+<script async>
   function consentGrantedAdStorage() {
     gtag("consent", "update", {
       ad_user_data: "granted",

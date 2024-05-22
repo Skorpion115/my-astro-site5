@@ -1,7 +1,4 @@
----
-const nonce = Astro.props.nonce;
----
-<script nonce={nonce} async>
+<script async>
   if (!("gdprAppliesGlobally" in window)) {
     window.gdprAppliesGlobally = true;
   }
