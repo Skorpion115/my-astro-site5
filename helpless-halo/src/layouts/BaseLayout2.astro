@@ -4,7 +4,6 @@ import Gtm from "../components/Gtm.astro";
 import { ViewTransitions } from "astro:transitions";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-const nonce = Astro.props.nonce;
 const { pageTitle, description, keywords, href } = Astro.props;
 const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
 ---
@@ -102,13 +101,12 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
     });
     </script>
 
-    <script src="/scripts/menu.js" nonce={nonce}></script>
+    <script>
+      import "../scripts/menu.js"
+    </script>
 
-    <script src="/scripts/cookie-banner.js" nonce={nonce}></script>
-
-    <script nonce={nonce}>
-      // console.log("This script is allowed by the CSP");
-      console.log("Nonce value:", nonce);
+    <script>
+      import "../scripts/cookie-banner.js";
     </script>
 
   </body>

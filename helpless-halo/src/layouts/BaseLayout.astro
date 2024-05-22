@@ -1,4 +1,5 @@
 ---
+// Externe Scripte einfügen
 import ManuellesBlockieren from "../components/ManuellesBlockieren.astro";
 import ExternalScripts from "../components/ExternalScripts.astro";
 import ExternalScripts3 from "../components/ExternalScripts3.astro";
@@ -9,8 +10,6 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Footer2 from "../components/Footer2.astro";
 // import "../styles/global.css";
-// Import der Nonce
-const nonce = Astro.props.nonce;
 const { pageTitle, description, keywords, href } = Astro.props;
 const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
 ---
@@ -88,7 +87,7 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
     <Footer />
     <Footer2 />
     <!-- Altes Script von Video angeschaut für ServiceWorker -->
-    <script nonce={nonce} is:inline>
+    <script is:inline>
     document.addEventListener("DOMContentLoaded", () => {
       if ("serviceWorker" in navigator) {
         navigator.serviceWorker
@@ -98,7 +97,7 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
       }
     });
     </script>
-    
+    <!-- Lokale Scripte einfügen -->
     <script>
       import "../scripts/menu.js"
     </script>
