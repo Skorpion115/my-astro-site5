@@ -64,7 +64,34 @@ const videos = [
     content_loc: "https://www.youtube.com/embed/WmYlSqvpUkw", // URL des eingebetteten Videos
     thumbnail_loc: "https://i.ytimg.com/vi/WmYlSqvpUkw/hqdefault.jpg", // URL des Thumbnails
   },
-  // Fügen Sie hier weitere Videos hinzu
+  {
+    loc: `${SITE_URL}videos/jo-satriani`, // URL der Seite, die das Video enthält
+    title: "Joe Satriani - Ten Words Guitar Lesson+Tab",
+    description: "Flint Hill Special - Banjo Lesson",
+    content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=8ucTzPOBzAo", // URL des eingebetteten Videos
+    thumbnail_loc: "https://i.ytimg.com/vi/8ucTzPOBzAo/hqdefault.jpg", // URL des Thumbnails
+  },
+  {
+    loc: `${SITE_URL}videos/city-of-neworleans`, // URL der Seite, die das Video enthält
+    title: "City Of NewOrleans - Arlo Guthrie",
+    description: "City Of NewOrleans - Arlo Guthrie",
+    content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=yEF6e2ZSZ0k", // URL des eingebetteten Videos
+    thumbnail_loc: "https://i.ytimg.com/vi/yEF6e2ZSZ0k/hqdefault.jpg", // URL des Thumbnails
+  },
+  {
+    loc: `${SITE_URL}videos/hammond-orgen-hammond-flip`, // URL der Seite, die das Video enthält
+    title: "Hammond Organ - Hammond Flip - Klaus Wunderlich",
+    description: "Hammond Organ - Hammond Flip - Klaus Wunderlich",
+    content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=244HlpB3JoA", // URL des eingebetteten Videos
+    thumbnail_loc: "https://i.ytimg.com/vi/y2KtSx3-W3w/hqdefault.jpg", // URL des Thumbnails
+  },
+  {
+    loc: `${SITE_URL}videos/titel-h-schisch`, // URL der Seite, die das Video enthält
+    title: "Hammond Organ Komponist: Klaus Wunderlich Titel: H-schisch",
+    description: "Hammond Organ Komponist: Klaus Wunderlich Titel: H-schisch",
+    content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=y2KtSx3-W3w", // URL des eingebetteten Videos
+    thumbnail_loc: "https://i.ytimg.com/vi/y2KtSx3-W3w/hqdefault.jpg", // URL des Thumbnails
+  },
 ];
 
 const generateSitemap = () => {

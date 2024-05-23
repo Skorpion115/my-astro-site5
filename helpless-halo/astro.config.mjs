@@ -29,6 +29,7 @@ export default defineConfig({
   },
 
   site: "https://www.musicstudio-ziebart.de/",
+
   integrations: [
     preact({
       include: ["**/preact/*"],
