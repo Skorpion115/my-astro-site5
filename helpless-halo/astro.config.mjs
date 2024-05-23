@@ -1,5 +1,5 @@
 import { defineConfig } from "astro/config";
-import sitemap from "@astrojs/sitemap";
+// import sitemap from "@astrojs/sitemap";
 import preact from "@astrojs/preact";
 import netlify from "@astrojs/netlify";
 
@@ -30,13 +30,6 @@ export default defineConfig({
 
   site: "https://www.musicstudio-ziebart.de/",
   integrations: [
-    sitemap({
-      filter: (page) =>
-        page !== "https://www.musicstudio-ziebart.de/pupils-download/",
-      changefreq: "weekly",
-      entryLimit: 10000,
-      lastmod: new Date("2024-02-21"),
-    }),
     preact({
       include: ["**/preact/*"],
     }),

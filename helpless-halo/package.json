@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro check && astro build",
+    "build": "astro build && node sitemap.js",
     "preview": "astro preview",
     "astro": "astro"
   },
@@ -15,11 +15,11 @@
     "@astrojs/netlify": "^5.2.1",
     "@astrojs/preact": "^3.2.0",
     "@astrojs/rss": "^4.0.5",
-    "@astrojs/sitemap": "^3.1.4",
     "astro": "^4.8.6",
     "preact": "^10.22.0",
     "toml": "^3.0.0",
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "xmlbuilder": "^15.1.1"
   },
   "engines": {
     "node": ">=18.17.1 <19.0.0"
