@@ -305,7 +305,7 @@ img {
 
 .marchandise.marchandise-2 img {
   max-width: 30% !important;
-  height: auto;
+  height: auto !important;
 }
 
 /* ANCHOR instrumentkauf.astro */
@@ -418,6 +418,20 @@ img {
 
 .item-3 {
   flex: 50%;
+}
+
+.item.item-3 img {
+  width: 30%;
+  height: auto;
+  margin-left: 1%;
+  border-radius: 0.313rem;
+}
+
+.coupon img {
+  max-width: 30% !important;
+  height: auto;
+  margin-left: 1%;
+  border-radius: 0.313rem;
 }
 
 /* ANCHOR unterricht.astro */
