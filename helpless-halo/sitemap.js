@@ -92,6 +92,34 @@ const videos = [
     content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=y2KtSx3-W3w", // URL des eingebetteten Videos
     thumbnail_loc: "https://i.ytimg.com/vi/y2KtSx3-W3w/hqdefault.jpg", // URL des Thumbnails
   },
+  {
+    loc: `${SITE_URL}/videos/Notenschrift`, // URL der Seite, die das Video enthält
+    title: "Notenschrift",
+    description: "Notenschrift",
+    content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=Hu4ef1IkuG0", // URL des eingebetteten Videos
+    thumbnail_loc: "https://i.ytimg.com/vi/Hu4ef1IkuG0/hqdefault.jpg", // URL des Thumbnails
+  },
+  {
+    loc: `${SITE_URL}/videos/Intervalle`, // URL der Seite, die das Video enthält
+    title: "Intervalle",
+    description: "Intervalle",
+    content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=804rrOOFzAQ", // URL des eingebetteten Videos
+    thumbnail_loc: "https://i.ytimg.com/vi/804rrOOFzAQ/hqdefault.jpg", // URL des Thumbnails
+  },
+  {
+    loc: `${SITE_URL}/videos/Dreiklänge`, // URL der Seite, die das Video enthält
+    title: "Dreiklänge",
+    description: "Dreiklänge",
+    content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=fgzboODvlQ4", // URL des eingebetteten Videos
+    thumbnail_loc: "https://i.ytimg.com/vi/fgzboODvlQ4/hqdefault.jpg", // URL des Thumbnails
+  },
+  {
+    loc: `${SITE_URL}/videos/Funktionstheorie`, // URL der Seite, die das Video enthält
+    title: "Funktionsthorie",
+    description: "Funktionsthorie",
+    content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=tCkpok099xw", // URL des eingebetteten Videos
+    thumbnail_loc: "https://i.ytimg.com/vi/tCkpok099xw/hqdefault.jpg", // URL des Thumbnails
+  },
 ];
 
 const generateSitemap = () => {
