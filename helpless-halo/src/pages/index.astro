@@ -4,14 +4,23 @@ import FacebookTag from "../components/FacebookTag.astro";
 import Card from "../components/Card.astro";
 export const prerender = true;
 const pageTitle = "Musiklehrer erteilt Musikunterricht | Musicstudio Ziebart";
+const pageDescription = "Ich gebe Musikunterricht in Nürnberg 🎹. Individueller Unterricht für Anfänger und Fortgeschrittene 🎼, jetzt anrufen! Tel.: 0911/6320890";
+const pageImage = "https://www.musicstudio-ziebart.de/images/musikunterricht.webp";
+const pageUrl = "https://www.musicstudio-ziebart.de/";
 ---
 
 <BaseLayout
   pageTitle={pageTitle}
-  description="Ich gebe Musikunterricht in Nürnberg 🎹. Indivitueller Unterricht für Anfänger und Fortgeschrittene 🎼, jetzt anrufen! Tel.: 0911/6320890"
+  description={pageDescription}
   keywords="musiklehrer erteilt musikunterricht | musicstudio-ziebart, musikunterricht nürnberg, musikschule für alle, musikmachen, musik machen, musikschule nürnberg standorte, musikschule nürnberg lehrer, musikschule nürnberg preise, musikschule eibach, musicstudio ziebart online musikunterricht, privatmusikunterricht, musikunterricht grundschule, musikschule, google search console, günstige Preise, musikausbildung, qualifizierter musiklehrer, online-musikunterricht, kinder musikalisch fördern, musicstudio-ziebart, musikschule nürnberg kinder, klavierunterricht kinder nürnberg, musikschulen nürnberg, musikschule nürnberg, nürnberg musikschule, gitarrenunterricht für kinder nürnberg, gitarre lernen nürnberg, musikschule nürnberg eibach, musikschule nürnberg preise, musikschule in der naehe, musikschule nürnberg kinder, musiklehrer, musiklehrer nürnberg"
-  href="https://www.musicstudio-ziebart.de/"
+  href={pageUrl}
+  ogTitle={pageTitle}
+  ogDescription={pageDescription}
+  ogImage={pageImage}
+  ogUrl={pageUrl}
 >
+  <FacebookTag title={pageTitle} description={pageDescription} image={pageImage} url={pageUrl} />
+
   <div class="firmenname">
     Musicstudio Ziebart<br />
     Staatl. Anerk. Musiklehrer
