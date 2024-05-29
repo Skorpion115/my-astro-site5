@@ -436,7 +436,7 @@ img {
 
 /* ANCHOR unterricht.astro */
 
-.conteneur {
+.contenitore {
     border: 0px solid black;
     align-content: space-between;
     width: 94vw;
@@ -449,31 +449,49 @@ img {
   }
 
   /* Container Inhalt */
-  .marchandise {
+  .contenuto {
     padding: 0.625rem;
   }
 
   /* Kind Elemente */
-  .marchandise-1 {
+  .contenuto-1 {
     flex: 25%;
   }
 
-  .marchandise-2 {
+  .contenuto-2 {
     flex: 25%;
   }
 
-  .marchandise-3 {
+  .contenuto-3 {
     flex: 25%;
   }
 
-  .marchandise-4 {
+  .contenuto-4 {
     flex: 25%;
   }
 
   /* ANCHOR Bilder von marchandise-1 */
 
-  .marchandise.marchandise img {
-    max-width: 100%;
+  .contenuto.contenuto-1 img {
+    max-width: 30%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 1.25rem;
+    margin-left: 1rem;
+    margin-right: 3rem;
+  }
+
+  .contenuto.contenuto-2 img {
+    max-width: 30%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 1.25rem;
+    margin-left: 1rem;
+    margin-right: 3rem;
+  }
+
+  .contenuto.contenuto-3 img {
+    max-width: 30%;
     height: auto;
     border-radius: 5px;
     margin-top: 1.25rem;
