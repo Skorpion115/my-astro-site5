@@ -45,29 +45,29 @@ pages.forEach((page) => {
 const videos = [
   {
     loc: `${SITE_URL}/banjounterricht/`, // URL der Seite, die das Video enthält
-    title: "Flint Hill Special - Earl Scruggs",
+    title: "Flint Hill Special - Banjo Lesson",
     description: "Flint Hill Special - Banjo Lesson",
     content_loc: "https://www.youtube.com/embed/R75ZetEwmtw", // URL des eingebetteten Videos
     thumbnail_loc: "https://i.ytimg.com/vi/R75ZetEwmtw/hqdefault.jpg", // URL des Thumbnails
   },
   {
     loc: `${SITE_URL}/banjounterricht/`, // URL der Seite, die das Video enthält
-    title: "Train 45",
+    title: "Train 45 - Bluegrass Banjo",
     description: "Train 45 - Bluegrass Banjo",
     content_loc: "https://www.youtube.com/embed/uo5ojnmRHPo", // URL des eingebetteten Videos
     thumbnail_loc: "https://i.ytimg.com/vi/uo5ojnmRHPo/hqdefault.jpg", // URL des Thumbnails
   },
   {
     loc: `${SITE_URL}/banjounterricht/`, // URL der Seite, die das Video enthält
-    title: "Cripple Creek",
-    description: "Banjo Beginner Lesson",
+    title: "Banjo Beginner Lesson 2",
+    description: "Banjo Beginner Lesson 2",
     content_loc: "https://www.youtube.com/embed/WmYlSqvpUkw", // URL des eingebetteten Videos
     thumbnail_loc: "https://i.ytimg.com/vi/WmYlSqvpUkw/hqdefault.jpg", // URL des Thumbnails
   },
   {
     loc: `${SITE_URL}/e-gitarrenunterricht`, // URL der Seite, die das Video enthält
     title: "Joe Satriani - Ten Words Guitar Lesson+Tab",
-    description: "Flint Hill Special - Banjo Lesson",
+    description: "Joe Satriani - Ten Words Guitar Lesson+Tab",
     content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=8ucTzPOBzAo", // URL des eingebetteten Videos
     thumbnail_loc: "https://i.ytimg.com/vi/8ucTzPOBzAo/hqdefault.jpg", // URL des Thumbnails
   },
