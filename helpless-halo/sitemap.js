@@ -1,6 +1,6 @@
 import { writeFileSync, mkdirSync } from 'fs';
 import { join } from 'path';
-import { create } from 'xmlbuilder';
+import { create } from 'xmlbuilder2';
 
 const SITE_URL = "https://www.musicstudio-ziebart.de";
 
@@ -114,35 +114,37 @@ const videos = [
   },
 ];
 
-const sitemap = create({ version: "1.0", encoding: "UTF-8" })
-  .ele("urlset", {
-    xmlns: "http://www.sitemaps.org/schemas/sitemap/0.9",
-    "xmlns:video": "http://www.google.com/schemas/sitemap-video/1.1"
+// XML-Dokument erstellen
+const doc = create({ version: '1.0', encoding: 'UTF-8' })
+  .ele('urlset', {
+    xmlns: 'http://www.sitemaps.org/schemas/sitemap/0.9',
+    'xmlns:video': 'http://www.google.com/schemas/sitemap-video/1.1'
   });
 
-// Seiten zur Sitemap hinzufügen
+// Seiten-URLs zur Sitemap hinzufügen
 pages.forEach(page => {
-  const url = sitemap.ele("url");
-  url.ele("loc", page.url);
-  url.ele("changefreq", page.changefreq);
-  url.ele("lastmod", page.lastmod.toISOString());
+  const url = doc.ele('url');
+  url.ele('loc').txt(page.url);
+  url.ele('changefreq').txt(page.changefreq);
+  url.ele('lastmod').txt(page.lastmod.toISOString());
 });
 
 // Videos zur Sitemap hinzufügen
 videos.forEach(video => {
-  const url = sitemap.ele("url");
-  url.ele("loc", video.loc);
-  const videoTag = url.ele("video:video");
-  videoTag.ele("video:title", video.title);
-  videoTag.ele("video:description", video.description);
-  videoTag.ele("video:content_loc", video.content_loc);
-  videoTag.ele("video:thumbnail_loc", video.thumbnail_loc);
+  const url = doc.ele('url');
+  url.ele('loc').txt(video.loc);
+  const videoTag = url.ele('video:video');
+  videoTag.ele('video:title').txt(video.title);
+  videoTag.ele('video:description').txt(video.description);
+  videoTag.ele('video:content_loc').txt(video.content_loc);
+  videoTag.ele('video:thumbnail_loc').txt(video.thumbnail_loc);
 });
 
-const xmlString = sitemap.end({ pretty: true });
+const xmlString = doc.end({ pretty: true });
 
 // Ordner erstellen und Sitemap speichern
-mkdirSync(join(process.cwd(), "dist"), { recursive: true });
-writeFileSync(join(process.cwd(), "dist", "sitemap.xml"), xmlString);
+mkdirSync(join(process.cwd(), 'dist'), { recursive: true });
+writeFileSync(join(process.cwd(), 'dist', 'sitemap.xml'), xmlString);
 
-console.log("Sitemap successfully created!");
+console.log('Sitemap successfully created!');
+
