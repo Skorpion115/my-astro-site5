@@ -1,28 +1,17 @@
 ---
-// VideoSchema.astro
-export interface Props {
-  name: string;
-  description: string;
-  thumbnailUrl: string;
-  uploadDate: string;
-  contentUrl: string;
-  embedUrl: string;
-  duration: string;
-}
-
-const videoSchema = (props: Props) => ({
-  "@context": "https://schema.org",
-  "@type": "VideoObject",
-  "name": props.name,
-  "description": props.description,
-  "thumbnailUrl": props.thumbnailUrl,
-  "uploadDate": props.uploadDate,
-  "contentUrl": props.contentUrl,
-  "embedUrl": props.embedUrl,
-  "duration": props.duration
-});
+const { name, description, thumbnailUrl, uploadDate, contentUrl, embedUrl, duration } = Astro.props;
 ---
 
 <script type="application/ld+json">
-  {JSON.stringify(videoSchema(props))}
+{
+  "@context": "http://schema.org",
+  "@type": "VideoObject",
+  "name": "{name}",
+  "description": "{description}",
+  "thumbnailUrl": "{thumbnailUrl}",
+  "uploadDate": "{uploadDate}",
+  "contentUrl": "{contentUrl}",
+  "embedUrl": "{embedUrl}",
+  "duration": "{duration}"
+}
 </script>

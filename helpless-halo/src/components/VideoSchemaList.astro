@@ -1,0 +1,38 @@
+---
+// VideoSchemaList.astro
+import VideoSchema from "../components/VideoSchema.astro";
+
+const videos = [
+  {
+    name: "Flint Hill Special - Banjo Lesson",
+    description: "Flint Hill Special - Banjo Lesson",
+    thumbnailUrl: "https://i.ytimg.com/vi/R75ZetEwmtw/hqdefault.jpg",
+    uploadDate: "2024-05-30",
+    contentUrl: "https://www.youtube.com/watch?v=R75ZetEwmtw",
+    embedUrl: "https://www.youtube.com/embed/R75ZetEwmtw",
+    duration: "PT2M45S"
+  },
+  {
+    name: "Banjo Beginner Lesson",
+    description: "Banjo Beginner Lesson",
+    thumbnailUrl: "https://i.ytimg.com/vi/uo5ojnmRHPo/hqdefault.jpg",
+    uploadDate: "2024-05-30",
+    contentUrl: "https://www.youtube.com/watch?v=R75ZetEwmtw",
+    embedUrl: "https://www.youtube.com/embed/uo5ojnmRHPo",
+    duration: "PT2M45S"
+  },
+  // Füge hier die restlichen Videos hinzu
+];
+
+---
+{videos.map(video => (
+  <VideoSchema
+    name={video.name}
+    description={video.description}
+    thumbnailUrl={video.thumbnailUrl}
+    uploadDate={video.uploadDate}
+    contentUrl={video.contentUrl}
+    embedUrl={video.embedUrl}
+    duration={video.duration}
+  />
+))}

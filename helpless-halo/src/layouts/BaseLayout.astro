@@ -9,7 +9,8 @@ import { ViewTransitions } from "astro:transitions";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Footer2 from "../components/Footer2.astro";
-import VideoSchema from "../components/VideoSchema.astro";
+// import VideoSchema from "../components/VideoSchema.astro";
+// import VideoSchemaList from "../components/VideoSchemaList.astro"; // Neuer Import
 // import "../styles/global.css";
 const { pageTitle, description, keywords, href, ogTitle, ogDescription, ogImage, ogUrl, ogType, title, image, url } = Astro.props;
 const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
@@ -32,6 +33,7 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
     <meta name="description" content={description} />
     <meta name="keywords" content={keywords} />
     <link rel="canonical" href={href} />
+    <!--
     <VideoSchema
       name="Flint Hill Special - Banjo Lesson"
       description="Flint Hill Special - Banjo Lesson"
@@ -130,7 +132,7 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
       contentUrl="https://www.youtube.com/watch?v=tCkpok099xw"
       embedUrl="https://www.youtube.com/embed/vxX0WiQhSUE?si=tCkpok099xw"
       duration="PT2M45S"
-    />
+    /> -->
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content={ogTitle || pageTitle} />
@@ -180,6 +182,9 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
     <Google />
     <Gtm />     
     <ViewTransitions />
+    <!-- Einbinden der VideoSchemaList-Komponente -->
+    <!--
+    <VideoSchemaList /> -->
     
   </head>
   <body>
