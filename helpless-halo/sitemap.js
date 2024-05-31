@@ -1,6 +1,6 @@
 import { writeFileSync, mkdirSync } from 'fs';
 import { join } from 'path';
-import { create } from 'xmlbuilder';
+import { create } from 'xmlbuilder2';
 
 const SITE_URL = "https://www.musicstudio-ziebart.de";
 
@@ -35,7 +35,7 @@ const pages = [
 
 // Video-Informationen
 const videos = [
-  /*
+  
   {
     loc: `${SITE_URL}/banjounterricht/`,
     title: "Flint Hill Special - Banjo Lesson",
@@ -44,13 +44,14 @@ const videos = [
     thumbnail_loc: "https://i.ytimg.com/vi/R75ZetEwmtw/hqdefault.jpg",
     publication_date: "2023-06-17", // Datum hier einfügen
     duration: "PT13M32S" // ISO 8601 Format (z.B., "PT10M0S" für 10 Minuten)
-  }, */
+  },
+  /*
   {
     loc: "https://www.musicstudio-ziebart.de/banjounterricht/",
     title: "Flint Hill Special - Earl Scruggs",
     description: "Bei diesem Stück erkläre ich den D-Tuner!",
     videoid: "R75ZetEwmtw"
-  },
+  }, */
   /*
   {
     loc: `${SITE_URL}/banjounterricht/`,
@@ -140,7 +141,7 @@ pages.forEach(page => {
 });
 
 // Videos zur Sitemap hinzufügen
-/*
+
 videos.forEach(video => {
   const url = doc.ele('url');
   url.ele('loc').txt(video.loc);
@@ -149,13 +150,10 @@ videos.forEach(video => {
   videoTag.ele('video:description').txt(video.description);
   videoTag.ele('video:content_loc').txt(video.content_loc);
   videoTag.ele('video:thumbnail_loc').txt(video.thumbnail_loc);
-}); */
+});
 // Videos zur Sitemap hinzufügen
-videos.forEach(video => {
-  /*
-  const url = urlset.ele('url'); */
+/* videos.forEach(video => {
   const url = doc.ele('url');
-  
   url.ele('loc', video.loc);
   const videoTag = url.ele('video:video');
   videoTag.ele('video:thumbnail_loc', `https://img.youtube.com/vi/${video.videoid}/default.jpg`);
@@ -163,7 +161,7 @@ videos.forEach(video => {
   videoTag.ele('video:description', video.description);
   videoTag.ele('video:content_loc', `https://www.youtube.com/watch?v=${video.videoid}`);
   videoTag.ele('video:player_loc', `https://www.youtube.com/embed/${video.videoid}`);
-});
+}); */
 
 const xmlString = doc.end({ pretty: true });
 
