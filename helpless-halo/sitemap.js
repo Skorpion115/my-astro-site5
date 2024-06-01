@@ -136,6 +136,19 @@ const videos = [
   },
 ];
 
+// Funktion zur Umwandlung der ISO 8601-Dauer in Sekunden
+const parseISODuration = (isoDuration) => {
+  const regex = /PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?/;
+  const matches = regex.exec(isoDuration);
+  if (!matches) return 0;
+
+  const hours = parseInt(matches[1] || 0, 10);
+  const minutes = parseInt(matches[2] || 0, 10);
+  const seconds = parseInt(matches[3] || 0, 10);
+
+  return (hours * 3600) + (minutes * 60) + seconds;
+};
+
 // Funktion zur Erstellung von Seiten-URLs
 const addPagesToSitemap = (doc, pages) => {
   pages.forEach(page => {
@@ -157,7 +170,7 @@ const addVideosToSitemap = (doc, videos) => {
     videoTag.ele('video:content_loc').txt(video.content_loc);
     videoTag.ele('video:thumbnail_loc').txt(video.thumbnail_loc);
     videoTag.ele('video:publication_date').txt(video.publication_date);
-    videoTag.ele('video:duration').txt(video.duration);
+    videoTag.ele('video:duration').txt(parseISODuration(video.duration));
   });
 };
 
