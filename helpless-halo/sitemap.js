@@ -65,7 +65,7 @@ const videos = [
   {
     loc: `${SITE_URL}/e-gitarrenunterricht`,
     title: "Joe Satriani - Ten Words Guitar Lesson+Tab",
-    description: "Joe Satriani - Ten Words Guitar Lesson+Tab",
+    description: "Lerne das Gitarrenstück 'Ten Words' von Joe Satriani mit dieser detaillierten Gitarrenstunde.",
     content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=8ucTzPOBzAo",
     thumbnail_loc: "https://i.ytimg.com/vi/8ucTzPOBzAo/hqdefault.jpg",
     publication_date: "2021-07-17",
