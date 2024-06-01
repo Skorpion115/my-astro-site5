@@ -6,12 +6,12 @@ const { name, description, thumbnailUrl, uploadDate, contentUrl, embedUrl, durat
 {
   "@context": "http://schema.org",
   "@type": "VideoObject",
-  "name": "{name}",
-  "description": "{description}",
-  "thumbnailUrl": "{thumbnailUrl}",
-  "uploadDate": "{uploadDate}",
-  "contentUrl": "{contentUrl}",
-  "embedUrl": "{embedUrl}",
-  "duration": "{duration}"
+  "name": {JSON.stringify(name)},
+  "description": {JSON.stringify(description)},
+  "thumbnailUrl": {JSON.stringify(thumbnailUrl)},
+  "uploadDate": {JSON.stringify(uploadDate)},
+  "contentUrl": {JSON.stringify(contentUrl)},
+  "embedUrl": {JSON.stringify(embedUrl)},
+  "duration": {JSON.stringify(duration)}
 }
 </script>

@@ -1,5 +1,4 @@
 ---
-// VideoSchemaList.astro
 import VideoSchema from "../components/VideoSchema.astro";
 
 const videos = [
@@ -7,24 +6,24 @@ const videos = [
     name: "Flint Hill Special - Banjo Lesson",
     description: "Flint Hill Special - Banjo Lesson",
     thumbnailUrl: "https://i.ytimg.com/vi/R75ZetEwmtw/hqdefault.jpg",
-    uploadDate: "2024-05-30",
+    uploadDate: "2023-06-17",
     contentUrl: "https://www.youtube.com/watch?v=R75ZetEwmtw",
     embedUrl: "https://www.youtube.com/embed/R75ZetEwmtw",
-    duration: "PT2M45S"
+    duration: "PT13M32S"
   },
   {
     name: "Banjo Beginner Lesson",
     description: "Banjo Beginner Lesson",
     thumbnailUrl: "https://i.ytimg.com/vi/uo5ojnmRHPo/hqdefault.jpg",
-    uploadDate: "2024-05-30",
+    uploadDate: "2023-05-26",
     contentUrl: "https://www.youtube.com/watch?v=R75ZetEwmtw",
     embedUrl: "https://www.youtube.com/embed/uo5ojnmRHPo",
-    duration: "PT2M45S"
+    duration: "PT2M42S"
   },
   // Füge hier die restlichen Videos hinzu
 ];
-
 ---
+
 {videos.map(video => (
   <VideoSchema
     name={video.name}
