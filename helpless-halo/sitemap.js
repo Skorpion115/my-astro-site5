@@ -43,7 +43,7 @@ const videos = [
     content_loc: "https://www.youtube.com/embed/R75ZetEwmtw",
     thumbnail_loc: "https://i.ytimg.com/vi/R75ZetEwmtw/hqdefault.jpg",
     publication_date: "2023-06-17", // Datum hier einfügen
-    duration: "PT13M32S" // ISO 8601 Format (z.B., "PT10M0S" für 10 Minuten)
+    duration: "PT13M32S", // ISO 8601 Format (z.B., "PT10M0S" für 10 Minuten)
   },
   /*
   {
@@ -52,7 +52,6 @@ const videos = [
     description: "Bei diesem Stück erkläre ich den D-Tuner!",
     videoid: "R75ZetEwmtw"
   }, */
-  /*
   {
     loc: `${SITE_URL}/banjounterricht/`,
     title: "Train 45 - Bluegrass Banjo",
@@ -122,7 +121,7 @@ const videos = [
     description: "Funktionsthorie",
     content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=tCkpok099xw",
     thumbnail_loc: "https://i.ytimg.com/vi/tCkpok099xw/hqdefault.jpg",
-  }, */
+  },
 ];
 
 // XML-Dokument erstellen
