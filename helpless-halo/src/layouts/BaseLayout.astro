@@ -9,13 +9,10 @@ import { ViewTransitions } from "astro:transitions";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Footer2 from "../components/Footer2.astro";
-// import VideoSchema from "../components/VideoSchema.astro";
-// import VideoSchemaList from "../components/VideoSchemaList.astro"; // Neuer Import
 // import "../styles/global.css";
 const { pageTitle, description, keywords, href, ogTitle, ogDescription, ogImage, ogUrl, ogType, title, image, url } = Astro.props;
 const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
 ---
-
 <!doctype html>
 <html lang="de-de">
   <head>
@@ -33,107 +30,6 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
     <meta name="description" content={description} />
     <meta name="keywords" content={keywords} />
     <link rel="canonical" href={href} />
-    <!--
-    <VideoSchema
-      name="Flint Hill Special - Banjo Lesson"
-      description="Flint Hill Special - Banjo Lesson"
-      thumbnailUrl="https://i.ytimg.com/vi/R75ZetEwmtw/hqdefault.jpg"
-      uploadDate="2024-05-30"
-      contentUrl="https://www.youtube.com/watch?v=R75ZetEwmtw"
-      embedUrl="https://www.youtube.com/embed/R75ZetEwmtw"
-      duration="PT2M45S"
-    />
-    <VideoSchema
-      name="Banjo Beginner Lesson"
-      description="Banjo Beginner Lesson"
-      thumbnailUrl="https://i.ytimg.com/vi/uo5ojnmRHPo/hqdefault.jpg"
-      uploadDate="2024-05-30"
-      contentUrl="https://www.youtube.com/watch?v=R75ZetEwmtw"
-      embedUrl="https://www.youtube.com/embed/uo5ojnmRHPo"
-      duration="PT2M45S"
-    />
-    <VideoSchema
-      name="Banjo Beginner Lesson 2"
-      description="Banjo Beginner Lesson 2"
-      thumbnailUrl="https://i.ytimg.com/vi/WmYlSqvpUkw/hqdefault.jpg"
-      uploadDate="2024-05-30"
-      contentUrl="https://www.youtube.com/watch?v=WmYlSqvpUkw"
-      embedUrl="https://www.youtube.com/embed/WmYlSqvpUkw"
-      duration="PT2M45S"
-    />
-    <VideoSchema
-      name="Joe Satriani - Ten Words Guitar Lesson+Tab"
-      description="Joe Satriani - Ten Words Guitar Lesson+Tab"
-      thumbnailUrl="https://i.ytimg.com/vi/WmYlSqvpUkw/hqdefault.jpg"
-      uploadDate="2024-05-30"
-      contentUrl="https://www.youtube.com/watch?v=8ucTzPOBzAo"
-      embedUrl="https://www.youtube.com/embed/vxX0WiQhSUE?si=8ucTzPOBzAo"
-      duration="PT2M45S"
-    />
-    <VideoSchema
-      name="City Of NewOrleans - Arlo Guthrie"
-      description="City Of NewOrleans - Arlo Guthrie"
-      thumbnailUrl="https://i.ytimg.com/vi/yEF6e2ZSZ0k/hqdefault.jpg"
-      uploadDate="2024-05-30"
-      contentUrl="https://www.youtube.com/watch?v=yEF6e2ZSZ0k"
-      embedUrl="https://www.youtube.com/embed/vxX0WiQhSUE?si=yEF6e2ZSZ0k"
-      duration="PT2M45S"
-    />
-    <VideoSchema
-      name="Hammond Organ - Hammond Flip - Klaus Wunderlich"
-      description="Hammond Organ - Hammond Flip - Klaus Wunderlich"
-      thumbnailUrl="https://i.ytimg.com/vi/y2KtSx3-W3w/hqdefault.jpg"
-      uploadDate="2024-05-30"
-      contentUrl="https://www.youtube.com/watch?v=244HlpB3JoA"
-      embedUrl="https://www.youtube.com/embed/vxX0WiQhSUE?si=244HlpB3JoA"
-      duration="PT2M45S"
-    />
-    <VideoSchema
-      name="Hammond Organ Komponist: Klaus Wunderlich Titel: H-schisch"
-      description="Hammond Organ Komponist: Klaus Wunderlich Titel: H-schisch"
-      thumbnailUrl="https://i.ytimg.com/vi/y2KtSx3-W3w/hqdefault.jpg"
-      uploadDate="2024-05-30"
-      contentUrl="https://www.youtube.com/watch?v=y2KtSx3-W3w"
-      embedUrl="https://www.youtube.com/embed/vxX0WiQhSUE?si=y2KtSx3-W3w"
-      duration="PT2M45S"
-    />
-    <VideoSchema
-      name="Notenschrift"
-      description="Notenschrift"
-      thumbnailUrl="https://i.ytimg.com/vi/Hu4ef1IkuG0/hqdefault.jpg"
-      uploadDate="2024-05-30"
-      contentUrl="https://www.youtube.com/watch?v=Hu4ef1IkuG0"
-      embedUrl="https://www.youtube.com/embed/vxX0WiQhSUE?si=Hu4ef1IkuG0"
-      duration="PT2M45S"
-    />
-    <VideoSchema
-      name="Intervalle"
-      description="Intervalle"
-      thumbnailUrl="https://i.ytimg.com/vi/804rrOOFzAQ/hqdefault.jpg"
-      uploadDate="2024-05-30"
-      contentUrl="https://www.youtube.com/watch?v=804rrOOFzAQ"
-      embedUrl="https://www.youtube.com/embed/vxX0WiQhSUE?si=804rrOOFzAQ"
-      duration="PT2M45S"
-    />
-    <VideoSchema
-      name="Dreiklänge"
-      description="Dreiklänge"
-      thumbnailUrl="https://i.ytimg.com/vi/fgzboODvlQ4/hqdefault.jpg"
-      uploadDate="2024-05-30"
-      contentUrl="https://www.youtube.com/watch?v=fgzboODvlQ4"
-      embedUrl="https://www.youtube.com/embed/vxX0WiQhSUE?si=fgzboODvlQ4"
-      duration="PT2M45S"
-    />
-    <VideoSchema
-      name="Funktionsthorie"
-      description="Funktionsthorie"
-      thumbnailUrl="https://i.ytimg.com/vi/tCkpok099xw/hqdefault.jpg"
-      uploadDate="2024-05-30"
-      contentUrl="https://www.youtube.com/watch?v=tCkpok099xw"
-      embedUrl="https://www.youtube.com/embed/vxX0WiQhSUE?si=tCkpok099xw"
-      duration="PT2M45S"
-    /> -->
-    
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content={ogTitle || pageTitle} />
     <meta property="og:description" content={ogDescription || description} />
@@ -182,10 +78,6 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
     <Google />
     <Gtm />     
     <ViewTransitions />
-    <!-- Einbinden der VideoSchemaList-Komponente -->
-    <!--
-    <VideoSchemaList /> -->
-    
   </head>
   <body>
     <cookie-banner>
