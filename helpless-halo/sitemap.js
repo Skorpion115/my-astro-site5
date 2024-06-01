@@ -35,31 +35,23 @@ const pages = [
 
 // Video-Informationen
 const videos = [
-  
   {
     loc: `${SITE_URL}/banjounterricht/`,
     title: "Flint Hill Special - Banjo Lesson",
     description: "Flint Hill Special - Banjo Lesson",
     content_loc: "https://www.youtube.com/embed/R75ZetEwmtw",
     thumbnail_loc: "https://i.ytimg.com/vi/R75ZetEwmtw/hqdefault.jpg",
-  },
-    /*
     publication_date: "2023-06-17", // Datum hier einfügen
-    duration: "PT13M32S", // ISO 8601 Format (z.B., "PT10M0S" für 10 Minuten)
-  }, */
-  /*
-  {
-    loc: "https://www.musicstudio-ziebart.de/banjounterricht/",
-    title: "Flint Hill Special - Earl Scruggs",
-    description: "Bei diesem Stück erkläre ich den D-Tuner!",
-    videoid: "R75ZetEwmtw"
-  }, */
+    duration: "PT13M32S" // ISO 8601 Format (z.B., "PT10M0S" für 10 Minuten)
+  },
   {
     loc: `${SITE_URL}/banjounterricht/`,
     title: "Train 45 - Bluegrass Banjo",
     description: "Train 45 - Bluegrass Banjo",
     content_loc: "https://www.youtube.com/embed/uo5ojnmRHPo",
     thumbnail_loc: "https://i.ytimg.com/vi/uo5ojnmRHPo/hqdefault.jpg",
+    publication_date: "2023-06-17", // Beispiel-Datum
+    duration: "PT10M0S" // Beispiel-Dauer
   },
   {
     loc: `${SITE_URL}/banjounterricht/`,
@@ -67,6 +59,8 @@ const videos = [
     description: "Banjo Beginner Lesson 2",
     content_loc: "https://www.youtube.com/embed/WmYlSqvpUkw",
     thumbnail_loc: "https://i.ytimg.com/vi/WmYlSqvpUkw/hqdefault.jpg",
+    publication_date: "2023-06-17", // Beispiel-Datum
+    duration: "PT15M0S" // Beispiel-Dauer
   },
   {
     loc: `${SITE_URL}/e-gitarrenunterricht`,
@@ -74,6 +68,8 @@ const videos = [
     description: "Joe Satriani - Ten Words Guitar Lesson+Tab",
     content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=8ucTzPOBzAo",
     thumbnail_loc: "https://i.ytimg.com/vi/8ucTzPOBzAo/hqdefault.jpg",
+    publication_date: "2023-06-17", // Beispiel-Datum
+    duration: "PT10M0S" // Beispiel-Dauer
   },
   {
     loc: `${SITE_URL}/gitarrenunterricht/`,
@@ -81,6 +77,8 @@ const videos = [
     description: "City Of NewOrleans - Arlo Guthrie",
     content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=yEF6e2ZSZ0k",
     thumbnail_loc: "https://i.ytimg.com/vi/yEF6e2ZSZ0k/hqdefault.jpg",
+    publication_date: "2023-06-17", // Beispiel-Datum
+    duration: "PT10M0S" // Beispiel-Dauer
   },
   {
     loc: `${SITE_URL}/keyboardunterricht/`,
@@ -88,6 +86,8 @@ const videos = [
     description: "Hammond Organ - Hammond Flip - Klaus Wunderlich",
     content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=244HlpB3JoA",
     thumbnail_loc: "https://i.ytimg.com/vi/y2KtSx3-W3w/hqdefault.jpg",
+    publication_date: "2023-06-17", // Beispiel-Datum
+    duration: "PT10M0S" // Beispiel-Dauer
   },
   {
     loc: `${SITE_URL}/keyboardunterricht/`,
@@ -95,6 +95,8 @@ const videos = [
     description: "Hammond Organ Komponist: Klaus Wunderlich Titel: H-schisch",
     content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=y2KtSx3-W3w",
     thumbnail_loc: "https://i.ytimg.com/vi/y2KtSx3-W3w/hqdefault.jpg",
+    publication_date: "2023-06-17", // Beispiel-Datum
+    duration: "PT10M0S" // Beispiel-Dauer
   },
   {
     loc: `${SITE_URL}/harmonielehre/`,
@@ -102,6 +104,8 @@ const videos = [
     description: "Notenschrift",
     content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=Hu4ef1IkuG0",
     thumbnail_loc: "https://i.ytimg.com/vi/Hu4ef1IkuG0/hqdefault.jpg",
+    publication_date: "2023-06-17", // Beispiel-Datum
+    duration: "PT10M0S" // Beispiel-Dauer
   },
   {
     loc: `${SITE_URL}/harmonielehre/`,
@@ -109,6 +113,8 @@ const videos = [
     description: "Intervalle",
     content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=804rrOOFzAQ",
     thumbnail_loc: "https://i.ytimg.com/vi/804rrOOFzAQ/hqdefault.jpg",
+    publication_date: "2023-06-17", // Beispiel-Datum
+    duration: "PT10M0S" // Beispiel-Dauer
   },
   {
     loc: `${SITE_URL}/harmonielehre/`,
@@ -116,6 +122,8 @@ const videos = [
     description: "Dreiklänge",
     content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=fgzboODvlQ4",
     thumbnail_loc: "https://i.ytimg.com/vi/fgzboODvlQ4/hqdefault.jpg",
+    publication_date: "2023-06-17", // Beispiel-Datum
+    duration: "PT10M0S" // Beispiel-Dauer
   },
   {
     loc: `${SITE_URL}/harmonielehre/`,
@@ -123,6 +131,8 @@ const videos = [
     description: "Funktionsthorie",
     content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=tCkpok099xw",
     thumbnail_loc: "https://i.ytimg.com/vi/tCkpok099xw/hqdefault.jpg",
+    publication_date: "2023-06-17", // Beispiel-Datum
+    duration: "PT10M0S" // Beispiel-Dauer
   },
 ];
 
@@ -142,7 +152,6 @@ pages.forEach(page => {
 });
 
 // Videos zur Sitemap hinzufügen
-
 videos.forEach(video => {
   const url = doc.ele('url');
   url.ele('loc').txt(video.loc);
@@ -151,18 +160,9 @@ videos.forEach(video => {
   videoTag.ele('video:description').txt(video.description);
   videoTag.ele('video:content_loc').txt(video.content_loc);
   videoTag.ele('video:thumbnail_loc').txt(video.thumbnail_loc);
+  videoTag.ele('video:publication_date').txt(video.publication_date);
+  videoTag.ele('video:duration').txt(video.duration);
 });
-// Videos zur Sitemap hinzufügen
-/* videos.forEach(video => {
-  const url = doc.ele('url');
-  url.ele('loc', video.loc);
-  const videoTag = url.ele('video:video');
-  videoTag.ele('video:thumbnail_loc', `https://img.youtube.com/vi/${video.videoid}/default.jpg`);
-  videoTag.ele('video:title', video.title);
-  videoTag.ele('video:description', video.description);
-  videoTag.ele('video:content_loc', `https://www.youtube.com/watch?v=${video.videoid}`);
-  videoTag.ele('video:player_loc', `https://www.youtube.com/embed/${video.videoid}`);
-}); */
 
 const xmlString = doc.end({ pretty: true });
 
@@ -171,4 +171,3 @@ mkdirSync(join(process.cwd(), 'dist'), { recursive: true });
 writeFileSync(join(process.cwd(), 'dist', 'sitemap.xml'), xmlString);
 
 console.log('Sitemap successfully created!');
-
