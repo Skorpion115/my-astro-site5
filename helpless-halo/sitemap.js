@@ -42,9 +42,11 @@ const videos = [
     description: "Flint Hill Special - Banjo Lesson",
     content_loc: "https://www.youtube.com/embed/R75ZetEwmtw",
     thumbnail_loc: "https://i.ytimg.com/vi/R75ZetEwmtw/hqdefault.jpg",
+  },
+    /*
     publication_date: "2023-06-17", // Datum hier einfügen
     duration: "PT13M32S", // ISO 8601 Format (z.B., "PT10M0S" für 10 Minuten)
-  },
+  }, */
   /*
   {
     loc: "https://www.musicstudio-ziebart.de/banjounterricht/",
