@@ -4,6 +4,18 @@ import YouTube from "../components/YouTube.astro";
 import "../styles/lite-yt-embed.css";
 export const prerender = true;
 const pageTitle = "E-Gitarrenunterricht für Rockgitarre";
+
+// Video-Daten
+
+const videoData = {
+  name: "Joe Satriani - Ten Words Guitar Lesson+Tab",
+  description: "Lerne das Gitarrenstück 'Ten Words' von Joe Satriani mit dieser detaillierten Gitarrenstunde.",
+  thumbnailUrl: "https://i.ytimg.com/vi/8ucTzPOBzAo/hqdefault.jpg",
+  uploadDate: "2023-05-26",
+  contentUrl: "https://www.youtube.com/watch?v=8ucTzPOBzAo",
+  embedUrl: "https://www.youtube.com/embed/8ucTzPOBzAo",
+  duration: "PT2M42S"
+};
 ---
 
 <BaseLayout
@@ -121,6 +133,21 @@ const pageTitle = "E-Gitarrenunterricht für Rockgitarre";
     </section>
   </article>
 </BaseLayout>
+
+<!-- Strukturierte Daten als JSON-LD einfügen -->
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "VideoObject",
+    "name": "${videoData.name}",
+    "description": "${videoData.description}",
+    "thumbnailUrl": "${videoData.thumbnailUrl}",
+    "uploadDate": "${videoData.uploadDate}",
+    "contentUrl": "${videoData.contentUrl}",
+    "embedUrl": "${videoData.embedUrl}",
+    "duration": "${videoData.duration}"
+  }
+</script>
 
 <YouTube />
 
