@@ -135,19 +135,34 @@ const videoData = {
 </BaseLayout>
 
 <!-- Strukturierte Daten als JSON-LD einfügen -->
+<!--
 <script type="application/ld+json">
   {
     "@context": "http://schema.org",
     "@type": "VideoObject",
-    "loc": "${videoData.loc}",
-    "title": "${videoData.title}",
+    "contentUrl": "${videoData.content_loc}",
+    "name": "${videoData.title}",
     "description": "${videoData.description}",
-    "content_loc": "${videoData.content_loc}",
-    "thumbnail_loc": "${videoData.thumbnail_loc}",
+    "thumbnailUrl": "${videoData.thumbnail_loc}",
     "publication_date": "${videoData.publication_date}",
     "duration": "${videoData.duration}"
   }
-</script>
+</script> -->
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "VideoObject",
+    "name": "Joe Satriani - Ten Words Guitar Lesson+Tab",
+    "description": "Lerne das Gitarrenstück 'Ten Words' von Joe Satriani mit dieser detaillierten Gitarrenstunde.",
+    "thumbnailUrl": "https://i.ytimg.com/vi/vxX0WiQhSUE/hqdefault.jpg",
+    "uploadDate": "2021-07-17",
+    "duration": "PT3M59S",
+    "contentUrl": "https://www.youtube.com/embed/vxX0WiQhSUE",
+    "embedUrl": "https://www.youtube.com/embed/vxX0WiQhSUE",
+    "interactionCount": "2457"
+  }
+  </script>
 
 <YouTube />
 

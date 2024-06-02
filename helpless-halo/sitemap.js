@@ -35,6 +35,7 @@ const pages = [
 
 // Video-Informationen
 const videos = [
+  /*
   {
     loc: `${SITE_URL}/banjounterricht/`,
     title: "Flint Hill Special - Banjo Lesson",
@@ -61,7 +62,7 @@ const videos = [
     thumbnail_loc: "https://i.ytimg.com/vi/WmYlSqvpUkw/hqdefault.jpg",
     publication_date: "2023-04-05",
     duration: "PT2M47S"
-  },
+  }, */
   {
     loc: `${SITE_URL}/e-gitarrenunterricht`,
     title: "Joe Satriani - Ten Words Guitar Lesson+Tab",
@@ -71,6 +72,7 @@ const videos = [
     publication_date: "2021-07-17",
     duration: "PT3M59S"
   },
+  /*
   {
     loc: `${SITE_URL}/gitarrenunterricht/`,
     title: "City Of NewOrleans - Arlo Guthrie",
@@ -133,7 +135,7 @@ const videos = [
     thumbnail_loc: "https://i.ytimg.com/vi/tCkpok099xw/hqdefault.jpg",
     publication_date: "2021-05-10",
     duration: "PT12M22S"
-  },
+  }, */
 ];
 
 // Funktion zur Umwandlung der ISO 8601-Dauer in Sekunden
