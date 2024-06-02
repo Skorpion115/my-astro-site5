@@ -11,7 +11,7 @@ const videoData = {
   loc: "/e-gitarrenunterricht/",
   title: "Joe Satriani - Ten Words Guitar Lesson+Tab",
   description: "Lerne das Gitarrenstück 'Ten Words' von Joe Satriani mit dieser detaillierten Gitarrenstunde.",
-  content_loc: "https://www.youtube.com/watch?v=8ucTzPOBzAo",
+  content_loc: "https://www.youtube.com/embed/8ucTzPOBzAo",
   thumbnail_loc: "https://i.ytimg.com/vi/8ucTzPOBzAo/hqdefault.jpg",
   publication_date: "2021-07-17",
   duration: "PT2M42S"
@@ -149,20 +149,21 @@ const videoData = {
   }
 </script> -->
 
+
+<!-- Strukturierte Daten als JSON-LD einfügen -->
 <script type="application/ld+json">
   {
     "@context": "http://schema.org",
     "@type": "VideoObject",
-    "name": "Joe Satriani - Ten Words Guitar Lesson+Tab",
-    "description": "Lerne das Gitarrenstück 'Ten Words' von Joe Satriani mit dieser detaillierten Gitarrenstunde.",
-    "thumbnailUrl": "https://i.ytimg.com/vi/vxX0WiQhSUE/hqdefault.jpg",
-    "uploadDate": "2021-07-17",
-    "duration": "PT3M59S",
-    "contentUrl": "https://www.youtube.com/embed/vxX0WiQhSUE",
-    "embedUrl": "https://www.youtube.com/embed/vxX0WiQhSUE",
-    "interactionCount": "2457"
+    "name": "${videoData.title}",
+    "description": "${videoData.description}",
+    "thumbnailUrl": "${videoData.thumbnail_loc}",
+    "uploadDate": "${videoData.publication_date}",
+    "duration": "${videoData.duration}",
+    "contentUrl": "${videoData.content_loc}",
+    "embedUrl": "${videoData.content_loc}"
   }
-  </script>
+</script>
 
 <YouTube />
 
