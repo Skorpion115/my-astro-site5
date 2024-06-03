@@ -6,7 +6,7 @@ export const prerender = true;
 const pageTitle = "E-Gitarrenunterricht für Rockgitarre";
 
 // Video-Daten
-
+/*
 const videoData = {
   loc: "/e-gitarrenunterricht/",
   title: "Joe Satriani - Ten Words Guitar Lesson+Tab",
@@ -15,8 +15,33 @@ const videoData = {
   thumbnail_loc: "https://i.ytimg.com/vi/8ucTzPOBzAo/hqdefault.jpg",
   publication_date: "2021-07-17",
   duration: "PT2M42S"
+}; */
+
+const videoData = {
+  title: "Joe Satriani - Ten Words Guitar Lesson+Tab",
+  description: "Lerne das Gitarrenstück 'Ten Words' von Joe Satriani mit dieser detaillierten Gitarrenstunde.",
+  thumbnail_loc: "https://i.ytimg.com/vi/8ucTzPOBzAo/hqdefault.jpg",
+  publication_date: "2021-07-17",
+  duration: "PT2M42S",
+  content_loc: "https://www.youtube.com/embed/8ucTzPOBzAo"
+};
+/*
+const jsonLdData = {
+  "@context": "http://schema.org",
+  "@type": "VideoObject",
+  "name": videoData.title,
+  "description": videoData.description,
+  "thumbnailUrl": videoData.thumbnail_loc,
+  "uploadDate": videoData.publication_date,
+  "duration": videoData.duration,
+  "contentUrl": videoData.content_loc,
+  "embedUrl": videoData.content_loc
 };
 
+const script = document.createElement('script');
+script.type = 'application/ld+json';
+script.text = JSON.stringify(jsonLdData);
+document.head.appendChild(script); */
 ---
 
 <BaseLayout
@@ -136,6 +161,7 @@ const videoData = {
 </BaseLayout>
 
 <!-- Strukturierte Daten als JSON-LD einfügen -->
+<!--
 <script type="application/ld+json">
   {
     "@context": "http://schema.org",
@@ -148,7 +174,24 @@ const videoData = {
     "contentUrl": "${videoData.content_loc}",
     "embedUrl": "${videoData.content_loc}"
   }
-</script>
+</script> -->
+
+<!-- Strukturierte Daten als JSON-LD einfügen -->
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "VideoObject",
+    "name": "<%= videoData.title %>",
+    "description": "<%= videoData.description %>",
+    "thumbnailUrl": "<%= videoData.thumbnail_loc %>",
+    "uploadDate": "<%= videoData.publication_date %>",
+    "duration": "<%= videoData.duration %>",
+    "contentUrl": "<%= videoData.content_loc %>",
+    "embedUrl": "<%= videoData.content_loc %>"
+  }
+  </script>
+  
 
 <YouTube />
 
