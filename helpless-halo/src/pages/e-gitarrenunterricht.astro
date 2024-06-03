@@ -6,22 +6,11 @@ export const prerender = true;
 const pageTitle = "E-Gitarrenunterricht für Rockgitarre";
 
 // Video-Daten
-/*
-const videoData = {
-  loc: "/e-gitarrenunterricht/",
-  title: "Joe Satriani - Ten Words Guitar Lesson+Tab",
-  description: "Lerne das Gitarrenstück 'Ten Words' von Joe Satriani mit dieser detaillierten Gitarrenstunde.",
-  content_loc: "https://www.youtube.com/embed/8ucTzPOBzAo",
-  thumbnail_loc: "https://i.ytimg.com/vi/8ucTzPOBzAo/hqdefault.jpg",
-  publication_date: "2021-07-17",
-  duration: "PT2M42S"
-}; */
-
 const videoData = {
   title: "Joe Satriani - Ten Words Guitar Lesson+Tab",
   description: "Lerne das Gitarrenstück 'Ten Words' von Joe Satriani mit dieser detaillierten Gitarrenstunde.",
   thumbnail_loc: "https://i.ytimg.com/vi/8ucTzPOBzAo/hqdefault.jpg",
-  publication_date: "2021-07-17T00:00:00Z",
+  publication_date: "2021-07-17T00:00:00Z", // ISO 8601 Format
   duration: "PT2M42S",
   content_loc: "https://www.youtube.com/embed/8ucTzPOBzAo"
 };
@@ -37,30 +26,12 @@ const jsonLdData = {
   "contentUrl": videoData.content_loc,
   "embedUrl": videoData.content_loc
 };
-
-/*
-const jsonLdData = {
-  "@context": "http://schema.org",
-  "@type": "VideoObject",
-  "name": videoData.title,
-  "description": videoData.description,
-  "thumbnailUrl": videoData.thumbnail_loc,
-  "uploadDate": videoData.publication_date,
-  "duration": videoData.duration,
-  "contentUrl": videoData.content_loc,
-  "embedUrl": videoData.content_loc
-};
-
-const script = document.createElement('script');
-script.type = 'application/ld+json';
-script.text = JSON.stringify(jsonLdData);
-document.head.appendChild(script); */
 ---
 
 <BaseLayout
   pageTitle={pageTitle}
-  description="Ich gebe E-Gitarrenunterricht 🎸in nürnberg eibach. E-Gitarre für Anfänger. Gerne auch weiterführende Techniken."
-  keywords="e-gitarrenunterricht für rockgitarre, ten words - jo satriani, schule der rockgitarre, elektische gitarre lernen, e-gitarre lernen, e gitarrenunterricht, gitarren lehrer, e gitarrenunterricht n&uuml;rnberg, e gitarre für anfaenger, e gitarrenlehrer in n&uuml;rnberg"
+  description="Ich gebe E-Gitarrenunterricht 🎸in Nürnberg Eibach. E-Gitarre für Anfänger. Gerne auch weiterführende Techniken."
+  keywords="e-gitarrenunterricht für rockgitarre, ten words - jo satriani, schule der rockgitarre, elektrische gitarre lernen, e-gitarre lernen, e gitarrenunterricht, gitarren lehrer, e gitarrenunterricht n&uuml;rnberg, e gitarre für anfänger, e gitarrenlehrer in n&uuml;rnberg"
   href="https://www.musicstudio-ziebart.de/e-gitarrenunterricht/"
 >
   <!-- Strukturierte Daten als JSON-LD einfügen -->
@@ -80,24 +51,24 @@ document.head.appendChild(script); */
     <section>
       <h2>Wie lernt man am besten E-Gitarre spielen?</h2>
       <p>
-        Man lernt am besten E-Gitarre spielen wenn man vorher schon mal
+        Man lernt am besten E-Gitarre spielen, wenn man vorher schon mal
         Akustische Gitarre gespielt hat. Wenn man vorher noch kein Instrument
-        gespielt hat macht es auch nichts. Die unten aufgeführte
+        gespielt hat, macht es auch nichts. Die unten aufgeführte
         E-Gitarrenschule von Andreas Scheinhütte ist auch für Anfänger
         aufgebaut.
       </p>
       <h3>Kann man sich Gitarre spielen selbst beibringen?</h3>
       <p>
-        Ja, man kann die Schule auch alleine durch arbeiten aber es ist schon
-        besser einen Gitarrenlehrer bei seiner Seite zu haben der genauestens
-        zeigt wie das ganze funktioniert damit man auch Fortschritte erkennt.
+        Ja, man kann die Schule auch alleine durcharbeiten, aber es ist schon
+        besser, einen Gitarrenlehrer an seiner Seite zu haben, der genauestens
+        zeigt, wie das Ganze funktioniert, damit man auch Fortschritte erkennt.
         Zumindest mal am Anfang!
       </p>
-      <h3>Ist es einfach E-Gitarre zu lernen?</h3>
+      <h3>Ist es einfach, E-Gitarre zu lernen?</h3>
       <p>
-        Im Vergleich zu anderen Instrumenten kann eher mit leicht antworten wenn
+        Im Vergleich zu anderen Instrumenten kann man eher mit "leicht" antworten, wenn
         es sich um die Begleitung mit Powerchords handelt. Gitarrensolos sind
-        dagegen ziemlich schwierig weil sie oft sehr schnell gespielt werden.
+        dagegen ziemlich schwierig, weil sie oft sehr schnell gespielt werden.
       </p>
       <h3>Wie schnell kann man E-Gitarre lernen?</h3>
       <p>2 Jahre würde ich mal mindestens sagen.</p>
@@ -105,41 +76,41 @@ document.head.appendChild(script); */
       <p>
         <img
           src="/images/scheinhuette-e-gitarrenschule.webp"
-          alt="Bild SEO E-Gitarrenschule von Andreas Scheinhuette"
+          alt="Bild SEO E-Gitarrenschule von Andreas Scheinhütte"
           aria-label="Bild SEO E-Gitarrenschule von Andreas Scheinhütte"
         />
       </p>
       <p>
         Für die E-Gitarre gibt es eine tolle E-Gitarrenschule von Andreas
         Scheinhütte. Das Werk heißt "Schule der Rockgitarre". Es ist eine CD zum
-        mitspielen dabei! Es gibt 2 Bänder davon. Der Band 2 beinhaltet eine 80
+        Mitspielen dabei! Es gibt 2 Bände davon. Der Band 2 beinhaltet eine 80
         Min.-CD mit Original-Playbacks von Nirvana, Santana, Deep Purple, Pink
         Floyd, Blink 182, Linkin Park, Sting, Eric Clapton, Brian Adams, Toto,
         Limp Bizkit, Red Hot Chilli Peppers u.a. zum Üben und Mitspielen. Ein
-        Extra Kapitel für Tapping Studien ist dabei. beim Tapping geht die
-        rechte Hand auf das Griffbrett und tabt dann einen Ton. Dieser wird dann
+        Extra Kapitel für Tapping Studien ist dabei. Beim Tapping geht die
+        rechte Hand auf das Griffbrett und tappt dann einen Ton. Dieser wird dann
         wieder abgezogen und erzeugt einen neuen. Das Gitarren Bending wird
         natürlich genau erklärt. Außerdem wird auf die Harmonielehre eingegangen
         und auch auf die Kirchentonarten wie z.B. dorisch oder mixolydisch. Auch
         auf die Power Chords werden gut erklärt. In diesem Band ist alles
-        drinnen was man als moderner Gitarrist oder Gitarristin braucht. Auch
-        auf die Funky Grooves wird eingegangen wie man so was spielt und vieles
+        drinnen, was man als moderner Gitarrist oder Gitarristin braucht. Auch
+        auf die Funky Grooves wird eingegangen, wie man so etwas spielt und vieles
         mehr.
       </p>
       <h3>Die Dauer der Lernzeit</h3>
       <p>
-        Bis man die 2 Bänder "Schule der Rockgitarre" durch gearbeitet hat
-        dauert es mindestens zwei Jahre. Aber es macht ja auch Spaß mit dieser
+        Bis man die 2 Bände "Schule der Rockgitarre" durchgearbeitet hat,
+        dauert es mindestens zwei Jahre. Aber es macht ja auch Spaß, mit dieser
         Schule zu arbeiten. Für den E-Gitarrenunterricht ist diese
-        E-Gitarrenschule unerläßlich. Diese E-Gitarrenschule ist wie der Titel
-        gut beschreibt auf die Rockgitarre ausgelegt. Übrigens die ganzen Stücke
+        E-Gitarrenschule unerlässlich. Diese E-Gitarrenschule ist, wie der Titel
+        gut beschreibt, auf die Rockgitarre ausgelegt. Übrigens, die ganzen Stücke
         in der Schule für Rockgitarre sind auf Noten und auf Tabulatur
         aufgeschrieben worden. Die Amerikaner schreiben ihre Songs ganz normal
-        mit Noten auf und setzten darunter dann noch eine Tabulatur ohne Hälse.
-        Dann weiß man ganz genau auf welchem Bund gespielt werden muss.
+        mit Noten auf und setzen darunter dann noch eine Tabulatur ohne Hälse.
+        Dann weiß man ganz genau, auf welchem Bund gespielt werden muss.
       </p>
       <p>
-        Auch für Heavy Metal Fans ist diese E-Gitarrenschule unerläßlich meine
+        Auch für Heavy Metal Fans ist diese E-Gitarrenschule unerlässlich, meine
         ich. Sie bietet halt den Grundstock für alles.
       </p>
     </section>
@@ -147,7 +118,7 @@ document.head.appendChild(script); */
       <section>
         <h2>Ten Words - Jo Satriani</h2>
         <p>
-          Ein tolles Stück um eine E-Gitarre zu respräsentieren ist das Stück
+          Ein tolles Stück, um eine E-Gitarre zu repräsentieren, ist das Stück
           von Jo Satriani "Ten Words". Ich habe es mal aufgenommen und auf
           YouTube gestellt.
         </p>
@@ -177,39 +148,6 @@ document.head.appendChild(script); */
     </section>
   </article>
 </BaseLayout>
-
-<!-- Strukturierte Daten als JSON-LD einfügen -->
-<!--
-<script type="application/ld+json">
-  {
-    "@context": "http://schema.org",
-    "@type": "VideoObject",
-    "name": "${videoData.title}",
-    "description": "${videoData.description}",
-    "thumbnailUrl": "${videoData.thumbnail_loc}",
-    "uploadDate": "${videoData.publication_date}",
-    "duration": "${videoData.duration}",
-    "contentUrl": "${videoData.content_loc}",
-    "embedUrl": "${videoData.content_loc}"
-  }
-</script> -->
-
-<!-- Strukturierte Daten als JSON-LD einfügen -->
-
-<script type="application/ld+json">
-  {
-    "@context": "http://schema.org",
-    "@type": "VideoObject",
-    "name": "<%= videoData.title %>",
-    "description": "<%= videoData.description %>",
-    "thumbnailUrl": "<%= videoData.thumbnail_loc %>",
-    "uploadDate": "<%= videoData.publication_date %>",
-    "duration": "<%= videoData.duration %>",
-    "contentUrl": "<%= videoData.content_loc %>",
-    "embedUrl": "<%= videoData.content_loc %>"
-  }
-</script>
-  
 
 <YouTube />
 
