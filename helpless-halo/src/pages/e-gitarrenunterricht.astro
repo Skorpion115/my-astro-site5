@@ -10,8 +10,8 @@ const videoData = {
   title: "Joe Satriani - Ten Words Guitar Lesson+Tab",
   description: "Lerne das Gitarrenstück 'Ten Words' von Joe Satriani mit dieser detaillierten Gitarrenstunde.",
   thumbnail_loc: "https://i.ytimg.com/vi/8ucTzPOBzAo/hqdefault.jpg",
-  publication_date: "2021-07-17T00:00:00+02:00", // ISO 8601 Format 2024-03-31T08:00:00+02:00
-  duration: "PT2M42S",
+  publication_date: "2021-07-17T00:00:00Z", // ISO 8601 Format für Datum und Uhrzeit
+  duration: "PT2M42S", // ISO 8601 Format für Dauer
   content_loc: "https://www.youtube.com/embed/8ucTzPOBzAo"
 };
 
@@ -30,8 +30,8 @@ const jsonLdData = {
 
 <BaseLayout
   pageTitle={pageTitle}
-  description="Ich gebe E-Gitarrenunterricht 🎸in Nürnberg Eibach. E-Gitarre für Anfänger. Gerne auch weiterführende Techniken."
-  keywords="e-gitarrenunterricht für rockgitarre, ten words - jo satriani, schule der rockgitarre, elektrische gitarre lernen, e-gitarre lernen, e gitarrenunterricht, gitarren lehrer, e gitarrenunterricht n&uuml;rnberg, e gitarre für anfänger, e gitarrenlehrer in n&uuml;rnberg"
+  description="Ich gebe E-Gitarrenunterricht 🎸 in Nürnberg Eibach. E-Gitarre für Anfänger. Gerne auch weiterführende Techniken."
+  keywords="e-gitarrenunterricht für rockgitarre, ten words - joe satriani, schule der rockgitarre, elektrische gitarre lernen, e-gitarre lernen, e gitarrenunterricht, gitarrenlehrer, e gitarrenunterricht n&uuml;rnberg, e gitarre für anfänger, e gitarrenlehrer in n&uuml;rnberg"
   href="https://www.musicstudio-ziebart.de/e-gitarrenunterricht/"
 >
   <!-- Strukturierte Daten als JSON-LD einfügen -->
@@ -52,7 +52,7 @@ const jsonLdData = {
       <h2>Wie lernt man am besten E-Gitarre spielen?</h2>
       <p>
         Man lernt am besten E-Gitarre spielen, wenn man vorher schon mal
-        Akustische Gitarre gespielt hat. Wenn man vorher noch kein Instrument
+        akustische Gitarre gespielt hat. Wenn man vorher noch kein Instrument
         gespielt hat, macht es auch nichts. Die unten aufgeführte
         E-Gitarrenschule von Andreas Scheinhütte ist auch für Anfänger
         aufgebaut.
@@ -85,15 +85,15 @@ const jsonLdData = {
         Scheinhütte. Das Werk heißt "Schule der Rockgitarre". Es ist eine CD zum
         Mitspielen dabei! Es gibt 2 Bände davon. Der Band 2 beinhaltet eine 80
         Min.-CD mit Original-Playbacks von Nirvana, Santana, Deep Purple, Pink
-        Floyd, Blink 182, Linkin Park, Sting, Eric Clapton, Brian Adams, Toto,
-        Limp Bizkit, Red Hot Chilli Peppers u.a. zum Üben und Mitspielen. Ein
+        Floyd, Blink 182, Linkin Park, Sting, Eric Clapton, Bryan Adams, Toto,
+        Limp Bizkit, Red Hot Chili Peppers u.a. zum Üben und Mitspielen. Ein
         Extra Kapitel für Tapping Studien ist dabei. Beim Tapping geht die
         rechte Hand auf das Griffbrett und tappt dann einen Ton. Dieser wird dann
         wieder abgezogen und erzeugt einen neuen. Das Gitarren Bending wird
         natürlich genau erklärt. Außerdem wird auf die Harmonielehre eingegangen
         und auch auf die Kirchentonarten wie z.B. dorisch oder mixolydisch. Auch
-        auf die Power Chords werden gut erklärt. In diesem Band ist alles
-        drinnen, was man als moderner Gitarrist oder Gitarristin braucht. Auch
+        die Power Chords werden gut erklärt. In diesem Band ist alles
+        enthalten, was man als moderner Gitarrist oder Gitarristin braucht. Auch
         auf die Funky Grooves wird eingegangen, wie man so etwas spielt und vieles
         mehr.
       </p>
@@ -104,7 +104,7 @@ const jsonLdData = {
         Schule zu arbeiten. Für den E-Gitarrenunterricht ist diese
         E-Gitarrenschule unerlässlich. Diese E-Gitarrenschule ist, wie der Titel
         gut beschreibt, auf die Rockgitarre ausgelegt. Übrigens, die ganzen Stücke
-        in der Schule für Rockgitarre sind auf Noten und auf Tabulatur
+        in der Schule für Rockgitarre sind auf Noten und Tabulatur
         aufgeschrieben worden. Die Amerikaner schreiben ihre Songs ganz normal
         mit Noten auf und setzen darunter dann noch eine Tabulatur ohne Hälse.
         Dann weiß man ganz genau, auf welchem Bund gespielt werden muss.
@@ -115,41 +115,36 @@ const jsonLdData = {
       </p>
     </section>
     <section>
-      <section>
-        <h2>Ten Words - Jo Satriani</h2>
-        <p>
-          Ein tolles Stück, um eine E-Gitarre zu repräsentieren, ist das Stück
-          von Jo Satriani "Ten Words". Ich habe es mal aufgenommen und auf
-          YouTube gestellt.
-        </p>
+      <h2>Ten Words - Joe Satriani</h2>
+      <p>
+        Ein tolles Stück, um eine E-Gitarre zu repräsentieren, ist das Stück
+        von Joe Satriani "Ten Words". Ich habe es mal aufgenommen und auf
+        YouTube gestellt.
+      </p>
 
-        <div class="video-container-wrapper">
-          <div class="video-container">
-            <lite-youtube
-              videoid="8ucTzPOBzAo"
-              style="background-image: url('https://i.ytimg.com/vi/8ucTzPOBzAo/hqdefault.jpg');"
+      <div class="video-container-wrapper">
+        <div class="video-container">
+          <lite-youtube
+            videoid="8ucTzPOBzAo"
+            style="background-image: url('https://i.ytimg.com/vi/8ucTzPOBzAo/hqdefault.jpg');"
+          >
+            <a
+              href="https://www.youtube.com/embed/8ucTzPOBzAo"
+              class="lty-playbtn"
+              title="Joe Satriani - Ten Words Guitar Lesson+Tab"
             >
-              <a
-                href="https://www.youtube.com/embed/8ucTzPOBzAo"
-                class="lty-playbtn"
-                title="Joe Satriani - Ten Words Guitar Lesson+Tab"
-              >
-                <span class="lyt-visually-hidden"
-                  >Play Video: Joe Satriani - Ten Words Guitar Lesson+Tab</span
-                >
-              </a>
-            </lite-youtube>
-          </div>
+              <span class="lyt-visually-hidden">Play Video: Joe Satriani - Ten Words Guitar Lesson+Tab</span>
+            </a>
+          </lite-youtube>
         </div>
-        <p>
-          <a href="/unterricht/" class="normal-links">zurück</a>
-        </p>
-      </section>
+      </div>
+      <p>
+        <a href="/unterricht/" class="normal-links">zurück</a>
+      </p>
     </section>
   </article>
+  <YouTube />
 </BaseLayout>
-
-<YouTube />
 
 <style>
   article img {
