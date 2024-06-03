@@ -18,14 +18,26 @@ const videoData = {
 }; */
 
 const videoData = {
-  loc: "/e-gitarrenunterricht/",
   title: "Joe Satriani - Ten Words Guitar Lesson+Tab",
   description: "Lerne das Gitarrenstück 'Ten Words' von Joe Satriani mit dieser detaillierten Gitarrenstunde.",
   thumbnail_loc: "https://i.ytimg.com/vi/8ucTzPOBzAo/hqdefault.jpg",
   publication_date: "2021-07-17T00:00:00Z",
-  duration: "PT2M42ST00:00:00Z",
+  duration: "PT2M42S",
   content_loc: "https://www.youtube.com/embed/8ucTzPOBzAo"
 };
+
+const jsonLdData = {
+  "@context": "http://schema.org",
+  "@type": "VideoObject",
+  "name": videoData.title,
+  "description": videoData.description,
+  "thumbnailUrl": videoData.thumbnail_loc,
+  "uploadDate": videoData.publication_date,
+  "duration": videoData.duration,
+  "contentUrl": videoData.content_loc,
+  "embedUrl": videoData.content_loc
+};
+
 /*
 const jsonLdData = {
   "@context": "http://schema.org",
@@ -51,6 +63,11 @@ document.head.appendChild(script); */
   keywords="e-gitarrenunterricht für rockgitarre, ten words - jo satriani, schule der rockgitarre, elektische gitarre lernen, e-gitarre lernen, e gitarrenunterricht, gitarren lehrer, e gitarrenunterricht n&uuml;rnberg, e gitarre für anfaenger, e gitarrenlehrer in n&uuml;rnberg"
   href="https://www.musicstudio-ziebart.de/e-gitarrenunterricht/"
 >
+  <!-- Strukturierte Daten als JSON-LD einfügen -->
+  <script type="application/ld+json">
+    {JSON.stringify(jsonLdData)}
+  </script>
+
   <article>
     <p>
       <img
