@@ -18,6 +18,35 @@ const pageTitle = "Tag Index";
     ))}
   </div>
 </BaseLayout>
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Tags",
+    "description": "Übersicht aller Tags der Blogbeiträge",
+    "url": "https://www.musicstudio-ziebart.de/tags/",
+    "author": {
+      "@type": "Person",
+      "name": "Musicstudio Ziebart"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Musicstudio Ziebart",
+      /*
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.musicstudio-ziebart.de/images/logo.png" // Beispiel-URL, bitte anpassen
+      } */
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.musicstudio-ziebart.de/tags/"
+    }
+  }
+  </script>
+  
+
 <style>
   a {
     color: #00539F;

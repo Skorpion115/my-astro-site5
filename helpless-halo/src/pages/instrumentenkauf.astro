@@ -320,3 +320,42 @@ const pageTitle = "Tips für Ihren Instrumentenkauf";
     </section>
   </article>
 </BaseLayout>
+<!--
+<script type="application/ld+json">
+  {{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "{pageTitle}",
+    "description": "{description}",
+    "url": "{pageUrl}",
+    "mainEntity": {productData}
+  }}
+</script> -->
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Tips für Ihren Instrumentenkauf",
+    "description": "Gute Tips zum Instrumetenkauf! 🎸 Auf was muss ich beim Kauf eines Instruments achten? 🪕",
+    "url": "https://www.musicstudio-ziebart.de/instrumentenkauf/",
+    "author": {
+      "@type": "Person",
+      "name": "Musicstudio Ziebart"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Musicstudio Ziebart",
+      /*
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.musicstudio-ziebart.de/images/logo.png" // Beispiel-URL, bitte anpassen
+      } */
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.musicstudio-ziebart.de/instrumentenkauf/"
+    }
+  }
+  </script>
+  
