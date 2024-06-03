@@ -37,7 +37,7 @@ const pages = [
 const videos = [
   {
     loc: `${SITE_URL}/banjounterricht/`,
-    title: "Flint Hill Special - Banjo Lesson",
+    name: "Flint Hill Special - Banjo Lesson",
     description: "Lerne das Banjostück 'Flint Hill Special von Earl Scruggs'. Es wird in dem Stück ein sogenannter D-Tuner verwendet. Ich erkläre genau wie man so einen D-Tuner benutzt und einstellt.",
     content_loc: "https://www.youtube.com/embed/R75ZetEwmtw",
     thumbnail_loc: "https://i.ytimg.com/vi/R75ZetEwmtw/hqdefault.jpg",
@@ -46,7 +46,7 @@ const videos = [
   },
   {
     loc: `${SITE_URL}/banjounterricht/`,
-    title: "Train 45 - Bluegrass Banjo",
+    name: "Train 45 - Bluegrass Banjo",
     description: "Lerne das Banjostück Train 45 - Bluegrass Banjo.",
     content_loc: "https://www.youtube.com/embed/uo5ojnmRHPo",
     thumbnail_loc: "https://i.ytimg.com/vi/uo5ojnmRHPo/hqdefault.jpg",
@@ -55,7 +55,7 @@ const videos = [
   },
   {
     loc: `${SITE_URL}/banjounterricht/`,
-    title: "Banjo Beginner Lesson 2",
+    name: "Banjo Beginner Lesson 2",
     description: "Lerne das Banjostück 'Creeple Creek'. Mit diesem Stück hat Earl Scruggs als kleiner Junge schon einen Preis gewonnen.",
     content_loc: "https://www.youtube.com/embed/WmYlSqvpUkw",
     thumbnail_loc: "https://i.ytimg.com/vi/WmYlSqvpUkw/hqdefault.jpg",
@@ -64,7 +64,7 @@ const videos = [
   },
   {
     loc: `${SITE_URL}/e-gitarrenunterricht/`,
-    title: "Joe Satriani - Ten Words Guitar Lesson+Tab",
+    name: "Joe Satriani - Ten Words Guitar Lesson+Tab",
     description: "Lerne das Gitarrenstück 'Ten Words' von Joe Satriani mit dieser detaillierten Gitarrenstunde.",
     content_loc: "https://www.youtube.com/embed/8ucTzPOBzAo",
     thumbnail_loc: "https://i.ytimg.com/vi/8ucTzPOBzAo/hqdefault.jpg",
@@ -73,7 +73,7 @@ const videos = [
   },
   {
     loc: `${SITE_URL}/gitarrenunterricht/`,
-    title: "Beatles - Yesterday Gitarre Tutorial",
+    name: "Beatles - Yesterday Gitarre Tutorial",
     description: "Lerne das Gitarrenstück 'Yesterday von den Beatles'. Dieses Stück kann man wunderbar alleine spielen, also ohne Bass, Drums usw. Die Gitarre wird in einer Double Flatstimmung umgestimmt.",
     content_loc: "https://www.youtube.com/embed/oqko5Mk_UBk",
     thumbnail_loc: "https://i.ytimg.com/vi/oqko5Mk_UBk/hqdefault.jpg",
@@ -91,7 +91,7 @@ const videos = [
   },
   {
     loc: `${SITE_URL}/keyboardunterricht/`,
-    title: "Hammond Organ - Hammond Flip - Klaus Wunderlich",
+    name: "Hammond Organ - Hammond Flip - Klaus Wunderlich",
     description: "Keyboard Tutorial über eine Klaus Wunderlich Komposition. Das Stück heißt 'Hammond Flip'.",
     content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=244HlpB3JoA",
     thumbnail_loc: "https://i.ytimg.com/vi/y2KtSx3-W3w/hqdefault.jpg",
@@ -100,7 +100,7 @@ const videos = [
   },
   {
     loc: `${SITE_URL}/keyboardunterricht/`,
-    title: "Hammond Organ Komponist: Klaus Wunderlich Titel: H-schisch",
+    name: "Hammond Organ Komponist: Klaus Wunderlich Titel: H-schisch",
     description: "Ein Keyboard Tutorial über den Komponist Klaus Wunderlich. Das Stück das ich spiele heißt 'H-schisch'. Das ist in einem Notenheft von ihm mit 12 Kompositionen.",
     content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=y2KtSx3-W3w",
     thumbnail_loc: "https://i.ytimg.com/vi/y2KtSx3-W3w/hqdefault.jpg",
@@ -109,7 +109,7 @@ const videos = [
   },
   {
     loc: `${SITE_URL}/keyboardunterricht/`,
-    title: "Hammond Organ Komponist: Klaus Wunderlich Titel: E-Hering",
+    name: "Hammond Organ Komponist: Klaus Wunderlich Titel: E-Hering",
     description: "Ein Keyboard Tutorial über den Komponist Klaus Wunderlich. Titel: E-Hering.",
     content_loc: "https://www.youtube.com/embed/t0tOQfL2qSE",
     thumbnail_loc: "https://i.ytimg.com/vi/t0tOQfL2qSE/hqdefault.jpg",
@@ -118,7 +118,7 @@ const videos = [
   },
   {
     loc: `${SITE_URL}/harmonielehre/`,
-    title: "Notenschrift",
+    name: "Notenschrift",
     description: "Ich möchte mit diesem Video die Notenschrift erklären die ja doch so wichtig für die Musik ist!",
     content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=Hu4ef1IkuG0",
     thumbnail_loc: "https://i.ytimg.com/vi/Hu4ef1IkuG0/hqdefault.jpg",
@@ -127,7 +127,7 @@ const videos = [
   },
   {
     loc: `${SITE_URL}/harmonielehre/`,
-    title: "Intervalle",
+    name: "Intervalle",
     description: "Ich werde in diesem Video versuchen die Intervalle zu erklären und zu bestimmen. Ein Intervall ist der Tonabstand zweier Töne. Also Prime, Sekunde, Terz, Quarte, Quinte, Sexte, Septime und Oktave.",
     content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=804rrOOFzAQ",
     thumbnail_loc: "https://i.ytimg.com/vi/804rrOOFzAQ/hqdefault.jpg",
@@ -136,7 +136,7 @@ const videos = [
   },
   {
     loc: `${SITE_URL}/harmonielehre/`,
-    title: "Dreiklänge",
+    name: "Dreiklänge",
     description: "Ich werde in diesem Video versuchen die Dreiklänge besser zu verstehen. Sie sind wichtig da diese zum Beispiel eintscheiden ob ein Akkord ein Durakkord ist oder ein Mollakkord und noch vieles mehr.",
     content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=fgzboODvlQ4",
     thumbnail_loc: "https://i.ytimg.com/vi/fgzboODvlQ4/hqdefault.jpg",
@@ -145,7 +145,7 @@ const videos = [
   },
   {
     loc: `${SITE_URL}/harmonielehre/`,
-    title: "Funktionsthorie",
+    name: "Funktionsthorie",
     description: "Bei der Funktionstheorie geht es haupsächlich darum auf welchen Stufen die Akkorde stehen. Die drei Haupdreiklänge heißen zum Beispiel Tonika, Dominante und Subdominante. Sie liegen auf der I., IV. und V. Stufe.",
     content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=tCkpok099xw",
     thumbnail_loc: "https://i.ytimg.com/vi/tCkpok099xw/hqdefault.jpg",
@@ -183,7 +183,7 @@ const addVideosToSitemap = (doc, videos) => {
     const url = doc.ele('url');
     url.ele('loc').txt(video.loc);
     const videoTag = url.ele('video:video');
-    videoTag.ele('video:title').txt(video.title);
+    videoTag.ele('video:name').txt(video.name);
     videoTag.ele('video:description').txt(video.description);
     videoTag.ele('video:content_loc').txt(video.content_loc);
     videoTag.ele('video:thumbnail_loc').txt(video.thumbnail_loc);

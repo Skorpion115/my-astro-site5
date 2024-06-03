@@ -8,7 +8,7 @@ const pageTitle = "Harmonielehre Grundbegriffe lernen";
 const videoData = [
 {
     loc: "/harmonielehre/",
-    title: "Notenschrift",
+    name: "Notenschrift",
     description: "Ich möchte mit diesem Video die Notenschrift erklären die ja doch so wichtig für die Musik ist!",
     content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=Hu4ef1IkuG0",
     thumbnail_loc: "https://i.ytimg.com/vi/Hu4ef1IkuG0/hqdefault.jpg",
@@ -17,7 +17,7 @@ const videoData = [
   },
   {
     loc: "/harmonielehre/",
-    title: "Intervalle",
+    name: "Intervalle",
     description: "Ich werde in diesem Video versuchen die Intervalle zu erklären und zu bestimmen. Ein Intervall ist der Tonabstand zweier Töne. Also Prime, Sekunde, Terz, Quarte, Quinte, Sexte, Septime und Oktave.",
     content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=804rrOOFzAQ",
     thumbnail_loc: "https://i.ytimg.com/vi/804rrOOFzAQ/hqdefault.jpg",
@@ -26,7 +26,7 @@ const videoData = [
   },
   {
     loc: "/harmonielehre/",
-    title: "Dreiklänge",
+    name: "Dreiklänge",
     description: "Ich werde in diesem Video versuchen die Dreiklänge besser zu verstehen. Sie sind wichtig da diese zum Beispiel eintscheiden ob ein Akkord ein Durakkord ist oder ein Mollakkord und noch vieles mehr.",
     content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=fgzboODvlQ4",
     thumbnail_loc: "https://i.ytimg.com/vi/fgzboODvlQ4/hqdefault.jpg",
@@ -35,7 +35,7 @@ const videoData = [
   },
   {
     loc: "/harmonielehre/",
-    title: "Funktionsthorie",
+    name: "Funktionsthorie",
     description: "Bei der Funktionstheorie geht es haupsächlich darum auf welchen Stufen die Akkorde stehen. Die drei Haupdreiklänge heißen zum Beispiel Tonika, Dominante und Subdominante. Sie liegen auf der I., IV. und V. Stufe.",
     content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=tCkpok099xw",
     thumbnail_loc: "https://i.ytimg.com/vi/tCkpok099xw/hqdefault.jpg",
@@ -83,7 +83,7 @@ const videoData = [
             <a
               href="https://www.youtube.com/embed/Hu4ef1IkuG0"
               class="lty-playbtn"
-              title="Notenschrift"
+              name="Notenschrift"
             >
               <span class="lyt-visually-hidden"
                 >Play Video: Notenschrift</span
@@ -106,7 +106,7 @@ const videoData = [
             <a
               href="https://www.youtube.com/embed/804rrOOFzAQ"
               class="lty-playbtn"
-              title="Intervalle"
+              name="Intervalle"
             >
               <span class="lyt-visually-hidden"
                 >Play Video: Intervalle</span
@@ -130,7 +130,7 @@ const videoData = [
             <a
               href="https://www.youtube.com/embed/fgzboODvlQ4"
               class="lty-playbtn"
-              title="Dreiklänge"
+              name="Dreiklänge"
             >
               <span class="lyt-visually-hidden"
                 >Play Video: Dreiklänge</span
@@ -153,7 +153,7 @@ const videoData = [
             <a
               href="https://www.youtube.com/embed/tCkpok099xw"
               class="lty-playbtn"
-              title="Funktionstheorie"
+              name="Funktionstheorie"
             >
               <span class="lyt-visually-hidden"
                 >Play Video: Funktiontsheorie</span
@@ -170,7 +170,7 @@ const videoData = [
   {
     "@context": "http://schema.org",
     "@type": "VideoObject",
-    "name": "${videoData.title}",
+    "name": "${videoData.name}",
     "description": "${videoData.description}",
     "thumbnailUrl": "${videoData.thumbnail_loc}",
     "uploadDate": "${videoData.publication_date}",
