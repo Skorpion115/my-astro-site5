@@ -9,7 +9,7 @@ const pageTitle = "E-Gitarrenunterricht für Rockgitarre";
 
 const videoData = {
   loc: "/e-gitarrenunterricht/",
-  name: "Joe Satriani - Ten Words Guitar Lesson+Tab",
+  title: "Joe Satriani - Ten Words Guitar Lesson+Tab",
   description: "Lerne das Gitarrenstück 'Ten Words' von Joe Satriani mit dieser detaillierten Gitarrenstunde.",
   content_loc: "https://www.youtube.com/embed/8ucTzPOBzAo",
   thumbnail_loc: "https://i.ytimg.com/vi/8ucTzPOBzAo/hqdefault.jpg",
@@ -118,7 +118,7 @@ const videoData = {
               <a
                 href="https://www.youtube.com/embed/8ucTzPOBzAo"
                 class="lty-playbtn"
-                name="Joe Satriani - Ten Words Guitar Lesson+Tab"
+                title="Joe Satriani - Ten Words Guitar Lesson+Tab"
               >
                 <span class="lyt-visually-hidden"
                   >Play Video: Joe Satriani - Ten Words Guitar Lesson+Tab</span
@@ -140,7 +140,7 @@ const videoData = {
   {
     "@context": "http://schema.org",
     "@type": "VideoObject",
-    "name": "${videoData.name}",
+    "name": "${videoData.title}",
     "description": "${videoData.description}",
     "thumbnailUrl": "${videoData.thumbnail_loc}",
     "uploadDate": "${videoData.publication_date}",
