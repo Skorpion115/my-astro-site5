@@ -4,6 +4,37 @@ import YouTube from "../components/YouTube.astro";
 import "../styles/lite-yt-embed.css";
 export const prerender = true;
 const pageTitle = "Keyboardunterricht für jung und alt";
+// Video-Daten
+
+const videoData = [
+  {
+    loc: "/keyboardunterricht/",
+    title: "Hammond Organ - Hammond Flip - Klaus Wunderlich",
+    description: "Keyboard Tutorial über eine Klaus Wunderlich Komposition. Das Stück heißt 'Hammond Flip'.",
+    content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=244HlpB3JoA",
+    thumbnail_loc: "https://i.ytimg.com/vi/y2KtSx3-W3w/hqdefault.jpg",
+    publication_date: "2021-07-08",
+    duration: "PT3M6S"
+  },
+  {
+    loc: "/keyboardunterricht/",
+    title: "Hammond Organ Komponist: Klaus Wunderlich Titel: H-schisch",
+    description: "Ein Keyboard Tutorial über den Komponist Klaus Wunderlich. Das Stück das ich spiele heißt 'H-schisch'. Das ist in einem Notenheft von ihm mit 12 Kompositionen.",
+    content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=y2KtSx3-W3w",
+    thumbnail_loc: "https://i.ytimg.com/vi/y2KtSx3-W3w/hqdefault.jpg",
+    publication_date: "2023-05-19",
+    duration: "PT4M16S"
+  },
+  {
+    loc: "/keyboardunterricht/",
+    title: "Hammond Organ Komponist: Klaus Wunderlich Titel: E-Hering",
+    description: "Ein Keyboard Tutorial über den Komponist Klaus Wunderlich. Titel: E-Hering.",
+    content_loc: "https://www.youtube.com/embed/t0tOQfL2qSE",
+    thumbnail_loc: "https://i.ytimg.com/vi/t0tOQfL2qSE/hqdefault.jpg",
+    publication_date: "2023-04-12",
+    duration: "PT5M38S"
+  },
+];
 ---
 
 <BaseLayout
@@ -112,6 +143,20 @@ const pageTitle = "Keyboardunterricht für jung und alt";
     </article>
   </section>
 </BaseLayout>
+<!-- Strukturierte Daten als JSON-LD einfügen -->
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "VideoObject",
+    "name": "${videoData.title}",
+    "description": "${videoData.description}",
+    "thumbnailUrl": "${videoData.thumbnail_loc}",
+    "uploadDate": "${videoData.publication_date}",
+    "duration": "${videoData.duration}",
+    "contentUrl": "${videoData.content_loc}",
+    "embedUrl": "${videoData.content_loc}"
+  }
+</script>
 
 <YouTube />
 

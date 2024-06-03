@@ -5,6 +5,30 @@ import "../styles/lite-yt-embed.css";
 import Guitar from "../components/Guitar.astro";
 export const prerender = true;
 const pageTitle = "Gitarrenunterricht für akustische Gitarre";
+// Video-Daten
+
+const videoData = [
+  {
+    loc: "/gitarrenunterricht/",
+    title: "Beatles - Yesterday Gitarre Tutorial",
+    description:
+      "Lerne das Gitarrenstück 'Yesterday von den Beatles'. Dieses Stück kann man wunderbar alleine spielen, also ohne Bass, Drums usw. Die Gitarre wird in einer Double Flatstimmung umgestimmt.",
+    content_loc: "https://www.youtube.com/embed/oqko5Mk_UBk",
+    thumbnail_loc: "https://i.ytimg.com/vi/oqko5Mk_UBk/hqdefault.jpg",
+    publication_date: "2023-07-01",
+    duration: "PT12M41S",
+  },
+  {
+    loc: "/gitarrenunterricht/",
+    title: "City Of NewOrleans - Arlo Guthrie",
+    description:
+      "Lerne das Gitarrenstück 'City Of NewOrleans - Arlo Guthrie'. Dieses Stück war Arlo Guthries einziger Welthit.",
+    content_loc: "https://www.youtube.com/embed/yEF6e2ZSZ0k",
+    thumbnail_loc: "https://i.ytimg.com/vi/yEF6e2ZSZ0k/hqdefault.jpg",
+    publication_date: "2021-08-26",
+    duration: "PT4M49S",
+  },
+];
 ---
 
 <BaseLayout
@@ -119,20 +143,25 @@ const pageTitle = "Gitarrenunterricht für akustische Gitarre";
       <h4>Videos zum Gitarrenunterricht</h4>
       <p>
         Hier ist mein neuestes Gitarren Tutorial für Akustikgitarre. Yesterday
-        von den Beatles!
+        von den Beatles! Das Stück kann man wunderbar alleine spielen.
       </p>
-      <div itemscope itemtype="https://schema.org/Movie">
-        <h4 itemprop="name">Yesterday</h4>
-        <span
-          >Komponist: <span itemprop="director">Beatles</span> Das Stück kann man
-          gut alleine spielen!
-        </span>
-        <span itemprop="genre">Pop-Musik</span><a
-          href="https://www.youtube.com/watch?v=oqko5Mk_UBk"
-          itemprop="video"
-        >
-          Video</a
-        >
+      <div class="video-container-wrapper">
+        <div class="video-container">
+          <lite-youtube
+            videoid="oqko5Mk_UBk"
+            style="background-image: url('https://i.ytimg.com/vi/oqko5Mk_UBk/hqdefault.jpg');"
+          >
+            <a
+              href="https://www.youtube.com/embed/oqko5Mk_UBk"
+              class="lty-playbtn"
+              title="Yesterday - Beatles"
+            >
+              <span class="lyt-visually-hidden"
+                >Play Video: Yesterday - Beatles</span
+              >
+            </a>
+          </lite-youtube>
+        </div>
       </div>
       <p>
         Ein schönes Beispiel für ein Fingerpicking mit Gitarre und Gesang: Ich
@@ -164,6 +193,21 @@ const pageTitle = "Gitarrenunterricht für akustische Gitarre";
     </section>
   </article>
 </BaseLayout>
+
+<!-- Strukturierte Daten als JSON-LD einfügen -->
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "VideoObject",
+    "name": "${videoData.title}",
+    "description": "${videoData.description}",
+    "thumbnailUrl": "${videoData.thumbnail_loc}",
+    "uploadDate": "${videoData.publication_date}",
+    "duration": "${videoData.duration}",
+    "contentUrl": "${videoData.content_loc}",
+    "embedUrl": "${videoData.content_loc}"
+  }
+</script>
 
 <YouTube />
 

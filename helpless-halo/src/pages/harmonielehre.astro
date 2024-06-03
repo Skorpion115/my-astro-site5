@@ -4,6 +4,46 @@ import YouTube from "../components/YouTube.astro";
 import "../styles/lite-yt-embed.css";
 export const prerender = true;
 const pageTitle = "Harmonielehre Grundbegriffe lernen";
+// Video Daten
+const videoData = [
+{
+    loc: "/harmonielehre/",
+    title: "Notenschrift",
+    description: "Ich möchte mit diesem Video die Notenschrift erklären die ja doch so wichtig für die Musik ist!",
+    content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=Hu4ef1IkuG0",
+    thumbnail_loc: "https://i.ytimg.com/vi/Hu4ef1IkuG0/hqdefault.jpg",
+    publication_date: "2021-04-19",
+    duration: "PT13M52S"
+  },
+  {
+    loc: "/harmonielehre/",
+    title: "Intervalle",
+    description: "Ich werde in diesem Video versuchen die Intervalle zu erklären und zu bestimmen. Ein Intervall ist der Tonabstand zweier Töne. Also Prime, Sekunde, Terz, Quarte, Quinte, Sexte, Septime und Oktave.",
+    content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=804rrOOFzAQ",
+    thumbnail_loc: "https://i.ytimg.com/vi/804rrOOFzAQ/hqdefault.jpg",
+    publication_date: "2023-04-27",
+    duration: "PT17M55S"
+  },
+  {
+    loc: "/harmonielehre/",
+    title: "Dreiklänge",
+    description: "Ich werde in diesem Video versuchen die Dreiklänge besser zu verstehen. Sie sind wichtig da diese zum Beispiel eintscheiden ob ein Akkord ein Durakkord ist oder ein Mollakkord und noch vieles mehr.",
+    content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=fgzboODvlQ4",
+    thumbnail_loc: "https://i.ytimg.com/vi/fgzboODvlQ4/hqdefault.jpg",
+    publication_date: "2021-05-05",
+    duration: "PT20M44S"
+  },
+  {
+    loc: "/harmonielehre/",
+    title: "Funktionsthorie",
+    description: "Bei der Funktionstheorie geht es haupsächlich darum auf welchen Stufen die Akkorde stehen. Die drei Haupdreiklänge heißen zum Beispiel Tonika, Dominante und Subdominante. Sie liegen auf der I., IV. und V. Stufe.",
+    content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=tCkpok099xw",
+    thumbnail_loc: "https://i.ytimg.com/vi/tCkpok099xw/hqdefault.jpg",
+    publication_date: "2021-05-10",
+    duration: "PT12M22S"
+  }
+
+];
 ---
 
 <BaseLayout
@@ -125,5 +165,19 @@ const pageTitle = "Harmonielehre Grundbegriffe lernen";
     </section>
   </article>
 </BaseLayout>
+<!-- Strukturierte Daten als JSON-LD einfügen -->
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "VideoObject",
+    "name": "${videoData.title}",
+    "description": "${videoData.description}",
+    "thumbnailUrl": "${videoData.thumbnail_loc}",
+    "uploadDate": "${videoData.publication_date}",
+    "duration": "${videoData.duration}",
+    "contentUrl": "${videoData.content_loc}",
+    "embedUrl": "${videoData.content_loc}"
+  }
+</script>
 
 <YouTube />

@@ -35,11 +35,10 @@ const pages = [
 
 // Video-Informationen
 const videos = [
-  /*
   {
     loc: `${SITE_URL}/banjounterricht/`,
     title: "Flint Hill Special - Banjo Lesson",
-    description: "Flint Hill Special - Banjo Lesson",
+    description: "Lerne das Banjostück 'Flint Hill Special von Earl Scruggs'. Es wird in dem Stück ein sogenannter D-Tuner verwendet. Ich erkläre genau wie man so einen D-Tuner benutzt und einstellt.",
     content_loc: "https://www.youtube.com/embed/R75ZetEwmtw",
     thumbnail_loc: "https://i.ytimg.com/vi/R75ZetEwmtw/hqdefault.jpg",
     publication_date: "2023-06-17",
@@ -48,7 +47,7 @@ const videos = [
   {
     loc: `${SITE_URL}/banjounterricht/`,
     title: "Train 45 - Bluegrass Banjo",
-    description: "Train 45 - Bluegrass Banjo",
+    description: "Lerne das Banjostück Train 45 - Bluegrass Banjo.",
     content_loc: "https://www.youtube.com/embed/uo5ojnmRHPo",
     thumbnail_loc: "https://i.ytimg.com/vi/uo5ojnmRHPo/hqdefault.jpg",
     publication_date: "2023-05-26",
@@ -57,12 +56,12 @@ const videos = [
   {
     loc: `${SITE_URL}/banjounterricht/`,
     title: "Banjo Beginner Lesson 2",
-    description: "Banjo Beginner Lesson 2",
+    description: "Lerne das Banjostück 'Creeple Creek'. Mit diesem Stück hat Earl Scruggs als kleiner Junge schon einen Preis gewonnen.",
     content_loc: "https://www.youtube.com/embed/WmYlSqvpUkw",
     thumbnail_loc: "https://i.ytimg.com/vi/WmYlSqvpUkw/hqdefault.jpg",
     publication_date: "2023-04-05",
     duration: "PT2M47S"
-  }, */
+  },
   {
     loc: `${SITE_URL}/e-gitarrenunterricht/`,
     title: "Joe Satriani - Ten Words Guitar Lesson+Tab",
@@ -72,12 +71,20 @@ const videos = [
     publication_date: "2021-07-17",
     duration: "PT2M42S"
   },
-  /*
+  {
+    loc: `${SITE_URL}/gitarrenunterricht/`,
+    title: "Beatles - Yesterday Gitarre Tutorial",
+    description: "Lerne das Gitarrenstück 'Yesterday von den Beatles'. Dieses Stück kann man wunderbar alleine spielen, also ohne Bass, Drums usw. Die Gitarre wird in einer Double Flatstimmung umgestimmt.",
+    content_loc: "https://www.youtube.com/embed/oqko5Mk_UBk",
+    thumbnail_loc: "https://i.ytimg.com/vi/oqko5Mk_UBk/hqdefault.jpg",
+    publication_date: "2023-07-01",
+    duration: "PT12M41S"
+  },
   {
     loc: `${SITE_URL}/gitarrenunterricht/`,
     title: "City Of NewOrleans - Arlo Guthrie",
-    description: "City Of NewOrleans - Arlo Guthrie",
-    content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=yEF6e2ZSZ0k",
+    description: "Lerne das Gitarrenstück 'City Of NewOrleans - Arlo Guthrie'. Dieses Stück war Arlo Guthries einziger Welthit.",
+    content_loc: "https://www.youtube.com/embed/yEF6e2ZSZ0k",
     thumbnail_loc: "https://i.ytimg.com/vi/yEF6e2ZSZ0k/hqdefault.jpg",
     publication_date: "2021-08-26",
     duration: "PT4M49S"
@@ -85,7 +92,7 @@ const videos = [
   {
     loc: `${SITE_URL}/keyboardunterricht/`,
     title: "Hammond Organ - Hammond Flip - Klaus Wunderlich",
-    description: "Hammond Organ - Hammond Flip - Klaus Wunderlich",
+    description: "Keyboard Tutorial über eine Klaus Wunderlich Komposition. Das Stück heißt 'Hammond Flip'.",
     content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=244HlpB3JoA",
     thumbnail_loc: "https://i.ytimg.com/vi/y2KtSx3-W3w/hqdefault.jpg",
     publication_date: "2021-07-08",
@@ -94,16 +101,25 @@ const videos = [
   {
     loc: `${SITE_URL}/keyboardunterricht/`,
     title: "Hammond Organ Komponist: Klaus Wunderlich Titel: H-schisch",
-    description: "Hammond Organ Komponist: Klaus Wunderlich Titel: H-schisch",
+    description: "Ein Keyboard Tutorial über den Komponist Klaus Wunderlich. Das Stück das ich spiele heißt 'H-schisch'. Das ist in einem Notenheft von ihm mit 12 Kompositionen.",
     content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=y2KtSx3-W3w",
     thumbnail_loc: "https://i.ytimg.com/vi/y2KtSx3-W3w/hqdefault.jpg",
     publication_date: "2023-05-19",
     duration: "PT4M16S"
   },
   {
+    loc: `${SITE_URL}/keyboardunterricht/`,
+    title: "Hammond Organ Komponist: Klaus Wunderlich Titel: E-Hering",
+    description: "Ein Keyboard Tutorial über den Komponist Klaus Wunderlich. Titel: E-Hering.",
+    content_loc: "https://www.youtube.com/embed/t0tOQfL2qSE",
+    thumbnail_loc: "https://i.ytimg.com/vi/t0tOQfL2qSE/hqdefault.jpg",
+    publication_date: "2023-04-12",
+    duration: "PT5M38S"
+  },
+  {
     loc: `${SITE_URL}/harmonielehre/`,
     title: "Notenschrift",
-    description: "Notenschrift",
+    description: "Ich möchte mit diesem Video die Notenschrift erklären die ja doch so wichtig für die Musik ist!",
     content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=Hu4ef1IkuG0",
     thumbnail_loc: "https://i.ytimg.com/vi/Hu4ef1IkuG0/hqdefault.jpg",
     publication_date: "2021-04-19",
@@ -112,7 +128,7 @@ const videos = [
   {
     loc: `${SITE_URL}/harmonielehre/`,
     title: "Intervalle",
-    description: "Intervalle",
+    description: "Ich werde in diesem Video versuchen die Intervalle zu erklären und zu bestimmen. Ein Intervall ist der Tonabstand zweier Töne. Also Prime, Sekunde, Terz, Quarte, Quinte, Sexte, Septime und Oktave.",
     content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=804rrOOFzAQ",
     thumbnail_loc: "https://i.ytimg.com/vi/804rrOOFzAQ/hqdefault.jpg",
     publication_date: "2023-04-27",
@@ -121,7 +137,7 @@ const videos = [
   {
     loc: `${SITE_URL}/harmonielehre/`,
     title: "Dreiklänge",
-    description: "Dreiklänge",
+    description: "Ich werde in diesem Video versuchen die Dreiklänge besser zu verstehen. Sie sind wichtig da diese zum Beispiel eintscheiden ob ein Akkord ein Durakkord ist oder ein Mollakkord und noch vieles mehr.",
     content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=fgzboODvlQ4",
     thumbnail_loc: "https://i.ytimg.com/vi/fgzboODvlQ4/hqdefault.jpg",
     publication_date: "2021-05-05",
@@ -130,12 +146,12 @@ const videos = [
   {
     loc: `${SITE_URL}/harmonielehre/`,
     title: "Funktionsthorie",
-    description: "Funktionsthorie",
+    description: "Bei der Funktionstheorie geht es haupsächlich darum auf welchen Stufen die Akkorde stehen. Die drei Haupdreiklänge heißen zum Beispiel Tonika, Dominante und Subdominante. Sie liegen auf der I., IV. und V. Stufe.",
     content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=tCkpok099xw",
     thumbnail_loc: "https://i.ytimg.com/vi/tCkpok099xw/hqdefault.jpg",
     publication_date: "2021-05-10",
     duration: "PT12M22S"
-  }, */
+  }
 ];
 
 // Funktion zur Umwandlung der ISO 8601-Dauer in Sekunden
