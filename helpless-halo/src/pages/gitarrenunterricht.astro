@@ -9,6 +9,7 @@ const pageTitle = "Gitarrenunterricht für akustische Gitarre";
 
 const videoData = [
   {
+    loc: "/gitarrenunterricht/",
     title: "Beatles - Yesterday Gitarre Tutorial",
     description:
       "Lerne das Gitarrenstück 'Yesterday von den Beatles'. Dieses Stück kann man wunderbar alleine spielen, also ohne Bass, Drums usw. Die Gitarre wird in einer Double Flatstimmung umgestimmt.",
@@ -18,13 +19,14 @@ const videoData = [
     duration: "PT12M41S",
   },
   {
+    loc: "/gitarrenunterricht/",
     title: "City Of NewOrleans - Arlo Guthrie",
     description:
       "Lerne das Gitarrenstück 'City Of NewOrleans - Arlo Guthrie'. Dieses Stück war Arlo Guthries einziger Welthit.",
     content_loc: "https://www.youtube.com/embed/yEF6e2ZSZ0k",
     thumbnail_loc: "https://i.ytimg.com/vi/yEF6e2ZSZ0k/hqdefault.jpg",
     publication_date: "2021-08-262021-07-17T00:00:00+01:00",
-    duration: "PT4M49ST"
+    duration: "PT4M49ST",
   },
 ];
 ---
@@ -191,21 +193,6 @@ const videoData = [
     </section>
   </article>
 </BaseLayout>
-
-<!-- Strukturierte Daten als JSON-LD einfügen -->
-<script type="application/ld+json">
-  {
-    "@context": "http://schema.org",
-    "@type": "VideoObject",
-    "name": "<%= videoData.title %>",
-    "description": "<%= videoData.description %>",
-    "thumbnailUrl": "<%= videoData.thumbnail_loc %>",
-    "uploadDate": "<%= videoData.publication_date %>",
-    "duration": "<%= videoData.duration %>",
-    "contentUrl": "<%= videoData.content_loc %>",
-    "embedUrl": "<%= videoData.content_loc %>"
-  }
-</script>
 
 <YouTube />
 
