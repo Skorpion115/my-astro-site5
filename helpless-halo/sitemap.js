@@ -69,7 +69,7 @@ const videos = [
     content_loc: "https://www.youtube.com/embed/8ucTzPOBzAo",
     thumbnail_loc: "https://i.ytimg.com/vi/8ucTzPOBzAo/hqdefault.jpg",
     publication_date: "2021-07-17T00:00:00+01:00",
-    duration: "PT2M42S"
+    duration: "PT3M59S"
   },
   {
     loc: `${SITE_URL}/gitarrenunterricht/`,
