@@ -18,13 +18,13 @@ const videoData = {
 const jsonLdData = {
   "@context": "http://schema.org",
   "@type": "VideoObject",
-  "name": videoData.title,
-  "description": videoData.description,
-  "thumbnailUrl": videoData.thumbnail_loc,
-  "uploadDate": videoData.publication_date,
-  "duration": videoData.duration,
-  "contentUrl": videoData.content_loc,
-  "embedUrl": videoData.content_loc
+  "name": "${videoData.title}",
+  "description": "${videoData.description}",
+  "thumbnailUrl": "${videoData.thumbnail_loc}",
+  "uploadDate": "${videoData.publication_date}",
+  "duration": "${videoData.duration}",
+  "contentUrl": "${videoData.content_loc}",
+  "embedUrl": "${videoData.content_loc}"
 };
 ---
 
