@@ -41,7 +41,7 @@ const videos = [
     description: "Lerne das Banjostück 'Flint Hill Special von Earl Scruggs'. Es wird in dem Stück ein sogenannter D-Tuner verwendet. Ich erkläre genau wie man so einen D-Tuner benutzt und einstellt.",
     content_loc: "https://www.youtube.com/embed/R75ZetEwmtw",
     thumbnail_loc: "https://i.ytimg.com/vi/R75ZetEwmtw/hqdefault.jpg",
-    publication_date: "2023-06-17T00:00:00Z",
+    publication_date: "2023-06-17T00:00:00+01:00",
     duration: "PT13M32S"
   },
   {
@@ -50,7 +50,7 @@ const videos = [
     description: "Lerne das Banjostück Train 45 - Bluegrass Banjo.",
     content_loc: "https://www.youtube.com/embed/uo5ojnmRHPo",
     thumbnail_loc: "https://i.ytimg.com/vi/uo5ojnmRHPo/hqdefault.jpg",
-    publication_date: "2023-05-26T00:00:00Z",
+    publication_date: "2023-05-26T00:00:00+01:00",
     duration: "PT2M42S"
   },
   {
@@ -59,7 +59,7 @@ const videos = [
     description: "Lerne das Banjostück 'Creeple Creek'. Mit diesem Stück hat Earl Scruggs als kleiner Junge schon einen Preis gewonnen.",
     content_loc: "https://www.youtube.com/embed/WmYlSqvpUkw",
     thumbnail_loc: "https://i.ytimg.com/vi/WmYlSqvpUkw/hqdefault.jpg",
-    publication_date: "2023-04-05T00:00:00Z",
+    publication_date: "2023-04-05T00:00:00+01:00",
     duration: "PT2M47S"
   },
   {
@@ -68,7 +68,7 @@ const videos = [
     description: "Lerne das Gitarrenstück 'Ten Words' von Joe Satriani mit dieser detaillierten Gitarrenstunde.",
     content_loc: "https://www.youtube.com/embed/8ucTzPOBzAo",
     thumbnail_loc: "https://i.ytimg.com/vi/8ucTzPOBzAo/hqdefault.jpg",
-    publication_date: "2021-07-17T00:00:00Z",
+    publication_date: "2021-07-17T00:00:00+01:00",
     duration: "PT2M42S"
   },
   {
@@ -77,7 +77,7 @@ const videos = [
     description: "Lerne das Gitarrenstück 'Yesterday von den Beatles'. Dieses Stück kann man wunderbar alleine spielen, also ohne Bass, Drums usw. Die Gitarre wird in einer Double Flatstimmung umgestimmt.",
     content_loc: "https://www.youtube.com/embed/oqko5Mk_UBk",
     thumbnail_loc: "https://i.ytimg.com/vi/oqko5Mk_UBk/hqdefault.jpg",
-    publication_date: "2023-07-01T00:00:00Z",
+    publication_date: "2023-07-01T00:00:00+01:00",
     duration: "PT12M41S"
   },
   {
@@ -86,7 +86,7 @@ const videos = [
     description: "Lerne das Gitarrenstück 'City Of NewOrleans - Arlo Guthrie'. Dieses Stück war Arlo Guthries einziger Welthit.",
     content_loc: "https://www.youtube.com/embed/yEF6e2ZSZ0k",
     thumbnail_loc: "https://i.ytimg.com/vi/yEF6e2ZSZ0k/hqdefault.jpg",
-    publication_date: "2021-08-26T00:00:00Z",
+    publication_date: "2021-08-26T00:00:00+01:00",
     duration: "PT4M49S"
   },
   {
@@ -95,7 +95,7 @@ const videos = [
     description: "Keyboard Tutorial über eine Klaus Wunderlich Komposition. Das Stück heißt 'Hammond Flip'.",
     content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=244HlpB3JoA",
     thumbnail_loc: "https://i.ytimg.com/vi/y2KtSx3-W3w/hqdefault.jpg",
-    publication_date: "2021-07-08T00:00:00Z",
+    publication_date: "2021-07-08T00:00:00+01:00",
     duration: "PT3M6S"
   },
   {
@@ -104,7 +104,7 @@ const videos = [
     description: "Ein Keyboard Tutorial über den Komponist Klaus Wunderlich. Das Stück das ich spiele heißt 'H-schisch'. Das ist in einem Notenheft von ihm mit 12 Kompositionen.",
     content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=y2KtSx3-W3w",
     thumbnail_loc: "https://i.ytimg.com/vi/y2KtSx3-W3w/hqdefault.jpg",
-    publication_date: "2023-05-19T00:00:00Z",
+    publication_date: "2023-05-19T00:00:00+01:00",
     duration: "PT4M16S"
   },
   {
@@ -113,7 +113,7 @@ const videos = [
     description: "Ein Keyboard Tutorial über den Komponist Klaus Wunderlich. Titel: E-Hering.",
     content_loc: "https://www.youtube.com/embed/t0tOQfL2qSE",
     thumbnail_loc: "https://i.ytimg.com/vi/t0tOQfL2qSE/hqdefault.jpg",
-    publication_date: "2023-04-12T00:00:00Z",
+    publication_date: "2023-04-12T00:00:00+01:00",
     duration: "PT5M38S"
   },
   {
@@ -122,7 +122,7 @@ const videos = [
     description: "Ich möchte mit diesem Video die Notenschrift erklären die ja doch so wichtig für die Musik ist!",
     content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=Hu4ef1IkuG0",
     thumbnail_loc: "https://i.ytimg.com/vi/Hu4ef1IkuG0/hqdefault.jpg",
-    publication_date: "2021-04-19T00:00:00Z",
+    publication_date: "2021-04-19T00:00:00+01:00",
     duration: "PT13M52S"
   },
   {
@@ -131,7 +131,7 @@ const videos = [
     description: "Ich werde in diesem Video versuchen die Intervalle zu erklären und zu bestimmen. Ein Intervall ist der Tonabstand zweier Töne. Also Prime, Sekunde, Terz, Quarte, Quinte, Sexte, Septime und Oktave.",
     content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=804rrOOFzAQ",
     thumbnail_loc: "https://i.ytimg.com/vi/804rrOOFzAQ/hqdefault.jpg",
-    publication_date: "2023-04-27T00:00:00Z",
+    publication_date: "2023-04-27T00:00:00+01:00",
     duration: "PT17M55S"
   },
   {
@@ -140,7 +140,7 @@ const videos = [
     description: "Ich werde in diesem Video versuchen die Dreiklänge besser zu verstehen. Sie sind wichtig da diese zum Beispiel eintscheiden ob ein Akkord ein Durakkord ist oder ein Mollakkord und noch vieles mehr.",
     content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=fgzboODvlQ4",
     thumbnail_loc: "https://i.ytimg.com/vi/fgzboODvlQ4/hqdefault.jpg",
-    publication_date: "2021-05-05T00:00:00Z",
+    publication_date: "2021-05-05T00:00:00+01:00",
     duration: "PT20M44S"
   },
   {
@@ -149,7 +149,7 @@ const videos = [
     description: "Bei der Funktionstheorie geht es haupsächlich darum auf welchen Stufen die Akkorde stehen. Die drei Haupdreiklänge heißen zum Beispiel Tonika, Dominante und Subdominante. Sie liegen auf der I., IV. und V. Stufe.",
     content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=tCkpok099xw",
     thumbnail_loc: "https://i.ytimg.com/vi/tCkpok099xw/hqdefault.jpg",
-    publication_date: "2021-05-10T00:00:00Z",
+    publication_date: "2021-05-10T00:00:00+01:00",
     duration: "PT12M22S"
   }
 ];
