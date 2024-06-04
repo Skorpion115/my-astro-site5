@@ -1,24 +1,32 @@
 <script is:inline type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Musicstudio Ziebart",
-      "image": "",
-      "@id": "",
-      "url": "https://www.musicstudio-ziebart.de",
-      "telephone": "0911 6320890",
-      "priceRange": "65,- EUR",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Gunzenhausener Str. 20",
-        "addressLocality": "Nürnberg",
-        "postalCode": "90451",
-        "addressCountry": "DE"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 49.40579,
-        "longitude": 11.03859
-      }  
-    }
-    </script>
+  {
+    "@context": "http://schema.org/",
+    "@type": "LocalBusiness",
+    "name": "Musicstudio Ziebart",
+    "image": "",
+    "priceRange": "€65-90",
+    "telephone": "09116320890",
+    "url": "https://www.musicstudio-ziebart.de",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Gunzenhausener Str. 20",
+      "addressLocality": "Nürnberg",
+      "addressRegion": "Bayern",
+      "postalCode": "90451",
+      "addressCountry": "Germany"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 49.40579,
+      "longitude": 11.03859
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "14:00",
+        "closes": "18:00"
+      }
+    ]
+  }
+</script>
