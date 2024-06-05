@@ -68,36 +68,7 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
     <meta name="robots" content="max-snippet:-1" />
     <meta name="robots" content="INDEX, FOLLOW" />
     <meta name="theme-color" content="#191919" />
-
-    <!-- JSON-LD Schema -->
-    <script type="application/ld+json">
-      {{
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "{pageTitle}",
-        "description": "{description}",
-        "url": "{href}",
-        "author": {{
-          "@type": "Person",
-          "name": "Musicstudio Ziebart"
-        }},
-        "publisher": {{
-          "@type": "Organization",
-          "name": "Musicstudio Ziebart",
-          /*
-          "logo": {{
-            "@type": "ImageObject",
-            "url": "https://www.musicstudio-ziebart.de/images/logo.png"
-          }} */
-        }},
-        "mainEntityOfPage": {{
-          "@type": "WebPage",
-          "@id": "{href}"
-        }}
-      }}
-    </script>
-  
-    
+ 
     <!-- Other components or scripts -->
     <ManuellesBlockieren />
     <ExternalScripts />
