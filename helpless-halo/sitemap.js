@@ -2,41 +2,41 @@ import { writeFileSync, mkdirSync } from 'fs';
 import { join } from 'path';
 import { create } from 'xmlbuilder2';
 
-const SITE_URL = "https://www.musicstudio-ziebart.de";
+const SITE_URL = "https://www.musicstudio-ziebart.de/";
 
 // Seiten-URLs
 const pages = [
   { url: `${SITE_URL}`, changefreq: "weekly", lastmod: new Date() },
-  { url: `${SITE_URL}/instrumentenkauf/`, changefreq: "weekly", lastmod: new Date() },
-  { url: `${SITE_URL}/blog/`, changefreq: "weekly", lastmod: new Date() },
-  { url: `${SITE_URL}/tags/`, changefreq: "weekly", lastmod: new Date() },
-  { url: `${SITE_URL}/contact_2/`, changefreq: "weekly", lastmod: new Date() },
-  { url: `${SITE_URL}/thankyou/`, changefreq: "weekly", lastmod: new Date() },
-  { url: `${SITE_URL}/danke-seite/`, changefreq: "weekly", lastmod: new Date() },
-  { url: `${SITE_URL}/contact_4/`, changefreq: "weekly", lastmod: new Date() },
-  { url: `${SITE_URL}/honorar/`, changefreq: "weekly", lastmod: new Date() },
-  { url: `${SITE_URL}/unterricht/`, changefreq: "weekly", lastmod: new Date() },
-  { url: `${SITE_URL}/faq/`, changefreq: "weekly", lastmod: new Date() },
-  { url: `${SITE_URL}/download/`, changefreq: "weekly", lastmod: new Date() },
-  { url: `${SITE_URL}/harmonielehre/`, changefreq: "weekly", lastmod: new Date() },
-  { url: `${SITE_URL}/impressum/`, changefreq: "weekly", lastmod: new Date() },
-  { url: `${SITE_URL}/datenschutz/`, changefreq: "weekly", lastmod: new Date() },
-  { url: `${SITE_URL}/klavierunterricht/`, changefreq: "weekly", lastmod: new Date() },
-  { url: `${SITE_URL}/keyboardunterricht/`, changefreq: "weekly", lastmod: new Date() },
-  { url: `${SITE_URL}/gitarrenunterricht/`, changefreq: "weekly", lastmod: new Date() },
-  { url: `${SITE_URL}/e-bassunterricht/`, changefreq: "weekly", lastmod: new Date() },
-  { url: `${SITE_URL}/e-gitarrenunterricht/`, changefreq: "weekly", lastmod: new Date() },
-  { url: `${SITE_URL}/banjounterricht/`, changefreq: "weekly", lastmod: new Date() },
-  { url: `${SITE_URL}/akkordeonunterricht/`, changefreq: "weekly", lastmod: new Date() },
-  { url: `${SITE_URL}/saxophonunterricht/`, changefreq: "weekly", lastmod: new Date() },
-  { url: `${SITE_URL}/querfloetenunterricht/`, changefreq: "weekly", lastmod: new Date() },
-  { url: `${SITE_URL}/klarinettenunterricht/`, changefreq: "weekly", lastmod: new Date() },
+  { url: `${SITE_URL}instrumentenkauf/`, changefreq: "weekly", lastmod: new Date() },
+  { url: `${SITE_URL}blog/`, changefreq: "weekly", lastmod: new Date() },
+  { url: `${SITE_URL}tags/`, changefreq: "weekly", lastmod: new Date() },
+  { url: `${SITE_URL}contact_2/`, changefreq: "weekly", lastmod: new Date() },
+  { url: `${SITE_URL}thankyou/`, changefreq: "weekly", lastmod: new Date() },
+  { url: `${SITE_URL}danke-seite/`, changefreq: "weekly", lastmod: new Date() },
+  { url: `${SITE_URL}contact_4/`, changefreq: "weekly", lastmod: new Date() },
+  { url: `${SITE_URL}honorar/`, changefreq: "weekly", lastmod: new Date() },
+  { url: `${SITE_URL}unterricht/`, changefreq: "weekly", lastmod: new Date() },
+  { url: `${SITE_URL}faq/`, changefreq: "weekly", lastmod: new Date() },
+  { url: `${SITE_URL}download/`, changefreq: "weekly", lastmod: new Date() },
+  { url: `${SITE_URL}harmonielehre/`, changefreq: "weekly", lastmod: new Date() },
+  { url: `${SITE_URL}impressum/`, changefreq: "weekly", lastmod: new Date() },
+  { url: `${SITE_URL}datenschutz/`, changefreq: "weekly", lastmod: new Date() },
+  { url: `${SITE_URL}klavierunterricht/`, changefreq: "weekly", lastmod: new Date() },
+  { url: `${SITE_URL}keyboardunterricht/`, changefreq: "weekly", lastmod: new Date() },
+  { url: `${SITE_URL}gitarrenunterricht/`, changefreq: "weekly", lastmod: new Date() },
+  { url: `${SITE_URL}e-bassunterricht/`, changefreq: "weekly", lastmod: new Date() },
+  { url: `${SITE_URL}e-gitarrenunterricht/`, changefreq: "weekly", lastmod: new Date() },
+  { url: `${SITE_URL}banjounterricht/`, changefreq: "weekly", lastmod: new Date() },
+  { url: `${SITE_URL}akkordeonunterricht/`, changefreq: "weekly", lastmod: new Date() },
+  { url: `${SITE_URL}saxophonunterricht/`, changefreq: "weekly", lastmod: new Date() },
+  { url: `${SITE_URL}querfloetenunterricht/`, changefreq: "weekly", lastmod: new Date() },
+  { url: `${SITE_URL}klarinettenunterricht/`, changefreq: "weekly", lastmod: new Date() },
 ];
 
 // Video-Informationen
 const videos = [
   {
-    loc: `${SITE_URL}/banjounterricht/`,
+    loc: `${SITE_URL}banjounterricht/`,
     title: "Flint Hill Special - Banjo Lesson",
     description: "Lerne das Banjostück 'Flint Hill Special von Earl Scruggs'. Es wird in dem Stück ein sogenannter D-Tuner verwendet. Ich erkläre genau wie man so einen D-Tuner benutzt und einstellt.",
     content_loc: "https://www.youtube.com/embed/R75ZetEwmtw",
@@ -45,7 +45,7 @@ const videos = [
     duration: "PT13M32S"
   },
   {
-    loc: `${SITE_URL}/banjounterricht/`,
+    loc: `${SITE_URL}banjounterricht/`,
     title: "Train 45 - Bluegrass Banjo",
     description: "Lerne das Banjostück Train 45 - Bluegrass Banjo.",
     content_loc: "https://www.youtube.com/embed/uo5ojnmRHPo",
@@ -54,7 +54,7 @@ const videos = [
     duration: "PT2M42S"
   },
   {
-    loc: `${SITE_URL}/banjounterricht/`,
+    loc: `${SITE_URL}banjounterricht/`,
     title: "Banjo Beginner Lesson 2",
     description: "Lerne das Banjostück 'Creeple Creek'. Mit diesem Stück hat Earl Scruggs als kleiner Junge schon einen Preis gewonnen.",
     content_loc: "https://www.youtube.com/embed/WmYlSqvpUkw",
@@ -63,7 +63,7 @@ const videos = [
     duration: "PT2M47S"
   },
   {
-    loc: `${SITE_URL}/e-gitarrenunterricht/`,
+    loc: `${SITE_URL}e-gitarrenunterricht/`,
     title: "Joe Satriani - Ten Words Guitar Lesson+Tab",
     description: "Lerne das Gitarrenstück 'Ten Words' von Joe Satriani mit dieser detaillierten Gitarrenstunde.",
     content_loc: "https://www.youtube.com/embed/8ucTzPOBzAo",
@@ -72,7 +72,7 @@ const videos = [
     duration: "PT3M59S"
   },
   {
-    loc: `${SITE_URL}/gitarrenunterricht/`,
+    loc: `${SITE_URL}gitarrenunterricht/`,
     title: "Beatles - Yesterday Gitarre Tutorial",
     description: "Lernevideo und Gitarrentutorial für das Gitarrenstück 'Yesterday von den Beatles'. Dieses Stück kann man wunderbar alleine spielen, also ohne Bass, Drums usw. Die Gitarre wird in einer Double Flatstimmung umgestimmt.",
     content_loc: "https://www.youtube.com/embed/oqko5Mk_UBk",
@@ -81,7 +81,7 @@ const videos = [
     duration: "PT12M41S"
   },
   {
-    loc: `${SITE_URL}/gitarrenunterricht/`,
+    loc: `${SITE_URL}gitarrenunterricht/`,
     title: "City Of NewOrleans - Arlo Guthrie",
     description: "Ein schönes Beispiel für ein Fingerpicking mit Gitarre und Gesang: Ich habe mir damals den Song von Arlo Guthrie rausgesucht. Es heißt 'City Of NewOrleans'. Er selbst spielt übrigens bei diesem Song ein Klavier. Es ist ein Lernvideo und Gitarren Tutorial. Dieses Stück war Arlo Guthries einziger Welthit. Als damals Steve Goodman, der Komponist des berühmten Songs zu ihm sagte: Ich hätte da einen guten Hit für dich, sagte Arlo Guthrie: 'Ich hasse Hits!'. Warum das weiß ich nicht.",
     content_loc: "https://www.youtube.com/embed/yEF6e2ZSZ0k",
@@ -90,7 +90,7 @@ const videos = [
     duration: "PT4M49S"
   },
   {
-    loc: `${SITE_URL}/keyboardunterricht/`,
+    loc: `${SITE_URL}keyboardunterricht/`,
     title: "Hammond Organ - Hammond Flip - Klaus Wunderlich",
     description: "Keyboard Tutorial über eine Klaus Wunderlich Komposition. Das Stück heißt 'Hammond Flip'.",
     content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=244HlpB3JoA",
@@ -99,7 +99,7 @@ const videos = [
     duration: "PT3M6S"
   },
   {
-    loc: `${SITE_URL}/keyboardunterricht/`,
+    loc: `${SITE_URL}keyboardunterricht/`,
     title: "Hammond Organ Komponist: Klaus Wunderlich Titel: H-schisch",
     description: "Ein Keyboard Tutorial über den Komponist Klaus Wunderlich. Das Stück das ich spiele heißt 'H-schisch'. Das ist in einem Notenheft von ihm mit 12 Kompositionen.",
     content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=y2KtSx3-W3w",
@@ -108,7 +108,7 @@ const videos = [
     duration: "PT4M16S"
   },
   {
-    loc: `${SITE_URL}/keyboardunterricht/`,
+    loc: `${SITE_URL}keyboardunterricht/`,
     title: "Hammond Organ Komponist: Klaus Wunderlich Titel: E-Hering",
     description: "Ein Keyboard Tutorial über den Komponist Klaus Wunderlich. Titel: E-Hering.",
     content_loc: "https://www.youtube.com/embed/t0tOQfL2qSE",
@@ -117,7 +117,7 @@ const videos = [
     duration: "PT5M38S"
   },
   {
-    loc: `${SITE_URL}/harmonielehre/`,
+    loc: `${SITE_URL}harmonielehre/`,
     title: "Notenschrift",
     description: "Ich möchte mit diesem Video die Notenschrift erklären die ja doch so wichtig für die Musik ist!",
     content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=Hu4ef1IkuG0",
@@ -126,7 +126,7 @@ const videos = [
     duration: "PT13M52S"
   },
   {
-    loc: `${SITE_URL}/harmonielehre/`,
+    loc: `${SITE_URL}harmonielehre/`,
     title: "Intervalle",
     description: "Ich werde in diesem Video versuchen die Intervalle zu erklären und zu bestimmen. Ein Intervall ist der Tonabstand zweier Töne. Also Prime, Sekunde, Terz, Quarte, Quinte, Sexte, Septime und Oktave.",
     content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=804rrOOFzAQ",
@@ -135,7 +135,7 @@ const videos = [
     duration: "PT17M55S"
   },
   {
-    loc: `${SITE_URL}/harmonielehre/`,
+    loc: `${SITE_URL}harmonielehre/`,
     title: "Dreiklänge",
     description: "Ich werde in diesem Video versuchen die Dreiklänge besser zu verstehen. Sie sind wichtig da diese zum Beispiel eintscheiden ob ein Akkord ein Durakkord ist oder ein Mollakkord und noch vieles mehr.",
     content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=fgzboODvlQ4",
@@ -144,7 +144,7 @@ const videos = [
     duration: "PT20M44S"
   },
   {
-    loc: `${SITE_URL}/harmonielehre/`,
+    loc: `${SITE_URL}harmonielehre/`,
     title: "Funktionsthorie",
     description: "Bei der Funktionstheorie geht es haupsächlich darum auf welchen Stufen die Akkorde stehen. Die drei Haupdreiklänge heißen zum Beispiel Tonika, Dominante und Subdominante. Sie liegen auf der I., IV. und V. Stufe.",
     content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=tCkpok099xw",
