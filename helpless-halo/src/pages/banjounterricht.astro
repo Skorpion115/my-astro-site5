@@ -4,37 +4,40 @@ import YouTube from "../components/YouTube.astro";
 import "../styles/lite-yt-embed.css";
 export const prerender = true;
 const pageTitle = "Banjounterricht für 5-string Banjo";
+const SITE_URL = "https://www.musicstudio-ziebart.de"; // Hier setzen Sie den Wert für SITE_URL
 
 // Video-Daten
 
 const videoData = [
   {
-    loc: "/banjounterricht/",
+    loc: `${SITE_URL}/banjounterricht/`,
     title: "Flint Hill Special - Banjo Lesson",
-    description: "Lerne das Banjostück 'Flint Hill Special von Earl Scruggs'. Es wird in dem Stück ein sogenannter D-Tuner verwendet. Ich erkläre genau wie man so einen D-Tuner benutzt und einstellt.",
+    description:
+      "Lerne das Banjostück 'Flint Hill Special von Earl Scruggs'. Es wird in dem Stück ein sogenannter D-Tuner verwendet. Ich erkläre genau wie man so einen D-Tuner benutzt und einstellt.",
     content_loc: "https://www.youtube.com/embed/R75ZetEwmtw",
     thumbnail_loc: "https://i.ytimg.com/vi/R75ZetEwmtw/hqdefault.jpg",
     publication_date: "2023-06-172021-07-17T00:00:00+01:00",
-    duration: "PT13M32S"
+    duration: "PT13M32S",
   },
   {
-    loc: "/banjounterricht/",
+    loc: `${SITE_URL}/banjounterricht/`,
     title: "Train 45 - Bluegrass Banjo",
     description: "Lerne das Banjostück Train 45 - Bluegrass Banjo.",
     content_loc: "https://www.youtube.com/embed/uo5ojnmRHPo",
     thumbnail_loc: "https://i.ytimg.com/vi/uo5ojnmRHPo/hqdefault.jpg",
     publication_date: "2023-05-262021-07-17T00:00:00+01:00",
-    duration: "PT2M42S"
+    duration: "PT2M42S",
   },
   {
-    loc: "/banjounterricht/",
+    loc: `${SITE_URL}/banjounterricht/`,
     title: "Banjo Beginner Lesson 2",
-    description: "Lerne das Banjostück 'Creeple Creek'. Mit diesem Stück hat Earl Scruggs als kleiner Junge schon einen Preis gewonnen.",
+    description:
+      "Lerne das Banjostück 'Creeple Creek'. Mit diesem Stück hat Earl Scruggs als kleiner Junge schon einen Preis gewonnen.",
     content_loc: "https://www.youtube.com/embed/WmYlSqvpUkw",
     thumbnail_loc: "https://i.ytimg.com/vi/WmYlSqvpUkw/hqdefault.jpg",
     publication_date: "2023-04-052021-07-17T00:00:00+01:00",
-    duration: "PT2M47S"
-  }
+    duration: "PT2M47S",
+  },
 ];
 ---
 
@@ -44,68 +47,48 @@ const videoData = [
   keywords="banjounterricht für 5-string banjo, banjounterricht, flint hill special - earl scruggs, train 45, cripple creek, beginner banjo, 5-string banjo, bluegrass banjo, ruediger helbig, banjo lernen deutsch, banjo unterricht, banjo workshop, banjounterricht in eibach, banjolehrer nürnberg, banjo spielen ohne noten, banjo kurs, bluegrass banjo lernen, banjounterricht für anfänger, banjo lernen, banjo für anfänger, banjolehrer, banjo workshop, 5-string banjo lernen, banjo anfaenger, banjo picker, banjo lessons, banjo open back"
   href="https://www.musicstudio-ziebart.de/banjounterricht/"
 >
-  <article>
+  <article vocab="http://schema.org/" typeof="VideoObject">
     <section>
       <p>Mein neuestes Video!</p>
-      <h2>Flint Hill Special - Earl Scruggs</h2>
-      <div class="video-container-wrapper">
-        <div class="video-container">
-          <lite-youtube
-            videoid="R75ZetEwmtw"
-            style="background-image: url('https://i.ytimg.com/vi/R75ZetEwmtw/hqdefault.jpg');"
-          >
-            <a
-              href="https://www.youtube.com/embed/R75ZetEwmtw"
-              class="lty-playbtn"
-              title="Flint Hill Special - Banjo Lesson"
-            >
-              <span class="lyt-visually-hidden"
-                >Play Video: Flint Hill Special - Banjo Lesson</span
-              >
-            </a>
-          </lite-youtube>
-        </div>
-      </div>
+      <!--
+      <h2 property="name">Flint Hill Special - Earl Scruggs</h2> -->
+      {
+        videoData.map((video, index) => (
+          <div vocab="http://schema.org/" typeof="VideoObject">
+            <meta property="name" content={video.title} />
+            <meta property="description" content={video.description} />
+            <meta property="thumbnailUrl" content={video.thumbnail_loc} />
+            <meta property="uploadDate" content={video.publication_date} />
+            <meta property="duration" content={video.duration} />
+            <meta property="contentUrl" content={video.content_loc} />
+            <meta property="embedUrl" content={video.content_loc} />
 
-      <h2>Train 45</h2>
-      <div class="video-container-wrapper">
-        <div class="video-container">
-          <lite-youtube
-            videoid="uo5ojnmRHPo"
-            style="background-image: url('https://i.ytimg.com/vi/uo5ojnmRHPo/hqdefault.jpg');"
-          >
-            <a
-              href="https://www.youtube.com/embed/uo5ojnmRHPo"
-              class="lty-playbtn"
-              title="Train 45 - Bluegrass Banjo"
-            >
-              <span class="lyt-visually-hidden"
-                >Play Video: Train 45 - Bluegrass Banjo</span
-              >
-            </a>
-          </lite-youtube>
-        </div>
-      </div>
+            <div class="video-container-wrapper">
+              <div class="video-container">
+                <lite-youtube
+                  videoid={video.content_loc.split("/").pop()}
+                  style={
+                    "background-image: url('" + video.thumbnail_loc + "');"
+                  }
+                >
+                  <a
+                    href={video.content_loc}
+                    class="lty-playbtn"
+                    title={video.title}
+                  >
+                    <span class="lyt-visually-hidden">
+                      Play Video: {video.title}
+                    </span>
+                  </a>
+                </lite-youtube>
+              </div>
+              <h2>{video.title}</h2>
+              <p>{video.description}</p>
+            </div>
+          </div>
+        ))
+      }
 
-      <h2>Cripple Creek</h2>
-      <div class="video-container-wrapper">
-        <div class="video-container">
-          <lite-youtube
-            videoid="WmYlSqvpUkw"
-            style="background-image: url('https://i.ytimg.com/vi/WmYlSqvpUkw/hqdefault.jpg');"
-          >
-            <a
-              href="https://www.youtube.com/embed/WmYlSqvpUkw"
-              class="lty-playbtn"
-              title="Banjo Beginner Lesson 2"
-            >
-              <span class="lyt-visually-hidden"
-                >Play Video: Banjo Beginner Lesson 2</span
-              >
-            </a>
-          </lite-youtube>
-        </div>
-      </div>
       <br />
       <hr />
     </section>
@@ -183,286 +166,6 @@ const videoData = [
         >
       </p>
       <br />
-      <h3>Hier noch einige 5-string Banjostücke zum selber probieren!</h3>
-      <p>
-        Snuffy Jenkins war neben Earl Scruggs einer der Erfinder der "Three
-        Finger Styles". Früher hat man ja nur mit 2 Fingern in der rechten Hand
-        gepielt. Außerdem war er bekannt das er bei seinen Auftritten immer sehr
-        spaßig war.
-      </p>
-      <p>Banjo spielen macht Spaß und gute Laune!</p>
-      <table class="basis-table">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Titel</th>
-            <th>Komponist</th>
-            <th>Instrument</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td data-label="Titel">Nancy Rowland</td>
-            <td data-label="Komponist">Snuffy Jenkins</td>
-            <td data-label="Instrument">5-string Banjo</td>
-          </tr>
-          <tr>
-            <td> &nbsp; </td>
-            <td data-label="anhören">
-              <a
-                href="https://www.youtube.com/watch?v=lFrx4fhty3A"
-                target="_blank"
-                class="normal-links">Video Tutorial</a
-              >
-            </td>
-            <td data-label="ansehen">
-              <a
-                href="/images/Nancy_Rowland_-_Snuffy_Jenkins.pdf"
-                class="normal-links">ansehen</a
-              >
-            </td>
-            <td> leicht </td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td data-label="Titel">Dear Old Dixie</td>
-            <td data-label="Komponist">Traditional</td>
-            <td data-label="Instrument">5-string Banjo</td>
-          </tr>
-          <tr>
-            <td> &nbsp; </td>
-            <td data-label="anhören">
-              <a
-                href="https://www.youtube.com/watch?v=QRUVEtA1vyo"
-                target="_blank"
-                class="normal-links">Video Tutorial</a
-              >
-            </td>
-            <td data-label="ansehen">
-              <a href="/bilder/Dear_Old_Dixie02.pdf" class="normal-links"
-                >ansehen</a
-              >
-            </td>
-            <td> schwierig </td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td data-label="Titel">Train 45</td>
-            <td data-label="Komponist">Traditional</td>
-            <td data-label="Instrument">5-string Banjo</td>
-          </tr>
-          <tr>
-            <td> &nbsp; </td>
-            <td data-label="anhören">
-              <a
-                href="https://www.youtube.com/watch?v=uo5ojnmRHPo"
-                target="_blank"
-                class="normal-links">Video Tutorial</a
-              >
-            </td>
-            <td data-label="ansehen">
-              <a href="/bilder/Train_45.pdf" class="normal-links">ansehen</a>
-            </td>
-            <td> leicht </td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td data-label="Titel">Black Mountain Rag</td>
-            <td data-label="Komponist">Traditional</td>
-            <td data-label="Instrument">5-string Banjo</td>
-          </tr>
-          <tr>
-            <td> &nbsp; </td>
-            <td data-label="anhören">
-              <a
-                href="https://www.youtube.com/watch?v=44O9ZSf7Dhc"
-                target="_blank"
-                class="normal-links">Video Tutorial</a
-              >
-            </td>
-            <td data-label="ansehen">
-              <a href="/images/Black_Mountain_Rag.pdf" class="normal-links"
-                >ansehen</a
-              >
-            </td>
-            <td> mittelschwer </td>
-          </tr>
-          <tr>
-            <td>5</td>
-            <td data-label="Titel">Cripple Creek</td>
-            <td data-label="Komponist">Traditionel</td>
-            <td data-label="Instrument">5-string Banjo</td>
-          </tr>
-          <tr>
-            <td> &nbsp; </td>
-            <td data-label="anhören">
-              <a
-                href="https://www.youtube.com/watch?v=WmYlSqvpUkw"
-                target="_blank"
-                class="normal-links">Video Tutorial</a
-              >
-            </td>
-            <td data-label="ansehen">
-              <a href="/images/Cripple-Creek.pdf" class="normal-links"
-                >ansehen</a
-              >
-            </td>
-            <td> leicht </td>
-          </tr>
-        </tbody>
-      </table>
-      <!-- Variante A -->
-      <br />
-      <div class="basis-card">
-        <div class="basis-header">ID: 1</div>
-        <div><span>Titel:</span> Nancy Rowland</div>
-        <div><span>Komponist:</span> Snuffy Jenkins</div>
-        <div><span>Instrument:</span> 5-string Banjo</div>
-        <div>
-          <span>anhören:</span><a
-            href="https://www.youtube.com/watch?v=lFrx4fhty3A"
-            target="_blank"
-            class="normal-links"
-          >
-            Video</a
-          >
-        </div>
-        <div>
-          <span>ansehen:</span><a
-            href="/images/Nancy_Rowland_-_Snuffy_Jenkins.pdf"
-            target="_blank"
-            class="normal-links"
-          >
-            ansehen</a
-          >
-        </div>
-        <div>
-          <span>Schwierigkeitsgrad:</span>
-          leicht
-        </div>
-      </div>
-
-      <div class="basis-card">
-        <div class="basis-header">ID: 2</div>
-        <div><span>Titel:</span> Dear Old Dixie</div>
-        <div><span>Komponist:</span> Traditionel</div>
-        <div><span>Instrument:</span> 5-string Banjo</div>
-        <div>
-          <span>anhören:</span><a
-            href="https://www.youtube.com/watch?v=QRUVEtA1vyo"
-            target="_blank"
-            class="normal-links"
-          >
-            Video</a
-          >
-        </div>
-        <div>
-          <span>ansehen:</span><a
-            href="/bilder/Dear_Old_Dixie02.pdf"
-            target="_blank"
-            class="normal-links"
-          >
-            ansehen</a
-          >
-        </div>
-        <div>
-          <span>Schwierigkeitsgrad:</span>
-          schwierig
-        </div>
-      </div>
-
-      <div class="basis-card">
-        <div class="basis-header">ID: 3</div>
-        <div><span>Titel:</span> Train 45</div>
-        <div><span>Komponist:</span> Traditionel</div>
-        <div><span>Instrument:</span> 5-string Banjo</div>
-        <div>
-          <span>anhören:</span><a
-            href="https://www.youtube.com/watch?v=uo5ojnmRHPo"
-            target="_blank"
-            class="normal-links"
-          >
-            Video</a
-          >
-        </div>
-        <div>
-          <span>ansehen:</span><a
-            href="/bilder/Train_45.pdf"
-            target="_blank"
-            class="normal-links"
-          >
-            ansehen</a
-          >
-        </div>
-        <div>
-          <span>Schwierigkeitsgrad:</span>
-          leicht
-        </div>
-      </div>
-
-      <div class="basis-card">
-        <div class="basis-header">ID: 4</div>
-        <div><span>Titel:</span> Black Mountain Rag</div>
-        <div><span>Komponist:</span> Traditionel</div>
-        <div><span>Instrument:</span> 5-string Banjo</div>
-        <div>
-          <span>anhören:</span><a
-            href="https://www.youtube.com/watch?v=44O9ZSf7Dhc"
-            target="_blank"
-            class="normal-links"
-          >
-            Video</a
-          >
-        </div>
-        <div>
-          <span>ansehen:</span><a
-            href="/images/Black_Mountain_Rag.pdf"
-            target="_blank"
-            class="normal-links"
-          >
-            ansehen</a
-          >
-        </div>
-        <div>
-          <span>Schwierigkeitsgrad:</span>
-          mittelschwer
-        </div>
-      </div>
-
-      <div class="basis-card">
-        <div class="basis-header">ID: 5</div>
-        <div><span>Titel:</span> Cripple Creek</div>
-        <div><span>Komponist:</span> Traditionel</div>
-        <div><span>Instrument:</span> 5-string Banjo</div>
-        <div>
-          <span>anhören:</span><a
-            href="https://www.youtube.com/watch?v=WmYlSqvpUkw"
-            target="_blank"
-            class="normal-links"
-          >
-            Video</a
-          >
-        </div>
-        <div>
-          <span>ansehen:</span><a
-            href="/images/Cripple-Creek.pdf"
-            target="_blank"
-            class="normal-links"
-          >
-            ansehen</a
-          >
-        </div>
-        <div>
-          <span>Schwierigkeitsgrad:</span>
-          leicht
-        </div>
-      </div>
-
-      <br />
-      <p>
-        <a href="/unterricht/" class="normal-links">zurück</a>
-      </p>
     </section>
   </article>
 </BaseLayout>
