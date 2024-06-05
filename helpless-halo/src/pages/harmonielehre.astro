@@ -4,44 +4,49 @@ import YouTube from "../components/YouTube.astro";
 import "../styles/lite-yt-embed.css";
 export const prerender = true;
 const pageTitle = "Harmonielehre Grundbegriffe lernen";
+const SITE_URL = "https://www.musicstudio-ziebart.de"; // Hier setzen Sie den Wert für SITE_URL
 // Video Daten
 const videoData = [
-{
-    loc: "/harmonieliehre/",
+  {
+    loc: `${SITE_URL}/harmonielehre/`,
     title: "Notenschrift",
-    description: "Ich möchte mit diesem Video die Notenschrift erklären die ja doch so wichtig für die Musik ist!",
+    description:
+      "Ich möchte mit diesem Video die Notenschrift erklären die ja doch so wichtig für die Musik ist!",
     content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=Hu4ef1IkuG0",
     thumbnail_loc: "https://i.ytimg.com/vi/Hu4ef1IkuG0/hqdefault.jpg",
     publication_date: "2021-04-192021-07-17T00:00:00+01:00",
-    duration: "PT13M52S"
+    duration: "PT13M52S",
   },
   {
-    loc: "/harmonieliehre/",
+    loc: `${SITE_URL}/harmonielehre/`,
     title: "Intervalle",
-    description: "Ich werde in diesem Video versuchen die Intervalle zu erklären und zu bestimmen. Ein Intervall ist der Tonabstand zweier Töne. Also Prime, Sekunde, Terz, Quarte, Quinte, Sexte, Septime und Oktave.",
+    description:
+      "Ich werde in diesem Video versuchen die Intervalle zu erklären und zu bestimmen. Ein Intervall ist der Tonabstand zweier Töne. Also Prime, Sekunde, Terz, Quarte, Quinte, Sexte, Septime und Oktave.",
     content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=804rrOOFzAQ",
     thumbnail_loc: "https://i.ytimg.com/vi/804rrOOFzAQ/hqdefault.jpg",
     publication_date: "2023-04-272021-07-17T00:00:00+01:00",
-    duration: "PT17M55S"
+    duration: "PT17M55S",
   },
   {
-    loc: "/harmonieliehre/",
+    loc: `${SITE_URL}/harmonielehre/`,
     title: "Dreiklänge",
-    description: "Ich werde in diesem Video versuchen die Dreiklänge besser zu verstehen. Sie sind wichtig da diese zum Beispiel eintscheiden ob ein Akkord ein Durakkord ist oder ein Mollakkord und noch vieles mehr.",
+    description:
+      "Ich werde in diesem Video versuchen die Dreiklänge besser zu verstehen. Sie sind wichtig da diese zum Beispiel eintscheiden ob ein Akkord ein Durakkord ist oder ein Mollakkord und noch vieles mehr.",
     content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=fgzboODvlQ4",
     thumbnail_loc: "https://i.ytimg.com/vi/fgzboODvlQ4/hqdefault.jpg",
     publication_date: "2021-05-052021-07-17T00:00:00+01:00",
-    duration: "PT20M44S"
+    duration: "PT20M44S",
   },
   {
-    loc: "/harmonieliehre/",
+    loc: `${SITE_URL}/harmonielehre/`,
     title: "Funktionsthorie",
-    description: "Bei der Funktionstheorie geht es haupsächlich darum auf welchen Stufen die Akkorde stehen. Die drei Haupdreiklänge heißen zum Beispiel Tonika, Dominante und Subdominante. Sie liegen auf der I., IV. und V. Stufe.",
+    description:
+      "Bei der Funktionstheorie geht es haupsächlich darum auf welchen Stufen die Akkorde stehen. Die drei Haupdreiklänge heißen zum Beispiel Tonika, Dominante und Subdominante. Sie liegen auf der I., IV. und V. Stufe.",
     content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=tCkpok099xw",
     thumbnail_loc: "https://i.ytimg.com/vi/tCkpok099xw/hqdefault.jpg",
     publication_date: "2021-05-102021-07-17T00:00:00+01:00",
-    duration: "PT12M22S"
-  }
+    duration: "PT12M22S",
+  },
 ];
 ---
 
@@ -73,94 +78,42 @@ const videoData = [
         die Buchstaben schreiben!
       </p>
       <h2>Notenschrift</h2>
-      <div class="video-container-wrapper">
-        <div class="video-container">
-          <lite-youtube
-            videoid="Hu4ef1IkuG0"
-            style="background-image: url('https://i.ytimg.com/vi/Hu4ef1IkuG0/hqdefault.jpg');"
-          >
-            <a
-              href="https://www.youtube.com/embed/Hu4ef1IkuG0"
-              class="lty-playbtn"
-              title="Notenschrift"
-            >
-              <span class="lyt-visually-hidden"
-                >Play Video: Notenschrift</span
-              >
-            </a>
-          </lite-youtube>
-        </div>
-      </div>
-      <p>
-        <br /> Im zweiten Video geht es darum die Intervallen zu verstehen und zu
-        bestimmen.
-      </p>
-      <h3>Intervalle</h3>
-      <div class="video-container-wrapper">
-        <div class="video-container">
-          <lite-youtube
-            videoid="804rrOOFzAQ"
-            style="background-image: url('https://i.ytimg.com/vi/804rrOOFzAQ/hqdefault.jpg');"
-          >
-            <a
-              href="https://www.youtube.com/embed/804rrOOFzAQ"
-              class="lty-playbtn"
-              title="Intervalle"
-            >
-              <span class="lyt-visually-hidden"
-                >Play Video: Intervalle</span
-              >
-            </a>
-          </lite-youtube>
-        </div>
-      </div>
+      {
+        videoData.map((video, index) => (
+          <div vocab="http://schema.org/" typeof="VideoObject">
+            <meta property="name" content={video.title} />
+            <meta property="description" content={video.description} />
+            <meta property="thumbnailUrl" content={video.thumbnail_loc} />
+            <meta property="uploadDate" content={video.publication_date} />
+            <meta property="duration" content={video.duration} />
+            <meta property="contentUrl" content={video.content_loc} />
+            <meta property="embedUrl" content={video.content_loc} />
 
-      <p>
-        Im dritten Video erkläre ich die Dreiklänge. Wie man Dur und Moll
-        Akkorde bestimmen kann usw.
-      </p>
-      <h4>Dreiklänge</h4>
-      <div class="video-container-wrapper">
-        <div class="video-container">
-          <lite-youtube
-            videoid="fgzboODvlQ4"
-            style="background-image: url('https://i.ytimg.com/vi/fgzboODvlQ4/hqdefault.jpg');"
-          >
-            <a
-              href="https://www.youtube.com/embed/fgzboODvlQ4"
-              class="lty-playbtn"
-              title="Dreiklänge"
-            >
-              <span class="lyt-visually-hidden"
-                >Play Video: Dreiklänge</span
-              >
-            </a>
-          </lite-youtube>
-        </div>
-      </div>
-      <p>
-        Und im vierten Video geht es um eine Funktionstheorie. Das sollte
-        eigentlich das Grundwissen eines jeden Musikers sein.
-      </p>
-      <h5>Funktionstheorie</h5>
-      <div class="video-container-wrapper">
-        <div class="video-container">
-          <lite-youtube
-            videoid="tCkpok099xw"
-            style="background-image: url('https://i.ytimg.com/vi/tCkpok099xw/hqdefault.jpg');"
-          >
-            <a
-              href="https://www.youtube.com/embed/tCkpok099xw"
-              class="lty-playbtn"
-              title="Funktionstheorie"
-            >
-              <span class="lyt-visually-hidden"
-                >Play Video: Funktiontsheorie</span
-              >
-            </a>
-          </lite-youtube>
-        </div>
-      </div>
+            <div class="video-container-wrapper">
+              <div class="video-container">
+                <lite-youtube
+                  videoid={video.content_loc.split("/").pop()}
+                  style={
+                    "background-image: url('" + video.thumbnail_loc + "');"
+                  }
+                >
+                  <a
+                    href={video.content_loc}
+                    class="lty-playbtn"
+                    title={video.title}
+                  >
+                    <span class="lyt-visually-hidden">
+                      Play Video: {video.title}
+                    </span>
+                  </a>
+                </lite-youtube>
+              </div>
+              <h2>{video.title}</h2>
+              <p>{video.description}</p>
+            </div>
+          </div>
+        ))
+      }
     </section>
   </article>
 </BaseLayout>

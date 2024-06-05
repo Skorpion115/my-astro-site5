@@ -5,24 +5,26 @@ import "../styles/lite-yt-embed.css";
 import Guitar from "../components/Guitar.astro";
 export const prerender = true;
 const pageTitle = "Gitarrenunterricht für akustische Gitarre";
+const SITE_URL = "https://www.musicstudio-ziebart.de"; // Hier setzen Sie den Wert für SITE_URL
+
 // Video-Daten
 
 const videoData = [
   {
-    loc: "/gitarrenunterricht/",
+    loc: `${SITE_URL}/gitarrenunterricht/`,
     title: "Beatles - Yesterday Gitarre Tutorial",
     description:
-      "Lerne das Gitarrenstück 'Yesterday von den Beatles'. Dieses Stück kann man wunderbar alleine spielen, also ohne Bass, Drums usw. Die Gitarre wird in einer Double Flatstimmung umgestimmt.",
+      "Lernvideo und Gitarren Tutorial für das Gitarrenstück 'Yesterday von den Beatles'. Dieses Stück kann man wunderbar alleine spielen, also ohne Bass, Drums usw. Die Gitarre wird in einer Double Flatstimmung umgestimmt.",
     content_loc: "https://www.youtube.com/embed/oqko5Mk_UBk",
     thumbnail_loc: "https://i.ytimg.com/vi/oqko5Mk_UBk/hqdefault.jpg",
     publication_date: "2023-07-012021-07-17T00:00:00+01:00",
     duration: "PT12M41S",
   },
   {
-    loc: "/gitarrenunterricht/",
+    loc: `${SITE_URL}/gitarrenunterricht/`,
     title: "City Of NewOrleans - Arlo Guthrie",
     description:
-      "Lerne das Gitarrenstück 'City Of NewOrleans - Arlo Guthrie'. Dieses Stück war Arlo Guthries einziger Welthit.",
+      "Ein schönes Beispiel für ein Fingerpicking mit Gitarre und Gesang: Ich habe mir damals den Song von Arlo Guthrie rausgesucht. Es heißt 'City Of NewOrleans'. Er selbst spielt übrigens bei diesem Song ein Klavier. Es ist ein Lernvideo und Gitarren Tutorial. Dieses Stück war Arlo Guthries einziger Welthit. Als damals Steve Goodman, der Komponist des berühmten Songs zu ihm sagte: Ich hätte da einen guten Hit für dich, sagte Arlo Guthrie: 'Ich hasse Hits!'. Warum das weiß ich nicht.",
     content_loc: "https://www.youtube.com/embed/yEF6e2ZSZ0k",
     thumbnail_loc: "https://i.ytimg.com/vi/yEF6e2ZSZ0k/hqdefault.jpg",
     publication_date: "2021-08-262021-07-17T00:00:00+01:00",
@@ -45,7 +47,49 @@ const videoData = [
         aria-label="Bild SEO Gitarrenunterricht für akustische Gitarre-Gitarrenunterricht"
       />
     </p>
+    
     <section>
+      <h2>Videos zum Gitarrenunterricht</h2>
+      <p>
+        Hier ist mein neuestes Gitarren Tutorial für Akustikgitarre. Yesterday
+        von den Beatles! Das Stück kann man wunderbar alleine spielen.
+      </p>
+      {
+        videoData.map((video, index) => (
+          <div vocab="http://schema.org/" typeof="VideoObject">
+            <meta property="name" content={video.title} />
+            <meta property="description" content={video.description} />
+            <meta property="thumbnailUrl" content={video.thumbnail_loc} />
+            <meta property="uploadDate" content={video.publication_date} />
+            <meta property="duration" content={video.duration} />
+            <meta property="contentUrl" content={video.content_loc} />
+            <meta property="embedUrl" content={video.content_loc} />
+
+            <div class="video-container-wrapper">
+              <div class="video-container">
+                <lite-youtube
+                  videoid={video.content_loc.split("/").pop()}
+                  style={
+                    "background-image: url('" + video.thumbnail_loc + "');"
+                  }
+                >
+                  <a
+                    href={video.content_loc}
+                    class="lty-playbtn"
+                    title={video.title}
+                  >
+                    <span class="lyt-visually-hidden">
+                      Play Video: {video.title}
+                    </span>
+                  </a>
+                </lite-youtube>
+              </div>
+              <h2>{video.title}</h2>
+              <p>{video.description}</p>
+            </div>
+          </div>
+        ))
+      }
       <h2>Wie schwer ist es Gitarre zu lernen?</h2>
       <p>
         Ich würde mal behaupten für Lagerfeuer Klampfe ist sie nicht so schwer
@@ -137,58 +181,6 @@ const videoData = [
         <a href="/instrumentenkauf/" class="normal-links"
           >Mehr Info über die Gitarre</a
         >
-      </p>
-    </section>
-    <section>
-      <h4>Videos zum Gitarrenunterricht</h4>
-      <p>
-        Hier ist mein neuestes Gitarren Tutorial für Akustikgitarre. Yesterday
-        von den Beatles! Das Stück kann man wunderbar alleine spielen.
-      </p>
-      <div class="video-container-wrapper">
-        <div class="video-container">
-          <lite-youtube
-            videoid="oqko5Mk_UBk"
-            style="background-image: url('https://i.ytimg.com/vi/oqko5Mk_UBk/hqdefault.jpg');"
-          >
-            <a
-              href="https://www.youtube.com/embed/oqko5Mk_UBk"
-              class="lty-playbtn"
-              title="Yesterday - Beatles"
-            >
-              <span class="lyt-visually-hidden"
-                >Play Video: Yesterday - Beatles</span
-              >
-            </a>
-          </lite-youtube>
-        </div>
-      </div>
-      <p>
-        Ein schönes Beispiel für ein Fingerpicking mit Gitarre und Gesang: Ich
-        habe mir damals den Song von Arlo Guthrie rausgesucht. Es heißt "City Of
-        NewOrleans". Er selbst spielt übrigens bei diesem Song ein Klavier.
-      </p>
-      <h4>City Of NewOrleans - Arlo Guthrie</h4>
-      <div class="video-container-wrapper">
-        <div class="video-container">
-          <lite-youtube
-            videoid="yEF6e2ZSZ0k"
-            style="background-image: url('https://i.ytimg.com/vi/yEF6e2ZSZ0k/hqdefault.jpg');"
-          >
-            <a
-              href="https://www.youtube.com/embed/yEF6e2ZSZ0k"
-              class="lty-playbtn"
-              title="City Of NewOrleans - Arlo Guthrie"
-            >
-              <span class="lyt-visually-hidden"
-                >Play Video: City Of NewOrleans - Arlo Guthrie</span
-              >
-            </a>
-          </lite-youtube>
-        </div>
-      </div>
-      <p>
-        <a href="/unterricht/" class="normal-links">zurück</a>
       </p>
     </section>
   </article>
