@@ -1,6 +1,5 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import FacebookTag from "../components/FacebookTag.astro";
 import Card from "../components/Card.astro";
 export const prerender = true;
 const pageTitle = "Musiklehrer erteilt Musikunterricht | Musicstudio Ziebart";
@@ -19,8 +18,6 @@ const pageUrl = "https://www.musicstudio-ziebart.de/";
   ogImage={pageImage}
   ogUrl={pageUrl}
 >
-  <FacebookTag title={pageTitle} description={pageDescription} image={pageImage} url={pageUrl} />
-
   <div class="firmenname">
     Musicstudio Ziebart<br />
     Staatl. Anerk. Musiklehrer
@@ -238,6 +235,4 @@ const pageUrl = "https://www.musicstudio-ziebart.de/";
       </section>
     </article>
 </BaseLayout>
-
-  <FacebookTag />
 
