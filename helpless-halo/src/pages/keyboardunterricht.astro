@@ -4,31 +4,32 @@ import YouTube from "../components/YouTube.astro";
 import "../styles/lite-yt-embed.css";
 export const prerender = true;
 const pageTitle = "Keyboardunterricht für jung und alt";
+const SITE_URL = "https://www.musicstudio-ziebart.de";
 // Video-Daten
 
 const videoData = [
   {
-    loc: "/keyboardunterricht/",
+    loc: `${SITE_URL}/keyboardunterricht/`,
     title: "Hammond Organ - Hammond Flip - Klaus Wunderlich",
     description: "Keyboard Tutorial über eine Klaus Wunderlich Komposition. Das Stück heißt 'Hammond Flip'.",
-    content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=244HlpB3JoA",
-    thumbnail_loc: "https://i.ytimg.com/vi/y2KtSx3-W3w/hqdefault.jpg",
+    content_loc: "https://www.youtube.com/embed/244HlpB3JoA",
+    thumbnail_loc: "https://i.ytimg.com/vi/244HlpB3JoA/hqdefault.jpg",
     publication_date: "2021-07-08",
     duration: "PT3M6S"
   },
   {
-    loc: "/keyboardunterricht/",
+    loc: `${SITE_URL}/keyboardunterricht/`,
     title: "Hammond Organ Komponist: Klaus Wunderlich Titel: H-schisch",
-    description: "Ein Keyboard Tutorial über den Komponist Klaus Wunderlich. Das Stück das ich spiele heißt 'H-schisch'. Das ist in einem Notenheft von ihm mit 12 Kompositionen.",
-    content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=y2KtSx3-W3w",
+    description: "Ein Keyboard Tutorial über den Komponist Klaus Wunderlich. Das Stück das ich spiele heißt 'H-schisch'. Das ist in einem Notenheft von ihm mit 12 Kompositionen. Klaus Wunderlich brachte ein Notenbuch heraus mit 12 Kompositionen von ihm. Für jede Tonart komponierte er ein Stück. Ich habe das Stück in H Durgewählt. Ich habe es mit einem HAMMOND XM-1 Expander aufgenommen.",
+    content_loc: "https://www.youtube.com/embed/y2KtSx3-W3w",
     thumbnail_loc: "https://i.ytimg.com/vi/y2KtSx3-W3w/hqdefault.jpg",
     publication_date: "2023-05-19",
     duration: "PT4M16S"
   },
   {
-    loc: "/keyboardunterricht/",
+    loc: `${SITE_URL}/keyboardunterricht/`,
     title: "Hammond Organ Komponist: Klaus Wunderlich Titel: E-Hering",
-    description: "Ein Keyboard Tutorial über den Komponist Klaus Wunderlich. Titel: E-Hering.",
+    description: "Noch ein Stück aus dem Heft 12 Kompositionen von Klaus Wunderlich. Ein Keyboard Tutorial über den Komponisten Klaus Wunderlich. Titel: E-Hering.",
     content_loc: "https://www.youtube.com/embed/t0tOQfL2qSE",
     thumbnail_loc: "https://i.ytimg.com/vi/t0tOQfL2qSE/hqdefault.jpg",
     publication_date: "2023-04-12",
@@ -48,74 +49,44 @@ const videoData = [
       Auf dem Video unten spiele ich ein Stück von Klaus Wunderlich mit dem
       Titel "Hammond Flip".
     </p>
-    <h2>Hammond Flip - Klaus Wunderlich</h2>
-    <div class="video-container-wrapper">
-      <div class="video-container">
-        <lite-youtube
-          videoid="244HlpB3JoA"
-          style="background-image: url('https://i.ytimg.com/vi/244HlpB3JoA/hqdefault.jpg');"
-        >
-          <a
-            href="https://www.youtube.com/embed/244HlpB3JoA"
-            class="lty-playbtn"
-            title="Hammond Organ - Hammond Flip - Klaus Wunderlich"
-          >
-            <span class="lyt-visually-hidden"
-              >Play Video: Hammond Organ - Hammond Flip - Klaus Wunderlich</span
-            >
-          </a>
-        </lite-youtube>
-      </div>
-    </div>
-    <p>
-      Klaus Wunderlich brachte ein Notenbuch heraus mit 12 Kompositionen von
-      ihm. Für jede Tonart komponierte er ein Stück. Ich habe das Stück in H Dur
-      gewählt. Ich habe es mit einem HAMMOND XM-1 Expander aufgenommen.
-      Komponist: Klaus Wunderlich Titel: H-schisch
-    </p>
-    <h2>H-schisch - Klaus Wunderlich</h2>
-    <div class="video-container-wrapper">
-      <div class="video-container">
-        <lite-youtube
-          videoid="y2KtSx3-W3w"
-          style="background-image: url('https://i.ytimg.com/vi/y2KtSx3-W3w/hqdefault.jpg');"
-        >
-          <a
-            href="https://www.youtube.com/embed/y2KtSx3-W3w"
-            class="lty-playbtn"
-            title="Hammond Organ Komponist: Klaus Wunderlich Titel: H-schisch"
-          >
-            <span class="lyt-visually-hidden"
-              >Play Video: Hammond Organ Komponist: Klaus Wunderlich Titel:
-              H-schisch</span
-            >
-          </a>
-        </lite-youtube>
-      </div>
-    </div>
-    <p>
-      Noch ein Stück von diesem Buch: Es heißt E-Hering. Also ein Stück in
-      E-Dur.
-    </p>
-    <h2>E-hering - Klaus Wunderlich</h2>
-    <div class="video-container-wrapper">
-      <div class="video-container">
-        <lite-youtube
-          videoid="t0tOQfL2qSE"
-          style="background-image: url('https://i.ytimg.com/vi/t0tOQfL2qSE/hqdefault.jpg');"
-        >
-          <a
-            href="https://www.youtube.com/embed/t0tOQfL2qSE"
-            class="lty-playbtn"
-            title="Hammond Organ Komponist: Klaus Wunderlich Titel: E-Hering"
-          >
-            <span class="lyt-visually-hidden"
-              >Play Video: Hammond Organ Komponist: Klaus Wunderlich Titel: E-Hering</span
-            >
-          </a>
-        </lite-youtube>
-      </div>
-    </div>
+    <h2>Video Tutorial Hammond Flip - Klaus Wunderlich</h2>
+    {
+      videoData.map((video, index) => (
+        <div vocab="http://schema.org/" typeof="VideoObject">
+          <meta property="name" content={video.title} />
+          <meta property="description" content={video.description} />
+          <meta property="thumbnailUrl" content={video.thumbnail_loc} />
+          <meta property="uploadDate" content={video.publication_date} />
+          <meta property="duration" content={video.duration} />
+          <meta property="contentUrl" content={video.content_loc} />
+          <meta property="embedUrl" content={video.content_loc} />
+
+          <div class="video-container-wrapper">
+            <div class="video-container">
+              <lite-youtube
+                videoid={video.content_loc.split("/").pop()}
+                style={
+                  "background-image: url('" + video.thumbnail_loc + "');"
+                }
+              >
+                <a
+                  href={video.content_loc}
+                  class="lty-playbtn"
+                  title={video.title}
+                >
+                  <span class="lyt-visually-hidden">
+                    Play Video: {video.title}
+                  </span>
+                </a>
+              </lite-youtube>
+            </div>
+            <h2>{video.title}</h2>
+            <p>{video.description}</p>
+          </div>
+        </div>
+      ))
+    }
+    
     <article>
       <h2>Der neue Weg zum Keyboardspiel</h2>
       <p>

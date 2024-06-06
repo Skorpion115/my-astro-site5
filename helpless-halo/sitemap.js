@@ -101,7 +101,7 @@ const videos = [
   {
     loc: `${SITE_URL}/keyboardunterricht/`,
     title: "Hammond Organ Komponist: Klaus Wunderlich Titel: H-schisch",
-    description: "Ein Keyboard Tutorial über den Komponist Klaus Wunderlich. Das Stück das ich spiele heißt 'H-schisch'. Das ist in einem Notenheft von ihm mit 12 Kompositionen.",
+    description: "Ein Keyboard Tutorial über den Komponist Klaus Wunderlich. Das Stück das ich spiele heißt 'H-schisch'. Das ist in einem Notenheft von ihm mit 12 Kompositionen. Klaus Wunderlich brachte ein Notenbuch heraus mit 12 Kompositionen von ihm. Für jede Tonart komponierte er ein Stück. Ich habe das Stück in H Durgewählt. Ich habe es mit einem HAMMOND XM-1 Expander aufgenommen.",
     content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=y2KtSx3-W3w",
     thumbnail_loc: "https://i.ytimg.com/vi/y2KtSx3-W3w/hqdefault.jpg",
     publication_date: "2023-05-19T00:00:00+01:00",
@@ -110,7 +110,7 @@ const videos = [
   {
     loc: `${SITE_URL}/keyboardunterricht/`,
     title: "Hammond Organ Komponist: Klaus Wunderlich Titel: E-Hering",
-    description: "Ein Keyboard Tutorial über den Komponist Klaus Wunderlich. Titel: E-Hering.",
+    description: "Noch ein Stück aus dem Heft 12 Kompositionen von Klaus Wunderlich. Ein Keyboard Tutorial über den Komponisten Klaus Wunderlich. Titel: E-Hering.",
     content_loc: "https://www.youtube.com/embed/t0tOQfL2qSE",
     thumbnail_loc: "https://i.ytimg.com/vi/t0tOQfL2qSE/hqdefault.jpg",
     publication_date: "2023-04-12T00:00:00+01:00",
