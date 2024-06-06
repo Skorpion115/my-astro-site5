@@ -117,6 +117,15 @@ const videos = [
     duration: "PT5M38S"
   },
   {
+    loc: `${SITE_URL}/download/`,
+    title: "Aus der neuen Welt - Antonin Dvorak",
+    description: "Klavier Tutorial für das klassische Stück von Antonin Dvorak. Ich spiele hier nur der zweiten Satz das 'Largo'. Antonin Dvorak hat es für Orchester aber auch für Klavier zu vier Händen geschrieben. Ich habe es für 2 Händen umgeschrieben.",
+    content_loc: "https://www.youtube.com/embed/ytcQ-I1BTNk",
+    thumbnail_loc: "https://i.ytimg.com/vi/ytcQ-I1BTNk/hqdefault.jpg",
+    publication_date: "2021-04-21T00:00:00+01:00",
+    duration: "PT12M59S",
+  },
+  {
     loc: `${SITE_URL}/harmonielehre/`,
     title: "Notenschrift",
     description: "Ich möchte mit diesem Video die Notenschrift erklären die ja doch so wichtig für die Musik ist!",

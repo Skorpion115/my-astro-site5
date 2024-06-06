@@ -4,6 +4,22 @@ import YouTube from "../components/YouTube.astro";
 import "../styles/lite-yt-embed.css";
 export const prerender = true;
 const pageTitle = "Download für Noten und GM Files";
+const SITE_URL = "https://www.musicstudio-ziebart.de";
+
+// Video-Daten
+
+const videoData = [
+  {
+    loc: `${SITE_URL}/download/`,
+    title: "Aus der neuen Welt - Antonin Dvorak",
+    description:
+      "Klavier Tutorial für das klassische Stück von Antonin Dvorak. Ich spiele hier nur der zweiten Satz das 'Largo'. Antonin Dvorak hat es für Orchester aber auch für Klavier zu vier Händen geschrieben. Ich habe es für 2 Händen umgeschrieben.",
+    content_loc: "https://www.youtube.com/embed/ytcQ-I1BTNk",
+    thumbnail_loc: "https://i.ytimg.com/vi/ytcQ-I1BTNk/hqdefault.jpg",
+    publication_date: "2021-04-21T00:00:00+01:00",
+    duration: "PT12M59S",
+  }
+];
 ---
 
 <BaseLayout
@@ -15,24 +31,43 @@ const pageTitle = "Download für Noten und GM Files";
   <section id="download">
     <h2>GM Midi Files mit Noten zum downloaden</h2>
 
-    <div class="video-container-wrapper">
-      <div class="video-container">
-        <lite-youtube
-          videoid="ytcQ-I1BTNk"
-          style="background-image: url('https://i.ytimg.com/vi/ytcQ-I1BTNk/hqdefault.jpg');"
-        >
-          <a
-            href="https://www.youtube.com/embed/vxX0WiQhSUE?si=ytcQ-I1BTNk"
-            class="lty-playbtn"
-            title="Aus der neuen Welt - Antonin Dvorak"
-          >
-            <span class="lyt-visually-hidden"
-              >Play Video: Keynote (Google I/O '18)</span
-            >
-          </a>
-        </lite-youtube>
-      </div>
-    </div>
+    {
+      videoData.map((video, index) => (
+        <div vocab="http://schema.org/" typeof="VideoObject">
+          <meta property="name" content={video.title} />
+          <meta property="description" content={video.description} />
+          <meta property="thumbnailUrl" content={video.thumbnail_loc} />
+          <meta property="uploadDate" content={video.publication_date} />
+          <meta property="duration" content={video.duration} />
+          <meta property="contentUrl" content={video.content_loc} />
+          <meta property="embedUrl" content={video.content_loc} />
+
+          <div class="video-container-wrapper">
+            <div class="video-container">
+              <lite-youtube
+                videoid={video.content_loc.split("/").pop()}
+                style={
+                  "background-image: url('" + video.thumbnail_loc + "');"
+                }
+              >
+                <a
+                  href={video.content_loc}
+                  class="lty-playbtn"
+                  title={video.title}
+                >
+                  <span class="lyt-visually-hidden">
+                    Play Video: {video.title}
+                  </span>
+                </a>
+              </lite-youtube>
+            </div>
+            <h2>{video.title}</h2>
+            <p>{video.description}</p>
+          </div>
+        </div>
+      ))
+    }
+
     <article>
       <p>
         Hier können Sie sich die Titel anhören. Ich hoffe es ist für Ihren
