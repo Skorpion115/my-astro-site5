@@ -13,7 +13,7 @@ import Footer2 from "../components/Footer2.astro";
 const { pageTitle, description, keywords, href, ogTitle, ogDescription, ogImage, ogUrl, ogType, title, image, url } = Astro.props;
 const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
 ---
-<!doctype html>
+<!DOCTYPE html>
 <html lang="de-de">
   <head>
     <meta charset="utf-8" />
@@ -42,18 +42,7 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={image} />
     <meta name="twitter:url" content={url} />
-    {
-      googleSiteVerification && (
-        <meta
-          name="google-site-verification"
-          content={googleSiteVerification}
-        />
-      )
-    }
-    <meta
-      name="google-site-verification"
-      content="Zitul6WICKD7zrzgptxGVrh2GEhozasdEM_d1tGi2aw"
-    />
+    <meta name="google-site-verification" content="Zitul6WICKD7zrzgptxGVrh2GEhozasdEM_d1tGi2aw">
     <meta
       name="author"
       content="Musicstudio Ziebart, postmaster@musicstudio-ziebart.de"
