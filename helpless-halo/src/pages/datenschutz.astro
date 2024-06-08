@@ -1,6 +1,5 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Erklaerung2 from "../components/Erklaerung2.astro";
 export const prerender = true;
 const pageTitle = "Datenschutzerklärung";
 ---
@@ -459,10 +458,9 @@ const pageTitle = "Datenschutzerklärung";
   </p>
   <!-- Das externe Skript am Ende des Body einbinden -->
   <script src="/scripts/consentmanager.js" async></script>
+  <script src="/scripts/consentmanager2.js" async></script>
 
 </BaseLayout>
-  
-  <Erklaerung2 />
 
   <style>
     /* ANCHOR Schriftgröße vür privacy section */
