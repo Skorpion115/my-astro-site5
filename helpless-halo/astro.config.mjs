@@ -3,7 +3,7 @@ import { defineConfig } from "astro/config";
 import preact from "@astrojs/preact";
 import netlify from "@astrojs/netlify";
 import { fileURLToPath } from "url";
-import { dirname } from "path";
+import { dirname, resolve } from "path";
 
 // Convert import.meta.url to __dirname and __filename
 const __filename = fileURLToPath(import.meta.url);
@@ -26,7 +26,7 @@ export default defineConfig({
     resolve: {
       alias: {
         // Beispiel für die Verwendung von __dirname
-        "@scripts": `${__dirname}/src/scripts`,
+        "@scripts": resolve(__dirname, "public/scripts"),
       },
     },
   },
