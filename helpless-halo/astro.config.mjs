@@ -16,7 +16,9 @@ export default defineConfig({
     format: "directory", // Erzeugt `page/index.html` statt `page.html`
   },
 
-  publicDir: "public",
+  vite: {
+    publicDir: "public"
+  },
 
   output: "server", // SSR serverseitiges Rendern
   adapter: netlify({
