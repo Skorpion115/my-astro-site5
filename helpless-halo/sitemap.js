@@ -2,7 +2,7 @@ import { writeFileSync, mkdirSync } from 'fs';
 import { join } from 'path';
 import { create } from 'xmlbuilder2';
 
-2
+const SITE_URL = "https://www.musicstudio-ziebart.de";
 // Seiten-URLs
 const pages = [
   { url: `${SITE_URL}`, changefreq: "weekly", lastmod: new Date() },
