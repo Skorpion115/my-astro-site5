@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Erklaerung from "../components/Erklaerung.astro";
+// import Erklaerung from "../components/Erklaerung.astro";
 import Erklaerung2 from "../components/Erklaerung2.astro";
 export const prerender = true;
 const pageTitle = "Datenschutzerklärung";
@@ -458,9 +458,11 @@ const pageTitle = "Datenschutzerklärung";
   <p>
     <a href="/" class="normal-links">go back!</a>
   </p>
+  <!-- Das externe Skript am Ende des Body einbinden -->
+  <script src="../scripts/consentmanager.js" async></script>
 </BaseLayout>
-
-  <Erklaerung />
+  <!--
+  <Erklaerung /> -->
   
   <Erklaerung2 />
 
