@@ -4,7 +4,7 @@ import YouTube from "../components/YouTube.astro";
 import "../styles/lite-yt-embed.css";
 export const prerender = true;
 const pageTitle = "Gitarrenunterricht für akustische Gitarre";
-const SITE_URL = "https://www.musicstudio-ziebart.de"; // Hier setzen Sie den Wert für SITE_URL
+const SITE_URL = process.env.SITE_URL || "https://www.musicstudio-ziebart.de";
 
 // Video-Daten
 

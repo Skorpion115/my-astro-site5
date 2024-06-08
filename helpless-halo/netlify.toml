@@ -6,6 +6,9 @@
 [context.deploy-preview]
   publish = "dist/"
 
+[build.environment]
+  SITE_URL = "https://www.musicstudio-ziebart.de"
+
 [[headers]]
   for = "/*"
 

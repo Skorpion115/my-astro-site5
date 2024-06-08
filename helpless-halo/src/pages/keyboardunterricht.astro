@@ -4,7 +4,7 @@ import YouTube from "../components/YouTube.astro";
 import "../styles/lite-yt-embed.css";
 export const prerender = true;
 const pageTitle = "Keyboardunterricht für jung und alt";
-const SITE_URL = "https://www.musicstudio-ziebart.de";
+const SITE_URL = process.env.SITE_URL || "https://www.musicstudio-ziebart.de";
 // Video-Daten
 
 const videoData = [
