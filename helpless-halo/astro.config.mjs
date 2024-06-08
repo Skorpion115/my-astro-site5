@@ -2,6 +2,12 @@ import { defineConfig } from "astro/config";
 // import sitemap from "@astrojs/sitemap";
 import preact from "@astrojs/preact";
 import netlify from "@astrojs/netlify";
+import { fileURLToPath } from "url";
+import { dirname } from "path";
+
+// Convert import.meta.url to __dirname and __filename
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 // https://astro.build/config
 export default defineConfig({
@@ -17,9 +23,16 @@ export default defineConfig({
   },
 
   vite: {
-    publicDir: "public"
+    resolve: {
+      alias: {
+        // Beispiel für die Verwendung von __dirname
+        "@scripts": `${__dirname}/src/scripts`,
+      },
+    },
   },
-
+  
+  publicDir: "public",
+  
   output: "server", // SSR serverseitiges Rendern
   adapter: netlify({
     functionPerRoute: true,
