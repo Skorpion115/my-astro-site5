@@ -68,25 +68,8 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
     <h1 transition:animate="slide">{pageTitle}</h1>
     <slot />
     <Footer />
-    <!-- Altes Script von Video angeschaut für ServiceWorker -->
-    <script is:inline>
-    document.addEventListener("DOMContentLoaded", () => {
-      if ("serviceWorker" in navigator) {
-        navigator.serviceWorker
-          .register("/serviceWorker.js", { scope: "/" })
-          .then(() => console.log("serviceWorker registered"))
-          .catch((error) => console.warn(error));
-      }
-    });
-    </script>
-
-    <script>
-      import "../scripts/menu.js"
-    </script>
-
-    <script>
-      import "../scripts/cookie-banner.js";
-    </script>
-
+    <script src="/scripts/cookie-banner.js" async></script>
+    <script src="/scripts/menu.js" async></script>
+    <script src="/scripts/register-service-worker.js" async></script>
   </body>
 </html>

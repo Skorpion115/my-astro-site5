@@ -10,10 +10,24 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Footer2 from "../components/Footer2.astro";
 // import "../styles/global.css";
-const { pageTitle, description, keywords, href, ogTitle, ogDescription, ogImage, ogUrl, ogType, title, image, url } = Astro.props;
+const {
+  pageTitle,
+  description,
+  keywords,
+  href,
+  ogTitle,
+  ogDescription,
+  ogImage,
+  ogUrl,
+  ogType,
+  title,
+  image,
+  url,
+} = Astro.props;
 const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
 ---
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="de-de">
   <head>
     <meta charset="utf-8" />
@@ -42,7 +56,10 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={image} />
     <meta name="twitter:url" content={url} />
-    <meta name="google-site-verification" content="Zitul6WICKD7zrzgptxGVrh2GEhozasdEM_d1tGi2aw">
+    <meta
+      name="google-site-verification"
+      content="Zitul6WICKD7zrzgptxGVrh2GEhozasdEM_d1tGi2aw"
+    />
     <meta
       name="author"
       content="Musicstudio Ziebart, postmaster@musicstudio-ziebart.de"
@@ -51,59 +68,47 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
       name="DC.Publisher"
       content="Musicstudio Ziebart, postmaster@musicstudio-ziebart.de"
     />
-    <meta name="page-topic" content="Musikunterricht, Musikschule, Bildung">
+    <meta name="page-topic" content="Musikunterricht, Musikschule, Bildung" />
     <meta name="DC.rights" content="Alle Rechte liegen beim Author" />
     <meta name="revisit-after" content="7 days" />
     <meta name="robots" content="max-snippet:-1" />
     <meta name="robots" content="INDEX, FOLLOW" />
     <meta name="theme-color" content="#191919" />
- 
+
     <!-- Other components or scripts -->
     <ManuellesBlockieren />
     <ExternalScripts />
     <ExternalScripts3 />
     <Google />
-    <Gtm />     
+    <Gtm />
     <ViewTransitions />
-
   </head>
   <body>
     <cookie-banner>
       <h2 slot="title">Music Lessons</h2>
       <div slot="text">Wir verwenden Cookies weil das so ist</div>
     </cookie-banner>
-  
+
     <template>
       <div class="foo">Das ist ein Template das siehst du nicht in HTML</div>
     </template>
     {/* Google Tag Manager (noscript) */}
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PWK4LSL"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-PWK4LSL"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"></iframe></noscript
+    >
     {/* End Google Tag Manager (noscript */}
     <Header />
     <h1 transition:animate="slide">{pageTitle}</h1>
     <slot />
     <Footer />
     <Footer2 />
-    <!-- Altes Script von Video angeschaut für den ServiceWorker -->
-    <script is:inline>
-    document.addEventListener("DOMContentLoaded", () => {
-      if ("serviceWorker" in navigator) {
-        navigator.serviceWorker
-          .register("/serviceWorker.js", { scope: "/" })
-          .then(() => console.log("serviceWorker registered"))
-          .catch((error) => console.warn(error));
-      }
-    });
-    </script>
-    <!-- Lokale Scripte einfügen -->
-    <script>
-      import "../scripts/menu.js"
-    </script>
-
-    <script>
-      import "../scripts/cookie-banner.js";
-    </script>
-
+    <!-- Scripte extern einbinden -->
+    <script src="/scripts/cookie-banner.js" async></script>
+    <script src="/scripts/menu.js" async></script>
+    <script src="/scripts/register-service-worker.js" async></script>
   </body>
 </html>
