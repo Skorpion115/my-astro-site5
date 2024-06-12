@@ -492,42 +492,41 @@ img {
 
   /* ANCHOR faq.astro */
 
-  #faq {
-    display: block;
-    width: 96%;
-    max-width: 100%;
-    padding: 0em;
+  .faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
     font-family: var(--font);
     font-style: normal;
-    margin: 2rem auto;
   }
 
-  #faq article {
-    display: inline-block;
-    margin: 2rem auto;
-    padding: 1.25rem;
-    text-align: left;
-    width: 100%;
-    vertical-align: top;
+  .faq-item {
+    margin-bottom: 20px;
   }
 
-  .row {
-    position: relative;
-    margin: 0px 0 0 50px;
-    float: right;
-    width: 350px;
+  .faq-question {
+    margin-bottom: 10px;
   }
 
-  .row img {
-    float: left;
+  .faq-answer a {
+    color: #007BFF;
+    text-decoration: none;
   }
 
-  .row p {
-    margin-left: 6.25rem;
+  .faq-answer a:hover {
+    text-decoration: underline;
   }
 
-  #faq div {
-    margin-left: 3%;
+  .back-link {
+    display: block;
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #007BFF;
+    text-decoration: none;
+  }
+
+  .back-link:hover {
+    text-decoration: underline;
   }
 
   /* ANCHOR download.astro */
