@@ -20,15 +20,17 @@ export default defineConfig({
 
   build: {
     format: "directory", // Erzeugt `page/index.html` statt `page.html`
+    sourcemap: true, // Aktiviert Source Maps in Vite
+    chunkSizeWarningLimit: 3420 // Setze hier deine bevorzugte Grenze ein
   },
 
   vite: {
     resolve: {
       alias: {
-        // Beispiel für die Verwendung von __dirname
-        "@scripts": resolve(__dirname, "public/scripts"),
-      },
-    },
+        "@scripts": resolve(__dirname, "public/scripts")
+      }
+      // Weitere Vite-spezifische Konfiguration hier hinzufügen, falls nötig
+    }
   },
   
   publicDir: "public",
@@ -37,11 +39,6 @@ export default defineConfig({
   adapter: netlify({
     functionPerRoute: true,
   }),
-
-  build: {
-    sourcemap: true, // Aktiviert Source Maps in Vite
-    chunkSizeWarningLimit: 3420, // Setze hier deine bevorzugte Grenze ein
-  },
 
   site: "https://www.musicstudio-ziebart.de/",
 
