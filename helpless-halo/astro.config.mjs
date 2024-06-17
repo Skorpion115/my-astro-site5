@@ -40,7 +40,7 @@ export default defineConfig({
     functionPerRoute: true,
   }),
 
-  site: "https://www.musicstudio-ziebart.de/",
+  site: "https://www.musicstudio-ziebart.de",
 
   integrations: [
     preact({
