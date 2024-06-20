@@ -1,3 +1,5 @@
+<script async src="https://www.googletagmanager.com/gtag/js?id=GT-MR4MFC6"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=GT-5TG3DK3"></script>
 <script async>
   // Google Tag Manager
   (function (w, d, s, l, i) {
@@ -28,10 +30,16 @@
   gtag("js", new Date());
 
   // Google Analytics Config
-  gtag("config", "GT-MR4MFC6");
+  gtag("config", "GT-MR4MFC6", { 
+    "anonymize_ip": true, 
+    "allow_google_signals": true
+  });
 
   // Google AdWords Config
-  gtag("config", "GT-5TG3DK3");
+  gtag("config", "GT-5TG3DK3", {
+    "anonymize_ip": true,
+    "allow_google_signals": true
+  });
 
   // Google Remarketing blockieren
   if (typeof __cmp === "function") {
