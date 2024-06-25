@@ -9,6 +9,16 @@
 [build.environment]
   SITE_URL = "https://www.musicstudio-ziebart.de"
 
+[[plugins]]
+  package = "@netlify/plugin-csp-nonce"
+  [plugins.inputs]
+    reportOnly = true
+    excludedPath = [
+      "/*",
+      "/api/*",
+      "**/*.bespoke.extension"
+    ]
+
 [[headers]]
   for = "/*"
 

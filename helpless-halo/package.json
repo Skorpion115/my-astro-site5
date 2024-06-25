@@ -26,6 +26,7 @@
     "node": ">=18.17.1 <19.0.0"
   },
   "devDependencies": {
+    "@netlify/plugin-csp-nonce": "^1.2.10",
     "@types/node": "^20.12.12"
   }
 }
