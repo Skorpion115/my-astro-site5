@@ -9,15 +9,7 @@ const pageTitle = "Datenschutzerklärung";
   description="Datenschutz"
   keywords="datenschutz"
   href="https://www.musicstudio-ziebart.de/datenschutz/"
-  <head
 >
-  <link
-    rel="stylesheet"
-    href="https://delivery.consentmanager.net/delivery/cmpinline.min.css"
-  />
-</BaseLayout>
-
-<section class="privacy">
   <p>
     <b
       >1. Name und Kontaktdaten des für die Verarbeitung Verantwortlichen sowie
@@ -40,8 +32,6 @@ const pageTitle = "Datenschutzerklärung";
     Eine Pflicht zur Bestellung eines betrieblichen Datenschutzbeauftragten
     besteht nicht, Art. 37 Abs. 4 S. 1 DSGVO i.V.m. § 4f Abs. 1 S. 3 BDSG.
   </p>
-  
-  <div id="cmpinlinepreferencesbox"></div>
 
   <p>&nbsp;</p>
   <p>
@@ -473,36 +463,76 @@ const pageTitle = "Datenschutzerklärung";
   <h3>Anbieterliste</h3>
   <div id="cmpvendorlist"></div>
   <br />
-
+  <!--
   <h4>Cookie Info Liste</h4>
-  <div id="cmpcookieinfo"></div>
+  <div id="cmpcookieinfo"></div> -->
 
   <p>
     <a href="/" class="normal-links">go back!</a>
   </p>
-</section>
+
+  <script>
+    function loadVendorList() {
+      var script = document.createElement("script");
+      script.src =
+        "https://delivery.consentmanager.net/delivery/vendorlist.php?cdid=b018a967f10b6";
+      script.type = "text/javascript";
+      script.async = true;
+      document.body.appendChild(script);
+
+      fetch(
+        "https://delivery.consentmanager.net/delivery/vendorlist.php?cdid=b018a967f10b6&api=json"
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("Received data:", data); // Log the received data to console
+          displayCookieList(data);
+        })
+        .catch((error) => console.error("Error fetching vendor list:", error));
+    }
+
+    function displayCookieList(data) {
+      const cookieListContainer = document.getElementById("cmpvendorlist");
+      if (cookieListContainer) {
+        cookieListContainer.innerHTML = ""; // Clear previous content
+        if (data && Array.isArray(data)) {
+          data.forEach((cookie) => {
+            const cookieItem = document.createElement("div");
+            cookieItem.textContent = `Name: ${cookie.name}, Domain: ${cookie.domain}, Expiry: ${cookie.expiry}`;
+            cookieListContainer.appendChild(cookieItem);
+          });
+        } else {
+          console.error("Data format error or empty data:", data);
+          cookieListContainer.textContent = "Error loading vendor list.";
+        }
+      } else {
+        console.error('Element with id "cmpvendorlist" not found.');
+      }
+    }
+
+    // Trigger loading of vendor list when the page is loaded directly or via link navigation
+    document.addEventListener("DOMContentLoaded", function () {
+      loadVendorList();
+    });
+
+    // Additional trigger for when navigating via link (for Astro framework)
+    document.addEventListener("click", function (event) {
+      const target = event.target as HTMLElement; // Cast event.target to HTMLElement
+      if (
+        target &&
+        target.tagName === "A" &&
+        target.getAttribute("href")?.includes("/datenschutz/")
+      ) {
+        loadVendorList();
+      }
+    });
+  </script>
+</BaseLayout>
+
 <!-- Das externe Skript am Ende des Body einbinden -->
-<script src="/scripts/external-events.js" is:inline></script>
-
-<script src="/scripts/consentmanager-vendorlist.js" async></script>
-<script src="/scripts/consentmanager-cookieinfo.js" async></script>
-
-<style>
-  /* ANCHOR Schriftgröße vür privacy section */
-
-  .privacy {
-    font-size: 0.9rem;
-  }
-  /* ANCHOR Schriftgröße für cmpvendorlist */
-
-  #cmpvendorlist {
-    font-size: 0.8rem;
-    color: black;
-  }
-
-  /* ANCHOR Schriftgröße für cmpcoolieinfo */
-
-  #cmpcookieinfo {
-    font-size: 0.8rem;
-  }
-</style>
+  <!--
+  <script src="/scripts/external-events.js" is:inline></script> -->
+<!--
+  <script src="/scripts/consentmanager-vendorlist.js" async></script> -->
+<!--
+  <script src="/scripts/consentmanager-cookieinfo.js" async></script> -->
