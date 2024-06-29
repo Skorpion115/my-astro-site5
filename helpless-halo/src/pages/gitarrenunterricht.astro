@@ -54,7 +54,7 @@ const videoData = [
         von den Beatles! Das Stück kann man wunderbar alleine spielen.
       </p>
       {
-        videoData.map((video, index) => (
+        videoData.map((video) => (
           <div vocab="http://schema.org/" typeof="VideoObject">
             <meta property="name" content={video.title} />
             <meta property="description" content={video.description} />
