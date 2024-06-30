@@ -6,28 +6,37 @@ const allPosts = await Astro.glob("../pages/posts/*.mdx");
 const pageTitle = "Meine Blog Site";
 ---
 
-<BaseLayout 
+<BaseLayout
   pageTitle={pageTitle}
   description="Hier veröffenliche ich meine Blogs"
   keywords="blogging, gitarrenunterricht, banjounterricht"
   href="https://www.musicstudio-ziebart.de/blog/"
 >
   <p>
-    Ich möchte einige gute Ratschläge für Musiker und Musikerinnen geben. Viele Gitarren Anfänger 
-    wissen nicht wie man eine Gitarre stimmt. Hier zu habe ich den kleinen Blog Gitarre stimmen 
-    geschrieben. Das gleiche gilt auch für alle Banjo Picker. Da das Banjo lauter als eine normale 
-    Gitarre ist haben viele Bedenken wegen der Nachbarschaft vor allen in Wohnungen. Hier stelle ich 
+    Ich möchte einige gute Ratschläge für Musiker und Musikerinnen geben. Viele
+    Gitarren Anfänger wissen nicht wie man eine Gitarre stimmt. Hier zu habe ich
+    den kleinen Blog Gitarre stimmen geschrieben. Das gleiche gilt auch für alle
+    Banjo Picker. Da das Banjo lauter als eine normale Gitarre ist haben viele
+    Bedenken wegen der Nachbarschaft vor allen in Wohnungen. Hier stelle ich
     einen Banjo Dämpfer vor der das Problem lösen sollte.
   </p>
   <p>
-    Außerdem möchte ich noch das Astro Framework erwähnen mit dem ich meine ganze Webseite 
-    geschrieben habe.
+    Außerdem möchte ich noch das Astro Framework erwähnen mit dem ich meine
+    ganze Webseite geschrieben habe.
   </p>
   <p>
     Meine RSS-Feeds Adresse von Musicstudio Ziebart
-    <a href="https://www.musicstudio-ziebart.de/rss.xml" class="normal-links" target="_blank">https://www.musicstudio-ziebart.de/rss.xml</a>
+    <a
+      href="https://www.musicstudio-ziebart.de/rss.xml"
+      class="normal-links"
+      target="_blank">https://www.musicstudio-ziebart.de/rss.xml</a
+    >
   </p>
   <ul>
-    {allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
+    {
+      allPosts.map((post) => (
+        <BlogPost url={post.url} title={post.frontmatter.title} />
+      ))
+    }
   </ul>
 </BaseLayout>
