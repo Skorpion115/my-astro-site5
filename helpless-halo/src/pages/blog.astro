@@ -25,12 +25,7 @@ const pageTitle = "Meine Blog Site";
   </p>
   <p>
     Meine RSS-Feeds Adresse von Musicstudio Ziebart
-    <a
-      href="https://www.musicstudio-ziebart.de/rss.xml"
-      class="normal-links"
-      target="_blank"
-      >https://www.musicstudio-ziebart.de/rss.xml
-    </a>
+    <a href="https://www.musicstudio-ziebart.de/rss.xml" class="normal-links" target="_blank">https://www.musicstudio-ziebart.de/rss.xml</a>
   </p>
   <ul>
     {allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
