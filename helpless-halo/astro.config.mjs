@@ -5,6 +5,7 @@ import netlify from "@astrojs/netlify";
 import { fileURLToPath } from "url";
 import { dirname, resolve } from "path";
 import cookieParser from "cookie-parser";
+import mdx from "@astrojs/mdx";
 
 // Convert import.meta.url to __dirname and __filename
 const __filename = fileURLToPath(import.meta.url);
@@ -70,10 +71,11 @@ export default defineConfig({
     preact({
       include: ["**/preact/*"],
     }),
+    mdx(),
   ],
   trailingSlash: "always",
   markdown: {
     drafts: true,
-    mode: "md",
+    mode: "mdx",
   },
 });

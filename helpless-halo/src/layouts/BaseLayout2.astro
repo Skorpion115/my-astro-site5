@@ -62,8 +62,8 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
     <h1 transition:animate="slide">{pageTitle}</h1>
     <slot />
     <Footer />
-    <script src="/scripts/cookie-banner.js" async></script>
-    <script src="/scripts/menu.js" async></script>
-    <script src="/scripts/register-service-worker.js" async></script>
+    <script src="/scripts/cookie-banner.js" is:inline async></script>
+    <script src="/scripts/menu.js" is:inline async></script>
+    <script src="/scripts/register-service-worker.js" is:inline async></script>
   </body>
 </html>

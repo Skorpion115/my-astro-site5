@@ -2,7 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import BlogPost from "../components/BlogPost.astro";
 export const prerender = true;
-const allPosts = await Astro.glob("../pages/posts/*.md");
+const allPosts = await Astro.glob("../pages/posts/*.mdx");
 const pageTitle = "Meine Blog Site";
 ---
 

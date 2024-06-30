@@ -23,7 +23,6 @@ const {
   image,
   url,
 } = Astro.props;
-const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
 ---
 
 <!doctype html>
@@ -110,11 +109,11 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
     <Footer />
     <Footer2 />
     <!-- Scripte extern einbinden -->
-    <script src="/scripts/cookie-banner.js" async></script>
-    <script src="/scripts/menu.js" async></script>
-    <script src="/scripts/register-service-worker.js" async></script>
-    <script src="/scripts/load-iframes.js" async></script>
-    <script src="/scripts/document-cookie.js" async></script>
-    <script src="/scripts/set-cookies.js" async></script>
+    <script src="/scripts/cookie-banner.js" is:inline async></script>
+    <script src="/scripts/menu.js" is:inline async></script>
+    <script src="/scripts/register-service-worker.js" is:inline async></script>
+    <script src="/scripts/load-iframes.js" is-inline async></script>
+    <script src="/scripts/document-cookie.js" is:inline async></script>
+    <script src="/scripts/set-cookies.js" is:inline async></script>
   </body>
 </html>

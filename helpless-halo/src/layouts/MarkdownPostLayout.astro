@@ -1,6 +1,27 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
 import { fade } from "astro:transitions";
+
+// Definiere die Typen
+interface Image {
+  url: string;
+  alt: string;
+}
+
+interface Frontmatter {
+  title: string;
+  description: string;
+  pubDate: string;
+  author: string;
+  image: Image;
+  tags: string[];
+}
+
+// Definiere Props und wende Typen an
+interface Props {
+  frontmatter: Frontmatter;
+}
+
 const { frontmatter } = Astro.props;
 ---
 <BaseLayout pageTitle={frontmatter.title}>
@@ -8,12 +29,18 @@ const { frontmatter } = Astro.props;
   <p>{frontmatter.pubDate.slice(0,10)}</p>
   <p>Geschrieben von: {frontmatter.author}</p>
   <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
-
+  
   <div class="tags">
-    {frontmatter.tags.map((tag) => (
-      <p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>
+    {frontmatter.tags.map((tag: string, index: number) => (
+      <Fragment key={index}>
+        <p class="tag">
+          <a href={`/tags/${tag}`}>{tag}</a>
+        </p>
+      </Fragment>
     ))}
   </div>
+
+  
 
   <slot />
 </BaseLayout>
