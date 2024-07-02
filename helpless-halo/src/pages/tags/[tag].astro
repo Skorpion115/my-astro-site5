@@ -1,15 +1,27 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import BlogPost from '../../components/BlogPost.astro';
+import type { Frontmatter, Post, MDXInstance } from '../../types';
 
 export const prerender = true;
 export async function getStaticPaths() {
-  const allPosts = await Astro.glob('../posts/*.mdx');
+  //const allPosts: Post[] = await Astro.glob('../posts/*.mdx');
+  //const allPosts = await Astro.glob('../posts/*.mdx');
+  //const allPosts = await Astro.glob('../posts/*.mdx') as MDXInstance<Frontmatter>[];
+  const allPosts: MDXInstance<Frontmatter>[] = await Astro.glob('../posts/*.mdx');
+
+  // Konvertiere alle Posts zu Post[]
+  //const posts = allPosts as unknown as Post[];
+
+  // Konvertiere alle Posts zu Post[]
+  const posts: Post[] = allPosts.map((post) => ({
+    url: post.url,
+    frontmatter: post.frontmatter
+  }));
 
   const uniqueTags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())];
 
   return uniqueTags.map((tag) => {
-    
     const filteredPosts = allPosts.filter((post) => post.frontmatter.tags.includes(tag));
 
     return {
@@ -20,20 +32,13 @@ export async function getStaticPaths() {
 }
 
 const { tag } = Astro.params;
-const { posts } = Astro.props;
+const { posts } = Astro.props as { posts: Post[] };
 ---
 <BaseLayout pageTitle={tag}>
   <p>Beiträge mit dem Schlagwort {tag}</p>
-  <!-- alte
-  <ul>
-    {posts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title}/>)}
-  </ul> -->
-
   <ul>
     {posts.map((post) => (
       <BlogPost key={post.url} url={post.url} title={post.frontmatter.title} />
     ))}
   </ul>
-
-  
 </BaseLayout>

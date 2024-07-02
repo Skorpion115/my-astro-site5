@@ -8,6 +8,12 @@ interface Frontmatter {
   description: string;
   pubDate: string;
   author: string;
+  image?: {
+    url: string;
+    alt: string;
+    width?: number;
+    height?: number;
+  };
   tags: string[];
 }
 
@@ -16,42 +22,22 @@ interface Props {
   frontmatter: Frontmatter;
 }
 
-const { frontmatter } = Astro.props;
+const { frontmatter } = Astro.props as Props;
 ---
 <BaseLayout pageTitle={frontmatter.title}>
-  <p transition:animate={fade({ duration: "2s" })} ><em>{frontmatter.description}</em></p>
-  <p>{frontmatter.pubDate.slice(0,10)}</p>
+  <p transition:animate={fade({ duration: "2s" })}>
+    <em>{frontmatter.description}</em>
+  </p>
+  <p>{frontmatter.pubDate.slice(0, 10)}</p>
   <p>Geschrieben von: {frontmatter.author}</p>
-
-  <div class="tags">
-    {frontmatter.tags.map((tag: string, index: number) => (
-      <Fragment key={index}>
-        <p class="tag">
-          <a href={`/tags/${tag}`}>{tag}</a>
-        </p>
-      </Fragment>
-    ))}
-  </div>
-
+  {frontmatter.image && (
+    <img
+      src={frontmatter.image.url}
+      alt={frontmatter.image.alt}
+      width={frontmatter.image.width || "auto"}
+      height={frontmatter.image.height || "auto"}
+      style="max-width: 100%; height: auto;"
+    />
+  )}
   <slot />
 </BaseLayout>
-<style>
-  a {
-    color: #00539F;
-  }
-
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto;
-  }
-
-  .tag {
-    margin: 0.25em;
-    border: dotted 1px #a1a1a1;
-    border-radius: .5em;
-    padding: .5em 1em;
-    font-size: 1.15em;
-    background-color: #F8FCFD;
-  }
-</style>
