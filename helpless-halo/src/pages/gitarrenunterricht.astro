@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-// import YouTube from "../components/YouTube.astro";
-// import "../styles/lite-yt-embed.css";
+import YouTube from "../components/YouTube.astro";
+import "../styles/lite-yt-embed.css";
 const pageTitle = "Gitarrenunterricht für akustische Gitarre";
 const description = "Ich gebe Gitarrenunterricht 🎸 in Nürnberg eibach aller Altersklassen. Klassik, Begleitung und Fingerpicking.";
 const keywords = "gitarrenunterricht für akustische gitarre, gitarrenunterricht, gitarre spielen lernen nürnberg, fingerpicking, city of neworleans - arlo guthrie, fingerpicking, fridolin, fernando sor opus 35 opus 31, gitarrenunterricht eibach, westerngitarre für anfaenger und erwachsene, gitarre anfaengerkurs, gitarrenschule in nürnberg, jetzt anmelden, gitarrenlehrer, gitarrenschule, guitar unterricht, gitarrenunterricht nürnberg, gitarre online, gitarren unterricht, gitarre zum lernen, gitarre lernen in nürnberg, gitarrenunterricht in der nähe, online gitarrenkurs, gitarre anfaenger, gitarre lernen, gitarre lernen akkorde, gitarrenlehrer nürnberg, gitarren kurse, spanische gitarre lernen, klassische gitarre lernen, gitarre fingerpicking, gitarrenunterricht für anfaenger, gitarre spielen, gitarre spielen lernen, unterricht gitarre, musikunterricht gitarre, gitarre spielen lernen, gitarrenkurs, guitar lessons";
@@ -10,7 +10,7 @@ const SITE_URL = process.env.SITE_URL || "https://www.musicstudio-ziebart.de";
 const pageImage = "https://www.musicstudio-ziebart.de/images/gitarrenunterricht.webp";
 
 // Video-Daten
-/*
+
 const videoData = [
   {
     loc: `${SITE_URL}/gitarrenunterricht/`,
@@ -32,7 +32,7 @@ const videoData = [
     publication_date: "2021-08-26T00:00:00+02:00",
     duration: "PT4M49S",
   },
-]; */
+];
 ---
 
 <BaseLayout
@@ -64,7 +64,7 @@ const videoData = [
         Hier ist mein neuestes Gitarren Tutorial für Akustikgitarre. Yesterday
         von den Beatles! Das Stück kann man wunderbar alleine spielen.
       </p>
-      <!--
+      
       {
         videoData.map((video) => (
           <div vocab="http://schema.org/" typeof="VideoObject">
@@ -100,7 +100,7 @@ const videoData = [
             </div>
           </div>
         ))
-    } -->
+    }
       <h2>Wie schwer ist es Gitarre zu lernen?</h2>
       <p>
         Ich würde mal behaupten für Lagerfeuer Klampfe ist sie nicht so schwer
@@ -196,8 +196,8 @@ const videoData = [
     </section>
   </article>
 </BaseLayout>
-<!-- 
-<YouTube /> -->
+ 
+<YouTube />
 
 <style>
   article img {

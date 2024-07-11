@@ -1,0 +1,166 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import YouTube from "../components/YouTube.astro";
+import "../styles/lite-yt-embed.css";
+import VideoMetadata from "../components/VideoMetadata.astro";
+const pageTitle = "E-Gitarrenunterricht für Rockgitarre";
+const SITE_URL = process.env.SITE_URL || "https://www.musicstudio-ziebart.de";
+
+// Video-Daten
+const videoData = {
+  loc: `${SITE_URL}/e-gitarrenunterricht/`, // URL der Seite, auf der das Video eingebettet ist
+  title: "Joe Satriani - Ten Words Guitar Lesson+Tab",
+  description:
+    "Lerne das Gitarrenstück 'Ten Words' von Joe Satriani mit dieser detaillierten Gitarrenstunde.",
+  thumbnail_loc: "https://i.ytimg.com/vi/8ucTzPOBzAo/hqdefault.jpg", // URL des Vorschaubildes
+  publication_date: "2021-07-17T00:00:00+02:00", // Veröffentlichungsdatum im ISO 8601 Format
+  duration: "PT3M59S", // Dauer des Videos im ISO 8601 Format
+  content_loc: "https://www.youtube.com/embed/8ucTzPOBzAo", // URL des eingebetteten Videos
+};
+---
+
+<BaseLayout
+  pageTitle={pageTitle}
+  description="Ich gebe E-Gitarrenunterricht 🎸 in Nürnberg Eibach. E-Gitarre für Anfänger. Gerne auch weiterführende Techniken."
+  keywords="e-gitarrenunterricht für rockgitarre, ten words - joe satriani, schule der rockgitarre, elektrische gitarre lernen, e-gitarre lernen, e gitarrenunterricht, gitarrenlehrer, e gitarrenunterricht nürnberg, e gitarre für anfänger, e gitarrenlehrer in nürnberg"
+  href="https://www.musicstudio-ziebart.de/e-gitarrenunterricht/"
+>
+  <div vocab="http://schema.org/" typeof="VideoObject">
+    <meta property="name" content={videoData.title} />
+    <meta property="description" content={videoData.description} />
+    <meta property="thumbnailUrl" content={videoData.thumbnail_loc} />
+    <meta property="uploadDate" content={videoData.publication_date} />
+    <meta property="duration" content={videoData.duration} />
+    <meta property="contentUrl" content={videoData.content_loc} />
+    <meta property="embedUrl" content={videoData.content_loc} />
+    <h2>Ten Words - Joe Satriani</h2>
+    <p>
+      Ein tolles Stück, um eine E-Gitarre zu repräsentieren, ist das Stück von
+      Joe Satriani "Ten Words". Ich habe es mal aufgenommen und auf YouTube
+      gestellt.
+    </p>
+    <div class="video-container-wrapper">
+      <div class="video-container">
+        <lite-youtube
+          videoid="8ucTzPOBzAo"
+          style="background-image: url('https://i.ytimg.com/vi/8ucTzPOBzAo/hqdefault.jpg');"
+        >
+          <a
+            href="https://www.youtube.com/embed/8ucTzPOBzAo"
+            class="lty-playbtn"
+            title="Joe Satriani - Ten Words Guitar Lesson+Tab"
+          >
+            <span class="lyt-visually-hidden"
+              >Play Video: Joe Satriani - Ten Words Guitar Lesson+Tab</span
+            >
+          </a>
+        </lite-youtube>
+      </div>
+    </div>
+  </div>
+  <!-- RDFa-Markup für das Video nur auf dieser Seite -->
+  <head>
+    <VideoMetadata />
+  </head>
+
+  <article>
+    <p>
+      <img
+        src="/images/e-gitarrenunterricht.webp"
+        alt="Bild SEO E-Gitarrenunterricht für Rockgitarre-e-gitarrenunterricht"
+        aria-label="Bild SEO E-Gitarrenunterricht für Rockgitarre-e-gitarrenunterricht"
+      />
+    </p>
+    <br />
+    <section>
+      <h2>Wie lernt man am besten E-Gitarre spielen?</h2>
+      <p>
+        Man lernt am besten E-Gitarre spielen, wenn man vorher schon mal
+        akustische Gitarre gespielt hat. Wenn man vorher noch kein Instrument
+        gespielt hat, macht es auch nichts. Die unten aufgeführte
+        E-Gitarrenschule von Andreas Scheinhütte ist auch für Anfänger
+        aufgebaut.
+      </p>
+      <h3>Kann man sich Gitarre spielen selbst beibringen?</h3>
+      <p>
+        Ja, man kann die Schule auch alleine durcharbeiten, aber es ist schon
+        besser, einen Gitarrenlehrer an seiner Seite zu haben, der genauestens
+        zeigt, wie das Ganze funktioniert, damit man auch Fortschritte erkennt.
+        Zumindest mal am Anfang!
+      </p>
+      <h3>Ist es einfach, E-Gitarre zu lernen?</h3>
+      <p>
+        Im Vergleich zu anderen Instrumenten kann man eher mit "leicht"
+        antworten, wenn es sich um die Begleitung mit Powerchords handelt.
+        Gitarrensolos sind dagegen ziemlich schwierig, weil sie oft sehr schnell
+        gespielt werden.
+      </p>
+      <h3>Wie schnell kann man E-Gitarre lernen?</h3>
+      <p>2 Jahre würde ich mal mindestens sagen.</p>
+      <h2>Schule der Rockgitarre, Andreas Scheinhütte</h2>
+      <p>
+        <img
+          src="/images/scheinhuette-e-gitarrenschule.webp"
+          alt="Bild SEO E-Gitarrenschule von Andreas Scheinhütte"
+          aria-label="Bild SEO E-Gitarrenschule von Andreas Scheinhütte"
+        />
+      </p>
+      <p>
+        Für die E-Gitarre gibt es eine tolle E-Gitarrenschule von Andreas
+        Scheinhütte. Das Werk heißt "Schule der Rockgitarre". Es ist eine CD zum
+        Mitspielen dabei! Es gibt 2 Bände davon. Der Band 2 beinhaltet eine 80
+        Min.-CD mit Original-Playbacks von Nirvana, Santana, Deep Purple, Pink
+        Floyd, Blink 182, Linkin Park, Sting, Eric Clapton, Bryan Adams, Toto,
+        Limp Bizkit, Red Hot Chili Peppers u.a. zum Üben und Mitspielen. Ein
+        Extra Kapitel für Tapping Studien ist dabei. Beim Tapping geht die
+        rechte Hand auf das Griffbrett und tappt dann einen Ton. Dieser wird
+        dann wieder abgezogen und erzeugt einen neuen. Das Gitarren Bending wird
+        natürlich genau erklärt. Außerdem wird auf die Harmonielehre eingegangen
+        und auch auf die Kirchentonarten wie z.B. dorisch oder mixolydisch. Auch
+        die Power Chords werden gut erklärt. In diesem Band ist alles enthalten,
+        was man als moderner Gitarrist oder Gitarristin braucht. Auch auf die
+        Funky Grooves wird eingegangen, wie man so etwas spielt und vieles mehr.
+      </p>
+      <h3>Die Dauer der Lernzeit</h3>
+      <p>
+        Bis man die 2 Bände "Schule der Rockgitarre" durchgearbeitet hat, dauert
+        es mindestens zwei Jahre. Aber es macht ja auch Spaß, mit dieser Schule
+        zu arbeiten. Für den E-Gitarrenunterricht ist diese E-Gitarrenschule
+        unerlässlich. Diese E-Gitarrenschule ist, wie der Titel gut beschreibt,
+        auf die Rockgitarre ausgelegt. Übrigens, die ganzen Stücke in der Schule
+        für Rockgitarre sind auf Noten und Tabulatur aufgeschrieben worden. Die
+        Amerikaner schreiben ihre Songs ganz normal mit Noten auf und setzen
+        darunter dann noch eine Tabulatur ohne Hälse. Dann weiß man ganz genau,
+        auf welchem Bund gespielt werden muss.
+      </p>
+      <p>
+        Auch für Heavy Metal Fans ist diese E-Gitarrenschule unerlässlich, meine
+        ich. Sie bietet halt den Grundstock für alles.
+      </p>
+    </section>
+    <p>
+      <a href="/unterricht/" class="normal-links">zurück</a>
+    </p>
+  </article>
+  <YouTube />
+</BaseLayout>
+
+<style>
+  article img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 1.25rem;
+  }
+
+  article section img {
+    max-width: 30%;
+    height: auto;
+    box-shadow: 0px 0px 10px 5px #4c4948;
+    border-radius: 5px;
+    float: right;
+    margin-top: 1.25rem;
+    margin-left: 1rem;
+    margin-right: 3rem;
+  }
+</style>
