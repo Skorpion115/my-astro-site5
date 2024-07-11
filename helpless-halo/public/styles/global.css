@@ -201,6 +201,62 @@ html.dark {
   }
 }
 
+/* ANCHOR Videos Einstellungen */
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-container-wrapper {
+  max-width: 100%;
+  width: 560px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+/* ANCHOR neue Videoeinstellungen von YouTube */
+
+.iframe-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+}
+
+/* verkleinert das Video auf 560px */
+
+.container {
+  max-width: 100%;
+  width: 560px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
 /* ANCHOR css für index.astro */
 
 /* ANCHOR Überschrift */
