@@ -355,3 +355,68 @@ img {
   margin-left: 1%;
   border-radius: 0.313rem;
 }
+
+/* ANCHOR unterricht.astro */
+
+.contenitore {
+  border: 0px solid black;
+  align-content: space-between;
+  width: 94vw;
+  font-style: normal;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+/* Container Inhalt */
+.contenuto {
+  padding: 0.625rem;
+}
+
+/* Kind Elemente */
+.contenuto-1 {
+  flex: 25%;
+}
+
+.contenuto-2 {
+  flex: 25%;
+}
+
+.contenuto-3 {
+  flex: 25%;
+}
+
+.contenuto-4 {
+  flex: 25%;
+}
+
+/* ANCHOR Bilder von marchandise-1 */
+
+.contenuto.contenuto-1 img {
+  max-width: 30%;
+  height: auto;
+  border-radius: 5px;
+  margin-top: 1.25rem;
+  margin-left: 1rem;
+  margin-right: 3rem;
+}
+
+.contenuto.contenuto-2 img {
+  max-width: 30%;
+  height: auto;
+  border-radius: 5px;
+  margin-top: 1.25rem;
+  margin-left: 1rem;
+  margin-right: 3rem;
+}
+
+.contenuto.contenuto-3 img {
+  max-width: 30%;
+  height: auto;
+  border-radius: 5px;
+  margin-top: 1.25rem;
+  margin-left: 1rem;
+  margin-right: 3rem;
+}
