@@ -1,13 +1,22 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = "Kostenlose Probestunde buchen";
+const description = "Kostenloser Probestunde. Wählen sie ihr Lieblingsinstrument aus. Jetzt anmelden zu einem kostenlosen Probeunterricht! 👀";
+const keywords = "kostenlose probestunde buchen, anmeldungsformular";
+const pageUrl = "https://www.musicstudio-ziebart.de/contact_2/";
 ---
 
 <BaseLayout
   pageTitle={pageTitle}
-  description="Kostenloser Probestunde. Wählen sie ihr Lieblingsinstrument aus. Jetzt anmelden zu einem kostenlosen Probeunterricht! 👀"
-  keywords="kostenlose probestunde buchen, anmeldungsformular"
-  href="https://www.musicstudio-ziebart.de/contact_2/"
+  description={description}
+  keywords{keywords}
+  href={pageUrl}
+  ogTitle={pageTitle}
+  ogDescription={description}
+  ogUrl={pageUrl}
+  twitterTitle={pageTitle}
+  twitterDescription={description}
+  twitterUrl={pageUrl}
 >
   <div class="container1">
     <form

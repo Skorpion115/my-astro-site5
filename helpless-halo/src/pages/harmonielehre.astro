@@ -3,6 +3,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import YouTube from "../components/YouTube.astro";
 import "../styles/lite-yt-embed.css";
 const pageTitle = "Harmonielehre Grundbegriffe lernen";
+const description = "Harmonielehre, Noten lesen, Intervalle, Dreiklänge und Funktionstheorie 🤓. Einfach mal vorbei schauen um was zu lernen!";
+const keywords = "harmonielehre, noten lesen, intervalle, dreiklaenge, funktiontsheorie";
+const pageUrl = "https://www.musicstudio-ziebart.de/harmonielehre/"
 const SITE_URL = process.env.SITE_URL || "https://www.musicstudio-ziebart.de";
 // Video Daten
 const videoData = [
@@ -51,9 +54,14 @@ const videoData = [
 
 <BaseLayout
   pageTitle={pageTitle}
-  description="Harmonielehre, Noten lesen, Intervalle, Dreiklänge und Funktionstheorie 🤓. Einfach mal vorbei schauen um was zu lernen!"
-  keywords="harmonielehre, noten lesen, intervalle, dreiklänge, funktiontsheorie"
-  href="https://www.musicstudio-ziebart.de/harmonielehre/"
+  description={description}
+  keywords={keywords}
+  href={pageUrl}
+  ogDescription={description}
+  ogUrl={pageUrl}
+  twitterTitle={pageTitle}
+  twitterDescription={description}
+  twitterUrl={pageUrl}
 >
   <article id="harmonielehre">
     <h2>Lernvideos</h2>

@@ -4,6 +4,9 @@ import YouTube from "../components/YouTube.astro";
 import "../styles/lite-yt-embed.css";
 import VideoMetadata from "../components/VideoMetadata.astro";
 const pageTitle = "E-Gitarrenunterricht für Rockgitarre";
+const description = "Ich gebe E-Gitarrenunterricht 🎸 in Nürnberg Eibach. E-Gitarre für Anfaenger. Gerne auch weiterführende Techniken.";
+const keywords = "e-gitarrenunterricht für rockgitarre, ten words - joe satriani, schule der rockgitarre, elektrische gitarre lernen, e-gitarre lernen, e gitarrenunterricht, gitarrenlehrer, e gitarrenunterricht nürnberg, e gitarre für anfänger, e gitarrenlehrer in nuernberg";
+const pageUrl = "https://www.musicstudio-ziebart.de/e-gitarrenunterricht/"
 const SITE_URL = process.env.SITE_URL || "https://www.musicstudio-ziebart.de";
 
 // Video-Daten
@@ -21,9 +24,15 @@ const videoData = {
 
 <BaseLayout
   pageTitle={pageTitle}
-  description="Ich gebe E-Gitarrenunterricht 🎸 in Nürnberg Eibach. E-Gitarre für Anfänger. Gerne auch weiterführende Techniken."
-  keywords="e-gitarrenunterricht für rockgitarre, ten words - joe satriani, schule der rockgitarre, elektrische gitarre lernen, e-gitarre lernen, e gitarrenunterricht, gitarrenlehrer, e gitarrenunterricht nürnberg, e gitarre für anfänger, e gitarrenlehrer in nürnberg"
-  href="https://www.musicstudio-ziebart.de/e-gitarrenunterricht/"
+  description={description}
+  keywords={keywords}
+  href={pageUrl}
+  ogTitle={pageTitle}
+  ogDescription={description}
+  ogUrl={pageUrl}
+  twitterTitle={pageTitle}
+  twitterDescription={description}
+  twitterUrl={pageUrl}
 >
   <div vocab="http://schema.org/" typeof="VideoObject">
     <meta property="name" content={videoData.title} />

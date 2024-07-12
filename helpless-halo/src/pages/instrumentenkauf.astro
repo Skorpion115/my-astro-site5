@@ -1,14 +1,21 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-export const prerender = true;
 const pageTitle = "Tips für Ihren Instrumentenkauf";
+const description = "Gute Tips zum Instrumetenkauf! 🎸 Auf was muss ich beim Kauf eines Instruments achten? 🪕";
+const keywords = "e-gitarre, klarinette, querfloete, saxophon, klavier, keyboard, akkordeon, banjo";
+const pageUrl = "https://www.musicstudio-ziebart.de/instrumentenkauf/";
 ---
 
 <BaseLayout
   pageTitle={pageTitle}
-  description="Gute Tips zum Instrumetenkauf! 🎸 Auf was muss ich beim Kauf eines Instruments achten? 🪕"
-  keywords="e-gitarre, klarinette, querfloete, saxophon, klavier, keyboard, akkordeon, banjo"
-  href="https://www.musicstudio-ziebart.de/instrumentenkauf/"
+  description={description}
+  keywords={keywords}
+  href={pageUrl}
+  ogDescription={description}
+  ogUrl={pageUrl}
+  twitterTitle={pageTitle}
+  twitterDescription={description}
+  twitterUrl={pageUrl}
 >
   <article class="container2">
     <section class="artikel artikel-1">

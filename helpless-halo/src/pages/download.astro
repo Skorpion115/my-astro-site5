@@ -3,6 +3,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import YouTube from "../components/YouTube.astro";
 import "../styles/lite-yt-embed.css";
 const pageTitle = "Download für Noten und GM Files";
+const description = "Midi Files und Noten bekannter Werke komplett zu downloaden! 🎼, Mondschein Sonate, Eine kleine Nachtmusik usw.";
+const keywords = "Download, Midi Files und Noten bekannter Werke zum downloaden";
+const pageUrl = "https://www.musicstudio-ziebart.de/download/";
 const SITE_URL = process.env.SITE_URL || "https://www.musicstudio-ziebart.de";
 
 // Video-Daten
@@ -23,9 +26,14 @@ const videoData = [
 
 <BaseLayout
   pageTitle={pageTitle}
-  description="Midi Files und Noten bekannter Werke komplett zu downloaden! 🎼, Mondschein Sonate, Eine kleine Nachtmusik usw."
-  keywords="Download, Midi Files und Noten bekannter Werke zum downloaden"
-  href="https://www.musicstudio-ziebart.de/download/"
+  description={description}
+  keywords={keywords}
+  href={pageUrl}
+  ogDescription={description}
+  ogUrl={pageUrl}
+  twitterTitle={pageTitle}
+  twitterDescription={description}
+  twitterUrl={pageUrl}
 >
   <section id="download">
     <h2>GM Midi Files mit Noten zum downloaden</h2>
