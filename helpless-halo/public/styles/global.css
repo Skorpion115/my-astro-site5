@@ -476,3 +476,35 @@ img {
   margin-left: 1rem;
   margin-right: 3rem;
 }
+
+/* pictures from instrumentenkauf.html */
+.artikel.artikel.artikel-1 img {
+  width: 50%;
+  height: auto;
+  margin-left: 1%;
+  border-radius: 0.313rem;
+}
+
+/* ANCHOR Bild von Querlöte */
+.artikel.artikel.artikel-2 img {
+  width: 90%;
+  height: auto;
+  margin-left: 1%;
+  border-radius: 0.313rem;
+}
+
+/* ANCHOR Bild von Sax */
+.artikel.artikel.artikel-3 img {
+  width: 50%;
+  height: auto;
+  margin-left: 1%;
+  border-radius: 0.313rem;
+}
+
+/* Bilder von Banjo, Klavier */
+.artikel.artikel.artikel-4 img {
+  width: 50%;
+  height: auto;
+  margin-left: 1%;
+  border-radius: 0.313rem;
+}
