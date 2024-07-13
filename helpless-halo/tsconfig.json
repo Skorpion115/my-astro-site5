@@ -12,6 +12,7 @@
   "include": [
     "src",
     "env.d.ts",
-    "src/types/global.d.ts"
+    "src/types/global.d.ts",
+    "src/types/vendor.d.ts"
   ]
 }
