@@ -248,6 +248,14 @@ html.dark {
   }
 }
 
+/* ANCHOR blog-post img */
+
+.blog-post img {
+  max-width: 300px; /* gewünschte maximale Breite */
+  width: auto;
+  height: auto;
+}
+
 /* ANCHOR Videos Einstellungen */
 
 .video-container {

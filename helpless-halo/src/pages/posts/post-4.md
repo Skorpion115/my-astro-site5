@@ -7,7 +7,6 @@ author: Rudi Ziebart
 image:
     url: 'https://www.musicstudio-ziebart.de/images/gold_tone_300x300.webp'
     alt: 'Banjo Dämpfer'
-tags: ["astro", "blogging", "learning in public"]
 ---
 ## Gold Tone Dämpfer
 **Geeignet für Gitarre und Banjo**

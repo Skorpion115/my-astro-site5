@@ -7,7 +7,6 @@ author: Rudi Ziebart
 image:
     url: 'https://docs.astro.build/assets/rose.webp'
     alt: 'The Astro logo on a dark background with a pink glow.'
-tags: ["astro", "blogging", "learning in public"]
 ---
 <!-- Das ist der Slot -->
 
@@ -34,16 +33,16 @@ Zusätzlich kann man es auf 440 Hz einstellen. Transportfunktion für C, F, Bb u
 
 ---
 
-## Pro Guitar aus Play Store
+## Soundcorset Tuner aus Play Store
 **Geeignet für Gitarre, Bass, 5-string Banjo, Geige, Bratsche, Cello und noch mehr.**
 
-<p>Pro Guitar ist ein kostenloses Stimmgerät oder auch Tuner genannt in Form von einer App. Man braucht also ein Smartphone oder ein IPhone dazu. Kostenloser Download von Play Store.</p>
+<p>Soundcorset Tuner ist ein kostenloses Stimmgerät oder auch Tuner genannt in Form von einer App. Man braucht also ein Smartphone oder ein IPhone dazu. Kostenloser Download von Play Store.</p>
 
 <a
-    href="https://play.google.com/store/apps/details?id=com.jrinnovation.proguitartuner&gl=DE"
+    href="https://play.google.com/store/search?q=soundcorset+stimmger%C3%A4t+und+metronom&c=apps"
     class="normal-links"
     target="_blank"
-    >Stimmgerät - Pro Guitar
+    >Soundcorset Stimmgerät + Metronom
 </a>
 
 <p>Meine E-Mail:</p>
