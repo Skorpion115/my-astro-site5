@@ -1,6 +1,20 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-const allPosts = await Astro.glob('./posts/*.md');
+import BlogPost from '../components/BlogPost.astro';
+import type { MarkdownInstance } from 'astro';
+
+interface PostFrontmatter {
+  title: string;
+  description: string;
+  pubDate: string;
+  author: string;
+  image: { url: string; alt: string; };
+  tags: string[];
+}
+/*
+const allPosts = await Astro.glob('./posts/*.md'); */
+
+const allPosts: MarkdownInstance<PostFrontmatter>[] = await Astro.glob('./posts/*.md');
 
 const pageTitle = "Meine Blog Seite";
 
@@ -20,6 +34,12 @@ const pageTitle = "Meine Blog Seite";
   </p>	
 
 <ul>
-    {allPosts.map((post) => <li><a href={post.url}>{post.frontmatter.title}</a></li>)}
+    <!--
+    {allPosts.map((post) => <li><a href={post.url}>{post.frontmatter.title}</a></li>)} -->
+    <!--
+    {allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} />)} -->
+    {allPosts.map((post) => (
+      <BlogPost url={post.url} title={post.frontmatter.title} />
+    ))}
 </ul>
 </BaseLayout>

@@ -7,6 +7,7 @@ image:
     url: "https://docs.astro.build/default-og-image.png"
     alt: "Das vollständige Astro-Logo"
 pubDate: 2022-07-15
+tags: ["webseite erstellen"]
 ---
 ## Eigene responsive Webseite kostenlos erstellen
 
