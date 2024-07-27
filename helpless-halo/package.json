@@ -5,19 +5,13 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro check && astro build && node sitemap.js",
+    "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.8.1",
-    "@astrojs/netlify": "^5.4.0",
-    "astro": "^4.11.5",
-    "toml": "^3.0.0",
-    "typescript": "^5.5.3",
-    "xmlbuilder2": "^3.1.1"
-  },
-  "devDependencies": {
-    "@types/node": "^20.14.10"
+    "@astrojs/check": "^0.8.3",
+    "astro": "^4.12.2",
+    "typescript": "^5.5.4"
   }
 }

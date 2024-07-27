@@ -1,7 +1,5 @@
 # build output
 dist/
-*log
-*env
 
 # generated types
 .astro/
@@ -24,15 +22,3 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
-
-# Dateien ausschließen
-*mp4
-
-# netlify
-.netlify/
-
-# log Files
-*log
-
-# Dateien ausschließen
-.vscode
