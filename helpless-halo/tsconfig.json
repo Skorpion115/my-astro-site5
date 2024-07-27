@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    /*
     "strict": true,
     "jsx": "preserve",
     "target": "ESNext",
@@ -8,11 +9,19 @@
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
+    "forceConsistentCasingInFileNames": true, */
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": [
+        "src/*"
+      ]
     }
   },
-  "include": ["src", "astro.config.mjs"]
+  "include": [
+    "src",
+    "src/env.d.ts",
+    "src/types/global.d.ts",
+    "src/types/vendor.d.ts",
+    "astro.config.mjs"
+  ]
 }
