@@ -1,0 +1,737 @@
+/* ANCHOR Registriere deine benutzerdefinierte Schriftart und teile dem Browser mit, wo sie zu finden ist. */
+@font-face {
+  font-family: "IBM";
+  src: url("/fonts/OpenSans-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM";
+  src: url("/fonts/OpenSans-Italic.woff2") format("woff2");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM";
+  src: url("/fonts/OpenSans-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ANCHOR Grundlegende Einstellungen */
+html {
+  background-color: #f1f5f9;
+  font-size: 100%;
+}
+
+/* ANCHOR Custom Properties */
+body {
+  --font: "IBM", sans-serif;
+  --line: 3ch;
+  --font-scale: 0.4vw;
+}
+
+/* ANCHOR General Style */
+
+body {
+  margin: 0 auto;
+  width: 100%;
+  font-family: var(--font);
+  font-style: normal;
+  font-size: calc(1rem + var(--font-scale));
+  line-height: var(--line);
+  font-weight: 400;
+  padding: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 1rem 0;
+  font-size: 1.5rem;
+  color: #af8848;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-left: 0.5rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding-left: 0.5rem;
+}
+
+h4 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding-left: 0.5rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+  font-weight: normal;
+  padding-left: 0.5rem;
+}
+
+h6 {
+  font-size: 1.0rem;
+  font-weight: bold;
+  padding-left: 0.5rem;
+}
+
+p {
+  font-weight: normal;
+  text-align: start;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
+
+/* ANCHOR Headerabstand von links */
+
+.author {
+  padding: 0.5rem 0.9rem;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+/* ANCHOR button Formatierung */
+
+button {
+  border-radius: 0;
+  border: 0;
+  color: white;
+}
+
+button {
+  background-color: #545557;
+  padding: 0.94rem 7rem;
+  font-size: 1.125rem;
+  margin-top: 1.875rem;
+  cursor: pointer;
+  transition: all 0.3 ease;
+  text-align: center;
+}
+
+button:hover {
+  background-color: rgb(129, 226, 129);
+  color: black;
+}
+
+/* ANCHOR Darkmode CSS */
+
+html.dark {
+  background-color: #222;
+  color: #e2dbdb;
+}
+
+.dark .nav-links a {
+  color: #e2dbdb;
+}
+
+/* ANCHOR Im Dark Modus sind die Links hellgrün geschrieben funktioniert*/
+
+.dark .normal-links {
+  color: #af8848;
+}
+
+author {
+  padding: 0.5rem 0.9rem;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+/* ANCHOR button Formatierung */
+
+button {
+  border-radius: 0;
+  border: 0;
+  color: white;
+}
+
+button {
+  background-color: #545557;
+  padding: 0.94rem 7rem;
+  font-size: 1.125rem;
+  margin-top: 1.875rem;
+  cursor: pointer;
+  transition: all 0.3 ease;
+  text-align: center;
+}
+
+button:hover {
+  background-color: rgb(129, 226, 129);
+  color: black;
+}
+
+/* ANCHOR Darkmode CSS */
+
+html.dark {
+  background-color: #222;
+  color: #e2dbdb;
+}
+
+.dark .nav-links a {
+  color: #e2dbdb;
+}
+
+/* ANCHOR Im Dark Modus sind die Links hellgrün geschrieben funktioniert*/
+
+.dark .normal-links {
+  color: #af8848;
+}
+
+/* nav styles */
+
+.hamburger {
+  padding-right: 20px;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  display: block;
+  width: 1.875rem;
+  height: 0.25rem;
+  margin-bottom: 0.313rem;
+  background-color: #ff9776;
+}
+
+.nav-links {
+  width: 100%;
+  top: 5rem;
+  left: 48px;
+  background-color: #ff9776;
+  display: none;
+  margin: 0;
+}
+
+.nav-links a {
+  display: block;
+  text-align: center;
+  padding: 10px 0;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  background-color: #ff9776;
+}
+
+.expanded {
+  display: unset;
+}
+
+@media screen and (min-width: 636px) {
+  .nav-links {
+    margin-left: 5em;
+    display: block;
+    position: static;
+    width: auto;
+    background: none;
+  }
+
+  .nav-links a {
+    display: inline-block;
+    padding: 15px 20px;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
+
+/* ANCHOR blog-post img */
+
+.blog-post img {
+  max-width: 300px; /* gewünschte maximale Breite */
+  width: auto;
+  height: auto;
+}
+
+/* ANCHOR Videos Einstellungen */
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-container-wrapper {
+  max-width: 100%;
+  width: 560px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+/* ANCHOR neue Videoeinstellungen von YouTube */
+
+.iframe-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+}
+
+/* verkleinert das Video auf 560px */
+
+.container {
+  max-width: 100%;
+  width: 560px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+/* ANCHOR css für index.astro */
+
+/* ANCHOR Überschrift */
+.firmenname {
+  text-align: center;
+  font-size: 1rem;
+}
+
+/* ANCHOR Responsives Titelbild bei Index */
+
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* ANCHOR Hauptseite */
+.conteneur {
+  border: 0px solid black;
+  align-content: space-between;
+  width: 94vw;
+  font-style: normal;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+/* Container Inhalt */
+.marchandise {
+  padding: 0.625rem;
+}
+
+/* Kind Elemente */
+.marchandise-1 {
+  flex: 2;
+}
+
+.marchandise-2 {
+  flex: 1;
+}
+
+/* Card Position*/
+
+.marchandise-2 .link-card-grid {
+  padding: 0.5rem;
+}
+
+/* ANCHOR Bilder von marchandise-2 */
+
+.marchandise.marchandise-2 img {
+  max-width: 30%;
+  height: auto;
+  border-radius: 5px;
+  float: right;
+  margin-top: 1.25rem;
+  margin-left: 1rem;
+  margin-right: 3rem;
+}
+
+/* ANCHOR instrumentkauf.astro */
+
+.container2 {
+    /* 100 view width */
+    width: 100vw;
+    max-width: 100%;
+    /* view height kompletten viewport der verfügbar ist */
+    font-style: normal;
+    /* feste Höhe */
+    /* nebeneinander */
+    display: flex;
+    /* links starten */
+    justify-content: flex-start;
+    /* verticale Ausrichtung */
+    align-items: flex-start;
+    /* Zeilenumbruch möglich */
+    flex-wrap: wrap;
+    /* Für mehrere Element */
+    align-content: flex-start;
+  }
+
+  /* Tabelle für Sprungmarken */
+  .container2 table {
+    font-weight: bold;
+    text-align: center;
+    line-height: 3rem;
+    table-layout: auto;
+    width: 30%;
+    margin-left: 1.2rem;
+  }
+  /* ANCHOR Schriftgröße für die table */
+  /*
+  .artikel.artikel.artikel-1 table {
+    font-size: 1.0rem;
+  }*/
+
+  /* Container Inhalt */
+  .artikel {
+    padding: 0.625rem 1.25rem;
+  }
+
+  /* Kindelelemente */
+  .artikel-1 {
+    flex: 34%;
+  }
+
+  .artikel-2 {
+    flex: 33%;
+  }
+
+  .artikel-3 {
+    flex: 33%;
+  }
+
+  /* ANCHOR honorar.astro */
+
+.container3 {
+  font-style: normal;
+  border: 1px solid #333;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.item {
+  padding: 0.5rem 1.5rem;
+}
+
+.item-1 {
+  flex: 25%;
+}
+
+.item-2 {
+  flex: 25%;
+}
+
+.item-3 {
+  flex: 50%;
+}
+
+.item.item-3 img {
+  width: 30%;
+  height: auto;
+  margin-left: 1%;
+  border-radius: 0.313rem;
+}
+
+.coupon img {
+  width: 30%;
+  height: auto;
+  margin-left: 1%;
+  border-radius: 0.313rem;
+}
+
+/* ANCHOR unterricht.astro */
+
+.contenitore {
+  border: 0px solid black;
+  align-content: space-between;
+  width: 94vw;
+  font-style: normal;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+/* Container Inhalt */
+.contenuto {
+  padding: 0.625rem;
+}
+
+/* Kind Elemente */
+.contenuto-1 {
+  flex: 25%;
+}
+
+.contenuto-2 {
+  flex: 25%;
+}
+
+.contenuto-3 {
+  flex: 25%;
+}
+
+.contenuto-4 {
+  flex: 25%;
+}
+
+/* ANCHOR Bilder von marchandise-1 */
+
+.contenuto.contenuto-1 img {
+  max-width: 30%;
+  height: auto;
+  border-radius: 5px;
+  margin-top: 1.25rem;
+  margin-left: 1rem;
+  margin-right: 3rem;
+}
+
+.contenuto.contenuto-2 img {
+  max-width: 30%;
+  height: auto;
+  border-radius: 5px;
+  margin-top: 1.25rem;
+  margin-left: 1rem;
+  margin-right: 3rem;
+}
+
+.contenuto.contenuto-3 img {
+  max-width: 30%;
+  height: auto;
+  border-radius: 5px;
+  margin-top: 1.25rem;
+  margin-left: 1rem;
+  margin-right: 3rem;
+}
+
+/* pictures from instrumentenkauf.html */
+.artikel.artikel.artikel-1 img {
+  width: 50%;
+  height: auto;
+  margin-left: 1%;
+  border-radius: 0.313rem;
+}
+
+/* ANCHOR Bild von Querlöte */
+.artikel.artikel.artikel-2 img {
+  width: 90%;
+  height: auto;
+  margin-left: 1%;
+  border-radius: 0.313rem;
+}
+
+/* ANCHOR Bild von Sax */
+.artikel.artikel.artikel-3 img {
+  width: 50%;
+  height: auto;
+  margin-left: 1%;
+  border-radius: 0.313rem;
+}
+
+/* Bilder von Banjo, Klavier */
+.artikel.artikel.artikel-4 img {
+  width: 50%;
+  height: auto;
+  margin-left: 1%;
+  border-radius: 0.313rem;
+}
+
+/* ANCHOR faq.astro */
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: var(--font);
+  font-style: normal;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+}
+
+.faq-question {
+  margin-bottom: 10px;
+}
+
+.faq-answer a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.faq-answer a:hover {
+  text-decoration: underline;
+}
+
+.back-link {
+  display: block;
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* ANCHOR download.astro */
+
+#download {
+  display: block;
+  width: 96%;
+  margin: 7% auto;
+  padding: 1.25rem;
+  text-align: center;
+  font-style: normal;
+}
+
+#download article {
+  display: inline-block;
+  width: 96%;
+  vertical-align: top;
+}
+
+/* ANCHOR Neue Table CSS */
+
+table.basis-table {
+  border-collapse: collapse;
+  margin: 32px 0;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  font-weight: normal;
+  overflow: hidden;
+  text-align: left;
+}
+
+table.basis-table thead tr {
+  background-color: rebeccapurple;
+  color: white;
+}
+
+table.basis-table th,
+table.basis-table td {
+  padding: 12px 16px;
+}
+
+table.basis-table tbody tr {
+  border-bottom: 1px solid #ccc;
+}
+
+table.basis-table tbody tr:last-of-type {
+  border-bottom: 2px solid rebeccapurple;
+}
+
+table.basis-table tbody tr.active {
+  font-weight: bold;
+  color: rebeccapurple;
+}
+
+/* ANCHOR basis-card CSS */
+.basis-card {
+  display: none;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.basis-header {
+  background-color: rebeccapurple;
+  color: white;
+  border-radius: 5px 5px 0 0;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.basis-card div {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.basis-card div:last-of-type {
+  border-bottom: 2px solid rebeccapurple;
+}
+
+.basis-card div > span {
+  color: rgb(218, 54, 54);
+  font-weight: bold;
+}
+
+/* ANCHOR harmonielehre.astro*/
+
+#harmonielehre {
+  width: 96%;
+  max-width: 100%;
+  margin: 2rem auto;
+}
+
+#harmonielehre article {
+  display: inline-block;
+  margin: 2rem auto;
+  width: 100%;
+  vertical-align: top;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-container-wrapper {
+  max-width: 100%;
+  width: 560px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+/*
+@media screen and (max-width: 578px) {
+  table.basis-table {
+    display: none;
+  }
+
+  .basis-card {
+    display: block;
+  }
+} */
+
