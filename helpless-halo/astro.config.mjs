@@ -1,5 +1,5 @@
 import { defineConfig } from "astro/config";
-// import netlify from "@astrojs/netlify";
+import netlify from "@astrojs/netlify";
 import { fileURLToPath } from "url";
 import { dirname, resolve } from "path"
 
@@ -28,11 +28,11 @@ export default defineConfig({
       // Weitere Vite-spezifische Konfiguration hier hinzufügen, falls nötig
     }
   },
-  /*
+  
   output: "hybrid", // Statisches und serverseitiges Rendern
   adapter: netlify({
     functionPerRoute: true, // Falls du Route-spezifische Funktionen verwenden möchtest
-  }), */
+  }),
 
   // Project root directory
   root: ".",
