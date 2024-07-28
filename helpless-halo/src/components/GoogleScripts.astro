@@ -44,7 +44,7 @@
   // Google Remarketing blockieren
   if (typeof __cmp === "function") {
     window.gatpadsallowed = false;
-    __cmp("getVendorConsents", null, function (x, y) {
+    __cmp("getVendorConsents", null, function (x, _) {
       if (
         "customVendorConsents" in x &&
         "s1" in x.customVendorConsents &&
