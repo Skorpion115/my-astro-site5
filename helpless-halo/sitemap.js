@@ -8,7 +8,6 @@ const pages = [
   { url: `${SITE_URL}`, changefreq: "weekly", lastmod: new Date() },
   { url: `${SITE_URL}/instrumentenkauf/`, changefreq: "weekly", lastmod: new Date() },
   { url: `${SITE_URL}/blog/`, changefreq: "weekly", lastmod: new Date() },
-  { url: `${SITE_URL}/tags/`, changefreq: "weekly", lastmod: new Date() },
   { url: `${SITE_URL}/contact_2/`, changefreq: "weekly", lastmod: new Date() },
   { url: `${SITE_URL}/thankyou/`, changefreq: "weekly", lastmod: new Date() },
   { url: `${SITE_URL}/danke-seite/`, changefreq: "weekly", lastmod: new Date() },

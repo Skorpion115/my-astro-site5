@@ -2,6 +2,7 @@ const cacheVersion = "_v3";
 
 const cacheAssets = [
   "/",
+  "/blog/",
   "/instrumentenkauf/",
   "/contact_2/",
   "/thankyou/",
