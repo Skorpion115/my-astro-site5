@@ -7,7 +7,13 @@ publish = "dist"
 SITE_URL = "https://www.musicstudio-ziebart.de"
 
 [[redirects]]
-  from = "/danke-seite/"
+  from = "/contact_4/"
+  to = "/danke-seite/"
+  status = 303
+  force = true
+
+[[redirects]]
+  from = "/contact_2/"
   to = "/thankyou/"
   status = 303
   force = true
