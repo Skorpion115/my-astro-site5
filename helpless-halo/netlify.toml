@@ -6,6 +6,12 @@ publish = "dist"
 [build.environment]
 SITE_URL = "https://www.musicstudio-ziebart.de"
 
+[[redirects]]
+  from = "/danke-seite/"
+  to = "/thankyou/"
+  status = 303
+  force = true
+
 [[headers]]
 for = "/*"
 
