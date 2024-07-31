@@ -1,19 +1,35 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "Danke";
 ---
-<BaseLayout
-  pageTitle={pageTitle}
-  description="Rückruf"
-  keywords="rückruf, kurze mitteilung"
-  href="https://www.musicstudio-ziebart.de/danke-seite/"
->
-<h2>Danke für die kurze Mitteilung!</h2>
-<p>
-    Ihre kurze Mitteilung ist auf dem Weg! Ich werde mich sobald wie möglich bei Ihnen melden.
-</p>
-<br>
-<p>
-    <a href="/" class="normal-links">go back!</a>
-</p>
-</BaseLayout>
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{pageTitle}</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 2rem;
+    }
+    h2 {
+      color: #4CAF50;
+    }
+    .normal-links {
+      color: #1E88E5;
+      text-decoration: none;
+    }
+    .normal-links:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h2>Danke für die kurze Mitteilung!</h2>
+  <p>Ihre kurze Mitteilung ist auf dem Weg! Ich werde mich sobald wie möglich bei Ihnen melden.</p>
+  <br>
+  <p><a href="/" class="normal-links">Zurück zur Startseite</a></p>
+</body>
+</html>
