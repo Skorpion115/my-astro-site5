@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontaktformular</title>
+    <link rel="stylesheet" href="/styles/global.css" />
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <style>
+        .container4 {
+          margin: 0 auto;
+          padding: 5%;
+          box-sizing: border-box;
+        }
+      
+        body {
+          font-family: var(--font);
+          text-align: center;
+        }
+        label {
+          display: block;
+          font-size: 1.125rem;
+          padding: 0.625rem;
+        }
+      
+        /* Der Rand um die Felder */
+        .form-control {
+          border-radius: 0px;
+          border: 1px solid #333;
+        }
+      
+        /* Die Breite der Felder */
+        .form-control.form-control-lg {
+          height: calc(3.5rem + 2px);
+          padding: 1rem 0.75rem;
+          font-size: 1.125rem;
+        }
+      
+        form {
+          max-width: 31.25rem;
+          margin: 0 auto;
+          text-align: left;
+          padding: 1.25rem 0;
+          font-size: 1.125rem;
+        }
+      
+        /* Schriftgröße im Ausfüllbereich */
+        input,
+        textarea {
+          font-family: "Poppins", sans-serif;
+          font-size: 1.125rem;
+          padding: 0.625rem;
+        }
+      
+        /* Button css */
+        .btn {
+          border-radius: 0;
+          border: 0;
+          color: white;
+        }
+      
+        .btn.btn-primary {
+          background-color: #545557;
+          padding: 0.94rem 7rem;
+          font-size: 1.125rem;
+          margin-top: 1.875rem;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          text-align: center;
+        }
+      
+        .btn.btn-primary:hover {
+          background-color: rgb(140, 236, 140);
+          color: black;
+        }
+      </style>
+      
+</head>
+<body>
+    <h1>Kontaktformular</h1>
+    <form
+        name="contact_4"
+        method="POST"
+        action="/danke-seite/"
+        data-netlify="true"
+        data-netlify-recaptcha="true"
+    >
+        <input type="hidden" name="form-name" value="contact_4" />
+        
+        <div>
+            <label for="name">Name:</label>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Namen eintragen"
+                required
+            />
+        </div>
+        
+        <div>
+            <label for="subject">Betreff:</label>
+            <input
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder="Rückruf"
+            />
+        </div>
+        
+        <div>
+            <label for="message">Nachricht:</label>
+            <textarea
+                id="message"
+                name="message"
+                placeholder="Bitte um Rückruf"
+            ></textarea>
+        </div>
+        
+        <div>
+            <label for="phone">Telefonnummer:</label>
+            <input
+                type="tel"
+                id="phone"
+                name="phone"
+                required
+            />
+        </div>
+        
+        <div>
+            <label for="email">E-Mail:</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+            />
+        </div>
+        
+        <div class="g-recaptcha" data-sitekey="6LdRPP0pAAAAAPoJR0Z6iRH_HFqnJBE4rNpKdLuP"></div>
+        
+        <button type="submit">Absenden</button>
+    </form>
+</body>
+</html>
