@@ -1,5 +1,4 @@
-const cacheVersion = "_v3";
-
+const cacheVersion = "v3";
 const cacheAssets = [
   "/",
   "/blog/",
@@ -26,13 +25,15 @@ const cacheAssets = [
   "/pupils-download/",
   "/querfloetenunterricht/",
   "/klarinettenunterricht/",
-  // Füge hier die URLs für deine anderen Ressourcen hinzu...
+  // Weitere URLs hinzufügen...
 ];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(cacheVersion).then((cache) => {
-      return cache.addAll(cacheAssets);
+      return cache.addAll(cacheAssets).catch((error) => {
+        console.error("Failed to cache assets during install", error);
+      });
     })
   );
 });
@@ -40,37 +41,36 @@ self.addEventListener("install", (event) => {
 self.addEventListener("fetch", (event) => {
   event.respondWith(
     caches.match(event.request).then((cachedResponse) => {
-      if (cachedResponse && event.request.method === "GET") {
+      if (cachedResponse) {
         return cachedResponse;
-      } else {
-        return fetch(event.request).then((response) => {
-          if (event.request.method === "GET") {
-            return caches.open(cacheVersion).then((cache) => {
-              cache.put(event.request, response.clone());
-              return response;
-            });
-          } else {
-            return response;
-          }
-        });
       }
+      return fetch(event.request).then((response) => {
+        if (event.request.method === "GET") {
+          return caches.open(cacheVersion).then((cache) => {
+            cache.put(event.request, response.clone());
+            return response;
+          });
+        }
+        return response;
+      }).catch(() => {
+        // Optional: Rückfall auf eine offline-freundliche Antwort
+        return caches.match('/offline.html');
+      });
     })
   );
 });
 
 self.addEventListener("activate", (event) => {
-  console.log("service worker aktivated");
+  console.log("Service Worker activated");
   event.waitUntil(
     caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames
-          .filter((cacheName) => {
-            return cacheName !== cacheVersion;
-          })
-          .map((cacheName) => {
-            return caches.delete(cacheName);
-          })
+          .filter((cacheName) => cacheName !== cacheVersion)
+          .map((cacheName) => caches.delete(cacheName))
       );
+    }).catch((error) => {
+      console.error("Failed to clean up old caches during activation", error);
     })
   );
 });
