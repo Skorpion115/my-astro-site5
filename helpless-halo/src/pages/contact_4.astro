@@ -1,7 +1,5 @@
 ---
-// import BaseLayout from '../layouts/BaseLayout.astro';
 import ThemeIcon from "@/components/ThemeIcon.astro";
-import { ViewTransitions } from "astro:transitions";
 const pageTitle = "Ich rufe Sie zurück!";
 ---
 
@@ -42,7 +40,6 @@ const pageTitle = "Ich rufe Sie zurück!";
     <meta name="theme-color" content="#191919" />
 
     <ThemeIcon />
-    <ViewTransitions />
 
     <style>
       .container4 {
@@ -116,7 +113,7 @@ const pageTitle = "Ich rufe Sie zurück!";
 
   
   <body>
-    <h2 transition:animate="slide">Ich rufe sie zurück!</h2>
+    <h2>Ich rufe sie zurück!</h2>
 
     <div class="container4">
       <form
@@ -192,7 +189,8 @@ const pageTitle = "Ich rufe Sie zurück!";
           data-sitekey="6LdRPP0pAAAAAPoJR0Z6iRH_HFqnJBE4rNpKdLuP"
         >
         </div>
-        <script src="/scripts/form-handler.js" type="module" defer></script>
+        <!--
+        <script src="/scripts/form-handler.js" type="module" defer></script> -->
         <br />
 
         <div>
