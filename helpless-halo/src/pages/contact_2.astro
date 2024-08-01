@@ -1,415 +1,443 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import ThemeIcon from "@/components/ThemeIcon.astro";
 const pageTitle = "Kostenlose Probestunde buchen";
-const description = "Kostenloser Probestunde. Wählen sie ihr Lieblingsinstrument aus. Jetzt anmelden zu einem kostenlosen Probeunterricht! 👀";
-const keywords = "kostenlose probestunde buchen, anmeldungsformular";
-const pageUrl = "https://www.musicstudio-ziebart.de/contact_2/";
 ---
 
-<BaseLayout
-  pageTitle={pageTitle}
-  description={description}
-  keywords{keywords}
-  href={pageUrl}
-  ogTitle={pageTitle}
-  ogDescription={description}
-  ogUrl={pageUrl}
-  twitterTitle={pageTitle}
-  twitterDescription={description}
-  twitterUrl={pageUrl}
->
-  <div class="container1">
-    <form
-      name="contact_2"
-      method="POST"
-      action="/thankyou/"
-      data-netlify-recaptcha="true"
-      data-netlify="true"
-    >
-      <input type="hidden" name="form-name" value="contact_2" />
-      <fieldset>
-        <legend>Data</legend>
-        <div class="form-element"></div>
-        <br />
-        <div>
-          <label for="subject">Betreff:</label>
-          <input
-            name="subject"
-            type="text"
-            id="subject"
-            maxlength="40"
-            placeholder="Hier den Betreff eintragen"
-            class="form-control form-control-lg"
-            required
-          />
-        </div>
-        <br />
-        <div class="form-element">
-          <label for="born">Geburtsdatum:</label>
-          <input
-            type="date"
-            autocomplete="bday-day"
-            name="born"
-            id="born"
-            class="form-control form-control-lg"
-          />
-        </div>
-        <br />
-        <div class="form-element">
-          <label for="desired_date">Wunschtermin:</label>
-          <input
-            type="datetime-local"
-            name="desired_date"
-            id="desired_date"
-            class="form-control form-control-lg"
-            required
-          />
-        </div>
-        <br />
-        <div class="form-element">
-          <label for="phone">Telefon:</label>
-          <input
-            type="tel"
-            autocomplete="tel-national"
-            name="phone"
-            id="phone"
-            class="form-control form-control-lg"
-            required
-          />
-        </div>
-        <br />
-        <div>
-          <label for="instrument">Instrument:</label>
-          <input
-            type="text"
-            name="instrument"
-            id="instrument"
-            class="form-control form-control-lg"
-            required
-          />
-        </div>
-        <div>
-          <label for="email">Email:</label>
-          <input
-            type="email"
-            autocomplete="email"
-            name="email" Reply-to
-            id="email"
-            class="form-control form-control-lg"
-            required
-          />
-        </div>
-        <div>
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Kostenloser Probestunde. Wählen sie ihr Lieblingsinstrument aus. Jetzt anmelden zu einem kostenlosen Probeunterricht! 👀"
+    />
+    <title>{pageTitle}</title>
+    <meta name="keywords" content="kostenlose probestunde buchen, anmeldungsformular" />
+    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link
+      rel="canonical"
+      href="https://www.musicstudio-ziebart.de/contact_4/"
+    />
+    <meta
+      name="google-site-verification"
+      content="Zitul6WICKD7zrzgptxGVrh2GEhozasdEM_d1tGi2aw"
+    />
+    <meta
+      name="author"
+      content="Musicstudio Ziebart, postmaster@musicstudio-ziebart.de"
+    />
+    <meta
+      name="DC.Publisher"
+      content="Musicstudio Ziebart, postmaster@musicstudio-ziebart.de"
+    />
+    <meta name="page-topic" content="Musikunterricht, Musikschule, Bildung" />
+    <meta name="DC.rights" content="Alle Rechte liegen beim Author" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="robots" content="max-snippet:-1, INDEX, FOLLOW" />
+    <meta name="theme-color" content="#191919" />
+
+    <ThemeIcon />
+
+    <style>
+      .container1 {
+        margin: 0 auto;
+        padding: 5%;
+        box-sizing: border-box;
+      }
+
+      label {
+        display: block;
+        font-size: 1.125rem;
+        padding: 0.625rem;
+      }
+
+      /* ANCHOR Formular */
+
+      fieldset legend {
+        color: #828282;
+        font-size: 1.5rem;
+        padding: 0.625rem;
+      }
+
+      fieldset {
+        color: #828282;
+      }
+
+      /* ganze Formular */
+
+      .form-element {
+        color: #828282;
+      }
+
+      /* Der Rand um die Felder */
+      .form-control {
+        border-radius: 0px;
+        border: 1px solid #333;
+      }
+
+      /* Die Breite der Felder */
+      .form-control.form-control-lg {
+        height: calc(3.5rem + 2px);
+        padding: 1rem 0.75rem;
+        font-size: 1.125rem;
+      }
+
+      form {
+        max-width: 31.25rem;
+        margin: 0 auto;
+        text-align: left;
+        padding: 1.25rem 0;
+        font-size: 1.125rem;
+      }
+
+      select,
+      option {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        color: #828282;
+        text-align: center;
+        font-size: 1.125rem;
+      }
+      /* Größe der Platzhalter */
+      .form-control::placeholder {
+        font-size: 1.125rem;
+      }
+
+      /* Schriftgröße im Ausfüllbereich */
+      input,
+      textarea {
+        /*background-color: #1b1c1e; */
+        font-family: "Poppins", sans-serif;
+        font-size: 1.125rem;
+        /*color: #fff; */
+        font-size: 1.125rem;
+        padding: 0.625rem;
+      }
+
+      .btn {
+        border-radius: 0;
+        border: 0;
+        color: white;
+      }
+
+      .btn.btn-primary {
+        background-color: #545557;
+        padding: 0.94rem 7rem;
+        font-size: 1.125rem;
+        margin-top: 1.875rem;
+        cursor: pointer;
+        transition: all 0.3 ease;
+        text-align: center;
+      }
+
+      .btn.btn-primary:hover {
+        background-color: rgb(129, 226, 129);
+        color: black;
+      }
+
+      /* Tabelle 2 Stile */
+      .table2 {
+        width: 90%;
+        border-collapse: collapse;
+        text-align: center;
+        background: #222;
+        box-shadow: 2px 2px 5px #666666;
+        margin: 0 auto;
+        color: #fff;
+      }
+
+      .table2 th,
+      .table2 td {
+        padding: 0.2rem 0.2rem;
+      }
+
+      .table2 tbody tr {
+        border-bottom: 1px solid #ccc;
+      }
+
+      .table2 tbody tr:last-of-type {
+        border-bottom: 2px solid #666666;
+      }
+
+      /* Mobile Anpassungen */
+      @media screen and (max-width: 600px) {
+        .table2 {
+          width: 100%;
+          font-size: 1.125rem;
+        }
+        .table2 th,
+        .table2 td {
+          padding: 0.5rem;
+        }
+        .table2 thead {
+          display: none;
+        }
+        .table2 tbody,
+        .table2 tr,
+        .table2 td {
+          display: block;
+          width: 100%;
+        }
+        .table2 tr {
+          margin-bottom: 0.625rem;
+        }
+        .table2 td {
+          text-align: right;
+          padding-left: 50%;
+          position: relative;
+        }
+        .table2 td::before {
+          content: attr(data-label);
+          position: absolute;
+          left: 0;
+          width: 50%;
+          padding-left: 0.625rem;
+          text-align: left;
+          font-weight: bold;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container1">
+      <form
+        name="contact_2"
+        method="POST"
+        action="/thankyou/"
+        data-netlify="true"
+      >
+        <input type="hidden" name="form-name" value="contact_2" />
+        <fieldset>
+          <legend>Data</legend>
+          <div class="form-element"></div>
           <br />
-          <label for="message">Nachricht:</label>
-          <textarea
-            name="message"
-            id="message"
-            cols="23"
-            rows="10"
-            class="form-control"
-            placeholder="Wenn Sie wollen schreiben Sie hier eine Nachricht..."
-          ></textarea>
-        </div>
-      </fieldset>
-      <fieldset>
-        <legend>Adresse</legend>
-        <div>
-          <label for="fname">Vorname:</label>
-          <input
-            type="text"
-            autocomplete="given-name"
-            name="fname"
-            id="fname"
-            class="form-control form-control-lg"
-            required
-          />
-        </div>
+          <div>
+            <label for="subject">Betreff:</label>
+            <input
+              name="subject"
+              type="text"
+              id="subject"
+              maxlength="40"
+              placeholder="Hier den Betreff eintragen"
+              class="form-control form-control-lg"
+              required
+            />
+          </div>
+          <br />
+          <div class="form-element">
+            <label for="born">Geburtsdatum:</label>
+            <input
+              type="date"
+              autocomplete="bday-day"
+              name="born"
+              id="born"
+              class="form-control form-control-lg"
+            />
+          </div>
+          <br />
+          <div class="form-element">
+            <label for="desired_date">Wunschtermin:</label>
+            <input
+              type="datetime-local"
+              name="desired_date"
+              id="desired_date"
+              class="form-control form-control-lg"
+              required
+            />
+          </div>
+          <br />
+          <div class="form-element">
+            <label for="phone">Telefon:</label>
+            <input
+              type="tel"
+              autocomplete="tel-national"
+              name="phone"
+              id="phone"
+              class="form-control form-control-lg"
+              required
+            />
+          </div>
+          <br />
+          <div>
+            <label for="instrument">Instrument:</label>
+            <input
+              type="text"
+              name="instrument"
+              id="instrument"
+              class="form-control form-control-lg"
+              required
+            />
+          </div>
+          <div>
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              autocomplete="email"
+              name="email"
+              Reply-to
+              id="email"
+              class="form-control form-control-lg"
+              required
+            />
+          </div>
+          <div>
+            <br />
+            <label for="message">Nachricht:</label>
+            <textarea
+              name="message"
+              id="message"
+              cols="23"
+              rows="10"
+              class="form-control"
+              placeholder="Wenn Sie wollen schreiben Sie hier eine Nachricht..."
+            ></textarea>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Adresse</legend>
+          <div>
+            <label for="fname">Vorname:</label>
+            <input
+              type="text"
+              autocomplete="given-name"
+              name="fname"
+              id="fname"
+              class="form-control form-control-lg"
+              required
+            />
+          </div>
+          <br />
+          <div>
+            <label for="lname">Nachname:</label>
+            <input
+              type="text"
+              autocomplete="family-name"
+              name="lname"
+              id="lname"
+              class="form-control form-control-lg"
+              required
+            />
+          </div>
+          <br />
+          <div>
+            <label for="street">Strasse:</label>
+            <input
+              type="text"
+              autocomplete="street-address"
+              name="street"
+              id="street"
+              maxlength="22"
+              class="form-control form-control-lg"
+              required
+            />
+          </div>
+          <br />
+          <div>
+            <label for="place">Ort:</label>
+            <input
+              type="text"
+              autocomplete="address-level2"
+              name="place"
+              id="place"
+              maxlength="20"
+              class="form-control form-control-lg"
+              required
+            />
+          </div>
+          <br />
+          <div>
+            <label for="postal_code">Postleitzahl:</label>
+            <input
+              type="number"
+              name="postal_code"
+              autocomplete="postal-code"
+              id="postal_code"
+              class="form-control form-control-lg"
+              required
+            />
+          </div>
+        </fieldset>
         <br />
-        <div>
-          <label for="lname">Nachname:</label>
-          <input
-            type="text"
-            autocomplete="family-name"
-            name="lname"
-            id="lname"
-            class="form-control form-control-lg"
-            required
-          />
-        </div>
+        <fieldset>
+          <div>
+            <label for="parents">Eltern:</label>
+            <input
+              type="text"
+              name="parents"
+              id="parents"
+              class="form-control form-control-lg"
+            />
+          </div>
+          <br />
+        </fieldset>
         <br />
+        <!--
+      <div class="g-recaptcha" data-sitekey="6LdRPP0pAAAAAPoJR0Z6iRH_HFqnJBE4rNpKdLuP"></div> -->
+
         <div>
-          <label for="street">Strasse:</label>
-          <input
-            type="text"
-            autocomplete="street-address"
-            name="street"
-            id="street"
-            maxlength="22"
-            class="form-control form-control-lg"
-            required
-          />
+          <button type="submit" class="btn btn-lg btn-primary">Senden</button>
         </div>
-        <br />
-        <div>
-          <label for="place">Ort:</label>
-          <input
-            type="text"
-            autocomplete="address-level2"
-            name="place"
-            id="place"
-            maxlength="20"
-            class="form-control form-control-lg"
-            required
-          />
-        </div>
-        <br />
-        <div>
-          <label for="postal_code">Postleitzahl:</label>
-          <input
-            type="number"
-            name="postal_code"
-            autocomplete="postal-code"
-            id="postal_code"
-            class="form-control form-control-lg"
-            required
-          />
-        </div>
-      </fieldset>
+      </form>
+    </div>
+
+    <h2>Freie Termine</h2>
+
+    <div>
+      <!-- Tabelle für freie Termine-->
       <br />
-      <fieldset>
-        <div>
-          <label for="parents">Eltern:</label>
-          <input
-            type="text"
-            name="parents"
-            id="parents"
-            class="form-control form-control-lg"
-          />
-        </div>
-        <br />
-      </fieldset>
+
+      <table class="table2">
+        <thead>
+          <tr>
+            <th>Montag</th>
+            <th>Dienstag</th>
+            <th>Mittwoch</th>
+            <th>Donnerstag</th>
+            <th>Freitag</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Montag">Uhrzeit, 14:00</td>
+            <td data-label="Dienstag">14:00</td>
+            <td data-label="Mittwoch">14:00</td>
+            <td data-label="Donnerstag">14:00</td>
+            <td data-label="Freitag">13:45</td>
+          </tr>
+          <tr>
+            <td data-label="Montag">14:45</td>
+            <td data-label="Dienstag">14:45</td>
+            <td data-label="Mittwoch">14:45</td>
+            <td data-label="Donnerstag">14:45</td>
+            <td data-label="Freitag">17:30</td>
+          </tr>
+          <tr>
+            <td data-label="Montag">15:30</td>
+            <td data-label="Dienstag">15:30</td>
+            <td data-label="Mittwoch">15:30</td>
+            <td data-label="Donnerstag">15:30</td>
+            <td data-label="Freitag">18:15</td>
+          </tr>
+          <tr>
+            <td data-label="Montag">16:15</td>
+            <td data-label="Dienstag">16:15</td>
+            <td data-label="Mittwoch">16:15</td>
+            <td data-label="Donnerstag">16:15</td>
+            <td data-label="Freitag">19:00</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        <a href="../index.html" class="normal-links">zurück</a>
+      </p>
       <br />
-      <div class="g-recaptcha" data-sitekey="6LdRPP0pAAAAAPoJR0Z6iRH_HFqnJBE4rNpKdLuP"></div>
-
-      <div>
-        <button type="submit" class="btn btn-lg btn-primary">Senden</button>
-      </div>
-    </form>
-  </div>
-
-  <h2>Freie Termine</h2>
-
-  <div>
-    <!-- Tabelle für freie Termine-->
-    <br />
-    
-    <table class="table2">
-      <thead>
-        <tr>
-          <th>Montag</th>
-          <th>Dienstag</th>
-          <th>Mittwoch</th>
-          <th>Donnerstag</th>
-          <th>Freitag</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td data-label="Montag">Uhrzeit, 14:00</td>
-          <td data-label="Dienstag">14:00</td>
-          <td data-label="Mittwoch">14:00</td>
-          <td data-label="Donnerstag">14:00</td>
-          <td data-label="Freitag">13:45</td>
-        </tr>
-        <tr>
-          <td data-label="Montag">14:45</td>
-          <td data-label="Dienstag">14:45</td>
-          <td data-label="Mittwoch">14:45</td>
-          <td data-label="Donnerstag">14:45</td>
-          <td data-label="Freitag">17:30</td>
-        </tr>
-        <tr>
-          <td data-label="Montag">15:30</td>
-          <td data-label="Dienstag">15:30</td>
-          <td data-label="Mittwoch">15:30</td>
-          <td data-label="Donnerstag">15:30</td>
-          <td data-label="Freitag">18:15</td>
-        </tr>
-        <tr>
-          <td data-label="Montag">16:15</td>
-          <td data-label="Dienstag">16:15</td>
-          <td data-label="Mittwoch">16:15</td>
-          <td data-label="Donnerstag">16:15</td>
-          <td data-label="Freitag">19:00</td>
-        </tr>
-      </tbody>
-    </table>
-    
-    <p>
-      <a href="../index.html" class="normal-links">zurück</a>
-    </p>
-    <br />
-  </div>
-  <script src="https://www.google.com/recaptcha/api.js" is:inline async></script>
-</BaseLayout>
-
-
-
-<style>
-  .container1 {
-    margin: 0 auto;
-    padding: 5%;
-    box-sizing: border-box;
-  }
-
-  label {
-    display: block;
-    font-size: 1.125rem;
-    padding: 0.625rem;
-  }
-
-  /* ANCHOR Formular */
-
-  fieldset legend {
-    color: #828282;
-    font-size: 1.5rem;
-    padding: 0.625rem;
-  }
-  
-  fieldset {
-    color: #828282;
-  } 
-
-  /* ganze Formular */
-  
-  .form-element {
-    color: #828282;;
-  }
-
-  /* Der Rand um die Felder */
-  .form-control {
-    border-radius: 0px;
-    border: 1px solid #333;
-  }
-
-  /* Die Breite der Felder */
-  .form-control.form-control-lg {
-    height: calc(3.5rem + 2px);
-    padding: 1rem 0.75rem;
-    font-size: 1.125rem;
-  }
-
-  form {
-    max-width: 31.25rem;
-    margin: 0 auto;
-    text-align: left;
-    padding: 1.25rem 0;
-    font-size: 1.125rem;
-  }
-
-  select,
-  option {
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-    color: #828282;
-    text-align: center;
-    font-size: 1.125rem;
-  }
-  /* Größe der Platzhalter */
-  .form-control::placeholder {
-    font-size: 1.125rem;
-  }
-
-  /* Schriftgröße im Ausfüllbereich */
-  input,
-  textarea {
-    /*background-color: #1b1c1e; */
-    font-family: "Poppins", sans-serif;
-    font-size: 1.125rem;
-    /*color: #fff; */
-    font-size: 1.125rem;
-    padding: 0.625rem;
-  }
-
-  .btn {
-    border-radius: 0;
-    border: 0;
-    color: white;
-  }
-
-  .btn.btn-primary {
-    background-color: #545557;
-    padding: 0.94rem 7rem;
-    font-size: 1.125rem;
-    margin-top: 1.875rem;
-    cursor: pointer;
-    transition: all 0.3 ease;
-    text-align: center;
-  }
-
-  .btn.btn-primary:hover {
-    background-color: rgb(129, 226, 129);
-    color: black;
-  }
-
-/* Tabelle 2 Stile */
-.table2 {
-  width: 90%;
-  border-collapse: collapse;
-  text-align: center;
-  background: #222;
-  box-shadow: 2px 2px 5px #666666;
-  margin: 0 auto;
-  color: #fff;
-}
-
-.table2 th, .table2 td {
-  padding: 0.2rem 0.2rem;
-}
-
-.table2 tbody tr {
-  border-bottom: 1px solid #ccc;
-}
-
-.table2 tbody tr:last-of-type {
-  border-bottom: 2px solid #666666;
-}
-
-/* Mobile Anpassungen */
-@media screen and (max-width: 600px) {
-  .table2 {
-    width: 100%;
-    font-size: 1.125rem;
-  }
-  .table2 th, .table2 td {
-    padding: 0.5rem;
-  }
-  .table2 thead {
-    display: none;
-  }
-  .table2 tbody, .table2 tr, .table2 td {
-    display: block;
-    width: 100%;
-  }
-  .table2 tr {
-    margin-bottom: 0.625rem;
-  }
-  .table2 td {
-    text-align: right;
-    padding-left: 50%;
-    position: relative;
-  }
-  .table2 td::before {
-    content: attr(data-label);
-    position: absolute;
-    left: 0;
-    width: 50%;
-    padding-left: 0.625rem;
-    text-align: left;
-    font-weight: bold;
-  }
-}
-</style>
-
+    </div>
+    <!--
+  <script src="https://www.google.com/recaptcha/api.js" is:inline async></script> -->
+  </body>
+</html>
