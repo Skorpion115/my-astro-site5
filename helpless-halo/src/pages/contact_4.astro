@@ -113,13 +113,28 @@ const pageTitle = "Ich rufe Sie zurück!";
     <h2>Ich rufe sie zurück!</h2>
 
     <div class="container4">
+      <!--
       <form
         name="contact_4"
         method="POST"
         action="/danke-seite/"
         data-netlify-recaptcha="true"
         data-netlify="true"
+    > -->
+
+      <form 
+        name="contact_4"
+        method="POST" 
+        data-netlify="true" 
+        netlify-recaptcha="true" 
+        netlify-honeypot="bot-field"
       >
+
+      <!-- Honeypot field (invisible to users) -->
+        <p style="display:none">
+          <label>Don’t fill this out if you're human: <input name="bot-field"></label>
+        </p>
+
         <input type="hidden" name="form-name" value="contact_4" />
 
         <div>
@@ -187,17 +202,21 @@ const pageTitle = "Ich rufe Sie zurück!";
           data-sitekey="6LdRPP0pAAAAAPoJR0Z6iRH_HFqnJBE4rNpKdLuP"
         >
         </div>
-
-        <script src="/scripts/form-handler.js" type="module" defer></script>
+        <!--
+        <script src="/scripts/form-handler.js" type="module" defer></script> -->
         <br />
 
         <div>
           <button type="submit" class="btn btn-lg btn-primary">Absenden</button>
         </div>
-        <br />
-        <a href="../index.html" class="link-blue">Zurück</a>
       </form>
+
+
+
     </div>
+    <p>
+      <a href="../index.html" class="link-blue">Zurück</a>
+    </p>
     <script src="/scripts/register-service-worker.js" is:inline async></script>
   </body>
 </html>
