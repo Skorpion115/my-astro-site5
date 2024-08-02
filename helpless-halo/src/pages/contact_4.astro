@@ -49,18 +49,26 @@ const pageTitle = "Ich rufe Sie zurück!";
       body {
         font-family: var(--font);
         text-align: center;
+        background-color: #eaeaea; /* Hellgrauer Hintergrund für die Seite */
+      }
+
+      h2 {
+        color: #333;
       }
 
       label {
         display: block;
         font-size: 1.125rem;
         padding: 0.625rem;
+        color: #555;
       }
 
       /* Der Rand um die Felder */
       .form-control {
-        border-radius: 0px;
-        border: 1px solid #333;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+        background-color: #fff;
+        color: #333;
       }
 
       /* Die Breite der Felder */
@@ -84,11 +92,20 @@ const pageTitle = "Ich rufe Sie zurück!";
         font-family: "Poppins", sans-serif;
         font-size: 1.125rem;
         padding: 0.625rem;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 0.625rem;
+      }
+
+      textarea {
+        resize: vertical;
       }
 
       /* Button css */
       .btn {
-        border-radius: 0;
+        border-radius: 4px;
         border: 0;
         color: white;
       }
@@ -106,6 +123,15 @@ const pageTitle = "Ich rufe Sie zurück!";
       .btn.btn-primary:hover {
         background-color: rgb(140, 236, 140);
         color: black;
+      }
+
+      .link-blue {
+        color: #007bff;
+        text-decoration: none;
+      }
+
+      .link-blue:hover {
+        text-decoration: underline;
       }
     </style>
   </head>

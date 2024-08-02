@@ -45,24 +45,42 @@ const pageTitle = "Kostenlose Probestunde buchen";
         margin: 0 auto;
         padding: 5%;
         box-sizing: border-box;
+        background-color: #f9f9f9; /* Hellgrauer Hintergrund für das Formular */
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Schatten um das Formular */
       }
+
+      body {
+        font-family: var(--font);
+        text-align: center;
+        background-color: #eaeaea; /* Hellgrauer Hintergrund für die Seite */
+      }
+
+      h2 {
+        color: #333;
+      }
+
 
       label {
         display: block;
         font-size: 1.125rem;
         padding: 0.625rem;
+        color: #555;
       }
 
       /* ANCHOR Formular */
 
       fieldset legend {
-        color: #828282;
+        color: #333;
         font-size: 1.5rem;
         padding: 0.625rem;
       }
 
       fieldset {
-        color: #828282;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 1rem;
+        margin-bottom: 1.25rem;
       }
 
       /* ganze Formular */
@@ -73,8 +91,10 @@ const pageTitle = "Kostenlose Probestunde buchen";
 
       /* Der Rand um die Felder */
       .form-control {
-        border-radius: 0px;
-        border: 1px solid #333;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+        background-color: #fff;
+        color: #333;
       }
 
       /* Die Breite der Felder */
@@ -97,10 +117,15 @@ const pageTitle = "Kostenlose Probestunde buchen";
         display: block;
         margin: 0 auto;
         width: 100%;
-        color: #828282;
+        color: #333;
         text-align: center;
         font-size: 1.125rem;
       }
+
+      textarea {
+        resize: vertical;
+      }
+
       /* Größe der Platzhalter */
       .form-control::placeholder {
         font-size: 1.125rem;
@@ -134,8 +159,17 @@ const pageTitle = "Kostenlose Probestunde buchen";
       }
 
       .btn.btn-primary:hover {
-        background-color: rgb(129, 226, 129);
+        background-color: rgb(140, 236, 134);
         color: black;
+      }
+
+      .link-blue {
+        color: #007bff;
+        text-decoration: none;
+      }
+
+      .link-blue:hover {
+        text-decoration: underline;
       }
 
       /* Tabelle 2 Stile */
