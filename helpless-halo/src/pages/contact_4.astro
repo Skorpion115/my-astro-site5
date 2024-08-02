@@ -147,6 +147,23 @@ const pageTitle = "Ich rufe Sie zurück!";
   </head>
 
   <body>
+    <cookie-banner>
+      <h2 slot="title">Music Lessons</h2>
+      <div slot="text">Wir verwenden Cookies weil das so ist</div>
+    </cookie-banner>
+
+    <template>
+      <div class="foo">Das ist ein Template das siehst du nicht in HTML</div>
+    </template>
+    {/* Google Tag Manager (noscript) */}
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-PWK4LSL"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"></iframe></noscript
+    >
+    {/* End Google Tag Manager (noscript */}
     <h2>Ich rufe sie zurück!</h2>
 
     <div class="container4">
@@ -244,6 +261,7 @@ const pageTitle = "Ich rufe Sie zurück!";
     <p>
       <a href="../index.html" class="link-blue">Zurück</a>
     </p>
+    <script src="/scripts/cookie-banner.js" is:inline async></script>
     <script src="/scripts/register-service-worker.js" is:inline async></script>
   </body>
 </html>
