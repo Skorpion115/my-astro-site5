@@ -113,18 +113,21 @@ const pageTitle = "Ich rufe Sie zurück!";
     <h2>Ich rufe sie zurück!</h2>
 
     <div class="container4">
-      <form 
+      <form
         name="contact_4"
         method="POST"
-        action="/danke-seite/" 
-        data-netlify="true" 
-        netlify-recaptcha="true" 
+        action="/danke-seite/"
+        data-netlify="true"
+        netlify-recaptcha="true"
         netlify-honeypot="bot-field"
       >
-
-      <!-- Honeypot field (invisible to users) -->
+        <!-- Honeypot field (invisible to users) -->
         <p style="display:none">
-          <label>Don’t fill this out if you're human: <input name="bot-field"></label>
+          <label
+            >Don’t fill this out if you're human: <input
+              name="bot-field"
+            /></label
+          >
         </p>
 
         <input type="hidden" name="form-name" value="contact_4" />
@@ -188,27 +191,22 @@ const pageTitle = "Ich rufe Sie zurück!";
         </div>
 
         <br />
-        
+
         <div
           class="g-recaptcha"
           data-sitekey="6LdRPP0pAAAAAPoJR0Z6iRH_HFqnJBE4rNpKdLuP"
         >
         </div>
-        <!--
-        <script src="/scripts/form-handler.js" type="module" defer></script> -->
         <br />
-
         <div>
           <button type="submit" class="btn btn-lg btn-primary">Absenden</button>
         </div>
       </form>
-
-
-
     </div>
     <p>
       <a href="../index.html" class="link-blue">Zurück</a>
     </p>
+    <script src="/scripts/form-handler.js" type="module" defer></script>
     <script src="/scripts/register-service-worker.js" is:inline async></script>
   </body>
 </html>
