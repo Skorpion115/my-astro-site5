@@ -31,29 +31,13 @@
 
   // Google Analytics Config
   gtag("config", "GT-MR4MFC6", { 
-    "anonymize_ip": true, 
-    "allow_google_signals": true
+    "anonymize_ip": true
   });
 
   // Google AdWords Config
   gtag("config", "GT-5TG3DK3", {
-    "anonymize_ip": true,
-    "allow_google_signals": true
+    "anonymize_ip": true
   });
-
-  // Google Remarketing blockieren
-  if (typeof __cmp === "function") {
-    window.gatpadsallowed = false;
-    __cmp("getVendorConsents", null, function (x, y) {
-      if (
-        "customVendorConsents" in x &&
-        "s1" in x.customVendorConsents &&
-        x.customVendorConsents["s1"]
-      ) {
-        window.gatpadsallowed = true;
-      }
-    });
-  }
 
   // Update consent function to be called when user grants consent
   function consentGrantedAdStorage() {
