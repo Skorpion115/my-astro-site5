@@ -1,4 +1,8 @@
 ---
+import ManuellesBlockieren from "../components/ManuellesBlockieren.astro";
+import ExternalScripts from "../components/ExternalScripts.astro";
+import ExternalScripts3 from "../components/ExternalScripts3.astro";
+import GoogleScripts from "../components/GoogleScripts.astro";
 const pageTitle = "Danke";
 ---
 
@@ -31,6 +35,10 @@ const pageTitle = "Danke";
     name="DC.Publisher"
     content="Musicstudio Ziebart, postmaster@musicstudio-ziebart.de"
   />
+  <ManuellesBlockieren />
+  <ExternalScripts />
+  <ExternalScripts3 />
+  <GoogleScripts />
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -40,7 +48,7 @@ const pageTitle = "Danke";
     h2 {
       color: #4CAF50;
     }
-    .normal-links {
+    .blue-links {
       color: #1E88E5;
       text-decoration: none;
     }
@@ -50,10 +58,28 @@ const pageTitle = "Danke";
   </style>
 </head>
 <body>
+  <cookie-banner>
+    <h2 slot="title">Music Lessons</h2>
+    <div slot="text">Wir verwenden Cookies weil das so ist</div>
+  </cookie-banner>
+
+  <template>
+    <div class="foo">Das ist ein Template das siehst du nicht in HTML</div>
+  </template>
+  {/* Google Tag Manager (noscript) */}
+  <noscript
+    ><iframe
+      src="https://www.googletagmanager.com/ns.html?id=GTM-PWK4LSL"
+      height="0"
+      width="0"
+      style="display:none;visibility:hidden"></iframe></noscript
+  >
+  {/* End Google Tag Manager (noscript */}
   <h2>Danke für die kurze Mitteilung!</h2>
   <p>Ihre kurze Mitteilung ist auf dem Weg! Ich werde mich sobald wie möglich bei Ihnen melden.</p>
   <br>
-  <p><a href="/" class="normal-links">Zurück zur Startseite</a></p>
+  <p><a href="/" class="blue-links">Zurück zur Startseite</a></p>
+  <script src="/scripts/cookie-banner.js" is:inline async></script>
   <script src="/scripts/register-service-worker.js" is:inline async></script>
 </body>
 </html>
