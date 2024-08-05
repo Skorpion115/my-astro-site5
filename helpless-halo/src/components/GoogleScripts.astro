@@ -1,5 +1,6 @@
 <script async is:inline src="https://www.googletagmanager.com/gtag/js?id=GT-MR4MFC6"></script>
-<script async is:inline src="https://www.googletagmanager.com/gtag/js?id=GT-5TG3DK3"></script>
+<!--
+<script async is:inline src="https://www.googletagmanager.com/gtag/js?id=GT-5TG3DK3"></script> -->
 <script async is:inline>
   // Google Tag Manager
   (function (w, d, s, l, i) {
@@ -32,6 +33,7 @@
   // Google Analytics Config
   gtag("config", "GT-MR4MFC6", { 
     "anonymize_ip": true,
+    "cookie_flags": "SameSite=None;Secure",
     "currency": "EUR",
     "region": "EU"
   });
@@ -45,6 +47,7 @@
   }); */
 
   // Update consent function to be called when user grants consent
+  /*
   function consentGrantedAdStorage() {
     gtag("consent", "update", {
       "ad_user_data": "granted",
@@ -52,5 +55,22 @@
       "ad_storage": "granted",
       "analytics_storage": "granted"
     });
+  } */
+
+ // Consent granted handler
+ function consentGranted() {
+    gtag("consent", "update", {
+      "ad_storage": "granted",
+      "analytics_storage": "granted"
+    });
+    initializeGoogleAnalytics();
   }
+
+  // Listen for the consent granted event
+  document.addEventListener("consentGiven", consentGranted);
+  // Beispiel-Code für den Consent Manager, der das Event auslöst
+if (userHasConsented) {
+  var event = new Event("consentGiven");
+  document.dispatchEvent(event);
+}
 </script>
