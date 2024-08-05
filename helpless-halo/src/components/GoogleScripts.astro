@@ -39,10 +39,17 @@
     });
   }
 
+  // Google AdWords Config
+  gtag("config", "GT-5TG3DK3", {
+    "anonymize_ip": true,
+    "currency": "EUR",
+    "region": "EU"
+  });
+
   // Check for consent status
   function checkUserConsent() {
     // Hypothetical check for user consent; replace with actual implementation
-    return typeof cmpApi !== 'undefined' && cmpApi.getConsentStatus && cmpApi.getConsentStatus();
+    return typeof cmpApi !== 'undefined' && cmpApi.getConsentStatus && cmpApi.getConsentStatus().consentGiven;
   }
 
   document.addEventListener('DOMContentLoaded', function() {
