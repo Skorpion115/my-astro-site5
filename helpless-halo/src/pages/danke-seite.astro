@@ -1,6 +1,6 @@
 ---
 import ManuellesBlockieren from "../components/ManuellesBlockieren.astro";
-// import ExternalScripts from "../components/ExternalScripts.astro";
+import ExternalScripts from "../components/ExternalScripts.astro";
 import ExternalScripts3 from "../components/ExternalScripts3.astro";
 import GoogleScripts from "../components/GoogleScripts.astro";
 const pageTitle = "Danke";
@@ -36,8 +36,7 @@ const pageTitle = "Danke";
     content="Musicstudio Ziebart, postmaster@musicstudio-ziebart.de"
   />
   <ManuellesBlockieren />
-  <!--
-  <ExternalScripts /> -->
+  <ExternalScripts />
   <ExternalScripts3 />
   <GoogleScripts />
   <style>
@@ -81,7 +80,7 @@ const pageTitle = "Danke";
   <br>
   <p><a href="/" class="blue-links">Zurück zur Startseite</a></p>
   <script src="/scripts/cookie-banner.js" is:inline async></script>
-  <!--
-  <script src="/scripts/register-service-worker.js" is:inline async></script> -->
+  
+  <script src="/scripts/register-service-worker.js" is:inline async></script>
 </body>
 </html>

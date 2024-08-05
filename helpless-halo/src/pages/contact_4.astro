@@ -1,6 +1,6 @@
 ---
 import ManuellesBlockieren from "../components/ManuellesBlockieren.astro";
-// import ExternalScripts from "../components/ExternalScripts.astro";
+import ExternalScripts from "../components/ExternalScripts.astro";
 import ExternalScripts3 from "../components/ExternalScripts3.astro";
 import GoogleScripts from "../components/GoogleScripts.astro";
 const pageTitle = "Ich rufe Sie zurück!";
@@ -44,8 +44,7 @@ const pageTitle = "Ich rufe Sie zurück!";
     <meta name="robots" content="max-snippet:-1, INDEX, FOLLOW" />
 
     <ManuellesBlockieren />
-    <!--
-    <ExternalScripts /> -->
+    <ExternalScripts />
     <ExternalScripts3 />
     <GoogleScripts />
 
@@ -263,7 +262,6 @@ const pageTitle = "Ich rufe Sie zurück!";
       <a href="../index.html" class="link-blue">Zurück</a>
     </p>
     <script src="/scripts/cookie-banner.js" is:inline async></script>
-    <!--
-    <script src="/scripts/register-service-worker.js" is:inline async></script> -->
+    <script src="/scripts/register-service-worker.js" is:inline async></script>
   </body>
 </html>
