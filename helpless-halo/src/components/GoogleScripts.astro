@@ -31,12 +31,22 @@
   gtag("js", new Date());
 
   // Google Analytics Config
+  /*
   gtag("config", "GT-MR4MFC6", { 
     "anonymize_ip": true,
     "cookie_flags": "SameSite=None;Secure",
     "currency": "EUR",
     "region": "EU"
-  });
+  }); */
+
+  // Function to initialize Google Analytics
+  function initializeGoogleAnalytics() {
+    gtag("config", "GT-MR4MFC6", { 
+      "anonymize_ip": true,
+      "currency": "EUR",
+      "region": "EU"
+    });
+  }
 
   // Google AdWords Config
   /*
