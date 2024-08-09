@@ -60,7 +60,11 @@
   function checkUserConsentFromEvent(event) {
     var consentData = event.detail;
     // Hypothetical structure of event.detail; adjust as necessary
-    return consentData && consentData.cmpConsersVendors.includes("s26") && consentData.cmpGDPR === 1;
+    return consentData && 
+      consentData.cmpConsersVendors.includes("s26") && 
+      consentData.cmpConsentVendors.includes("s135") && 
+      consentData.cmpConsentVendors.includes("s30") &&
+      consentData.cmpGDPR === 1;
   }
 
   document.addEventListener('DOMContentLoaded', function() {
