@@ -12,7 +12,7 @@ for = "/*"
 [headers.values]
 X-Frame-Options = "SAMEORIGIN"
 X-XSS-Protection = "1; mode=block"
-Access-Control-Allow-Origin = "https://www.musicstudio-ziebart.de"
+Access-Control-Allow-Origin = "*"
 Vary = "Origin"
 Timing-Allow-Origin = "https://www.musicstudio-ziebart.de"
 Access-Control-Allow-Methods = "GET,POST,PUT,PATCH,DELETE"
