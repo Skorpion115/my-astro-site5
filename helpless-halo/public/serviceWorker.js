@@ -39,15 +39,23 @@ self.addEventListener("install", (event) => {
 });
 
 self.addEventListener("fetch", (event) => {
+  // Verhindere, dass Anfragen von chrome-extension:// URLs gecacht werden
+  if (event.request.url.startsWith('chrome-extension://')) {
+    return;
+  }
+
   event.respondWith(
     caches.match(event.request).then((cachedResponse) => {
       if (cachedResponse) {
         return cachedResponse;
       }
       return fetch(event.request).then((response) => {
-        if (event.request.method === "GET") {
+        if (event.request.method === "GET" && response.ok) {
           return caches.open(cacheVersion).then((cache) => {
-            cache.put(event.request, response.clone());
+            // Überprüfe, ob die Antwort von einer erlaubten Quelle stammt
+            if (response.url.startsWith('https://www.musicstudio-ziebart.de')) {
+              cache.put(event.request, response.clone());
+            }
             return response;
           });
         }
