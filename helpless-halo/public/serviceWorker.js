@@ -40,7 +40,7 @@ self.addEventListener("install", (event) => {
 
 self.addEventListener("fetch", (event) => {
   // Verhindere, dass Anfragen von chrome-extension:// URLs gecacht werden
-  if (event.request.url.startsWith('chrome-extension://')) {
+  if (event.request.url.startsWith("chrome-extension://")) {
     return;
   }
 
@@ -49,21 +49,25 @@ self.addEventListener("fetch", (event) => {
       if (cachedResponse) {
         return cachedResponse;
       }
-      return fetch(event.request).then((response) => {
-        if (event.request.method === "GET" && response.ok) {
-          return caches.open(cacheVersion).then((cache) => {
-            // Überprüfe, ob die Antwort von einer erlaubten Quelle stammt
-            if (response.url.startsWith('https://www.musicstudio-ziebart.de')) {
-              cache.put(event.request, response.clone());
-            }
-            return response;
-          });
-        }
-        return response;
-      }).catch(() => {
-        // Optional: Rückfall auf eine offline-freundliche Antwort
-        return caches.match('/offline.html');
-      });
+      return fetch(event.request)
+        .then((response) => {
+          if (event.request.method === "GET" && response.ok) {
+            return caches.open(cacheVersion).then((cache) => {
+              // Überprüfe, ob die Antwort von einer erlaubten Quelle stammt
+              if (
+                response.url.startsWith("https://www.musicstudio-ziebart.de")
+              ) {
+                cache.put(event.request, response.clone());
+              }
+              return response;
+            });
+          }
+          return response;
+        })
+        .catch(() => {
+          // Optional: Rückfall auf eine offline-freundliche Antwort
+          return caches.match("/offline.html");
+        });
     })
   );
 });
@@ -71,14 +75,17 @@ self.addEventListener("fetch", (event) => {
 self.addEventListener("activate", (event) => {
   console.log("Service Worker activated");
   event.waitUntil(
-    caches.keys().then((cacheNames) => {
-      return Promise.all(
-        cacheNames
-          .filter((cacheName) => cacheName !== cacheVersion)
-          .map((cacheName) => caches.delete(cacheName))
-      );
-    }).catch((error) => {
-      console.error("Failed to clean up old caches during activation", error);
-    })
+    caches
+      .keys()
+      .then((cacheNames) => {
+        return Promise.all(
+          cacheNames
+            .filter((cacheName) => cacheName !== cacheVersion)
+            .map((cacheName) => caches.delete(cacheName))
+        );
+      })
+      .catch((error) => {
+        console.error("Failed to clean up old caches during activation", error);
+      })
   );
 });
