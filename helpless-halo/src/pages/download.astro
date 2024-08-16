@@ -3,8 +3,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import YouTube from "../components/YouTube.astro";
 import "../styles/lite-yt-embed.css";
 const pageTitle = "Download für Noten und GM Files";
-const description = "Midi Files und Noten bekannter Werke komplett zu downloaden! 🎼, Mondschein Sonate, Eine kleine Nachtmusik usw.";
-const keywords = "Download, Midi Files und Noten bekannter Werke zum downloaden";
+const description =
+  "Midi Files und Noten bekannter Werke komplett zu downloaden! 🎼, Mondschein Sonate, Eine kleine Nachtmusik usw.";
+const keywords =
+  "Download, Midi Files und Noten bekannter Werke zum downloaden";
 const pageUrl = "https://www.musicstudio-ziebart.de/download/";
 const SITE_URL = process.env.SITE_URL || "https://www.musicstudio-ziebart.de";
 
@@ -20,7 +22,7 @@ const videoData = [
     thumbnail_loc: "https://i.ytimg.com/vi/ytcQ-I1BTNk/hqdefault.jpg",
     publication_date: "2021-04-21T00:00:00+02:00",
     duration: "PT12M59S",
-  }
+  },
 ];
 ---
 
@@ -53,9 +55,7 @@ const videoData = [
             <div class="video-container">
               <lite-youtube
                 videoid={video.content_loc.split("/").pop()}
-                style={
-                  "background-image: url('" + video.thumbnail_loc + "');"
-                }
+                style={"background-image: url('" + video.thumbnail_loc + "');"}
               >
                 <a
                   href={video.content_loc}
@@ -86,6 +86,7 @@ const videoData = [
       </p>
       <br />
       <br />
+      
       <table class="basis-table">
         <thead>
           <tr>

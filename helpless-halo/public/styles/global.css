@@ -656,6 +656,7 @@ table.basis-table tbody tr.active {
 }
 
 /* ANCHOR basis-card CSS */
+
 .basis-card {
   display: none;
   width: 100%;
@@ -682,6 +683,16 @@ table.basis-table tbody tr.active {
 .basis-card div > span {
   color: rgb(218, 54, 54);
   font-weight: bold;
+}
+
+@media screen and (max-width: 578px) {
+  table.basis-table {
+    display: none;
+  }
+
+  .basis-card {
+    display: block;
+  }
 }
 
 /* ANCHOR harmonielehre.astro*/
