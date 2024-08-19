@@ -38,14 +38,25 @@ const pageTitle = "Anbieter";
     <GoogleScripts />
   </head>
   <body>
+    <h3>Anbieterliste</h3>
     <!-- Vendorliste von Consentmanager -->
     <div id="cmpvendorlist"></div>
 
     <script
       src="https://delivery.consentmanager.net/delivery/vendorlist.php?cdid=b018a967f10b6"
       type="text/javascript"
-      async
-    ></script>
+      async></script>
+
+    <h4>Cookie Info Liste</h4>
+
+    <div id="cmpcookieinfo"></div>
+
+    <script
+      src="https://delivery.consentmanager.net/delivery/cookieinfo.php?cdid=b018a967f10b6"
+      type="text/javascript"
+      async></script>
+
+    <p><a href="/" class="normal-links">Zurück zur Startseite</a></p>
 
     <br />
   </body>
