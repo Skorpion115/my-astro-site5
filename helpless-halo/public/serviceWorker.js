@@ -25,6 +25,7 @@ const cacheAssets = [
   "/pupils-download/",
   "/querfloetenunterricht/",
   "/klarinettenunterricht/",
+  "/anbieter/",
   // Weitere URLs hinzufügen...
 ];
 
