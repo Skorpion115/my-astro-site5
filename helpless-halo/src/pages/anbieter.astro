@@ -46,6 +46,16 @@ const pageTitle = "Anbieter";
       async></script>
 
     <br />
+
+    <!-- Interaktiver Button -->
+    <button id="myButton">Klick mich</button>
+    <script>
+      document.getElementById('myButton')?.addEventListener('click', function() {
+        alert("Button wurde geklickt!");
+        // Hier könntest du weitere Aktionen aufrufen, z. B. doSomething();
+      });
+    </script>
+
     <!--
     <h4>Cookie Info Liste</h4>
     <div id="cmpcookieinfo"></div> -->
