@@ -19,6 +19,7 @@ const pages = [
   { url: `${SITE_URL}/harmonielehre/`, changefreq: "weekly", lastmod: new Date() },
   { url: `${SITE_URL}/impressum/`, changefreq: "weekly", lastmod: new Date() },
   { url: `${SITE_URL}/datenschutz/`, changefreq: "weekly", lastmod: new Date() },
+  { url: `${SITE_URL}/anbieter/`, changefreq: "weekly", lastmod: new Date() },
   { url: `${SITE_URL}/klavierunterricht/`, changefreq: "weekly", lastmod: new Date() },
   { url: `${SITE_URL}/keyboardunterricht/`, changefreq: "weekly", lastmod: new Date() },
   { url: `${SITE_URL}/gitarrenunterricht/`, changefreq: "weekly", lastmod: new Date() },
