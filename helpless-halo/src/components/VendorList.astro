@@ -1,0 +1,72 @@
+---
+import type { Vendor, VendorListResponse } from '../types/vendor';
+
+function loadVendorList() {
+  if (typeof document !== 'undefined') {
+    var script = document.createElement("script");
+    script.src = "https://delivery.consentmanager.net/delivery/vendorlist.php?cdid=b018a967f10b6";
+    script.type = "text/javascript";
+    script.async = true;
+    document.body.appendChild(script);
+
+    // API-Aufruf, um die Liste der gefundenen Cookies zu erhalten
+    fetch('https://delivery.consentmanager.net/delivery/vendorlist.php?cdid=b018a967f10b6&api=json')
+      .then(response => response.json())
+      .then((data: VendorListResponse) => {
+        // Hier kannst du die erhaltenen Daten verarbeiten
+        console.log("Received data:", data); // Log the received data to console
+        // Beispiel: Zeige die Anbieterliste im DOM an
+        displayVendorList(data);
+      })
+      .catch((error: any) => {
+        console.error('Error fetching vendor list:', error);
+        displayError('Error loading vendor list.');
+      });
+  }
+}
+
+function displayVendorList(data: VendorListResponse) {
+  const vendorListContainer = document.getElementById('cmpvendorlist');
+  if (vendorListContainer && Array.isArray(data)) {
+    vendorListContainer.innerHTML = ''; // Vorherigen Inhalt löschen
+    data.forEach((vendor: Vendor) => {
+      const vendorItem = document.createElement('div');
+      vendorItem.textContent = `Name: ${vendor.name || 'Unknown'}, Domain: ${vendor.domain || 'Unknown'}, Expiry: ${vendor.expiry || 'Unknown'}`;
+      vendorListContainer.appendChild(vendorItem);
+    });
+  } else {
+    displayError('Data format error or empty data.');
+  }
+}
+
+function displayError(message: string) {
+  const vendorListContainer = document.getElementById('cmpvendorlist');
+  if (vendorListContainer) {
+    vendorListContainer.innerHTML = ''; // Vorherigen Inhalt löschen
+    const errorItem = document.createElement('div');
+    errorItem.textContent = message;
+    vendorListContainer.appendChild(errorItem);
+  } else {
+    console.error('Element with id "cmpvendorlist" not found.');
+  }
+}
+
+// Trigger loading of vendor list when the page is loaded directly or via link navigation
+if (typeof document !== 'undefined') {
+  document.addEventListener("DOMContentLoaded", function() {
+    loadVendorList();
+  });
+
+  // Additional trigger for when navigating via link (for Astro framework)
+  document.addEventListener("click", function(event) {
+    const target = event.target as HTMLElement;
+    if (target && target.tagName === "A" && target.getAttribute("href")?.includes("/datenschutz/")) {
+      setTimeout(loadVendorList, 100); // Timeout, um sicherzustellen, dass die Seite geladen ist
+    }
+  });
+}
+---
+
+<Fragment>
+  <div id="cmpvendorlist"></div>
+</Fragment>
