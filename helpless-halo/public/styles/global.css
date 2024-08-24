@@ -434,6 +434,19 @@ img {
   border-radius: 0.313rem;
 }
 
+/* Styling für die Coupon-Sektion */
+.coupon {
+  text-align: center; /* Optional: Bild zentrieren */
+}
+
+/* Spezifisches Styling für das Coupon-Bild */
+.coupon img.coupon-image {
+  width: 100px; /* Passe hier die Größe an */
+  height: auto;
+  margin-left: 1%;
+  border-radius: 0.313rem;
+}
+
 /* ANCHOR unterricht.astro */
 
 .contenitore {
