@@ -3,6 +3,7 @@ import ManuellesBlockieren from "../components/ManuellesBlockieren.astro";
 import ExternalScripts from "../components/ExternalScripts.astro";
 import ExternalScripts3 from "../components/ExternalScripts3.astro";
 import GoogleScripts from "../components/GoogleScripts.astro";
+import { ViewTransitions } from "astro:transitions";
 const pageTitle = "Ich rufe Sie zurück!";
 ---
 
@@ -52,6 +53,7 @@ const pageTitle = "Ich rufe Sie zurück!";
     <ExternalScripts />
     <ExternalScripts3 />
     <GoogleScripts />
+    <ViewTransitions />
 
 
     <style>
@@ -169,7 +171,7 @@ const pageTitle = "Ich rufe Sie zurück!";
         style="display:none;visibility:hidden"></iframe></noscript
     >
     {/* End Google Tag Manager (noscript */}
-    <h2>Ich rufe sie zurück!</h2>
+    <h2 transition:animate="slide">Ich rufe sie zurück!</h2>
 
     <div class="container4">
       <form
