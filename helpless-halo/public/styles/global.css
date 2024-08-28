@@ -196,30 +196,62 @@ html {
 
 /* ANCHOR Hamburger-Menü immer sichtbar */
 .hamburger {
-  position: fixed;
+  position: static;
   top: 20px;
   left: 20px;
   cursor: pointer;
   z-index: 11; /* So plaziert das der Schalter nicht verdeckt wird */
-  background-color: #333;
+  background-color: #333; /* Hintergrund transparent */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Zentriert die Linien vertikal */
+  width: 2rem; /* Breite des Hamburger-Menüs */
+  height: 2rem; /* Höhe des Hamburger-Menüs */
 }
 
 .hamburger .line {
   display: block;
-  width: 1.5rem;
+  width: 2rem;
   height: 0.2rem;
-  margin-bottom: 0.313rem;
+  margin-bottom: 0.3rem; /* Abstand zwischen den Linien */
   background-color: #ffffff;
+  border-radius: 2px; /* Abgerundete Ecken */
+  transition: background-color 0.3s ease;
 }
 
-.hamburger:hover .line {
-  background-color: #ffffff; /* Optional: Farbe beim Hover ändern */
+/* Dark Mode Anpassungen */
+body.dark-mode .hamburger .line {
+  background-color: #ffffff; /* Helle Linienfarbe für Dark Mode */
 }
+
+/* Optional: Hover-Effekt */
+/*
+.hamburger:hover .line {
+  background-color: #888888; 
+} */
+
+/* Aktiv-Zustand */
+.hamburger.active .line {
+  background-color: #ff0000; /* Rot für den aktiven Zustand */
+}
+
+/* Sicherstellen, dass die Linien immer sichtbar bleiben */
+.hamburger.active .line {
+  display: block;
+}
+
+/*
+.hamburger:hover .line {
+  background-color: #ffffff; /* Optional: Farbe beim Hover ändern
+}
+ */
 /*
 .dark p,
 .dark li {
   color: #e2e2e2; 
 } */
+
+
 
 /* ANCHOR Styles für die Header-Komponente */
 /* Positioniere den Header-Inhalt */
