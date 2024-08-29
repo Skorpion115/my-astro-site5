@@ -28,9 +28,32 @@ html {
   font-size: 100%;
 }
 
+/* ANCHOR: Darkmode CSS */
+html.dark {
+  background-color: #222; /* dunkler Hintergrund für Dark Modus */
+  color: #e2e2e2;
+}
+
 /* Hamburger-Menü Linien im Dark Mode */
 html.dark .hamburger .line {
   background-color: #ffffff; /* Weiße Linien im Dark Mode */
+}
+
+/* ANCHOR: Sun und Moon im Dark Mode */
+html.dark #themeToggle .sun {
+  fill: transparent; /* Verstecke die Sonne im Dark Mode */
+}
+
+html.dark #themeToggle .moon {
+  fill: #f1c40f;
+}
+/*
+html.dark #themeToggle {
+  background-color: transparent; 
+} */
+
+html.dark #themeToggle svg {
+  fill: none; /* Falls das SVG selbst gefüllt werden soll */
 }
 
 /* ANCHOR Custom Properties */
@@ -113,12 +136,6 @@ p {
   font-style: italic;
 }
 
-/* ANCHOR: Darkmode CSS */
-html.dark {
-  background-color: #222;
-  color: #e2e2e2;
-}
-
 /* Navigation im Dark Mode */
 .dark .nav-links {
   background-color: #333; /* Dunkler Hintergrund für die Navigation */
@@ -162,7 +179,7 @@ a:focus, button:focus, .nav-links a:focus {
 /* ANCHOR ThemeToggle Button Styling */
 #themeToggle {
   position: absolute;
-  top: 1px; /* Gleiche Höhe wie das Hamburger-Menü */
+  top: 0px; /* Gleiche Höhe wie das Hamburger-Menü */
   right: 30px; /* Abstand vom rechten Bildschirmrand */
   z-index: 20; /* Sicherstellen, dass der Schalter über anderen Elementen liegt */
   border: 0;
@@ -171,17 +188,19 @@ a:focus, button:focus, .nav-links a:focus {
 }
 
 .sun {
-  fill: black;
-}
-.moon {
-  fill: transparent;
+  fill: black; /* Schwarze Sonne im Light Mode */
 }
 
-:global(.dark) .sun {
-  fill: transparent;
+.moon {
+  fill: transparent; /* Transparent im Light Mode, damit sie unsichtbar ist */
 }
-:global(.dark) .moon {
-  fill: white;
+
+html.dark .sun {
+  fill: transparent; /* Verstecke die Sonne im Dark Mode */
+}
+
+html.dark .moon {
+  fill: #f1c40f; /* Zeige den Mond in Gelb im Dark Mode */
 }
 
 author {
@@ -260,45 +279,46 @@ header {
   z-index: 1; /* Sicherstellen, dass der Header über anderen Elementen liegt */
 }
 
-/* Theme-Schalter */
-#themeToggle {
-  position: absolute; /* Positioniert den Schalter unabhängig von den anderen Elementen */
-  right: 20px; /* Abstand vom rechten Bildschirmrand */
-  top: 20px; /* Abstand vom oberen Bildschirmrand */
-  z-index: 20; /* Sicherstellen, dass der Schalter über anderen Elementen liegt */
-  border: 0;
-  background: none;
-  padding: 0;
-}
-
-
-
-/* ANCHOR Navigation Styles */
+/* ANCHOR Navigation Styles Menu*/
 
 .nav-links {
   position: fixed;
-  top: 130px;
+  top: 60px;
   left: -250px; /* Setze das Menü initial außerhalb des Bildschirms */
   width: 250px;
   height: auto;
   background-color: #ffffff;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start; /* Links ausrichten */
-  padding: 2rem 0;
+  flex-direction: column; /* Links untereinander anzeigen */
+  justify-content: flex-start; /* Links am Anfang der Spalte ausrichten */
+  align-items: stretch; /* Links über die gesamte Breite ausdehnen */
+  padding: 2rem 0; /* 0.5rem oben und unten, kein Abstand seitlich */
   transition: left 0.3s ease; /* Animationsdauer und -typ */
   z-index: 10;
 }
 
+/* Navigations Links */
 .nav-links a {
-  font-size: 1.2rem;
-  text-align: left; /* Text linksbündig ausrichten */
-  padding: 10px 30px;
+  display: flex;          /* Setzt Flexbox ein */
+  align-items: center;    /* Zentriert den Text und das Symbol vertikal */
+  justify-content: space-between; /* Platziert den Pfeil am rechten Rand */
+  padding: 10px 15px;     /* Beispiel-Padding, um Platz um den Link herum zu schaffen */
+  text-decoration: none;  /* Entfernt die Unterstreichung */
+  color: #333;            /* Linkfarbe */
   font-weight: bold;
-  color: #333;
-  text-align: center;
-  text-decoration: none;
+}
+
+/* Allgemeine Stile für die Pfeile */
+.nav-links a::after {
+  content: '>';           /* Pfeil-Symbol */
+  margin-left: 0.5rem;    /* Abstand zwischen Text und Pfeil */
+  font-weight: bold;      /* Optional: Fettdruck für bessere Sichtbarkeit */
+  color: #333;            /* Pfeilfarbe */
+}
+
+/* Dark Mode spezifische Stile */
+html.dark .nav-links a::after {
+  color: #e2e2e2;          /* Pfeilfarbe im Dark Modus (hell) */
 }
 
 .nav-links a:hover,
@@ -309,7 +329,6 @@ header {
 .expanded {
   left: 10px; /* Setze das Menü auf die sichtbare Position */
 }
-
 
 
 /* ANCHOR blog-post img */

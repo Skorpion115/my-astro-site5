@@ -19,7 +19,11 @@ document.addEventListener("astro:page-load", () => {
 });
 
 document.addEventListener("astro:after-swap", () => {
-  localStorage.theme === "dark"
-    ? document.documentElement.classList.add("dark")
-    : document.documentElement.classList.add("light");
+  if (localStorage.theme === "dark") {
+    document.documentElement.classList.add("dark");
+    document.documentElement.classList.remove("light");
+  } else {
+    document.documentElement.classList.add("light");
+    document.documentElement.classList.remove("dark");
+  }
 });

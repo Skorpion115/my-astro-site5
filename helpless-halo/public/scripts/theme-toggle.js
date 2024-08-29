@@ -4,6 +4,11 @@ document.addEventListener("astro:page-load", () => {
     element.classList.toggle("dark");
 
     const isDark = element.classList.contains("dark");
+    if (isDark) {
+      element.classList.remove("light");
+    } else {
+      element.classList.add("light");
+    }
     localStorage.setItem("theme", isDark ? "dark" : "light");
   };
 
