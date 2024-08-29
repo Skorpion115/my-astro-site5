@@ -159,6 +159,30 @@ a:focus, button:focus, .nav-links a:focus {
   color: #ff9776;
 }
 
+/* ANCHOR ThemeToggle Button Styling */
+#themeToggle {
+  position: absolute;
+  top: 1px; /* Gleiche Höhe wie das Hamburger-Menü */
+  right: 30px; /* Abstand vom rechten Bildschirmrand */
+  z-index: 20; /* Sicherstellen, dass der Schalter über anderen Elementen liegt */
+  border: 0;
+  background: none;
+  padding: 0;
+}
+
+.sun {
+  fill: black;
+}
+.moon {
+  fill: transparent;
+}
+
+:global(.dark) .sun {
+  fill: transparent;
+}
+:global(.dark) .moon {
+  fill: white;
+}
 
 author {
   padding: 0.5rem 0.9rem;
@@ -190,8 +214,8 @@ button:hover {
 
 /* ANCHOR Hamburger-Menü immer sichtbar */
 .hamburger {
-  position: static;
-  top: 20px;
+  position: absolute;
+  top: 10px;
   left: 20px;
   cursor: pointer;
   z-index: 11; /* So plaziert das der Schalter nicht verdeckt wird */
