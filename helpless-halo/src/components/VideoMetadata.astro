@@ -1,11 +1,12 @@
 ---
-const videoData = {
-  title: "Joe Satriani - Ten Words Guitar Lesson+Tab",
-  description: "Lerne das Gitarrenstück 'Ten Words' von Joe Satriani mit dieser detaillierten Gitarrenstunde.",
-  thumbnail_loc: "https://i.ytimg.com/vi/8ucTzPOBzAo/hqdefault.jpg", // URL des Vorschaubildes
-  publication_date: "2021-07-17T00:00:00+01:00", // Veröffentlichungsdatum im ISO 8601 Format
-  duration: "PT3M59S", // Dauer des Videos im ISO 8601 Format
-  content_loc: "https://www.youtube.com/embed/8ucTzPOBzAo" // URL des eingebetteten Videos
-};
+const { title, description, thumbnail_loc, publication_date, duration, content_loc } = Astro.props;
 ---
 
+<!-- RDFa-Markup für das Video -->
+<meta property="name" content={title} />
+<meta property="description" content={description} />
+<meta property="thumbnailUrl" content={thumbnail_loc} />
+<meta property="uploadDate" content={publication_date} />
+<meta property="duration" content={duration} />
+<meta property="contentUrl" content={content_loc} />
+<meta property="embedUrl" content={content_loc} />

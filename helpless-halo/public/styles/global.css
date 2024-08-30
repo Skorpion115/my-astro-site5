@@ -34,6 +34,11 @@ html.dark {
   color: #e2e2e2;
 }
 
+/* Dark Mode spezifische Anpassung für .contact-text */
+html.dark .container1 .contact-text {
+  color: #e2e2e2 !important; /* Helle Textfarbe für den Paragraphen im Dark Mode */
+}
+
 /* Hamburger-Menü Linien im Dark Mode */
 html.dark .hamburger .line {
   background-color: #ffffff; /* Weiße Linien im Dark Mode */
@@ -259,7 +264,7 @@ button:hover {
 
 /* Aktiv-Zustand */
 .hamburger.active .line {
-  background-color: #00ff00; /* Grün für den aktiven Zustand */
+  background-color: #12aa12; /* Grün für den aktiven Zustand */
 }
 
 /* Sicherstellen, dass die Linien immer sichtbar bleiben */
@@ -397,13 +402,13 @@ html.dark .nav-links a::after {
 
 /* ANCHOR css für index.astro */
 
-/* ANCHOR Überschrift */
+/* Überschrift */
 .firmenname {
   text-align: center;
   font-size: 1rem;
 }
 
-/* ANCHOR Responsives Titelbild bei Index */
+/* Responsives Titelbild bei Index */
 
 img {
   width: 100%;
@@ -438,13 +443,13 @@ img {
   flex: 1;
 }
 
-/* Card Position*/
+/* ANCHOR Card Position*/
 
 .marchandise-2 .link-card-grid {
   padding: 0.5rem;
 }
 
-/* ANCHOR Bilder von marchandise-2 */
+/* Bilder von marchandise-2 */
 
 .marchandise.marchandise-2 img {
   max-width: 30%;
@@ -551,7 +556,8 @@ label {
   color: #555;
 }
 
-/* ANCHOR Formular */
+
+/* Formular */
 
 fieldset legend {
   color: #333;
@@ -644,15 +650,6 @@ textarea {
 .btn.btn-primary:hover {
   background-color: rgb(140, 236, 134);
   color: black;
-}
-
-.link-blue {
-  color: #007bff;
-  text-decoration: none;
-}
-
-.link-blue:hover {
-  text-decoration: underline;
 }
 
 /* Tabelle 2 Stile */

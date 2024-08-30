@@ -9,6 +9,7 @@ const keywords = "e-gitarrenunterricht für rockgitarre, ten words - joe satrian
 const pageUrl = "https://www.musicstudio-ziebart.de/e-gitarrenunterricht/"
 const SITE_URL = process.env.SITE_URL || "https://www.musicstudio-ziebart.de";
 
+// RDFa-Markup für das Video nur auf dieser Seite
 // Video-Daten
 const videoData = {
   loc: `${SITE_URL}/e-gitarrenunterricht/`, // URL der Seite, auf der das Video eingebettet ist
@@ -67,11 +68,6 @@ const videoData = {
       </div>
     </div>
   </div>
-  <!-- RDFa-Markup für das Video nur auf dieser Seite -->
-  <head>
-    <VideoMetadata />
-  </head>
-
   <article>
     <p>
       <img
@@ -151,6 +147,7 @@ const videoData = {
       <a href="/unterricht/" class="normal-links">zurück</a>
     </p>
   </article>
+  <VideoMetadata />
   <YouTube />
 </BaseLayout>
 
