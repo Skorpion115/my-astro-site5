@@ -21,9 +21,10 @@ const {
   ogType,
   twitterTitle,
   twitterDescription,
-  twitterUrl
+  twitterUrl,
 } = Astro.props;
 ---
+
 <html lang="de">
   <head>
     <meta charset="utf-8" />
@@ -48,7 +49,10 @@ const {
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={twitterTitle || pageTitle} />
-    <meta name="twitter:description" content={twitterDescription || description} />
+    <meta
+      name="twitter:description"
+      content={twitterDescription || description}
+    />
     <meta name="twitter:url" content={twitterUrl || href} />
     <meta
       name="google-site-verification"
@@ -74,6 +78,7 @@ const {
     <GoogleScripts />
     <ViewTransitions />
     <ThemeIcon />
+    <Header />
   </head>
   <body>
     <cookie-banner>
@@ -93,8 +98,6 @@ const {
         style="display:none;visibility:hidden"></iframe></noscript
     >
     {/* End Google Tag Manager (noscript */}
-
-    <Header />
     <h1 transition:animate="slide">{pageTitle}</h1>
 
     <slot />
