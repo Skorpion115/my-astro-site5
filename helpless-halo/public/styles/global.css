@@ -291,6 +291,8 @@ header {
   transition: left 0.3s ease; /* Animationsdauer und -typ */
   z-index: 10;
   will-change: transform;
+  -webkit-overflow-scrolling: touch; /* Sorgt für natürliches Scrollen auf mobilen Geräten */
+  scroll-behavior: smooth; /* Sorgt für sanfteres Scrollen */
 }
 
 /* Anpassungen für den Landscape-Modus */
