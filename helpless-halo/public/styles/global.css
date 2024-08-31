@@ -290,6 +290,14 @@ header {
   overflow-y: auto; /* Ermöglicht das vertikale Scrollen, falls notwendig */
   transition: left 0.3s ease; /* Animationsdauer und -typ */
   z-index: 10;
+  will-change: transform;
+}
+
+/* Anpassungen für den Landscape-Modus */
+@media screen and (orientation: landscape) {
+  .nav-links {
+    max-height: 50vh; /* Begrenze die Höhe des Menüs auf 50% der Viewport-Höhe im Querformat */
+  }
 }
 
 /* Navigations Links in einer Flexbox bei Light Mode */
