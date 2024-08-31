@@ -1,351 +1,215 @@
 ---
-import ThemeIcon from "@/components/ThemeIcon.astro";
-import { ViewTransitions } from "astro:transitions";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import Footer2 from "../components/Footer2.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "Schülermaterial";
+const description = "Schüler download";
+const pageUrl = "https://www.musicstudio-ziebart.de/pupils-download/";
 ---
 
-<!doctype html>
-<html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{pageTitle}</title>
-    <meta name="description" content="Gespielte Titel" />
-    <meta name="keywords" content="schülermaterial" />
-    <link rel="stylesheet" href="/styles/global.css" />
-    <!--
-    <link rel="manifest" href="/manifest.json" /> -->
-    <meta
-      name="google-site-verification"
-      content="Zitul6WICKD7zrzgptxGVrh2GEhozasdEM_d1tGi2aw"
-    />
-    <meta
-      name="author"
-      content="Musicstudio Ziebart, postmaster@musicstudio-ziebart.de"
-    />
-    <meta
-      name="DC.Publisher"
-      content="Musicstudio Ziebart, postmaster@musicstudio-ziebart.de"
-    />
-    <meta name="page-topic" content="Musikunterricht, Musikschule, Bildung" />
-    <meta name="DC.rights" content="Alle Rechte liegen beim Author" />
-    <meta name="revisit-after" content="7 days" />
-    <meta name="robots" content="max-snippet:-1, noindex,follow" />
-    <meta name="theme-color" content="#191919" />
-    <ThemeIcon />
-    <ViewTransitions />
-    <Header />
-    <style>
-      #download2 {
-        display: block;
-        width: 96%;
-        max-width: 100%;
-        margin: 7% auto;
-        padding: 1.25rem;
-        text-align: center;
-        font-style: normal;
-      }
+<BaseLayout pageTitle={pageTitle} description={description} href={pageUrl}>
+  <section id="download2">
+    <h2 transition:animate="slide">Gespielte Titel</h2>
+    <article>
+      <br />
+      <br />
+      <table class="basis-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Titel</th>
+            <th>Komponist</th>
+            <th>Instrument</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Where Do You Go To My Lovely</td>
+            <td>Peter Sarstedt</td>
+            <td>Gitarre</td>
+          </tr>
 
-      #download2 article {
-        display: inline-block;
-        width: 96%;
-        vertical-align: top;
-      }
+          <tr>
+            <td>
+              <a
+                href="/Songs/Peter Sarstedt - Where Do You Go To My Lovely.mp3"
+                target="_blank"
+                class="normal-links">anhören</a
+              >
+            </td>
+            <td>
+              <a
+                href="/bilder/Where Do You Go To My Lovely - Guitar.pdf"
+                target="_blank"
+                class="normal-links">ansehen</a
+              >
+            </td>
+            <td>
+              <a
+                href="/zip_download/Where Do You Go To My Lovely - Peter Sarstedt.zip"
+                class="normal-links">download 7,89 MB</a
+              >
+            </td>
+          </tr>
 
-      /* ANCHOR Neue basis-table CSS */
+          <tr>
+            <td>2</td>
+            <td>Maybe</td>
+            <td>Thom Pace</td>
+            <td>Gitarre</td>
+          </tr>
+          <tr>
+            <td>
+              <a
+                href="/Songs/Thom Pace - Maybe.mp3"
+                target="_blank"
+                class="normal-links">anhören</a
+              >
+            </td>
+            <td>
+              <a
+                href="/bilder/Maybe - Guitar.pdf"
+                target="_blank"
+                class="normal-links">ansehen</a
+              >
+            </td>
+            <td>
+              <a href="/zip_download/Maybe.zip" class="normal-links"
+                >download 2,789 MB</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Ruby</td>
+            <td>Kenny Rogers</td>
+            <td>Gitarre</td>
+          </tr>
+          <tr>
+            <td>
+              <a
+                href="/Songs/Kenny Rogers - Ruby.mp3"
+                target="_blank"
+                class="normal-links">anhören</a
+              >
+            </td>
+            <td>
+              <a
+                href="/bilder/Ruby - Rhythmus Guitar.pdf"
+                target="_blank"
+                class="normal-links">ansehen</a
+              >
+            </td>
+            <td>
+              <a href="/zip_download/Ruby.zip" class="normal-links"
+                >download 3,13 MB</a
+              >
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- Variante A -->
 
-      table.basis-table {
-        border-collapse: collapse;
-        margin: 32px 0;
-        min-width: 400px;
-        border-radius: 5px 5px 0 0;
-        font-weight: normal;
-        overflow: hidden;
-        text-align: left;
-      }
-
-      table.basis-table thead tr {
-        background-color: rebeccapurple;
-        color: white;
-      }
-
-      table.basis-table th,
-      table.basis-table td {
-        padding: 12px 16px;
-      }
-
-      table.basis-table tbody tr {
-        border-bottom: 1px solid #ccc;
-      }
-
-      table.basis-table tbody tr:last-of-type {
-        border-bottom: 2px solid rebeccapurple;
-      }
-
-      table.basis-table tbody tr.active {
-        font-weight: bold;
-        color: rebeccapurple;
-      }
-
-      /* ANCHOR basis-card CSS */
-      .basis-card {
-        display: none;
-        width: 100%;
-        margin-bottom: 20px;
-      }
-
-      .basis-header {
-        background-color: rebeccapurple;
-        color: white;
-        border-radius: 5px 5px 0 0;
-        padding: 10px;
-        font-weight: bold;
-      }
-
-      .basis-card div {
-        padding: 10px;
-        border-bottom: 1px solid #ccc;
-      }
-
-      .basis-card div:last-of-type {
-        border-bottom: 2px solid rebeccapurple;
-      }
-
-      .basis-card div > span {
-        color: rgb(218, 54, 54);
-        font-weight: bold;
-      }
-
-      @media screen and (max-width: 578px) {
-        table.basis-table {
-          display: none;
-        }
-
-        .basis-card {
-          display: block;
-        }
-      }
-
-      #download2 article p {
-        margin: 0em;
-        text-align: left;
-      }
-    </style>
-  </head>
-  <body>
-    <section id="download2">
-      <h2 transition:animate="slide">Gespielte Titel</h2>
-      <article>
-        <br />
-        <br />
-        <table class="basis-table">
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Titel</th>
-              <th>Komponist</th>
-              <th>Instrument</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>Where Do You Go To My Lovely</td>
-              <td>Peter Sarstedt</td>
-              <td>Gitarre</td>
-            </tr>
-
-            <tr>
-              <td>
-                <a
-                  href="/Songs/Peter Sarstedt - Where Do You Go To My Lovely.mp3"
-                  target="_blank"
-                  class="normal-links">anhören</a
-                >
-              </td>
-              <td>
-                <a
-                  href="/bilder/Where Do You Go To My Lovely - Guitar.pdf"
-                  target="_blank"
-                  class="normal-links">ansehen</a
-                >
-              </td>
-              <td>
-                <a
-                  href="/zip_download/Where Do You Go To My Lovely - Peter Sarstedt.zip"
-                  class="normal-links">download 7,89 MB</a
-                >
-              </td>
-            </tr>
-
-            <tr>
-              <td>2</td>
-              <td>Maybe</td>
-              <td>Thom Pace</td>
-              <td>Gitarre</td>
-            </tr>
-            <tr>
-              <td>
-                <a
-                  href="/Songs/Thom Pace - Maybe.mp3"
-                  target="_blank"
-                  class="normal-links">anhören</a
-                >
-              </td>
-              <td>
-                <a
-                  href="/bilder/Maybe - Guitar.pdf"
-                  target="_blank"
-                  class="normal-links">ansehen</a
-                >
-              </td>
-              <td>
-                <a href="/zip_download/Maybe.zip" class="normal-links"
-                  >download 2,789 MB</a
-                >
-              </td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>Ruby</td>
-              <td>Kenny Rogers</td>
-              <td>Gitarre</td>
-            </tr>
-            <tr>
-              <td>
-                <a
-                  href="/Songs/Kenny Rogers - Ruby.mp3"
-                  target="_blank"
-                  class="normal-links">anhören</a
-                >
-              </td>
-              <td>
-                <a
-                  href="/bilder/Ruby - Rhythmus Guitar.pdf"
-                  target="_blank"
-                  class="normal-links">ansehen</a
-                >
-              </td>
-              <td>
-                <a href="/zip_download/Ruby.zip" class="normal-links"
-                  >download 3,13 MB</a
-                >
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <!-- Variante A -->
-
-        <div class="basis-card">
-          <div class="basis-header">ID: 1</div>
-          <div><span>Titel:</span> Where Do You Go To My Lovely</div>
-          <div><span>Komponist:</span> Peter Sarstedt</div>
-          <div><span>Instrument:</span> Gitarre</div>
-          <div>
-            <span>anhören:</span><a
-              href="/Songs/Peter Sarstedt - Where Do You Go To My Lovely.mp3"
-              target="_blank"
-              class="normal-links"
-            >
-              anhören</a
-            >
-          </div>
-          <div>
-            <span>ansehen:</span><a
-              href="/bilder/Where Do You Go To My Lovely - Guitar.pdf"
-              target="_blank"
-              class="normal-links"
-            >
-              ansehen</a
-            >
-          </div>
-          <div>
-            <span>Download:</span><a
-              href="/zip_download/Where Do You Go To My Lovely - Peter Sarstedt.zip"
-              class="normal-links"
-            >
-              7,89 MB</a
-            >
-          </div>
+      <div class="basis-card">
+        <div class="basis-header">ID: 1</div>
+        <div><span>Titel:</span> Where Do You Go To My Lovely</div>
+        <div><span>Komponist:</span> Peter Sarstedt</div>
+        <div><span>Instrument:</span> Gitarre</div>
+        <div>
+          <span>anhören:</span><a
+            href="/Songs/Peter Sarstedt - Where Do You Go To My Lovely.mp3"
+            target="_blank"
+            class="normal-links"
+          >
+            anhören</a
+          >
         </div>
+        <div>
+          <span>ansehen:</span><a
+            href="/bilder/Where Do You Go To My Lovely - Guitar.pdf"
+            target="_blank"
+            class="normal-links"
+          >
+            ansehen</a
+          >
+        </div>
+        <div>
+          <span>Download:</span><a
+            href="/zip_download/Where Do You Go To My Lovely - Peter Sarstedt.zip"
+            class="normal-links"
+          >
+            7,89 MB</a
+          >
+        </div>
+      </div>
 
-        <div class="basis-card">
-          <div class="basis-header">ID: 2</div>
-          <div><span>Titel:</span> Maybe</div>
-          <div><span>Komponist:</span> Thom Pace</div>
-          <div><span>Instrument:</span> Gitarre</div>
-          <div>
-            <span>anhören:</span><a
-              href="/Songs/Thom Pace - Maybe.mp3"
-              target="_blank"
-              class="normal-links"
-            >
-              anhören</a
-            >
-          </div>
-          <div>
-            <span>ansehen:</span><a
-              href="/bilder/Maybe - Guitar.pdf"
-              target="_blank"
-              class="normal-links"
-            >
-              ansehen</a
-            >
-          </div>
-          <div>
-            <span>Download:</span><a
-              href="/zip_download/Maybe.zip"
-              class="normal-links"
-            >
-              2,789 MB</a
-            >
-          </div>
+      <div class="basis-card">
+        <div class="basis-header">ID: 2</div>
+        <div><span>Titel:</span> Maybe</div>
+        <div><span>Komponist:</span> Thom Pace</div>
+        <div><span>Instrument:</span> Gitarre</div>
+        <div>
+          <span>anhören:</span><a
+            href="/Songs/Thom Pace - Maybe.mp3"
+            target="_blank"
+            class="normal-links"
+          >
+            anhören</a
+          >
         </div>
-        <div class="basis-card">
-          <div class="basis-header">ID: 3</div>
-          <div><span>Titel:</span> Ruby</div>
-          <div><span>Komponist:</span> Kenny Rogers</div>
-          <div><span>Instrument:</span> Gitarre</div>
-          <div>
-            <span>anhören:</span><a
-              href="/Songs/Kenny Rogers - Ruby.mp3"
-              target="_blank"
-              class="normal-links"
-            >
-              anhören</a
-            >
-          </div>
-          <div>
-            <span>ansehen:</span><a
-              href="/bilder/Ruby - Rhythmus Guitar.pdf"
-              target="_blank"
-              class="normal-links"
-            >
-              ansehen</a
-            >
-          </div>
-          <div>
-            <span>Download:</span><a
-              href="/zip_download/Ruby.zip"
-              class="normal-links"
-            >
-              3,13 MB</a
-            >
-          </div>
+        <div>
+          <span>ansehen:</span><a
+            href="/bilder/Maybe - Guitar.pdf"
+            target="_blank"
+            class="normal-links"
+          >
+            ansehen</a
+          >
         </div>
-        <br />
-        <p>
-          <a href="/" class="normal-links">home</a>
-        </p>
-      </article>
-    </section>
-    <Footer />
-    <br />
-    <Footer2 />
-    <script src="/scripts/menu.js" is:inline async></script>
-  </body>
-</html>
+        <div>
+          <span>Download:</span><a
+            href="/zip_download/Maybe.zip"
+            class="normal-links"
+          >
+            2,789 MB</a
+          >
+        </div>
+      </div>
+      <div class="basis-card">
+        <div class="basis-header">ID: 3</div>
+        <div><span>Titel:</span> Ruby</div>
+        <div><span>Komponist:</span> Kenny Rogers</div>
+        <div><span>Instrument:</span> Gitarre</div>
+        <div>
+          <span>anhören:</span><a
+            href="/Songs/Kenny Rogers - Ruby.mp3"
+            target="_blank"
+            class="normal-links"
+          >
+            anhören</a
+          >
+        </div>
+        <div>
+          <span>ansehen:</span><a
+            href="/bilder/Ruby - Rhythmus Guitar.pdf"
+            target="_blank"
+            class="normal-links"
+          >
+            ansehen</a
+          >
+        </div>
+        <div>
+          <span>Download:</span><a
+            href="/zip_download/Ruby.zip"
+            class="normal-links"
+          >
+            3,13 MB</a
+          >
+        </div>
+      </div>
+      <br />
+      <p>
+        <a href="/" class="normal-links">home</a>
+      </p>
+    </article>
+  </section>
+</BaseLayout>
