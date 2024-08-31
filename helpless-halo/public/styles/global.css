@@ -280,13 +280,14 @@ header {
   top: 60px;
   left: -250px; /* Setze das Menü initial außerhalb des Bildschirms */
   width: 250px;
-  height: auto;
+  max-height: 70vh; /* Begrenze die Höhe des Menüs auf 70% der Viewport-Höhe */
   background-color: #ffffff;
   display: flex;
   flex-direction: column; /* Links untereinander anzeigen */
   justify-content: flex-start; /* Links am Anfang der Spalte ausrichten */
   align-items: stretch; /* Links über die gesamte Breite ausdehnen */
   padding: 2rem 0; /* 0.5rem oben und unten, kein Abstand seitlich */
+  overflow-y: auto; /* Ermöglicht das vertikale Scrollen, falls notwendig */
   transition: left 0.3s ease; /* Animationsdauer und -typ */
   z-index: 10;
 }
@@ -296,7 +297,7 @@ header {
   display: flex;          /* Setzt Flexbox ein */
   align-items: center;    /* Zentriert den Text und das Symbol vertikal */
   justify-content: space-between; /* Platziert den Pfeil am rechten Rand */
-  padding: 6px 15px;     /* Beispiel-Padding, um Platz um den Link herum zu schaffen */
+  padding: 10px 15px;     /* Beispiel-Padding, um Platz um den Link herum zu schaffen */
   text-decoration: none;  /* Entfernt die Unterstreichung */
   color: #000;            /* Linkfarbe */
   font-weight: bold;
