@@ -34,28 +34,10 @@ html.dark {
   color: #e2e2e2;
 }
 
-/* Dark Mode spezifische Anpassung für .contact-text */
-html.dark .container1 .contact-text {
-  color: #e2e2e2 !important; /* Helle Textfarbe für den Paragraphen im Dark Mode */
-}
-
 /* Hamburger-Menü Linien im Dark Mode */
 html.dark .hamburger .line {
   background-color: #ffffff; /* Weiße Linien im Dark Mode */
 }
-
-/* ANCHOR: Sun und Moon im Dark Mode */
-html.dark #themeToggle .sun {
-  fill: transparent; /* Verstecke die Sonne im Dark Mode */
-}
-
-html.dark #themeToggle .moon {
-  fill: #f1c40f;
-}
-/*
-html.dark #themeToggle {
-  background-color: transparent; 
-} */
 
 html.dark #themeToggle svg {
   fill: none; /* Falls das SVG selbst gefüllt werden soll */
@@ -141,18 +123,25 @@ p {
   font-style: italic;
 }
 
-/* Navigation im Dark Mode */
+/* Navigation im Dark Mode, weißer Hintergrund */
 .dark .nav-links {
-  background-color: #333; /* Dunkler Hintergrund für die Navigation */
+  background-color: #ffffff; /* Heller Hintergrund für die Navigation */
 }
 
+/* Schwarzer Text im Dark Mode */
 .dark .nav-links a {
-  color: #ffffff; /* Heller Text für maximale Lesbarkeit */
+  color: #000000;
 }
 
+/* Dunkler Hover im Dark Mode*/
 .dark .nav-links a:hover,
 .dark .nav-links a:focus {
-  background-color: #444; /* Leicht dunkler beim Hover */
+  background-color: #b5eeb5; /* Leicht dunkler beim Hover */
+}
+
+/* Schwarze Pfeilfarbe im Dark Mode */
+html.dark .nav-links a::after {
+  color: #000000;
 }
 
 .dark .nav-links a:active {
@@ -302,33 +291,30 @@ header {
   z-index: 10;
 }
 
-/* Navigations Links */
+/* Navigations Links in einer Flexbox bei Light Mode */
 .nav-links a {
   display: flex;          /* Setzt Flexbox ein */
   align-items: center;    /* Zentriert den Text und das Symbol vertikal */
   justify-content: space-between; /* Platziert den Pfeil am rechten Rand */
-  padding: 10px 15px;     /* Beispiel-Padding, um Platz um den Link herum zu schaffen */
+  padding: 6px 15px;     /* Beispiel-Padding, um Platz um den Link herum zu schaffen */
   text-decoration: none;  /* Entfernt die Unterstreichung */
-  color: #333;            /* Linkfarbe */
+  color: #000;            /* Linkfarbe */
   font-weight: bold;
+  font-size: 1.0rem;
 }
 
-/* Allgemeine Stile für die Pfeile */
+/* Allgemeine Stile für die Pfeile im Light Mode */
 .nav-links a::after {
   content: '>';           /* Pfeil-Symbol */
   margin-left: 0.5rem;    /* Abstand zwischen Text und Pfeil */
-  font-weight: bold;      /* Optional: Fettdruck für bessere Sichtbarkeit */
-  color: #333;            /* Pfeilfarbe */
+  font-weight: normal;      /* Optional: Fettdruck für bessere Sichtbarkeit */
+  color: #000;            /* Pfeilfarbe */
 }
 
-/* Dark Mode spezifische Stile */
-html.dark .nav-links a::after {
-  color: #e2e2e2;          /* Pfeilfarbe im Dark Modus (hell) */
-}
-
+/* Dezente Hover im Light Modus */
 .nav-links a:hover,
 .nav-links a:focus {
-  background-color: #f0f0f0; /* Dezente Hervorhebung beim Hover */
+  background-color: #b5eeb5; /* Dezente Hervorhebung beim Hover */
 }
 
 .expanded {
