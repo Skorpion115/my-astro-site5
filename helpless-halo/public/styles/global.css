@@ -144,7 +144,7 @@ p {
   color: #000000;
 }
 
-/* Dunkler Hover im Dark Mode*/
+/* Grüner Hover im Dark Mode*/
 .dark .nav-links a:hover,
 .dark .nav-links a:focus {
   background-color: #b5eeb5;
@@ -153,7 +153,7 @@ p {
 
 /* Schwarze Pfeilfarbe im Dark Mode */
 html.dark .nav-links a::after {
-  color: #000000;
+  color: #000;
 }
 
 .dark .nav-links a:active {
@@ -220,12 +220,12 @@ html.dark .moon {
   fill: #f1c40f;
   /* Zeige den Mond in Gelb im Dark Mode */
 }
-
+/*
 author {
   padding: 0.5rem 0.9rem;
   font-size: 0.9rem;
   font-style: italic;
-}
+} */
 
 /* ANCHOR button Formatierung */
 
@@ -290,7 +290,7 @@ header {
   z-index: 1;
 }
 
-/* ANCHOR Navigation Styles Menu */
+/* ANCHOR Navigation Styles Menu allgemein für beide Modes */
 .nav-links {
   position: fixed;
   top: 60px;
@@ -323,6 +323,7 @@ header {
   font-size: 1rem;
 }
 
+/* Pfeile im Light Mode */
 .nav-links a::after {
   content: '>';
   margin-left: 0.5rem;
@@ -330,6 +331,7 @@ header {
   color: #000;
 }
 
+/* grüner Hover wird benutzt */
 .nav-links a:hover,
 .nav-links a:focus {
   background-color: #b5eeb5;
@@ -340,25 +342,6 @@ header {
 }
 
 /* ANCHOR Standard-Navigationsleiste */
-.navbar {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  background-color: #ffffff;
-}
-
-.navbar a {
-  padding: 10px 15px;
-  text-decoration: none;
-  color: #000;
-  font-weight: bold;
-  font-size: 1rem;
-}
-
-.navbar a:hover,
-.navbar a:focus {
-  background-color: #b5eeb5;
-}
 
 /* Media Queries für die responsive Navigation */
 @media screen and (max-width: 636px) {
@@ -384,6 +367,7 @@ header {
     display: none;
   }
   
+  /* Streifen oben und unten von dem Text der Navbar */
   .nav-links {
     position: static;
     display: flex;
@@ -405,9 +389,12 @@ header {
   .nav-links a {
     padding: 10px 15px;
     text-decoration: none;
-    color: #000;
-    font-weight: bold;
-    font-size: 1rem;
+    color: #333333;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Sanfter Übergang bei Hover */
+    border-bottom: 1px solid #e0e0e0; /* Optional: Dünne Linie unten für Struktur */
+    background-color: #f7f7f7;
   }
 }
   
