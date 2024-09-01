@@ -6,6 +6,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: "IBM";
   src: url("/fonts/OpenSans-Italic.woff2") format("woff2");
@@ -13,6 +14,7 @@
   font-style: italic;
   font-display: swap;
 }
+
 @font-face {
   font-family: "IBM";
   src: url("/fonts/OpenSans-Bold.woff2") format("woff2");
@@ -23,24 +25,29 @@
 
 /* ANCHOR Grundlegende Einstellungen */
 html {
-  background-color: #f1f5f9; /* heller Hintergrund für Light Modus */
-  color: #000; /* Dunklerer Text für besseren Kontrast */
+  background-color: #f1f5f9;
+  /* heller Hintergrund für Light Modus */
+  color: #000;
+  /* Dunklerer Text für besseren Kontrast */
   font-size: 100%;
 }
 
 /* ANCHOR: Darkmode CSS */
 html.dark {
-  background-color: #222; /* dunkler Hintergrund für Dark Modus */
+  background-color: #222;
+  /* dunkler Hintergrund für Dark Modus */
   color: #e2e2e2;
 }
 
 /* Hamburger-Menü Linien im Dark Mode */
 html.dark .hamburger .line {
-  background-color: #ffffff; /* Weiße Linien im Dark Mode */
+  background-color: #ffffff;
+  /* Weiße Linien im Dark Mode */
 }
 
 html.dark #themeToggle svg {
-  fill: none; /* Falls das SVG selbst gefüllt werden soll */
+  fill: none;
+  /* Falls das SVG selbst gefüllt werden soll */
 }
 
 /* ANCHOR Custom Properties */
@@ -64,7 +71,10 @@ body {
 }
 
 /* ANCHOR Sicherstellen, dass keine Transparenzeffekte die Lesbarkeit beeinträchtigen */
-body, .nav-links, .hamburger, .normal-links {
+body,
+.nav-links,
+.hamburger,
+.normal-links {
   opacity: 1;
 }
 
@@ -125,7 +135,8 @@ p {
 
 /* Navigation im Dark Mode, weißer Hintergrund */
 .dark .nav-links {
-  background-color: #ffffff; /* Heller Hintergrund für die Navigation */
+  background-color: #ffffff;
+  /* Heller Hintergrund für die Navigation */
 }
 
 /* Schwarzer Text im Dark Mode */
@@ -136,7 +147,8 @@ p {
 /* Dunkler Hover im Dark Mode*/
 .dark .nav-links a:hover,
 .dark .nav-links a:focus {
-  background-color: #b5eeb5; /* Leicht dunkler beim Hover */
+  background-color: #b5eeb5;
+  /* Leicht dunkler beim Hover */
 }
 
 /* Schwarze Pfeilfarbe im Dark Mode */
@@ -145,13 +157,18 @@ html.dark .nav-links a::after {
 }
 
 .dark .nav-links a:active {
-  background-color: transparent; /* Keine Hintergrundfarbe beim Klicken im Dark Mode */
+  background-color: transparent;
+  /* Keine Hintergrundfarbe beim Klicken im Dark Mode */
   color: inherit;
 }
 
-a:focus, button:focus, .nav-links a:focus {
-  outline: none; /* Entfernt den blauen Umriss beim Fokussieren */
-  box-shadow: none; /* Entfernt eventuelle Schatteneffekte */
+a:focus,
+button:focus,
+.nav-links a:focus {
+  outline: none;
+  /* Entfernt den blauen Umriss beim Fokussieren */
+  box-shadow: none;
+  /* Entfernt eventuelle Schatteneffekte */
 }
 
 /* ANCHOR Im Dark Modus sind die Links in gold geschrieben funktioniert*/
@@ -173,28 +190,35 @@ a:focus, button:focus, .nav-links a:focus {
 /* ANCHOR ThemeToggle Button Styling */
 #themeToggle {
   position: absolute;
-  top: 0px; /* Gleiche Höhe wie das Hamburger-Menü */
-  right: 30px; /* Abstand vom rechten Bildschirmrand */
-  z-index: 20; /* Sicherstellen, dass der Schalter über anderen Elementen liegt */
+  top: 0px;
+  /* Gleiche Höhe wie das Hamburger-Menü */
+  right: 30px;
+  /* Abstand vom rechten Bildschirmrand */
+  z-index: 20;
+  /* Sicherstellen, dass der Schalter über anderen Elementen liegt */
   border: 0;
   background: none;
   padding: 0;
 }
 
 .sun {
-  fill: black; /* Schwarze Sonne im Light Mode */
+  fill: black;
+  /* Schwarze Sonne im Light Mode */
 }
 
 .moon {
-  fill: transparent; /* Transparent im Light Mode, damit sie unsichtbar ist */
+  fill: transparent;
+  /* Transparent im Light Mode, damit sie unsichtbar ist */
 }
 
 html.dark .sun {
-  fill: transparent; /* Verstecke die Sonne im Dark Mode */
+  fill: transparent;
+  /* Verstecke die Sonne im Dark Mode */
 }
 
 html.dark .moon {
-  fill: #f1c40f; /* Zeige den Mond in Gelb im Dark Mode */
+  fill: #f1c40f;
+  /* Zeige den Mond in Gelb im Dark Mode */
 }
 
 author {
@@ -202,6 +226,7 @@ author {
   font-size: 0.9rem;
   font-style: italic;
 }
+
 /* ANCHOR button Formatierung */
 
 button {
@@ -231,112 +256,166 @@ button:hover {
   top: 10px;
   left: 20px;
   cursor: pointer;
-  z-index: 11; /* So plaziert das der Schalter nicht verdeckt wird */
+  z-index: 11;
   background-color: transparent;
-  display: flex;
+  display: none; /* Standardmäßig ausgeblendet, da es nur in kleineren Ansichten sichtbar sein soll */
   flex-direction: column;
-  justify-content: center; /* Zentriert die Linien vertikal */
-  width: 2rem; /* Breite des Hamburger-Menüs */
-  height: 2rem; /* Höhe des Hamburger-Menüs */
-  cursor: pointer;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
 }
 
 .hamburger .line {
   display: block;
   width: 1.875rem;
   height: 0.25rem;
-  margin-bottom: 0.313rem; /* Abstand zwischen den Linien */
+  margin-bottom: 0.313rem;
   background-color: #000;
-  border-radius: 2px; /* Abgerundete Ecken */
+  border-radius: 2px;
   transition: background-color 0.3s ease;
 }
 
 /* Aktiv-Zustand */
 .hamburger.active .line {
-  background-color: #12aa12; /* Grün für den aktiven Zustand */
-}
-
-/* Sicherstellen, dass die Linien immer sichtbar bleiben */
-.hamburger.active .line {
-  display: block;
+  background-color: #12aa12;
 }
 
 /* ANCHOR Styles für die Header-Komponente */
-/* Positioniere den Header-Inhalt */
 header {
   position: relative;
   display: flex;
   align-items: center;
   padding: 10px;
-  padding-top: 60px; /* Anpassung je nach Größe der Icons und des Menüs */
-  position: relative;
-  z-index: 1; /* Sicherstellen, dass der Header über anderen Elementen liegt */
+  padding-top: 60px;
+  z-index: 1;
 }
 
-/* ANCHOR Navigation Styles Menu*/
-
+/* ANCHOR Navigation Styles Menu */
 .nav-links {
   position: fixed;
   top: 60px;
-  left: -250px; /* Setze das Menü initial außerhalb des Bildschirms */
+  left: -250px;
   width: 250px;
-  max-height: 70vh; /* Begrenze die Höhe des Menüs auf 70% der Viewport-Höhe */
+  max-height: 70vh;
   background-color: #ffffff;
   display: flex;
-  flex-direction: column; /* Links untereinander anzeigen */
-  justify-content: flex-start; /* Links am Anfang der Spalte ausrichten */
-  align-items: stretch; /* Links über die gesamte Breite ausdehnen */
-  padding: 2rem 0; /* 0.5rem oben und unten, kein Abstand seitlich */
-  overflow-y: auto; /* Ermöglicht das vertikale Scrollen, falls notwendig */
-  transition: left 0.3s ease; /* Animationsdauer und -typ */
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  padding: 2rem 0;
+  overflow-y: auto;
+  transition: left 0.3s ease;
   z-index: 10;
   will-change: transform;
-  -webkit-overflow-scrolling: touch; /* Sorgt für natürliches Scrollen auf mobilen Geräten */
-  scroll-behavior: smooth; /* Sorgt für sanfteres Scrollen */
-}
-
-/* Anpassungen für den Landscape-Modus */
-@media screen and (orientation: landscape) {
-  .nav-links {
-    max-height: 50vh; /* Begrenze die Höhe des Menüs auf 50% der Viewport-Höhe im Querformat */
-  }
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
 }
 
 /* Navigations Links in einer Flexbox bei Light Mode */
 .nav-links a {
-  display: flex;          /* Setzt Flexbox ein */
-  align-items: center;    /* Zentriert den Text und das Symbol vertikal */
-  justify-content: space-between; /* Platziert den Pfeil am rechten Rand */
-  padding: 10px 15px;     /* Beispiel-Padding, um Platz um den Link herum zu schaffen */
-  text-decoration: none;  /* Entfernt die Unterstreichung */
-  color: #000;            /* Linkfarbe */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #000;
   font-weight: bold;
-  font-size: 1.0rem;
+  font-size: 1rem;
 }
 
-/* Allgemeine Stile für die Pfeile im Light Mode */
 .nav-links a::after {
-  content: '>';           /* Pfeil-Symbol */
-  margin-left: 0.5rem;    /* Abstand zwischen Text und Pfeil */
-  font-weight: normal;      /* Optional: Fettdruck für bessere Sichtbarkeit */
-  color: #000;            /* Pfeilfarbe */
+  content: '>';
+  margin-left: 0.5rem;
+  font-weight: normal;
+  color: #000;
 }
 
-/* Dezente Hover im Light Modus */
 .nav-links a:hover,
 .nav-links a:focus {
-  background-color: #b5eeb5; /* Dezente Hervorhebung beim Hover */
+  background-color: #b5eeb5;
 }
 
 .expanded {
-  left: 10px; /* Setze das Menü auf die sichtbare Position */
+  left: 10px;
 }
 
+/* ANCHOR Standard-Navigationsleiste */
+.navbar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #ffffff;
+}
 
+.navbar a {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.navbar a:hover,
+.navbar a:focus {
+  background-color: #b5eeb5;
+}
+
+/* Media Queries für die responsive Navigation */
+@media screen and (max-width: 636px) {
+  .navbar {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    left: -250px;
+  }
+
+  .expanded {
+    left: 10px;
+  }
+}
+
+@media screen and (min-width: 637px) {
+  .hamburger {
+    display: none;
+  }
+  
+  .nav-links {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: auto;
+    padding: 0;
+    max-height: none;
+    overflow: visible;
+  }
+
+  /* Entfernt die Pfeile in der Desktop-Navigation */
+  .nav-links a::after {
+    content: '';
+  }
+
+  /* Navigations Links in einer Flexbox bei Light Mode */
+  .nav-links a {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+}
+  
 /* ANCHOR blog-post img */
 
 .blog-post img {
-  max-width: 300px; /* gewünschte maximale Breite */
+  max-width: 300px;
+  /* gewünschte maximale Breite */
   width: auto;
   height: auto;
 }
@@ -541,9 +620,11 @@ textarea {
   margin: 0 auto;
   padding: 5%;
   box-sizing: border-box;
-  background-color: #f9f9f9; /* Hellgrauer Hintergrund für das Formular */
+  background-color: #f9f9f9;
+  /* Hellgrauer Hintergrund für das Formular */
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Schatten um das Formular */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Schatten um das Formular */
 }
 
 label {
@@ -679,27 +760,33 @@ textarea {
     width: 100%;
     font-size: 1.125rem;
   }
+
   .table2 th,
   .table2 td {
     padding: 0.5rem;
   }
+
   .table2 thead {
     display: none;
   }
+
   .table2 tbody,
   .table2 tr,
   .table2 td {
     display: block;
     width: 100%;
   }
+
   .table2 tr {
     margin-bottom: 0.625rem;
   }
+
   .table2 td {
     text-align: right;
     padding-left: 50%;
     position: relative;
   }
+
   .table2 td::before {
     content: attr(data-label);
     position: absolute;
@@ -714,58 +801,59 @@ textarea {
 /* ANCHOR instrumentkauf.astro */
 
 .container2 {
-    /* 100 view width */
-    width: 100vw;
-    max-width: 100%;
-    /* view height kompletten viewport der verfügbar ist */
-    font-style: normal;
-    /* feste Höhe */
-    /* nebeneinander */
-    display: flex;
-    /* links starten */
-    justify-content: flex-start;
-    /* verticale Ausrichtung */
-    align-items: flex-start;
-    /* Zeilenumbruch möglich */
-    flex-wrap: wrap;
-    /* Für mehrere Element */
-    align-content: flex-start;
-  }
+  /* 100 view width */
+  width: 100vw;
+  max-width: 100%;
+  /* view height kompletten viewport der verfügbar ist */
+  font-style: normal;
+  /* feste Höhe */
+  /* nebeneinander */
+  display: flex;
+  /* links starten */
+  justify-content: flex-start;
+  /* verticale Ausrichtung */
+  align-items: flex-start;
+  /* Zeilenumbruch möglich */
+  flex-wrap: wrap;
+  /* Für mehrere Element */
+  align-content: flex-start;
+}
 
-  /* Tabelle für Sprungmarken */
-  .container2 table {
-    font-weight: bold;
-    text-align: center;
-    line-height: 3rem;
-    table-layout: auto;
-    width: 30%;
-    margin-left: 1.2rem;
-  }
-  /* ANCHOR Schriftgröße für die table */
-  /*
+/* Tabelle für Sprungmarken */
+.container2 table {
+  font-weight: bold;
+  text-align: center;
+  line-height: 3rem;
+  table-layout: auto;
+  width: 30%;
+  margin-left: 1.2rem;
+}
+
+/* ANCHOR Schriftgröße für die table */
+/*
   .artikel.artikel.artikel-1 table {
     font-size: 1.0rem;
   }*/
 
-  /* Container Inhalt */
-  .artikel {
-    padding: 0.625rem 1.25rem;
-  }
+/* Container Inhalt */
+.artikel {
+  padding: 0.625rem 1.25rem;
+}
 
-  /* Kindelelemente */
-  .artikel-1 {
-    flex: 34%;
-  }
+/* Kindelelemente */
+.artikel-1 {
+  flex: 34%;
+}
 
-  .artikel-2 {
-    flex: 33%;
-  }
+.artikel-2 {
+  flex: 33%;
+}
 
-  .artikel-3 {
-    flex: 33%;
-  }
+.artikel-3 {
+  flex: 33%;
+}
 
-  /* ANCHOR honorar.astro */
+/* ANCHOR honorar.astro */
 
 .container3 {
   font-style: normal;
@@ -807,12 +895,14 @@ textarea {
 
 /* Styling für die Coupon-Sektion */
 .coupon {
-  text-align: center; /* Optional: Bild zentrieren */
+  text-align: center;
+  /* Optional: Bild zentrieren */
 }
 
 /* Spezifisches Styling für das Coupon-Bild */
 .coupon img.coupon-image {
-  width: 100px; /* Passe hier die Größe an */
+  width: 100px;
+  /* Passe hier die Größe an */
   height: auto;
   margin-left: 1%;
   border-radius: 0.313rem;
@@ -1031,7 +1121,7 @@ table.basis-table tbody tr.active {
   border-bottom: 2px solid rebeccapurple;
 }
 
-.basis-card div > span {
+.basis-card div>span {
   color: rgb(218, 54, 54);
   font-weight: bold;
 }
@@ -1138,4 +1228,3 @@ table.basis-table tbody tr.active {
   font-weight: bold;
   color: rebeccapurple;
 }
-
