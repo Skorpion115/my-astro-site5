@@ -154,7 +154,7 @@ p {
 
 /* Schwarze Pfeilfarbe im Dark Mode */
 html.dark .nav-links a::after {
-  color: #000;
+  color: #f7f7f7;
 }
 
 .dark .nav-links a:active {
