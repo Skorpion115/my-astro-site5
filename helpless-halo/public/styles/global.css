@@ -254,7 +254,7 @@ button:hover {
   color: black;
 }
 
-/* ANCHOR Hamburger-Menü immer sichtbar */
+/* ANCHOR Hamburger-Menü i ab 636px sichtbar */
 .hamburger {
   position: absolute;
   top: 10px;
@@ -315,7 +315,7 @@ header {
   scroll-behavior: smooth;
 }
 
-/* Navigations Links in einer Flexbox bei Light Mode */
+/* Navigations Links in einer Flexbox bei Light Mode Textfarbe schwarz funktioniert */
 .nav-links a {
   display: flex;
   align-items: center;
@@ -324,6 +324,7 @@ header {
   text-decoration: none;
   font-weight: bold;
   font-size: 1rem;
+  color: #000000;
 }
 
 /* Pfeile im Light Mode */
@@ -533,7 +534,7 @@ img {
   flex: 1;
 }
 
-/* ANCHOR Card Position*/
+/* ANCHOR Card Position und Style*/
 
 .marchandise-2 .link-card-grid {
   padding: 0.5rem;
