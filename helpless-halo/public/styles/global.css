@@ -135,13 +135,14 @@ p {
 
 /* Navigation im Dark Mode, weißer Hintergrund */
 .dark .nav-links {
-  background-color: #ffffff;
+  background-color: #333;
   /* Heller Hintergrund für die Navigation */
 }
 
-/* Schwarzer Text im Dark Mode */
+/* Schwarzer Text im Dark Mode funktioniert */
 .dark .nav-links a {
-  color: #000000;
+  color: #f7f7f7;
+  background-color: #333333;
 }
 
 /* Grüner Hover im Dark Mode*/
@@ -293,7 +294,7 @@ header {
   z-index: 1;
 }
 
-/* ANCHOR Navigation Styles Menu allgemein für beide Modes */
+/* ANCHOR Navigation Styles Menu allgemein für beide Modes funktioniert*/
 .nav-links {
   position: fixed;
   top: 60px;
@@ -321,7 +322,6 @@ header {
   justify-content: space-between;
   padding: 10px 15px;
   text-decoration: none;
-  color: #000;
   font-weight: bold;
   font-size: 1rem;
 }
@@ -415,11 +415,11 @@ header {
     padding: 10px 15px;
     text-decoration: none;
     color: #333333;
+    background-color: #f7f7f7;
     font-weight: 500;
     font-size: 1.1rem;
     transition: background-color 0.3s ease, color 0.3s ease; /* Sanfter Übergang bei Hover */
     border-bottom: 1px solid #e0e0e0; /* Optional: Dünne Linie unten für Struktur */
-    background-color: #f7f7f7;
   }
 }
 
