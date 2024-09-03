@@ -255,7 +255,7 @@ button:hover {
   color: black;
 }
 
-/* ANCHOR Hamburger-Menü i ab 636px sichtbar */
+/* ANCHOR Hamburger-Menü für nav-links ab 636px sichtbar */
 
 .hamburger {
   position: absolute;
@@ -278,12 +278,6 @@ button:hover {
   background-color: #000;
   border-radius: 2px;
   transition: background-color 0.3s ease;
-}
-
-/* Aktiv-Zustand */
-
-.hamburger.active .line {
-  background-color: #12aa12;
 }
 
 /* ANCHOR Styles für die Header-Komponente */
@@ -340,17 +334,6 @@ header {
   color: #000;
 }
 
-/* grüner Hover wird benutzt */
-/*
-.nav-links a:hover,
-.nav-links a:focus {
-  background-color: #b5eeb5;
-} */
-/* keine Wirkung */
-/*
-.expanded {
-  left: 10px;
-} */
 /* ANCHOR Standard-Navigationsleiste */
 
 .navbar {
