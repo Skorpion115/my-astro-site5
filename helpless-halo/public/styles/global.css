@@ -478,14 +478,6 @@ header {
   border-bottom: 1px solid #e0e0e0; /* Optional: Dünne Linie unten für Struktur */
 }
 
-/* Pfeile im Light Mode */
-.nav-links-secondary a::after {
-  content: '>';
-  margin-left: 0.5rem;
-  font-weight: normal;
-  color: #000;
-}
-
 /* grüner Hover wird benutzt */
 .nav-links-secondary a:hover,
 .nav-links-secondary a:focus {
