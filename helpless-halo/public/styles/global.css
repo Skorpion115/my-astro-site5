@@ -225,6 +225,7 @@ html.dark .moon {
   fill: #f1c40f;
   /* Zeige den Mond in Gelb im Dark Mode */
 }
+
 /*
 author {
   padding: 0.5rem 0.9rem;
@@ -304,7 +305,8 @@ header {
   top: 60px;
   left: -250px;
   width: 250px;
-  height: 100vh; /* Vollbild-Höhe */
+  height: 100vh;
+  /* Vollbild-Höhe */
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -316,11 +318,13 @@ header {
   z-index: 10;
   -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
-  height: 100vh; /* Vollbild-Höhe für mobiles Menü */
+  height: 100vh;
+  /* Vollbild-Höhe für mobiles Menü */
 }
 
 .nav-links.expanded {
-  left: 0; /* Navigation sichtbar */
+  left: 0;
+  /* Navigation sichtbar */
 }
 
 
@@ -380,43 +384,58 @@ header {
 /* Für größere Bildschirme ab 637px */
 @media screen and (min-width: 637px) {
   .hamburger {
-    display: flex; /* Hamburger-Menü wird eingeblendet sonst wird es aufgeklappt */
+    display: flex;
+    /* Hamburger-Menü wird eingeblendet sonst wird es aufgeklappt */
   }
 
   /* Navigation standardmäßig ausgeblendet */
   .nav-links {
-    left: -250px; /* Standardmäßig ausgeblendet */
+    left: -250px;
+    /* Standardmäßig ausgeblendet */
   }
 
 
   /* Pfeile ausblenden */
   .nav-links a::after {
-    content: ''; /* Pfeile im Desktop-Modus ausblenden */
+    content: '';
+    /* Pfeile im Desktop-Modus ausblenden */
   }
 
   /* Pfeile in nav-links-secondary ausblenden */
   .nav-links-secondary a::after {
-    content: ''; /* Pfeile in der sekundären Navigation ausblenden */
+    content: '';
+    /* Pfeile in der sekundären Navigation ausblenden */
   }
 
   /* Streifen oben und unten von dem Text der Navbar */
   .nav-links {
-    position: fixed; /* Normaler Flow */
+    position: fixed;
+    /* Normaler Flow */
     top: 60px;
-    left: 0;
+    left: -250px;
     width: 250px;
-    max-height: 70vh;
-    overflow: auto;
+    height: calc(100vh - 60px);
+    /* Dynamische Höhe basierend auf der Viewport-Höhe */
+    background: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    align-items: stretch;
     padding: 2rem 0;
+    overflow-y: scroll;
+    /* Scrollen aktivieren */
+    transition: left 0.3s ease;
+    z-index: 10;
+    -webkit-overflow-scrolling: touch;
+    /* Sanftes Scrollen auf iOS */
+    scroll-behavior: smooth;
   }
 
   .nav-links.expanded {
-    left: 0; /* Navigation wird bei Aktivierung sichtbar */
+    left: 0;
+    /* Navigation wird bei Aktivierung sichtbar */
   }
-  
+
   /* Stile für die Links in der Navigation */
   .nav-links a {
     display: flex;
@@ -427,26 +446,30 @@ header {
     font-weight: bold;
     font-size: 1.1rem;
     color: #000000;
-  } 
+  }
 }
 
- /* Für kleinere Bildschirme unter 637px */
+/* Für kleinere Bildschirme unter 637px */
 @media screen and (max-width: 636px) {
   .nav-links {
-    left: -250px; /* Standardmäßig ausgeblendet */
+    left: -250px;
+    /* Standardmäßig ausgeblendet */
   }
 
   .hamburger {
-    display: flex; /* Hamburger-Menü wird angezeigt */
+    display: flex;
+    /* Hamburger-Menü wird angezeigt */
   }
 
   .nav-links.expanded {
-    left: 0; /* Navigation wird sichtbar bei Aktivierung */
+    left: 0;
+    /* Navigation wird sichtbar bei Aktivierung */
   }
 
   /* Pfeile anzeigen */
   .nav-links a::after {
-    content: '>'; /* Pfeile im mobilen Modus anzeigen */
+    content: '>';
+    /* Pfeile im mobilen Modus anzeigen */
   }
 }
 
@@ -455,7 +478,8 @@ header {
 .nav-links-secondary {
   position: static;
   display: flex;
-  flex-wrap: wrap; /* Ermöglicht das Umbrechen in eine neue Zeile */
+  flex-wrap: wrap;
+  /* Ermöglicht das Umbrechen in eine neue Zeile */
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
@@ -463,7 +487,8 @@ header {
   padding: 10px;
   max-height: none;
   overflow: visible;
-  border-top: 2px solid #ccc; /* Beispiel für eine Trennlinie zur oberen Navigation */
+  border-top: 2px solid #ccc;
+  /* Beispiel für eine Trennlinie zur oberen Navigation */
 }
 
 /* Navigations Links in einer Flexbox bei Light Mode */
@@ -474,8 +499,10 @@ header {
   background-color: #f7f7f7;
   font-weight: 500;
   font-size: 1.1rem;
-  transition: background-color 0.3s ease, color 0.3s ease; /* Sanfter Übergang bei Hover */
-  border-bottom: 1px solid #e0e0e0; /* Optional: Dünne Linie unten für Struktur */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  /* Sanfter Übergang bei Hover */
+  border-bottom: 1px solid #e0e0e0;
+  /* Optional: Dünne Linie unten für Struktur */
 }
 
 /* grüner Hover wird benutzt */
