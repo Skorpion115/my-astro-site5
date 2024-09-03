@@ -297,7 +297,7 @@ header {
   top: 60px;
   left: -250px;
   width: 250px;
-  max-height: none;
+  height: 100vh; /* Vollbild-Höhe */
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -307,10 +307,14 @@ header {
   overflow-y: auto;
   transition: left 0.3s ease;
   z-index: 10;
-  will-change: transform;
   -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
 }
+
+.nav-links.expanded {
+  left: 0; /* Navigation sichtbar */
+}
+
 
 /* Navigations Links in einer Flexbox bei Light Mode Textfarbe schwarz funktioniert */
 
@@ -322,7 +326,7 @@ header {
   text-decoration: none;
   font-weight: bold;
   font-size: 1rem;
-  color: #000000;
+  color: #000;
 }
 
 /* Pfeile im Light Mode */
@@ -333,6 +337,18 @@ header {
   font-weight: normal;
   color: #000;
 }
+
+/* Pfeile im Light Mode */
+.nav-links a:hover,
+.nav-links a:focus {
+  background-color: #b5eeb5;
+}
+
+/* Aktivierungszustand für das Hamburger-Menü */
+.hamburger.active .line {
+  background-color: #12aa12;
+}
+
 
 /* ANCHOR Standard-Navigationsleiste */
 
@@ -367,26 +383,22 @@ header {
   
   /* Streifen oben und unten von dem Text der Navbar */
   .nav-links {
-    position: fixed;
+    position: fixed; /* Normaler Flow */
     top: 60px;
-    display: flex;
-    left: -250px; /* Standardmäßig ausgeblendet */
+    left: 0;
     width: 250px;
     max-height: 70vh;
-    background-color: #ffffff;
-    flex-wrap: wrap; /* Ermöglicht das Umbrechen in eine neue Zeile */
+    overflow: auto;
+    display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: stretch;
     padding: 2rem 0;
-    overflow-y: auto;
-    transition: left 0.3s ease;
-    z-index: 10;
-    will-change: transform;
-    -webkit-overflow-scrolling: touch;
-    scroll-behavior: smooth;
   }
 
+  .hamburger {
+    display: none;
+  }
+  
   /* Stile für die Links in der Navigation */
   .nav-links a {
     display: flex;

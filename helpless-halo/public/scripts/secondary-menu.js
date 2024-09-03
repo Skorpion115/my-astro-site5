@@ -7,3 +7,4 @@ document.addEventListener("astro:page-load", () => {
         .classList.toggle("expanded");
     });
 });
+
