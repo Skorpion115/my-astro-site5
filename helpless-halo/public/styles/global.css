@@ -140,6 +140,7 @@ p {
 }
 
 /* Schwarzer Text im Dark Mode funktioniert */
+.dark .nav-links-secondary a,
 .dark .nav-links a {
   color: #f7f7f7;
   background-color: #333333;
@@ -255,6 +256,7 @@ button:hover {
 }
 
 /* ANCHOR Hamburger-Menü i ab 636px sichtbar */
+
 .hamburger {
   position: absolute;
   top: 10px;
@@ -262,7 +264,6 @@ button:hover {
   cursor: pointer;
   z-index: 11;
   background-color: transparent;
-  display: none; /* Standardmäßig ausgeblendet, da es nur in kleineren Ansichten sichtbar sein soll */
   flex-direction: column;
   justify-content: center;
   width: 2rem;
@@ -280,6 +281,7 @@ button:hover {
 }
 
 /* Aktiv-Zustand */
+
 .hamburger.active .line {
   background-color: #12aa12;
 }
@@ -295,12 +297,13 @@ header {
 }
 
 /* ANCHOR Navigation Styles Menu allgemein für beide Modes funktioniert*/
+
 .nav-links {
   position: fixed;
   top: 60px;
   left: -250px;
   width: 250px;
-  max-height: 70vh;
+  max-height: none;
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -316,6 +319,7 @@ header {
 }
 
 /* Navigations Links in einer Flexbox bei Light Mode Textfarbe schwarz funktioniert */
+
 .nav-links a {
   display: flex;
   align-items: center;
@@ -328,6 +332,7 @@ header {
 }
 
 /* Pfeile im Light Mode */
+
 .nav-links a::after {
   content: '>';
   margin-left: 0.5rem;
@@ -336,16 +341,18 @@ header {
 }
 
 /* grüner Hover wird benutzt */
+/*
 .nav-links a:hover,
 .nav-links a:focus {
   background-color: #b5eeb5;
-}
-
+} */
+/* keine Wirkung */
+/*
 .expanded {
   left: 10px;
-}
-
+} */
 /* ANCHOR Standard-Navigationsleiste */
+
 .navbar {
   display: flex;
   justify-content: flex-start;
@@ -369,6 +376,7 @@ header {
 /* ANCHOR Standard-Navigationsleiste */
 
 /* Media Queries für die responsive Navigation */
+/*
 @media screen and (max-width: 636px) {
   .navbar {
     display: none;
@@ -380,12 +388,14 @@ header {
 
   .nav-links {
     left: -250px;
-  }
-
+    width: 250px;
+  } */
+/* funktioniert nicht */
+  /*
   .expanded {
     left: 10px;
   }
-}
+} */
 
 @media screen and (min-width: 637px) {
   .hamburger {
@@ -394,38 +404,210 @@ header {
   
   /* Streifen oben und unten von dem Text der Navbar */
   .nav-links {
-    position: static;
+    position: fixed;
+    top: 60px;
     display: flex;
+    left: -250px; /* Standardmäßig ausgeblendet */
+    width: 250px;
+    max-height: 70vh;
+    background-color: #ffffff;
     flex-wrap: wrap; /* Ermöglicht das Umbrechen in eine neue Zeile */
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
     justify-content: flex-start;
-    width: auto;
-    padding: 0;
-    max-height: none;
-    overflow: visible;
+    align-items: stretch;
+    padding: 2rem 0;
+    overflow-y: auto;
+    transition: left 0.3s ease;
+    z-index: 10;
+    will-change: transform;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
   }
+
+  /* Stile für die Links in der Navigation */
+  .nav-links a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #000000;
+  } 
+}
+
+  /* Pfeile im Light Mode */
+  .nav-links a::after {
+    content: '>';
+    margin-left: 0.5rem;
+    font-weight: normal;
+    color: #000;
+  }
+
+  /* Grüner Hover-Effekt */
+  .nav-links a:hover,
+  .nav-links a:focus {
+    background-color: #b5eeb5;
+}
+
+  /* Aktivierungszustand für das Hamburger-Menü */
+  .expanded {
+    left: 0; /* Bei Aktivierung wird die Navigation sichtbar */
+}
+
+  /* Media Queries für unterschiedliche Bildschirmgrößen */
+@media screen and (min-width: 637px) {
+  .nav-links {
+    display: none; /* Auf dem Desktop wird die Navigation vollständig ausgeblendet */
+  }
+
+  .hamburger {
+    display: none; /* Auch das Hamburger-Menü wird auf dem Desktop ausgeblendet */
+  }
+}
+
+/* Media Queries für unterschiedliche Bildschirmgrößen */
+@media screen and (min-width: 637px) {
+  .nav-links {
+    display: flex; /* Auf dem Desktop wird die Navigation vollständig ausgeblendet */
+  }
+
+  .hamburger {
+    display: flex; /* Auch das Hamburger-Menü wird auf dem Desktop ausgeblendet */
+  }
+}
+
+.hamburger .line {
+  display: block;
+  width: 1.875rem;
+  height: 0.25rem;
+  margin-bottom: 0.313rem;
+  background-color: #000;
+  border-radius: 2px;
+  transition: background-color 0.3s ease;
+}
+
+/* Aktiv-Zustand für das Hamburger-Menü */
+.hamburger.active .line {
+  background-color: #12aa12;
+}
+
+.expanded {
+  left: 0; /* Bei Aktivierung wird die Navigation eingeblendet */
+}
+
 
   /* Entfernt die Pfeile in der Desktop-Navigation */
   .nav-links a::after {
     content: '';
   }
 
-  /* Navigations Links in einer Flexbox bei Light Mode */
-  .nav-links a {
-    padding: 10px 15px;
-    text-decoration: none;
-    color: #333333;
-    background-color: #f7f7f7;
-    font-weight: 500;
-    font-size: 1.1rem;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Sanfter Übergang bei Hover */
-    border-bottom: 1px solid #e0e0e0; /* Optional: Dünne Linie unten für Struktur */
-  }
+/* Stile für die zweite Navigationsleiste */
+/*
+.nav-links-secondary {
+  position: fixed;
+  top: 60px;
+  left: -250px;
+  width: 250px;
+  max-height: 70vh;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  padding: 2rem 0;
+  overflow-y: auto;
+  transition: left 0.3s ease;
+  z-index: 10;
+  will-change: transform;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+.nav-links-secondary a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #000000;
+} */
+
+/* Navigations Leiste für nav-links-secondary */
+
+.nav-links-secondary {
+  position: static;
+  display: flex;
+  flex-wrap: wrap; /* Ermöglicht das Umbrechen in eine neue Zeile */
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: auto;
+  padding: 10px;
+  max-height: none;
+  overflow: visible;
+  border-top: 2px solid #ccc; /* Beispiel für eine Trennlinie zur oberen Navigation */
+}
+
+/* Navigations Links in einer Flexbox bei Light Mode */
+.nav-links-secondary a {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333333;
+  background-color: #f7f7f7;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Sanfter Übergang bei Hover */
+  border-bottom: 1px solid #e0e0e0; /* Optional: Dünne Linie unten für Struktur */
+}
+
+/* Pfeile im Light Mode */
+.nav-links-secondary a::after {
+  content: '>';
+  margin-left: 0.5rem;
+  font-weight: normal;
+  color: #000;
+}
+
+/* grüner Hover wird benutzt */
+.nav-links-secondary a:hover,
+.nav-links-secondary a:focus {
+  background-color: #b5eeb5;
+}
+/* funktioniert */
+.expanded {
+  left: 10px;
 }
 
 
+
+
+
+
+
+/* Beispiel für vertikalen Abstand zwischen den Navigationsleisten */
+/*
+.nav-links-secondary {
+  margin-top: 10px; 
+} */
+
+
+
+/* Beispiel für vertikalen Abstand zwischen den Navigationsleisten */
+.nav-links-secondary {
+  margin-top: 10px; 
+}
+
+  /* Entfernt die Pfeile in der Desktop-Navigation */
   
+  .nav-links-secondary a::after {
+    content: '';
+  }
+
+ 
 /* ANCHOR blog-post img */
 
 .blog-post img {
