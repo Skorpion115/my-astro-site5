@@ -125,6 +125,11 @@ p {
   padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 }
 
+/* Wenn das Menü geöffnet ist, den Body nicht scrollen lassen */
+body.menu-open {
+  overflow: hidden;
+}
+
 /* ANCHOR Headerabstand von links */
 
 .author {
@@ -370,23 +375,16 @@ header {
     /* Hamburger-Menü wird eingeblendet sonst wird es aufgeklappt */
   }
 
-  /* Navigation standardmäßig ausgeblendet */
-  .nav-links {
-    left: -250px;
-    /* Standardmäßig ausgeblendet */
-  }
-
-
-  /* Pfeile ausblenden */
-  .nav-links a::after {
-    content: '';
-    /* Pfeile im Desktop-Modus ausblenden */
-  }
-
   /* Pfeile in nav-links-secondary ausblenden */
   .nav-links-secondary a::after {
     content: '';
     /* Pfeile in der sekundären Navigation ausblenden */
+  }
+
+  /* Pfeile anzeigen */
+  .nav-links a::after {
+    content: '>';
+    /* Pfeile im mobilen Modus anzeigen */
   }
 }
 
