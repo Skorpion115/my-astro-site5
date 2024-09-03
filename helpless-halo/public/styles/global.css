@@ -280,6 +280,13 @@ button:hover {
   transition: background-color 0.3s ease;
 }
 
+/* Aktiv-Zustand für das Hamburger-Menü */
+.hamburger.active .line {
+  background-color: #12aa12;
+}
+
+
+
 /* ANCHOR Styles für die Header-Komponente */
 header {
   position: relative;
@@ -345,12 +352,6 @@ header {
   background-color: #b5eeb5;
 }
 
-/* Aktivierungszustand für das Hamburger-Menü */
-.hamburger.active .line {
-  background-color: #12aa12;
-}
-
-
 /* ANCHOR Standard-Navigationsleiste */
 
 .navbar {
@@ -379,9 +380,25 @@ header {
 /* Für größere Bildschirme ab 637px */
 @media screen and (min-width: 637px) {
   .hamburger {
-    display: none;
+    display: flex; /* Hamburger-Menü wird eingeblendet sonst wird es aufgeklappt */
   }
-  
+
+  /* Navigation standardmäßig ausgeblendet */
+  .nav-links {
+    left: -250px; /* Standardmäßig ausgeblendet */
+  }
+
+
+  /* Pfeile ausblenden */
+  .nav-links a::after {
+    content: ''; /* Pfeile im Desktop-Modus ausblenden */
+  }
+
+  /* Pfeile in nav-links-secondary ausblenden */
+  .nav-links-secondary a::after {
+    content: ''; /* Pfeile in der sekundären Navigation ausblenden */
+  }
+
   /* Streifen oben und unten von dem Text der Navbar */
   .nav-links {
     position: fixed; /* Normaler Flow */
@@ -396,8 +413,8 @@ header {
     padding: 2rem 0;
   }
 
-  .hamburger {
-    display: none;
+  .nav-links.expanded {
+    left: 0; /* Navigation wird bei Aktivierung sichtbar */
   }
   
   /* Stile für die Links in der Navigation */
@@ -413,25 +430,6 @@ header {
   } 
 }
 
-  /* Pfeile im Light Mode */
-  .nav-links a::after {
-    content: '>';
-    margin-left: 0.5rem;
-    font-weight: normal;
-    color: #000;
-  }
-
-  /* Grüner Hover-Effekt */
-  .nav-links a:hover,
-  .nav-links a:focus {
-    background-color: #b5eeb5;
-}
-
-  /* Aktivierungszustand für das Hamburger-Menü */
-  .expanded {
-    left: 0; /* Bei Aktivierung wird die Navigation sichtbar */
-}
-
  /* Für kleinere Bildschirme unter 637px */
 @media screen and (max-width: 636px) {
   .nav-links {
@@ -445,52 +443,12 @@ header {
   .nav-links.expanded {
     left: 0; /* Navigation wird sichtbar bei Aktivierung */
   }
-}
 
-/* Für größere Bildschirme ab 637px */
-@media screen and (min-width: 637px) {
-  .nav-links {
-    left: -250px; /* Navigation standardmäßig ausgeblendet */
-    display: flex;
-    flex-direction: column;
-    max-height: 70vh;
-    overflow-y: auto;
-  }
-
-  .hamburger {
-    display: flex; /* Hamburger-Menü wird auf größeren Bildschirmen eingeblendet */
-  }
-
-  /* Optional: Navigation sichtbar machen bei einer Desktop-Interaktion */
-  .nav-links.expanded {
-    left: 0; /* Bei Aktivierung wird die Navigation sichtbar */
-  }
-}
-
-.hamburger .line {
-  display: block;
-  width: 1.875rem;
-  height: 0.25rem;
-  margin-bottom: 0.313rem;
-  background-color: #000;
-  border-radius: 2px;
-  transition: background-color 0.3s ease;
-}
-
-/* Aktiv-Zustand für das Hamburger-Menü */
-.hamburger.active .line {
-  background-color: #12aa12;
-}
-
-.expanded {
-  left: 0; /* Bei Aktivierung wird die Navigation eingeblendet */
-}
-
-
-  /* Entfernt die Pfeile in der Desktop-Navigation */
+  /* Pfeile anzeigen */
   .nav-links a::after {
-    content: '';
+    content: '>'; /* Pfeile im mobilen Modus anzeigen */
   }
+}
 
 /* Navigations Leiste für nav-links-secondary */
 
@@ -533,23 +491,7 @@ header {
 .nav-links-secondary a:focus {
   background-color: #b5eeb5;
 }
-/* funktioniert */
-.expanded {
-  left: 10px;
-}
 
-/* Beispiel für vertikalen Abstand zwischen den Navigationsleisten */
-.nav-links-secondary {
-  margin-top: 10px; 
-}
-
-  /* Entfernt die Pfeile in der Desktop-Navigation */
-  
-  .nav-links-secondary a::after {
-    content: '';
-  }
-
- 
 /* ANCHOR blog-post img */
 
 .blog-post img {
