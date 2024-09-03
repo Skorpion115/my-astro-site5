@@ -255,7 +255,7 @@ button:hover {
   color: black;
 }
 
-/* ANCHOR Hamburger-Menü für nav-links ab 636px sichtbar */
+/* ANCHOR Hamburger-Menü für nav-links immer sichtbar */
 
 .hamburger {
   position: absolute;
@@ -358,27 +358,7 @@ header {
 
 /* ANCHOR Standard-Navigationsleiste */
 
-/* Media Queries für die responsive Navigation */
-/*
-@media screen and (max-width: 636px) {
-  .navbar {
-    display: none;
-  }
 
-  .hamburger {
-    display: flex;
-  }
-
-  .nav-links {
-    left: -250px;
-    width: 250px;
-  } */
-/* funktioniert nicht */
-  /*
-  .expanded {
-    left: 10px;
-  }
-} */
 
 @media screen and (min-width: 637px) {
   .hamburger {
