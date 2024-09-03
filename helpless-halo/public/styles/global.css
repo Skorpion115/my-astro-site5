@@ -309,6 +309,7 @@ header {
   z-index: 10;
   -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
+  height: 100vh; /* Vollbild-Höhe für mobiles Menü */
 }
 
 .nav-links.expanded {
@@ -375,7 +376,7 @@ header {
 /* ANCHOR Standard-Navigationsleiste */
 
 
-
+/* Für größere Bildschirme ab 637px */
 @media screen and (min-width: 637px) {
   .hamburger {
     display: none;
@@ -431,25 +432,38 @@ header {
     left: 0; /* Bei Aktivierung wird die Navigation sichtbar */
 }
 
-  /* Media Queries für unterschiedliche Bildschirmgrößen */
-@media screen and (min-width: 637px) {
+ /* Für kleinere Bildschirme unter 637px */
+@media screen and (max-width: 636px) {
   .nav-links {
-    display: none; /* Auf dem Desktop wird die Navigation vollständig ausgeblendet */
+    left: -250px; /* Standardmäßig ausgeblendet */
   }
 
   .hamburger {
-    display: none; /* Auch das Hamburger-Menü wird auf dem Desktop ausgeblendet */
+    display: flex; /* Hamburger-Menü wird angezeigt */
+  }
+
+  .nav-links.expanded {
+    left: 0; /* Navigation wird sichtbar bei Aktivierung */
   }
 }
 
-/* Media Queries für unterschiedliche Bildschirmgrößen */
+/* Für größere Bildschirme ab 637px */
 @media screen and (min-width: 637px) {
   .nav-links {
-    display: flex; /* Auf dem Desktop wird die Navigation vollständig ausgeblendet */
+    left: -250px; /* Navigation standardmäßig ausgeblendet */
+    display: flex;
+    flex-direction: column;
+    max-height: 70vh;
+    overflow-y: auto;
   }
 
   .hamburger {
-    display: flex; /* Auch das Hamburger-Menü wird auf dem Desktop ausgeblendet */
+    display: flex; /* Hamburger-Menü wird auf größeren Bildschirmen eingeblendet */
+  }
+
+  /* Optional: Navigation sichtbar machen bei einer Desktop-Interaktion */
+  .nav-links.expanded {
+    left: 0; /* Bei Aktivierung wird die Navigation sichtbar */
   }
 }
 
@@ -477,39 +491,6 @@ header {
   .nav-links a::after {
     content: '';
   }
-
-/* Stile für die zweite Navigationsleiste */
-/*
-.nav-links-secondary {
-  position: fixed;
-  top: 60px;
-  left: -250px;
-  width: 250px;
-  max-height: 70vh;
-  background-color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: stretch;
-  padding: 2rem 0;
-  overflow-y: auto;
-  transition: left 0.3s ease;
-  z-index: 10;
-  will-change: transform;
-  -webkit-overflow-scrolling: touch;
-  scroll-behavior: smooth;
-}
-
-.nav-links-secondary a {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 15px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1rem;
-  color: #000000;
-} */
 
 /* Navigations Leiste für nav-links-secondary */
 
@@ -556,20 +537,6 @@ header {
 .expanded {
   left: 10px;
 }
-
-
-
-
-
-
-
-/* Beispiel für vertikalen Abstand zwischen den Navigationsleisten */
-/*
-.nav-links-secondary {
-  margin-top: 10px; 
-} */
-
-
 
 /* Beispiel für vertikalen Abstand zwischen den Navigationsleisten */
 .nav-links-secondary {
