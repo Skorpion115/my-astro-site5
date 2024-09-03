@@ -302,11 +302,10 @@ header {
 
 .nav-links {
   position: fixed;
-  top: 60px;
+  top: 55px;
   left: -250px;
   width: 250px;
-  height: 100vh;
-  /* Vollbild-Höhe */
+  height: calc(100vh - 55px); /* Dynamische Höhe basierend auf der Viewport-Höhe */
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -318,8 +317,6 @@ header {
   z-index: 10;
   -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
-  height: 100vh;
-  /* Vollbild-Höhe für mobiles Menü */
 }
 
 .nav-links.expanded {
@@ -339,21 +336,6 @@ header {
   font-weight: bold;
   font-size: 1rem;
   color: #000;
-}
-
-/* Pfeile im Light Mode */
-
-.nav-links a::after {
-  content: '>';
-  margin-left: 0.5rem;
-  font-weight: normal;
-  color: #000;
-}
-
-/* Pfeile im Light Mode */
-.nav-links a:hover,
-.nav-links a:focus {
-  background-color: #b5eeb5;
 }
 
 /* ANCHOR Standard-Navigationsleiste */
@@ -405,47 +387,6 @@ header {
   .nav-links-secondary a::after {
     content: '';
     /* Pfeile in der sekundären Navigation ausblenden */
-  }
-
-  /* Streifen oben und unten von dem Text der Navbar */
-  .nav-links {
-    position: fixed;
-    /* Normaler Flow */
-    top: 60px;
-    left: -250px;
-    width: 250px;
-    height: calc(100vh - 60px);
-    /* Dynamische Höhe basierend auf der Viewport-Höhe */
-    background: #ffffff;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: stretch;
-    padding: 2rem 0;
-    overflow-y: scroll;
-    /* Scrollen aktivieren */
-    transition: left 0.3s ease;
-    z-index: 10;
-    -webkit-overflow-scrolling: touch;
-    /* Sanftes Scrollen auf iOS */
-    scroll-behavior: smooth;
-  }
-
-  .nav-links.expanded {
-    left: 0;
-    /* Navigation wird bei Aktivierung sichtbar */
-  }
-
-  /* Stile für die Links in der Navigation */
-  .nav-links a {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 15px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1rem;
-    color: #000000;
   }
 }
 
