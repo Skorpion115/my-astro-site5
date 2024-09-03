@@ -125,6 +125,11 @@ p {
   padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 }
 
+/* Stil für den pageTitle im BaseLayout */
+.page-title {
+  margin-top: 40px; /* Passt den Abstand nach Bedarf an */
+}
+
 /* Wenn das Menü geöffnet ist, den Body nicht scrollen lassen */
 body.menu-open {
   overflow: hidden;
@@ -303,7 +308,7 @@ header {
   z-index: 1;
 }
 
-/* ANCHOR Navigation Styles Menu allgemein für beide Modes funktioniert*/
+/* ANCHOR Navigation Styles Menu nav-links allgemein für beide Modes */
 
 .nav-links {
   position: fixed;
@@ -365,7 +370,7 @@ header {
   background-color: #b5eeb5;
 }
 
-/* ANCHOR Standard-Navigationsleiste */
+/* ANCHOR media screen Befehle für größere Bildschirme */
 
 
 /* Für größere Bildschirme ab 637px */
@@ -388,7 +393,7 @@ header {
   }
 }
 
-/* Für kleinere Bildschirme unter 637px */
+/* ANCHOR Für kleinere Bildschirme unter 637px */
 @media screen and (max-width: 636px) {
   .nav-links {
     left: -250px;
@@ -412,31 +417,30 @@ header {
   }
 }
 
-/* Navigations Leiste für nav-links-secondary */
+/* ANCHOR Desktop Navleiste für nav-links-secondary */
 
 .nav-links-secondary {
   position: static;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  background-color: #222;
+  color: #f7f7f7;
   display: flex;
   flex-wrap: wrap;
   /* Ermöglicht das Umbrechen in eine neue Zeile */
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  width: auto;
-  padding: 10px;
-  max-height: none;
-  overflow: visible;
-  border-top: 2px solid #ccc;
-  /* Beispiel für eine Trennlinie zur oberen Navigation */
+  justify-content: space-around; /* Gleichmäßige Verteilung der Links */
+  align-items: center; /* Vertikale Ausrichtung der Links */
+  padding: 10px 0; /* Etwas Abstand oben und unten */
+  z-index: 5; /* Höherer Z-Index, damit es über anderen Inhalten liegt */
 }
 
 /* Navigations Links in einer Flexbox bei Light Mode */
 .nav-links-secondary a {
-  padding: 10px 15px;
+  padding: 0 15px; /* Etwas Abstand links und rechts der Links */
   text-decoration: none;
-  color: #333333;
-  background-color: #f7f7f7;
-  font-weight: 500;
+  font-weight: normal;
+  color: #f7f7f7;
   font-size: 1.1rem;
   transition: background-color 0.3s ease, color 0.3s ease;
   /* Sanfter Übergang bei Hover */
@@ -448,6 +452,17 @@ header {
 .nav-links-secondary a:hover,
 .nav-links-secondary a:focus {
   background-color: #b5eeb5;
+}
+
+/* ANCHOR Dark Mode spezifische Stile für nav-links-secondary */
+.dark .nav-links-secondary {
+  background-color: #222; /* Dunkler Hintergrund im Dark Mode */
+  color: #f7f7f7; /* Hellere Schriftfarbe im Dark Mode */
+}
+
+/* Links in nav-links-secondary im Dark Mode */
+.dark .nav-links-secondary a {
+  color: #f7f7f7; /* Hellere Schriftfarbe für Links im Dark Mode */
 }
 
 /* ANCHOR blog-post img */
