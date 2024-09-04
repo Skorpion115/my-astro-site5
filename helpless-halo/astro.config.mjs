@@ -45,7 +45,6 @@ export default defineConfig({
   
   trailingSlash: "always",
   markdown: {
-    drafts: true,
     mode: "md",
   },
 });
