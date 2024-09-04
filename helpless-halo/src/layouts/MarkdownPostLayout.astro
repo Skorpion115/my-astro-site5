@@ -26,7 +26,7 @@ const { frontmatter } = Astro.props;
     <!--
     <p>Veröffentlicht am: {frontmatter.pubDate.toString().slice(0, 10)}</p> -->
     <p><em>{frontmatter.description}</em></p>
-    <p>Veröffentlicht am: {new Date(frontmatter.pubDate).toLocaleDateString('de-DE')}</p>
+    <p>Veröffentlicht am: {new Date(frontmatter.pubDate).toISOString().slice(0,10)}</p>
     <p>Geschrieben von {frontmatter.author}</p>
     <img src={frontmatter.image.url} alt={frontmatter.image.alt} />
     <!--
