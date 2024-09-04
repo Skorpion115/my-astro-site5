@@ -125,11 +125,6 @@ p {
   padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 }
 
-/* Stil für den pageTitle im BaseLayout */
-.page-title {
-  margin-top: 40px; /* Passt den Abstand nach Bedarf an */
-}
-
 /* Wenn das Menü geöffnet ist, den Body nicht scrollen lassen */
 body.menu-open {
   overflow: hidden;
@@ -298,15 +293,106 @@ button:hover {
 
 
 
+/* Hamburger-Menü im Light Mode */
+.hamburger .line {
+  background-color: #f7f7f7; /* Weißer Balken im Light Mode */
+}
+
+html.light .theme-toggle {
+  color: #f7f7f7; /* Weißer ThemeToggle-Button im Light Mode */
+}
+
+/* Sicherstellen, dass sie im Dark Mode kontrastreich sind */
+.dark .hamburger .line,
+.dark .theme-toggle {
+  color: #f7f7f7; /* Helle Farben für dunkle Hintergründe */
+}
+
+/* ThemeToggle Button Styling im Light Mode */
+html.light #themeToggle {
+  color: #f7f7f7; /* Helle Farbe, damit er auf dunklem Hintergrund sichtbar ist */
+  fill: #f7f7f7;  /* Helle Füllfarbe für das Icon */
+}
+
+/* Sicherstellen, dass der Dark Mode auch richtig eingestellt ist */
+html.dark #themeToggle {
+  color: #f1c40f; /* Gelb für den Mond im Dark Mode */
+  fill: #f1c40f;  /* Gelbe Füllfarbe für das Icon */
+}
+
+#themeToggle {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  z-index: 20; /* Über den meisten anderen Elementen */
+}
+
+html.light #themeToggle svg {
+  color: #f7f7f7; /* Sicherstellen, dass die Farbe im Light Mode korrekt ist */
+  fill: #f7f7f7;  /* Auch die Füllfarbe */
+}
+
+/* Light Mode: Sonne sichtbar, Mond versteckt */
+html.light .sun {
+  fill: #f7f7f7; /* Helle Sonne im Light Mode */
+}
+
+html.light .moon {
+  fill: transparent; /* Mond unsichtbar im Light Mode */
+}
+
+/* Dark Mode: Mond sichtbar, Sonne versteckt */
+html.dark .sun {
+  fill: transparent; /* Sonne unsichtbar im Dark Mode */
+}
+
+html.dark .moon {
+  fill: #f1c40f; /* Gelber Mond im Dark Mode */
+}
+
+
 /* ANCHOR Styles für die Header-Komponente */
+
 header {
   position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
   padding: 10px;
   padding-top: 60px;
-  z-index: 1;
+  z-index: 10; /* Sicherstellen, dass der Header über anderen Elementen liegt */
+  width: 100%;
+  background-color: #222;
+  box-sizing: border-box; /* Sicherstellen, dass Padding zur Breite zählt */
 }
+
+/* Titel im Header */
+.header-title {
+  text-align: center;
+  margin-bottom: 10px;
+  width: 100%; /* Stellt sicher, dass der Titel die volle Breite einnimmt */
+}
+
+.header-title h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: space-between; /* Platzierung von Hamburger links und Toggle rechts */
+  align-items: center;
+  width: 100%;
+}
+
+hamburger,
+.theme-toggle {
+  z-index: 20; /* Sicherstellen, dass diese Elemente vor anderen liegen */
+}
+
+
 
 /* ANCHOR Navigation Styles Menu nav-links allgemein für beide Modes */
 
@@ -347,28 +433,6 @@ header {
   font-size: 1rem;
   color: #000;
 }
-
-/* ANCHOR Standard-Navigationsleiste */
-/*
-.navbar {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  background-color: #ffffff;
-}
-
-.navbar a {
-  padding: 10px 15px;
-  text-decoration: none;
-  color: #000;
-  font-weight: bold;
-  font-size: 1rem;
-}
-
-.navbar a:hover,
-.navbar a:focus {
-  background-color: #b5eeb5;
-} */
 
 /* ANCHOR media screen Befehle für größere Bildschirme */
 
