@@ -423,6 +423,7 @@ header {
   position: static;
   top: 80px;
   left: 0;
+  right: 0;
   width: 100%;
   background-color: #222;
   color: #f7f7f7;
@@ -432,7 +433,9 @@ header {
   justify-content: space-around; /* Gleichmäßige Verteilung der Links */
   align-items: center; /* Vertikale Ausrichtung der Links */
   padding: 10px 0; /* Etwas Abstand oben und unten */
+  margin: 0;
   z-index: 5; /* Höherer Z-Index, damit es über anderen Inhalten liegt */
+  box-sizing: border-box; /* Stellt sicher, dass Padding zur Breite gezählt wird */
 }
 
 /* Navigations Links in einer Flexbox bei Light Mode */
@@ -446,6 +449,7 @@ header {
   /* Sanfter Übergang bei Hover */
   border-bottom: 1px solid #e0e0e0;
   /* Optional: Dünne Linie unten für Struktur */
+  display: inline-block;
 }
 
 /* grüner Hover wird benutzt */
