@@ -349,7 +349,7 @@ header {
 }
 
 /* ANCHOR Standard-Navigationsleiste */
-
+/*
 .navbar {
   display: flex;
   justify-content: flex-start;
@@ -368,7 +368,7 @@ header {
 .navbar a:hover,
 .navbar a:focus {
   background-color: #b5eeb5;
-}
+} */
 
 /* ANCHOR media screen Befehle für größere Bildschirme */
 
