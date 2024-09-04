@@ -33,7 +33,8 @@ const urlPath = Astro.url.pathname;
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="/src/styles/global.css" />
+
     <!--
     <link rel="manifest" href="/manifest.json" /> -->
     <link rel="sitemap" href="/sitemap-index.xml" />
@@ -83,16 +84,16 @@ const urlPath = Astro.url.pathname;
     <ThemeIcon />
     <Header />
     <!-- Bedingte CSS-Dateien für spezifische Seiten -->
-    {urlPath === '/gitarrenunterricht/' && <link rel="stylesheet" href="/styles/gitarrenunterricht.css" />}
-    {urlPath === '/e-gitarrenunterricht/' && <link rel="stylesheet" href="/styles/e-gitarrenunterricht.css" />}
-    {urlPath === '/e-bassunterricht/' && <link rel="stylesheet" href="/styles/e-bassunterricht.css" />}
-    {urlPath === '/banjounterricht/' && <link rel="stylesheet" href="/styles/banjounterricht.css" />}
-    {urlPath === '/klavierunterricht/' && <link rel="stylesheet" href="/styles/klavierunterricht.css" />}
-    {urlPath === '/keyboardunterricht/' && <link rel="stylesheet" href="/styles/keyboardunterricht.css" />}
-    {urlPath === '/akkordeonunterricht/' && <link rel="stylesheet" href="/styles/akkordeonunterricht.css" />}
-    {urlPath === '/saxophonunterricht/' && <link rel="stylesheet" href="/styles/saxophonunterricht.css" />}
-    {urlPath === '/klarinettenunterricht/' && <link rel="stylesheet" href="/styles/klarinettenunterricht.css" />}
-    {urlPath === '/querfloetenunterricht/' && <link rel="stylesheet" href="/styles/querfloetenunterricht.css" />}
+    {urlPath === '/gitarrenunterricht/' && <link rel="stylesheet" href="/src/styles/gitarrenunterricht.css" />}
+    {urlPath === '/e-gitarrenunterricht/' && <link rel="stylesheet" href="/src/styles/e-gitarrenunterricht.css" />}
+    {urlPath === '/e-bassunterricht/' && <link rel="stylesheet" href="/src/styles/e-bassunterricht.css" />}
+    {urlPath === '/banjounterricht/' && <link rel="stylesheet" href="/src/styles/banjounterricht.css" />}
+    {urlPath === '/klavierunterricht/' && <link rel="stylesheet" href="/src/styles/klavierunterricht.css" />}
+    {urlPath === '/keyboardunterricht/' && <link rel="stylesheet" href="/src/styles/keyboardunterricht.css" />}
+    {urlPath === '/akkordeonunterricht/' && <link rel="stylesheet" href="/src/styles/akkordeonunterricht.css" />}
+    {urlPath === '/saxophonunterricht/' && <link rel="stylesheet" href="/src/styles/saxophonunterricht.css" />}
+    {urlPath === '/klarinettenunterricht/' && <link rel="stylesheet" href="/src/styles/klarinettenunterricht.css" />}
+    {urlPath === '/querfloetenunterricht/' && <link rel="stylesheet" href="/src/styles/querfloetenunterricht.css" />}
   </head>
   <body>
     <cookie-banner>
