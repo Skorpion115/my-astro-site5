@@ -272,7 +272,7 @@ button:hover {
 
 .hamburger {
   position: absolute;
-  top: 10px;
+  top: 20px;
   left: 20px;
   cursor: pointer;
   z-index: 11;
@@ -285,10 +285,10 @@ button:hover {
 
 .hamburger .line {
   display: block;
-  width: 1.875rem;
-  height: 0.25rem;
+  width: 1.5rem;
+  height: 0.20rem;
   margin-bottom: 0.313rem;
-  background-color: #000;
+  background-color: #555;
   border-radius: 2px;
   transition: background-color 0.3s ease;
 }
@@ -351,7 +351,7 @@ hamburger,
 
 .nav-links {
   position: fixed;
-  top: 55px;
+  top: 80px;
   left: -250px;
   width: 250px;
   height: calc(100vh - 55px); /* Dynamische Höhe basierend auf der Viewport-Höhe */
