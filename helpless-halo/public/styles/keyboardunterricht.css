@@ -1,8 +1,8 @@
 article img {
     max-width: 30%;
     height: auto;
-    box-shadow: 0px 0px 10px 5px #4c4948;
-    border-radius: 5px;
+    box-shadow: 0 0 0.6rem 0.3rem #4c4948;
+    border-radius: 0.3rem;
     float: right;
     margin-top: 1.25rem;
     margin-left: 1rem;

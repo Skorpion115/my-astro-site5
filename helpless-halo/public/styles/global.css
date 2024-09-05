@@ -137,7 +137,7 @@ body.menu-open {
   font-size: 0.9rem;
   font-style: italic;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 0.1rem;
   width: 100%; /* Stellt sicher, dass der Titel die volle Breite einnimmt */
 }
 
@@ -209,7 +209,7 @@ button:focus,
   position: absolute;
   top: 0px;
   /* Gleiche Höhe wie das Hamburger-Menü */
-  right: 30px;
+  right: 1.8rem;
   /* Abstand vom rechten Bildschirmrand */
   z-index: 20;
   /* Sicherstellen, dass der Schalter über anderen Elementen liegt */
@@ -265,8 +265,8 @@ button:hover {
 
 .hamburger {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 1.25rem;
+  left: 1.25rem;
   cursor: pointer;
   z-index: 11;
   background-color: transparent;
@@ -306,8 +306,8 @@ html.dark #themeToggle {
 
 #themeToggle {
   position: absolute;
-  top: 10px;
-  right: 30px;
+  top: 0.625rem;
+  right: 1,875rem;
   z-index: 20; /* Über den meisten anderen Elementen */
 }
 
@@ -318,7 +318,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 10px;
+  padding-top: 0.625rem;
   z-index: 10; /* Sicherstellen, dass der Header über anderen Elementen liegt */
   width: 100%;
   background-color: #fff;
@@ -344,10 +344,10 @@ hamburger,
 
 .nav-links {
   position: fixed;
-  top: 80px;
-  left: -250px;
-  width: 250px;
-  height: calc(100vh - 55px); /* Dynamische Höhe basierend auf der Viewport-Höhe */
+  top: 5rem; /* nav-links Navigationsleiste Abstand noch oben */
+  left: -15.6rem;
+  width: 15.6rem;
+  height: calc(100vh - 5rem); /* Dynamische Höhe basierend auf der Viewport-Höhe */
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -373,10 +373,10 @@ hamburger,
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 8px 15px;
+  padding: 0.5rem 0.9rem;
   text-decoration: none;
   font-weight: normal;
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #000;
 }
 
@@ -412,7 +412,7 @@ hamburger,
 /* ANCHOR Für kleinere Bildschirme unter 637px */
 @media screen and (max-width: 636px) {
   .nav-links {
-    left: -250px;
+    left: -15,6rem;
     /* Standardmäßig ausgeblendet */
   }
 
@@ -437,7 +437,7 @@ hamburger,
 
 .nav-links-secondary {
   position: static;
-  top: 80px;
+  top: 0.5rem;
   left: 0;
   right: 0;
   width: 100%;
@@ -448,7 +448,7 @@ hamburger,
   /* Ermöglicht das Umbrechen in eine neue Zeile */
   justify-content: space-around; /* Gleichmäßige Verteilung der Links */
   align-items: center; /* Vertikale Ausrichtung der Links */
-  padding: 10px 0; /* Etwas Abstand oben und unten */
+  padding: 0.625rem 0; /* Etwas Abstand oben und unten */
   margin: 0;
   z-index: 5; /* Höherer Z-Index, damit es über anderen Inhalten liegt */
   box-sizing: border-box; /* Stellt sicher, dass Padding zur Breite gezählt wird */
@@ -456,14 +456,14 @@ hamburger,
 
 /* Navigations Links in einer Flexbox bei Light Mode */
 .nav-links-secondary a {
-  padding: 0 15px; /* Etwas Abstand links und rechts der Links */
+  padding: 0 0.1rem; /* Etwas Abstand links und rechts der Links oben und unten 0 */
   text-decoration: none;
   font-weight: normal;
   color: #f7f7f7;
   font-size: 1.0rem;
   transition: background-color 0.3s ease, color 0.3s ease;
   /* Sanfter Übergang bei Hover */
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 0.063rem solid #e0e0e0;
   /* Optional: Dünne Linie unten für Struktur */
   display: inline-block;
 }
@@ -1084,19 +1084,19 @@ textarea {
 /* ANCHOR faq.astro */
 
 .faq-container {
-  max-width: 800px;
+  max-width: 50rem;
   margin: 0 auto;
-  padding: 20px;
+  padding: 1.25rem;
   font-family: var(--font);
   font-style: normal;
 }
 
 .faq-item {
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 .faq-question {
-  margin-bottom: 10px;
+  margin-bottom: 0.6rem;
 }
 
 .faq-answer a {
@@ -1110,7 +1110,7 @@ textarea {
 
 .back-link {
   display: block;
-  margin-top: 20px;
+  margin-top: 1.25rem;
   font-size: 1.2em;
   color: #007BFF;
   text-decoration: none;
@@ -1141,9 +1141,9 @@ textarea {
 
 table.basis-table {
   border-collapse: collapse;
-  margin: 32px 0;
+  margin: 2rem 0;
   min-width: 400px;
-  border-radius: 5px 5px 0 0;
+  border-radius: 0.3rem 0.3rem 0 0;
   font-weight: normal;
   overflow: hidden;
   text-align: left;
@@ -1156,15 +1156,15 @@ table.basis-table thead tr {
 
 table.basis-table th,
 table.basis-table td {
-  padding: 12px 16px;
+  padding: 0.75rem 1rem;
 }
 
 table.basis-table tbody tr {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 0.063rem solid #ccc;
 }
 
 table.basis-table tbody tr:last-of-type {
-  border-bottom: 2px solid rebeccapurple;
+  border-bottom: 0.125rem solid rebeccapurple;
 }
 
 table.basis-table tbody tr.active {
@@ -1177,24 +1177,24 @@ table.basis-table tbody tr.active {
 .basis-card {
   display: none;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 .basis-header {
   background-color: rebeccapurple;
   color: white;
-  border-radius: 5px 5px 0 0;
-  padding: 10px;
+  border-radius: 0.3rem 0.3rem 0 0;
+  padding: 0.6rem;
   font-weight: bold;
 }
 
 .basis-card div {
-  padding: 10px;
-  border-bottom: 1px solid #ccc;
+  padding: 0.6rem;
+  border-bottom: 0.06rem solid #ccc;
 }
 
 .basis-card div:last-of-type {
-  border-bottom: 2px solid rebeccapurple;
+  border-bottom: 0.125rem solid rebeccapurple;
 }
 
 .basis-card div>span {
@@ -1293,11 +1293,11 @@ table.basis-table td {
 }
 
 table.basis-table tbody tr {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 0.06rem solid #ccc;
 }
 
 table.basis-table tbody tr:last-of-type {
-  border-bottom: 2px solid rebeccapurple;
+  border-bottom: 0.125rem solid rebeccapurple;
 }
 
 table.basis-table tbody tr.active {
