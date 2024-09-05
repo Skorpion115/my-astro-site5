@@ -79,7 +79,7 @@ body,
 }
 
 h1 {
-  margin: 1rem 0;
+  margin: 2.5rem 0;
   font-size: 1.5rem;
   color: #af8848;
   text-align: center;
@@ -133,7 +133,7 @@ body.menu-open {
 /* ANCHOR Titel im Header */
 
 .author {
-  padding: 0.5rem 0.9rem;
+  padding: 0.9rem 0.9rem;
   font-size: 0.9rem;
   font-style: italic;
   text-align: center;
@@ -237,13 +237,6 @@ html.dark .moon {
   fill: #f1c40f;
   /* Zeige den Mond in Gelb im Dark Mode */
 }
-
-/*
-author {
-  padding: 0.5rem 0.9rem;
-  font-size: 0.9rem;
-  font-style: italic;
-} */
 
 /* ANCHOR button Formatierung */
 
@@ -624,6 +617,7 @@ img {
   margin: 0 auto;
   padding: 5%;
   box-sizing: border-box;
+  background-color: #9bd39b;
 }
 
 label {
@@ -729,6 +723,7 @@ fieldset {
   border-radius: 4px;
   padding: 1rem;
   margin-bottom: 1.25rem;
+  background-color: #9bd39b;
 }
 
 /* ganze Formular */
