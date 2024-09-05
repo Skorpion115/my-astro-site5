@@ -41,8 +41,8 @@ html.dark {
 
 /* Hamburger-Menü Linien im Dark Mode */
 html.dark .hamburger .line {
-  background-color: #ffffff;
-  /* Weiße Linien im Dark Mode */
+  background-color: #000000;
+  /* Schwarze Linien im Dark Mode */
 }
 
 html.dark #themeToggle svg {
@@ -130,12 +130,19 @@ body.menu-open {
   overflow: hidden;
 }
 
-/* ANCHOR Headerabstand von links */
+/* ANCHOR Titel im Header */
 
 .author {
   padding: 0.5rem 0.9rem;
   font-size: 0.9rem;
   font-style: italic;
+  text-align: center;
+  margin-bottom: 10px;
+  width: 100%; /* Stellt sicher, dass der Titel die volle Breite einnimmt */
+}
+
+.dark .author {
+  color: #000000;
 }
 
 /* Navigation im Dark Mode, weißer Hintergrund */
@@ -295,23 +302,7 @@ button:hover {
 
 /* Hamburger-Menü im Light Mode */
 .hamburger .line {
-  background-color: #f7f7f7; /* Weißer Balken im Light Mode */
-}
-
-html.light .theme-toggle {
-  color: #f7f7f7; /* Weißer ThemeToggle-Button im Light Mode */
-}
-
-/* Sicherstellen, dass sie im Dark Mode kontrastreich sind */
-.dark .hamburger .line,
-.dark .theme-toggle {
-  color: #f7f7f7; /* Helle Farben für dunkle Hintergründe */
-}
-
-/* ThemeToggle Button Styling im Light Mode */
-html.light #themeToggle {
-  color: #f7f7f7; /* Helle Farbe, damit er auf dunklem Hintergrund sichtbar ist */
-  fill: #f7f7f7;  /* Helle Füllfarbe für das Icon */
+  background-color: #000000; /* Schwarzer Balken im Light Mode */
 }
 
 /* Sicherstellen, dass der Dark Mode auch richtig eingestellt ist */
@@ -327,30 +318,6 @@ html.dark #themeToggle {
   z-index: 20; /* Über den meisten anderen Elementen */
 }
 
-html.light #themeToggle svg {
-  color: #f7f7f7; /* Sicherstellen, dass die Farbe im Light Mode korrekt ist */
-  fill: #f7f7f7;  /* Auch die Füllfarbe */
-}
-
-/* Light Mode: Sonne sichtbar, Mond versteckt */
-html.light .sun {
-  fill: #f7f7f7; /* Helle Sonne im Light Mode */
-}
-
-html.light .moon {
-  fill: transparent; /* Mond unsichtbar im Light Mode */
-}
-
-/* Dark Mode: Mond sichtbar, Sonne versteckt */
-html.dark .sun {
-  fill: transparent; /* Sonne unsichtbar im Dark Mode */
-}
-
-html.dark .moon {
-  fill: #f1c40f; /* Gelber Mond im Dark Mode */
-}
-
-
 /* ANCHOR Styles für die Header-Komponente */
 
 header {
@@ -358,25 +325,11 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px;
-  padding-top: 60px;
+  padding-top: 10px;
   z-index: 10; /* Sicherstellen, dass der Header über anderen Elementen liegt */
   width: 100%;
-  background-color: #222;
+  background-color: #fff;
   box-sizing: border-box; /* Sicherstellen, dass Padding zur Breite zählt */
-}
-
-/* Titel im Header */
-.header-title {
-  text-align: center;
-  margin-bottom: 10px;
-  width: 100%; /* Stellt sicher, dass der Titel die volle Breite einnimmt */
-}
-
-.header-title h1 {
-  margin: 0;
-  font-size: 1.5rem;
-  color: #fff;
 }
 
 /* Navigation */
@@ -429,9 +382,15 @@ hamburger,
   justify-content: space-between;
   padding: 10px 15px;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: normal;
   font-size: 1rem;
   color: #000;
+}
+
+/* grüner Hover wird benutzt bei nav-links */
+.nav-links a:hover,
+.nav-links a:focus {
+  background-color: #b5eeb5;
 }
 
 /* ANCHOR media screen Befehle für größere Bildschirme */
@@ -508,7 +467,7 @@ hamburger,
   text-decoration: none;
   font-weight: normal;
   color: #f7f7f7;
-  font-size: 1.1rem;
+  font-size: 1.0rem;
   transition: background-color 0.3s ease, color 0.3s ease;
   /* Sanfter Übergang bei Hover */
   border-bottom: 1px solid #e0e0e0;
