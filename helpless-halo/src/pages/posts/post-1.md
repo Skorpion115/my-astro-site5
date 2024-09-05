@@ -4,6 +4,7 @@ title: Gitarre stimmen!
 description: "Wie stimmt man eine Gitarre?"
 pubDate: "2022-07-01"
 author: Rudi Ziebart
+visibility: "draft" # Setze dies auf "draft" für Entwürfe oder "public" für veröffentlichte Seiten
 image:
     url: "https://docs.astro.build/assets/rose.webp"
     alt: "The Astro logo on a dark background with a pink glow."

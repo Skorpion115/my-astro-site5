@@ -4,6 +4,7 @@ title: Eigene moderne Webseite kostenlos erstellen!
 description: "Wie erstelle ich mir eine moderne kostenlose Webseite?"
 pubDate: "2022-07-15"
 author: Rudi Ziebart
+visibility: "draft"
 image:
     url: "https://docs.astro.build/default-og-image.png"
     alt: "Das vollständige Astro-Logo"
