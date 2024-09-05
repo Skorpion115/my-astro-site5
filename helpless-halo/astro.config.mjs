@@ -16,7 +16,7 @@ export default defineConfig({
   
   build: {
     format: "directory", // Erzeugt `page/index.html` statt `page.html`
-    sourcemap: true, // Aktiviert Source Maps in Vite
+    sourcemap: false, // Aktiviert Source Maps in Vite
     chunkSizeWarningLimit: 3420 // Setze hier deine bevorzugte Grenze ein
   },
   
