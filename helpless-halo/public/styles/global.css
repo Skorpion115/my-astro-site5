@@ -66,15 +66,6 @@ body {
   opacity: 1;
 }
 
-/* ANCHOR Sicherstellen, dass keine Transparenzeffekte die Lesbarkeit beeinträchtigen */
-/*
-body,
-.nav-links,
-.hamburger,
-.normal-links {
-  opacity: 1;
-} */
-
 h1 {
   margin: 2.5rem 1rem;
   font-size: 1.5rem;
@@ -942,8 +933,7 @@ textarea {
 
 /* Spezifisches Styling für das Coupon-Bild */
 .coupon img.coupon-image {
-  width: 100px;
-  /* Passe hier die Größe an */
+  width: 100px; /* Passe hier die Größe an */
   height: auto;
   margin-left: 1%;
   border-radius: 0.313rem;
