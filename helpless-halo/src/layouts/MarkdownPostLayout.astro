@@ -28,15 +28,8 @@ const { frontmatter } = Astro.props;
     <p><em>{frontmatter.description}</em></p>
     <p>Veröffentlicht am: {new Date(frontmatter.pubDate).toLocaleDateString('de-DE')}</p>
     <p>Geschrieben von {frontmatter.author}</p>
+    <img src={frontmatter.image.url} alt={frontmatter.image.alt} />
     
-    <!-- Check if the post is a draft -->
-    {frontmatter.visibility === 'draft' ? (
-      <p style="color: red;">Dieser Artikel ist ein Entwurf und noch nicht veröffentlicht.</p>
-    ) : (
-      <>
-        <img src={frontmatter.image.url} alt={frontmatter.image.alt} />
-        <slot />
-      </>
-    )}
+    <slot />
   </div>
 </BaseLayout>

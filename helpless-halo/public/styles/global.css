@@ -50,16 +50,11 @@ html.dark #themeToggle svg {
   /* Falls das SVG selbst gefüllt werden soll */
 }
 
-/* ANCHOR Custom Properties */
+/* ANCHOR Custom Properties General Style */
 body {
   --font: "IBM", sans-serif;
   --line: 3ch;
   --font-scale: 0.4vw;
-}
-
-/* ANCHOR General Style */
-
-body {
   margin: 0 auto;
   width: 100%;
   font-family: var(--font);
@@ -67,19 +62,21 @@ body {
   font-size: calc(1rem + var(--font-scale));
   line-height: var(--line);
   font-weight: 400;
-  padding: 1rem;
+  padding: 0;
+  opacity: 1;
 }
 
 /* ANCHOR Sicherstellen, dass keine Transparenzeffekte die Lesbarkeit beeinträchtigen */
+/*
 body,
 .nav-links,
 .hamburger,
 .normal-links {
   opacity: 1;
-}
+} */
 
 h1 {
-  margin: 2.5rem 0;
+  margin: 2.5rem 1rem;
   font-size: 1.5rem;
   color: #af8848;
   text-align: center;
@@ -88,7 +85,7 @@ h1 {
 h2 {
   font-size: 1.5rem;
   font-weight: bold;
-  padding-left: 0.5rem;
+  padding-left: 1.0rem;
 }
 
 h3 {
@@ -122,7 +119,7 @@ h6 {
 p {
   font-weight: normal;
   text-align: start;
-  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  padding: 0.5rem 1.25rem;
 }
 
 /* Wenn das Menü geöffnet ist, den Body nicht scrollen lassen */
@@ -133,11 +130,10 @@ body.menu-open {
 /* ANCHOR Titel im Header */
 
 .author {
-  padding: 0.9rem 0.9rem;
+  padding: 0.2rem 0; /* oben und unten 0.9rem, links und rechts 0.9rem */
   font-size: 0.9rem;
   font-style: italic;
   text-align: center;
-  margin-bottom: 0.1rem;
   width: 100%; /* Stellt sicher, dass der Titel die volle Breite einnimmt */
 }
 
@@ -207,7 +203,7 @@ button:focus,
 /* ANCHOR ThemeToggle Button Styling */
 #themeToggle {
   position: absolute;
-  top: 0px;
+  top: 0.9rem;
   /* Gleiche Höhe wie das Hamburger-Menü */
   right: 1.8rem;
   /* Abstand vom rechten Bildschirmrand */
@@ -238,34 +234,11 @@ html.dark .moon {
   /* Zeige den Mond in Gelb im Dark Mode */
 }
 
-/* ANCHOR button Formatierung */
-
-button {
-  border-radius: 0;
-  border: 0;
-  color: white;
-}
-
-button {
-  background-color: #545557;
-  padding: 0.94rem 7rem;
-  font-size: 1.125rem;
-  margin-top: 1.875rem;
-  cursor: pointer;
-  transition: all 0.3 ease;
-  text-align: center;
-}
-
-button:hover {
-  background-color: rgb(129, 226, 129);
-  color: black;
-}
-
 /* ANCHOR Hamburger-Menü für nav-links immer sichtbar */
 
 .hamburger {
   position: absolute;
-  top: 1.25rem;
+  top: 0.8rem;
   left: 1.25rem;
   cursor: pointer;
   z-index: 11;
@@ -304,21 +277,15 @@ html.dark #themeToggle {
   fill: #f1c40f;  /* Gelbe Füllfarbe für das Icon */
 }
 
-#themeToggle {
-  position: absolute;
-  top: 0.625rem;
-  right: 1,875rem;
-  z-index: 20; /* Über den meisten anderen Elementen */
-}
-
 /* ANCHOR Styles für die Header-Komponente */
 
 header {
-  position: relative;
+  position: relative; /* Damit sich #themeToggle und .hamburger darauf beziehen können */
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 0.625rem;
+  padding: 0;
+  margin: 0;
   z-index: 10; /* Sicherstellen, dass der Header über anderen Elementen liegt */
   width: 100%;
   background-color: #fff;
@@ -436,10 +403,10 @@ hamburger,
 /* ANCHOR Desktop Navleiste für nav-links-secondary */
 
 .nav-links-secondary {
-  position: static;
-  top: 0.5rem;
+  position: relative;
   left: 0;
   right: 0;
+  top: 1.0rem;
   width: 100%;
   background-color: #222;
   color: #f7f7f7;
@@ -448,7 +415,7 @@ hamburger,
   /* Ermöglicht das Umbrechen in eine neue Zeile */
   justify-content: space-around; /* Gleichmäßige Verteilung der Links */
   align-items: center; /* Vertikale Ausrichtung der Links */
-  padding: 0.625rem 0; /* Etwas Abstand oben und unten */
+  padding: 0.2rem 0; /* Etwas Abstand oben und unten */
   margin: 0;
   z-index: 5; /* Höherer Z-Index, damit es über anderen Inhalten liegt */
   box-sizing: border-box; /* Stellt sicher, dass Padding zur Breite gezählt wird */
@@ -460,11 +427,9 @@ hamburger,
   text-decoration: none;
   font-weight: normal;
   color: #f7f7f7;
-  font-size: 1.0rem;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 0.9rem;
   /* Sanfter Übergang bei Hover */
-  border-bottom: 0.063rem solid #e0e0e0;
-  /* Optional: Dünne Linie unten für Struktur */
+  transition: background-color 0.3s ease, color 0.3s ease;
   display: inline-block;
 }
 
