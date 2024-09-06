@@ -476,6 +476,9 @@ hamburger,
   left: 0;
   right: 0;
   margin: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  margin: 0 auto;
 }
 
 /* ANCHOR neue Videoeinstellungen von YouTube */
@@ -494,6 +497,9 @@ hamburger,
   max-width: 100%;
   width: 100%;
   height: 100%;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  margin: 0 auto;
 }
 
 /* verkleinert das Video auf 560px */
