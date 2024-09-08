@@ -822,7 +822,7 @@ textarea {
   .table2 td::before {
     content: attr(data-label);
     display: block;
-    font-weight: bold;
+    font-weight: normal;
     margin-bottom: 0.5rem;
   }
 }
