@@ -18,7 +18,6 @@ export default defineConfig({
     format: "directory", // Erzeugt `page/index.html` statt `page.html`
     sourcemap: true, // Aktiviert Source Maps in Vite
     inlineStylesheets: `never`, /* Projektstile werden in externen Stylesheets gesendet */
-    serverEntry: "main.mjs", /* damit die runtime erkennt, dass es sich bei der Datei um ein JavaScript-Modul handelt..mjs */
     chunkSizeWarningLimit: 3420 // Setze hier deine bevorzugte Grenze ein
   },
   
