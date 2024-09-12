@@ -1,7 +1,7 @@
 import { defineConfig } from "astro/config";
 import netlify from "@astrojs/netlify";
 import { fileURLToPath } from "url";
-import { dirname, resolve } from "path"
+import { dirname, resolve } from "path";
 
 // Convert import.meta.url to __dirname and __filename
 const __filename = fileURLToPath(import.meta.url);
@@ -17,7 +17,6 @@ export default defineConfig({
   build: {
     format: "directory", // Erzeugt `page/index.html` statt `page.html`
     sourcemap: true, // Aktiviert Source Maps in Vite
-    inlineStylesheets: `never`, /* Projektstile werden in externen Stylesheets gesendet */
     chunkSizeWarningLimit: 3420 // Setze hier deine bevorzugte Grenze ein
   },
   
@@ -31,9 +30,10 @@ export default defineConfig({
   },
   
   output: "hybrid", // Statisches und serverseitiges Rendern
-  adapter: netlify({
-    functionPerRoute: true, // Falls du Route-spezifische Funktionen verwenden möchtest
-  }),
+  adapter: netlify(),
+  experimental: {
+    serverIslands: true
+  },
 
   // Project root directory
   root: ".",
