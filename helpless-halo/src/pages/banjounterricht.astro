@@ -59,17 +59,17 @@ const videoData = [
   <article vocab="http://schema.org/" typeof="VideoObject">
     <section>
       <p>Mein neuestes Video!</p>
-      <!--
-      <h2 property="name">Flint Hill Special - Earl Scruggs</h2> -->
+      
+      <h2 property="name">Flint Hill Special - Earl Scruggs</h2>
       {
         videoData.map((video) => (
           <div vocab="http://schema.org/" typeof="VideoObject">
             <meta property="name" content={video.title} />
             <meta property="description" content={video.description} />
+            <meta property="contentUrl" content={video.content_loc} />
             <meta property="thumbnailUrl" content={video.thumbnail_loc} />
             <meta property="uploadDate" content={video.publication_date} />
             <meta property="duration" content={video.duration} />
-            <meta property="contentUrl" content={video.content_loc} />
             <meta property="embedUrl" content={video.content_loc} />
 
             <div class="video-container-wrapper">
