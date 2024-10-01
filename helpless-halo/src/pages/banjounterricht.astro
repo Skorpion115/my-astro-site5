@@ -53,14 +53,12 @@ const videoData = [
   ogUrl={pageUrl}
   twitterTitle={pageTitle}
   twitterDescription={description}
-  twitterUrl={pageUrl}
-  
+  twitterUrl={pageUrl}  
 >
   <article>
     <section>
       <p>Mein neuestes Video!</p>
-      <!--
-      <h2 property="name">Flint Hill Special - Earl Scruggs</h2> -->
+      
       {
         videoData.map((video) => (
           <div vocab="http://schema.org/" typeof="VideoObject">
