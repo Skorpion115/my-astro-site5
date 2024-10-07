@@ -53,6 +53,15 @@ const videos = [
     duration: "PT2M47S"
   },
   {
+    loc: `${SITE_URL}/klavierunterricht/`,
+    title: "PRAELUDIUM BMV 927 - Johann Sebastian Bach",
+    description: "Lerne das Banjostück Train 45 - Bluegrass Banjo.",
+    content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE",
+    thumbnail_loc: "https://i.ytimg.com/vi/vxX0WiQhSUE/hqdefault.jpg",
+    publication_date: "2021-05-20T14:00:00+02:00",
+    duration: "PT02M34S"
+  },
+  {
     loc: `${SITE_URL}/e-gitarrenunterricht/`,
     title: "Joe Satriani - Ten Words Guitar Lesson+Tab",
     description: "Lerne das Gitarrenstück 'Ten Words' von Joe Satriani mit dieser detaillierten Gitarrenstunde.",
