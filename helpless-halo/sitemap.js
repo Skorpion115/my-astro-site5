@@ -26,6 +26,7 @@ const pages = [
   { url: `${SITE_URL}/e-bassunterricht/`, changefreq: "weekly", lastmod: new Date() },
   { url: `${SITE_URL}/e-gitarrenunterricht/`, changefreq: "weekly", lastmod: new Date() },
   { url: `${SITE_URL}/banjounterricht/`, changefreq: "weekly", lastmod: new Date() },
+  { url: `${SITE_URL}/banjo-videoanleitung/`, changefreq: "weekly", lastmod: new Date() },
   { url: `${SITE_URL}/akkordeonunterricht/`, changefreq: "weekly", lastmod: new Date() },
   { url: `${SITE_URL}/saxophonunterricht/`, changefreq: "weekly", lastmod: new Date() },
   { url: `${SITE_URL}/querfloetenunterricht/`, changefreq: "weekly", lastmod: new Date() },
@@ -35,7 +36,7 @@ const pages = [
 // Video-Informationen
 const videos = [
   {
-    loc: `${SITE_URL}/banjounterricht/`,
+    loc: `${SITE_URL}/banjo-videoanleitung/`,
     title: "Flint Hill Special - Banjo Lesson",
     description:
       "Lerne das Banjostück 'Flint Hill Special von Earl Scruggs'. Es wird in dem Stück ein sogenannter D-Tuner verwendet. Ich erkläre genau wie man so einen D-Tuner benutzt und einstellt.",
@@ -45,7 +46,7 @@ const videos = [
     duration: "PT13M32S",
   },
   {
-    loc: `${SITE_URL}/banjounterricht/`,
+    loc: `${SITE_URL}/banjo-videoanleitung/`,
     title: "Train 45 - Bluegrass Banjo",
     description: "Lerne das Banjostück Train 45 - Bluegrass Banjo.",
     content_loc: "https://www.youtube.com/embed/uo5ojnmRHPo",
@@ -54,9 +55,9 @@ const videos = [
     duration: "PT2M42S"
   },
   {
-    loc: `${SITE_URL}/banjounterricht/`,
+    loc: `${SITE_URL}/banjo-videoanleitung/`,
     title: "Banjo Beginner Lesson 2",
-    description: "Lerne das Banjostück 'Creeple Creek'. Mit diesem Stück hat Earl Scruggs als kleiner Junge schon einen Preis gewonnen.",
+    description: "Lerne das Banjostück 'Cripple Creek'. Mit diesem Stück hat Earl Scruggs als kleiner Junge schon einen Preis gewonnen.",
     content_loc: "https://www.youtube.com/embed/WmYlSqvpUkw",
     thumbnail_loc: "https://i.ytimg.com/vi/WmYlSqvpUkw/hqdefault.jpg",
     publication_date: "2023-04-05T14:00:00+02:00",

@@ -1,46 +1,12 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import YouTube from "../components/YouTube.astro";
-import "../styles/lite-yt-embed.css";
+// import YouTube from "../components/YouTube.astro";
+// import "../styles/lite-yt-embed.css";
 const pageTitle = "Banjounterricht für 5-string Banjo";
 const description = "Ich gebe Banjounterricht in Nürnberg. Ich nehme dazu die Schule von Rüdiger Helbig. Sie heißt Beginner Banjo. 🪕";
 const keywords = "banjounterricht für 5-string banjo, banjounterricht, flint hill special - earl scruggs, train 45, cripple creek, beginner banjo, 5-string banjo, bluegrass banjo, ruediger helbig, banjo lernen deutsch, banjo unterricht, banjo workshop, banjounterricht in eibach, banjolehrer nürnberg, banjo spielen ohne noten, banjo kurs, bluegrass banjo lernen, banjounterricht für anfänger, banjo lernen, banjo für anfänger, banjolehrer, banjo workshop, 5-string banjo lernen, banjo anfaenger, banjo picker, banjo lessons, banjo open back";
 const pageUrl = "https://www.musicstudio-ziebart.de/banjounterricht/";
 const SITE_URL = process.env.SITE_URL || "https://www.musicstudio-ziebart.de";
-
-// Video-Daten
-
-const videoData = [
-  {
-    loc: `${SITE_URL}/banjounterricht/`,
-    title: "Flint Hill Special - Banjo Lesson",
-    description:
-      "Lerne das Banjostück 'Flint Hill Special von Earl Scruggs'. Es wird in dem Stück ein sogenannter D-Tuner verwendet. Ich erkläre genau wie man so einen D-Tuner benutzt und einstellt.",
-    content_loc: "https://www.youtube.com/embed/R75ZetEwmtw",
-    thumbnail_loc: "https://i.ytimg.com/vi/R75ZetEwmtw/hqdefault.jpg",
-    publication_date: "2023-06-17T14:00:00+02:00",
-    duration: "PT13M32S",
-  },
-  {
-    loc: `${SITE_URL}/banjounterricht/`,
-    title: "Train 45 - Bluegrass Banjo",
-    description: "Lerne das Banjostück Train 45 - Bluegrass Banjo.",
-    content_loc: "https://www.youtube.com/embed/uo5ojnmRHPo",
-    thumbnail_loc: "https://i.ytimg.com/vi/uo5ojnmRHPo/hqdefault.jpg",
-    publication_date: "2023-05-26T14:00:00+02:00",
-    duration: "PT06M31S",
-  },
-  {
-    loc: `${SITE_URL}/banjounterricht/`,
-    title: "Banjo Beginner Lesson 2",
-    description:
-      "Lerne das Banjostück 'Creeple Creek'. Mit diesem Stück hat Earl Scruggs als kleiner Junge schon einen Preis gewonnen.",
-    content_loc: "https://www.youtube.com/embed/WmYlSqvpUkw",
-    thumbnail_loc: "https://i.ytimg.com/vi/WmYlSqvpUkw/hqdefault.jpg",
-    publication_date: "2023-04-05T14:00:00+02:00",
-    duration: "PT09M16S",
-  },
-];
 ---
 
 <BaseLayout
@@ -57,51 +23,8 @@ const videoData = [
 >
   <article>
     <section>
-      <p>Mein neuestes Video!</p>
-      
-      {
-        videoData.map((video) => (
-          <div vocab="http://schema.org/" typeof="VideoObject">
-            <meta property="name" content={video.title} />
-            <meta property="description" content={video.description} />
-            <meta property="contentUrl" content={video.content_loc} />
-            <meta property="thumbnailUrl" content={video.thumbnail_loc} />
-            <meta property="uploadDate" content={video.publication_date} />
-            <meta property="duration" content={video.duration} />
-            <meta property="embedUrl" content={video.content_loc} />
-
-            <div class="video-container-wrapper">
-              <div class="video-container">
-                <lite-youtube
-                  videoid={video.content_loc.split("/").pop()}
-                  style={
-                    "background-image: url('" + video.thumbnail_loc + "');"
-                  }
-                >
-                  <a
-                    href={video.content_loc}
-                    class="lty-playbtn"
-                    title={video.title}
-                  >
-                    <span class="lyt-visually-hidden">
-                      Play Video: {video.title}
-                    </span>
-                  </a>
-                </lite-youtube>
-              </div>
-              <h2>{video.title}</h2>
-              <p>{video.description}</p>
-            </div>
-          </div>
-        ))
-      }
-
-      <br />
-      <hr />
-    </section>
-    <section>
-      <p>Rüdiger Helbig</p>
       <h2>Banjounterricht mit Beginner Banjo</h2>
+      <p> von Rüdiger Helbig</p>
       <p>
         <img
           src="/images/helbig-banjoschule.webp"
@@ -129,8 +52,8 @@ const videoData = [
       <hr />
     </section>
     <section>
-      <p>Sebastian Schröder</p>
       <h2>Banjo spielen!</h2>
+      <p> von Sebastian Schröder</p>
       <p>
         <img
           src="/images/schroeder-banjoschule.webp"
@@ -173,6 +96,12 @@ const videoData = [
         >
       </p>
       <br />
+      <p>
+        Weiterführende Lektionen <a
+        href="/banjo-videoanleitung/"
+        class="normal-links">Zusätzliche Materialien</a
+      >
+      </p>
       <h3>Hier noch einige 5-string Banjostücke zum selber probieren!</h3>
       <p>
         Snuffy Jenkins war neben Earl Scruggs einer der Erfinder der "Three
@@ -453,5 +382,3 @@ const videoData = [
     </section>
   </article>
 </BaseLayout>
-
-<YouTube />
