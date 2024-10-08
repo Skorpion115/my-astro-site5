@@ -36,6 +36,16 @@ const pages = [
 const videos = [
   {
     loc: `${SITE_URL}/banjounterricht/`,
+    title: "Flint Hill Special - Banjo Lesson",
+    description:
+      "Lerne das Banjostück 'Flint Hill Special von Earl Scruggs'. Es wird in dem Stück ein sogenannter D-Tuner verwendet. Ich erkläre genau wie man so einen D-Tuner benutzt und einstellt.",
+    content_loc: "https://www.youtube.com/embed/R75ZetEwmtw",
+    thumbnail_loc: "https://i.ytimg.com/vi/R75ZetEwmtw/hqdefault.jpg",
+    publication_date: "2023-06-17T14:00:00+02:00",
+    duration: "PT13M32S",
+  },
+  {
+    loc: `${SITE_URL}/banjounterricht/`,
     title: "Train 45 - Bluegrass Banjo",
     description: "Lerne das Banjostück Train 45 - Bluegrass Banjo.",
     content_loc: "https://www.youtube.com/embed/uo5ojnmRHPo",
