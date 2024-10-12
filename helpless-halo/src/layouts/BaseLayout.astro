@@ -111,9 +111,11 @@ const urlPath = Astro.url.pathname;
     >
     {/* End Google Tag Manager (noscript */}
     <h1 transition:animate="slide" class="page-title">{pageTitle}</h1>
-
-    <slot />
-
+    
+    <main>
+      <slot />
+    </main>
+    
     <Footer />
     <br />
     <Footer2 />

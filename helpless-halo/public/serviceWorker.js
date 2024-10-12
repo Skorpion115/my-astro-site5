@@ -1,4 +1,4 @@
-const cacheVersion = "v3";
+const cacheVersion = "v4";
 const cacheAssets = [
   "/",
   "/blog/",
