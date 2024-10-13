@@ -25,6 +25,7 @@ const pages = [
   { url: `${SITE_URL}/gitarrenunterricht/`, changefreq: "weekly", lastmod: new Date() },
   { url: `${SITE_URL}/e-bassunterricht/`, changefreq: "weekly", lastmod: new Date() },
   { url: `${SITE_URL}/e-gitarrenunterricht/`, changefreq: "weekly", lastmod: new Date() },
+  { url: `${SITE_URL}/e-gitarre-videoanleitung/`, changefreq: "weekly", lastmod: new Date() },
   { url: `${SITE_URL}/banjounterricht/`, changefreq: "weekly", lastmod: new Date() },
   { url: `${SITE_URL}/banjo-videoanleitung/`, changefreq: "weekly", lastmod: new Date() },
   { url: `${SITE_URL}/akkordeonunterricht/`, changefreq: "weekly", lastmod: new Date() },
@@ -73,12 +74,12 @@ const videos = [
     duration: "PT02M34S"
   },
   {
-    loc: `${SITE_URL}/e-gitarrenunterricht/`,
+    loc: `${SITE_URL}/e-gitarre-videoanleitung/`,
     title: "Joe Satriani - Ten Words Guitar Lesson+Tab",
     description: "Lerne das Gitarrenstück 'Ten Words' von Joe Satriani mit dieser detaillierten Gitarrenstunde.",
     content_loc: "https://www.youtube.com/embed/8ucTzPOBzAo",
     thumbnail_loc: "https://i.ytimg.com/vi/8ucTzPOBzAo/hqdefault.jpg",
-    publication_date: "2021-07-17T00:00:00+02:00",
+    publication_date: "2021-07-17T14:00:00+02:00",
     duration: "PT3M59S"
   },
   {
