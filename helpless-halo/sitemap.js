@@ -83,21 +83,21 @@ const videos = [
     duration: "PT3M59S"
   },
   {
-    loc: `${SITE_URL}/gitarrenunterricht/`,
+    loc: `${SITE_URL}/gitarre-videoanleitung/`,
     title: "Beatles - Yesterday Gitarre Tutorial",
     description: "Lernevideo und Gitarrentutorial für das Gitarrenstück 'Yesterday von den Beatles'. Dieses Stück kann man wunderbar alleine spielen, also ohne Bass, Drums usw. Die Gitarre wird in einer Double Flatstimmung umgestimmt.",
     content_loc: "https://www.youtube.com/embed/oqko5Mk_UBk",
     thumbnail_loc: "https://i.ytimg.com/vi/oqko5Mk_UBk/hqdefault.jpg",
-    publication_date: "2023-07-01T00:00:00+02:00",
+    publication_date: "2023-07-01T14:00:00+02:00",
     duration: "PT12M41S"
   },
   {
-    loc: `${SITE_URL}/gitarrenunterricht/`,
+    loc: `${SITE_URL}/gitarre-videoanleitung/`,
     title: "City Of NewOrleans - Arlo Guthrie",
     description: "Ein schönes Beispiel für ein Fingerpicking mit Gitarre und Gesang: Ich habe mir damals den Song von Arlo Guthrie rausgesucht. Es heißt 'City Of NewOrleans'. Er selbst spielt übrigens bei diesem Song ein Klavier. Es ist ein Lernvideo und Gitarren Tutorial. Dieses Stück war Arlo Guthries einziger Welthit. Als damals Steve Goodman, der Komponist des berühmten Songs zu ihm sagte: Ich hätte da einen guten Hit für dich, sagte Arlo Guthrie: 'Ich hasse Hits!'. Warum das weiß ich nicht.",
     content_loc: "https://www.youtube.com/embed/yEF6e2ZSZ0k",
     thumbnail_loc: "https://i.ytimg.com/vi/yEF6e2ZSZ0k/hqdefault.jpg",
-    publication_date: "2021-08-26T00:00:00+02:00",
+    publication_date: "2021-08-26T14:00:00+02:00",
     duration: "PT4M49S"
   },
   {
