@@ -3,7 +3,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import YouTube from "../components/YouTube.astro";
 import "../styles/lite-yt-embed.css";
 const pageTitle = "Videoanleitung für Bluegrass Banjo";
-const description = "Ich möchte noch ein paar Videoanleitungen für Banjo geben! 🪕";
+const description =
+  "Ich möchte noch ein paar Videoanleitungen für Banjo geben! 🪕";
 const keywords = "flint hill special - earl scruggs, train 45, cripple creek";
 const pageUrl = "https://www.musicstudio-ziebart.de/banjo-videoanleitung/";
 const SITE_URL = process.env.SITE_URL || "https://www.musicstudio-ziebart.de";
@@ -53,7 +54,7 @@ const videoData = [
   ogUrl={pageUrl}
   twitterTitle={pageTitle}
   twitterDescription={description}
-  twitterUrl={pageUrl}  
+  twitterUrl={pageUrl}
 >
   <article>
     <section>
@@ -97,11 +98,12 @@ const videoData = [
 
       <br />
       <p>
-        <a href="/banjounterricht/" class="normal-links">zurück zu banjounterricht</a>
+        <a href="/banjounterricht/" class="normal-links"
+          >zurück zu banjounterricht</a
+        >
       </p>
       <hr />
     </section>
-    </article>
+  </article>
+  <YouTube />
 </BaseLayout>
-
-<YouTube />

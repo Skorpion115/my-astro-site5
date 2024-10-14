@@ -1,10 +1,12 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import YouTube from "../components/YouTube.astro";
 import "../styles/lite-yt-embed.css";
 const pageTitle = "Weiterführende Lektionen für E-Gitarre";
 const description = "Lerne das Stück Ten Words 🎸 von Jo Satriani.";
-const keywords = "e-gitarrenunterricht für rockgitarre, ten words - joe satriani, e gitarrenlehrer in nuernberg";
-const pageUrl = "https://www.musicstudio-ziebart.de/e-gitarre-videoanleitung/"
+const keywords =
+  "e-gitarrenunterricht für rockgitarre, ten words - joe satriani, e gitarrenlehrer in nuernberg";
+const pageUrl = "https://www.musicstudio-ziebart.de/e-gitarre-videoanleitung/";
 const SITE_URL = process.env.SITE_URL || "https://www.musicstudio-ziebart.de";
 
 // RDFa-Markup für das Video nur auf dieser Seite
@@ -20,55 +22,52 @@ const videoData = {
   content_loc: "https://www.youtube.com/embed/8ucTzPOBzAo", // URL des eingebetteten Videos
 };
 ---
+
 <BaseLayout
-    pageTitle={pageTitle}
-    description={description}
-    keywords={keywords}
-    href={pageUrl}
-    ogTitle={pageTitle}
-    ogDescription={description}
-    ogUrl={pageUrl}
-    twitterTitle={pageTitle}
-    twitterDescription={description}
-    twitterUrl={pageUrl}
+  pageTitle={pageTitle}
+  description={description}
+  keywords={keywords}
+  href={pageUrl}
+  ogTitle={pageTitle}
+  ogDescription={description}
+  ogUrl={pageUrl}
+  twitterTitle={pageTitle}
+  twitterDescription={description}
+  twitterUrl={pageUrl}
 >
-
-    <!-- RDFa-Markup Struktur für das VideoObject -->
-    <div vocab="http://schema.org/" typeof="VideoObject">
-        <meta property="name" content={videoData.title} />
-        <meta property="description" content={videoData.description} />
-        <meta property="thumbnailUrl" content={videoData.thumbnail_loc} />
-        <meta property="uploadDate" content={videoData.publication_date} />
-        <meta property="duration" content={videoData.duration} />
-        <meta property="contentUrl" content={videoData.content_loc} />
-        <meta property="embedUrl" content={videoData.content_loc} />
-        <h2>Ten Words - Joe Satriani</h2>
-        <p>
-          Ein tolles Stück, um eine E-Gitarre zu repräsentieren, ist das Stück von
-          Joe Satriani "Ten Words". Ich habe es mal aufgenommen und auf YouTube
-          gestellt.
-        </p>
-        <div class="video-container-wrapper">
-          <div class="video-container">
-            <lite-youtube
-              videoid="8ucTzPOBzAo"
-              style="background-image: url('https://i.ytimg.com/vi/8ucTzPOBzAo/hqdefault.jpg');"
+  <!-- RDFa-Markup Struktur für das VideoObject -->
+  <div vocab="http://schema.org/" typeof="VideoObject">
+    <meta property="name" content={videoData.title} />
+    <meta property="description" content={videoData.description} />
+    <meta property="thumbnailUrl" content={videoData.thumbnail_loc} />
+    <meta property="uploadDate" content={videoData.publication_date} />
+    <meta property="duration" content={videoData.duration} />
+    <meta property="contentUrl" content={videoData.content_loc} />
+    <meta property="embedUrl" content={videoData.content_loc} />
+    <h2>Ten Words - Joe Satriani</h2>
+    <p>
+      Ein tolles Stück, um eine E-Gitarre zu repräsentieren, ist das Stück von
+      Joe Satriani "Ten Words". Ich habe es mal aufgenommen und auf YouTube
+      gestellt.
+    </p>
+    <div class="video-container-wrapper">
+      <div class="video-container">
+        <lite-youtube
+          videoid="8ucTzPOBzAo"
+          style="background-image: url('https://i.ytimg.com/vi/8ucTzPOBzAo/hqdefault.jpg');"
+        >
+          <a
+            href="https://www.youtube.com/embed/8ucTzPOBzAo"
+            class="lty-playbtn"
+            title="Joe Satriani - Ten Words Guitar Lesson+Tab"
+          >
+            <span class="lyt-visually-hidden"
+              >Play Video: Joe Satriani - Ten Words Guitar Lesson+Tab</span
             >
-              <a
-                href="https://www.youtube.com/embed/8ucTzPOBzAo"
-                class="lty-playbtn"
-                title="Joe Satriani - Ten Words Guitar Lesson+Tab"
-              >
-                <span class="lyt-visually-hidden"
-                  >Play Video: Joe Satriani - Ten Words Guitar Lesson+Tab</span
-                >
-              </a>
-            </lite-youtube>
-          </div>
-        </div>
+          </a>
+        </lite-youtube>
       </div>
-
-      <!-- Skript einbinden -->
-    <script src="/scripts/lite-yt-embed.js" is:inline defer></script>
-
+    </div>
+  </div>
+  <YouTube />
 </BaseLayout>
