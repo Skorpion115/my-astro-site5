@@ -13,7 +13,7 @@ const videoData = [
     loc: `${SITE_URL}/harmonielehre/`,
     title: "Notenschrift",
     description:
-      "Ich möchte mit diesem Video die Notenschrift erklären die ja doch so wichtig für die Musik ist!",
+      "Ich möchte mit diesem Video die Notenschrift erklären die ja doch so wichtig für die Musik ist! Ich möchte den Schülern, Musikinteressierte oder Hobbymusiker auf diese Weise das Noten lesen und die Harmonielehre ein bisschen näher bringen! Die Videos sind so aufgebaut das man zuerst die Noten lesen kann, dann kommen die Intervalle, dann die Dreiklänge und zuletzt die Funktiontheorie. Also bitte nach der Reihenfolge lernen! Ich werde mit dem ersten Video das Noten lesen erklären.",
     content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=Hu4ef1IkuG0",
     thumbnail_loc: "https://i.ytimg.com/vi/Hu4ef1IkuG0/hqdefault.jpg",
     publication_date: "2021-04-19T00:00:00+01:00",
@@ -66,25 +66,6 @@ const videoData = [
   <article id="harmonielehre">
     <h2>Lernvideos</h2>
     <section>
-      <hr />
-      <p>
-        Ich möchte den Schülern, Musikinteressierte oder Hobbymusiker auf diese
-        Weise das Noten lesen und die Harmonielehre ein bisschen näher bringen!
-        Die Videos sind so aufgebaut das man zuerst die Noten lesen kann, dann
-        kommen die Intervalle, dann die Dreiklänge und zuletzt die
-        Funktiontheorie. Also bitte nach dieser Reihenfolge lernen.
-        <br /> Ich werde im ersten Video das "Noten lesen" erklären.
-      </p>
-      <p>
-        Hier könnt ihr euch ein <a
-          href="/images/Notenblatt.pdf"
-          target="_blank"
-          class="normal-links">leeres Notenblatt</a
-        > downloaden! Es dient für den Aufgabenanhang für das Video Notenschrift.
-        Downloaden, ausdrucken und dann am besten mit Bleistift die Noten und drunter
-        die Buchstaben schreiben!
-      </p>
-      <h2>Notenschrift</h2>
       {
         videoData.map((video) => (
           <div vocab="http://schema.org/" typeof="VideoObject">
@@ -122,6 +103,15 @@ const videoData = [
         ))
       }
     </section>
+    <p>
+      Hier könnt ihr euch ein <a
+        href="/images/Notenblatt.pdf"
+        target="_blank"
+        class="normal-links">leeres Notenblatt</a
+      > downloaden! Es dient für den Aufgabenanhang für das Video Notenschrift.
+      Downloaden, ausdrucken und dann am besten mit Bleistift die Noten und darunter
+      die Buchstaben schreiben!
+    </p>
   </article>
 </BaseLayout>
 
