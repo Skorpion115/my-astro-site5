@@ -15,6 +15,7 @@ const cacheAssets = [
   "/impressum/",
   "/datenschutz/",
   "/klavierunterricht/",
+  "/klavier-videoanleitung/",
   "/keyboardunterricht/",
   "/gitarrenunterricht/",
   "/gitarre-videoanleitung/",
