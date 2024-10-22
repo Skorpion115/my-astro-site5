@@ -1,26 +1,10 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import YouTube from "../components/YouTube.astro";
-import "../styles/lite-yt-embed.css";
 const pageTitle = "Klavierunterricht Nürnberg - Musicstudio Ziebart";
 const description = "Ich gebe Klavierunterricht 🎹 in Eibach. Alle Stilrichtungen: Klassik, Unterhaltungsmusik, Ragtime, Film Musik und Popmusik.";
 const keywords = "klavierunterricht nürnberg - musicstudio ziebart, klavierunterricht, klavierunterricht nürnberg, klavier spielen lernen, klavier lernen nürnberg, klavierlehrer nürnberg, klavierschule nürnberg, klavierunterricht in der naehe, klavierstücke schnell spielen";
 const pageUrl = "https://www.musicstudio-ziebart.de/klavierunterricht/";
 const SITE_URL = process.env.SITE_URL || "https://www.musicstudio-ziebart.de";
-
-// Video-Daten
-
-const videoData = [
-  {
-    loc: `${SITE_URL}/klavierunterricht/`,
-    title: "PRAELUDIUM BMV 927 - Johann Sebastian Bach",
-    description: "Klassisches Klavierstück auswendig lernen!",
-    content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE",
-    thumbnail_loc: "https://i.ytimg.com/vi/vxX0WiQhSUE/hqdefault.jpg",
-    publication_date: "2021-05-20T14:00:00+02:00",
-    duration: "PT02M34S",
-  },
-];
 ---
 
 <BaseLayout
@@ -179,42 +163,12 @@ const videoData = [
             allowfullscreen></iframe>
         </div>
       </div> -->
-      {
-        videoData.map((video) => (
-          <div vocab="http://schema.org/" typeof="VideoObject">
-            <meta property="name" content={video.title} />
-            <meta property="description" content={video.description} />
-            <meta property="contentUrl" content={video.content_loc} />
-            <meta property="thumbnailUrl" content={video.thumbnail_loc} />
-            <meta property="uploadDate" content={video.publication_date} />
-            <meta property="duration" content={video.duration} />
-            <meta property="embedUrl" content={video.content_loc} />
-
-            <div class="video-container-wrapper">
-              <div class="video-container">
-                <lite-youtube
-                  videoid={video.content_loc.split("/").pop()}
-                  style={
-                    "background-image: url('" + video.thumbnail_loc + "');"
-                  }
-                >
-                  <a
-                    href={video.content_loc}
-                    class="lty-playbtn"
-                    title={video.title}
-                  >
-                    <span class="lyt-visually-hidden">
-                      Play Video: {video.title}
-                    </span>
-                  </a>
-                </lite-youtube>
-              </div>
-              <h2>{video.title}</h2>
-              <p>{video.description}</p>
-            </div>
-          </div>
-        ))
-      }
+      <p>
+        Weiterführende Lektionen <a
+        href="/klavier-videoanleitung/"
+        class="normal-links">Zusätzliche Materialien</a
+      >
+      </p>
 
       <p>
         <a href="/unterricht/" class="normal-links">zurück</a>
@@ -222,5 +176,3 @@ const videoData = [
     </section>
   </article>
 </BaseLayout>
-
-<YouTube />

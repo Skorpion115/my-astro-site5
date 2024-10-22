@@ -65,9 +65,9 @@ const videos = [
     duration: "PT2M47S"
   },
   {
-    loc: `${SITE_URL}/klavierunterricht/`,
+    loc: `${SITE_URL}/klavier-videoanleitung/`,
     title: "PRAELUDIUM BMV 927 - Johann Sebastian Bach",
-    description: "Lerne das Banjostück Train 45 - Bluegrass Banjo.",
+    description: "Klassisches Klavierstück auswendig lernen! Für mich ist dies eins der schwierigsten Dinge. Dieses Stück hat nur eine Seite, da geht es noch einigermaßen.",
     content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE",
     thumbnail_loc: "https://i.ytimg.com/vi/vxX0WiQhSUE/hqdefault.jpg",
     publication_date: "2021-05-20T14:00:00+02:00",
