@@ -1,43 +1,12 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import YouTube from "../components/YouTube.astro";
-import "../styles/lite-yt-embed.css";
 const pageTitle = "Keyboardunterricht für jung und alt";
-const description = "Ich gebe Keyboardunterricht 🎹 in Nürnberg Eibach. Zuerst lernt man die Akkordbegleitung. Später kommt die linke Hand dazu.";
-const keywords = "keyboardunterricht für jung und alt, hammond flip - klaus wunderlich, hschisch - klaus wunderlich, e-hering - klaus wunderlich, der neue weg zum keyboardspiel, keyboardschule, keyboardunterricht in der naehe, keyboardlehrer, keyboard unterricht erwachsene, keyboardunterricht in eibach, keyboard anfänger, keyboardnoten für anfaenger, einsteiger keyboard, keyboard spielen lernen, keyboard unterricht, keyboard kurs, keyboard für anfänger, keyboardunterricht nürnberg, keyboard lernen, keyboard spielen, keyboard lessons";
+const description =
+  "Ich gebe Keyboardunterricht 🎹 in Nürnberg Eibach. Zuerst lernt man die Akkordbegleitung. Später kommt die linke Hand dazu.";
+const keywords =
+  "keyboardunterricht für jung und alt, hammond flip - klaus wunderlich, hschisch - klaus wunderlich, e-hering - klaus wunderlich, der neue weg zum keyboardspiel, keyboardschule, keyboardunterricht in der naehe, keyboardlehrer, keyboard unterricht erwachsene, keyboardunterricht in eibach, keyboard anfänger, keyboardnoten für anfaenger, einsteiger keyboard, keyboard spielen lernen, keyboard unterricht, keyboard kurs, keyboard für anfänger, keyboardunterricht nürnberg, keyboard lernen, keyboard spielen, keyboard lessons";
 const pageUrl = "https://www.musicstudio-ziebart.de/keyboardunterricht/";
 const SITE_URL = process.env.SITE_URL || "https://www.musicstudio-ziebart.de";
-// Video-Daten
-
-const videoData = [
-  {
-    loc: `${SITE_URL}/keyboardunterricht/`,
-    title: "Hammond Organ - Hammond Flip - Klaus Wunderlich",
-    description: "Keyboard Tutorial über eine Klaus Wunderlich Komposition. Das Stück heißt 'Hammond Flip'.",
-    content_loc: "https://www.youtube.com/embed/244HlpB3JoA",
-    thumbnail_loc: "https://i.ytimg.com/vi/244HlpB3JoA/hqdefault.jpg",
-    publication_date: "2021-07-08T00:00:00+02:00",
-    duration: "PT3M6S"
-  },
-  {
-    loc: `${SITE_URL}/keyboardunterricht/`,
-    title: "Hammond Organ Komponist: Klaus Wunderlich Titel: H-schisch",
-    description: "Ein Keyboard Tutorial über den Komponist Klaus Wunderlich. Das Stück das ich spiele heißt 'H-schisch'. Das ist in einem Notenheft von ihm mit 12 Kompositionen. Klaus Wunderlich brachte ein Notenbuch heraus mit 12 Kompositionen von ihm. Für jede Tonart komponierte er ein Stück. Ich habe das Stück in H Durgewählt. Ich habe es mit einem HAMMOND XM-1 Expander aufgenommen.",
-    content_loc: "https://www.youtube.com/embed/y2KtSx3-W3w",
-    thumbnail_loc: "https://i.ytimg.com/vi/y2KtSx3-W3w/hqdefault.jpg",
-    publication_date: "2023-05-19T00:00:00+02:00",
-    duration: "PT4M16S"
-  },
-  {
-    loc: `${SITE_URL}/keyboardunterricht/`,
-    title: "Hammond Organ Komponist: Klaus Wunderlich Titel: E-Hering",
-    description: "Noch ein Stück aus dem Heft 12 Kompositionen von Klaus Wunderlich. Ein Keyboard Tutorial über den Komponisten Klaus Wunderlich. Titel: E-Hering.",
-    content_loc: "https://www.youtube.com/embed/t0tOQfL2qSE",
-    thumbnail_loc: "https://i.ytimg.com/vi/t0tOQfL2qSE/hqdefault.jpg",
-    publication_date: "2023-04-12T00:00:00+02:00",
-    duration: "PT5M38S"
-  },
-];
 ---
 
 <BaseLayout
@@ -53,48 +22,6 @@ const videoData = [
   twitterUrl={pageUrl}
 >
   <section>
-    <p>
-      Auf dem Video unten spiele ich ein Stück von Klaus Wunderlich mit dem
-      Titel "Hammond Flip".
-    </p>
-    <h2>Video Tutorial Hammond Flip - Klaus Wunderlich</h2>
-    {
-      videoData.map((video) => (
-        <div vocab="http://schema.org/" typeof="VideoObject">
-          <meta property="name" content={video.title} />
-          <meta property="description" content={video.description} />
-          <meta property="thumbnailUrl" content={video.thumbnail_loc} />
-          <meta property="uploadDate" content={video.publication_date} />
-          <meta property="duration" content={video.duration} />
-          <meta property="contentUrl" content={video.content_loc} />
-          <meta property="embedUrl" content={video.content_loc} />
-
-          <div class="video-container-wrapper">
-            <div class="video-container">
-              <lite-youtube
-                videoid={video.content_loc.split("/").pop()}
-                style={
-                  "background-image: url('" + video.thumbnail_loc + "');"
-                }
-              >
-                <a
-                  href={video.content_loc}
-                  class="lty-playbtn"
-                  title={video.title}
-                >
-                  <span class="lyt-visually-hidden">
-                    Play Video: {video.title}
-                  </span>
-                </a>
-              </lite-youtube>
-            </div>
-            <h2>{video.title}</h2>
-            <p>{video.description}</p>
-          </div>
-        </div>
-      ))
-    }
-    
     <article>
       <h2>Der neue Weg zum Keyboardspiel</h2>
       <p>
@@ -115,12 +42,15 @@ const videoData = [
         Begleitung wie ein Klavierspieler auf.
       </p>
       <br />
-      <br />
+      <p>
+        Weiterführende Lektionen <a
+          href="/keyboard-videoanleitung/"
+          class="normal-links">Zusätzliche Materialien</a
+        >
+      </p>
       <p>
         <a href="/unterricht/" class="normal-links">zurück</a>
       </p>
     </article>
   </section>
 </BaseLayout>
-
-<YouTube />

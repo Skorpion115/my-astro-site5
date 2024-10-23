@@ -101,30 +101,30 @@ const videos = [
     duration: "PT4M49S"
   },
   {
-    loc: `${SITE_URL}/keyboardunterricht/`,
+    loc: `${SITE_URL}/keyboard-videoanleitung/`,
     title: "Hammond Organ - Hammond Flip - Klaus Wunderlich",
     description: "Keyboard Tutorial über eine Klaus Wunderlich Komposition. Das Stück heißt 'Hammond Flip'.",
     content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=244HlpB3JoA",
     thumbnail_loc: "https://i.ytimg.com/vi/y2KtSx3-W3w/hqdefault.jpg",
-    publication_date: "2021-07-08T00:00:00+02:00",
+    publication_date: "2021-07-08T14:00:00+02:00",
     duration: "PT3M6S"
   },
   {
-    loc: `${SITE_URL}/keyboardunterricht/`,
+    loc: `${SITE_URL}/keyboard-videoanleitung/`,
     title: "Hammond Organ Komponist: Klaus Wunderlich Titel: H-schisch",
     description: "Ein Keyboard Tutorial über den Komponist Klaus Wunderlich. Das Stück das ich spiele heißt 'H-schisch'. Das ist in einem Notenheft von ihm mit 12 Kompositionen. Klaus Wunderlich brachte ein Notenbuch heraus mit 12 Kompositionen von ihm. Für jede Tonart komponierte er ein Stück. Ich habe das Stück in H Durgewählt. Ich habe es mit einem HAMMOND XM-1 Expander aufgenommen.",
     content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=y2KtSx3-W3w",
     thumbnail_loc: "https://i.ytimg.com/vi/y2KtSx3-W3w/hqdefault.jpg",
-    publication_date: "2023-05-19T00:00:00+02:00",
+    publication_date: "2023-05-19T14:00:00+02:00",
     duration: "PT4M16S"
   },
   {
-    loc: `${SITE_URL}/keyboardunterricht/`,
+    loc: `${SITE_URL}/keyboard-videoanleitung/`,
     title: "Hammond Organ Komponist: Klaus Wunderlich Titel: E-Hering",
     description: "Noch ein Stück aus dem Heft 12 Kompositionen von Klaus Wunderlich. Ein Keyboard Tutorial über den Komponisten Klaus Wunderlich. Titel: E-Hering.",
     content_loc: "https://www.youtube.com/embed/t0tOQfL2qSE",
     thumbnail_loc: "https://i.ytimg.com/vi/t0tOQfL2qSE/hqdefault.jpg",
-    publication_date: "2023-04-12T00:00:00+02:00",
+    publication_date: "2023-04-12T14:00:00+02:00",
     duration: "PT5M38S"
   },
   {
