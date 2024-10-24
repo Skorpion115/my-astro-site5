@@ -2,7 +2,8 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "Danke für die kurze Mitteilung!";
 const description = "Erfolgsmeldung";
-const pageUrl = "https://www.musicstudio-ziebart.de/danke-seite/";
+const SITE_URL = process.env.SITE_URL || "https://www.musicstudio-ziebart.de";
+const pageUrl = `${SITE_URL}/danke-seite/`;
 ---
 
 <BaseLayout

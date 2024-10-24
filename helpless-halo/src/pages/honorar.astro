@@ -3,9 +3,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "Honorar für Musikunterricht";
 const description =
   "Was kostet heutzutage ein guter Musikunterricht? 🤑, Monatshonorar bei 45 min 65,- EUR";
-const keywords =
-  "honorar, günstige preise, gruppenunterricht, einzelunterricht";
-const pageUrl = "https://www.musicstudio-ziebart.de/honorar/";
+const keywords = "honorar, günstige preise, gruppenunterricht, einzelunterricht";
+const SITE_URL = process.env.SITE_URL || "https://www.musicstudio-ziebart.de";
+const pageUrl = `${SITE_URL}/honorar/`;
 ---
 
 <BaseLayout

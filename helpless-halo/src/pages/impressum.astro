@@ -3,7 +3,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "Impressum";
 const description = "Impressum";
 const keywords = "impressum, musicstudio ziebart, gunzenhausener str. 20, 90451 nürnberg";
-const pageUrl = "https://www.musicstudio-ziebart.de/impressum/";
+const SITE_URL = process.env.SITE_URL || "https://www.musicstudio-ziebart.de";
+const pageUrl = `${SITE_URL}/impressum/`;
 ---
 
 <BaseLayout

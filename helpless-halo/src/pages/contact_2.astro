@@ -1,7 +1,8 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "Kostenlose Probestunde buchen";
-const pageUrl = "https://www.musicstudio-ziebart.de/contact_2/";
+const SITE_URL = process.env.SITE_URL || "https://www.musicstudio-ziebart.de";
+const pageUrl = `${SITE_URL}/contact_2/`;
 ---
 
 <BaseLayout

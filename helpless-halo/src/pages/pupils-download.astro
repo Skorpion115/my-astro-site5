@@ -2,7 +2,8 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "Schülermaterial";
 const description = "Schüler download";
-const pageUrl = "https://www.musicstudio-ziebart.de/pupils-download/";
+const SITE_URL = process.env.SITE_URL || "https://www.musicstudio-ziebart.de";
+const pageUrl = `${SITE_URL}/pupils-download/`;
 ---
 
 <BaseLayout pageTitle={pageTitle} description={description} href={pageUrl}>

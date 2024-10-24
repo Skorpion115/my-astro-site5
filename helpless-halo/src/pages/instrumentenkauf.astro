@@ -3,7 +3,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "Tips für Ihren Instrumentenkauf";
 const description = "Gute Tips zum Instrumetenkauf! 🎸 Auf was muss ich beim Kauf eines Instruments achten? 🪕";
 const keywords = "e-gitarre, klarinette, querfloete, saxophon, klavier, keyboard, akkordeon, banjo";
-const pageUrl = "https://www.musicstudio-ziebart.de/instrumentenkauf/";
+const SITE_URL = process.env.SITE_URL || "https://www.musicstudio-ziebart.de";
+const pageUrl = `${SITE_URL}/instrumentenkauf/`;
 ---
 
 <BaseLayout
