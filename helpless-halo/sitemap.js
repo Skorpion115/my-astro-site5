@@ -74,6 +74,15 @@ const videos = [
     duration: "PT02M34S"
   },
   {
+    loc: `${SITE_URL}/klavier-videoanleitung/`,
+    title: "Aus der neuen Welt - Antonin Dvorak",
+    description: "Klavier Tutorial für das klassische Stück von Antonin Dvorak. Ich spiele hier nur der zweiten Satz das 'Largo'. Antonin Dvorak hat es für Orchester aber auch für Klavier zu vier Händen geschrieben. Ich habe es für 2 Händen umgeschrieben.",
+    content_loc: "https://www.youtube.com/embed/ytcQ-I1BTNk",
+    thumbnail_loc: "https://i.ytimg.com/vi/ytcQ-I1BTNk/hqdefault.jpg",
+    publication_date: "2021-04-21T00:00:00+02:00",
+    duration: "PT12M59S",
+  },
+  {
     loc: `${SITE_URL}/e-gitarre-videoanleitung/`,
     title: "Joe Satriani - Ten Words Guitar Lesson+Tab",
     description: "Lerne das Gitarrenstück 'Ten Words' von Joe Satriani mit dieser detaillierten Gitarrenstunde.",
@@ -126,15 +135,6 @@ const videos = [
     thumbnail_loc: "https://i.ytimg.com/vi/t0tOQfL2qSE/hqdefault.jpg",
     publication_date: "2023-04-12T14:00:00+02:00",
     duration: "PT5M38S"
-  },
-  {
-    loc: `${SITE_URL}/download/`,
-    title: "Aus der neuen Welt - Antonin Dvorak",
-    description: "Klavier Tutorial für das klassische Stück von Antonin Dvorak. Ich spiele hier nur der zweiten Satz das 'Largo'. Antonin Dvorak hat es für Orchester aber auch für Klavier zu vier Händen geschrieben. Ich habe es für 2 Händen umgeschrieben.",
-    content_loc: "https://www.youtube.com/embed/ytcQ-I1BTNk",
-    thumbnail_loc: "https://i.ytimg.com/vi/ytcQ-I1BTNk/hqdefault.jpg",
-    publication_date: "2021-04-21T00:00:00+02:00",
-    duration: "PT12M59S",
   },
   {
     loc: `${SITE_URL}/harmonielehre/`,

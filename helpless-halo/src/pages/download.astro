@@ -1,28 +1,10 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import YouTube from "../components/YouTube.astro";
-import "../styles/lite-yt-embed.css";
 const pageTitle = "Download für Noten und GM Files";
 const description = "Midi Files und Noten bekannter Werke komplett zu downloaden! 🎼, Mondschein Sonate, Eine kleine Nachtmusik usw.";
 const keywords = "Download, Midi Files und Noten bekannter Werke zum downloaden";
 const SITE_URL = process.env.SITE_URL || "https://www.musicstudio-ziebart.de";
 const pageUrl = `${SITE_URL}/download/`;
-
-
-// Video-Daten
-
-const videoData = [
-  {
-    loc: `${SITE_URL}/download/`,
-    title: "Aus der neuen Welt - Antonin Dvorak",
-    description:
-      "Klavier Tutorial für das klassische Stück von Antonin Dvorak. Ich spiele hier nur der zweiten Satz das 'Largo'. Antonin Dvorak hat es für Orchester aber auch für Klavier zu vier Händen geschrieben. Ich habe es für 2 Händen umgeschrieben.",
-    content_loc: "https://www.youtube.com/embed/ytcQ-I1BTNk",
-    thumbnail_loc: "https://i.ytimg.com/vi/ytcQ-I1BTNk/hqdefault.jpg",
-    publication_date: "2021-04-21T00:00:00+02:00",
-    duration: "PT12M59S",
-  },
-];
 ---
 
 <BaseLayout
@@ -38,41 +20,6 @@ const videoData = [
 >
   <section id="download">
     <h2>GM Midi Files mit Noten zum downloaden</h2>
-
-    {
-      videoData.map((video) => (
-        <div vocab="http://schema.org/" typeof="VideoObject">
-          <meta property="name" content={video.title} />
-          <meta property="description" content={video.description} />
-          <meta property="thumbnailUrl" content={video.thumbnail_loc} />
-          <meta property="uploadDate" content={video.publication_date} />
-          <meta property="duration" content={video.duration} />
-          <meta property="contentUrl" content={video.content_loc} />
-          <meta property="embedUrl" content={video.content_loc} />
-
-          <div class="video-container-wrapper">
-            <div class="video-container">
-              <lite-youtube
-                videoid={video.content_loc.split("/").pop()}
-                style={"background-image: url('" + video.thumbnail_loc + "');"}
-              >
-                <a
-                  href={video.content_loc}
-                  class="lty-playbtn"
-                  title={video.title}
-                >
-                  <span class="lyt-visually-hidden">
-                    Play Video: {video.title}
-                  </span>
-                </a>
-              </lite-youtube>
-            </div>
-            <h2>{video.title}</h2>
-            <p>{video.description}</p>
-          </div>
-        </div>
-      ))
-    }
 
     <article>
       <p>
@@ -330,7 +277,12 @@ const videoData = [
             <td data-label="Instrument">Klavier</td>
           </tr>
           <tr>
-            <td data-label="anhören">siehe oben Video!</td>
+            <td data-label="anhören">
+              <a
+                href="/klavier-videoanleitung/"
+                class="normal-links">siehe Video</a
+              >
+            </td>
             <td data-label="ansehen">
               <a
                 href="/bilder/Largo-Antonin_Dvorak.pdf"
@@ -645,7 +597,13 @@ const videoData = [
         <div><span>Titel:</span> Aus der neuen Welt</div>
         <div><span>Komponist:</span> Antonin Dvorák</div>
         <div><span>Instrument:</span> Klavier</div>
-        <div><span>anhören: siehe Video oben!</span></div>
+        <div>
+          <span>siehe Video: </span><a
+            href="/klavier-videoanleitung/"
+            class="normal-links"
+          >
+          siehe Video</a>
+        </div>
         <div>
           <span>ansehen:</span><a
             href="/bilder/Largo-Antonin_Dvorak.pdf"
@@ -676,5 +634,3 @@ const videoData = [
     </article>
   </section>
 </BaseLayout>
-
-<YouTube />

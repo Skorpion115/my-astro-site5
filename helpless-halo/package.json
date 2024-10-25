@@ -17,7 +17,7 @@
     "xmlbuilder2": "^3.1.1"
   },
   "devDependencies": {
-    "@astrojs/netlify": "^5.5.3",
+    "@astrojs/netlify": "^5.5.4",
     "@types/node": "^20.14.15"
   }
 }
