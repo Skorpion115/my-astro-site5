@@ -26,6 +26,7 @@ const cacheAssets = [
   "/banjounterricht/",
   "/banjo-videoanleitung/",
   "/akkordeonunterricht/",
+  "/akkordeon-videoanleitung/",
   "/saxophonunterricht/",
   "/pupils-download/",
   "/querfloetenunterricht/",
