@@ -164,13 +164,13 @@ const videos = [
     duration: "PT20M44S"
   },
   {
-    loc: `${SITE_URL}/harmonielehre/`,
-    title: "Funktionsthorie",
-    description: "Bei der Funktionstheorie geht es haupsächlich darum auf welchen Stufen die Akkorde stehen. Die drei Haupdreiklänge heißen zum Beispiel Tonika, Dominante und Subdominante. Sie liegen auf der I., IV. und V. Stufe.",
-    content_loc: "https://www.youtube.com/embed/vxX0WiQhSUE?si=tCkpok099xw",
-    thumbnail_loc: "https://i.ytimg.com/vi/tCkpok099xw/hqdefault.jpg",
-    publication_date: "2021-05-10T00:00:00+02:00",
-    duration: "PT12M22S"
+    loc: `${SITE_URL}/akkordeon-videoanleitung/`,
+    title: "L'accordeon Triste - Frnzösische Akkordeonmusik",
+    description: "Lerne das Akkordeonstück 'L'accordeon Triste' von Sergio Castelli. Das steht rechts unten auf YouTube ansehen. Darauf klicken dann kann man unten bei der Videobeschreibung die Noten downloaden",
+    content_loc: "https://www.youtube.com/embed/KHPg6e2wBeQ",
+    thumbnail_loc: "https://i.ytimg.com/vi/KHPg6e2wBeQ/hqdefault.jpg",
+    publication_date: "2024-11-24T23:00:00+02:00",
+    duration: "PT4M18S"
   }
 ];
 
