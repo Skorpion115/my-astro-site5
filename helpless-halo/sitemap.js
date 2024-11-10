@@ -167,9 +167,9 @@ const videos = [
     loc: `${SITE_URL}/akkordeon-videoanleitung/`,
     title: "L'accordeon Triste - Frnzösische Akkordeonmusik",
     description: "Lerne das Akkordeonstück 'L'accordeon Triste' von Sergio Castelli. Das steht rechts unten auf YouTube ansehen. Darauf klicken dann kann man unten bei der Videobeschreibung die Noten downloaden",
-    content_loc: "https://www.youtube.com/embed/KHPg6e2wBeQ",
-    thumbnail_loc: "https://i.ytimg.com/vi/KHPg6e2wBeQ/hqdefault.jpg",
-    publication_date: "2024-11-24T23:00:00+02:00",
+    content_loc: "https://www.youtube.com/embed/Va-gkuUp1KI",
+    thumbnail_loc: "https://i.ytimg.com/vi/Va-gkuUp1KI/hqdefault.jpg",
+    publication_date: "2024-11-10T10:00:00+02:00",
     duration: "PT4M18S"
   }
 ];
