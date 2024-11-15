@@ -31,11 +31,10 @@ const pageUrl = `${SITE_URL}/pupils-download/`;
 
           <tr>
             <td>
-              <a
-                href="/Songs/take_good_care.mp3"
-                target="_blank"
-                class="normal-links">anhören</a
-              >
+              <audio controls>
+                <source src="/Songs/take_good_care.mp3" type="audio/mpeg" />
+                Dein Browser unterstützt das Audio-Element nicht.
+              </audio>
             </td>
             <td>
               <a
@@ -116,13 +115,11 @@ const pageUrl = `${SITE_URL}/pupils-download/`;
         <div><span>Komponist:</span> Bobby Vee</div>
         <div><span>Instrument:</span> Gitarre</div>
         <div>
-          <span>anhören:</span><a
-            href="/Songs/take_good_care.mp3"
-            target="_blank"
-            class="normal-links"
-          >
-            anhören</a
-          >
+          <span>anhören:</span>
+          <audio controls>
+            <source src="/Songs/take_good_care.mp3" type="audio/mpeg" />
+            Dein Browser unterstützt das Audio-Element nicht.
+          </audio>
         </div>
         <div>
           <span>ansehen:</span><a
