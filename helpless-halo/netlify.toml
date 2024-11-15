@@ -24,3 +24,4 @@ Content-Security-Policy = "default-src 'self'; script-src 'self' 'sha256-RgEeXkh
 for = "/Songs/*"
 [headers.values]
 Access-Control-Allow-Origin = "*"
+X-Content-Type-Options = "nosniff"
