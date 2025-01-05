@@ -5,7 +5,7 @@ import "../styles/lite-yt-embed.css";
 const pageTitle = "Weiterführende Lektionen für Klavier";
 const description = "Klassisches Klavierstück auswendig lernen!";
 const keywords = "praeludium bmv 927 - Johann Sebastian Bach";
-const SITE_URL = process.env.SITE_URL || "https://www.musicstudio-ziebart.de";
+const SITE_URL = import.meta.env.SITE_URL || "https://www.musicstudio-ziebart.de";
 const pageUrl = `${SITE_URL}/klavier-videoanleitung/`;
 
 // RDFa-Markup für das Video nur auf dieser Seite
