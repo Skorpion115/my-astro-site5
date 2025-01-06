@@ -9,6 +9,7 @@ const __dirname = dirname(__filename);
 
 // https://astro.build/config
 export default defineConfig({
+  site: import.meta.env.SITE_URL,
 
   devToolbar: {
     enabled: false,
