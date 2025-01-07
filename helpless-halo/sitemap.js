@@ -92,6 +92,15 @@ const videos = [
     duration: "PT3M59S"
   },
   {
+    loc: `${SITE_URL}/e-gitarre-videoanleitung2/`,
+    title: "Take Good Care Of My Baby - Bobby Vee Cover",
+    description: "Lerne das Gitarrenstück 'Take Good Care Of My Baby' von Bobby Vee mit dieser detaillierten Gitarrenstunde.",
+    content_loc: "https://www.youtube.com/embed/nUC_b1L_IM4",
+    thumbnail_loc: "https://i.ytimg.com/vi/nUC_b1L_IM4/hqdefault.jpg",
+    publication_date: "2025-01-04T14:00:00+02:00",
+    duration: "PT17M52S"
+  },
+  {
     loc: `${SITE_URL}/gitarre-videoanleitung/`,
     title: "Beatles - Yesterday Gitarre Tutorial",
     description: "Lernevideo und Gitarrentutorial für das Gitarrenstück 'Yesterday von den Beatles'. Dieses Stück kann man wunderbar alleine spielen, also ohne Bass, Drums usw. Die Gitarre wird in einer Double Flatstimmung umgestimmt.",
